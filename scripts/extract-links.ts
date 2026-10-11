@@ -164,24 +164,38 @@ const resolve = (t: string): number | null => {
 console.log(`resolution: ${byKey.size} titles, ${aliasKey.size} aliases`);
 
 // --- create output tables ---
-await LINKS.execute(`CREATE TABLE IF NOT EXISTS page (id INTEGER PRIMARY KEY, title TEXT NOT NULL)`);
+await LINKS.execute(`CREATE TABLE IF NOT EXISTS page (id INTEGER PRIMARY KEY, title TEXT NOT NULL, revision_id INTEGER)`);
 await LINKS.execute(`CREATE TABLE IF NOT EXISTS link (
   page_id INTEGER NOT NULL, rank INTEGER NOT NULL,
   target_id INTEGER, paren INTEGER DEFAULT 0, italic INTEGER DEFAULT 0,
   PRIMARY KEY (page_id, rank)
 )`);
-// wipe old data
-await LINKS.execute("DELETE FROM link");
-await LINKS.execute("DELETE FROM page");
+// migration: add revision_id column if upgrading from old schema
+try {
+  await LINKS.execute("ALTER TABLE page ADD COLUMN revision_id INTEGER");
+} catch { /* column already exists */ }
 
-// --- extract ---
-let totalPages = 0, totalLinks = 0;
+// --- incremental: load already-extracted pages with their revision IDs ---
+const extractedRevs = new Map<number, number>(); // page_id → revision_id at extract time
+{
+  const res = await LINKS.execute("SELECT id, revision_id FROM page");
+  for (const r of res.rows) {
+    extractedRevs.set(Number(r.id), r.revision_id === null ? -1 : Number(r.revision_id));
+  }
+}
+console.log(`already extracted: ${extractedRevs.size} pages`);
+
+// --- extract (incremental: only re-parse pages with changed revisions) ---
+let totalPages = 0, totalLinks = 0, skipped = 0, reExtracted = 0, newPages = 0;
 {
   let lastId = -1;
   let pageBatch: Array<{ sql: string; args: any[] }> = [];
   let linkBatch: Array<{ sql: string; args: any[] }> = [];
+  let deleteBatch: Array<{ sql: string; args: any[] }> = [];
 
   const flush = async () => {
+    for (const d of deleteBatch) await LINKS.execute(d);
+    deleteBatch = [];
     if (pageBatch.length) { await LINKS.batch(pageBatch as never); pageBatch = []; }
     for (let i = 0; i < linkBatch.length; i += 150) {
       await LINKS.batch(linkBatch.slice(i, i + 150) as never);
@@ -189,16 +203,39 @@ let totalPages = 0, totalLinks = 0;
     linkBatch = [];
   };
 
+  const seenIds = new Set<number>();
   for (;;) {
     const res = await SRC.execute({
-      sql: "SELECT id, title, text FROM page WHERE namespace = 0 AND id > ? AND text IS NOT NULL ORDER BY id LIMIT 1000",
+      sql: "SELECT id, title, text, revision_id FROM page WHERE namespace = 0 AND id > ? AND text IS NOT NULL ORDER BY id LIMIT 1000",
       args: [lastId],
     });
     if (res.rows.length === 0) break;
     for (const r of res.rows) {
       lastId = Number(r.id);
       totalPages++;
-      pageBatch.push({ sql: "INSERT INTO page (id, title) VALUES (?, ?)", args: [lastId, String(r.title)] });
+      seenIds.add(lastId);
+      const revId = r.revision_id === null ? -1 : Number(r.revision_id);
+      const prevRev = extractedRevs.get(lastId);
+
+      if (prevRev !== undefined && prevRev === revId) {
+        // unchanged since last extract — skip
+        skipped++;
+        continue;
+      }
+
+      if (prevRev !== undefined) {
+        // revision changed — delete old links, re-extract
+        reExtracted++;
+        deleteBatch.push({ sql: "DELETE FROM link WHERE page_id = ?", args: [lastId] });
+        pageBatch.push({ sql: "UPDATE page SET title = ?, revision_id = ? WHERE id = ?",
+          args: [String(r.title), revId, lastId] });
+      } else {
+        // new page
+        newPages++;
+        pageBatch.push({ sql: "INSERT OR REPLACE INTO page (id, title, revision_id) VALUES (?, ?, ?)",
+          args: [lastId, String(r.title), revId] });
+      }
+
       for (const l of parseLinks(String(r.text ?? ""))) {
         totalLinks++;
         linkBatch.push({
@@ -207,11 +244,22 @@ let totalPages = 0, totalLinks = 0;
         });
       }
     }
-    if (pageBatch.length >= 200) await flush();
-    if (totalPages % 5000 === 0) console.log(`  ${totalPages} pages, ${totalLinks} links`);
+    if (pageBatch.length >= 200 || deleteBatch.length > 0) await flush();
+    if (totalPages % 5000 === 0) console.log(`  ${totalPages} pages scanned (${newPages} new, ${reExtracted} changed, ${skipped} unchanged)`);
     if (res.rows.length < 1000) break;
   }
   await flush();
+
+  // remove pages that no longer exist in the source
+  let removed = 0;
+  for (const [pid] of extractedRevs) {
+    if (!seenIds.has(pid)) {
+      await LINKS.execute({ sql: "DELETE FROM link WHERE page_id = ?", args: [pid] });
+      await LINKS.execute({ sql: "DELETE FROM page WHERE id = ?", args: [pid] });
+      removed++;
+    }
+  }
+  if (removed > 0) console.log(`  removed ${removed} deleted pages`);
 }
 
-console.log(`[${wiki.id}] extracted ${totalLinks} links from ${totalPages} pages → ${path.join(OUT_DIR, "links.sqlite")}`);
+console.log(`[${wiki.id}] extract done: ${newPages} new, ${reExtracted} updated, ${skipped} unchanged (${totalLinks} links) → ${path.join(OUT_DIR, "links.sqlite")}`);
