@@ -27,14 +27,8 @@
     {
       "id": "stardew",
       "name": "Stardew Valley Wiki",
-      "origin": "https://stardewvalleywiki.com",
+      "origin": "https://stardewvalleywiki.com/mediawiki",
       "description": "Farming sim with a shockingly deep wiki"
-    },
-    {
-      "id": "factorio",
-      "name": "Factorio Wiki",
-      "origin": "https://wiki.factorio.com",
-      "description": "Factory-building game — wiki is engineering-grade"
     },
     {
       "id": "poe",
@@ -43,22 +37,10 @@
       "description": "ARPG with the most complex item system in gaming"
     },
     {
-      "id": "hollowknight",
-      "name": "Hollow Knight Wiki",
-      "origin": "https://hollowknight.wiki",
-      "description": "Metroidvania — beautiful game, intimate wiki"
-    },
-    {
       "id": "tarkov",
       "name": "Escape from Tarkov Wiki",
       "origin": "https://escapefromtarkov.fandom.com",
       "description": "Hardcore FPS — notoriously opaque mechanics"
-    },
-    {
-      "id": "celeste",
-      "name": "Celeste Wiki",
-      "origin": "https://celeste.boo",
-      "description": "Precision platformer — small wiki, tight community"
     }
   ]
 }
