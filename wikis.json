@@ -1,0 +1,64 @@
+{
+  "wikis": [
+    {
+      "id": "osrs",
+      "name": "Old School RuneScape Wiki",
+      "origin": "https://oldschool.runescape.wiki",
+      "description": "OSRS — the original target of this analysis"
+    },
+    {
+      "id": "rs3",
+      "name": "RuneScape Wiki",
+      "origin": "https://runescape.wiki",
+      "description": "RS3 — the sister game, same engine different decade"
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft Wiki",
+      "origin": "https://minecraft.wiki",
+      "description": "The best-selling game of all time"
+    },
+    {
+      "id": "terraria",
+      "name": "Terraria Wiki",
+      "origin": "https://terraria.wiki.gg",
+      "description": "2D sandbox — mining, building, boss fights"
+    },
+    {
+      "id": "stardew",
+      "name": "Stardew Valley Wiki",
+      "origin": "https://stardewvalleywiki.com",
+      "description": "Farming sim with a shockingly deep wiki"
+    },
+    {
+      "id": "factorio",
+      "name": "Factorio Wiki",
+      "origin": "https://wiki.factorio.com",
+      "description": "Factory-building game — wiki is engineering-grade"
+    },
+    {
+      "id": "poe",
+      "name": "Path of Exile Wiki",
+      "origin": "https://www.poewiki.net",
+      "description": "ARPG with the most complex item system in gaming"
+    },
+    {
+      "id": "hollowknight",
+      "name": "Hollow Knight Wiki",
+      "origin": "https://hollowknight.wiki",
+      "description": "Metroidvania — beautiful game, intimate wiki"
+    },
+    {
+      "id": "tarkov",
+      "name": "Escape from Tarkov Wiki",
+      "origin": "https://escapefromtarkov.fandom.com",
+      "description": "Hardcore FPS — notoriously opaque mechanics"
+    },
+    {
+      "id": "celeste",
+      "name": "Celeste Wiki",
+      "origin": "https://celeste.boo",
+      "description": "Precision platformer — small wiki, tight community"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "gaming_wikipedia_parsing",
+  "version": "1.0.0",
+  "description": "First-link network analysis for gaming wikis — the 'Getting to Philosophy' experiment applied to game knowledge bases",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "wikis": "node -e \"const w=require('./wikis.json');w.wikis.forEach(x=>console.log(x.id.padEnd(14),x.origin.padEnd(45),x.description))\"",
+    "fetch": "tsx scripts/fetch-wiki.ts",
+    "extract": "tsx scripts/extract-links.ts",
+    "analyze": "tsx scripts/analyze.ts",
+    "lab": "tsx scripts/lab-server.ts",
+    "pipeline": "tsx scripts/pipeline.ts"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0"
+  }
+}

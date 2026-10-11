@@ -1,0 +1,1350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LINK LAB — first-link networks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<style>
+  /* field.io instantiation — tokens */
+  :root {
+    --ground-0: #07070b;
+    --ground-1: #0b0b0f;
+    --ink: #ffffff;
+    --ink-2: #a0a4b0;
+    --ink-3: #565a68;
+    --hairline: #1d1d28;
+    --cy: #0ce0e5;
+    --vi: #5b2eff;
+    --ease-expo: cubic-bezier(0.83, 0, 0.17, 1);
+    --font-display: "Anybody", sans-serif;
+    --font-body: "Space Grotesk", sans-serif;
+    --font-mono: "Space Mono", monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--ground-0); color: var(--ink); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
+  ::selection { background: var(--vi); color: #fff; }
+  .mast-sub, .fate, .ginfo { text-wrap: pretty; }
+
+  /* scroll progress + cursor aura */
+  #progress {
+    position: fixed; top: 0; left: 0; height: 2px; width: 0; z-index: 200;
+    background: linear-gradient(90deg, var(--cy), var(--vi));
+    transition: width 0.1s linear;
+  }
+  #cursorAura {
+    position: fixed; width: 380px; height: 380px; border-radius: 50%;
+    left: 0; top: 0; z-index: 1; pointer-events: none; opacity: 0;
+    background: radial-gradient(closest-side, oklch(72% 0.19 240 / 0.13), transparent 70%);
+    mix-blend-mode: screen; will-change: transform;
+  }
+
+  /* masthead + nebula */
+  .masthead { position: relative; padding: 0 0 14vh; overflow: hidden; }
+  #fieldCanvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+  .mast-inner { position: relative; padding: 9vh 5vw 0; z-index: 2; }
+  .mast-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.35em; color: var(--ink-2); text-transform: uppercase; margin-bottom: 3vh; }
+  .mast-kicker .dot { color: var(--cy); }
+  h1.mast-title {
+    font-family: var(--font-display); font-size: clamp(56px, 11vw, 168px);
+    line-height: 0.88; font-weight: 800; text-transform: uppercase;
+    font-variation-settings: "wdth" 100, "wght" 800; letter-spacing: -0.01em;
+    animation: titleResolve 1.6s var(--ease-expo) both;
+    will-change: font-variation-settings;
+  }
+  h1.mast-title .lab {
+    display: block; font-variation-settings: "wdth" 62, "wght" 200;
+    color: transparent; -webkit-text-stroke: 1px var(--ink-2);
+    animation: titleResolve 1.6s var(--ease-expo) 0.15s both;
+  }
+  @keyframes titleResolve { from { opacity: 0; transform: translateY(28px); letter-spacing: 0.06em; } to { opacity: 1; transform: translateY(0); } }
+  .masthead::after {
+    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: radial-gradient(58% 52% at 28% 42%, rgba(7,7,11,0.78), transparent 72%);
+  }
+  .loop-tag {
+    position: absolute; z-index: 2; pointer-events: none;
+    font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.2em;
+    color: var(--ink-2); text-transform: uppercase; white-space: nowrap;
+    transform: translateX(-50%);
+  }
+  .loop-tag b { color: var(--ink); }
+  .mast-sub { max-width: 560px; margin-top: 4vh; color: var(--ink-2); font-size: 15px; line-height: 1.65; }
+  .mast-sub b { color: var(--ink); font-weight: 500; }
+  .mast-readout {
+    margin-top: 3.5vh; display: flex; gap: 34px; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.18em;
+    color: var(--ink-3); text-transform: uppercase;
+  }
+  .mast-readout b { color: var(--cy); font-weight: 700; }
+
+  /* control bar */
+  .controlbar {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in oklab, var(--ground-0) 88%, transparent);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--hairline);
+    padding: 14px 5vw; display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center;
+  }
+  .wiki-switch { display: flex; border: 1px solid var(--hairline); }
+  .wiki-switch button {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em;
+    padding: 9px 18px; background: transparent; color: var(--ink-2);
+    border: 0; cursor: pointer; text-transform: uppercase;
+    transition: color 0.25s var(--ease-expo), background 0.25s var(--ease-expo);
+  }
+  .wiki-switch button:hover { color: var(--ink); }
+  .wiki-switch button.on { background: var(--ink); color: var(--ground-0); font-weight: 700; }
+  .ranks { display: flex; flex-wrap: wrap; gap: 4px; }
+  .rank {
+    font-family: var(--font-mono); font-size: 11.5px;
+    padding: 8px 12px; color: var(--ink-2); background: transparent;
+    border: 0; cursor: pointer; position: relative;
+    transition: color 0.3s var(--ease-expo);
+  }
+  .rank::before { content: "["; margin-right: 6px; color: var(--ink-3); transition: color 0.3s var(--ease-expo); }
+  .rank::after  { content: "]"; margin-left: 6px; color: var(--ink-3); transition: color 0.3s var(--ease-expo); }
+  .rank:hover { color: var(--ink); }
+  .rank.on { color: var(--cy); }
+  .rank.on::before, .rank.on::after { color: var(--cy); }
+  .tabs { margin-left: auto; display: flex; gap: 26px; }
+  .tab {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ink-3); cursor: pointer;
+    background: none; border: 0; padding: 8px 0; position: relative;
+    transition: color 0.3s var(--ease-expo);
+  }
+  .tab::after {
+    content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 0;
+    background: linear-gradient(90deg, var(--cy), var(--vi));
+    transition: width 0.45s var(--ease-expo);
+  }
+  .tab.on { color: var(--ink); }
+  .tab.on::after { width: 100%; }
+  .hint { width: 100%; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; color: var(--ink-3); }
+  #status { color: #ff7d7d; font-family: var(--font-mono); font-size: 12px; padding: 12px 5vw; display: none; }
+
+  /* scenes */
+  .scene {
+    padding: 11vh 5vw 3vh; position: relative; max-width: 1500px;
+    opacity: 0; transform: translateY(34px);
+    transition: opacity 0.9s var(--ease-expo), transform 0.9s var(--ease-expo);
+  }
+  .scene.in { opacity: 1; transform: translateY(0); }
+  .scene-label {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.32em;
+    color: var(--ink-3); text-transform: uppercase;
+    border-top: 1px solid var(--hairline); padding-top: 14px;
+    margin-bottom: 5vh; display: flex; justify-content: space-between;
+  }
+  .scene-label .idx { color: var(--cy); }
+  .hero-num-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: start; }
+  .hero-num {
+    grid-column: 1 / 8;
+    font-family: var(--font-display); font-weight: 850;
+    font-variation-settings: "wdth" 118;
+    font-size: clamp(96px, 15vw, 240px);
+    line-height: 0.82; letter-spacing: -0.02em;
+    background: linear-gradient(94deg, var(--cy) 8%, var(--vi) 78%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    font-variant-numeric: tabular-nums;
+  }
+  .hero-num-caption { grid-column: 1 / 6; margin-top: 2.5vh; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; line-height: 2; color: var(--ink-2); text-transform: uppercase; }
+  .hero-num-caption b { color: var(--ink); }
+  .side-stats { grid-column: 9 / 13; display: flex; flex-direction: column; gap: 4.2vh; padding-top: 3vh; }
+  .side-stat { border-left: 1px solid var(--hairline); padding-left: 20px; }
+  .side-stat:nth-child(2) { margin-left: 34px; }
+  .side-stat:nth-child(4) { margin-left: 18px; }
+  .side-stat .v { font-family: var(--font-mono); font-size: clamp(26px, 2.6vw, 40px); font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .side-stat .k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; color: var(--ink-3); text-transform: uppercase; margin-top: 6px; line-height: 1.8; }
+
+  /* charts */
+  .chart-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+  .chart-block h3 { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.26em; color: var(--ink-2); text-transform: uppercase; font-weight: 400; margin: 26px 0 10px; }
+  .chart { width: 100%; height: 250px; }
+  .c-hist  { grid-column: 1 / 8; }
+  .c-attr  { grid-column: 8 / 13; margin-top: 76px; }
+  .c-decay { grid-column: 1 / 7; }
+  .c-frag  { grid-column: 7 / 13; margin-top: 64px; }
+  .c-deg   { grid-column: 1 / 6; }
+  .c-bet   { grid-column: 6 / 11; margin-top: 84px; }
+
+  .roads table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 12px; }
+  .roads th { text-align: left; font-weight: 400; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-3); padding: 0 14px 12px 0; border-bottom: 1px solid var(--hairline); }
+  .roads td { padding: 11px 14px 11px 0; border-bottom: 1px solid var(--hairline); color: var(--ink-2); }
+  .roads td:first-child { color: var(--ink); }
+  .roads td.num { color: var(--cy); text-align: right; padding-right: 0; }
+  .roads tbody tr { transition: background 0.3s var(--ease-expo); }
+  .roads tbody tr:hover { background: #101018; }
+
+  .game-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; }
+  .game-row input {
+    flex: 1 1 300px; padding: 14px 18px; background: transparent;
+    border: 1px solid var(--hairline); color: var(--ink);
+    font-family: var(--font-mono); font-size: 13px; border-radius: 0;
+    transition: border-color 0.35s var(--ease-expo);
+  }
+  .game-row input:focus { outline: none; border-color: var(--cy); }
+  .game-row input::placeholder { color: var(--ink-3); }
+  .btn {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em;
+    padding: 14px 26px; background: transparent; color: var(--ink);
+    border: 1px solid var(--ink); cursor: pointer; text-transform: uppercase;
+    transition: background 0.3s var(--ease-expo), color 0.3s var(--ease-expo), border-color 0.3s var(--ease-expo);
+  }
+  .btn:hover { background: var(--ink); color: var(--ground-0); }
+  .btn.ghost { border-color: var(--hairline); color: var(--ink-2); }
+  .btn.ghost:hover { border-color: var(--cy); color: var(--cy); background: transparent; }
+  .chain { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 30px; min-height: 42px; font-family: var(--font-mono); font-size: 12.5px; }
+  .pill {
+    padding: 6px 13px; border: 1px solid var(--hairline); color: var(--ink-2);
+    white-space: nowrap; opacity: 0; transform: translateX(-14px);
+    animation: hopIn 0.5s var(--ease-expo) forwards;
+  }
+  @keyframes hopIn { to { opacity: 1; transform: translateX(0); } }
+  .pill.start { border-color: var(--ink); color: var(--ink); font-weight: 700; }
+  .pill.cyc { border-color: var(--cy); color: var(--cy); }
+  .pill.dead { border-style: dashed; color: var(--ink-3); }
+  .arrow { color: var(--ink-3); font-size: 10px; }
+  .fate { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; margin-left: 10px; color: var(--ink-2); }
+  .fate .cyc { color: var(--cy); } .fate .dead { color: #ff7d7d; }
+
+  .exports { padding: 6vh 5vw 8vh; display: flex; flex-wrap: wrap; gap: 10px; }
+  .exp {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+    color: var(--ink-2); text-decoration: none; text-transform: uppercase;
+    border: 1px solid var(--hairline); padding: 10px 18px;
+    transition: color 0.3s var(--ease-expo), border-color 0.3s var(--ease-expo);
+  }
+  .exp:hover { color: var(--vi); border-color: var(--vi); }
+
+  /* constellation */
+  .graphscene { padding: 8vh 3vw 6vh; }
+  .graphwrap { position: relative; background: var(--ground-1); border: 1px solid var(--hairline); padding: 10px; }
+  #graph { width: 100%; height: min(78vh, 820px); cursor: grab; display: block; }
+  .graphwrap.dragging #graph { cursor: grabbing; }
+  .ginfo {
+    position: absolute; left: 22px; bottom: 18px; pointer-events: none;
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em;
+    color: var(--ink-2); max-width: 60%; line-height: 1.8;
+    background: color-mix(in oklab, var(--ground-0) 85%, transparent);
+    border: 1px solid var(--hairline); padding: 12px 18px; border-radius: 0;
+    backdrop-filter: blur(8px);
+  }
+  .ginfo b { color: var(--ink); font-size: 15px; }
+  .ginfo a { color: var(--cy); text-decoration: underline; text-underline-offset: 3px; }
+  .ginfo .stat { color: var(--ink-2); }
+  .ginfo .stat em { color: var(--cy); font-style: normal; font-weight: 700; }
+  .glegend { display: flex; flex-wrap: wrap; gap: 8px 26px; padding: 14px 6px 2px; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-2); text-transform: uppercase; align-items: center; }
+  .glegend .sw { display: inline-block; width: 14px; height: 1px; vertical-align: middle; margin-right: 8px; }
+  @keyframes twk { from { opacity: 0.06; } to { opacity: 0.28; } }
+  .star.tw { animation: twk 2.8s ease-in-out infinite alternate; }
+  @keyframes breathe { from { opacity: 0.55; } to { opacity: 1; } }
+  circle.halo { animation: breathe 3.2s ease-in-out infinite alternate; }
+
+  /* tweaks panel */
+  .tweaks-btn {
+    position: fixed; right: 18px; bottom: 18px; z-index: 150;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.24em;
+    color: var(--ink-2); background: color-mix(in oklab, var(--ground-1) 82%, transparent);
+    border: 1px solid var(--hairline); padding: 9px 14px; cursor: pointer;
+    text-transform: uppercase; backdrop-filter: blur(8px);
+  }
+  .tweaks-btn:hover { color: var(--cy); border-color: var(--cy); }
+  .tweaks {
+    position: fixed; right: 18px; bottom: 56px; z-index: 150; display: none;
+    background: color-mix(in oklab, var(--ground-1) 94%, transparent);
+    border: 1px solid var(--hairline); padding: 16px 18px; width: 240px;
+    font-family: var(--font-mono); backdrop-filter: blur(10px);
+  }
+  .tweaks.open { display: block; }
+  .tweaks h4 { font-size: 9.5px; letter-spacing: 0.3em; color: var(--ink-3); text-transform: uppercase; font-weight: 400; margin-bottom: 12px; }
+  .tweaks .row { margin-bottom: 12px; }
+  .tweaks label { font-size: 10px; letter-spacing: 0.14em; color: var(--ink-2); text-transform: uppercase; display: flex; justify-content: space-between; }
+  .tweaks input[type="range"] { width: 100%; margin-top: 6px; accent-color: var(--cy); background: transparent; }
+
+  /* footer finale */
+  footer { padding: 6vh 5vw 8vh; border-top: 1px solid var(--hairline); }
+  .foot-word {
+    font-family: var(--font-display); font-weight: 850;
+    font-variation-settings: "wdth" 120, "wght" 850;
+    font-size: clamp(34px, 7.4vw, 110px); line-height: 0.95; text-transform: uppercase;
+    color: transparent; -webkit-text-stroke: 1px var(--ink-2);
+    letter-spacing: 0.01em; user-select: none;
+  }
+  .foot-word em { font-style: normal; -webkit-text-stroke: 0; color: var(--ink); }
+  .foot-meta { margin-top: 3vh; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--ink-3); text-transform: uppercase; line-height: 2.2; }
+
+  @media (max-width: 1080px) {
+    .hero-num { grid-column: 1 / 13; }
+    .hero-num-caption { grid-column: 1 / 13; }
+    .side-stats { grid-column: 1 / 13; flex-direction: row; flex-wrap: wrap; gap: 28px; padding-top: 5vh; }
+    .side-stat, .side-stat:nth-child(2), .side-stat:nth-child(4) { margin-left: 0; }
+    .c-hist, .c-attr, .c-decay, .c-frag, .c-deg, .c-bet { grid-column: 1 / 13; margin-top: 0; }
+    .tabs { margin-left: 0; width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .scene { opacity: 1; transform: none; }
+    .pill { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+    #cursorAura { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="cursorAura"></div>
+
+<header class="masthead">
+  <canvas id="fieldCanvas"></canvas>
+  <div class="mast-inner">
+    <div class="mast-kicker">FIRST-LINK NETWORK ANALYSIS <span class="dot">●</span> OSRS <span class="dot">/</span> RS3 WIKIS</div>
+    <h1 class="mast-title" id="mastTitle">Link<span class="lab">Laboratory</span></h1>
+    <p class="mast-sub">
+      Follow the <b>first link</b> of any article, then that article's first link, forever.
+      Every article reduced to particles and whirlpools — the nebula above is the real network:
+      three attractors absorbing <b>86%</b> of the wiki.
+    </p>
+    <div class="mast-readout">
+      <span><b>36,163</b> osrs pages</span>
+      <span><b>79,760</b> rs3 pages</span>
+      <span><b>3</b> whirlpools</span>
+      <span><b>1</b> graveyard</span>
+    </div>
+  </div>
+</header>
+
+<nav class="controlbar">
+  <div class="wiki-switch" id="wikiSwitch"></div>
+  <div class="ranks" id="ranks"></div>
+  <div class="tabs">
+    <button class="tab on" data-tab="stats">Data</button>
+    <button class="tab" data-tab="graph">Constellation</button>
+  </div>
+  <span class="hint">strict-1st = canonical game (skips parenthesised / italicised links) · Nth = raw Nth prose link · last · random</span>
+</nav>
+<div id="status"></div>
+
+<div id="statsView">
+
+  <section class="scene" id="scene-hero">
+    <div class="scene-label"><span>Convergence</span><span class="idx">01</span></div>
+    <div class="hero-num-grid">
+      <div class="hero-num" id="heroNum">0.0%</div>
+      <div class="hero-num-caption" id="heroCaption">—</div>
+      <div class="side-stats" id="sideStats"></div>
+    </div>
+  </section>
+
+  <section class="scene" id="scene-charts">
+    <div class="scene-label"><span>Distributions</span><span class="idx">02</span></div>
+    <div class="chart-grid">
+      <div class="chart-block c-hist"><h3>Steps to reach a loop</h3><div class="chart" id="histChart"></div></div>
+      <div class="chart-block c-attr"><h3>Top attractor loops by basin</h3><div class="chart" id="attrChart"></div></div>
+      <div class="chart-block c-decay"><h3>Collective agreement decay — convergence by rank</h3><div class="chart" id="decayChart"></div></div>
+      <div class="chart-block c-frag"><h3>Fragmentation — components by rank</h3><div class="chart" id="fragChart"></div></div>
+      <div class="chart-block c-deg"><h3>Degree centrality — most linked-at</h3><div class="chart" id="degChart"></div></div>
+      <div class="chart-block c-bet"><h3>Betweenness — bridges of the network</h3><div class="chart" id="betChart"></div></div>
+    </div>
+  </section>
+
+  <section class="scene" id="scene-roads">
+    <div class="scene-label"><span>Roads into the top attractor</span><span class="idx">03</span></div>
+    <div class="roads" id="roads"></div>
+  </section>
+
+  <section class="scene" id="scene-game">
+    <div class="scene-label"><span>Play the game</span><span class="idx">04</span></div>
+    <div class="game-row">
+      <input id="titleInput" list="titles" placeholder="TYPE AN ARTICLE — e.g. Zulrah / Prayer / Coins" autocomplete="off">
+      <datalist id="titles"></datalist>
+      <button class="btn" id="playBtn">Follow</button>
+      <button class="btn ghost" id="randBtn">Random</button>
+    </div>
+    <div class="chain" id="chainOut"></div>
+  </section>
+
+  <div class="exports" id="exports"></div>
+</div>
+
+<section class="graphscene" id="graphScene" style="display:none">
+  <div class="scene-label"><span>The constellation — loops of the first-link network</span><span class="idx">05</span></div>
+  <div class="graphwrap" id="graphWrap">
+    <svg id="graph" viewBox="0 0 1600 1000" role="img" aria-label="Orbital map of first-link loops"></svg>
+    <div class="ginfo" id="ginfo">hover a node to trace its path to the loop</div>
+    <div style="position:absolute;right:18px;top:14px;display:flex;gap:4px;z-index:5;align-items:center;" id="detailCtl">
+      <input id="graphSearch" list="graphTitles" placeholder="find article…" autocomplete="off"
+        style="background:transparent;border:1px solid var(--hairline);color:var(--ink);font-family:var(--font-mono);font-size:10px;padding:5px 10px;width:140px;margin-right:8px;border-radius:0;">
+      <datalist id="graphTitles"></datalist>
+      <button class="btn ghost" data-d="1" style="padding:6px 12px;font-size:9px;">sparse</button>
+      <button class="btn ghost on" data-d="2" style="padding:6px 12px;font-size:9px;background:var(--ink);color:var(--ground-0);border-color:var(--ink);">normal</button>
+      <button class="btn ghost" data-d="3" style="padding:6px 12px;font-size:9px;">dense</button>
+      <button class="btn ghost" data-d="4" style="padding:6px 12px;font-size:9px;">all</button>
+    </div>
+    <div class="glegend" id="glegend"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-word">where does<br><em>everything</em> lead?</div>
+  <div class="foot-meta">
+    Node size = articles linking to it first · arrows point at each article's first link · thin chains collapse into pure arrows → → → O<br>
+    Data: local dumps of oldschool.runescape.wiki + runescape.wiki · recompute: npx tsx scripts/link-analysis.ts
+  </div>
+</footer>
+
+<button class="tweaks-btn" id="tweaksBtn">tweaks</button>
+<div class="tweaks" id="tweaksPanel">
+  <h4>Live parameters</h4>
+  <div class="row">
+    <label>hue spin <span id="hueVal">0°</span></label>
+    <input type="range" id="hueShift" min="-180" max="180" step="5" value="0">
+  </div>
+  <div class="row">
+    <label>nebula density <span id="nebVal">1.0×</span></label>
+    <input type="range" id="nebulaMult" min="0" max="2" step="0.1" value="1">
+  </div>
+</div>
+
+<script>
+/* ==================================================================== *
+ * generative hue system — one pair, spinnable live via Tweaks
+ * ==================================================================== */
+let HUE_SHIFT = Number(localStorage.getItem("lab_hue") ?? 0);
+let NEBULA_MULT = Number(localStorage.getItem("lab_nebula") ?? 1);
+function hueAt(t) {
+  const L = 0.86 + (0.62 - 0.86) * t;
+  const C = 0.13 + (0.26 - 0.13) * t;
+  const H = (200 + HUE_SHIFT) + ((288 + HUE_SHIFT) - (200 + HUE_SHIFT)) * t;
+  return `oklch(${(L * 100).toFixed(1)}% ${C.toFixed(3)} ${((H % 360) + 360) % 360})`;
+}
+
+const WIKIS = __WIKI_OPTIONS__;
+const state = { wiki: WIKIS[0]?.id ?? "osrs", rank: "1", tab: "stats", detail: 2 };
+const RANK_LABELS = { strict1: "strict 1st", last: "last", random: "random" };
+const rankLabel = (r) => RANK_LABELS[r] ?? (r + (r === "1" ? "st" : r === "2" ? "nd" : r === "3" ? "rd" : "th")) + " link";
+const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function showError(msg) {
+  const el = document.getElementById("status");
+  el.textContent = msg; el.style.display = msg ? "" : "none";
+}
+async function api(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error((await res.text()) || res.statusText);
+  return res.json();
+}
+function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+/* ==================================================================== *
+ * WHIRLPOOLS — the game itself, animated.
+ * Article-particles stream in from the screen edges, curve toward their
+ * loop, and join a circulating ring (articles orbit the loop forever).
+ * ~14% die mid-flight — the real dead-end rate. Rings are labeled with
+ * the actual loops and their basin share. Cursor deflects in-flight
+ * particles. One visual language with the constellation tab.
+ * ==================================================================== */
+(function whirlpools() {
+  const canvas = document.getElementById("fieldCanvas");
+  const ctx = canvas.getContext("2d");
+  const masthead = document.querySelector(".masthead");
+  let W = 0, H = 0, dpr = Math.min(2, window.devicePixelRatio || 1);
+  let loops = [], flyers = [], tags = [];
+  const mouse = { x: -9999, y: -9999 };
+  let visible = true, running = true;
+  let MULT = NEBULA_MULT;
+
+  const LOOPS_DEF = [
+    { xf: 0.74, yf: 0.30, rf: 0.105, hue: 0,   w: 0.45, label: "Gielinor → Guthix → Gods", pct: 31 },
+    { xf: 0.86, yf: 0.74, rf: 0.082, hue: 0.55, w: 0.34, label: "Monster → Combat → Bestiary", pct: 27 },
+    { xf: 0.55, yf: 0.82, rf: 0.066, hue: 1,   w: 0.21, label: "Currencies → Coins", pct: 15 },
+  ];
+  const DEAD_RATE = 0.14;
+
+  function layout() {
+    const r = masthead.getBoundingClientRect();
+    W = r.width; H = r.height;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const base = Math.min(W, H);
+    loops = LOOPS_DEF.map((d) => ({
+      x: d.xf * W, y: d.yf * H, r: d.rf * base, hue: d.hue, w: d.w,
+      label: d.label, pct: d.pct, spin: (d.w > 0.4 ? 1 : d.w > 0.3 ? -1 : 1),
+      orbiters: [],
+    }));
+    // HTML labels
+    for (const t of tags) t.remove();
+    tags = loops.map((l) => {
+      const el = document.createElement("div");
+      el.className = "loop-tag";
+      el.innerHTML = `<b>${l.label}</b> · ${l.pct}%`;
+      masthead.appendChild(el);
+      return el;
+    });
+    placeTags();
+    // seed each ring with a resident population
+    for (const l of loops) {
+      const n = Math.round((l.pct / 31) * 26 * Math.max(0.4, MULT));
+      for (let i = 0; i < n; i++) l.orbiters.push(newOrbiter(l, Math.random() * Math.PI * 2, 4000 + Math.random() * 6000));
+    }
+  }
+  function placeTags() {
+    loops.forEach((l, i) => {
+      tags[i].style.left = l.x + "px";
+      tags[i].style.top = (l.y + l.r + 14) + "px";
+    });
+  }
+  function newOrbiter(l, angle, ttl) {
+    return { a: angle, sp: (0.5 + 0.9 / Math.sqrt(l.r / 40)) * l.spin, ttl, max: ttl, jr: (Math.random() - 0.5) * 6, born: performance.now() };
+  }
+
+  function spawnFlyer() {
+    const dead = Math.random() < DEAD_RATE;
+    let l;
+    if (!dead) {
+      const r = Math.random(); let acc = 0;
+      for (const c of loops) { acc += c.w; if (r < acc) { l = c; break; } }
+      l = l ?? loops[0];
+    }
+    // spawn on a random edge
+    const side = Math.floor(Math.random() * 4);
+    const sx = side === 0 ? -20 : side === 1 ? W + 20 : Math.random() * W;
+    const sy = side === 2 ? -20 : side === 3 ? H + 20 : Math.random() * H;
+    let tx, ty;
+    if (dead) { tx = Math.random() * W; ty = Math.random() * H; }
+    else {
+      const a = Math.random() * Math.PI * 2;
+      tx = l.x + Math.cos(a) * l.r; ty = l.y + Math.sin(a) * l.r;
+    }
+    // bezier control points — swing wide for orbital approach
+    const mx = (sx + tx) / 2, my = (sy + ty) / 2;
+    const dx = tx - sx, dy = ty - sy, len = Math.hypot(dx, dy) || 1;
+    const swing = (Math.random() - 0.5) * len * 0.7;
+    const c1x = sx + dx * 0.25 - dy / len * swing, c1y = sy + dy * 0.25 + dx / len * swing;
+    const c2x = sx + dx * 0.75 - dy / len * swing * 0.4, c2y = sy + dy * 0.75 + dx / len * swing * 0.4;
+    flyers.push({
+      p0: [sx, sy], p1: [c1x, c1y], p2: [c2x, c2y], p3: [tx, ty],
+      t: 0, speed: 0.25 + Math.random() * 0.3, hue: dead ? -1 : l.hue + (Math.random() - 0.5) * 0.15,
+      loop: dead ? null : l, dead, deadAt: 0.35 + Math.random() * 0.4,
+      off: [0, 0], sz: 0.8 + Math.random() * 1.4,
+    });
+  }
+  function bez(p, t) {
+    const u = 1 - t;
+    return [
+      u * u * u * p.p0[0] + 3 * u * u * t * p.p1[0] + 3 * u * t * t * p.p2[0] + t * t * t * p.p3[0],
+      u * u * u * p.p0[1] + 3 * u * u * t * p.p1[1] + 3 * u * t * t * p.p2[1] + t * t * t * p.p3[1],
+    ];
+  }
+
+  layout();
+  window.addEventListener("resize", () => { layout(); });
+  masthead.addEventListener("pointermove", (e) => { const r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  masthead.addEventListener("pointerleave", () => { mouse.x = -9999; mouse.y = -9999; });
+  new IntersectionObserver((en) => { visible = en[0].isIntersecting; }, { threshold: 0.02 }).observe(masthead);
+  document.addEventListener("visibilitychange", () => { running = !document.hidden; if (running) requestAnimationFrame(tick); });
+
+  let frame = 0;
+  function tick() {
+    if (!running) return;
+    requestAnimationFrame(tick);
+    if (!visible) return;
+    frame++;
+    const now = performance.now();
+
+    ctx.globalCompositeOperation = "source-over";
+    ctx.fillStyle = "rgba(7,7,11,0.22)";
+    ctx.fillRect(0, 0, W, H);
+    ctx.globalCompositeOperation = "lighter";
+
+    // rings
+    for (const l of loops) {
+      ctx.strokeStyle = hueAt(l.hue);
+      ctx.globalAlpha = 0.16;
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(l.x, l.y, l.r, 0, Math.PI * 2); ctx.stroke();
+      // core glow
+      const g = ctx.createRadialGradient(l.x, l.y, 0, l.x, l.y, l.r * 0.55);
+      g.addColorStop(0, hueAt(l.hue).replace(")", " / 0.16)"));
+      g.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(l.x, l.y, l.r * 0.55, 0, Math.PI * 2); ctx.fill();
+    }
+
+    // orbiters — articles circulating the loop forever
+    for (const l of loops) {
+      for (let i = l.orbiters.length - 1; i >= 0; i--) {
+        const o = l.orbiters[i];
+        o.ttl -= 16;
+        if (o.ttl <= 0) { l.orbiters.splice(i, 1); continue; }
+        o.a += o.sp * 0.02;
+        const fade = Math.min(1, o.ttl / 1200) * Math.min(1, (now - o.born) / 500);
+        const px = l.x + Math.cos(o.a) * (l.r + o.jr);
+        const py = l.y + Math.sin(o.a) * (l.r + o.jr);
+        const px2 = l.x + Math.cos(o.a - 0.12) * (l.r + o.jr);
+        const py2 = l.y + Math.sin(o.a - 0.12) * (l.r + o.jr);
+        ctx.strokeStyle = hueAt(l.hue);
+        ctx.globalAlpha = 0.35 * fade;
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(px2, py2); ctx.lineTo(px, py); ctx.stroke();
+        ctx.fillStyle = hueAt(l.hue);
+        ctx.globalAlpha = 0.85 * fade;
+        ctx.fillRect(px - 0.8, py - 0.8, 1.8, 1.8);
+      }
+    }
+
+    // flyers — articles travelling to their fate
+    if (Math.random() < 0.35 * MULT) spawnFlyer();
+    for (let i = flyers.length - 1; i >= 0; i--) {
+      const f = flyers[i];
+      f.t += f.speed * 0.008 * (1 + f.t * 0.8); // accelerate as they approach
+      // dead-end: dies mid-flight
+      if (f.dead && f.t >= f.deadAt) {
+        f.t = Math.min(f.t, f.deadAt);
+        f.dying = (f.dying ?? 1) - 0.05;
+        if (f.dying <= 0) { flyers.splice(i, 1); continue; }
+      }
+      if (f.t >= 1) {
+        // arrive: join the ring
+        const l = f.loop;
+        if (l && l.orbiters.length < 90) {
+          l.orbiters.push(newOrbiter(l, Math.atan2(f.p3[1] - l.y, f.p3[0] - l.x), 5000 + Math.random() * 5000));
+        }
+        flyers.splice(i, 1);
+        continue;
+      }
+      let [x, y] = bez(f, f.t);
+      // cursor deflection
+      const dx = x - mouse.x, dy = y - mouse.y, d2 = dx * dx + dy * dy;
+      if (d2 < 14400) {
+        const d = Math.sqrt(d2) || 1, push = (1 - d2 / 14400) * 2.2;
+        f.off[0] += (dx / d) * push; f.off[1] += (dy / d) * push;
+      }
+      f.off[0] *= 0.92; f.off[1] *= 0.92;
+      x += f.off[0]; y += f.off[1];
+      const alpha = (f.dying ?? 1) * (0.25 + 0.65 * f.t);
+      if (f.dead) {
+        ctx.fillStyle = "#8b8b9c";
+        ctx.globalAlpha = alpha * 0.8;
+        ctx.fillRect(x - 0.7, y - 0.7, 1.4, 1.4);
+      } else {
+        const col = hueAt(((f.hue % 1) + 1) % 1);
+        ctx.fillStyle = col;
+        ctx.globalAlpha = alpha;
+        ctx.fillRect(x - f.sz / 2, y - f.sz / 2, f.sz, f.sz);
+        // short trail
+        const [tx, ty] = bez(f, Math.max(0, f.t - 0.03));
+        ctx.strokeStyle = col;
+        ctx.globalAlpha = alpha * 0.5;
+        ctx.lineWidth = f.sz * 0.7;
+        ctx.beginPath(); ctx.moveTo(tx + f.off[0] * 0.9, ty + f.off[1] * 0.9); ctx.lineTo(x, y); ctx.stroke();
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  if (reduced) {
+    // static composition: rings + resident orbiters + a few stream arcs
+    for (const l of loops) {
+      ctx.strokeStyle = hueAt(l.hue); ctx.globalAlpha = 0.3; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(l.x, l.y, l.r, 0, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = hueAt(l.hue);
+      for (let i = 0; i < 24; i++) {
+        const a = (i / 24) * Math.PI * 2;
+        ctx.globalAlpha = 0.7;
+        ctx.fillRect(l.x + Math.cos(a) * l.r - 1, l.y + Math.sin(a) * l.r - 1, 2, 2);
+      }
+    }
+    ctx.globalAlpha = 0.25;
+    for (let i = 0; i < 14; i++) {
+      spawnFlyer();
+      const f = flyers[i]; f.t = 0.25 + (i % 5) * 0.13;
+      const [x, y] = bez(f, f.t); const [x0, y0] = bez(f, f.t - 0.2);
+      ctx.strokeStyle = f.dead ? "#8b8b9c" : hueAt(f.hue);
+      ctx.beginPath(); ctx.moveTo(x0, y0);
+      for (let k = 1; k <= 8; k++) { const [px, py] = bez(f, f.t - 0.2 + (0.2 * k / 8) * 1.0); ctx.lineTo(px, py); }
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  } else {
+    requestAnimationFrame(tick);
+  }
+
+  window.__setNebula = (m) => {
+    MULT = m;
+    for (const l of loops) {
+      const n = Math.round((l.pct / 31) * 26 * Math.max(0.4, MULT));
+      while (l.orbiters.length > n) l.orbiters.pop();
+    }
+  };
+})();
+
+/* ==================================================================== *
+ * cursor aura + scroll progress + scroll-morphing masthead type
+ * ==================================================================== */
+(function chromeFX() {
+  const aura = document.getElementById("cursorAura");
+  const progress = document.getElementById("progress");
+  const title = document.getElementById("mastTitle");
+  let ax = -400, ay = -400, tx = -400, ty = -400;
+
+  if (!reduced) {
+    window.addEventListener("pointermove", (e) => { tx = e.clientX; ty = e.clientY; aura.style.opacity = "1"; });
+    window.addEventListener("pointerleave", () => { aura.style.opacity = "0"; });
+    (function auraLoop() {
+      ax += (tx - ax) * 0.1; ay += (ty - ay) * 0.1;
+      aura.style.transform = `translate(${ax - 190}px, ${ay - 190}px)`;
+      requestAnimationFrame(auraLoop);
+    })();
+  }
+
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + "%";
+      // masthead type narrows as it leaves
+      const p = Math.min(1, scrollY / 520);
+      const wdth = Math.round(100 - p * 26);
+      title.style.fontVariationSettings = `"wdth" ${wdth}, "wght" ${Math.round(800 - p * 250)}`;
+      ticking = false;
+    });
+  }, { passive: true });
+})();
+
+/* scene reveals */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((en, i) => { if (en.isIntersecting) { setTimeout(() => en.target.classList.add("in"), reduced ? 0 : i * 90); io.unobserve(en.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll(".scene").forEach((s) => io.observe(s));
+
+/* animated counters */
+function countTo(el, target, decimals, suffix) {
+  if (reduced) { el.textContent = target.toFixed(decimals) + suffix; return; }
+  const t0 = performance.now(), dur = 1200;
+  function frame(t) {
+    const p = Math.min(1, (t - t0) / dur);
+    const e = 1 - Math.pow(1 - p, 4);
+    el.textContent = (target * e).toFixed(decimals) + suffix;
+    if (p < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+/* charts */
+const chartBase = {
+  backgroundColor: "transparent", animationDuration: 850, animationEasing: "cubicOut",
+  textStyle: { color: "#a0a4b0", fontSize: 10, fontFamily: "Space Mono, monospace" },
+  grid: { left: 6, right: 14, top: 16, bottom: 20, containLabel: true },
+  tooltip: { backgroundColor: "#101018", borderColor: "#1d1d28", borderWidth: 1, textStyle: { color: "#fff", fontSize: 11, fontFamily: "Space Mono, monospace" }, axisPointer: { lineStyle: { color: "#33333f" } } },
+};
+const axisCommon = { axisLine: { show: false }, axisTick: { show: false }, axisLabel: { color: "#565a68", fontSize: 9 }, splitLine: { lineStyle: { color: "#14141d", type: "solid" } } };
+function mk(id) { return echarts.init(document.getElementById(id)); }
+const charts = { hist: mk("histChart"), attr: mk("attrChart"), decay: mk("decayChart"), frag: mk("fragChart"), deg: mk("degChart"), bet: mk("betChart") };
+window.addEventListener("resize", () => Object.values(charts).forEach((c) => c.resize()));
+
+let summaryCache = {};
+
+async function loadSummary() {
+  try {
+    const s = await api(`/api/summary?wiki=${state.wiki}`);
+    summaryCache[state.wiki] = s;
+    const ranksEl = document.getElementById("ranks");
+    ranksEl.innerHTML = "";
+    for (const r of s.ranks) {
+      const b = document.createElement("button");
+      b.className = "rank" + (r.rank === state.rank ? " on" : "");
+      b.textContent = rankLabel(r.rank);
+      b.onclick = () => {
+        state.rank = r.rank;
+        loadSummary();
+        loadStats();
+        graphLoaded = false;
+        if (state.tab === "graph") loadGraph();
+      };
+      ranksEl.appendChild(b);
+    }
+    if (!s.ranks.some((r) => r.rank === state.rank) && s.ranks.length) state.rank = s.ranks[0].rank;
+    return s;
+  } catch (e) {
+    showError(`No analysis data for ${state.wiki} yet (${esc(e.message)}). If extraction is still running, refresh later.`);
+    document.getElementById("ranks").innerHTML = "";
+    return null;
+  }
+}
+
+async function loadStats() {
+  const key = state.rank.replace(/[^a-z0-9]+/gi, "");
+  let st;
+  try { st = await api(`/api/stats?wiki=${state.wiki}&rank=${state.rank}`); }
+  catch (e) { showError(`Stats for rank=${esc(state.rank)} unavailable: ${esc(e.message)}`); return; }
+  showError("");
+
+  const conv = st.converge, hops = st.hopStats, top = st.topAttractors[0];
+  countTo(document.getElementById("heroNum"), conv.pct, 1, "%");
+  document.getElementById("heroCaption").innerHTML =
+    `of <b>${st.nodes.toLocaleString()}</b> articles fall into a loop at <b>${esc(rankLabel(state.rank))}</b><br>` +
+    (top ? `top attractor — <b>${esc(top.cycle.join(" → "))}</b> at ${top.pct}%` : "no dominant attractor");
+
+  document.getElementById("sideStats").innerHTML = [
+    side(hops.median ?? "–", `median hops<br>mean ${hops.mean} · max ${hops.max}`),
+    side(st.components.toLocaleString(), `components<br>${st.cycleCount} loops + dead ends`),
+    side(conv.deadEndPct + "%", `dead ends<br>${conv.noLinks} no links · ${conv.tooFewLinks} too few · ${conv.unresolvable} broken`),
+    side(st.largestCycle ? st.largestCycle.size : "–", st.largestCycle ? `largest loop<br>${esc(st.largestCycle.members.slice(0, 3).join(" → "))}…` : "largest loop"),
+  ].join("");
+
+  const bins = Object.keys(st.histogram).map(Number).sort((a, b) => a - b);
+  charts.hist.setOption({ ...chartBase,
+    xAxis: { type: "category", data: bins.map(String), ...axisCommon, splitLine: { show: false } },
+    yAxis: { type: "value", ...axisCommon },
+    series: [{ type: "bar", data: bins.map((b) => st.histogram[String(b)]),
+      itemStyle: { color: hueAt(0.08), borderRadius: 0 }, barWidth: "72%",
+      animationDelay: (i) => i * 45 }] }, true);
+
+  const topA = st.topAttractors.slice(0, 9);
+  charts.attr.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 56 },
+    xAxis: { type: "value", ...axisCommon },
+    yAxis: { type: "category", data: topA.map((a) => a.cycle.join("→")).reverse(), ...axisCommon, axisLabel: { color: "#a0a4b0", fontSize: 9, width: 190, overflow: "truncate" }, splitLine: { show: false } },
+    series: [{ type: "bar", data: topA.map((a) => a.basin).reverse(),
+      itemStyle: { color: (p) => hueAt(0.15 + 0.75 * (p.dataIndex / Math.max(1, topA.length - 1))), borderRadius: 0 },
+      label: { show: true, position: "right", color: "#565a68", fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => topA[topA.length - 1 - p.dataIndex].pct + "%" },
+      animationDelay: (i) => i * 55 }] }, true);
+
+  const s = summaryCache[state.wiki];
+  if (s) {
+    const order = s.ranks;
+    charts.decay.setOption({ ...chartBase,
+      xAxis: { type: "category", data: order.map((r) => rankLabel(r.rank)), ...axisCommon, splitLine: { show: false }, axisLabel: { color: "#565a68", fontSize: 8, rotate: 18 } },
+      yAxis: { type: "value", max: 100, ...axisCommon, axisLabel: { color: "#565a68", fontSize: 9, formatter: "{value}%" } },
+      series: [
+        { type: "line", data: order.map((r) => r.convergePct), smooth: 0.4, symbolSize: 5, lineStyle: { color: hueAt(0), width: 2 }, itemStyle: { color: hueAt(0) },
+          animationDelay: (i) => i * 70,
+          areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "oklch(86% 0.13 200 / 0.22)" }, { offset: 1, color: "oklch(86% 0.13 200 / 0)" }] } } },
+        { type: "line", data: order.map((r) => r.topAttractorPct), smooth: 0.4, symbolSize: 5, lineStyle: { color: hueAt(1), width: 2, type: "dashed" }, itemStyle: { color: hueAt(1) },
+          animationDelay: (i) => 120 + i * 70 } ] }, true);
+    charts.frag.setOption({ ...chartBase,
+      xAxis: { type: "category", data: order.map((r) => rankLabel(r.rank)), ...axisCommon, splitLine: { show: false }, axisLabel: { color: "#565a68", fontSize: 8, rotate: 18 } },
+      yAxis: { type: "value", ...axisCommon },
+      series: [
+        { type: "line", data: order.map((r) => r.components), smooth: 0.4, symbolSize: 5, lineStyle: { color: hueAt(0.8), width: 2 }, itemStyle: { color: hueAt(0.8) }, animationDelay: (i) => i * 70 },
+        { type: "line", data: order.map((r) => r.tooFewLinks), smooth: 0.4, symbolSize: 4, lineStyle: { color: "#565a68", width: 1, type: "dotted" }, itemStyle: { color: "#565a68" }, animationDelay: (i) => 120 + i * 70 } ] }, true);
+  }
+
+  charts.deg.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 48 },
+    xAxis: { type: "value", ...axisCommon },
+    yAxis: { type: "category", data: st.topInDegree.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#a0a4b0", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
+    series: [{ type: "bar", data: st.topInDegree.slice(0, 10).map((r) => r.inDegree).reverse(),
+      itemStyle: { color: (p) => hueAt(0.9 - 0.8 * (p.dataIndex / 10)), borderRadius: 0 }, animationDelay: (i) => i * 40 }] }, true);
+
+  charts.bet.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 48 },
+    xAxis: { type: "value", ...axisCommon },
+    yAxis: { type: "category", data: st.topBetweenness.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#a0a4b0", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
+    series: [{ type: "bar", data: st.topBetweenness.slice(0, 10).map((r) => r.betweenness).reverse(),
+      itemStyle: { color: (p) => hueAt(0.35 + 0.5 * (p.dataIndex / 10)), borderRadius: 0 }, animationDelay: (i) => i * 40 }] }, true);
+
+  document.getElementById("roads").innerHTML = st.roadsToTopAttractor.length
+    ? "<table><tr><th>from</th><th>enters loop at</th><th>articles riding this road</th></tr>" +
+      st.roadsToTopAttractor.map((r) => `<tr><td>${esc(r.from)}</td><td>${esc(r.into)}</td><td class="num">${r.count.toLocaleString()}</td></tr>`).join("") + "</table>"
+    : "<p style='font-family:var(--font-mono);font-size:12px;color:var(--ink-3)'>No single roads — traffic enters the top loop diffusely at this rank.</p>";
+
+  document.getElementById("exports").innerHTML =
+    ["distances", "indegree", "attractors"].map((what) =>
+      `<a class="exp" href="/api/export?wiki=${state.wiki}&rank=${key}&what=${what}">get ${what}-${key}.csv</a>`).join("");
+}
+
+function side(v, k) {
+  return `<div class="side-stat"><div class="v">${v}</div><div class="k">${k}</div></div>`;
+}
+
+/* game */
+async function playChain(title) {
+  const out = document.getElementById("chainOut");
+  out.innerHTML = "<span style='color:var(--ink-3);font-family:var(--font-mono);font-size:12px'>walking…</span>";
+  try {
+    const c = await api(`/api/chain?wiki=${state.wiki}&rank=${state.rank}&title=${encodeURIComponent(title)}`);
+    const pieces = [];
+    c.chain.forEach((t, i) => {
+      const isCyc = c.fate === "cycle" && i >= c.chain.length - (c.cycleSize || 3);
+      pieces.push({ html: `<span class="pill${i === 0 ? " start" : isCyc ? " cyc" : ""}" style="animation-delay:${reduced ? 0 : i * 70}ms">${esc(t)}</span>` });
+      if (i < c.chain.length - 1) pieces.push({ html: `<span class="arrow" style="opacity:0;animation:hopIn .4s var(--ease-expo) ${reduced ? 0 : i * 70 + 35}ms forwards">→</span>` });
+    });
+    const fate = c.fate === "cycle"
+      ? `<span class="fate"><span class="cyc">↻</span> loops forever — ${c.hops} hops to enter a loop of ${c.cycleSize}</span>`
+      : `<span class="fate"><span class="dead">✝</span> chain dies after ${c.hops} hops — ${esc(c.reason)}</span>`;
+    pieces.push({ html: fate });
+    out.innerHTML = pieces.map((p) => p.html).join("");
+  } catch (e) {
+    out.innerHTML = `<span style="color:#ff7d7d;font-family:var(--font-mono);font-size:12px">${esc(e.message)}</span>`;
+  }
+}
+document.getElementById("playBtn").onclick = () => { const v = document.getElementById("titleInput").value.trim(); if (v) playChain(v); };
+document.getElementById("titleInput").addEventListener("keydown", (e) => { if (e.key === "Enter") document.getElementById("playBtn").click(); });
+document.getElementById("randBtn").onclick = async () => {
+  const r = await api(`/api/random?wiki=${state.wiki}&rank=${state.rank}`);
+  document.getElementById("titleInput").value = r.title;
+  playChain(r.title);
+};
+let searchTimer;
+document.getElementById("titleInput").addEventListener("input", (e) => {
+  clearTimeout(searchTimer);
+  const q = e.target.value.trim();
+  if (q.length < 2) return;
+  searchTimer = setTimeout(async () => {
+    const s = await api(`/api/search?wiki=${state.wiki}&q=${encodeURIComponent(q)}`);
+    document.getElementById("titles").innerHTML = s.titles.map((t) => `<option value="${esc(t)}">`).join("");
+  }, 180);
+});
+
+/* tabs / wiki switch */
+document.querySelectorAll(".tab").forEach((t) => t.onclick = () => {
+  document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("on", x === t));
+  state.tab = t.dataset.tab;
+  document.getElementById("statsView").style.display = state.tab === "stats" ? "" : "none";
+  document.getElementById("graphScene").style.display = state.tab === "graph" ? "" : "none";
+  if (state.tab === "graph") loadGraph();
+});
+// (wiki switch is wired in the boot block above)
+
+// detail control for the graph
+document.querySelectorAll("#detailCtl button").forEach((b) => b.onclick = () => {
+  document.querySelectorAll("#detailCtl button").forEach((x) => {
+    x.style.background = ""; x.style.color = ""; x.style.borderColor = "";
+  });
+  b.style.background = "var(--ink)"; b.style.color = "var(--ground-0)"; b.style.borderColor = "var(--ink)";
+  state.detail = Math.max(1, Math.min(4, Number(b.dataset.d)));
+  graphLoaded = false;
+  if (state.tab === "graph") loadGraph();
+});
+
+/* ==================================================================== *
+ * constellation — deterministic orbital layout + comet pulse on hover
+ * ==================================================================== */
+let graphLoaded = false;
+async function loadGraph() {
+  if (graphLoaded) return;
+  let g;
+  try { g = await api(`/api/graph?wiki=${state.wiki}&rank=${state.rank}&detail=${state.detail ?? 2}`); }
+  catch (e) { document.getElementById("graphWrap").insertAdjacentHTML("afterbegin", `<p style='color:#ff7d7d;font-family:var(--font-mono);font-size:12px;padding:12px'>No graph data (${esc(e.message)})</p>`); return; }
+  graphLoaded = true;
+
+  const NODES = g.nodes, EDGES = g.edges, LOOPS = g.loops;
+  const HUES = [hueAt(0), hueAt(0.55), hueAt(1), hueAt(0.8), "#8b8b9c"];
+
+  const byId = new Map(NODES.map((n) => [n.id, n]));
+  const succOf = new Map(), predsOf = new Map();
+  for (const raw of EDGES) {
+    succOf.set(raw.source, raw.target);
+    if (!predsOf.has(raw.target)) predsOf.set(raw.target, []);
+    predsOf.get(raw.target).push(raw.source);
+  }
+  const edges = EDGES.map((e) => ({ source: byId.get(e.source), target: byId.get(e.target) }));
+
+  // dead-branch classification is now done server-side (assigned to group 4
+  // before layout, so gray nodes get their own region). No client override needed.
+
+  for (const n of NODES) {
+    n.notable = n.isCycle || n.famous || (n.group === 4 && n.inDeg >= 6);
+    n.isGlyph = false; // render everything as circles now — arrows are on the edges
+    n.r = Math.min(32, Math.max(n.isCycle ? 14 : n.inDeg <= 1 ? 4 : 6, 3.5 + 2.2 * Math.sqrt(n.inDeg)));
+  }
+
+  // --- entry-point: which cycle member does this node's chain reach first? ---
+  // Used to hue-shift nodes within a cluster so branches are distinguishable.
+  const cycleIndex = new Map(); // node id → index within its loop (0,1,2…)
+  for (const l of LOOPS) l.cycle.forEach((t, i) => {
+    const n = NODES.find((x) => x.title === t);
+    if (n) cycleIndex.set(n.id, i);
+  });
+  const entryOf = new Map(); // node id → cycle member index it enters through
+  for (const n of NODES) {
+    if (n.isCycle) { entryOf.set(n.id, cycleIndex.get(n.id) ?? 0); continue; }
+    let cur = n.id; const seen = new Set();
+    let entry = null;
+    while (succOf.has(cur) && !seen.has(cur)) {
+      seen.add(cur);
+      const nx = succOf.get(cur);
+      if (cycleIndex.has(nx)) { entry = cycleIndex.get(nx); break; }
+      cur = nx;
+    }
+    entryOf.set(n.id, entry ?? 0);
+  }
+  // hue shift per entry branch: spread entries widely across the hue range
+  // so different "roads into the loop" are clearly distinguishable
+  function entryShift(entryIdx, cycleLen) {
+    if (cycleLen <= 1) return 0;
+    const range = 0.28; // ±28% of hue range = very visible
+    const angle = (entryIdx / (cycleLen - 1)) * 2 - 1; // -1 to 1
+    return angle * range;
+  }
+  // precompute shifts per cluster based on actual cycle lengths
+  const cycleLens = LOOPS.map((l) => l.cycle.length);
+  function nodeFill(n) {
+    if (n.deadEnd || n.group === 4) return "rgba(139,139,156,0.16)";
+    const base = n.group >= 4 ? 0.8 : [0, 0.55, 1, 0.8][n.group] ?? 0;
+    const entry = entryOf.get(n.id) ?? 0;
+    const cl = cycleLens[n.group] ?? 2;
+    const shift = entryShift(entry, cl);
+    return hueAt(Math.min(0.99, Math.max(0.01, base + shift)));
+  }
+
+  const hash01 = (x) => { let h = (x * 2654435761) >>> 0; h ^= h >>> 15; h = (h * 2246822519) >>> 0; h ^= h >>> 13; return (h >>> 0) / 4294967296; };
+
+  const W = 1600, H = 1000;
+  // positions come precomputed from the analysis (radial tree per cluster:
+  // children fan out from their parent's wedge — no cross-region tangles).
+  const CL = [
+    { x: 430, y: 430, r: [100, 210, 310] },
+    { x: 1150, y: 390, r: [94, 200, 295] },
+    { x: 800, y: 830, r: [80, 175, 260] },
+    { x: 1400, y: 830, r: [50, 110, 160] },
+    { x: 200, y: 850, r: [45, 105, 150] },
+  ];
+
+  const svg = d3.select("#graph");
+  svg.selectAll("*").remove();
+  const gRoot = svg.append("g");
+  const defs = svg.append("defs");
+
+  CL.forEach((c, gi) => {
+    const grad = defs.append("radialGradient").attr("id", `halo${gi}`);
+    grad.append("stop").attr("offset", "0%").attr("stop-color", HUES[gi]).attr("stop-opacity", 0.5);
+    grad.append("stop").attr("offset", "55%").attr("stop-color", HUES[gi]).attr("stop-opacity", 0.14);
+    grad.append("stop").attr("offset", "100%").attr("stop-color", HUES[gi]).attr("stop-opacity", 0);
+  });
+  [["as", 6], ["am", 8], ["al", 11]].forEach(([id, s]) => {
+    defs.append("marker").attr("id", id).attr("viewBox", "0 0 10 10")
+      .attr("refX", 8.4).attr("refY", 5).attr("markerWidth", s).attr("markerHeight", s)
+      .attr("orient", "auto").attr("markerUnits", "userSpaceOnUse")
+      .append("path").attr("d", "M0,1 L9,5 L0,9 z").attr("fill", "rgba(225,232,255,0.85)");
+  });
+
+  if (!reduced) {
+    const stars = gRoot.append("g");
+    const starData = Array.from({ length: 130 }, (_, i) => ({ x: hash01(i + 1) * W, y: hash01(i + 99) * H, r: 0.5 + hash01(i + 33) * 1.1, i }));
+    stars.selectAll("circle.star").data(starData).join("circle")
+      .attr("class", (d) => (d.i % 7 === 0 ? "star tw" : "star"))
+      .attr("cx", (d) => d.x).attr("cy", (d) => d.y).attr("r", (d) => d.r)
+      .attr("fill", "#cdd6e8").attr("opacity", (d) => 0.05 + hash01(d.i + 55) * 0.14);
+  }
+
+  const guides = gRoot.append("g");
+  CL.forEach((c, gi) => {
+    c.r.forEach((rad, ri) => {
+      guides.append("ellipse")
+        .attr("cx", c.x).attr("cy", c.y).attr("rx", rad).attr("ry", rad * 0.94)
+        .attr("fill", "none").attr("stroke", HUES[gi]).attr("stroke-width", 0.6)
+        .attr("opacity", ri === 0 ? 0.22 : 0.09);
+    });
+  });
+
+  function edgePath(e) {
+    const s = e.source, t = e.target;
+    const dx = t.x - s.x, dy = t.y - s.y, L = Math.hypot(dx, dy) || 1;
+    const ux = dx / L, uy = dy / L;
+    const off0 = s.isGlyph ? 4 : s.r + 3;
+    const off1 = t.isGlyph ? 6 : t.r + 7;
+    const x0 = s.x + ux * off0, y0 = s.y + uy * off0;
+    const x1 = t.x - ux * off1, y1 = t.y - uy * off1;
+    const mx = (x0 + x1) / 2, my = (y0 + y1) / 2;
+    const bend = Math.min(26, L * 0.14);
+    const cx = mx - uy * bend, cy = my + ux * bend;
+    return `M${x0},${y0} Q${cx},${cy} ${x1},${y1}`;
+  }
+
+  const edgeSel = gRoot.append("g").selectAll("path.edge").data(edges).join("path")
+    .attr("class", "edge")
+    .attr("fill", "none")
+    .attr("stroke", (e) => (e.source.group === 4 || e.target.group === 4) ? "rgba(139,139,156,0.34)"
+      : (e.source.isCycle && e.target.isCycle) ? (HUES[e.target.group] ?? "#fff")
+      : "rgba(190,200,230,0.26)")
+    .attr("stroke-dasharray", (e) => (e.source.group === 4 || e.target.group === 4) ? "3 4" : null)
+    .attr("stroke-width", (e) => { const w = 0.7 + 1.2 * Math.log10(Math.max(1, e.source.flow || 1)); return (e.source.isCycle && e.target.isCycle) ? w + 1.4 : w; })
+    .attr("marker-end", (e) => "url(#" + ((0.7 + 1.2 * Math.log10(Math.max(1, e.source.flow || 1))) > 5.4 ? "al" : (0.7 + 1.2 * Math.log10(Math.max(1, e.source.flow || 1))) > 3.2 ? "am" : "as") + ")")
+    .attr("d", edgePath);
+
+  if (!reduced) {
+    svg.append("style").text("@keyframes flowdrift { to { stroke-dashoffset: -19; } }");
+    const cycEdges = edges.filter((e) => e.source.isCycle && e.target.isCycle);
+    gRoot.append("g").selectAll("path.flow").data(cycEdges).join("path")
+      .attr("class", "flow").attr("fill", "none")
+      .attr("stroke", (e) => HUES[e.target.group] ?? "#fff")
+      .attr("stroke-width", 2.4).attr("stroke-dasharray", "3 16")
+      .attr("opacity", 0.9).attr("style", "animation: flowdrift 1.15s linear infinite")
+      .attr("d", edgePath);
+  }
+
+  const haloSel = gRoot.append("g").selectAll("circle.halo")
+    .data(NODES.filter((n) => n.isCycle || n.flow > 4000)).join("circle")
+    .attr("class", "halo").attr("fill", (n) => `url(#halo${Math.min(n.group, 4)})`)
+    .attr("r", (n) => n.r * 2.5).attr("pointer-events", "none");
+
+  // (no glyphs — all nodes are circles; arrows live on the edges)
+
+  const nodeSel = gRoot.append("g").selectAll("circle.node").data(NODES).join("circle")
+    .attr("class", "node")
+    .attr("r", (n) => n.r)
+    .attr("fill", (n) => nodeFill(n))
+    .attr("fill-opacity", (n) => n.isCycle ? 1 : 0.85)
+    .attr("stroke", (n) => n.isCycle ? "#ffffff" : "rgba(255,255,255,0.4)")
+    .attr("stroke-width", (n) => n.isCycle ? 2.2 : 0.8)
+    .attr("stroke-dasharray", (n) => n.deadEnd ? "3 2.5" : null)
+    .attr("cursor", "pointer");
+
+  const labelSel = gRoot.append("g").selectAll("text.nlabel")
+    .data(NODES.filter((n) => n.isCycle || n.famous)).join("text")
+    .attr("class", "nlabel")
+    .attr("fill", (n) => (n.isCycle ? "#ffffff" : "#a0a4b0"))
+    .attr("font-family", "Space Mono, monospace")
+    .attr("font-size", (n) => (n.isCycle ? 11.5 : 9.5))
+    .attr("font-weight", (n) => (n.isCycle ? 700 : 400))
+    .attr("text-anchor", "middle")
+    .attr("pointer-events", "none").text((n) => n.title);
+
+  const cl = gRoot.append("g");
+  const clusterDefs = [
+    { g: 0, l: LOOPS[0]?.cycle.join(" → ") ?? "", s: LOOPS[0]?.pct + "% of the wiki" },
+    { g: 1, l: LOOPS[1]?.cycle.join(" → ") ?? "", s: LOOPS[1]?.pct + "%" },
+    { g: 2, l: LOOPS[2]?.cycle.join(" → ") ?? "", s: LOOPS[2]?.pct + "%" },
+    { g: 3, l: LOOPS[3]?.cycle.join(" → ") ?? "", s: LOOPS[3]?.pct + "%" },
+    { g: 4, l: "WHERE CHAINS DIE", s: "" },
+  ].filter((c) => c.l);
+  cl.selectAll("text.l").data(clusterDefs).join("text")
+    .attr("class", "l").attr("x", (d) => CL[d.g].x).attr("y", (d) => CL[d.g].y - CL[d.g].r[2] - 40)
+    .attr("text-anchor", "middle").attr("fill", "#e8ebf5").attr("font-family", "Space Grotesk, sans-serif")
+    .attr("font-weight", 700).attr("font-size", 13).attr("letter-spacing", "0.28em")
+    .attr("opacity", 0.95).text((d) => d.l);
+  cl.selectAll("text.s").data(clusterDefs).join("text")
+    .attr("class", "s").attr("x", (d) => CL[d.g].x).attr("y", (d) => CL[d.g].y - CL[d.g].r[2] - 22)
+    .attr("text-anchor", "middle").attr("fill", "#7d8290").attr("font-family", "Space Mono, monospace")
+    .attr("font-size", 9.5).attr("letter-spacing", "0.24em").attr("opacity", 0.8).text((d) => d.s);
+
+  function position() {
+    edgeSel.attr("d", edgePath);
+    gRoot.selectAll("path.flow").attr("d", edgePath);
+    haloSel.attr("cx", (n) => n.x).attr("cy", (n) => n.y);
+    nodeSel.attr("cx", (n) => n.x).attr("cy", (n) => n.y);
+    labelSel.attr("x", (n) => n.x).attr("y", (n) => n.y + n.r + 14);
+  }
+  position();
+
+  /* comet pulse that travels the traced path */
+  let comet = null, cometRAF = 0;
+  function startComet(pathIds) {
+    stopComet();
+    if (reduced || pathIds.length < 2) return;
+    comet = gRoot.append("circle").attr("r", 4.5).attr("fill", "#ffffff").attr("opacity", 0);
+    const pts = pathIds.map((id) => byId.get(id));
+    const t0 = performance.now(), loopMs = 1400;
+    (function fly(t) {
+      const p = ((t - t0) % loopMs) / loopMs;
+      const f = p * (pts.length - 1);
+      const i = Math.min(pts.length - 2, Math.floor(f)), k = f - i;
+      const a = pts[i], b = pts[i + 1];
+      if (!a || !b || !comet || !comet.node()) return; // stale after re-render
+      comet.attr("cx", a.x + (b.x - a.x) * k).attr("cy", a.y + (b.y - a.y) * k).attr("opacity", 0.95);
+      cometRAF = requestAnimationFrame(fly);
+    })(t0);
+  }
+  function stopComet() {
+    cancelAnimationFrame(cometRAF);
+    if (comet) { comet.remove(); comet = null; }
+  }
+
+  const ginfo = document.getElementById("ginfo");
+  const infoDefault = ginfo.innerHTML;
+
+  // hover ring — bright visual indicator for the hovered node
+  const hoverRing = gRoot.append("circle")
+    .attr("r", 0).attr("fill", "none").attr("stroke", "#ffffff")
+    .attr("stroke-width", 3).attr("opacity", 0).attr("pointer-events", "none");
+
+  let hovered = null;
+  nodeSel.on("mouseenter", (event, d) => {
+    hovered = d;
+    const pathN = [d.id]; let cur = d.id; const seen = new Set();
+    while (succOf.has(cur) && !seen.has(cur)) { seen.add(cur); const nx = succOf.get(cur); if (pathN.includes(nx)) break; pathN.push(nx); cur = nx; }
+    edgeSel.attr("stroke", (e) => pathN.includes(e.source.id) && pathN.includes(e.target.id) ? "#ffffff" : "rgba(190,200,230,0.06)")
+           .attr("stroke-width", (e) => pathN.includes(e.source.id) && pathN.includes(e.target.id) ? (0.7 + 1.2 * Math.log10(Math.max(1, e.source.flow || 1))) + 2.2 : 0.7 + 1.2 * Math.log10(Math.max(1, e.source.flow || 1)));
+    gRoot.selectAll("path.flow").attr("opacity", (e) => pathN.includes(e.source.id) ? 1 : 0.1);
+    nodeSel.attr("opacity", (n) => pathN.includes(n.id) ? 1 : 0.15);
+    nodeSel.attr("r", (n) => pathN.includes(n.id) ? n.r * (n.id === d.id ? 1.5 : 1.2) : n.r);
+    haloSel.attr("opacity", (n) => pathN.includes(n.id) ? 1 : 0.15);
+    // bright ring on the hovered node
+    hoverRing.attr("cx", d.x).attr("cy", d.y).attr("r", d.r * 1.5 + 8).attr("opacity", 0.9);
+    startComet(pathN);
+    ginfo.innerHTML = `<b>${esc(d.title)}</b>${d.isCycle ? " · loop member" : ""} ` +
+      `<a href="${d.url}" target="_blank" rel="noopener" style="pointer-events:auto;">[open wiki ↗]</a><br>` +
+      `<span class="stat"><em>${d.inDeg.toLocaleString()}</em> articles link here first` +
+      (d.flow ? ` · <em>${d.flow.toLocaleString()}</em> chains pass through` : "") +
+      `</span><br>` +
+      `<span class="stat">first link → ${d.target ? `<a href="${wikiUrlFor(d.target)}" target="_blank" rel="noopener" style="pointer-events:auto;">${esc(d.target)}</a>` : "<span style='color:#ff7d7d'>✝ chain dies</span>"}</span>`;
+  }).on("mouseleave", () => {
+    hovered = null;
+    stopComet();
+    hoverRing.attr("opacity", 0);
+    edgeSel.attr("stroke", (e) => (e.source.group === 4 || e.target.group === 4) ? "rgba(139,139,156,0.34)"
+      : (e.source.isCycle && e.target.isCycle) ? (HUES[e.target.group] ?? "#fff") : "rgba(190,200,230,0.26)")
+      .attr("stroke-width", (e) => { const w = 0.7 + 1.2 * Math.log10(Math.max(1, e.source.flow || 1)); return (e.source.isCycle && e.target.isCycle) ? w + 1.4 : w; });
+    gRoot.selectAll("path.flow").attr("opacity", 0.9);
+    nodeSel.attr("opacity", 1).attr("r", (n) => n.r);
+    haloSel.attr("opacity", 1);
+    ginfo.innerHTML = infoDefault;
+  });
+
+  // click to open wiki article
+  nodeSel.on("click", (event, d) => {
+    if (event.defaultPrevented) return; // was a drag
+    if (d.url) window.open(d.url, "_blank", "noopener");
+  });
+
+  // helper for target wiki URLs
+  function wikiUrlFor(title) {
+    const origin = state.wiki === "rs3" ? "https://runescape.wiki" : "https://oldschool.runescape.wiki";
+    return origin + "/w/" + encodeURIComponent(title.replace(/ /g, "_"));
+  }
+
+  nodeSel.call(d3.drag()
+    .on("start", (event) => { event.sourceEvent?.stopPropagation?.(); document.getElementById("graphWrap").classList.add("dragging"); })
+    .on("drag", (event, d) => { d.x = event.x; d.y = event.y; position(); })
+    .on("end", () => document.getElementById("graphWrap").classList.remove("dragging")));
+  svg.call(d3.zoom().scaleExtent([0.35, 3.2]).on("zoom", (event) => gRoot.attr("transform", event.transform)));
+
+  // --- search + trace: find an article and trace its path ---
+  function traceNode(d) {
+    // same logic as hover but programmatic
+    const pathN = [d.id]; let cur = d.id; const seen = new Set();
+    while (succOf.has(cur) && !seen.has(cur)) { seen.add(cur); const nx = succOf.get(cur); if (pathN.includes(nx)) break; pathN.push(nx); cur = nx; }
+    edgeSel.attr("stroke", (e) => pathN.includes(e.source.id) && pathN.includes(e.target.id) ? "#ffffff" : "rgba(190,200,230,0.06)")
+           .attr("stroke-width", (e) => pathN.includes(e.source.id) && pathN.includes(e.target.id) ? (0.7 + 1.2 * Math.log10(Math.max(1, e.source.flow || 1))) + 2.2 : 0.7 + 1.2 * Math.log10(Math.max(1, e.source.flow || 1)));
+    gRoot.selectAll("path.flow").attr("opacity", (e) => pathN.includes(e.source.id) ? 1 : 0.1);
+    nodeSel.attr("opacity", (n) => pathN.includes(n.id) ? 1 : 0.15);
+    nodeSel.attr("r", (n) => pathN.includes(n.id) ? n.r * (n.id === d.id ? 1.5 : 1.2) : n.r);
+    haloSel.attr("opacity", (n) => pathN.includes(n.id) ? 1 : 0.15);
+    hoverRing.attr("cx", d.x).attr("cy", d.y).attr("r", d.r * 1.5 + 8).attr("opacity", 0.9);
+    startComet(pathN);
+    ginfo.innerHTML = `<b>${esc(d.title)}</b>${d.isCycle ? " · loop member" : ""} ` +
+      `<a href="${d.url}" target="_blank" rel="noopener" style="pointer-events:auto;">[open wiki ↗]</a><br>` +
+      `<span class="stat"><em>${d.inDeg.toLocaleString()}</em> articles link here first` +
+      (d.flow ? ` · <em>${d.flow.toLocaleString()}</em> chains pass through` : "") +
+      `</span><br>` +
+      `<span class="stat">first link → ${d.target ? `<a href="${wikiUrlFor(d.target)}" target="_blank" rel="noopener" style="pointer-events:auto;">${esc(d.target)}</a>` : "<span style='color:#ff7d7d'>✝ chain dies</span>"}</span>`;
+    // pan to it
+    const svgEl = svg.node();
+    const rect = svgEl.getBoundingClientRect();
+    const scale = Math.min(rect.width / W, rect.height / H);
+    svg.transition().duration(600)
+      .call(d3.zoom().transform, d3.zoomIdentity.translate(rect.width / 2 - d.x * scale, rect.height / 2 - d.y * scale).scale(scale));
+  }
+
+  const searchInput = document.getElementById("graphSearch");
+  const searchList = document.getElementById("graphTitles");
+  // populate datalist with all node titles
+  searchList.innerHTML = NODES.map((n) => `<option value="${esc(n.title)}">`).join("");
+  let searchDebounce;
+  searchInput.addEventListener("input", () => {
+    clearTimeout(searchDebounce);
+    const q = searchInput.value.trim();
+    if (q.length < 2) return;
+    searchDebounce = setTimeout(async () => {
+      // try local match first
+      const local = NODES.find((n) => n.title.toLowerCase() === q.toLowerCase());
+      if (local) { traceNode(local); return; }
+      // fallback: search the full corpus and walk the chain
+      try {
+        const s = await api(`/api/search?wiki=${state.wiki}&q=${encodeURIComponent(q)}`);
+        if (s.titles.length > 0) {
+          // add these to the datalist
+          searchList.innerHTML = s.titles.map((t) => `<option value="${esc(t)}">`).join("");
+        }
+      } catch (e) { /* silent */ }
+    }, 250);
+  });
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return;
+    const q = searchInput.value.trim();
+    if (!q) return;
+    const local = NODES.find((n) => n.title.toLowerCase() === q.toLowerCase());
+    if (local) { traceNode(local); return; }
+    // not in the graph — fetch its chain and show the info without a node
+    api(`/api/chain?wiki=${state.wiki}&rank=${state.rank}&title=${encodeURIComponent(q)}`)
+      .then((c) => {
+        ginfo.innerHTML = `<b>${esc(c.title)}</b> (not in current graph view)<br>` +
+          `<span class="stat">chain: ${c.chain.slice(0, 6).map(esc).join(" → ")}${c.chain.length > 6 ? " → …" : ""}</span><br>` +
+          `<span class="stat">${c.fate === "cycle" ? `↻ loops after ${c.hops} hops (loop of ${c.cycleSize})` : `✝ dies after ${c.hops} hops — ${esc(c.reason)}`}</span>`;
+      })
+      .catch(() => { ginfo.innerHTML = `<b>${esc(q)}</b> not found`; });
+  });
+
+  document.getElementById("glegend").innerHTML =
+    LOOPS.map((l, i) => `<span><span class="sw" style="background:${HUES[i]}"></span>${esc(l.cycle.join(" → "))} · ${l.pct}%</span>`).join("") +
+    `<span><span class="sw" style="background:#8b8b9c"></span>dead-end chains</span>` +
+    `<span style="color:var(--ink-3)">▸ ring = orbit · hub = loop member · drag nodes · scroll to zoom</span>`;
+}
+
+/* ==================================================================== *
+ * tweaks — live parameters (persisted)
+ * ==================================================================== */
+(function tweaks() {
+  const btn = document.getElementById("tweaksBtn");
+  const panel = document.getElementById("tweaksPanel");
+  const hue = document.getElementById("hueShift");
+  const neb = document.getElementById("nebulaMult");
+  const hueVal = document.getElementById("hueVal");
+  const nebVal = document.getElementById("nebVal");
+  hue.value = HUE_SHIFT; neb.value = NEBULA_MULT;
+  hueVal.textContent = HUE_SHIFT + "°"; nebVal.textContent = Number(NEBULA_MULT).toFixed(1) + "×";
+
+  btn.onclick = () => panel.classList.toggle("open");
+  let hueTimer;
+  hue.oninput = () => {
+    HUE_SHIFT = Number(hue.value);
+    hueVal.textContent = HUE_SHIFT + "°";
+    localStorage.setItem("lab_hue", String(HUE_SHIFT));
+    clearTimeout(hueTimer);
+    hueTimer = setTimeout(() => {
+      loadStats();
+      graphLoaded = false;
+      if (state.tab === "graph") loadGraph();
+    }, 120);
+  };
+  neb.oninput = () => {
+    NEBULA_MULT = Number(neb.value);
+    nebVal.textContent = NEBULA_MULT.toFixed(1) + "×";
+    localStorage.setItem("lab_nebula", String(NEBULA_MULT));
+    if (window.__setNebula) window.__setNebula(NEBULA_MULT);
+  };
+})();
+
+/* boot */
+(async () => {
+  // populate wiki switcher from the server-provided wiki list
+  const ws = document.getElementById("wikiSwitch");
+  ws.innerHTML = WIKIS.map((w, i) =>
+    `<button data-wiki="${w.id}"${i === 0 ? ' class="on"' : ""}>${w.id}</button>`
+  ).join("");
+  document.querySelectorAll("#wikiSwitch button").forEach((b) => b.onclick = async () => {
+    document.querySelectorAll("#wikiSwitch button").forEach((x) => x.classList.toggle("on", x === b));
+    state.wiki = b.dataset.wiki;
+    graphLoaded = false;
+    await loadSummary();
+    loadStats();
+    if (state.tab === "graph") loadGraph();
+  });
+  await loadSummary();
+  loadStats();
+})();
+</script>
+</body>
+</html>
+
+
