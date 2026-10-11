@@ -463,7 +463,7 @@ function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
   let LOOPS_DEF = [
     { xf: 0.74, yf: 0.30, rf: 0.105, hue: 0,   w: 0.45, label: "loading…", pct: 31 },
   ];
-  const DEAD_RATE = 0.14;
+  let DEAD_RATE = 0.14;
 
   function layout() {
     const r = masthead.getBoundingClientRect();
