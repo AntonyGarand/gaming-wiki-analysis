@@ -1,46 +1,19 @@
 {
   "wikis": [
-    {
-      "id": "osrs",
-      "name": "Old School RuneScape Wiki",
-      "origin": "https://oldschool.runescape.wiki",
-      "description": "OSRS — the original target of this analysis"
-    },
-    {
-      "id": "rs3",
-      "name": "RuneScape Wiki",
-      "origin": "https://runescape.wiki",
-      "description": "RS3 — the sister game, same engine different decade"
-    },
-    {
-      "id": "minecraft",
-      "name": "Minecraft Wiki",
-      "origin": "https://minecraft.wiki",
-      "description": "The best-selling game of all time"
-    },
-    {
-      "id": "terraria",
-      "name": "Terraria Wiki",
-      "origin": "https://terraria.wiki.gg",
-      "description": "2D sandbox — mining, building, boss fights"
-    },
-    {
-      "id": "stardew",
-      "name": "Stardew Valley Wiki",
-      "origin": "https://stardewvalleywiki.com/mediawiki",
-      "description": "Farming sim with a shockingly deep wiki"
-    },
-    {
-      "id": "poe",
-      "name": "Path of Exile Wiki",
-      "origin": "https://www.poewiki.net",
-      "description": "ARPG with the most complex item system in gaming"
-    },
-    {
-      "id": "tarkov",
-      "name": "Escape from Tarkov Wiki",
-      "origin": "https://escapefromtarkov.fandom.com",
-      "description": "Hardcore FPS — notoriously opaque mechanics"
-    }
+    {"id": "osrs", "name": "Old School RuneScape Wiki", "origin": "https://oldschool.runescape.wiki", "description": "The original target"},
+    {"id": "rs3", "name": "RuneScape Wiki", "origin": "https://runescape.wiki", "description": "RS3 — same engine, different decade"},
+    {"id": "rsc", "name": "RuneScape Classic Wiki", "origin": "https://classic.runescape.wiki", "description": "The deprecated original"},
+    {"id": "minecraft", "name": "Minecraft Wiki", "origin": "https://minecraft.wiki", "description": "Best-selling game of all time"},
+    {"id": "gta", "name": "GTA Wiki", "origin": "https://gta.wiki", "description": "Grand Theft Auto"},
+    {"id": "overwatch", "name": "Overwatch Wiki", "origin": "https://overwatch.weirdgloop.org", "description": "Hero shooter"},
+    {"id": "fortnite", "name": "Fortnite Wiki", "origin": "https://fortnite.weirdgloop.org", "description": "Battle royale"},
+    {"id": "valheim", "name": "Valheim Wiki", "origin": "https://valheim.weirdgloop.org", "description": "Viking survival"},
+    {"id": "vampiresurvivors", "name": "Vampire Survivors Wiki", "origin": "https://vampire.survivors.wiki", "description": "Bullet-heaven roguelite"},
+    {"id": "balatro", "name": "Balatro Wiki", "origin": "https://balatrowiki.org", "description": "Poker roguelite"},
+    {"id": "hytale", "name": "Hytale Wiki", "origin": "https://hytalewiki.org", "description": "Blocky adventure"},
+    {"id": "subnautica", "name": "Subnautica Wiki", "origin": "https://wiki.subnautica.com", "description": "Underwater survival"},
+    {"id": "terraria", "name": "Terraria Wiki", "origin": "https://terraria.wiki.gg", "description": "2D sandbox"},
+    {"id": "factorio", "name": "Factorio Wiki", "origin": "https://wiki.factorio.com", "description": "Factory-building"},
+    {"id": "tarkov", "name": "Escape from Tarkov Wiki", "origin": "https://escapefromtarkov.fandom.com", "description": "Hardcore FPS"}
   ]
 }
