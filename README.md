@@ -9,23 +9,22 @@ Follow the first link of any article, then that article's first link, forever. O
 ```bash
 npm install
 
-# fetch a wiki's full mainspace (respects rate limits)
-npx tsx scripts/fetch-wiki.ts --wiki=minecraft
+# fetch a single wiki (respects rate limits)
+npx tsx scripts/pipeline.ts --wiki=minecraft
 
-# parse ordered prose links from the wikitext
-npx tsx scripts/extract-links.ts --wiki=minecraft
+# fetch ALL configured wikis at once
+npx tsx scripts/pipeline.ts --all
 
-# compute network stats for each link rank (1st, 2nd, 3rd, last, random)
-npx tsx scripts/analyze.ts --wiki=minecraft
+# or just the fetch step for all wikis
+npx tsx scripts/fetch-wiki.ts --all
+
+# or step by step for a single wiki
+npx tsx scripts/fetch-wiki.ts --wiki=terraria
+npx tsx scripts/extract-links.ts --wiki=terraria
+npx tsx scripts/analyze.ts --wiki=terraria
 
 # launch the interactive dashboard
 npx tsx scripts/lab-server.ts
-```
-
-Or run the full pipeline in one command:
-
-```bash
-npx tsx scripts/pipeline.ts --wiki=minecraft
 ```
 
 ## Available wikis
