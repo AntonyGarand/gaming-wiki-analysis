@@ -459,10 +459,9 @@ function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
   let visible = true, running = true;
   let MULT = NEBULA_MULT;
 
-  const LOOPS_DEF = [
-    { xf: 0.74, yf: 0.30, rf: 0.105, hue: 0,   w: 0.45, label: "Gielinor → Guthix → Gods", pct: 31 },
-    { xf: 0.86, yf: 0.74, rf: 0.082, hue: 0.55, w: 0.34, label: "Monster → Combat → Bestiary", pct: 27 },
-    { xf: 0.55, yf: 0.82, rf: 0.066, hue: 1,   w: 0.21, label: "Currencies → Coins", pct: 15 },
+  // dynamic: replaced by __whirlpoolUpdate(topAttractors, deadEndPct) on loadStats
+  let LOOPS_DEF = [
+    { xf: 0.74, yf: 0.30, rf: 0.105, hue: 0,   w: 0.45, label: "loading…", pct: 31 },
   ];
   const DEAD_RATE = 0.14;
 
@@ -682,6 +681,25 @@ function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
       while (l.orbiters.length > n) l.orbiters.pop();
     }
   };
+  // public API: update loops from the current wiki's stats
+  __whirlpoolUpdate = function(topAttractors, deadEndPct) {
+    const top3 = topAttractors.slice(0, 3).filter((a) => a.pct >= 1);
+    if (!top3.length) return;
+    const pos = [
+      { xf: 0.74, yf: 0.30, rf: 0.105 },
+      { xf: 0.86, yf: 0.74, rf: 0.082 },
+      { xf: 0.55, yf: 0.82, rf: 0.066 },
+    ];
+    const hues = [0, 0.55, 1];
+    const totalPct = top3.reduce((acc, a) => acc + a.pct, 0);
+    DEAD_RATE = Math.min(0.5, deadEndPct / 100);
+    LOOPS_DEF = top3.map((a, i) => ({
+      ...pos[i], hue: hues[i], w: a.pct / totalPct,
+      label: a.cycle.join(" → "), pct: a.pct,
+    }));
+    flyers = [];
+    layout();
+  };
 })();
 
 /* ==================================================================== *
@@ -796,6 +814,8 @@ async function loadStats() {
       `<span><b>${topCycles.length}</b> whirlpools</span>` +
       (st.converge.deadEndPct > 0.5 ? `<span><b>1</b> graveyard</span>` : "");
   }
+  // update masthead whirlpool animation with this wiki's actual attractors
+  if (__whirlpoolUpdate) __whirlpoolUpdate(st.topAttractors, st.converge.deadEndPct);
 
   const conv = st.converge, hops = st.hopStats, top = st.topAttractors[0];
   countTo(document.getElementById("heroNum"), conv.pct, 1, "%");
