@@ -385,6 +385,7 @@
       <button class="btn ghost on" data-d="2" style="padding:6px 12px;font-size:9px;background:var(--ink);color:var(--ground-0);border-color:var(--ink);">normal</button>
       <button class="btn ghost" data-d="3" style="padding:6px 12px;font-size:9px;">dense</button>
       <button class="btn ghost" data-d="4" style="padding:6px 12px;font-size:9px;">all</button>
+      <button class="btn ghost" data-d="5" style="padding:6px 12px;font-size:9px;">max</button>
     </div>
     <div class="glegend" id="glegend"></div>
   </div>
@@ -948,7 +949,7 @@ document.querySelectorAll("#detailCtl button").forEach((b) => b.onclick = () => 
     x.style.background = ""; x.style.color = ""; x.style.borderColor = "";
   });
   b.style.background = "var(--ink)"; b.style.color = "var(--ground-0)"; b.style.borderColor = "var(--ink)";
-  state.detail = Math.max(1, Math.min(4, Number(b.dataset.d)));
+  state.detail = Math.max(1, Math.min(5, Number(b.dataset.d)));
   graphLoaded = false;
   if (state.tab === "graph") loadGraph();
 });

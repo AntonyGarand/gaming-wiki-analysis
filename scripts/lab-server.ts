@@ -136,11 +136,15 @@ async function computeGraph(wikiId: string, rank: string, detail: number) {
   const cycSet = new Set<number>();
   clusterAttractors.forEach(([a]) => { for (const n of attractors[a].nodes) cycSet.add(n); });
 
-  const depthMax = [2, 3, 5, 8][detail - 1];
+  const depthMax = [2, 3, 5, 8, 12][detail - 1];
   const budgets = [
-    [1e9, 10, 6], [1e9, 20, 14, 10, 8], [1e9, 30, 24, 18, 14, 10, 8, 6], [1e9, 40, 34, 28, 22, 18, 14, 12, 10],
+    [1e9, 10, 6],
+    [1e9, 20, 14, 10, 8],
+    [1e9, 30, 24, 18, 14, 10, 8, 6],
+    [1e9, 40, 34, 28, 22, 18, 14, 12, 10, 8, 8, 8, 8],
+    [1e9, 200, 160, 120, 100, 80, 60, 50, 40, 30, 25, 20, 15],
   ][detail - 1];
-  const perLoopCap = [40, 80, 150, 500][detail - 1];
+  const perLoopCap = [40, 80, 150, 500, 2000][detail - 1];
 
   clusterAttractors.forEach(([a], li) => {
     let frontier = [...attractors[a].nodes];
@@ -178,6 +182,15 @@ async function computeGraph(wikiId: string, rank: string, detail: number) {
     { x: 800, y: 830, core: 80, max: 230 }, { x: 1400, y: 830, core: 50, max: 145 },
     { x: 200, y: 850, core: 45, max: 135 },
   ];
+  // scale the dominant loop's territory by its basin share
+  if (clusterAttractors.length > 0) {
+    const topPct = clusterAttractors[0][1] / N;
+    if (topPct > 0.4) {
+      const scale = Math.min(2.2, 0.8 + topPct * 1.8);
+      ANCHORS[0].core = Math.round(ANCHORS[0].core * scale);
+      ANCHORS[0].max = Math.round(Math.min(ANCHORS[0].max * scale, 480));
+    }
+  }
   const childrenOf = new Map<number, number[]>();
   const rootsByCluster: Array<number[]> = [[], [], [], [], []];
   for (const v of include) {
@@ -418,7 +431,7 @@ const server = http.createServer(async (req, res) => {
     }
     if (url.pathname === "/api/graph") {
       const rank = q.get("rank") ?? "strict1";
-      const detail = Math.max(1, Math.min(4, Number(q.get("detail") ?? 2)));
+      const detail = Math.max(1, Math.min(5, Number(q.get("detail") ?? 2)));
       const linksPath = path.join(wikiDir, "links.sqlite");
       if (!fs.existsSync(linksPath)) { res.writeHead(404); res.end("not extracted yet"); return; }
       try { json(res, 200, await computeGraph(wiki, rank, detail)); }
