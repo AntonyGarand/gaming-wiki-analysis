@@ -147,12 +147,13 @@
   .hero-num {
     grid-column: 1 / 8;
     font-family: var(--font-display); font-weight: 850;
-    font-variation-settings: "wdth" 118;
-    font-size: clamp(96px, 15vw, 240px);
+    font-variation-settings: "wdth" 110;
+    font-size: clamp(72px, 12vw, 200px);
     line-height: 0.82; letter-spacing: -0.02em;
     background: linear-gradient(94deg, var(--cy) 8%, var(--vi) 78%);
     -webkit-background-clip: text; background-clip: text; color: transparent;
     font-variant-numeric: tabular-nums;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
   .hero-num-caption { grid-column: 1 / 6; margin-top: 2.5vh; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; line-height: 2; color: var(--ink-2); text-transform: uppercase; }
   .hero-num-caption b { color: var(--ink); }
@@ -310,14 +311,10 @@
     <h1 class="mast-title" id="mastTitle">Link<span class="lab">Laboratory</span></h1>
     <p class="mast-sub">
       Follow the <b>first link</b> of any article, then that article's first link, forever.
-      Every article reduced to particles and whirlpools — the nebula above is the real network:
-      three attractors absorbing <b>86%</b> of the wiki.
+      The nebula above is the real network: articles flowing into their attractors.
     </p>
-    <div class="mast-readout">
-      <span><b>36,163</b> osrs pages</span>
-      <span><b>79,760</b> rs3 pages</span>
-      <span><b>3</b> whirlpools</span>
-      <span><b>1</b> graveyard</span>
+    <div class="mast-readout" id="mastReadout">
+      <span>loading wiki data…</span>
     </div>
   </div>
 </header>
@@ -789,6 +786,16 @@ async function loadStats() {
   try { st = await api(`/api/stats?wiki=${state.wiki}&rank=${state.rank}`); }
   catch (e) { showError(`Stats for rank=${esc(state.rank)} unavailable: ${esc(e.message)}`); return; }
   showError("");
+
+  // update masthead readout with this wiki's stats
+  const topCycles = st.topAttractors.filter((a) => a.pct >= 2);
+  const readout = document.getElementById("mastReadout");
+  if (readout) {
+    readout.innerHTML = `<span><b>${st.nodes.toLocaleString()}</b> pages</span>` +
+      `<span><b>${st.converge.pct}%</b> converge</span>` +
+      `<span><b>${topCycles.length}</b> whirlpools</span>` +
+      (st.converge.deadEndPct > 0.5 ? `<span><b>1</b> graveyard</span>` : "");
+  }
 
   const conv = st.converge, hops = st.hopStats, top = st.topAttractors[0];
   countTo(document.getElementById("heroNum"), conv.pct, 1, "%");
