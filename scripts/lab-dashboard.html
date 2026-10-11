@@ -227,7 +227,6 @@
   /* constellation */
   .graphscene { padding: 8vh 3vw 6vh; }
   .graphwrap { position: relative; background: var(--ground-1); border: 1px solid var(--hairline); padding: 10px; }
-  #graph { width: 100%; height: min(78vh, 820px); cursor: grab; display: block; }
   .graphwrap.dragging #graph { cursor: grabbing; }
   .ginfo {
     position: absolute; left: 22px; bottom: 18px; pointer-events: none;
@@ -375,7 +374,7 @@
 <section class="graphscene" id="graphScene" style="display:none">
   <div class="scene-label"><span>The constellation — loops of the first-link network</span><span class="idx">05</span></div>
   <div class="graphwrap" id="graphWrap">
-    <svg id="graph" viewBox="0 0 1600 1000" role="img" aria-label="Orbital map of first-link loops"></svg>
+    <div id="graph" style="width:100%;height:min(78vh,820px);"></div>
     <div class="ginfo" id="ginfo">hover a node to trace its path to the loop</div>
     <div style="position:absolute;right:18px;top:14px;display:flex;gap:4px;z-index:5;align-items:center;" id="detailCtl">
       <input id="graphSearch" list="graphTitles" placeholder="find article…" autocomplete="off"
