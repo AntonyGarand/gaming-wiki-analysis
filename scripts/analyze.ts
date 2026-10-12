@@ -140,6 +140,32 @@ async function main() {
       if (a === DEAD) deadBasin++;
       else if (a !== -1) basinCount.set(a, (basinCount.get(a) ?? 0) + 1);
     }
+
+    // --- dead-end terminals: where do non-converging chains actually die? ---
+    const deadTerminal = new Map<number, { count: number; reason: string }>();
+    for (let i = 0; i < N; i++) {
+      if (attractor[i] !== DEAD) continue;
+      // walk to the terminal node of this chain
+      let cur = i; const seen = new Set();
+      while (cur >= 0 && !seen.has(cur) && succ[cur] !== -1) { seen.add(cur); cur = succ[cur]; }
+      // cur is now the terminal node (succ[cur] === -1 or a cycle back)
+      const reason = term[cur] === 1 ? "no links"
+        : term[cur] === 2 ? `only ${linksByPage.get(ids[cur])?.length ?? 0} links`
+        : term[cur] === 3 ? "redlink target"
+        : "chain breaks";
+      const entry = deadTerminal.get(cur) ?? { count: 0, reason };
+      entry.count++;
+      deadTerminal.set(cur, entry);
+    }
+    const topDeadTerminals = [...deadTerminal.entries()]
+      .sort((a, b) => b[1].count - a[1].count).slice(0, 15)
+      .map(([nodeIdx, info]) => ({
+        title: titles.get(ids[nodeIdx])!,
+        chains: info.count,
+        pct: +(100 * info.count / N).toFixed(2),
+        reason: info.reason,
+      }));
+
     const ranked = [...basinCount.entries()].sort((x, y) => y[1] - x[1]);
     const cycled = ranked.reduce((acc, [, b]) => acc + b, 0);
     const dists: number[] = [];
@@ -186,6 +212,7 @@ async function main() {
       cycleCount: ranked.length,
       largestCycle: cycles[0] ? { members: cycles[0].cycle, size: cycles[0].cycle.length, basin: cycles[0].basin } : null,
       topAttractors: cycles.slice(0, 20),
+      deadEndTerminals: topDeadTerminals,
       roadsToTopAttractor: [],
       topInDegree, topBetweenness,
     };
