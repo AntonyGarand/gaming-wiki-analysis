@@ -1,0 +1,97 @@
+{
+ "wiki": "overwatch",
+ "generatedAt": "2026-10-12T13:52:37.995Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 82.02,
+   "deadEndPct": 17.98,
+   "components": 34,
+   "cycleCount": 33,
+   "meanHops": 3.73,
+   "medianHops": 4,
+   "maxHops": 9,
+   "topAttractor": [
+    "Game Modes",
+    "Competitive Play",
+    "Playlist"
+   ],
+   "topAttractorPct": 43.98
+  },
+  {
+   "rank": "2",
+   "convergePct": 45.94,
+   "deadEndPct": 54.06,
+   "components": 30,
+   "cycleCount": 29,
+   "meanHops": 5.55,
+   "medianHops": 5,
+   "maxHops": 14,
+   "topAttractor": [
+    "Unranked",
+    "Game Modes"
+   ],
+   "topAttractorPct": 22.04
+  },
+  {
+   "rank": "3",
+   "convergePct": 29.1,
+   "deadEndPct": 70.9,
+   "components": 29,
+   "cycleCount": 28,
+   "meanHops": 3.32,
+   "medianHops": 3,
+   "maxHops": 10,
+   "topAttractor": [
+    "Anubis",
+    "Egypt"
+   ],
+   "topAttractorPct": 13.75
+  },
+  {
+   "rank": "5",
+   "convergePct": 9.79,
+   "deadEndPct": 90.21,
+   "components": 19,
+   "cycleCount": 18,
+   "meanHops": 1.71,
+   "medianHops": 1,
+   "maxHops": 8,
+   "topAttractor": [
+    "Omnic Crisis",
+    "Omnium"
+   ],
+   "topAttractorPct": 3.38
+  },
+  {
+   "rank": "last",
+   "convergePct": 62.11,
+   "deadEndPct": 37.89,
+   "components": 56,
+   "cycleCount": 55,
+   "meanHops": 3.87,
+   "medianHops": 3,
+   "maxHops": 16,
+   "topAttractor": [
+    "Season",
+    "Competitive Drives",
+    "Competitive Points"
+   ],
+   "topAttractorPct": 19.27
+  },
+  {
+   "rank": "random",
+   "convergePct": 78.6,
+   "deadEndPct": 21.4,
+   "components": 55,
+   "cycleCount": 54,
+   "meanHops": 4.41,
+   "medianHops": 4,
+   "maxHops": 14,
+   "topAttractor": [
+    "Torbjörn"
+   ],
+   "topAttractorPct": 16.88
+  }
+ ]
+}

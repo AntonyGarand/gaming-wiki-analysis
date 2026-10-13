@@ -1,0 +1,585 @@
+{
+ "wiki": "rs3",
+ "rank": "3",
+ "nodes": 79761,
+ "converge": {
+  "articles": 52182,
+  "pct": 65.42,
+  "deadEnd": 27579,
+  "deadEndPct": 34.58,
+  "noLinks": 2191,
+  "tooFewLinks": 16602,
+  "unresolvable": 41
+ },
+ "hopStats": {
+  "mean": 8.67,
+  "median": 6,
+  "p90": 23,
+  "max": 38
+ },
+ "histogram": {
+  "0": 2251,
+  "1": 4635,
+  "2": 4369,
+  "3": 4323,
+  "4": 4412,
+  "5": 5389,
+  "6": 4640,
+  "7": 2880,
+  "8": 1987,
+  "9": 1834,
+  "10": 1128,
+  "11": 856,
+  "12": 1224,
+  "13": 1247,
+  "14": 829,
+  "15": 456,
+  "16": 774,
+  "17": 394,
+  "18": 248,
+  "19": 320,
+  "20": 544,
+  "21": 625,
+  "22": 844,
+  "23": 1250,
+  "24": 851,
+  "25": 494,
+  "26": 929,
+  "27": 418,
+  "28": 573,
+  "29": 162,
+  "30": 234,
+  "31": 193,
+  "32": 708,
+  "33": 63,
+  "34": 39,
+  "35": 25,
+  "36": 22,
+  "37": 10,
+  "38": 2
+ },
+ "components": 1091,
+ "cycleCount": 1090,
+ "largestCycle": {
+  "members": [
+   "Guthix",
+   "Gielinor"
+  ],
+  "size": 2,
+  "basin": 22631
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Guthix",
+    "Gielinor"
+   ],
+   "basin": 22631,
+   "pct": 28.37
+  },
+  {
+   "cycle": [
+    "King Roald",
+    "Varrock Palace Secret Guard"
+   ],
+   "basin": 4426,
+   "pct": 5.55
+  },
+  {
+   "cycle": [
+    "Death's mansion",
+    "Gate (Harvest Hollow)"
+   ],
+   "basin": 2217,
+   "pct": 2.78
+  },
+  {
+   "cycle": [
+    "Mining",
+    "Gems",
+    "Uncut gem",
+    "Gem rock",
+    "Sapphire rocks"
+   ],
+   "basin": 2181,
+   "pct": 2.73
+  },
+  {
+   "cycle": [
+    "Penguin Hide and Seek",
+    "Ardougne Zoo"
+   ],
+   "basin": 1918,
+   "pct": 2.4
+  },
+  {
+   "cycle": [
+    "Life points",
+    "Constitution"
+   ],
+   "basin": 1399,
+   "pct": 1.75
+  },
+  {
+   "cycle": [
+    "Summoning familiars",
+    "Summoning scrolls",
+    "Summoning",
+    "Spirit Plane"
+   ],
+   "basin": 1329,
+   "pct": 1.67
+  },
+  {
+   "cycle": [
+    "Seasinger Umi",
+    "Navigator Jemi"
+   ],
+   "basin": 1176,
+   "pct": 1.47
+  },
+  {
+   "cycle": [
+    "Al Kharid",
+    "Menaphos"
+   ],
+   "basin": 1038,
+   "pct": 1.3
+  },
+  {
+   "cycle": [
+    "Material caches",
+    "Archaeology",
+    "Artefacts",
+    "Dig sites",
+    "Excavation hotspots",
+    "Materials (Archaeology)"
+   ],
+   "basin": 821,
+   "pct": 1.03
+  },
+  {
+   "cycle": [
+    "Farming"
+   ],
+   "basin": 745,
+   "pct": 0.93
+  },
+  {
+   "cycle": [
+    "Temple Knights",
+    "Veilinius"
+   ],
+   "basin": 742,
+   "pct": 0.93
+  },
+  {
+   "cycle": [
+    "Materials",
+    "Bag of materials"
+   ],
+   "basin": 724,
+   "pct": 0.91
+  },
+  {
+   "cycle": [
+    "Slayer points",
+    "Slayer/Challenges",
+    "Slayer Masters"
+   ],
+   "basin": 687,
+   "pct": 0.86
+  },
+  {
+   "cycle": [
+    "Agoroth",
+    "Tentacle (A Shadow over Ashdale)"
+   ],
+   "basin": 579,
+   "pct": 0.73
+  },
+  {
+   "cycle": [
+    "Ful",
+    "Elder Kiln",
+    "TokHaar"
+   ],
+   "basin": 377,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Varrock Dig Site",
+    "The Dig Site",
+    "Saranthium"
+   ],
+   "basin": 345,
+   "pct": 0.43
+  },
+  {
+   "cycle": [
+    "Adam",
+    "Zeke (Wendlewick)"
+   ],
+   "basin": 296,
+   "pct": 0.37
+  },
+  {
+   "cycle": [
+    "2020 Halloween event",
+    "Death's ceremonial scythe",
+    "Spooky tokens",
+    "2022 Halloween event",
+    "Temporary bank chest"
+   ],
+   "basin": 238,
+   "pct": 0.3
+  },
+  {
+   "cycle": [
+    "Diango",
+    "2004 April Fools",
+    "Diango's Toy Store"
+   ],
+   "basin": 215,
+   "pct": 0.27
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Awesome-RuneFest 2011-Item-Headgear-Concept-Competition",
+   "chains": 2273,
+   "pct": 2.85,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Constant Tedder",
+   "chains": 1821,
+   "pct": 2.28,
+   "reason": "only 7 eligible links"
+  },
+  {
+   "title": "Quest Overview",
+   "chains": 1184,
+   "pct": 1.48,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Double Dragon Chests",
+   "chains": 244,
+   "pct": 0.31,
+   "reason": "only 8 eligible links"
+  },
+  {
+   "title": "Treasure Hunter/Promotions",
+   "chains": 92,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ringmaster",
+   "chains": 87,
+   "pct": 0.11,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "RuneScape Authenticator",
+   "chains": 53,
+   "pct": 0.07,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Off-hand weapons",
+   "chains": 51,
+   "pct": 0.06,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Combat achievements",
+   "chains": 51,
+   "pct": 0.06,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Mod Kathy",
+   "chains": 46,
+   "pct": 0.06,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Fayre attraction tokens",
+   "chains": 39,
+   "pct": 0.05,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Sclerite Armour",
+   "chains": 37,
+   "pct": 0.05,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Crafting shops",
+   "chains": 35,
+   "pct": 0.04,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "The Elder Kiln",
+   "chains": 34,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Pestle and mortar",
+   "chains": 33,
+   "pct": 0.04,
+   "reason": "only 2 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Smithing",
+   "inDegree": 661
+  },
+  {
+   "title": "Treasure Trails",
+   "inDegree": 604
+  },
+  {
+   "title": "Costume room",
+   "inDegree": 586
+  },
+  {
+   "title": "Player-owned house",
+   "inDegree": 515
+  },
+  {
+   "title": "Treasure Hunter",
+   "inDegree": 416
+  },
+  {
+   "title": "Quests",
+   "inDegree": 348
+  },
+  {
+   "title": "Defence",
+   "inDegree": 345
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 337
+  },
+  {
+   "title": "Furniture storage",
+   "inDegree": 328
+  },
+  {
+   "title": "Solomon's General Store",
+   "inDegree": 311
+  },
+  {
+   "title": "Farming",
+   "inDegree": 298
+  },
+  {
+   "title": "Dungeoneering",
+   "inDegree": 294
+  },
+  {
+   "title": "Daemonheim",
+   "inDegree": 283
+  },
+  {
+   "title": "Experience",
+   "inDegree": 263
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 249
+  },
+  {
+   "title": "Attack",
+   "inDegree": 233
+  },
+  {
+   "title": "Augmentor",
+   "inDegree": 228
+  },
+  {
+   "title": "Magic",
+   "inDegree": 222
+  },
+  {
+   "title": "Anvil",
+   "inDegree": 215
+  },
+  {
+   "title": "Construction",
+   "inDegree": 211
+  },
+  {
+   "title": "Thessalia's Makeovers",
+   "inDegree": 204
+  },
+  {
+   "title": "Summoning",
+   "inDegree": 193
+  },
+  {
+   "title": "Archaeology",
+   "inDegree": 186
+  },
+  {
+   "title": "Yak Coin Shop",
+   "inDegree": 182
+  },
+  {
+   "title": "Diango",
+   "inDegree": 172
+  },
+  {
+   "title": "Necromancy",
+   "inDegree": 166
+  },
+  {
+   "title": "Free-to-play",
+   "inDegree": 162
+  },
+  {
+   "title": "Agility",
+   "inDegree": 155
+  },
+  {
+   "title": "Life points",
+   "inDegree": 150
+  },
+  {
+   "title": "Mining",
+   "inDegree": 150
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Coins",
+   "betweenness": 141151
+  },
+  {
+   "title": "Combat level",
+   "betweenness": 140175
+  },
+  {
+   "title": "Free-to-play",
+   "betweenness": 139161
+  },
+  {
+   "title": "Attack",
+   "betweenness": 137830
+  },
+  {
+   "title": "Stackable items",
+   "betweenness": 133776
+  },
+  {
+   "title": "Skills",
+   "betweenness": 131690
+  },
+  {
+   "title": "Note",
+   "betweenness": 126905
+  },
+  {
+   "title": "RuneScape 2",
+   "betweenness": 126540
+  },
+  {
+   "title": "Total level",
+   "betweenness": 122532
+  },
+  {
+   "title": "Examine",
+   "betweenness": 121632
+  },
+  {
+   "title": "Grand Exchange",
+   "betweenness": 121020
+  },
+  {
+   "title": "2003 Halloween event",
+   "betweenness": 113895
+  },
+  {
+   "title": "Thessalia's Fine Clothes",
+   "betweenness": 101368
+  },
+  {
+   "title": "Runes",
+   "betweenness": 96516
+  },
+  {
+   "title": "Varrock Square",
+   "betweenness": 88865
+  },
+  {
+   "title": "Benny",
+   "betweenness": 76182
+  },
+  {
+   "title": "Baraek",
+   "betweenness": 63500
+  },
+  {
+   "title": "Runecrafting",
+   "betweenness": 55616
+  },
+  {
+   "title": "Player-owned house",
+   "betweenness": 52494
+  },
+  {
+   "title": "Wizards' Tower",
+   "betweenness": 51658
+  },
+  {
+   "title": "Lord Sulla",
+   "betweenness": 50816
+  },
+  {
+   "title": "Pocket dimension",
+   "betweenness": 50550
+  },
+  {
+   "title": "Runecrafting Guild",
+   "betweenness": 48936
+  },
+  {
+   "title": "Magic",
+   "betweenness": 43978
+  },
+  {
+   "title": "War of 164",
+   "betweenness": 38124
+  },
+  {
+   "title": "Fifth Age",
+   "betweenness": 31250
+  },
+  {
+   "title": "Crafting",
+   "betweenness": 30768
+  },
+  {
+   "title": "Soft clay",
+   "betweenness": 29900
+  },
+  {
+   "title": "Defence",
+   "betweenness": 25760
+  },
+  {
+   "title": "Player-owned farm",
+   "betweenness": 21114
+  }
+ ]
+}

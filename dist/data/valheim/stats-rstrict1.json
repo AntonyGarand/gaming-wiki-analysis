@@ -1,0 +1,524 @@
+{
+ "wiki": "valheim",
+ "rank": "strict1",
+ "nodes": 1284,
+ "converge": {
+  "articles": 1093,
+  "pct": 85.12,
+  "deadEnd": 191,
+  "deadEndPct": 14.88,
+  "noLinks": 10,
+  "tooFewLinks": 0,
+  "unresolvable": 14
+ },
+ "hopStats": {
+  "mean": 2.93,
+  "median": 3,
+  "p90": 5,
+  "max": 11
+ },
+ "histogram": {
+  "0": 34,
+  "1": 145,
+  "2": 198,
+  "3": 409,
+  "4": 193,
+  "5": 71,
+  "6": 18,
+  "7": 11,
+  "8": 8,
+  "9": 1,
+  "10": 4,
+  "11": 1
+ },
+ "components": 19,
+ "cycleCount": 18,
+ "largestCycle": {
+  "members": [
+   "Creatures"
+  ],
+  "size": 1,
+  "basin": 1004
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Creatures"
+   ],
+   "basin": 1004,
+   "pct": 78.19
+  },
+  {
+   "cycle": [
+    "Damage"
+   ],
+   "basin": 15,
+   "pct": 1.17
+  },
+  {
+   "cycle": [
+    "Chest",
+    "Storage",
+    "Loot chest"
+   ],
+   "basin": 13,
+   "pct": 1.01
+  },
+  {
+   "cycle": [
+    "Boats",
+    "Raft"
+   ],
+   "basin": 8,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Copper Ore",
+    "Copper"
+   ],
+   "basin": 8,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Iron",
+    "Scrap Iron"
+   ],
+   "basin": 7,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "Events",
+    "Global Keys"
+   ],
+   "basin": 5,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Sharp Stakes",
+    "Stakes"
+   ],
+   "basin": 4,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Catapult",
+    "Grausten Payload"
+   ],
+   "basin": 4,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Hoe",
+    "Pathen"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Tin",
+    "Tin Ore"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Fishing",
+    "Bait"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Tankard",
+    "Horn of Celebration"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Food Preparation Table",
+    "Feast"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Bukeperries",
+    "Feeling sick"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Straw Hat",
+    "Harvest Tunic"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Item IDs",
+    "Data IDs"
+   ],
+   "basin": 2,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Bombs"
+   ],
+   "basin": 2,
+   "pct": 0.16
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Weapons",
+   "chains": 149,
+   "pct": 11.6,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Developer console",
+   "chains": 9,
+   "pct": 0.7,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Grausten",
+   "chains": 7,
+   "pct": 0.55,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Valheim",
+   "chains": 4,
+   "pct": 0.31,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Stone",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Trinkets",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Valheim Wiki",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Greydwarf Eye",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Music",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Bushes",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Sign",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Standing Wood Torch",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Roundpole Fence",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Factions",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Trophies",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Creatures",
+   "inDegree": 109
+  },
+  {
+   "title": "Deep North",
+   "inDegree": 86
+  },
+  {
+   "title": "Point of interest",
+   "inDegree": 48
+  },
+  {
+   "title": "Ashlands",
+   "inDegree": 46
+  },
+  {
+   "title": "Mistlands",
+   "inDegree": 38
+  },
+  {
+   "title": "Hildir",
+   "inDegree": 35
+  },
+  {
+   "title": "Status effects",
+   "inDegree": 33
+  },
+  {
+   "title": "Black Forest",
+   "inDegree": 27
+  },
+  {
+   "title": "Skills",
+   "inDegree": 24
+  },
+  {
+   "title": "Swamp",
+   "inDegree": 20
+  },
+  {
+   "title": "Plains",
+   "inDegree": 20
+  },
+  {
+   "title": "The Bog Witch",
+   "inDegree": 20
+  },
+  {
+   "title": "Player base",
+   "inDegree": 19
+  },
+  {
+   "title": "Shields",
+   "inDegree": 18
+  },
+  {
+   "title": "Forge of Potential",
+   "inDegree": 18
+  },
+  {
+   "title": "Mountain",
+   "inDegree": 17
+  },
+  {
+   "title": "Meadows",
+   "inDegree": 16
+  },
+  {
+   "title": "Workbench",
+   "inDegree": 16
+  },
+  {
+   "title": "Weapons",
+   "inDegree": 14
+  },
+  {
+   "title": "Biomes",
+   "inDegree": 12
+  },
+  {
+   "title": "Forge",
+   "inDegree": 12
+  },
+  {
+   "title": "Clubs",
+   "inDegree": 12
+  },
+  {
+   "title": "Axes",
+   "inDegree": 11
+  },
+  {
+   "title": "Bows",
+   "inDegree": 10
+  },
+  {
+   "title": "Crossbows",
+   "inDegree": 10
+  },
+  {
+   "title": "Hammer",
+   "inDegree": 9
+  },
+  {
+   "title": "Armor",
+   "inDegree": 9
+  },
+  {
+   "title": "Swords",
+   "inDegree": 9
+  },
+  {
+   "title": "Materials",
+   "inDegree": 8
+  },
+  {
+   "title": "Wood",
+   "inDegree": 8
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Biomes",
+   "betweenness": 493
+  },
+  {
+   "title": "Status effects",
+   "betweenness": 252
+  },
+  {
+   "title": "Deep North",
+   "betweenness": 228
+  },
+  {
+   "title": "Point of interest",
+   "betweenness": 202
+  },
+  {
+   "title": "Forsaken power",
+   "betweenness": 192
+  },
+  {
+   "title": "Ashlands",
+   "betweenness": 136
+  },
+  {
+   "title": "Sacrificial Stones",
+   "betweenness": 130
+  },
+  {
+   "title": "Comfort",
+   "betweenness": 114
+  },
+  {
+   "title": "Mistlands",
+   "betweenness": 112
+  },
+  {
+   "title": "Resting",
+   "betweenness": 105
+  },
+  {
+   "title": "Player base",
+   "betweenness": 101
+  },
+  {
+   "title": "Seasonal events",
+   "betweenness": 84
+  },
+  {
+   "title": "Skills",
+   "betweenness": 78
+  },
+  {
+   "title": "Meadows",
+   "betweenness": 74
+  },
+  {
+   "title": "Black Forest",
+   "betweenness": 66
+  },
+  {
+   "title": "Valkyrie",
+   "betweenness": 66
+  },
+  {
+   "title": "Forge of Potential",
+   "betweenness": 63
+  },
+  {
+   "title": "Workbench",
+   "betweenness": 54
+  },
+  {
+   "title": "Death",
+   "betweenness": 54
+  },
+  {
+   "title": "Mountain",
+   "betweenness": 52
+  },
+  {
+   "title": "Trees",
+   "betweenness": 52
+  },
+  {
+   "title": "Maypole",
+   "betweenness": 48
+  },
+  {
+   "title": "Forge",
+   "betweenness": 46
+  },
+  {
+   "title": "Version history",
+   "betweenness": 45
+  },
+  {
+   "title": "Plains",
+   "betweenness": 44
+  },
+  {
+   "title": "Health",
+   "betweenness": 44
+  },
+  {
+   "title": "Materials",
+   "betweenness": 42
+  },
+  {
+   "title": "Beech",
+   "betweenness": 42
+  },
+  {
+   "title": "Swamp",
+   "betweenness": 40
+  },
+  {
+   "title": "Hildir",
+   "betweenness": 36
+  }
+ ]
+}

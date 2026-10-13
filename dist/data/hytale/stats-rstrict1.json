@@ -1,0 +1,496 @@
+{
+ "wiki": "hytale",
+ "rank": "strict1",
+ "nodes": 4498,
+ "converge": {
+  "articles": 2105,
+  "pct": 46.8,
+  "deadEnd": 2393,
+  "deadEndPct": 53.2,
+  "noLinks": 67,
+  "tooFewLinks": 0,
+  "unresolvable": 129
+ },
+ "hopStats": {
+  "mean": 3.08,
+  "median": 3,
+  "p90": 5,
+  "max": 7
+ },
+ "histogram": {
+  "0": 27,
+  "1": 529,
+  "2": 300,
+  "3": 290,
+  "4": 490,
+  "5": 294,
+  "6": 174,
+  "7": 1
+ },
+ "components": 16,
+ "cycleCount": 15,
+ "largestCycle": {
+  "members": [
+   "Hypixel Inc.",
+   "Hypixel Network"
+  ],
+  "size": 2,
+  "basin": 866
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Hypixel Inc.",
+    "Hypixel Network"
+   ],
+   "basin": 866,
+   "pct": 19.25
+  },
+  {
+   "cycle": [
+    "Plant",
+    "Mushroom"
+   ],
+   "basin": 389,
+   "pct": 8.65
+  },
+  {
+   "cycle": [
+    "NPC",
+    "Entity"
+   ],
+   "basin": 370,
+   "pct": 8.23
+  },
+  {
+   "cycle": [
+    "Avatar",
+    "Character Creator"
+   ],
+   "basin": 352,
+   "pct": 7.83
+  },
+  {
+   "cycle": [
+    "Biome",
+    "Environment"
+   ],
+   "basin": 76,
+   "pct": 1.69
+  },
+  {
+   "cycle": [
+    "Shield",
+    "Wooden Shield"
+   ],
+   "basin": 18,
+   "pct": 0.4
+  },
+  {
+   "cycle": [
+    "Grimoire: Rekindle Embers",
+    "Spellbook"
+   ],
+   "basin": 13,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Lore",
+    "Flavor Text"
+   ],
+   "basin": 6,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Backpack"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Hytale Blog",
+    "Hytale.com"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Arrow",
+    "Projectiles"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Hytale Model Maker",
+    "Blockbench"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Defense"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Chunk format/Block format",
+    "Chunk format/Block format/Octree structure"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Ice"
+   ],
+   "basin": 1,
+   "pct": 0.02
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Gamemode",
+   "chains": 1945,
+   "pct": 43.24,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Stairs",
+   "chains": 168,
+   "pct": 3.73,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Stalactite",
+   "chains": 40,
+   "pct": 0.89,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Sword",
+   "chains": 26,
+   "pct": 0.58,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Chapter I: Out of the Breach",
+   "chains": 11,
+   "pct": 0.24,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Behaviors",
+   "chains": 5,
+   "pct": 0.11,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Minigame",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "0.0.2",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Chunk format/BlockPhysics format",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Cat",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Wood Case",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Walking Sticks",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Banjo",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Unknown playable races",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Animation",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Roof",
+   "inDegree": 281
+  },
+  {
+   "title": "Plant",
+   "inDegree": 233
+  },
+  {
+   "title": "Half Slab",
+   "inDegree": 219
+  },
+  {
+   "title": "Block",
+   "inDegree": 192
+  },
+  {
+   "title": "Stairs",
+   "inDegree": 167
+  },
+  {
+   "title": "NPC",
+   "inDegree": 155
+  },
+  {
+   "title": "Branch",
+   "inDegree": 116
+  },
+  {
+   "title": "Rock",
+   "inDegree": 115
+  },
+  {
+   "title": "Wood",
+   "inDegree": 114
+  },
+  {
+   "title": "Exploration Mode",
+   "inDegree": 91
+  },
+  {
+   "title": "Seeds",
+   "inDegree": 73
+  },
+  {
+   "title": "Beam",
+   "inDegree": 71
+  },
+  {
+   "title": "Flower",
+   "inDegree": 66
+  },
+  {
+   "title": "Window",
+   "inDegree": 61
+  },
+  {
+   "title": "Ingredient",
+   "inDegree": 61
+  },
+  {
+   "title": "Hytale",
+   "inDegree": 57
+  },
+  {
+   "title": "Hostile",
+   "inDegree": 57
+  },
+  {
+   "title": "Pillar",
+   "inDegree": 56
+  },
+  {
+   "title": "Lighting",
+   "inDegree": 55
+  },
+  {
+   "title": "Mushroom",
+   "inDegree": 52
+  },
+  {
+   "title": "Prefab",
+   "inDegree": 51
+  },
+  {
+   "title": "Soil",
+   "inDegree": 49
+  },
+  {
+   "title": "Mineral",
+   "inDegree": 47
+  },
+  {
+   "title": "Leaf",
+   "inDegree": 46
+  },
+  {
+   "title": "Wall",
+   "inDegree": 44
+  },
+  {
+   "title": "Potion",
+   "inDegree": 43
+  },
+  {
+   "title": "Crystal",
+   "inDegree": 39
+  },
+  {
+   "title": "Stalactite",
+   "inDegree": 39
+  },
+  {
+   "title": "Biome",
+   "inDegree": 38
+  },
+  {
+   "title": "Rubble",
+   "inDegree": 36
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Block",
+   "betweenness": 8245
+  },
+  {
+   "title": "Tool",
+   "betweenness": 7120
+  },
+  {
+   "title": "Orbis",
+   "betweenness": 5463
+  },
+  {
+   "title": "Alterverses",
+   "betweenness": 3644
+  },
+  {
+   "title": "Hytale",
+   "betweenness": 2481
+  },
+  {
+   "title": "Furniture",
+   "betweenness": 1884
+  },
+  {
+   "title": "Adventure Mode",
+   "betweenness": 1825
+  },
+  {
+   "title": "Hypixel Studios",
+   "betweenness": 1708
+  },
+  {
+   "title": "Roof",
+   "betweenness": 1686
+  },
+  {
+   "title": "Weapon",
+   "betweenness": 1015
+  },
+  {
+   "title": "Equipment",
+   "betweenness": 944
+  },
+  {
+   "title": "Rock",
+   "betweenness": 924
+  },
+  {
+   "title": "Half Slab",
+   "betweenness": 876
+  },
+  {
+   "title": "Hypixel Inc.",
+   "betweenness": 858
+  },
+  {
+   "title": "Wood",
+   "betweenness": 684
+  },
+  {
+   "title": "Bench",
+   "betweenness": 606
+  },
+  {
+   "title": "Branch",
+   "betweenness": 580
+  },
+  {
+   "title": "Ingredient",
+   "betweenness": 552
+  },
+  {
+   "title": "Prefab",
+   "betweenness": 512
+  },
+  {
+   "title": "Stick",
+   "betweenness": 468
+  },
+  {
+   "title": "Window",
+   "betweenness": 427
+  },
+  {
+   "title": "Beam",
+   "betweenness": 426
+  },
+  {
+   "title": "Item",
+   "betweenness": 400
+  },
+  {
+   "title": "Flower",
+   "betweenness": 396
+  },
+  {
+   "title": "NPC",
+   "betweenness": 368
+  },
+  {
+   "title": "Avatar",
+   "betweenness": 350
+  },
+  {
+   "title": "Plant",
+   "betweenness": 336
+  },
+  {
+   "title": "Pillar",
+   "betweenness": 336
+  },
+  {
+   "title": "Lighting",
+   "betweenness": 330
+  },
+  {
+   "title": "Soil",
+   "betweenness": 294
+  }
+ ]
+}

@@ -1,0 +1,561 @@
+{
+ "wiki": "gta",
+ "rank": "2",
+ "nodes": 24073,
+ "converge": {
+  "articles": 15082,
+  "pct": 62.65,
+  "deadEnd": 8991,
+  "deadEndPct": 37.35,
+  "noLinks": 878,
+  "tooFewLinks": 1301,
+  "unresolvable": 608
+ },
+ "hopStats": {
+  "mean": 4.13,
+  "median": 3,
+  "p90": 9,
+  "max": 23
+ },
+ "histogram": {
+  "0": 804,
+  "1": 3262,
+  "2": 2165,
+  "3": 2284,
+  "4": 1289,
+  "5": 1172,
+  "6": 968,
+  "7": 646,
+  "8": 588,
+  "9": 479,
+  "10": 466,
+  "11": 255,
+  "12": 151,
+  "13": 156,
+  "14": 127,
+  "15": 100,
+  "16": 54,
+  "17": 52,
+  "18": 23,
+  "19": 23,
+  "20": 14,
+  "21": 1,
+  "22": 1,
+  "23": 2
+ },
+ "components": 399,
+ "cycleCount": 398,
+ "largestCycle": {
+  "members": [
+   "Broker",
+   "Algonquin",
+   "Humboldt River"
+  ],
+  "size": 3,
+  "basin": 2147
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Broker",
+    "Algonquin",
+    "Humboldt River"
+   ],
+   "basin": 2147,
+   "pct": 8.92
+  },
+  {
+   "cycle": [
+    "Tierra Robada",
+    "Valle Ocultado"
+   ],
+   "basin": 2138,
+   "pct": 8.88
+  },
+  {
+   "cycle": [
+    "Staunton Island",
+    "Phil Cassidy's Fully Cocked Gun Shop"
+   ],
+   "basin": 1542,
+   "pct": 6.41
+  },
+  {
+   "cycle": [
+    "Xbox One",
+    "PlayStation 4"
+   ],
+   "basin": 869,
+   "pct": 3.61
+  },
+  {
+   "cycle": [
+    "Franklin Clinton",
+    "Short Trips"
+   ],
+   "basin": 842,
+   "pct": 3.5
+  },
+  {
+   "cycle": [
+    "Blaine County",
+    "Grapeseed",
+    "Sandy Shores"
+   ],
+   "basin": 634,
+   "pct": 2.63
+  },
+  {
+   "cycle": [
+    "State of Alderney",
+    "State of Liberty (HD Universe)",
+    "Upstate Liberty (HD Universe)"
+   ],
+   "basin": 578,
+   "pct": 2.4
+  },
+  {
+   "cycle": [
+    "Saint Mark's",
+    "Harwood"
+   ],
+   "basin": 311,
+   "pct": 1.29
+  },
+  {
+   "cycle": [
+    "GTA Online: Further Adventures in Finance and Felony",
+    "Offices",
+    "Dynasty 8 Executive"
+   ],
+   "basin": 242,
+   "pct": 1.01
+  },
+  {
+   "cycle": [
+    "GTA Online: Cunning Stunts",
+    "Stunt - Canyon Crossing"
+   ],
+   "basin": 234,
+   "pct": 0.97
+  },
+  {
+   "cycle": [
+    "San Fierro (3D Universe)",
+    "Angel Pine",
+    "Mount Chiliad (3D Universe)"
+   ],
+   "basin": 215,
+   "pct": 0.89
+  },
+  {
+   "cycle": [
+    "Sweet Johnson",
+    "Faizon Love"
+   ],
+   "basin": 206,
+   "pct": 0.86
+  },
+  {
+   "cycle": [
+    "Italy",
+    "France"
+   ],
+   "basin": 184,
+   "pct": 0.76
+  },
+  {
+   "cycle": [
+    "Weazelnews.com",
+    "John Chesapeake"
+   ],
+   "basin": 169,
+   "pct": 0.7
+  },
+  {
+   "cycle": [
+    "Lifeinvader/Lester Crest"
+   ],
+   "basin": 168,
+   "pct": 0.7
+  },
+  {
+   "cycle": [
+    "Pacific Bluffs",
+    "Banham Canyon"
+   ],
+   "basin": 168,
+   "pct": 0.7
+  },
+  {
+   "cycle": [
+    "Maverick (3D Universe)",
+    "Police Maverick (3D Universe)"
+   ],
+   "basin": 160,
+   "pct": 0.66
+  },
+  {
+   "cycle": [
+    "Port Gellhorn",
+    "Draper Island"
+   ],
+   "basin": 150,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Carl Johnson",
+    "Young Maylay"
+   ],
+   "basin": 144,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Haitians",
+    "Vice City Mainland",
+    "Little Haiti"
+   ],
+   "basin": 141,
+   "pct": 0.59
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "PlayStation 2",
+   "chains": 3566,
+   "pct": 14.81,
+   "reason": "redlink target"
+  },
+  {
+   "title": "GTA VI Website",
+   "chains": 498,
+   "pct": 2.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mike Dailly",
+   "chains": 417,
+   "pct": 1.73,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Game Boy Color",
+   "chains": 296,
+   "pct": 1.23,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Physics Engine",
+   "chains": 257,
+   "pct": 1.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "José Pimsoll",
+   "chains": 231,
+   "pct": 0.96,
+   "reason": "only 5 eligible links"
+  },
+  {
+   "title": "Xbox Series X and Series S",
+   "chains": 98,
+   "pct": 0.41,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Azteca Gold!",
+   "chains": 51,
+   "pct": 0.21,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Vice City Survivor",
+   "chains": 50,
+   "pct": 0.21,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Street Rage",
+   "chains": 37,
+   "pct": 0.15,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "River Thames",
+   "chains": 31,
+   "pct": 0.13,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Capcom",
+   "chains": 27,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Grand Theft Auto (1997 game)/Artwork",
+   "chains": 22,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Cheats in GTA (1997 game)",
+   "chains": 22,
+   "pct": 0.09,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Double Decker",
+   "chains": 18,
+   "pct": 0.07,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Pedestrians",
+   "inDegree": 1104
+  },
+  {
+   "title": "Pedestrians in GTA IV",
+   "inDegree": 597
+  },
+  {
+   "title": "Broker",
+   "inDegree": 336
+  },
+  {
+   "title": "Algonquin",
+   "inDegree": 284
+  },
+  {
+   "title": "State of Alderney",
+   "inDegree": 280
+  },
+  {
+   "title": "Los Santos (HD Universe)",
+   "inDegree": 255
+  },
+  {
+   "title": "Los Santos (3D Universe)",
+   "inDegree": 176
+  },
+  {
+   "title": "Libertytreeonline.com",
+   "inDegree": 151
+  },
+  {
+   "title": "Bohan",
+   "inDegree": 134
+  },
+  {
+   "title": "Protagonists in GTA (1997 game)",
+   "inDegree": 130
+  },
+  {
+   "title": "Protagonist",
+   "inDegree": 125
+  },
+  {
+   "title": "United States of America",
+   "inDegree": 116
+  },
+  {
+   "title": "Portland",
+   "inDegree": 113
+  },
+  {
+   "title": "Niko Bellic",
+   "inDegree": 113
+  },
+  {
+   "title": "Anywhere City",
+   "inDegree": 108
+  },
+  {
+   "title": "Franklin Clinton",
+   "inDegree": 105
+  },
+  {
+   "title": "Grand Theft Auto VI/Trailers",
+   "inDegree": 104
+  },
+  {
+   "title": "Grand Theft Auto VI/Leaks",
+   "inDegree": 101
+  },
+  {
+   "title": "Carl Johnson",
+   "inDegree": 89
+  },
+  {
+   "title": "GTA Online Protagonist",
+   "inDegree": 85
+  },
+  {
+   "title": "San Fierro (3D Universe)",
+   "inDegree": 79
+  },
+  {
+   "title": "Staunton Island",
+   "inDegree": 78
+  },
+  {
+   "title": "Blaine County",
+   "inDegree": 75
+  },
+  {
+   "title": "GTA Online: Arena War",
+   "inDegree": 75
+  },
+  {
+   "title": "Stunt Races",
+   "inDegree": 74
+  },
+  {
+   "title": "GTA Online: The Chop Shop",
+   "inDegree": 74
+  },
+  {
+   "title": "Weazelnews.com",
+   "inDegree": 73
+  },
+  {
+   "title": "Trevor Philips",
+   "inDegree": 73
+  },
+  {
+   "title": "Money",
+   "inDegree": 71
+  },
+  {
+   "title": "PlayStation 4",
+   "inDegree": 68
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Protagonist",
+   "betweenness": 13833
+  },
+  {
+   "title": "Luis Fernando Lopez",
+   "betweenness": 12480
+  },
+  {
+   "title": "Niko Bellic",
+   "betweenness": 11502
+  },
+  {
+   "title": "Mario D'Leon",
+   "betweenness": 10927
+  },
+  {
+   "title": "Money",
+   "betweenness": 10850
+  },
+  {
+   "title": "Heads-Up Display",
+   "betweenness": 10699
+  },
+  {
+   "title": "United States of America",
+   "betweenness": 10071
+  },
+  {
+   "title": "Body Armor",
+   "betweenness": 10032
+  },
+  {
+   "title": "Rockstar Games Social Club",
+   "betweenness": 10015
+  },
+  {
+   "title": "Mexico",
+   "betweenness": 9536
+  },
+  {
+   "title": "Parachute",
+   "betweenness": 9295
+  },
+  {
+   "title": "Los Santos (3D Universe)",
+   "betweenness": 9045
+  },
+  {
+   "title": "Wasted",
+   "betweenness": 8710
+  },
+  {
+   "title": "Guatemala",
+   "betweenness": 8358
+  },
+  {
+   "title": "Los Santos (HD Universe)",
+   "betweenness": 8040
+  },
+  {
+   "title": "Carjacking",
+   "betweenness": 8028
+  },
+  {
+   "title": "Pedestrians",
+   "betweenness": 7962
+  },
+  {
+   "title": "Flint County (3D Universe)",
+   "betweenness": 7292
+  },
+  {
+   "title": "Eyefind",
+   "betweenness": 7264
+  },
+  {
+   "title": "Honduras",
+   "betweenness": 7170
+  },
+  {
+   "title": "Liberty Tree (HD Universe)",
+   "betweenness": 7020
+  },
+  {
+   "title": "Accept the Chaos",
+   "betweenness": 6640
+  },
+  {
+   "title": "Red County (3D Universe)",
+   "betweenness": 6153
+  },
+  {
+   "title": "Communication",
+   "betweenness": 6030
+  },
+  {
+   "title": "El Salvador",
+   "betweenness": 5985
+  },
+  {
+   "title": "Weather",
+   "betweenness": 5389
+  },
+  {
+   "title": "Fire",
+   "betweenness": 5336
+  },
+  {
+   "title": "Climax",
+   "betweenness": 5076
+  },
+  {
+   "title": "Antagonist",
+   "betweenness": 4921
+  },
+  {
+   "title": "Head Radio (3D Universe)",
+   "betweenness": 4844
+  }
+ ]
+}

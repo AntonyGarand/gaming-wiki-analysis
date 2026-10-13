@@ -1,0 +1,545 @@
+{
+ "wiki": "factorio",
+ "rank": "5",
+ "nodes": 5353,
+ "converge": {
+  "articles": 452,
+  "pct": 8.44,
+  "deadEnd": 4901,
+  "deadEndPct": 91.56,
+  "noLinks": 1589,
+  "tooFewLinks": 1779,
+  "unresolvable": 247
+ },
+ "hopStats": {
+  "mean": 3.6,
+  "median": 3,
+  "p90": 8,
+  "max": 12
+ },
+ "histogram": {
+  "0": 92,
+  "1": 71,
+  "2": 47,
+  "3": 42,
+  "4": 26,
+  "5": 36,
+  "6": 35,
+  "7": 31,
+  "8": 45,
+  "9": 13,
+  "10": 8,
+  "11": 5,
+  "12": 1
+ },
+ "components": 47,
+ "cycleCount": 46,
+ "largestCycle": {
+  "members": [
+   "Low density structure",
+   "Low density structure productivity (research)"
+  ],
+  "size": 2,
+  "basin": 66
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Low density structure",
+    "Low density structure productivity (research)"
+   ],
+   "basin": 66,
+   "pct": 1.23
+  },
+  {
+   "cycle": [
+    "Rocket fuel",
+    "Rocket fuel productivity (research)"
+   ],
+   "basin": 56,
+   "pct": 1.05
+  },
+  {
+   "cycle": [
+    "Heat exchanger/ja",
+    "Steam/ja",
+    "Steam engine/ja"
+   ],
+   "basin": 44,
+   "pct": 0.82
+  },
+  {
+   "cycle": [
+    "Efficiency module",
+    "Efficiency module 2"
+   ],
+   "basin": 32,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Productivity module 3",
+    "Productivity module 2"
+   ],
+   "basin": 30,
+   "pct": 0.56
+  },
+  {
+   "cycle": [
+    "Railway/ja",
+    "Rail/ja",
+    "Rail signal/ja"
+   ],
+   "basin": 27,
+   "pct": 0.5
+  },
+  {
+   "cycle": [
+    "Personal battery/ja",
+    "Personal battery MK2/ja"
+   ],
+   "basin": 25,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Fulgora",
+    "Lightning rod"
+   ],
+   "basin": 17,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Constant combinator",
+    "Selector combinator"
+   ],
+   "basin": 15,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Asteroids"
+   ],
+   "basin": 11,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "Satellite/ru",
+    "Low density structure/ru"
+   ],
+   "basin": 9,
+   "pct": 0.17
+  },
+  {
+   "cycle": [
+    "Shortcut bar",
+    "Blueprint book"
+   ],
+   "basin": 8,
+   "pct": 0.15
+  },
+  {
+   "cycle": [
+    "Constant combinator/ja",
+    "Decider combinator/ja"
+   ],
+   "basin": 7,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Railway/uk",
+    "Rail signal/uk"
+   ],
+   "basin": 6,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Small electric pole",
+    "Medium electric pole"
+   ],
+   "basin": 5,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Rocket",
+    "Explosive rocket"
+   ],
+   "basin": 5,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Small electric pole/ja",
+    "Medium electric pole/ja"
+   ],
+   "basin": 5,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Small electric pole/uk",
+    "Medium electric pole/uk"
+   ],
+   "basin": 5,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Agricultural tower/ru",
+    "Yumako tree/ru"
+   ],
+   "basin": 5,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Sulfuric acid",
+    "Uranium ore"
+   ],
+   "basin": 4,
+   "pct": 0.07
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Rail chain signal",
+   "chains": 272,
+   "pct": 5.08,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Belt immunity equipment",
+   "chains": 35,
+   "pct": 0.65,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Copper ore/uk",
+   "chains": 35,
+   "pct": 0.65,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Space Age/ru",
+   "chains": 33,
+   "pct": 0.62,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Coal/uk",
+   "chains": 32,
+   "pct": 0.6,
+   "reason": "only 5 eligible links"
+  },
+  {
+   "title": "Satellite/ja",
+   "chains": 27,
+   "pct": 0.5,
+   "reason": "redlink target"
+  },
+  {
+   "title": "News/2021",
+   "chains": 23,
+   "pct": 0.43,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Chemical plant/ru",
+   "chains": 21,
+   "pct": 0.39,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Damage/ja",
+   "chains": 20,
+   "pct": 0.37,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Stone furnace/ru",
+   "chains": 18,
+   "pct": 0.34,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Copper plate/uk",
+   "chains": 17,
+   "pct": 0.32,
+   "reason": "only 5 eligible links"
+  },
+  {
+   "title": "Space Age/ja",
+   "chains": 17,
+   "pct": 0.32,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Weapon shooting speed (research)/ja",
+   "chains": 17,
+   "pct": 0.32,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Damage/uk",
+   "chains": 15,
+   "pct": 0.28,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Speed module/uk",
+   "chains": 14,
+   "pct": 0.26,
+   "reason": "only 4 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Technologies",
+   "inDegree": 32
+  },
+  {
+   "title": "News/2021",
+   "inDegree": 21
+  },
+  {
+   "title": "Enemies",
+   "inDegree": 17
+  },
+  {
+   "title": "Time",
+   "inDegree": 16
+  },
+  {
+   "title": "Foundry",
+   "inDegree": 13
+  },
+  {
+   "title": "Water",
+   "inDegree": 12
+  },
+  {
+   "title": "Technologies/ja",
+   "inDegree": 12
+  },
+  {
+   "title": "Chemical science pack",
+   "inDegree": 10
+  },
+  {
+   "title": "Damage/ja",
+   "inDegree": 10
+  },
+  {
+   "title": "Research",
+   "inDegree": 9
+  },
+  {
+   "title": "Coal",
+   "inDegree": 9
+  },
+  {
+   "title": "Technologies/ru",
+   "inDegree": 9
+  },
+  {
+   "title": "Enemies/uk",
+   "inDegree": 9
+  },
+  {
+   "title": "Version history",
+   "inDegree": 8
+  },
+  {
+   "title": "Module",
+   "inDegree": 8
+  },
+  {
+   "title": "Enemies/ja",
+   "inDegree": 8
+  },
+  {
+   "title": "Space Age",
+   "inDegree": 8
+  },
+  {
+   "title": "Biochamber",
+   "inDegree": 8
+  },
+  {
+   "title": "Inserters",
+   "inDegree": 7
+  },
+  {
+   "title": "Inserters/ja",
+   "inDegree": 7
+  },
+  {
+   "title": "Inserters/uk",
+   "inDegree": 7
+  },
+  {
+   "title": "Fulgora",
+   "inDegree": 7
+  },
+  {
+   "title": "Copper plate",
+   "inDegree": 6
+  },
+  {
+   "title": "Stone",
+   "inDegree": 6
+  },
+  {
+   "title": "Damage",
+   "inDegree": 6
+  },
+  {
+   "title": "Automation science pack",
+   "inDegree": 6
+  },
+  {
+   "title": "Enemies/ru",
+   "inDegree": 6
+  },
+  {
+   "title": "Damage/uk",
+   "inDegree": 6
+  },
+  {
+   "title": "Map generator",
+   "inDegree": 6
+  },
+  {
+   "title": "Utility science pack",
+   "inDegree": 6
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Module",
+   "betweenness": 2268
+  },
+  {
+   "title": "Assembling machine 3",
+   "betweenness": 2198
+  },
+  {
+   "title": "Speed module 3",
+   "betweenness": 2093
+  },
+  {
+   "title": "Lab",
+   "betweenness": 2090
+  },
+  {
+   "title": "Technologies",
+   "betweenness": 2080
+  },
+  {
+   "title": "Time",
+   "betweenness": 2060
+  },
+  {
+   "title": "Automation science pack",
+   "betweenness": 2055
+  },
+  {
+   "title": "Player",
+   "betweenness": 2052
+  },
+  {
+   "title": "Gun turret",
+   "betweenness": 1864
+  },
+  {
+   "title": "Inserters",
+   "betweenness": 1687
+  },
+  {
+   "title": "Gleba",
+   "betweenness": 1548
+  },
+  {
+   "title": "Enemies",
+   "betweenness": 1482
+  },
+  {
+   "title": "Planet discovery Gleba (research)",
+   "betweenness": 1479
+  },
+  {
+   "title": "Stack",
+   "betweenness": 1470
+  },
+  {
+   "title": "Railway",
+   "betweenness": 1280
+  },
+  {
+   "title": "Fluid wagon",
+   "betweenness": 1028
+  },
+  {
+   "title": "Locomotive",
+   "betweenness": 801
+  },
+  {
+   "title": "Space Age",
+   "betweenness": 740
+  },
+  {
+   "title": "Rail ramp",
+   "betweenness": 536
+  },
+  {
+   "title": "Coal",
+   "betweenness": 280
+  },
+  {
+   "title": "Solar panel",
+   "betweenness": 273
+  },
+  {
+   "title": "Rail signal",
+   "betweenness": 270
+  },
+  {
+   "title": "Plastic bar",
+   "betweenness": 232
+  },
+  {
+   "title": "Steam",
+   "betweenness": 231
+  },
+  {
+   "title": "Oil processing",
+   "betweenness": 220
+  },
+  {
+   "title": "Pipe",
+   "betweenness": 216
+  },
+  {
+   "title": "Crude oil",
+   "betweenness": 196
+  },
+  {
+   "title": "Chemical science pack",
+   "betweenness": 180
+  },
+  {
+   "title": "Rocket part",
+   "betweenness": 177
+  },
+  {
+   "title": "Electric system",
+   "betweenness": 176
+  }
+ ]
+}

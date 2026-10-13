@@ -1,0 +1,100 @@
+{
+ "wiki": "hytale",
+ "generatedAt": "2026-10-12T13:45:43.031Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 46.8,
+   "deadEndPct": 53.2,
+   "components": 16,
+   "cycleCount": 15,
+   "meanHops": 3.08,
+   "medianHops": 3,
+   "maxHops": 7,
+   "topAttractor": [
+    "Hypixel Inc.",
+    "Hypixel Network"
+   ],
+   "topAttractorPct": 19.25
+  },
+  {
+   "rank": "2",
+   "convergePct": 79.97,
+   "deadEndPct": 20.03,
+   "components": 22,
+   "cycleCount": 21,
+   "meanHops": 3.76,
+   "medianHops": 4,
+   "maxHops": 10,
+   "topAttractor": [
+    "Hypixel Network"
+   ],
+   "topAttractorPct": 65.52
+  },
+  {
+   "rank": "3",
+   "convergePct": 46.73,
+   "deadEndPct": 53.27,
+   "components": 29,
+   "cycleCount": 28,
+   "meanHops": 3.09,
+   "medianHops": 3,
+   "maxHops": 10,
+   "topAttractor": [
+    "Orbis",
+    "Faction",
+    "Whisperfrost Frontiers"
+   ],
+   "topAttractorPct": 40.42
+  },
+  {
+   "rank": "5",
+   "convergePct": 8.92,
+   "deadEndPct": 91.08,
+   "components": 14,
+   "cycleCount": 13,
+   "meanHops": 2.63,
+   "medianHops": 2,
+   "maxHops": 10,
+   "topAttractor": [
+    "Whisperfrost Frontiers",
+    "Faction",
+    "Hidey Hole"
+   ],
+   "topAttractorPct": 3.09
+  },
+  {
+   "rank": "last",
+   "convergePct": 84.5,
+   "deadEndPct": 15.5,
+   "components": 77,
+   "cycleCount": 76,
+   "meanHops": 5.91,
+   "medianHops": 4,
+   "maxHops": 17,
+   "topAttractor": [
+    "Exploration Mode",
+    "The Heart of Orbis",
+    "Adventure Mode"
+   ],
+   "topAttractorPct": 37.04
+  },
+  {
+   "rank": "random",
+   "convergePct": 63.81,
+   "deadEndPct": 36.19,
+   "components": 39,
+   "cycleCount": 38,
+   "meanHops": 3.67,
+   "medianHops": 3,
+   "maxHops": 12,
+   "topAttractor": [
+    "Bench",
+    "Inventory",
+    "Candle",
+    "Furniture Workbench"
+   ],
+   "topAttractorPct": 43.55
+  }
+ ]
+}

@@ -18,6 +18,7 @@ import * as path from "path";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
 const wikiArg = process.argv.find((a) => a.startsWith("--wiki="))?.slice(7);
+const FORCE = process.argv.includes("--force"); // re-parse every page, ignoring revision match
 const wiki = wikis.find((w) => w.id === wikiArg);
 if (!wiki) { console.error(`Unknown --wiki=${wikiArg}`); process.exit(1); }
 
@@ -48,6 +49,56 @@ function stripTemplates(text: string): string {
   let prev: string;
   do { prev = text; text = text.replace(/\{\{[^{}]*\}\}/g, ""); } while (text !== prev);
   return text;
+}
+
+// --- link-rendering templates: {{plink|Item}} and friends render as real
+// links on the page, so their first positional parameter counts as one ---
+const LINK_TEMPLATES = new Set([
+  "plink", "plinkt", "plinkp", "ilink", "scp", "gep", "reicon", "costline", "icon",
+  "blocklink", "itemlink",
+]);
+function rewriteLinkTemplates(text: string): string {
+  let prev: string;
+  do {
+    prev = text;
+    text = text.replace(/\{\{\s*([A-Za-z0-9 _-]+)((?:\|[^{}]*)?)\}\}/g, (full, name: string, rest: string) => {
+      if (!LINK_TEMPLATES.has(String(name).trim().toLowerCase())) return full;
+      for (const p of rest.split("|").slice(1)) {
+        const s = p.trim();
+        if (!s || s.includes("=")) continue;
+        return `[[${s}]]`;
+      }
+      return full;
+    });
+  } while (text !== prev);
+  return text;
+}
+
+// --- transclusions: {{:Page}} inlines another page's content ---
+const pageTextCache = new Map<string, string | null>();
+async function getPageText(title: string): Promise<string | null> {
+  if (pageTextCache.has(title)) return pageTextCache.get(title) ?? null;
+  const r = await SRC.execute({ sql: "SELECT text FROM page WHERE title = ? COLLATE NOCASE LIMIT 1", args: [title] });
+  const t = r.rows.length && r.rows[0].text ? String(r.rows[0].text) : null;
+  pageTextCache.set(title, t);
+  return t;
+}
+async function expandTransclusions(text: string, depth: number, seen?: Set<string>): Promise<string> {
+  if (depth <= 0) return text;
+  const matches = [...text.matchAll(/\{\{\s*:\s*([^|}]+)[^}]*\}\}/g)];
+  if (!matches.length) return text;
+  seen ??= new Set();
+  let out = text;
+  for (const m of matches) {
+    const title = normKey(m[1]);
+    if (!title || seen.has(title)) continue; // cycle / already inlined above us
+    const sub = await getPageText(title);
+    if (sub === null) continue;
+    seen.add(title);
+    const inner = await expandTransclusions(sub, depth - 1, seen);
+    out = out.split(m[0]).join("\n" + inner + "\n"); // literal replace, no $-pattern surprises
+  }
+  return out;
 }
 function stripTables(text: string): string {
   let prev: string;
@@ -85,7 +136,7 @@ function normKey(raw: string): string | null {
 
 interface ParsedLink { rank: number; target: string; paren: boolean; italic: boolean }
 
-function parseLinks(wikitext: string): ParsedLink[] {
+async function parseLinks(wikitext: string, fallback = false): Promise<ParsedLink[]> {
   if (!wikitext) return [];
   let text = stripCommentsAndRefs(wikitext);
   const redirect = text.match(/^\s*#redirect\s*:?\s*\[\[([^\]]+)\]\]/i);
@@ -93,7 +144,13 @@ function parseLinks(wikitext: string): ParsedLink[] {
     const t = normKey(redirect[1]);
     return t ? [{ rank: 1, target: t, paren: false, italic: false }] : [];
   }
-  text = stripTables(stripTemplates(text));
+  text = rewriteLinkTemplates(await expandTransclusions(text, 2));
+  if (fallback) {
+    // table- and template-built pages (guide tables, cost lists): keep everything
+    // that renders — links inside table cells and template parameters count
+  } else {
+    text = stripTables(stripTemplates(text));
+  }
   const spans = tokenizeLinks(text);
   const candidates: Array<{ target: string; start: number; end: number }> = [];
   let masked = "", last = 0;
@@ -217,7 +274,7 @@ let totalPages = 0, totalLinks = 0, skipped = 0, reExtracted = 0, newPages = 0;
       const revId = r.revision_id === null ? -1 : Number(r.revision_id);
       const prevRev = extractedRevs.get(lastId);
 
-      if (prevRev !== undefined && prevRev === revId) {
+      if (!FORCE && prevRev !== undefined && prevRev === revId) {
         // unchanged since last extract — skip
         skipped++;
         continue;
@@ -236,7 +293,9 @@ let totalPages = 0, totalLinks = 0, skipped = 0, reExtracted = 0, newPages = 0;
           args: [lastId, String(r.title), revId] });
       }
 
-      for (const l of parseLinks(String(r.text ?? ""))) {
+      let links = await parseLinks(String(r.text ?? ""));
+      if (links.length === 0) links = await parseLinks(String(r.text ?? ""), true); // greedy rescue for table-built pages
+      for (const l of links) {
         totalLinks++;
         linkBatch.push({
           sql: "INSERT INTO link (page_id, rank, target_id, paren, italic) VALUES (?, ?, ?, ?, ?)",

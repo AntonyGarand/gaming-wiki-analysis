@@ -1,0 +1,506 @@
+{
+ "wiki": "vampiresurvivors",
+ "rank": "random",
+ "nodes": 2469,
+ "converge": {
+  "articles": 1504,
+  "pct": 60.92,
+  "deadEnd": 965,
+  "deadEndPct": 39.08,
+  "noLinks": 232,
+  "tooFewLinks": 0,
+  "unresolvable": 8
+ },
+ "hopStats": {
+  "mean": 3.84,
+  "median": 3,
+  "p90": 7,
+  "max": 12
+ },
+ "histogram": {
+  "0": 30,
+  "1": 250,
+  "2": 225,
+  "3": 313,
+  "4": 143,
+  "5": 142,
+  "6": 207,
+  "7": 72,
+  "8": 51,
+  "9": 20,
+  "10": 46,
+  "11": 2,
+  "12": 3
+ },
+ "components": 16,
+ "cycleCount": 15,
+ "largestCycle": {
+  "members": [
+   "Passive items",
+   "Candelabrador",
+   "Four Seasons",
+   "Area"
+  ],
+  "size": 4,
+  "basin": 620
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Passive items",
+    "Candelabrador",
+    "Four Seasons",
+    "Area"
+   ],
+   "basin": 620,
+   "pct": 25.11
+  },
+  {
+   "cycle": [
+    "Stages"
+   ],
+   "basin": 534,
+   "pct": 21.63
+  },
+  {
+   "cycle": [
+    "Adventures",
+    "To End an Ice Age"
+   ],
+   "basin": 118,
+   "pct": 4.78
+  },
+  {
+   "cycle": [
+    "Relics",
+    "Collection"
+   ],
+   "basin": 115,
+   "pct": 4.66
+  },
+  {
+   "cycle": [
+    "Light source",
+    "Mad Groove (VIII)"
+   ],
+   "basin": 54,
+   "pct": 2.19
+  },
+  {
+   "cycle": [
+    "Magnet",
+    "Pickups"
+   ],
+   "basin": 33,
+   "pct": 1.34
+  },
+  {
+   "cycle": [
+    "Kazoo of the Foscari",
+    "Slaying Kazoos"
+   ],
+   "basin": 6,
+   "pct": 0.24
+  },
+  {
+   "cycle": [
+    "Slash (XVI)",
+    "Critical Hit"
+   ],
+   "basin": 5,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Vampire Survivors 2",
+    "Vampire Survivors 1"
+   ],
+   "basin": 5,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Legacy of the Moonspell",
+    "Haze of Night"
+   ],
+   "basin": 4,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Crazy Escape",
+    "You only happen once"
+   ],
+   "basin": 3,
+   "pct": 0.12
+  },
+  {
+   "cycle": [
+    "Impostor Rina",
+    "Megalo Impostor Rina"
+   ],
+   "basin": 2,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Roadmap",
+    "Ode to Castlevania Guestbook"
+   ],
+   "basin": 2,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Happy Birthday",
+    "Nature"
+   ],
+   "basin": 2,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Survarot"
+   ],
+   "basin": 1,
+   "pct": 0.04
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Updates/Vampire Survivors: Legacy of the Bloodmoon is coming this summer!",
+   "chains": 553,
+   "pct": 22.4,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Options",
+   "chains": 77,
+   "pct": 3.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ode to Castlevania (album)",
+   "chains": 66,
+   "pct": 2.67,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Flight",
+   "chains": 9,
+   "pct": 0.36,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 0.6.1",
+   "chains": 4,
+   "pct": 0.16,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 0.7.2",
+   "chains": 4,
+   "pct": 0.16,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 0.2.10 and news",
+   "chains": 3,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Vampire Survivors: Emerald Diorama is free and out now",
+   "chains": 3,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 0.2.11",
+   "chains": 2,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 0.2.12 - small update",
+   "chains": 2,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 0.5.2",
+   "chains": 2,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 0.10.0",
+   "chains": 2,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 1.0",
+   "chains": 2,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Patch 0.11.0",
+   "chains": 2,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates/Minor patch 0.11.3",
+   "chains": 2,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Videos",
+   "inDegree": 498
+  },
+  {
+   "title": "Enemies",
+   "inDegree": 233
+  },
+  {
+   "title": "Weapons",
+   "inDegree": 185
+  },
+  {
+   "title": "Evolution",
+   "inDegree": 108
+  },
+  {
+   "title": "Stages",
+   "inDegree": 100
+  },
+  {
+   "title": "Characters",
+   "inDegree": 59
+  },
+  {
+   "title": "Ode to Castlevania",
+   "inDegree": 48
+  },
+  {
+   "title": "Adventures",
+   "inDegree": 44
+  },
+  {
+   "title": "Spells",
+   "inDegree": 42
+  },
+  {
+   "title": "Secrets",
+   "inDegree": 40
+  },
+  {
+   "title": "Passive items",
+   "inDegree": 29
+  },
+  {
+   "title": "Lake Foscari",
+   "inDegree": 23
+  },
+  {
+   "title": "Relics",
+   "inDegree": 22
+  },
+  {
+   "title": "Westwoods",
+   "inDegree": 22
+  },
+  {
+   "title": "Pickups",
+   "inDegree": 20
+  },
+  {
+   "title": "Abyss Foscari",
+   "inDegree": 19
+  },
+  {
+   "title": "Ante Chamber (stage)",
+   "inDegree": 19
+  },
+  {
+   "title": "Boss Rash",
+   "inDegree": 18
+  },
+  {
+   "title": "Mt.Moonspell",
+   "inDegree": 18
+  },
+  {
+   "title": "Dairy Plant",
+   "inDegree": 16
+  },
+  {
+   "title": "Limit Break",
+   "inDegree": 16
+  },
+  {
+   "title": "Freeze",
+   "inDegree": 15
+  },
+  {
+   "title": "Level up",
+   "inDegree": 15
+  },
+  {
+   "title": "Knockback",
+   "inDegree": 14
+  },
+  {
+   "title": "Poncle",
+   "inDegree": 14
+  },
+  {
+   "title": "PowerUps",
+   "inDegree": 13
+  },
+  {
+   "title": "Area",
+   "inDegree": 13
+  },
+  {
+   "title": "Gallo Tower",
+   "inDegree": 13
+  },
+  {
+   "title": "The Bone Zone",
+   "inDegree": 13
+  },
+  {
+   "title": "Light source",
+   "inDegree": 12
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Evolution",
+   "betweenness": 3542
+  },
+  {
+   "title": "Abyss Foscari",
+   "betweenness": 3150
+  },
+  {
+   "title": "Greed",
+   "betweenness": 2790
+  },
+  {
+   "title": "Revival",
+   "betweenness": 2256
+  },
+  {
+   "title": "Weapons",
+   "betweenness": 2128
+  },
+  {
+   "title": "Passive items",
+   "betweenness": 1838
+  },
+  {
+   "title": "Candelabrador",
+   "betweenness": 1222
+  },
+  {
+   "title": "Videos",
+   "betweenness": 1022
+  },
+  {
+   "title": "PowerUps",
+   "betweenness": 750
+  },
+  {
+   "title": "Treasure Chest",
+   "betweenness": 712
+  },
+  {
+   "title": "Gold Coin (currency)",
+   "betweenness": 711
+  },
+  {
+   "title": "Four Seasons",
+   "betweenness": 606
+  },
+  {
+   "title": "Luck",
+   "betweenness": 561
+  },
+  {
+   "title": "Poncle",
+   "betweenness": 529
+  },
+  {
+   "title": "Enemies",
+   "betweenness": 492
+  },
+  {
+   "title": "Limit Break",
+   "betweenness": 351
+  },
+  {
+   "title": "Emerald Diorama",
+   "betweenness": 288
+  },
+  {
+   "title": "Lake Foscari",
+   "betweenness": 276
+  },
+  {
+   "title": "Gallo Tower",
+   "betweenness": 262
+  },
+  {
+   "title": "Freeze",
+   "betweenness": 240
+  },
+  {
+   "title": "Level up",
+   "betweenness": 220
+  },
+  {
+   "title": "Emerald Diorama (stage)",
+   "betweenness": 162
+  },
+  {
+   "title": "Secrets",
+   "betweenness": 140
+  },
+  {
+   "title": "Knockback",
+   "betweenness": 135
+  },
+  {
+   "title": "Spells",
+   "betweenness": 129
+  },
+  {
+   "title": "Characters",
+   "betweenness": 122
+  },
+  {
+   "title": "Relics",
+   "betweenness": 113
+  },
+  {
+   "title": "Yellow Sign",
+   "betweenness": 112
+  },
+  {
+   "title": "Adventures",
+   "betweenness": 110
+  },
+  {
+   "title": "Westwoods",
+   "betweenness": 110
+  }
+ ]
+}

@@ -1,0 +1,567 @@
+{
+ "wiki": "minecraft",
+ "rank": "2",
+ "nodes": 14078,
+ "converge": {
+  "articles": 6648,
+  "pct": 47.22,
+  "deadEnd": 7430,
+  "deadEndPct": 52.78,
+  "noLinks": 3970,
+  "tooFewLinks": 1137,
+  "unresolvable": 1804
+ },
+ "hopStats": {
+  "mean": 3.92,
+  "median": 4,
+  "p90": 7,
+  "max": 20
+ },
+ "histogram": {
+  "0": 203,
+  "1": 830,
+  "2": 1094,
+  "3": 1190,
+  "4": 1040,
+  "5": 736,
+  "6": 651,
+  "7": 330,
+  "8": 242,
+  "9": 140,
+  "10": 74,
+  "11": 42,
+  "12": 25,
+  "13": 19,
+  "14": 14,
+  "15": 7,
+  "16": 3,
+  "17": 2,
+  "18": 1,
+  "19": 3,
+  "20": 2
+ },
+ "components": 97,
+ "cycleCount": 96,
+ "largestCycle": {
+  "members": [
+   "Player",
+   "Mob",
+   "Mob AI",
+   "NBT format",
+   "UUID",
+   "Java Edition 20w12a",
+   "Respawn Anchor"
+  ],
+  "size": 7,
+  "basin": 3339
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Player",
+    "Mob",
+    "Mob AI",
+    "NBT format",
+    "UUID",
+    "Java Edition 20w12a",
+    "Respawn Anchor"
+   ],
+   "basin": 3339,
+   "pct": 23.72
+  },
+  {
+   "cycle": [
+    "Mojang Studios",
+    "Xbox (division)"
+   ],
+   "basin": 668,
+   "pct": 4.74
+  },
+  {
+   "cycle": [
+    "Fire",
+    "Fire patch"
+   ],
+   "basin": 648,
+   "pct": 4.6
+  },
+  {
+   "cycle": [
+    "Game drop",
+    "The Copper Age",
+    "Java Edition 1.21.9"
+   ],
+   "basin": 280,
+   "pct": 1.99
+  },
+  {
+   "cycle": [
+    "Snow",
+    "Snowfall"
+   ],
+   "basin": 256,
+   "pct": 1.82
+  },
+  {
+   "cycle": [
+    "Skin",
+    "Character Creator"
+   ],
+   "basin": 145,
+   "pct": 1.03
+  },
+  {
+   "cycle": [
+    "Commands",
+    "Chat"
+   ],
+   "basin": 101,
+   "pct": 0.72
+  },
+  {
+   "cycle": [
+    "Java Edition 24w14potato",
+    "Poisonous Potato Add-On"
+   ],
+   "basin": 100,
+   "pct": 0.71
+  },
+  {
+   "cycle": [
+    "MC Championship",
+    "Noxcrew"
+   ],
+   "basin": 77,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "Dimension definition",
+    "Data pack"
+   ],
+   "basin": 76,
+   "pct": 0.54
+  },
+  {
+   "cycle": [
+    "Wool",
+    "Sheep"
+   ],
+   "basin": 71,
+   "pct": 0.5
+  },
+  {
+   "cycle": [
+    "Badlands",
+    "Red Sand"
+   ],
+   "basin": 70,
+   "pct": 0.5
+  },
+  {
+   "cycle": [
+    "Smelting",
+    "Blast Furnace"
+   ],
+   "basin": 65,
+   "pct": 0.46
+  },
+  {
+   "cycle": [
+    "Desert",
+    "Sand"
+   ],
+   "basin": 63,
+   "pct": 0.45
+  },
+  {
+   "cycle": [
+    "Java Edition 1.14",
+    "Texture Update",
+    "Bedrock Edition 1.10.0",
+    "Village & Pillage",
+    "Java Edition 18w43a"
+   ],
+   "basin": 63,
+   "pct": 0.45
+  },
+  {
+   "cycle": [
+    "Minecraft Live 2022",
+    "Java Edition 1.20"
+   ],
+   "basin": 50,
+   "pct": 0.36
+  },
+  {
+   "cycle": [
+    "Enchantment",
+    "Enchanting Table",
+    "Experience"
+   ],
+   "basin": 48,
+   "pct": 0.34
+  },
+  {
+   "cycle": [
+    "Jukebox",
+    "Music Disc"
+   ],
+   "basin": 46,
+   "pct": 0.33
+  },
+  {
+   "cycle": [
+    "Generated loot",
+    "Loot table"
+   ],
+   "basin": 44,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Sulfur",
+    "Sulfur Caves"
+   ],
+   "basin": 24,
+   "pct": 0.17
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Feature",
+   "chains": 88,
+   "pct": 0.63,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Adventure",
+   "chains": 24,
+   "pct": 0.17,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Java Edition mob render history/Camel Husk Jockey",
+   "chains": 15,
+   "pct": 0.11,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Village/Structure (old)/Blueprints",
+   "chains": 12,
+   "pct": 0.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Summer",
+   "chains": 12,
+   "pct": 0.09,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Java Edition 1.19.2",
+   "chains": 11,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ash Kapoor",
+   "chains": 9,
+   "pct": 0.06,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Audiobook narrators",
+   "chains": 8,
+   "pct": 0.06,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Java Edition protocol/Packets",
+   "chains": 8,
+   "pct": 0.06,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Oreville Studios",
+   "chains": 7,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Info update",
+   "chains": 6,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Java Edition 1.9.2",
+   "chains": 6,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Battle & Beasts Skin Pack",
+   "chains": 6,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Minecraft: Official Magazine (2017)",
+   "chains": 6,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Hat Films",
+   "chains": 6,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Player",
+   "inDegree": 112
+  },
+  {
+   "title": "Overworld",
+   "inDegree": 84
+  },
+  {
+   "title": "Mojang Studios",
+   "inDegree": 63
+  },
+  {
+   "title": "Mob",
+   "inDegree": 63
+  },
+  {
+   "title": "Block",
+   "inDegree": 61
+  },
+  {
+   "title": "Java Edition 24w14potato",
+   "inDegree": 59
+  },
+  {
+   "title": "Polished Blackstone Bricks",
+   "inDegree": 57
+  },
+  {
+   "title": "Java Edition 1.9",
+   "inDegree": 55
+  },
+  {
+   "title": "Java Edition 1.8",
+   "inDegree": 54
+  },
+  {
+   "title": "Item",
+   "inDegree": 45
+  },
+  {
+   "title": "Biome",
+   "inDegree": 45
+  },
+  {
+   "title": "Java Edition 1.13",
+   "inDegree": 44
+  },
+  {
+   "title": "Entity",
+   "inDegree": 43
+  },
+  {
+   "title": "Minecraft Launcher",
+   "inDegree": 42
+  },
+  {
+   "title": "The Nether",
+   "inDegree": 40
+  },
+  {
+   "title": "Commands",
+   "inDegree": 38
+  },
+  {
+   "title": "Water",
+   "inDegree": 36
+  },
+  {
+   "title": "Java Edition 1.14",
+   "inDegree": 35
+  },
+  {
+   "title": "Caves & Cliffs",
+   "inDegree": 35
+  },
+  {
+   "title": "Music Disc",
+   "inDegree": 32
+  },
+  {
+   "title": "Data pack",
+   "inDegree": 31
+  },
+  {
+   "title": "Pickaxe",
+   "inDegree": 30
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 28
+  },
+  {
+   "title": "Mod Power",
+   "inDegree": 28
+  },
+  {
+   "title": "Villager",
+   "inDegree": 27
+  },
+  {
+   "title": "Game drop",
+   "inDegree": 26
+  },
+  {
+   "title": "Java Edition 1.17",
+   "inDegree": 24
+  },
+  {
+   "title": "Java Edition 25w14craftmine",
+   "inDegree": 24
+  },
+  {
+   "title": "Settings",
+   "inDegree": 23
+  },
+  {
+   "title": "Inventory",
+   "inDegree": 22
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Mob",
+   "betweenness": 18215
+  },
+  {
+   "title": "Mob AI",
+   "betweenness": 14953
+  },
+  {
+   "title": "NBT format",
+   "betweenness": 11740
+  },
+  {
+   "title": "Player",
+   "betweenness": 9654
+  },
+  {
+   "title": "UUID",
+   "betweenness": 8499
+  },
+  {
+   "title": "Biome",
+   "betweenness": 8155
+  },
+  {
+   "title": "Overworld",
+   "betweenness": 6224
+  },
+  {
+   "title": "Java Edition 20w12a",
+   "betweenness": 5167
+  },
+  {
+   "title": "Item",
+   "betweenness": 3801
+  },
+  {
+   "title": "Crafting",
+   "betweenness": 2640
+  },
+  {
+   "title": "Water",
+   "betweenness": 2511
+  },
+  {
+   "title": "Tool",
+   "betweenness": 2184
+  },
+  {
+   "title": "Brewing",
+   "betweenness": 1917
+  },
+  {
+   "title": "Respawn Anchor",
+   "betweenness": 1849
+  },
+  {
+   "title": "Effect",
+   "betweenness": 1793
+  },
+  {
+   "title": "Splash Potion",
+   "betweenness": 1760
+  },
+  {
+   "title": "Potion",
+   "betweenness": 1710
+  },
+  {
+   "title": "Projectile",
+   "betweenness": 1687
+  },
+  {
+   "title": "Food",
+   "betweenness": 1452
+  },
+  {
+   "title": "World generation",
+   "betweenness": 1408
+  },
+  {
+   "title": "Village",
+   "betweenness": 1296
+  },
+  {
+   "title": "Villager",
+   "betweenness": 1070
+  },
+  {
+   "title": "MINECON",
+   "betweenness": 1002
+  },
+  {
+   "title": "Creative",
+   "betweenness": 1001
+  },
+  {
+   "title": "Altitude",
+   "betweenness": 1001
+  },
+  {
+   "title": "Clouds",
+   "betweenness": 996
+  },
+  {
+   "title": "Deep Ocean",
+   "betweenness": 972
+  },
+  {
+   "title": "Coordinates",
+   "betweenness": 966
+  },
+  {
+   "title": "Java Edition Classic",
+   "betweenness": 960
+  },
+  {
+   "title": "World boundary",
+   "betweenness": 960
+  }
+ ]
+}

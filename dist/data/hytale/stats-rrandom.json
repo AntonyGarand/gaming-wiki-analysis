@@ -1,0 +1,549 @@
+{
+ "wiki": "hytale",
+ "rank": "random",
+ "nodes": 4498,
+ "converge": {
+  "articles": 2870,
+  "pct": 63.81,
+  "deadEnd": 1628,
+  "deadEndPct": 36.19,
+  "noLinks": 67,
+  "tooFewLinks": 0,
+  "unresolvable": 57
+ },
+ "hopStats": {
+  "mean": 3.67,
+  "median": 3,
+  "p90": 6,
+  "max": 12
+ },
+ "histogram": {
+  "0": 79,
+  "1": 226,
+  "2": 1049,
+  "3": 292,
+  "4": 242,
+  "5": 108,
+  "6": 605,
+  "7": 92,
+  "8": 103,
+  "9": 42,
+  "10": 18,
+  "11": 10,
+  "12": 4
+ },
+ "components": 39,
+ "cycleCount": 38,
+ "largestCycle": {
+  "members": [
+   "Bench",
+   "Inventory",
+   "Candle",
+   "Furniture Workbench"
+  ],
+  "size": 4,
+  "basin": 1959
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Bench",
+    "Inventory",
+    "Candle",
+    "Furniture Workbench"
+   ],
+   "basin": 1959,
+   "pct": 43.55
+  },
+  {
+   "cycle": [
+    "Block",
+    "Rubble"
+   ],
+   "basin": 361,
+   "pct": 8.03
+  },
+  {
+   "cycle": [
+    "Oak Tree",
+    "Beech Tree"
+   ],
+   "basin": 176,
+   "pct": 3.91
+  },
+  {
+   "cycle": [
+    "Boss",
+    "Dragon"
+   ],
+   "basin": 92,
+   "pct": 2.05
+  },
+  {
+   "cycle": [
+    "Chair",
+    "Stool"
+   ],
+   "basin": 82,
+   "pct": 1.82
+  },
+  {
+   "cycle": [
+    "Outlander",
+    "Outlander Village"
+   ],
+   "basin": 38,
+   "pct": 0.84
+  },
+  {
+   "cycle": [
+    "Simon Collins-Laflamme",
+    "Hypixel Network"
+   ],
+   "basin": 32,
+   "pct": 0.71
+  },
+  {
+   "cycle": [
+    "Health",
+    "Health Boost"
+   ],
+   "basin": 18,
+   "pct": 0.4
+  },
+  {
+   "cycle": [
+    "Chicken",
+    "Chick"
+   ],
+   "basin": 9,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Boar",
+    "Pig"
+   ],
+   "basin": 8,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Shield",
+    "Spiked Scrap Shield"
+   ],
+   "basin": 8,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Multiplayer",
+    "Server browser",
+    "Server"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Goblin",
+    "Scrap Glider"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Scarak Nest",
+    "Medium Scarak Egg Sack"
+   ],
+   "basin": 6,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Burnt Skeleton Praetorian",
+    "Praetorian Longsword"
+   ],
+   "basin": 5,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Cooled Magma",
+    "Cracked Magma"
+   ],
+   "basin": 5,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Hytale Blog",
+    "Hytale.com"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Sapphire",
+    "Volcano"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Tooltip",
+    "Flavor Text"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Launch Platform",
+    "Forgotten Temple Gateway"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Enkindled Letter: Workshops of War",
+   "chains": 1369,
+   "pct": 30.44,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Howling Sands",
+   "chains": 53,
+   "pct": 1.18,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Stairs",
+   "chains": 45,
+   "pct": 1,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Wooden Boat",
+   "chains": 15,
+   "pct": 0.33,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Badlands",
+   "chains": 10,
+   "pct": 0.22,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Biome",
+   "chains": 7,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Jungle Tree",
+   "chains": 5,
+   "pct": 0.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "0.0.2",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Chunk format/BlockHealthChunk format",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Golden Steppes",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "0.5.0-pre.5",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Cat",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Wood Case",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Behaviors",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Walking Sticks",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Builder's Workbench",
+   "inDegree": 725
+  },
+  {
+   "title": "Creative Inventory",
+   "inDegree": 504
+  },
+  {
+   "title": "Exploration Mode",
+   "inDegree": 410
+  },
+  {
+   "title": "NPC",
+   "inDegree": 108
+  },
+  {
+   "title": "Crude Shears",
+   "inDegree": 78
+  },
+  {
+   "title": "Half Slab",
+   "inDegree": 71
+  },
+  {
+   "title": "Hytale",
+   "inDegree": 69
+  },
+  {
+   "title": "Prefab",
+   "inDegree": 68
+  },
+  {
+   "title": "Farmer's Workbench",
+   "inDegree": 67
+  },
+  {
+   "title": "Salvager's Workbench",
+   "inDegree": 67
+  },
+  {
+   "title": "Bench",
+   "inDegree": 60
+  },
+  {
+   "title": "Plant",
+   "inDegree": 53
+  },
+  {
+   "title": "Furniture Workbench",
+   "inDegree": 52
+  },
+  {
+   "title": "Block",
+   "inDegree": 51
+  },
+  {
+   "title": "Emerald Wilds",
+   "inDegree": 51
+  },
+  {
+   "title": "Stairs",
+   "inDegree": 44
+  },
+  {
+   "title": "Window",
+   "inDegree": 44
+  },
+  {
+   "title": "Howling Sands",
+   "inDegree": 39
+  },
+  {
+   "title": "The Guttering Hollows",
+   "inDegree": 38
+  },
+  {
+   "title": "Devastated Lands",
+   "inDegree": 32
+  },
+  {
+   "title": "Ingredient",
+   "inDegree": 27
+  },
+  {
+   "title": "Update 6",
+   "inDegree": 26
+  },
+  {
+   "title": "Lighting",
+   "inDegree": 24
+  },
+  {
+   "title": "Food",
+   "inDegree": 24
+  },
+  {
+   "title": "Chest",
+   "inDegree": 24
+  },
+  {
+   "title": "Whisperfrost Frontiers",
+   "inDegree": 23
+  },
+  {
+   "title": "Ocean",
+   "inDegree": 21
+  },
+  {
+   "title": "Tree",
+   "inDegree": 21
+  },
+  {
+   "title": "Memories",
+   "inDegree": 20
+  },
+  {
+   "title": "Pillar",
+   "inDegree": 20
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Hytale",
+   "betweenness": 6888
+  },
+  {
+   "title": "Faction",
+   "betweenness": 6578
+  },
+  {
+   "title": "Whisperfrost Frontiers",
+   "betweenness": 6396
+  },
+  {
+   "title": "Frostmarch Tundra",
+   "betweenness": 5896
+  },
+  {
+   "title": "Bench",
+   "betweenness": 5764
+  },
+  {
+   "title": "Plant",
+   "betweenness": 5624
+  },
+  {
+   "title": "Shire Plains",
+   "betweenness": 5370
+  },
+  {
+   "title": "Mushroom",
+   "betweenness": 4942
+  },
+  {
+   "title": "Flower",
+   "betweenness": 4932
+  },
+  {
+   "title": "Monster",
+   "betweenness": 4448
+  },
+  {
+   "title": "Zone",
+   "betweenness": 4308
+  },
+  {
+   "title": "Creative Inventory",
+   "betweenness": 4248
+  },
+  {
+   "title": "Hostile",
+   "betweenness": 4230
+  },
+  {
+   "title": "Weapon",
+   "betweenness": 4200
+  },
+  {
+   "title": "NPC",
+   "betweenness": 4097
+  },
+  {
+   "title": "Exploration Mode",
+   "betweenness": 4089
+  },
+  {
+   "title": "Inventory",
+   "betweenness": 3813
+  },
+  {
+   "title": "Crude Spear",
+   "betweenness": 3612
+  },
+  {
+   "title": "Scarak",
+   "betweenness": 3605
+  },
+  {
+   "title": "Salvager's Workbench",
+   "betweenness": 3420
+  },
+  {
+   "title": "Builder's Workbench",
+   "betweenness": 3072
+  },
+  {
+   "title": "Statue of the Founding Builder",
+   "betweenness": 2888
+  },
+  {
+   "title": "Furnace",
+   "betweenness": 2860
+  },
+  {
+   "title": "Gamemode",
+   "betweenness": 2728
+  },
+  {
+   "title": "Candle",
+   "betweenness": 1858
+  },
+  {
+   "title": "Lore",
+   "betweenness": 1367
+  },
+  {
+   "title": "Cursed Crypt",
+   "betweenness": 1197
+  },
+  {
+   "title": "Skeleton Knight",
+   "betweenness": 1170
+  },
+  {
+   "title": "Half Slab",
+   "betweenness": 1065
+  },
+  {
+   "title": "Prefab",
+   "betweenness": 1050
+  }
+ ]
+}

@@ -1,0 +1,622 @@
+{
+ "wiki": "rsc",
+ "rank": "random",
+ "nodes": 4331,
+ "converge": {
+  "articles": 3823,
+  "pct": 88.27,
+  "deadEnd": 508,
+  "deadEndPct": 11.73,
+  "noLinks": 479,
+  "tooFewLinks": 0,
+  "unresolvable": 7
+ },
+ "hopStats": {
+  "mean": 5.2,
+  "median": 4,
+  "p90": 11,
+  "max": 22
+ },
+ "histogram": {
+  "0": 221,
+  "1": 542,
+  "2": 481,
+  "3": 428,
+  "4": 401,
+  "5": 292,
+  "6": 238,
+  "7": 183,
+  "8": 234,
+  "9": 219,
+  "10": 165,
+  "11": 104,
+  "12": 72,
+  "13": 40,
+  "14": 36,
+  "15": 44,
+  "16": 51,
+  "17": 16,
+  "18": 29,
+  "19": 14,
+  "20": 8,
+  "21": 2,
+  "22": 3
+ },
+ "components": 88,
+ "cycleCount": 87,
+ "largestCycle": {
+  "members": [
+   "Ranged",
+   "Poison (effect)",
+   "Glitch",
+   "Rune Plate Mail top",
+   "Plate Mail Tops",
+   "Thrander",
+   "Anvil",
+   "Scenery",
+   "Wall scenery",
+   "Items",
+   "Examine",
+   "Options",
+   "Sound effects",
+   "Strange looking wall",
+   "Ned",
+   "Crandor",
+   "Port Sarim",
+   "The Rusty Anchor",
+   "Pirate's treasure",
+   "Magic",
+   "Mage Arena",
+   "Web",
+   "Machette",
+   "Legend's Quest",
+   "Tai Bwo Wannai",
+   "Fishing spot",
+   "RuneScape Classic",
+   "Combat",
+   "Hits",
+   "Combat level"
+  ],
+  "size": 30,
+  "basin": 1696
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Ranged",
+    "Poison (effect)",
+    "Glitch",
+    "Rune Plate Mail top",
+    "Plate Mail Tops",
+    "Thrander",
+    "Anvil",
+    "Scenery",
+    "Wall scenery",
+    "Items",
+    "Examine",
+    "Options",
+    "Sound effects",
+    "Strange looking wall",
+    "Ned",
+    "Crandor",
+    "Port Sarim",
+    "The Rusty Anchor",
+    "Pirate's treasure",
+    "Magic",
+    "Mage Arena",
+    "Web",
+    "Machette",
+    "Legend's Quest",
+    "Tai Bwo Wannai",
+    "Fishing spot",
+    "RuneScape Classic",
+    "Combat",
+    "Hits",
+    "Combat level"
+   ],
+   "basin": 1696,
+   "pct": 39.16
+  },
+  {
+   "cycle": [
+    "Amulets",
+    "Ball of wool"
+   ],
+   "basin": 309,
+   "pct": 7.13
+  },
+  {
+   "cycle": [
+    "Nulodion's Cannon Parts",
+    "Dwarf Cannon engineer"
+   ],
+   "basin": 291,
+   "pct": 6.72
+  },
+  {
+   "cycle": [
+    "Iron bar",
+    "Iron bar certificate"
+   ],
+   "basin": 208,
+   "pct": 4.8
+  },
+  {
+   "cycle": [
+    "Cooking",
+    "Frenita's Cooking Shop"
+   ],
+   "basin": 176,
+   "pct": 4.06
+  },
+  {
+   "cycle": [
+    "Water (jug)",
+    "Jug"
+   ],
+   "basin": 164,
+   "pct": 3.79
+  },
+  {
+   "cycle": [
+    "Rashiliyia's Tomb",
+    "Tomb Doors",
+    "Beads of the dead",
+    "Shilo village",
+    "Bone Shard"
+   ],
+   "basin": 158,
+   "pct": 3.65
+  },
+  {
+   "cycle": [
+    "East Ardougne",
+    "Fur Stall"
+   ],
+   "basin": 134,
+   "pct": 3.09
+  },
+  {
+   "cycle": [
+    "Drop trick",
+    "Bank trick",
+    "Staff of Armadyl"
+   ],
+   "basin": 57,
+   "pct": 1.32
+  },
+  {
+   "cycle": [
+    "Underground Pass (location)",
+    "Pit of the Damned",
+    "Iban's conscience",
+    "Old Journal",
+    "A Doll of Iban",
+    "Iban"
+   ],
+   "basin": 56,
+   "pct": 1.29
+  },
+  {
+   "cycle": [
+    "Murder Mystery",
+    "Franks Silver Pot"
+   ],
+   "basin": 31,
+   "pct": 0.72
+  },
+  {
+   "cycle": [
+    "Karamja",
+    "Karamja Volcano"
+   ],
+   "basin": 27,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Red vine worms",
+    "McGrubor's Wood"
+   ],
+   "basin": 27,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Monastery (Prayer Guild)",
+    "Guilds"
+   ],
+   "basin": 27,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Ted Rehnison",
+    "Jethick"
+   ],
+   "basin": 23,
+   "pct": 0.53
+  },
+  {
+   "cycle": [
+    "Cocktail",
+    "Gnome cocktail guide"
+   ],
+   "basin": 22,
+   "pct": 0.51
+  },
+  {
+   "cycle": [
+    "Rope",
+    "Waterfall dungeon"
+   ],
+   "basin": 22,
+   "pct": 0.51
+  },
+  {
+   "cycle": [
+    "Fisher Realm",
+    "Maiden"
+   ],
+   "basin": 20,
+   "pct": 0.46
+  },
+  {
+   "cycle": [
+    "Fight Arena (location)",
+    "Fightslave joe",
+    "Fight Arena",
+    "Jeremy Servil",
+    "Lady servil"
+   ],
+   "basin": 18,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Imp",
+    "Ashes",
+    "Demon"
+   ],
+   "basin": 17,
+   "pct": 0.39
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Post-closure years",
+   "chains": 5,
+   "pct": 0.12,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Player owned houses",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "God letters:Issue 12 - Guthix Manifests",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "God letters:Issue 1 - Saradomin Speaks",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "List of keys",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "JAG",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Manual:Fatigue (2003 Rev 1)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Abuse (2003)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Jagex Team (2002)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Cooking (2001)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Getting Started (2003)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Archer, The Mage, and The Knight",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Battle of Edgeville",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Monk Quest",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Concise History Of The Discovery of The Runes That Allow Magicks",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Quests",
+   "inDegree": 46
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 42
+  },
+  {
+   "title": "Non-player character",
+   "inDegree": 41
+  },
+  {
+   "title": "Monster",
+   "inDegree": 41
+  },
+  {
+   "title": "Experience",
+   "inDegree": 40
+  },
+  {
+   "title": "Magic",
+   "inDegree": 35
+  },
+  {
+   "title": "Character",
+   "inDegree": 33
+  },
+  {
+   "title": "The Grand Tree (location)",
+   "inDegree": 33
+  },
+  {
+   "title": "Cooking",
+   "inDegree": 31
+  },
+  {
+   "title": "Coins",
+   "inDegree": 31
+  },
+  {
+   "title": "Items",
+   "inDegree": 29
+  },
+  {
+   "title": "RuneScape",
+   "inDegree": 28
+  },
+  {
+   "title": "Agility",
+   "inDegree": 26
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 25
+  },
+  {
+   "title": "RuneScape Classic",
+   "inDegree": 23
+  },
+  {
+   "title": "Hits",
+   "inDegree": 22
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 21
+  },
+  {
+   "title": "Herblaw",
+   "inDegree": 21
+  },
+  {
+   "title": "East Ardougne",
+   "inDegree": 21
+  },
+  {
+   "title": "Attack",
+   "inDegree": 17
+  },
+  {
+   "title": "Prayer",
+   "inDegree": 17
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 17
+  },
+  {
+   "title": "Sign",
+   "inDegree": 17
+  },
+  {
+   "title": "Defense",
+   "inDegree": 16
+  },
+  {
+   "title": "Thieving",
+   "inDegree": 16
+  },
+  {
+   "title": "Pay-to-play",
+   "inDegree": 16
+  },
+  {
+   "title": "Underground pass",
+   "inDegree": 16
+  },
+  {
+   "title": "Knife",
+   "inDegree": 16
+  },
+  {
+   "title": "Murder Mystery",
+   "inDegree": 16
+  },
+  {
+   "title": "Food",
+   "inDegree": 16
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Ranged",
+   "betweenness": 35039
+  },
+  {
+   "title": "Poison (effect)",
+   "betweenness": 33793
+  },
+  {
+   "title": "Items",
+   "betweenness": 32405
+  },
+  {
+   "title": "Glitch",
+   "betweenness": 32187
+  },
+  {
+   "title": "Examine",
+   "betweenness": 31399
+  },
+  {
+   "title": "Rune Plate Mail top",
+   "betweenness": 30521
+  },
+  {
+   "title": "Hits",
+   "betweenness": 30391
+  },
+  {
+   "title": "Options",
+   "betweenness": 29763
+  },
+  {
+   "title": "Plate Mail Tops",
+   "betweenness": 29065
+  },
+  {
+   "title": "Combat level",
+   "betweenness": 28965
+  },
+  {
+   "title": "Sound effects",
+   "betweenness": 28097
+  },
+  {
+   "title": "Thrander",
+   "betweenness": 27849
+  },
+  {
+   "title": "Anvil",
+   "betweenness": 26633
+  },
+  {
+   "title": "Strange looking wall",
+   "betweenness": 26431
+  },
+  {
+   "title": "Scenery",
+   "betweenness": 26257
+  },
+  {
+   "title": "Ned",
+   "betweenness": 24765
+  },
+  {
+   "title": "Wall scenery",
+   "betweenness": 24681
+  },
+  {
+   "title": "Crandor",
+   "betweenness": 23099
+  },
+  {
+   "title": "Port Sarim",
+   "betweenness": 22393
+  },
+  {
+   "title": "RuneScape Classic",
+   "betweenness": 21903
+  },
+  {
+   "title": "The Rusty Anchor",
+   "betweenness": 20727
+  },
+  {
+   "title": "Combat",
+   "betweenness": 20417
+  },
+  {
+   "title": "Magic",
+   "betweenness": 19945
+  },
+  {
+   "title": "Pirate's treasure",
+   "betweenness": 19391
+  },
+  {
+   "title": "Mage Arena",
+   "betweenness": 18699
+  },
+  {
+   "title": "Web",
+   "betweenness": 17123
+  },
+  {
+   "title": "Machette",
+   "betweenness": 15487
+  },
+  {
+   "title": "Legend's Quest",
+   "betweenness": 14721
+  },
+  {
+   "title": "Tai Bwo Wannai",
+   "betweenness": 13205
+  },
+  {
+   "title": "Fishing spot",
+   "betweenness": 11539
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "wiki": "valheim",
+ "generatedAt": "2026-10-12T17:02:16.203Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 85.12,
+   "deadEndPct": 14.88,
+   "components": 19,
+   "cycleCount": 18,
+   "meanHops": 2.93,
+   "medianHops": 3,
+   "maxHops": 11,
+   "topAttractor": [
+    "Creatures"
+   ],
+   "topAttractorPct": 78.19
+  },
+  {
+   "rank": "2",
+   "convergePct": 62.54,
+   "deadEndPct": 37.46,
+   "components": 36,
+   "cycleCount": 35,
+   "meanHops": 3.08,
+   "medianHops": 3,
+   "maxHops": 8,
+   "topAttractor": [
+    "Ashlands",
+    "Lava"
+   ],
+   "topAttractorPct": 17.13
+  },
+  {
+   "rank": "3",
+   "convergePct": 65.58,
+   "deadEndPct": 34.42,
+   "components": 41,
+   "cycleCount": 40,
+   "meanHops": 3.92,
+   "medianHops": 4,
+   "maxHops": 11,
+   "topAttractor": [
+    "Greydwarf",
+    "Greyling"
+   ],
+   "topAttractorPct": 11.84
+  },
+  {
+   "rank": "5",
+   "convergePct": 19.94,
+   "deadEndPct": 80.06,
+   "components": 15,
+   "cycleCount": 14,
+   "meanHops": 4.39,
+   "medianHops": 3,
+   "maxHops": 15,
+   "topAttractor": [
+    "Dvergr Mage",
+    "Dvergr Rogue"
+   ],
+   "topAttractorPct": 6.46
+  },
+  {
+   "rank": "last",
+   "convergePct": 0.93,
+   "deadEndPct": 99.07,
+   "components": 5,
+   "cycleCount": 4,
+   "meanHops": 0.33,
+   "medianHops": 0,
+   "maxHops": 1,
+   "topAttractor": [
+    "Tables",
+    "Chairs"
+   ],
+   "topAttractorPct": 0.31
+  },
+  {
+   "rank": "random",
+   "convergePct": 77.18,
+   "deadEndPct": 22.82,
+   "components": 27,
+   "cycleCount": 26,
+   "meanHops": 4.46,
+   "medianHops": 4,
+   "maxHops": 16,
+   "topAttractor": [
+    "Mistlands",
+    "Infested Mine"
+   ],
+   "topAttractorPct": 20.25
+  }
+ ]
+}

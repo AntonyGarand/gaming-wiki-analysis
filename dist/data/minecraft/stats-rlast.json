@@ -1,0 +1,535 @@
+{
+ "wiki": "minecraft",
+ "rank": "last",
+ "nodes": 14078,
+ "converge": {
+  "articles": 172,
+  "pct": 1.22,
+  "deadEnd": 13906,
+  "deadEndPct": 98.78,
+  "noLinks": 3970,
+  "tooFewLinks": 0,
+  "unresolvable": 7584
+ },
+ "hopStats": {
+  "mean": 0.74,
+  "median": 0,
+  "p90": 2,
+  "max": 5
+ },
+ "histogram": {
+  "0": 106,
+  "1": 39,
+  "2": 10,
+  "3": 7,
+  "4": 2,
+  "5": 8
+ },
+ "components": 74,
+ "cycleCount": 73,
+ "largestCycle": {
+  "members": [
+   "Java Edition mob render history/Zombified Piglin",
+   "Java Edition mob render history/Zombie Villager"
+  ],
+  "size": 2,
+  "basin": 24
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Java Edition mob render history/Zombified Piglin",
+    "Java Edition mob render history/Zombie Villager"
+   ],
+   "basin": 24,
+   "pct": 0.17
+  },
+  {
+   "cycle": [
+    "Bedrock Edition installation files",
+    "Bedrock Edition cache files"
+   ],
+   "basin": 10,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "TikTok",
+    "Twitch"
+   ],
+   "basin": 8,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Java Edition mob render history/Wither Skeleton",
+    "Java Edition mob render history/Wither"
+   ],
+   "basin": 8,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Wildling Scouts",
+    "Ash Kapoor"
+   ],
+   "basin": 7,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Ben 10",
+    "Minecraft: The Mountain (map)"
+   ],
+   "basin": 7,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "List of blocks by version",
+    "List of mobs by version"
+   ],
+   "basin": 4,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Java Edition mob render history/Tropical Fish",
+    "Java Edition mob render history/Salmon"
+   ],
+   "basin": 4,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Minecraft: The Ultimate Mobspotters Collection",
+    "Minecraft Where's the Zombie"
+   ],
+   "basin": 3,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Default Skin Pack (Legacy Console Edition)",
+    "Legacy Skin Pack"
+   ],
+   "basin": 3,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Java Edition block render history/Straw Bed",
+    "Java Edition block render history/Colored Bed"
+   ],
+   "basin": 3,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Bedrock Edition block render history/Red Bed",
+    "Bedrock Edition block render history/Straw Bed"
+   ],
+   "basin": 3,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Java Edition block render history/Cloth",
+    "Java Edition block render history/White Wool"
+   ],
+   "basin": 3,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Nadja Anderberg",
+    "Java Realms Content Creator Program"
+   ],
+   "basin": 3,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Mob conversion",
+    "Block conversion"
+   ],
+   "basin": 3,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Corey Clemans",
+    "Helen Zbihlyj"
+   ],
+   "basin": 2,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Technical blocks/Doors"
+   ],
+   "basin": 2,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Efe",
+    "Noor"
+   ],
+   "basin": 2,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Technical blocks/Nether Sprouts"
+   ],
+   "basin": 2,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Marketplace Pass",
+    "Inbox"
+   ],
+   "basin": 2,
+   "pct": 0.01
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Mojang Studios",
+   "chains": 69,
+   "pct": 0.49,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Skin pack",
+   "chains": 48,
+   "pct": 0.34,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Mash-up pack",
+   "chains": 39,
+   "pct": 0.28,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Item",
+   "chains": 29,
+   "pct": 0.21,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Minecraft.net",
+   "chains": 28,
+   "pct": 0.2,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Biome/Before 1.18",
+   "chains": 25,
+   "pct": 0.18,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Launcher profiles.json",
+   "chains": 22,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Smithing Template",
+   "chains": 21,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Java Edition 1.7.10",
+   "chains": 21,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Marketplace",
+   "chains": 21,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Lantern",
+   "chains": 21,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "The Nether",
+   "chains": 20,
+   "pct": 0.14,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Player",
+   "chains": 20,
+   "pct": 0.14,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Minecraft books",
+   "chains": 18,
+   "pct": 0.13,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Texture Update",
+   "chains": 18,
+   "pct": 0.13,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Mojang Studios",
+   "inDegree": 53
+  },
+  {
+   "title": "Skin pack",
+   "inDegree": 38
+  },
+  {
+   "title": "Biome/Before 1.18",
+   "inDegree": 23
+  },
+  {
+   "title": "Minecraft.net",
+   "inDegree": 21
+  },
+  {
+   "title": "Minecraft Launcher",
+   "inDegree": 20
+  },
+  {
+   "title": "Lantern",
+   "inDegree": 20
+  },
+  {
+   "title": "Smithing Template",
+   "inDegree": 20
+  },
+  {
+   "title": "Java Edition 1.7.10",
+   "inDegree": 18
+  },
+  {
+   "title": "Texture Update",
+   "inDegree": 17
+  },
+  {
+   "title": "Blackstone Stairs",
+   "inDegree": 14
+  },
+  {
+   "title": "Villager",
+   "inDegree": 13
+  },
+  {
+   "title": "Mash-up pack",
+   "inDegree": 13
+  },
+  {
+   "title": "Marketplace",
+   "inDegree": 13
+  },
+  {
+   "title": "Character Creator",
+   "inDegree": 13
+  },
+  {
+   "title": "Creeper",
+   "inDegree": 12
+  },
+  {
+   "title": "Player",
+   "inDegree": 12
+  },
+  {
+   "title": "Java Edition 1.6.4",
+   "inDegree": 12
+  },
+  {
+   "title": "Chest",
+   "inDegree": 11
+  },
+  {
+   "title": "Tick",
+   "inDegree": 10
+  },
+  {
+   "title": "Particles",
+   "inDegree": 10
+  },
+  {
+   "title": "Identifier",
+   "inDegree": 10
+  },
+  {
+   "title": "LEGO Minecraft",
+   "inDegree": 9
+  },
+  {
+   "title": "Texture pack (downloadable content)",
+   "inDegree": 9
+  },
+  {
+   "title": "Mod Power",
+   "inDegree": 9
+  },
+  {
+   "title": "Nick Eliopulos",
+   "inDegree": 9
+  },
+  {
+   "title": "Block",
+   "inDegree": 8
+  },
+  {
+   "title": "Minecraft",
+   "inDegree": 8
+  },
+  {
+   "title": "Legacy Console Edition",
+   "inDegree": 8
+  },
+  {
+   "title": "Ender Dragon",
+   "inDegree": 8
+  },
+  {
+   "title": "Tipped Arrow",
+   "inDegree": 8
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Java Edition mob render history/Wandering Trader",
+   "betweenness": 40
+  },
+  {
+   "title": "Java Edition mob render history/Iron Golem",
+   "betweenness": 36
+  },
+  {
+   "title": "Java Edition mob render history/Witch",
+   "betweenness": 35
+  },
+  {
+   "title": "Java Edition mob render history/Villager",
+   "betweenness": 26
+  },
+  {
+   "title": "Randy Peters Minecraft advertisements",
+   "betweenness": 21
+  },
+  {
+   "title": "Minecraft Launcher",
+   "betweenness": 20
+  },
+  {
+   "title": "Better Together Update",
+   "betweenness": 20
+  },
+  {
+   "title": "Zeus",
+   "betweenness": 19
+  },
+  {
+   "title": "SpongeBob SquarePants – Musical",
+   "betweenness": 18
+  },
+  {
+   "title": "YouTube",
+   "betweenness": 16
+  },
+  {
+   "title": "1st Birthday Skin Pack",
+   "betweenness": 16
+  },
+  {
+   "title": "Minecraft Mini-Series",
+   "betweenness": 15
+  },
+  {
+   "title": "Marketplace shorts",
+   "betweenness": 15
+  },
+  {
+   "title": "Theo Grayson",
+   "betweenness": 15
+  },
+  {
+   "title": "Java Edition mob render history/Zombie Villager",
+   "betweenness": 14
+  },
+  {
+   "title": "Durango",
+   "betweenness": 12
+  },
+  {
+   "title": "Chimera",
+   "betweenness": 12
+  },
+  {
+   "title": "Foundation Stone",
+   "betweenness": 12
+  },
+  {
+   "title": "SpongeBob SquarePants",
+   "betweenness": 11
+  },
+  {
+   "title": "Greek Mythology Mash-up",
+   "betweenness": 11
+  },
+  {
+   "title": "Mojang cinematics",
+   "betweenness": 10
+  },
+  {
+   "title": "Nick Eliopulos",
+   "betweenness": 10
+  },
+  {
+   "title": "Grid Runners",
+   "betweenness": 9
+  },
+  {
+   "title": "Video narrators",
+   "betweenness": 9
+  },
+  {
+   "title": "Mod Power",
+   "betweenness": 9
+  },
+  {
+   "title": "List of block textures",
+   "betweenness": 8
+  },
+  {
+   "title": "MC Championship",
+   "betweenness": 8
+  },
+  {
+   "title": "Mojang shorts",
+   "betweenness": 8
+  },
+  {
+   "title": "Terra Swoop Force",
+   "betweenness": 8
+  },
+  {
+   "title": "Mojang machinimas",
+   "betweenness": 8
+  }
+ ]
+}

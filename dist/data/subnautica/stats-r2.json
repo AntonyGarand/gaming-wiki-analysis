@@ -1,0 +1,438 @@
+{
+ "wiki": "subnautica",
+ "rank": "2",
+ "nodes": 710,
+ "converge": {
+  "articles": 394,
+  "pct": 55.49,
+  "deadEnd": 316,
+  "deadEndPct": 44.51,
+  "noLinks": 4,
+  "tooFewLinks": 31,
+  "unresolvable": 5
+ },
+ "hopStats": {
+  "mean": 3.53,
+  "median": 3,
+  "p90": 6,
+  "max": 10
+ },
+ "histogram": {
+  "0": 14,
+  "1": 41,
+  "2": 68,
+  "3": 84,
+  "4": 90,
+  "5": 25,
+  "6": 45,
+  "7": 17,
+  "8": 6,
+  "9": 2,
+  "10": 2
+ },
+ "components": 8,
+ "cycleCount": 7,
+ "largestCycle": {
+  "members": [
+   "Game Modes",
+   "Oxygen"
+  ],
+  "size": 2,
+  "basin": 196
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Game Modes",
+    "Oxygen"
+   ],
+   "basin": 196,
+   "pct": 27.61
+  },
+  {
+   "cycle": [
+    "Planet 4546B",
+    "Kharaa Bacterium"
+   ],
+   "basin": 123,
+   "pct": 17.32
+  },
+  {
+   "cycle": [
+    "Seamoth",
+    "Prawn Suit"
+   ],
+   "basin": 58,
+   "pct": 8.17
+  },
+  {
+   "cycle": [
+    "Blood Oil",
+    "Bloodvine"
+   ],
+   "basin": 7,
+   "pct": 0.99
+  },
+  {
+   "cycle": [
+    "Ancient Fossilized Skeleton",
+    "Lost River Laboratory Cache"
+   ],
+   "basin": 4,
+   "pct": 0.56
+  },
+  {
+   "cycle": [
+    "Crashfish",
+    "Sulfur Plant"
+   ],
+   "basin": 3,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Cuddlefish",
+    "Cuddlefish Egg"
+   ],
+   "basin": 3,
+   "pct": 0.42
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Fauna",
+   "chains": 139,
+   "pct": 19.58,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ryley Robinson",
+   "chains": 68,
+   "pct": 9.58,
+   "reason": "redlink target"
+  },
+  {
+   "title": "The Crater",
+   "chains": 62,
+   "pct": 8.73,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Console Commands",
+   "chains": 10,
+   "pct": 1.41,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Prawn Suit Torpedo Arm",
+   "chains": 2,
+   "pct": 0.28,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Placeable Items",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "All-Environment Protection Suit",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Key Bindings",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Reinforced Gloves",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Cured Red Eyeye",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Cooked Red Eyeye",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Ray Species on 4546B",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Steam Badges",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Alien Statue",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Nanobots",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Fabricator",
+   "inDegree": 41
+  },
+  {
+   "title": "Survival Knife",
+   "inDegree": 37
+  },
+  {
+   "title": "Habitat Builder",
+   "inDegree": 28
+  },
+  {
+   "title": "Biomes",
+   "inDegree": 22
+  },
+  {
+   "title": "Ryley Robinson",
+   "inDegree": 16
+  },
+  {
+   "title": "Aurora",
+   "inDegree": 16
+  },
+  {
+   "title": "Seamoth",
+   "inDegree": 15
+  },
+  {
+   "title": "Grassy Plateaus",
+   "inDegree": 14
+  },
+  {
+   "title": "Lost River",
+   "inDegree": 14
+  },
+  {
+   "title": "Floating Island",
+   "inDegree": 13
+  },
+  {
+   "title": "Fauna",
+   "inDegree": 12
+  },
+  {
+   "title": "Cyclops",
+   "inDegree": 10
+  },
+  {
+   "title": "Bulb Zone",
+   "inDegree": 9
+  },
+  {
+   "title": "Safe Shallows",
+   "inDegree": 9
+  },
+  {
+   "title": "Architects",
+   "inDegree": 9
+  },
+  {
+   "title": "Food & Water",
+   "inDegree": 8
+  },
+  {
+   "title": "Kelp Forest",
+   "inDegree": 8
+  },
+  {
+   "title": "Prawn Suit",
+   "inDegree": 8
+  },
+  {
+   "title": "Seabases",
+   "inDegree": 8
+  },
+  {
+   "title": "Lifepod 5",
+   "inDegree": 7
+  },
+  {
+   "title": "Grand Reef",
+   "inDegree": 7
+  },
+  {
+   "title": "Mountains",
+   "inDegree": 7
+  },
+  {
+   "title": "Inactive Lava Zone",
+   "inDegree": 7
+  },
+  {
+   "title": "Bioluminescence",
+   "inDegree": 6
+  },
+  {
+   "title": "Destroyed Lifepods",
+   "inDegree": 6
+  },
+  {
+   "title": "The Crater",
+   "inDegree": 6
+  },
+  {
+   "title": "Mobile Vehicle Bay",
+   "inDegree": 5
+  },
+  {
+   "title": "Flora",
+   "inDegree": 5
+  },
+  {
+   "title": "Sea Emperor Leviathan",
+   "inDegree": 5
+  },
+  {
+   "title": "Dunes",
+   "inDegree": 5
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Fabricator",
+   "betweenness": 486
+  },
+  {
+   "title": "Food & Water",
+   "betweenness": 358
+  },
+  {
+   "title": "Habitat Builder",
+   "betweenness": 276
+  },
+  {
+   "title": "Tools",
+   "betweenness": 235
+  },
+  {
+   "title": "Aurora",
+   "betweenness": 204
+  },
+  {
+   "title": "Lifepod 5",
+   "betweenness": 198
+  },
+  {
+   "title": "Resources",
+   "betweenness": 196
+  },
+  {
+   "title": "Game Modes",
+   "betweenness": 189
+  },
+  {
+   "title": "Survival Knife",
+   "betweenness": 180
+  },
+  {
+   "title": "Biomes",
+   "betweenness": 176
+  },
+  {
+   "title": "Safe Shallows",
+   "betweenness": 112
+  },
+  {
+   "title": "Planet 4546B",
+   "betweenness": 109
+  },
+  {
+   "title": "Kelp Forest",
+   "betweenness": 104
+  },
+  {
+   "title": "Raw Materials",
+   "betweenness": 92
+  },
+  {
+   "title": "Mountains",
+   "betweenness": 76
+  },
+  {
+   "title": "Metal Salvage",
+   "betweenness": 72
+  },
+  {
+   "title": "Crash Zone",
+   "betweenness": 70
+  },
+  {
+   "title": "Bulb Zone",
+   "betweenness": 66
+  },
+  {
+   "title": "Lost River",
+   "betweenness": 63
+  },
+  {
+   "title": "Grassy Plateaus",
+   "betweenness": 60
+  },
+  {
+   "title": "Deep Grand Reef",
+   "betweenness": 52
+  },
+  {
+   "title": "Mountain Island",
+   "betweenness": 50
+  },
+  {
+   "title": "I Compartment",
+   "betweenness": 49
+  },
+  {
+   "title": "Seamoth",
+   "betweenness": 45
+  },
+  {
+   "title": "Grand Reef",
+   "betweenness": 44
+  },
+  {
+   "title": "Floating Island",
+   "betweenness": 42
+  },
+  {
+   "title": "Degasi",
+   "betweenness": 42
+  },
+  {
+   "title": "Quarantine Enforcement Platform",
+   "betweenness": 42
+  },
+  {
+   "title": "Sandstone Outcrop",
+   "betweenness": 40
+  },
+  {
+   "title": "Multipurpose Room",
+   "betweenness": 40
+  }
+ ]
+}

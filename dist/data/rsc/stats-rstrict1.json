@@ -1,0 +1,545 @@
+{
+ "wiki": "rsc",
+ "rank": "strict1",
+ "nodes": 4331,
+ "converge": {
+  "articles": 3647,
+  "pct": 84.21,
+  "deadEnd": 684,
+  "deadEndPct": 15.79,
+  "noLinks": 479,
+  "tooFewLinks": 0,
+  "unresolvable": 7
+ },
+ "hopStats": {
+  "mean": 4.61,
+  "median": 5,
+  "p90": 7,
+  "max": 13
+ },
+ "histogram": {
+  "0": 66,
+  "1": 499,
+  "2": 310,
+  "3": 224,
+  "4": 565,
+  "5": 582,
+  "6": 498,
+  "7": 592,
+  "8": 191,
+  "9": 61,
+  "10": 38,
+  "11": 11,
+  "12": 5,
+  "13": 5
+ },
+ "components": 35,
+ "cycleCount": 34,
+ "largestCycle": {
+  "members": [
+   "Andrew Gower",
+   "Jagex"
+  ],
+  "size": 2,
+  "basin": 1926
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Andrew Gower",
+    "Jagex"
+   ],
+   "basin": 1926,
+   "pct": 44.47
+  },
+  {
+   "cycle": [
+    "Misthalin",
+    "King"
+   ],
+   "basin": 886,
+   "pct": 20.46
+  },
+  {
+   "cycle": [
+    "Door",
+    "Wall scenery"
+   ],
+   "basin": 129,
+   "pct": 2.98
+  },
+  {
+   "cycle": [
+    "Magic",
+    "Magic training"
+   ],
+   "basin": 122,
+   "pct": 2.82
+  },
+  {
+   "cycle": [
+    "Herblaw",
+    "Herblaw training"
+   ],
+   "basin": 76,
+   "pct": 1.75
+  },
+  {
+   "cycle": [
+    "Cooking",
+    "Cooking training"
+   ],
+   "basin": 72,
+   "pct": 1.66
+  },
+  {
+   "cycle": [
+    "Crafting",
+    "Crafting training"
+   ],
+   "basin": 60,
+   "pct": 1.39
+  },
+  {
+   "cycle": [
+    "Mining",
+    "Mining training"
+   ],
+   "basin": 58,
+   "pct": 1.34
+  },
+  {
+   "cycle": [
+    "Ranged",
+    "Ranged training"
+   ],
+   "basin": 56,
+   "pct": 1.29
+  },
+  {
+   "cycle": [
+    "Fishing",
+    "Fishing training"
+   ],
+   "basin": 37,
+   "pct": 0.85
+  },
+  {
+   "cycle": [
+    "Prayer",
+    "Prayer training"
+   ],
+   "basin": 36,
+   "pct": 0.83
+  },
+  {
+   "cycle": [
+    "Woodcutting",
+    "Woodcutting training"
+   ],
+   "basin": 29,
+   "pct": 0.67
+  },
+  {
+   "cycle": [
+    "Fletching",
+    "Fletching training"
+   ],
+   "basin": 25,
+   "pct": 0.58
+  },
+  {
+   "cycle": [
+    "Smithing",
+    "Smithing training"
+   ],
+   "basin": 23,
+   "pct": 0.53
+  },
+  {
+   "cycle": [
+    "Cocktail",
+    "Gnome cocktail guide"
+   ],
+   "basin": 19,
+   "pct": 0.44
+  },
+  {
+   "cycle": [
+    "Battle Axes",
+    "Axes"
+   ],
+   "basin": 16,
+   "pct": 0.37
+  },
+  {
+   "cycle": [
+    "Staff of Air",
+    "Elemental staff"
+   ],
+   "basin": 13,
+   "pct": 0.3
+  },
+  {
+   "cycle": [
+    "Guilds",
+    "Champions' Guild"
+   ],
+   "basin": 12,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "White Wolf Mountain",
+    "Taverley"
+   ],
+   "basin": 8,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Manual:WorldMap",
+    "World map history"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Manual:Skills (2000)",
+   "chains": 177,
+   "pct": 4.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Taverley dungeon",
+   "chains": 6,
+   "pct": 0.14,
+   "reason": "redlink target"
+  },
+  {
+   "title": "RuneScape 2",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Neck slot table",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Temple of Ikov Dungeon",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Jogre dungeon",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "List of keys",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Fatigue (2003 Rev 1)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Abuse (2003)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Jagex Team (2002)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Cooking (2001)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Getting Started (2003)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Miners' Tale",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "RuneFest 2026",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "A Brief History of RuneScape",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Non-player character",
+   "inDegree": 245
+  },
+  {
+   "title": "Scenery",
+   "inDegree": 233
+  },
+  {
+   "title": "Monster",
+   "inDegree": 146
+  },
+  {
+   "title": "Items",
+   "inDegree": 132
+  },
+  {
+   "title": "Wall scenery",
+   "inDegree": 124
+  },
+  {
+   "title": "Quest items",
+   "inDegree": 92
+  },
+  {
+   "title": "Magic",
+   "inDegree": 83
+  },
+  {
+   "title": "Food",
+   "inDegree": 59
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 52
+  },
+  {
+   "title": "Shop",
+   "inDegree": 50
+  },
+  {
+   "title": "Character",
+   "inDegree": 46
+  },
+  {
+   "title": "Herblaw",
+   "inDegree": 42
+  },
+  {
+   "title": "Certificates",
+   "inDegree": 39
+  },
+  {
+   "title": "RuneScape Classic",
+   "inDegree": 33
+  },
+  {
+   "title": "Underground Pass (location)",
+   "inDegree": 31
+  },
+  {
+   "title": "Quests",
+   "inDegree": 30
+  },
+  {
+   "title": "RuneScape",
+   "inDegree": 30
+  },
+  {
+   "title": "Gnome cooking",
+   "inDegree": 30
+  },
+  {
+   "title": "Wilderness",
+   "inDegree": 27
+  },
+  {
+   "title": "East Ardougne",
+   "inDegree": 24
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 24
+  },
+  {
+   "title": "Digsite (location)",
+   "inDegree": 24
+  },
+  {
+   "title": "Prayer",
+   "inDegree": 23
+  },
+  {
+   "title": "Cooking",
+   "inDegree": 20
+  },
+  {
+   "title": "Agility",
+   "inDegree": 20
+  },
+  {
+   "title": "Unobtainable items",
+   "inDegree": 20
+  },
+  {
+   "title": "Karamja",
+   "inDegree": 18
+  },
+  {
+   "title": "Shields",
+   "inDegree": 18
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 17
+  },
+  {
+   "title": "General Store",
+   "inDegree": 17
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Character",
+   "betweenness": 4869
+  },
+  {
+   "title": "RuneScape Classic",
+   "betweenness": 3698
+  },
+  {
+   "title": "Non-player character",
+   "betweenness": 3532
+  },
+  {
+   "title": "RuneScape",
+   "betweenness": 3120
+  },
+  {
+   "title": "Al Kharid",
+   "betweenness": 2460
+  },
+  {
+   "title": "Scenery",
+   "betweenness": 2128
+  },
+  {
+   "title": "RuneScape Classic Map",
+   "betweenness": 1878
+  },
+  {
+   "title": "Andrew Gower",
+   "betweenness": 1858
+  },
+  {
+   "title": "Wilderness",
+   "betweenness": 1805
+  },
+  {
+   "title": "Items",
+   "betweenness": 1748
+  },
+  {
+   "title": "Lumbridge",
+   "betweenness": 1666
+  },
+  {
+   "title": "Monster",
+   "betweenness": 1480
+  },
+  {
+   "title": "Kandarin",
+   "betweenness": 1050
+  },
+  {
+   "title": "Misthalin",
+   "betweenness": 861
+  },
+  {
+   "title": "Combat",
+   "betweenness": 824
+  },
+  {
+   "title": "Ardougne",
+   "betweenness": 774
+  },
+  {
+   "title": "Armour",
+   "betweenness": 630
+  },
+  {
+   "title": "Defense",
+   "betweenness": 540
+  },
+  {
+   "title": "East Ardougne",
+   "betweenness": 532
+  },
+  {
+   "title": "Quest items",
+   "betweenness": 525
+  },
+  {
+   "title": "Karamja",
+   "betweenness": 480
+  },
+  {
+   "title": "Hits",
+   "betweenness": 441
+  },
+  {
+   "title": "Quests",
+   "betweenness": 390
+  },
+  {
+   "title": "Melee",
+   "betweenness": 370
+  },
+  {
+   "title": "Shop",
+   "betweenness": 360
+  },
+  {
+   "title": "Food",
+   "betweenness": 332
+  },
+  {
+   "title": "West Ardougne",
+   "betweenness": 308
+  },
+  {
+   "title": "Combat level",
+   "betweenness": 298
+  },
+  {
+   "title": "Digsite",
+   "betweenness": 282
+  },
+  {
+   "title": "Certificates",
+   "betweenness": 246
+  }
+ ]
+}

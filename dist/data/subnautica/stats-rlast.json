@@ -1,0 +1,447 @@
+{
+ "wiki": "subnautica",
+ "rank": "last",
+ "nodes": 710,
+ "converge": {
+  "articles": 211,
+  "pct": 29.72,
+  "deadEnd": 499,
+  "deadEndPct": 70.28,
+  "noLinks": 4,
+  "tooFewLinks": 0,
+  "unresolvable": 35
+ },
+ "hopStats": {
+  "mean": 2.69,
+  "median": 2,
+  "p90": 5,
+  "max": 5
+ },
+ "histogram": {
+  "0": 17,
+  "1": 42,
+  "2": 54,
+  "3": 26,
+  "4": 20,
+  "5": 52
+ },
+ "components": 10,
+ "cycleCount": 9,
+ "largestCycle": {
+  "members": [
+   "Achievements"
+  ],
+  "size": 1,
+  "basin": 111
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Achievements"
+   ],
+   "basin": 111,
+   "pct": 15.63
+  },
+  {
+   "cycle": [
+    "Wrecks",
+    "Scanner Room"
+   ],
+   "basin": 52,
+   "pct": 7.32
+  },
+  {
+   "cycle": [
+    "Prawn Suit Grappling Arm",
+    "Prawn Suit Jump Jet Upgrade"
+   ],
+   "basin": 21,
+   "pct": 2.96
+  },
+  {
+   "cycle": [
+    "Tiger Plant",
+    "Deep Shroom"
+   ],
+   "basin": 16,
+   "pct": 2.25
+  },
+  {
+   "cycle": [
+    "Sea Emperor Leviathan",
+    "Bart Torgal"
+   ],
+   "basin": 3,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Wiring Kit",
+    "Advanced Wiring Kit"
+   ],
+   "basin": 2,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Aurora Miniature",
+    "Aurora Poster"
+   ],
+   "basin": 2,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Arcade Gorge Toy",
+    "Caps"
+   ],
+   "basin": 2,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Prawn Suit Depth Module MK1",
+    "Prawn Suit Depth Module MK2"
+   ],
+   "basin": 2,
+   "pct": 0.28
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Cut Content",
+   "chains": 195,
+   "pct": 27.46,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Lava Lizard",
+   "chains": 177,
+   "pct": 24.93,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Aurora",
+   "chains": 29,
+   "pct": 4.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Scanner",
+   "chains": 22,
+   "pct": 3.1,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Console Commands",
+   "chains": 14,
+   "pct": 1.97,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Crater Edge",
+   "chains": 7,
+   "pct": 0.99,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Holefish",
+   "chains": 6,
+   "pct": 0.85,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Vehicles",
+   "chains": 5,
+   "pct": 0.7,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Large Resource Deposits",
+   "chains": 5,
+   "pct": 0.7,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Titanium",
+   "chains": 5,
+   "pct": 0.7,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Membrain Tree",
+   "chains": 3,
+   "pct": 0.42,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Lava Geysers",
+   "chains": 2,
+   "pct": 0.28,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Tree Leech",
+   "chains": 2,
+   "pct": 0.28,
+   "reason": "redlink target"
+  },
+  {
+   "title": "White Tablet",
+   "chains": 2,
+   "pct": 0.28,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Subnautica Wiki",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Achievements",
+   "inDegree": 31
+  },
+  {
+   "title": "Food & Water",
+   "inDegree": 30
+  },
+  {
+   "title": "Alien Containment",
+   "inDegree": 28
+  },
+  {
+   "title": "Bioluminescence",
+   "inDegree": 23
+  },
+  {
+   "title": "Supply Crate",
+   "inDegree": 15
+  },
+  {
+   "title": "Exterior Growbed",
+   "inDegree": 15
+  },
+  {
+   "title": "Primary Containment Facility",
+   "inDegree": 12
+  },
+  {
+   "title": "PDA",
+   "inDegree": 11
+  },
+  {
+   "title": "Prawn Suit",
+   "inDegree": 11
+  },
+  {
+   "title": "Aurora",
+   "inDegree": 11
+  },
+  {
+   "title": "Cyclops",
+   "inDegree": 10
+  },
+  {
+   "title": "Seabases",
+   "inDegree": 9
+  },
+  {
+   "title": "Coral Shell Plate",
+   "inDegree": 8
+  },
+  {
+   "title": "Cut Content",
+   "inDegree": 8
+  },
+  {
+   "title": "Seeds",
+   "inDegree": 8
+  },
+  {
+   "title": "Seaglide",
+   "inDegree": 7
+  },
+  {
+   "title": "Floating Island",
+   "inDegree": 6
+  },
+  {
+   "title": "Habitat Builder",
+   "inDegree": 6
+  },
+  {
+   "title": "Propulsion Cannon",
+   "inDegree": 6
+  },
+  {
+   "title": "Modification Station",
+   "inDegree": 6
+  },
+  {
+   "title": "Reaper Leviathan",
+   "inDegree": 6
+  },
+  {
+   "title": "Console Commands",
+   "inDegree": 6
+  },
+  {
+   "title": "Fabricator",
+   "inDegree": 5
+  },
+  {
+   "title": "Table Coral",
+   "inDegree": 5
+  },
+  {
+   "title": "Reefback Leviathan",
+   "inDegree": 5
+  },
+  {
+   "title": "Fragments",
+   "inDegree": 5
+  },
+  {
+   "title": "Update History",
+   "inDegree": 5
+  },
+  {
+   "title": "Destroyed Lifepods",
+   "inDegree": 5
+  },
+  {
+   "title": "Scanner Room",
+   "inDegree": 5
+  },
+  {
+   "title": "Ryley Robinson",
+   "inDegree": 5
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Seeds",
+   "betweenness": 732
+  },
+  {
+   "title": "Bloodvine",
+   "betweenness": 704
+  },
+  {
+   "title": "Creepvine",
+   "betweenness": 650
+  },
+  {
+   "title": "Fiber Mesh",
+   "betweenness": 612
+  },
+  {
+   "title": "Synthetic Fibers",
+   "betweenness": 552
+  },
+  {
+   "title": "Blood Oil",
+   "betweenness": 490
+  },
+  {
+   "title": "Bloodroot",
+   "betweenness": 426
+  },
+  {
+   "title": "Seaglide",
+   "betweenness": 390
+  },
+  {
+   "title": "Safe Shallows",
+   "betweenness": 378
+  },
+  {
+   "title": "Reefback Leviathan",
+   "betweenness": 378
+  },
+  {
+   "title": "Alien Containment",
+   "betweenness": 364
+  },
+  {
+   "title": "Kelp Forest Caves",
+   "betweenness": 360
+  },
+  {
+   "title": "Databank",
+   "betweenness": 333
+  },
+  {
+   "title": "Lifepod 5",
+   "betweenness": 332
+  },
+  {
+   "title": "Blood Grass",
+   "betweenness": 304
+  },
+  {
+   "title": "Cyclops",
+   "betweenness": 300
+  },
+  {
+   "title": "Brain Coral",
+   "betweenness": 292
+  },
+  {
+   "title": "Ghost Leviathan",
+   "betweenness": 260
+  },
+  {
+   "title": "Repair Tool",
+   "betweenness": 258
+  },
+  {
+   "title": "Modification Station",
+   "betweenness": 242
+  },
+  {
+   "title": "Exterior Growbed",
+   "betweenness": 208
+  },
+  {
+   "title": "Bioluminescence",
+   "betweenness": 175
+  },
+  {
+   "title": "PDA",
+   "betweenness": 170
+  },
+  {
+   "title": "Food & Water",
+   "betweenness": 150
+  },
+  {
+   "title": "Reaper Leviathan",
+   "betweenness": 143
+  },
+  {
+   "title": "Sea Treader Leviathan",
+   "betweenness": 140
+  },
+  {
+   "title": "Fragments",
+   "betweenness": 131
+  },
+  {
+   "title": "Salt Deposit",
+   "betweenness": 124
+  },
+  {
+   "title": "Thermal Plant",
+   "betweenness": 99
+  },
+  {
+   "title": "Propulsion Cannon",
+   "betweenness": 95
+  }
+ ]
+}

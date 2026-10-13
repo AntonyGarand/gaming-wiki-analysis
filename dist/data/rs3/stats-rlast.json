@@ -1,0 +1,617 @@
+{
+ "wiki": "rs3",
+ "rank": "last",
+ "nodes": 79761,
+ "converge": {
+  "articles": 48943,
+  "pct": 61.36,
+  "deadEnd": 30818,
+  "deadEndPct": 38.64,
+  "noLinks": 2191,
+  "tooFewLinks": 0,
+  "unresolvable": 157
+ },
+ "hopStats": {
+  "mean": 7.09,
+  "median": 5,
+  "p90": 17,
+  "max": 42
+ },
+ "histogram": {
+  "0": 3163,
+  "1": 5979,
+  "2": 6169,
+  "3": 4148,
+  "4": 3190,
+  "5": 3561,
+  "6": 2849,
+  "7": 2978,
+  "8": 1642,
+  "9": 1349,
+  "10": 1870,
+  "11": 1210,
+  "12": 1118,
+  "13": 1241,
+  "14": 1314,
+  "15": 1221,
+  "16": 991,
+  "17": 1080,
+  "18": 783,
+  "19": 478,
+  "20": 599,
+  "21": 376,
+  "22": 222,
+  "23": 123,
+  "24": 76,
+  "25": 64,
+  "26": 99,
+  "27": 109,
+  "28": 36,
+  "29": 42,
+  "30": 237,
+  "31": 218,
+  "32": 126,
+  "33": 84,
+  "34": 47,
+  "35": 38,
+  "36": 34,
+  "37": 18,
+  "38": 29,
+  "39": 9,
+  "40": 11,
+  "41": 11,
+  "42": 1
+ },
+ "components": 1553,
+ "cycleCount": 1552,
+ "largestCycle": {
+  "members": [
+   "Grand Exchange",
+   "Grand Exchange/History",
+   "Abyssal whip",
+   "Carnillean Rising",
+   "RuneMetrics/Adventurer's Log",
+   "Infernal orb",
+   "JMod clone",
+   "The Drop",
+   "Mod Chris L",
+   "Divination",
+   "Guthixian Cache",
+   "Invaders Must Die II",
+   "Distractions and Diversions",
+   "Balthazar Beauregard's Big Top Bonanza",
+   "Circus barker",
+   "Raffle barker"
+  ],
+  "size": 16,
+  "basin": 11769
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Grand Exchange",
+    "Grand Exchange/History",
+    "Abyssal whip",
+    "Carnillean Rising",
+    "RuneMetrics/Adventurer's Log",
+    "Infernal orb",
+    "JMod clone",
+    "The Drop",
+    "Mod Chris L",
+    "Divination",
+    "Guthixian Cache",
+    "Invaders Must Die II",
+    "Distractions and Diversions",
+    "Balthazar Beauregard's Big Top Bonanza",
+    "Circus barker",
+    "Raffle barker"
+   ],
+   "basin": 11769,
+   "pct": 14.76
+  },
+  {
+   "cycle": [
+    "Completionist cape",
+    "Quest Cape (achievement)",
+    "Quests achievements",
+    "Dimension of Disaster",
+    "2016 Halloween event",
+    "The Arc",
+    "Impressing the Locals",
+    "Player-owned port/Random events",
+    "Player-owned ports enhancer",
+    "Completionist cape (t)"
+   ],
+   "basin": 3310,
+   "pct": 4.15
+  },
+  {
+   "cycle": [
+    "Orlando Smith's hat",
+    "Adam Antite"
+   ],
+   "basin": 3246,
+   "pct": 4.07
+  },
+  {
+   "cycle": [
+    "Jagex",
+    "Pride event",
+    "Mod North"
+   ],
+   "basin": 3119,
+   "pct": 3.91
+  },
+  {
+   "cycle": [
+    "Priest in Peril",
+    "Lycurgus"
+   ],
+   "basin": 2500,
+   "pct": 3.13
+  },
+  {
+   "cycle": [
+    "Game Guide",
+    "Gaalsien",
+    "Enchanted bolts"
+   ],
+   "basin": 2122,
+   "pct": 2.66
+  },
+  {
+   "cycle": [
+    "Game tick",
+    "Game square",
+    "Escape",
+    "Lectern (Anachronia)"
+   ],
+   "basin": 1993,
+   "pct": 2.5
+  },
+  {
+   "cycle": [
+    "Treasure Hunter",
+    "Wicked hood teleport token"
+   ],
+   "basin": 1566,
+   "pct": 1.96
+  },
+  {
+   "cycle": [
+    "Combat pure",
+    "Skill pure/10 HP"
+   ],
+   "basin": 1466,
+   "pct": 1.84
+  },
+  {
+   "cycle": [
+    "Solomon's General Store",
+    "July Sale"
+   ],
+   "basin": 1200,
+   "pct": 1.5
+  },
+  {
+   "cycle": [
+    "Upcoming updates",
+    "Updates"
+   ],
+   "basin": 1014,
+   "pct": 1.27
+  },
+  {
+   "cycle": [
+    "Third Age",
+    "God Wars Dungeon",
+    "Pernix armour"
+   ],
+   "basin": 799,
+   "pct": 1
+  },
+  {
+   "cycle": [
+    "Jagex Moderator",
+    "Throne of Fame"
+   ],
+   "basin": 704,
+   "pct": 0.88
+  },
+  {
+   "cycle": [
+    "List of quests and miniquests by timeline",
+    "List of miniquests by timeline"
+   ],
+   "basin": 451,
+   "pct": 0.57
+  },
+  {
+   "cycle": [
+    "Christmas Village",
+    "Golden Easter egg",
+    "Pile of Easter eggs"
+   ],
+   "basin": 338,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Ghostly outfit",
+    "Priest's chocolate",
+    "Sweet tooth (status)"
+   ],
+   "basin": 336,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "The Fremennik Trials",
+    "One Small Favour"
+   ],
+   "basin": 334,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "New Varrock",
+    "Mimic kill token"
+   ],
+   "basin": 323,
+   "pct": 0.4
+  },
+  {
+   "cycle": [
+    "Blooming Burrow",
+    "Carrot sword in the stone"
+   ],
+   "basin": 320,
+   "pct": 0.4
+  },
+  {
+   "cycle": [
+    "Festering journal",
+    "Unspeakable horror"
+   ],
+   "basin": 302,
+   "pct": 0.38
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Calculators",
+   "chains": 10003,
+   "pct": 12.54,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Construction/Level up table",
+   "chains": 4617,
+   "pct": 5.79,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Necromancy",
+   "chains": 3699,
+   "pct": 4.64,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Support updates",
+   "chains": 1459,
+   "pct": 1.83,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Minigames",
+   "chains": 1427,
+   "pct": 1.79,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Treasure Trails",
+   "chains": 724,
+   "pct": 0.91,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Invention",
+   "chains": 712,
+   "pct": 0.89,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Wizards' Tower",
+   "chains": 697,
+   "pct": 0.87,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Clan Admin Messages",
+   "chains": 572,
+   "pct": 0.72,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mod Yuey",
+   "chains": 558,
+   "pct": 0.7,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "RuneScape Wiki (Jagex)",
+   "chains": 474,
+   "pct": 0.59,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Fort Forinthry",
+   "chains": 444,
+   "pct": 0.56,
+   "reason": "redlink target"
+  },
+  {
+   "title": "James Hannigan",
+   "chains": 339,
+   "pct": 0.43,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mod Surma",
+   "chains": 290,
+   "pct": 0.36,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Orb of oculus",
+   "chains": 278,
+   "pct": 0.35,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Player-owned house",
+   "inDegree": 1099
+  },
+  {
+   "title": "Buffs and debuffs",
+   "inDegree": 805
+  },
+  {
+   "title": "Video",
+   "inDegree": 680
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 593
+  },
+  {
+   "title": "Experience",
+   "inDegree": 569
+  },
+  {
+   "title": "Jagex Store",
+   "inDegree": 550
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 461
+  },
+  {
+   "title": "Chimes (player-owned port)",
+   "inDegree": 460
+  },
+  {
+   "title": "Treasure Trails",
+   "inDegree": 441
+  },
+  {
+   "title": "Livestream",
+   "inDegree": 399
+  },
+  {
+   "title": "Grand Exchange",
+   "inDegree": 385
+  },
+  {
+   "title": "Treasure Hunter",
+   "inDegree": 338
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 330
+  },
+  {
+   "title": "Daemonheim",
+   "inDegree": 321
+  },
+  {
+   "title": "2026 Construction update",
+   "inDegree": 312
+  },
+  {
+   "title": "Life points",
+   "inDegree": 263
+  },
+  {
+   "title": "Solomon's General Store",
+   "inDegree": 260
+  },
+  {
+   "title": "Invention",
+   "inDegree": 247
+  },
+  {
+   "title": "Quests",
+   "inDegree": 244
+  },
+  {
+   "title": "Examine",
+   "inDegree": 226
+  },
+  {
+   "title": "Achievements",
+   "inDegree": 222
+  },
+  {
+   "title": "Wilderness",
+   "inDegree": 214
+  },
+  {
+   "title": "Free-to-play",
+   "inDegree": 202
+  },
+  {
+   "title": "Evolution of Combat",
+   "inDegree": 197
+  },
+  {
+   "title": "Diango",
+   "inDegree": 194
+  },
+  {
+   "title": "Defence",
+   "inDegree": 184
+  },
+  {
+   "title": "Agility",
+   "inDegree": 183
+  },
+  {
+   "title": "Members",
+   "inDegree": 169
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 168
+  },
+  {
+   "title": "Necromancy",
+   "inDegree": 168
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "RuneMetrics/Adventurer's Log",
+   "betweenness": 142405
+  },
+  {
+   "title": "Infernal orb",
+   "betweenness": 130684
+  },
+  {
+   "title": "Grand Exchange",
+   "betweenness": 123001
+  },
+  {
+   "title": "JMod clone",
+   "betweenness": 119123
+  },
+  {
+   "title": "Grand Exchange/History",
+   "betweenness": 111248
+  },
+  {
+   "title": "The Drop",
+   "betweenness": 108026
+  },
+  {
+   "title": "Abyssal whip",
+   "betweenness": 99735
+  },
+  {
+   "title": "Mod Chris L",
+   "betweenness": 96305
+  },
+  {
+   "title": "Divination",
+   "betweenness": 88376
+  },
+  {
+   "title": "Carnillean Rising",
+   "betweenness": 88286
+  },
+  {
+   "title": "Guthixian Cache",
+   "betweenness": 76959
+  },
+  {
+   "title": "Invaders Must Die II",
+   "betweenness": 65206
+  },
+  {
+   "title": "Backpack",
+   "betweenness": 60336
+  },
+  {
+   "title": "Zombie head (NPC)",
+   "betweenness": 57845
+  },
+  {
+   "title": "Bloodsplatter Isle",
+   "betweenness": 55462
+  },
+  {
+   "title": "Distractions and Diversions",
+   "betweenness": 54749
+  },
+  {
+   "title": "The Adventurous",
+   "betweenness": 53067
+  },
+  {
+   "title": "Mos Le'Harmless",
+   "betweenness": 51820
+  },
+  {
+   "title": "Trouble Brewing",
+   "betweenness": 49552
+  },
+  {
+   "title": "Balthazar Beauregard's Big Top Bonanza",
+   "betweenness": 47380
+  },
+  {
+   "title": "Trouble Brewing (music track)",
+   "betweenness": 46962
+  },
+  {
+   "title": "War's Retreat",
+   "betweenness": 44967
+  },
+  {
+   "title": "Distillery Hilarity",
+   "betweenness": 44370
+  },
+  {
+   "title": "Reaper points",
+   "betweenness": 43852
+  },
+  {
+   "title": "Wythien",
+   "betweenness": 43586
+  },
+  {
+   "title": "Master farmer outfit",
+   "betweenness": 43384
+  },
+  {
+   "title": "Crystal chest (Prifddinas)",
+   "betweenness": 42444
+  },
+  {
+   "title": "Azibo",
+   "betweenness": 42174
+  },
+  {
+   "title": "Mages' book",
+   "betweenness": 41984
+  },
+  {
+   "title": "Music playlist",
+   "betweenness": 41776
+  }
+ ]
+}

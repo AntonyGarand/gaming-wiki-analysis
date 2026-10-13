@@ -1,0 +1,544 @@
+{
+ "wiki": "tarkov",
+ "rank": "2",
+ "nodes": 6135,
+ "converge": {
+  "articles": 2516,
+  "pct": 41.01,
+  "deadEnd": 3619,
+  "deadEndPct": 58.99,
+  "noLinks": 1,
+  "tooFewLinks": 238,
+  "unresolvable": 2654
+ },
+ "hopStats": {
+  "mean": 3.51,
+  "median": 3,
+  "p90": 6,
+  "max": 11
+ },
+ "histogram": {
+  "0": 147,
+  "1": 308,
+  "2": 378,
+  "3": 527,
+  "4": 337,
+  "5": 256,
+  "6": 442,
+  "7": 84,
+  "8": 22,
+  "9": 8,
+  "10": 6,
+  "11": 1
+ },
+ "components": 74,
+ "cycleCount": 73,
+ "largestCycle": {
+  "members": [
+   "Transits",
+   "Streets of Tarkov"
+  ],
+  "size": 2,
+  "basin": 964
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Transits",
+    "Streets of Tarkov"
+   ],
+   "basin": 964,
+   "pct": 15.71
+  },
+  {
+   "cycle": [
+    "Shturman",
+    "The Huntsman Path - Woods Keeper"
+   ],
+   "basin": 852,
+   "pct": 13.89
+  },
+  {
+   "cycle": [
+    "Norvinsk region",
+    "Factions",
+    "BEAR"
+   ],
+   "basin": 342,
+   "pct": 5.57
+  },
+  {
+   "cycle": [
+    "Ammunition",
+    "Ballistics"
+   ],
+   "basin": 22,
+   "pct": 0.36
+  },
+  {
+   "cycle": [
+    "Airdrop crate",
+    "ZiD SP-81 26x75 signal pistol"
+   ],
+   "basin": 18,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 12",
+    "PP-19-01 Vityaz 9x19 submachine gun"
+   ],
+   "basin": 14,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 11",
+    "Knight's Armament Company SR-25 7.62x51 marksman rifle"
+   ],
+   "basin": 12,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Boreas",
+    "Paradigm Shipping poster"
+   ],
+   "basin": 12,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Tripwire installation kit",
+    "Partisan"
+   ],
+   "basin": 11,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Grenade box",
+    "UZRGM grenade fuze"
+   ],
+   "basin": 10,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 10",
+    "CMMG Mk47 Mutant 7.62x39 assault rifle"
+   ],
+   "basin": 10,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Killa",
+    "The Huntsman Path - Sellout"
+   ],
+   "basin": 10,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Lobaev Arms DVL-10 7.62x51 bolt-action sniper rifle",
+    "Gunsmith Master - Part 3"
+   ],
+   "basin": 9,
+   "pct": 0.15
+  },
+  {
+   "cycle": [
+    "Tagilla",
+    "The Huntsman Path - Factory Chief"
+   ],
+   "basin": 9,
+   "pct": 0.15
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 5",
+    "Kalashnikov AKMN 7.62x39 assault rifle"
+   ],
+   "basin": 8,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Reshala",
+    "The Huntsman Path - Trophy"
+   ],
+   "basin": 8,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Remington Model 700 7.62x51 bolt-action sniper rifle",
+    "Gunsmith Master - Part 8"
+   ],
+   "basin": 8,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 1",
+    "HK 416A5 5.56x45 assault rifle"
+   ],
+   "basin": 7,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 4",
+    "Kalashnikov AK-102 5.56x45 assault rifle"
+   ],
+   "basin": 7,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Respirator",
+    "Model 8230 CS gas grenade"
+   ],
+   "basin": 7,
+   "pct": 0.11
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Weapons",
+   "chains": 221,
+   "pct": 3.6,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Secure containers",
+   "chains": 179,
+   "pct": 2.92,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Loot",
+   "chains": 119,
+   "pct": 1.94,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Weapon mods",
+   "chains": 29,
+   "pct": 0.47,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Medbag",
+   "chains": 24,
+   "pct": 0.39,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Echo Belli crate",
+   "chains": 22,
+   "pct": 0.36,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Weapon mastery",
+   "chains": 19,
+   "pct": 0.31,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Weapon malfunctions",
+   "chains": 18,
+   "pct": 0.29,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Drawer",
+   "chains": 16,
+   "pct": 0.26,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ref's Drop I",
+   "chains": 12,
+   "pct": 0.2,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Bosses",
+   "chains": 11,
+   "pct": 0.18,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Escape from Tarkov",
+   "chains": 8,
+   "pct": 0.13,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Backpacks",
+   "chains": 8,
+   "pct": 0.13,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Note about the Eye of the World",
+   "chains": 7,
+   "pct": 0.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Weapon box (6x6)",
+   "chains": 5,
+   "pct": 0.08,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Arena BattlePass",
+   "inDegree": 277
+  },
+  {
+   "title": "Found in raid",
+   "inDegree": 182
+  },
+  {
+   "title": "Hideout",
+   "inDegree": 155
+  },
+  {
+   "title": "Weapons",
+   "inDegree": 154
+  },
+  {
+   "title": "USEC",
+   "inDegree": 141
+  },
+  {
+   "title": "Experience",
+   "inDegree": 112
+  },
+  {
+   "title": "Jacket",
+   "inDegree": 104
+  },
+  {
+   "title": "BEAR",
+   "inDegree": 102
+  },
+  {
+   "title": "Scavs",
+   "inDegree": 63
+  },
+  {
+   "title": "The Ticket",
+   "inDegree": 53
+  },
+  {
+   "title": "Ragman",
+   "inDegree": 38
+  },
+  {
+   "title": "Seasons",
+   "inDegree": 38
+  },
+  {
+   "title": "Therapist",
+   "inDegree": 35
+  },
+  {
+   "title": "Skier",
+   "inDegree": 33
+  },
+  {
+   "title": "Buried barrel cache",
+   "inDegree": 31
+  },
+  {
+   "title": "Prapor",
+   "inDegree": 30
+  },
+  {
+   "title": "Mechanic",
+   "inDegree": 30
+  },
+  {
+   "title": "Streets of Tarkov",
+   "inDegree": 27
+  },
+  {
+   "title": "Customs",
+   "inDegree": 25
+  },
+  {
+   "title": "Sports bag",
+   "inDegree": 24
+  },
+  {
+   "title": "MS2000 Marker",
+   "inDegree": 23
+  },
+  {
+   "title": "Prestige",
+   "inDegree": 23
+  },
+  {
+   "title": "Shoreline",
+   "inDegree": 22
+  },
+  {
+   "title": "Secure containers",
+   "inDegree": 22
+  },
+  {
+   "title": "Ref",
+   "inDegree": 21
+  },
+  {
+   "title": "Peacekeeper",
+   "inDegree": 20
+  },
+  {
+   "title": "Lightkeeper",
+   "inDegree": 20
+  },
+  {
+   "title": "Medbag",
+   "inDegree": 20
+  },
+  {
+   "title": "Lighthouse",
+   "inDegree": 19
+  },
+  {
+   "title": "Easter eggs and References",
+   "inDegree": 19
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Arena BattlePass",
+   "betweenness": 1794
+  },
+  {
+   "title": "Prestige",
+   "betweenness": 1700
+  },
+  {
+   "title": "Scavs",
+   "betweenness": 1688
+  },
+  {
+   "title": "Found in raid",
+   "betweenness": 1497
+  },
+  {
+   "title": "Arena",
+   "betweenness": 1420
+  },
+  {
+   "title": "Experience",
+   "betweenness": 1250
+  },
+  {
+   "title": "Tour",
+   "betweenness": 1084
+  },
+  {
+   "title": "Balancing - Part 1",
+   "betweenness": 1068
+  },
+  {
+   "title": "Hideout",
+   "betweenness": 1044
+  },
+  {
+   "title": "Transits",
+   "betweenness": 928
+  },
+  {
+   "title": "Shturman",
+   "betweenness": 850
+  },
+  {
+   "title": "Ground Zero",
+   "betweenness": 849
+  },
+  {
+   "title": "USEC",
+   "betweenness": 812
+  },
+  {
+   "title": "TerraGroup",
+   "betweenness": 612
+  },
+  {
+   "title": "Peacekeeper",
+   "betweenness": 575
+  },
+  {
+   "title": "Norvinsk region",
+   "betweenness": 543
+  },
+  {
+   "title": "Skier",
+   "betweenness": 486
+  },
+  {
+   "title": "Prapor",
+   "betweenness": 440
+  },
+  {
+   "title": "Quests",
+   "betweenness": 399
+  },
+  {
+   "title": "Trading",
+   "betweenness": 296
+  },
+  {
+   "title": "Therapist",
+   "betweenness": 276
+  },
+  {
+   "title": "The Ticket",
+   "betweenness": 275
+  },
+  {
+   "title": "Map of Tarkov",
+   "betweenness": 270
+  },
+  {
+   "title": "BEAR",
+   "betweenness": 264
+  },
+  {
+   "title": "Seasons",
+   "betweenness": 252
+  },
+  {
+   "title": "Ragman",
+   "betweenness": 228
+  },
+  {
+   "title": "Factions",
+   "betweenness": 213
+  },
+  {
+   "title": "Mechanic",
+   "betweenness": 213
+  },
+  {
+   "title": "Ref",
+   "betweenness": 161
+  },
+  {
+   "title": "Customs",
+   "betweenness": 154
+  }
+ ]
+}

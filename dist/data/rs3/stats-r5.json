@@ -1,0 +1,570 @@
+{
+ "wiki": "rs3",
+ "rank": "5",
+ "nodes": 79761,
+ "converge": {
+  "articles": 21651,
+  "pct": 27.14,
+  "deadEnd": 58110,
+  "deadEndPct": 72.86,
+  "noLinks": 2191,
+  "tooFewLinks": 36076,
+  "unresolvable": 44
+ },
+ "hopStats": {
+  "mean": 6.42,
+  "median": 5,
+  "p90": 14,
+  "max": 27
+ },
+ "histogram": {
+  "0": 1413,
+  "1": 3192,
+  "2": 1964,
+  "3": 2035,
+  "4": 1661,
+  "5": 1691,
+  "6": 1146,
+  "7": 928,
+  "8": 765,
+  "9": 637,
+  "10": 747,
+  "11": 737,
+  "12": 1079,
+  "13": 901,
+  "14": 800,
+  "15": 600,
+  "16": 369,
+  "17": 207,
+  "18": 108,
+  "19": 281,
+  "20": 141,
+  "21": 130,
+  "22": 52,
+  "23": 30,
+  "24": 17,
+  "25": 14,
+  "26": 5,
+  "27": 1
+ },
+ "components": 682,
+ "cycleCount": 681,
+ "largestCycle": {
+  "members": [
+   "Melee",
+   "Ranged",
+   "Combat triangle"
+  ],
+  "size": 3,
+  "basin": 4736
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Melee",
+    "Ranged",
+    "Combat triangle"
+   ],
+   "basin": 4736,
+   "pct": 5.94
+  },
+  {
+   "cycle": [
+    "Crystal saw",
+    "Construction",
+    "There's No Place Like Home...",
+    "Player-owned house",
+    "Furniture workbench"
+   ],
+   "basin": 2480,
+   "pct": 3.11
+  },
+  {
+   "cycle": [
+    "Settings"
+   ],
+   "basin": 2085,
+   "pct": 2.61
+  },
+  {
+   "cycle": [
+    "Weapon Special Attack",
+    "Essence of Finality"
+   ],
+   "basin": 1230,
+   "pct": 1.54
+  },
+  {
+   "cycle": [
+    "Stone of Jas",
+    "Jas"
+   ],
+   "basin": 945,
+   "pct": 1.18
+  },
+  {
+   "cycle": [
+    "Metamorphic geode",
+    "Necrite rock"
+   ],
+   "basin": 847,
+   "pct": 1.06
+  },
+  {
+   "cycle": [
+    "Guardsman Dante",
+    "Guardsman DeShawn",
+    "Guardsman Peale"
+   ],
+   "basin": 698,
+   "pct": 0.88
+  },
+  {
+   "cycle": [
+    "Teleport Block",
+    "Deflect Magic"
+   ],
+   "basin": 551,
+   "pct": 0.69
+  },
+  {
+   "cycle": [
+    "Resonance",
+    "Divert"
+   ],
+   "basin": 420,
+   "pct": 0.53
+  },
+  {
+   "cycle": [
+    "Magic",
+    "Stagger"
+   ],
+   "basin": 416,
+   "pct": 0.52
+  },
+  {
+   "cycle": [
+    "Ali the Trader",
+    "Ali Morrisane"
+   ],
+   "basin": 383,
+   "pct": 0.48
+  },
+  {
+   "cycle": [
+    "Fire",
+    "Range",
+    "Seaweed"
+   ],
+   "basin": 374,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Relic powers",
+    "Archaeology cape",
+    "Acting Guildmaster Reiniger",
+    "Archaeology"
+   ],
+   "basin": 312,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Inventor's workbench",
+    "Invention Guild"
+   ],
+   "basin": 248,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Hunter",
+    "Grenwall spikes",
+    "Raw pawya meat"
+   ],
+   "basin": 232,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Special moves",
+    "Dreadfowl scroll (Dreadfowl Strike)"
+   ],
+   "basin": 231,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Miscellania",
+    "Fremennik name"
+   ],
+   "basin": 210,
+   "pct": 0.26
+  },
+  {
+   "cycle": [
+    "Toy horsey (grey)",
+    "Toy horsey (black)"
+   ],
+   "basin": 195,
+   "pct": 0.24
+  },
+  {
+   "cycle": [
+    "The Shadow Reef",
+    "Grouping System"
+   ],
+   "basin": 174,
+   "pct": 0.22
+  },
+  {
+   "cycle": [
+    "Treasure Trails",
+    "Clue scroll (medium)",
+    "Ranger boots",
+    "Mahogany treasure chest"
+   ],
+   "basin": 173,
+   "pct": 0.22
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Clue scroll (hard) - Snah? I feel all confused, like one of those cakes",
+   "chains": 6052,
+   "pct": 7.59,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Support updates",
+   "chains": 1653,
+   "pct": 2.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lore achievements",
+   "chains": 1447,
+   "pct": 1.81,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Sink (furniture)",
+   "chains": 627,
+   "pct": 0.79,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Yanille lodestone",
+   "chains": 378,
+   "pct": 0.47,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Witch's experiment",
+   "chains": 309,
+   "pct": 0.39,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Sclerite Cape",
+   "chains": 247,
+   "pct": 0.31,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "2001 Halloween event",
+   "chains": 244,
+   "pct": 0.31,
+   "reason": "only 6 eligible links"
+  },
+  {
+   "title": "Slayer Rewards",
+   "chains": 188,
+   "pct": 0.24,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Boon of lustrous energy",
+   "chains": 183,
+   "pct": 0.23,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Portal (player-owned port)",
+   "chains": 140,
+   "pct": 0.18,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Praefectus Praetorio",
+   "chains": 123,
+   "pct": 0.15,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Everlight invitation",
+   "chains": 100,
+   "pct": 0.13,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Clue scroll (master) - WINSOME LAD",
+   "chains": 88,
+   "pct": 0.11,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Mystic staff",
+   "chains": 87,
+   "pct": 0.11,
+   "reason": "only 3 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Makeover Mage",
+   "inDegree": 550
+  },
+  {
+   "title": "Anvil",
+   "inDegree": 460
+  },
+  {
+   "title": "Player-owned house",
+   "inDegree": 427
+  },
+  {
+   "title": "Experience",
+   "inDegree": 406
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 406
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 193
+  },
+  {
+   "title": "Defence",
+   "inDegree": 182
+  },
+  {
+   "title": "Spirit shards",
+   "inDegree": 163
+  },
+  {
+   "title": "Construction",
+   "inDegree": 160
+  },
+  {
+   "title": "Special moves",
+   "inDegree": 159
+  },
+  {
+   "title": "Members",
+   "inDegree": 154
+  },
+  {
+   "title": "Magic",
+   "inDegree": 151
+  },
+  {
+   "title": "Yak coin",
+   "inDegree": 148
+  },
+  {
+   "title": "Grand Exchange",
+   "inDegree": 143
+  },
+  {
+   "title": "Life points",
+   "inDegree": 130
+  },
+  {
+   "title": "Coins",
+   "inDegree": 127
+  },
+  {
+   "title": "Invention",
+   "inDegree": 125
+  },
+  {
+   "title": "Cooking",
+   "inDegree": 124
+  },
+  {
+   "title": "Wilderness",
+   "inDegree": 124
+  },
+  {
+   "title": "Treasure Hunter",
+   "inDegree": 124
+  },
+  {
+   "title": "Farming",
+   "inDegree": 120
+  },
+  {
+   "title": "Quests",
+   "inDegree": 118
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 117
+  },
+  {
+   "title": "Costume room",
+   "inDegree": 117
+  },
+  {
+   "title": "Prayer",
+   "inDegree": 114
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 106
+  },
+  {
+   "title": "Slayer Masters",
+   "inDegree": 104
+  },
+  {
+   "title": "Equipment level",
+   "inDegree": 102
+  },
+  {
+   "title": "Weapon Special Attack",
+   "inDegree": 100
+  },
+  {
+   "title": "Equipment degradation",
+   "inDegree": 98
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Free-to-play",
+   "betweenness": 33300
+  },
+  {
+   "title": "Yak Track",
+   "betweenness": 30420
+  },
+  {
+   "title": "Activity Tracker",
+   "betweenness": 27048
+  },
+  {
+   "title": "Skills",
+   "betweenness": 26754
+  },
+  {
+   "title": "Action bar",
+   "betweenness": 23586
+  },
+  {
+   "title": "Grand Exchange",
+   "betweenness": 22385
+  },
+  {
+   "title": "Quests",
+   "betweenness": 21600
+  },
+  {
+   "title": "Emotes",
+   "betweenness": 19760
+  },
+  {
+   "title": "Minimap",
+   "betweenness": 17649
+  },
+  {
+   "title": "Mahjarrat",
+   "betweenness": 14157
+  },
+  {
+   "title": "Gielinor",
+   "betweenness": 14105
+  },
+  {
+   "title": "Icthlarin",
+   "betweenness": 13566
+  },
+  {
+   "title": "Mah",
+   "betweenness": 13116
+  },
+  {
+   "title": "Experience",
+   "betweenness": 13090
+  },
+  {
+   "title": "Icthlarin's Little Helper",
+   "betweenness": 12735
+  },
+  {
+   "title": "Home Teleport",
+   "betweenness": 12636
+  },
+  {
+   "title": "Sophanem",
+   "betweenness": 12624
+  },
+  {
+   "title": "Burthorpe",
+   "betweenness": 12591
+  },
+  {
+   "title": "Kharidian Desert",
+   "betweenness": 12393
+  },
+  {
+   "title": "Challenge System",
+   "betweenness": 12340
+  },
+  {
+   "title": "The Blade",
+   "betweenness": 12102
+  },
+  {
+   "title": "Non-player character",
+   "betweenness": 12096
+  },
+  {
+   "title": "Muspah",
+   "betweenness": 12034
+  },
+  {
+   "title": "Animations",
+   "betweenness": 11682
+  },
+  {
+   "title": "Logs",
+   "betweenness": 11655
+  },
+  {
+   "title": "Backpack",
+   "betweenness": 11608
+  },
+  {
+   "title": "King Vallance",
+   "betweenness": 11200
+  },
+  {
+   "title": "Jungle Tree",
+   "betweenness": 11120
+  },
+  {
+   "title": "Energy",
+   "betweenness": 11000
+  },
+  {
+   "title": "Bladed muspah",
+   "betweenness": 10990
+  }
+ ]
+}

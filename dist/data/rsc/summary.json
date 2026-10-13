@@ -1,0 +1,126 @@
+{
+ "wiki": "rsc",
+ "generatedAt": "2026-10-12T16:59:49.519Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 84.21,
+   "deadEndPct": 15.79,
+   "components": 35,
+   "cycleCount": 34,
+   "meanHops": 4.61,
+   "medianHops": 5,
+   "maxHops": 13,
+   "topAttractor": [
+    "Andrew Gower",
+    "Jagex"
+   ],
+   "topAttractorPct": 44.47
+  },
+  {
+   "rank": "2",
+   "convergePct": 73.05,
+   "deadEndPct": 26.95,
+   "components": 63,
+   "cycleCount": 62,
+   "meanHops": 5.97,
+   "medianHops": 6,
+   "maxHops": 19,
+   "topAttractor": [
+    "Plate Mail Bodies",
+    "Chain Mail Bodies"
+   ],
+   "topAttractorPct": 34.01
+  },
+  {
+   "rank": "3",
+   "convergePct": 46.06,
+   "deadEndPct": 53.94,
+   "components": 91,
+   "cycleCount": 90,
+   "meanHops": 4.52,
+   "medianHops": 3,
+   "maxHops": 14,
+   "topAttractor": [
+    "Scorpion catcher",
+    "Seer"
+   ],
+   "topAttractorPct": 13.21
+  },
+  {
+   "rank": "5",
+   "convergePct": 21.54,
+   "deadEndPct": 78.46,
+   "components": 63,
+   "cycleCount": 62,
+   "meanHops": 5.73,
+   "medianHops": 4,
+   "maxHops": 20,
+   "topAttractor": [
+    "Bunny ears",
+    "Thessalia"
+   ],
+   "topAttractorPct": 9.7
+  },
+  {
+   "rank": "last",
+   "convergePct": 85.5,
+   "deadEndPct": 14.5,
+   "components": 145,
+   "cycleCount": 144,
+   "meanHops": 8.5,
+   "medianHops": 5,
+   "maxHops": 37,
+   "topAttractor": [
+    "Melee training",
+    "Bestiary",
+    "King Black Dragon",
+    "Defense"
+   ],
+   "topAttractorPct": 29.16
+  },
+  {
+   "rank": "random",
+   "convergePct": 88.27,
+   "deadEndPct": 11.73,
+   "components": 88,
+   "cycleCount": 87,
+   "meanHops": 5.2,
+   "medianHops": 4,
+   "maxHops": 22,
+   "topAttractor": [
+    "Ranged",
+    "Poison (effect)",
+    "Glitch",
+    "Rune Plate Mail top",
+    "Plate Mail Tops",
+    "Thrander",
+    "Anvil",
+    "Scenery",
+    "Wall scenery",
+    "Items",
+    "Examine",
+    "Options",
+    "Sound effects",
+    "Strange looking wall",
+    "Ned",
+    "Crandor",
+    "Port Sarim",
+    "The Rusty Anchor",
+    "Pirate's treasure",
+    "Magic",
+    "Mage Arena",
+    "Web",
+    "Machette",
+    "Legend's Quest",
+    "Tai Bwo Wannai",
+    "Fishing spot",
+    "RuneScape Classic",
+    "Combat",
+    "Hits",
+    "Combat level"
+   ],
+   "topAttractorPct": 39.16
+  }
+ ]
+}

@@ -1,0 +1,395 @@
+{
+ "wiki": "subnautica",
+ "rank": "strict1",
+ "nodes": 710,
+ "converge": {
+  "articles": 528,
+  "pct": 74.37,
+  "deadEnd": 182,
+  "deadEndPct": 25.63,
+  "noLinks": 4,
+  "tooFewLinks": 0,
+  "unresolvable": 3
+ },
+ "hopStats": {
+  "mean": 2.41,
+  "median": 2,
+  "p90": 3,
+  "max": 7
+ },
+ "histogram": {
+  "0": 16,
+  "1": 86,
+  "2": 199,
+  "3": 176,
+  "4": 20,
+  "5": 5,
+  "6": 25,
+  "7": 1
+ },
+ "components": 9,
+ "cycleCount": 8,
+ "largestCycle": {
+  "members": [
+   "Planet 4546B",
+   "Architects"
+  ],
+  "size": 2,
+  "basin": 287
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Planet 4546B",
+    "Architects"
+   ],
+   "basin": 287,
+   "pct": 40.42
+  },
+  {
+   "cycle": [
+    "Raw Materials",
+    "Titanium"
+   ],
+   "basin": 125,
+   "pct": 17.61
+  },
+  {
+   "cycle": [
+    "Ryley Robinson",
+    "Lifepod 5"
+   ],
+   "basin": 70,
+   "pct": 9.86
+  },
+  {
+   "cycle": [
+    "Console Commands",
+    "Achievements"
+   ],
+   "basin": 23,
+   "pct": 3.24
+  },
+  {
+   "cycle": [
+    "Leviathans",
+    "Reaper Leviathan"
+   ],
+   "basin": 16,
+   "pct": 2.25
+  },
+  {
+   "cycle": [
+    "Sunbeam",
+    "Avery Quinn"
+   ],
+   "basin": 3,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Floater",
+    "Ancient Floater"
+   ],
+   "basin": 2,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Locker",
+    "Wall Locker"
+   ],
+   "basin": 2,
+   "pct": 0.28
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Alterra Corporation",
+   "chains": 176,
+   "pct": 24.79,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Key Bindings",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Steam Badges",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mongolian Independent States",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "redlink target"
+  },
+  {
+   "title": "The Crater/Map",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lani Minella (Voice Actor)",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Red Tablet",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Seabases",
+   "inDegree": 58
+  },
+  {
+   "title": "Flora",
+   "inDegree": 53
+  },
+  {
+   "title": "Fauna",
+   "inDegree": 41
+  },
+  {
+   "title": "Food & Water",
+   "inDegree": 33
+  },
+  {
+   "title": "Raw Materials",
+   "inDegree": 28
+  },
+  {
+   "title": "Biomes",
+   "inDegree": 25
+  },
+  {
+   "title": "Wrecks",
+   "inDegree": 25
+  },
+  {
+   "title": "Resources",
+   "inDegree": 24
+  },
+  {
+   "title": "Achievements",
+   "inDegree": 18
+  },
+  {
+   "title": "Equipment",
+   "inDegree": 17
+  },
+  {
+   "title": "Upgrade Modules",
+   "inDegree": 17
+  },
+  {
+   "title": "Tools",
+   "inDegree": 13
+  },
+  {
+   "title": "Architects",
+   "inDegree": 12
+  },
+  {
+   "title": "Primary Containment Facility",
+   "inDegree": 12
+  },
+  {
+   "title": "Placeable Items",
+   "inDegree": 11
+  },
+  {
+   "title": "Aurora",
+   "inDegree": 11
+  },
+  {
+   "title": "Destroyed Lifepods",
+   "inDegree": 9
+  },
+  {
+   "title": "Planet 4546B",
+   "inDegree": 9
+  },
+  {
+   "title": "Ryley Robinson",
+   "inDegree": 9
+  },
+  {
+   "title": "Leviathans",
+   "inDegree": 9
+  },
+  {
+   "title": "Cyclops",
+   "inDegree": 9
+  },
+  {
+   "title": "Habitat Builder",
+   "inDegree": 8
+  },
+  {
+   "title": "Coral",
+   "inDegree": 8
+  },
+  {
+   "title": "Prawn Suit",
+   "inDegree": 7
+  },
+  {
+   "title": "Architect Bases",
+   "inDegree": 7
+  },
+  {
+   "title": "Alien Arch Caches",
+   "inDegree": 7
+  },
+  {
+   "title": "Deployables",
+   "inDegree": 6
+  },
+  {
+   "title": "Quarantine Enforcement Platform",
+   "inDegree": 6
+  },
+  {
+   "title": "Disease Research Facility",
+   "inDegree": 6
+  },
+  {
+   "title": "Fabricator",
+   "inDegree": 5
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Seabases",
+   "betweenness": 264
+  },
+  {
+   "title": "Cyclops",
+   "betweenness": 234
+  },
+  {
+   "title": "Planet 4546B",
+   "betweenness": 225
+  },
+  {
+   "title": "Mobile Vehicle Bay",
+   "betweenness": 200
+  },
+  {
+   "title": "Flora",
+   "betweenness": 184
+  },
+  {
+   "title": "Deployables",
+   "betweenness": 184
+  },
+  {
+   "title": "Resources",
+   "betweenness": 180
+  },
+  {
+   "title": "Fabricator",
+   "betweenness": 156
+  },
+  {
+   "title": "Wrecks",
+   "betweenness": 156
+  },
+  {
+   "title": "Habitat Builder",
+   "betweenness": 140
+  },
+  {
+   "title": "Fragments",
+   "betweenness": 135
+  },
+  {
+   "title": "Upgrade Modules",
+   "betweenness": 133
+  },
+  {
+   "title": "Tools",
+   "betweenness": 126
+  },
+  {
+   "title": "Raw Materials",
+   "betweenness": 123
+  },
+  {
+   "title": "Biomes",
+   "betweenness": 112
+  },
+  {
+   "title": "Scanner",
+   "betweenness": 112
+  },
+  {
+   "title": "Fauna",
+   "betweenness": 110
+  },
+  {
+   "title": "Food & Water",
+   "betweenness": 99
+  },
+  {
+   "title": "Game Modes",
+   "betweenness": 70
+  },
+  {
+   "title": "Ryley Robinson",
+   "betweenness": 66
+  },
+  {
+   "title": "Equipment",
+   "betweenness": 60
+  },
+  {
+   "title": "Architects",
+   "betweenness": 60
+  },
+  {
+   "title": "Architect Bases",
+   "betweenness": 58
+  },
+  {
+   "title": "Prawn Suit",
+   "betweenness": 49
+  },
+  {
+   "title": "Lost River",
+   "betweenness": 39
+  },
+  {
+   "title": "Primary Containment Facility",
+   "betweenness": 39
+  },
+  {
+   "title": "Placeable Items",
+   "betweenness": 36
+  },
+  {
+   "title": "Seamoth",
+   "betweenness": 28
+  },
+  {
+   "title": "Coral",
+   "betweenness": 24
+  },
+  {
+   "title": "Aurora",
+   "betweenness": 24
+  }
+ ]
+}

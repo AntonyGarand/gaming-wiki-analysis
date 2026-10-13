@@ -1,0 +1,498 @@
+{
+ "wiki": "valheim",
+ "rank": "5",
+ "nodes": 1284,
+ "converge": {
+  "articles": 256,
+  "pct": 19.94,
+  "deadEnd": 1028,
+  "deadEndPct": 80.06,
+  "noLinks": 10,
+  "tooFewLinks": 308,
+  "unresolvable": 164
+ },
+ "hopStats": {
+  "mean": 4.39,
+  "median": 3,
+  "p90": 11,
+  "max": 15
+ },
+ "histogram": {
+  "0": 27,
+  "1": 66,
+  "2": 27,
+  "3": 27,
+  "4": 9,
+  "5": 6,
+  "6": 12,
+  "7": 13,
+  "8": 17,
+  "9": 12,
+  "10": 11,
+  "11": 18,
+  "12": 5,
+  "13": 3,
+  "14": 2,
+  "15": 1
+ },
+ "components": 15,
+ "cycleCount": 14,
+ "largestCycle": {
+  "members": [
+   "Dvergr Mage",
+   "Dvergr Rogue"
+  ],
+  "size": 2,
+  "basin": 83
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Dvergr Mage",
+    "Dvergr Rogue"
+   ],
+   "basin": 83,
+   "pct": 6.46
+  },
+  {
+   "cycle": [
+    "Runestone",
+    "Swamp Runestone Tower",
+    "Bonemass"
+   ],
+   "basin": 70,
+   "pct": 5.45
+  },
+  {
+   "cycle": [
+    "Damage"
+   ],
+   "basin": 62,
+   "pct": 4.83
+  },
+  {
+   "cycle": [
+    "Ask Set",
+    "Embla Set"
+   ],
+   "basin": 9,
+   "pct": 0.7
+  },
+  {
+   "cycle": [
+    "Eitr",
+    "Eitr-weave Set"
+   ],
+   "basin": 8,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Staff of the Wild",
+    "Immobilized"
+   ],
+   "basin": 6,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Standing Green-burning Iron Torch",
+    "Standing Blue-burning Iron Torch"
+   ],
+   "basin": 4,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Lox",
+    "Taming",
+    "Moose"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Oven Pancake",
+    "Fish Soup"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Leather Armor",
+    "Bronze Armor"
+   ],
+   "basin": 2,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Pine",
+    "Corewood"
+   ],
+   "basin": 2,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Soft Tissue",
+    "Giant Remains"
+   ],
+   "basin": 2,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Nord Knucklechains"
+   ],
+   "basin": 1,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Nord Shield"
+   ],
+   "basin": 1,
+   "pct": 0.08
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Beech Seeds",
+   "chains": 125,
+   "pct": 9.74,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Workbench",
+   "chains": 93,
+   "pct": 7.24,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Gjall",
+   "chains": 40,
+   "pct": 3.12,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Shields",
+   "chains": 31,
+   "pct": 2.41,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Sealbreaker",
+   "chains": 25,
+   "pct": 1.95,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Greydwarf",
+   "chains": 24,
+   "pct": 1.87,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ashwood",
+   "chains": 23,
+   "pct": 1.79,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Food Preparation Table",
+   "chains": 22,
+   "pct": 1.71,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Chain lightning",
+   "chains": 21,
+   "pct": 1.64,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Raspberries",
+   "chains": 14,
+   "pct": 1.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "No skill drain",
+   "chains": 12,
+   "pct": 0.93,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Bat",
+   "chains": 11,
+   "pct": 0.86,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Swords",
+   "chains": 8,
+   "pct": 0.62,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Geirrhafa",
+   "chains": 7,
+   "pct": 0.55,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ulv",
+   "chains": 7,
+   "pct": 0.55,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Damage",
+   "inDegree": 39
+  },
+  {
+   "title": "Cultivator",
+   "inDegree": 29
+  },
+  {
+   "title": "Environment",
+   "inDegree": 24
+  },
+  {
+   "title": "Coal",
+   "inDegree": 20
+  },
+  {
+   "title": "Chain lightning",
+   "inDegree": 20
+  },
+  {
+   "title": "Forge of Potential",
+   "inDegree": 18
+  },
+  {
+   "title": "Bait",
+   "inDegree": 12
+  },
+  {
+   "title": "Winding Tunnels",
+   "inDegree": 11
+  },
+  {
+   "title": "Mistlands",
+   "inDegree": 10
+  },
+  {
+   "title": "Loot chest",
+   "inDegree": 9
+  },
+  {
+   "title": "Swamp",
+   "inDegree": 8
+  },
+  {
+   "title": "Mountain",
+   "inDegree": 8
+  },
+  {
+   "title": "Skills",
+   "inDegree": 8
+  },
+  {
+   "title": "Biomes",
+   "inDegree": 7
+  },
+  {
+   "title": "Hammer",
+   "inDegree": 7
+  },
+  {
+   "title": "Meadows",
+   "inDegree": 7
+  },
+  {
+   "title": "Runestone",
+   "inDegree": 7
+  },
+  {
+   "title": "Deep North",
+   "inDegree": 7
+  },
+  {
+   "title": "Hildir's Chests",
+   "inDegree": 7
+  },
+  {
+   "title": "Black Marble Battle Idol",
+   "inDegree": 7
+  },
+  {
+   "title": "Black Forest",
+   "inDegree": 6
+  },
+  {
+   "title": "Draugr",
+   "inDegree": 6
+  },
+  {
+   "title": "Campfire",
+   "inDegree": 6
+  },
+  {
+   "title": "Damage mechanics",
+   "inDegree": 6
+  },
+  {
+   "title": "Blocking",
+   "inDegree": 6
+  },
+  {
+   "title": "Flametal Battle Idol",
+   "inDegree": 6
+  },
+  {
+   "title": "Ashlands",
+   "inDegree": 5
+  },
+  {
+   "title": "Viking Graveyard",
+   "inDegree": 5
+  },
+  {
+   "title": "Fir",
+   "inDegree": 5
+  },
+  {
+   "title": "Stamina",
+   "inDegree": 5
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Loot chest",
+   "betweenness": 792
+  },
+  {
+   "title": "Haldor",
+   "betweenness": 760
+  },
+  {
+   "title": "Valheim (world)",
+   "betweenness": 693
+  },
+  {
+   "title": "Biomes",
+   "betweenness": 688
+  },
+  {
+   "title": "Viking Graveyard",
+   "betweenness": 636
+  },
+  {
+   "title": "Birch",
+   "betweenness": 609
+  },
+  {
+   "title": "Wooden Battle Idol",
+   "betweenness": 572
+  },
+  {
+   "title": "Finewood",
+   "betweenness": 528
+  },
+  {
+   "title": "Bronze Axe",
+   "betweenness": 445
+  },
+  {
+   "title": "Fir",
+   "betweenness": 440
+  },
+  {
+   "title": "Cultivator",
+   "betweenness": 406
+  },
+  {
+   "title": "Wood",
+   "betweenness": 357
+  },
+  {
+   "title": "Hildir's Chests",
+   "betweenness": 348
+  },
+  {
+   "title": "Charcoal Kiln",
+   "betweenness": 330
+  },
+  {
+   "title": "Mountain",
+   "betweenness": 330
+  },
+  {
+   "title": "Drake",
+   "betweenness": 315
+  },
+  {
+   "title": "Brenna",
+   "betweenness": 295
+  },
+  {
+   "title": "Dragon Egg",
+   "betweenness": 288
+  },
+  {
+   "title": "Surtling Core",
+   "betweenness": 280
+  },
+  {
+   "title": "Portal Stone",
+   "betweenness": 280
+  },
+  {
+   "title": "Health",
+   "betweenness": 252
+  },
+  {
+   "title": "Coal",
+   "betweenness": 245
+  },
+  {
+   "title": "Tools",
+   "betweenness": 240
+  },
+  {
+   "title": "Krom",
+   "betweenness": 240
+  },
+  {
+   "title": "Cold",
+   "betweenness": 232
+  },
+  {
+   "title": "Dvergr Lantern",
+   "betweenness": 228
+  },
+  {
+   "title": "Food",
+   "betweenness": 222
+  },
+  {
+   "title": "Black Marble Battle Idol",
+   "betweenness": 207
+  },
+  {
+   "title": "Stagger",
+   "betweenness": 190
+  },
+  {
+   "title": "Forsaken power",
+   "betweenness": 180
+  }
+ ]
+}

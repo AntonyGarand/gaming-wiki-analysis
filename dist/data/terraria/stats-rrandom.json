@@ -1,0 +1,604 @@
+{
+ "wiki": "terraria",
+ "rank": "random",
+ "nodes": 5213,
+ "converge": {
+  "articles": 3737,
+  "pct": 71.69,
+  "deadEnd": 1476,
+  "deadEndPct": 28.31,
+  "noLinks": 505,
+  "tooFewLinks": 0,
+  "unresolvable": 538
+ },
+ "hopStats": {
+  "mean": 14.59,
+  "median": 12,
+  "p90": 37,
+  "max": 44
+ },
+ "histogram": {
+  "0": 99,
+  "1": 296,
+  "2": 251,
+  "3": 247,
+  "4": 145,
+  "5": 146,
+  "6": 132,
+  "7": 174,
+  "8": 124,
+  "9": 84,
+  "10": 71,
+  "11": 49,
+  "12": 229,
+  "13": 226,
+  "14": 130,
+  "15": 132,
+  "16": 94,
+  "17": 60,
+  "18": 55,
+  "19": 26,
+  "20": 16,
+  "21": 18,
+  "22": 21,
+  "23": 12,
+  "24": 17,
+  "25": 30,
+  "26": 25,
+  "27": 23,
+  "28": 34,
+  "29": 5,
+  "30": 19,
+  "31": 11,
+  "32": 60,
+  "33": 47,
+  "34": 37,
+  "35": 26,
+  "36": 70,
+  "37": 160,
+  "38": 121,
+  "39": 83,
+  "40": 57,
+  "41": 43,
+  "42": 25,
+  "43": 5,
+  "44": 2
+ },
+ "components": 45,
+ "cycleCount": 44,
+ "largestCycle": {
+  "members": [
+   "Cavern",
+   "Goblin Tinkerer",
+   "Dye Trader",
+   "Party",
+   "NPCs",
+   "Biomes",
+   "Living Wood Chest",
+   "Minecarts",
+   "Minecart Track",
+   "Buffs",
+   "Pets",
+   "Pressure Plates",
+   "Mechanisms",
+   "Wire"
+  ],
+  "size": 14,
+  "basin": 3311
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Cavern",
+    "Goblin Tinkerer",
+    "Dye Trader",
+    "Party",
+    "NPCs",
+    "Biomes",
+    "Living Wood Chest",
+    "Minecarts",
+    "Minecart Track",
+    "Buffs",
+    "Pets",
+    "Pressure Plates",
+    "Mechanisms",
+    "Wire"
+   ],
+   "basin": 3311,
+   "pct": 63.51
+  },
+  {
+   "cycle": [
+    "Yoyos",
+    "Terrarian",
+    "Critical hit",
+    "Stealth",
+    "Damage",
+    "Use time",
+    "Melee weapons"
+   ],
+   "basin": 122,
+   "pct": 2.34
+  },
+  {
+   "cycle": [
+    "Mounts",
+    "Slasher's Mysterious Skull"
+   ],
+   "basin": 91,
+   "pct": 1.75
+  },
+  {
+   "cycle": [
+    "Food",
+    "Plate"
+   ],
+   "basin": 27,
+   "pct": 0.52
+  },
+  {
+   "cycle": [
+    "Informational Accessories",
+    "GPS"
+   ],
+   "basin": 26,
+   "pct": 0.5
+  },
+  {
+   "cycle": [
+    "Paints",
+    "Paintbrush"
+   ],
+   "basin": 23,
+   "pct": 0.44
+  },
+  {
+   "cycle": [
+    "Moon Lord",
+    "True Eye of Cthulhu"
+   ],
+   "basin": 15,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Adamantite Drill",
+    "Drills"
+   ],
+   "basin": 14,
+   "pct": 0.27
+  },
+  {
+   "cycle": [
+    "Pomegranate",
+    "Spicy Pepper"
+   ],
+   "basin": 9,
+   "pct": 0.17
+  },
+  {
+   "cycle": [
+    "Counterweights",
+    "Strung Counterweight"
+   ],
+   "basin": 7,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Movement Accessories"
+   ],
+   "basin": 6,
+   "pct": 0.12
+  },
+  {
+   "cycle": [
+    "Demon Eye",
+    "Black Lens"
+   ],
+   "basin": 5,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Copper Pickaxe/no",
+    "Pickaxes/no"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Hunger",
+    "The Constant"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Crimtane Ore/vi",
+    "Demonite Ore/vi"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Beds",
+    "Spawn"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Martian Conduit Wall",
+    "Luminite Brick Wall"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Tungsten Shortsword",
+    "Tungsten Broadsword"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Blue Starry Block",
+    "Gold Starry Block"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Tuxedo set",
+    "The Groom"
+   ],
+   "basin": 3,
+   "pct": 0.06
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "1.3.0.8",
+   "chains": 100,
+   "pct": 1.92,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bunny",
+   "chains": 60,
+   "pct": 1.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Console version history",
+   "chains": 22,
+   "pct": 0.42,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Game mechanics",
+   "chains": 14,
+   "pct": 0.27,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bars/vi",
+   "chains": 12,
+   "pct": 0.23,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Seasonal events",
+   "chains": 12,
+   "pct": 0.23,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hardmode/id",
+   "chains": 10,
+   "pct": 0.19,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Day and night cycle/cs",
+   "chains": 9,
+   "pct": 0.17,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Enemies/cs",
+   "chains": 8,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Shadow Scale",
+   "chains": 7,
+   "pct": 0.13,
+   "reason": "redlink target"
+  },
+  {
+   "title": "House/nl",
+   "chains": 6,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "House/tr",
+   "chains": 5,
+   "pct": 0.1,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Hammers/nl",
+   "chains": 5,
+   "pct": 0.1,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Dungeon/cs",
+   "chains": 5,
+   "pct": 0.1,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hardmode/nl",
+   "chains": 5,
+   "pct": 0.1,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Hardmode",
+   "inDegree": 168
+  },
+  {
+   "title": "Pre-Hardmode",
+   "inDegree": 95
+  },
+  {
+   "title": "Background walls",
+   "inDegree": 79
+  },
+  {
+   "title": "Blocks",
+   "inDegree": 64
+  },
+  {
+   "title": "Enemies",
+   "inDegree": 60
+  },
+  {
+   "title": "Vanity items",
+   "inDegree": 52
+  },
+  {
+   "title": "Buffs",
+   "inDegree": 39
+  },
+  {
+   "title": "Furniture",
+   "inDegree": 37
+  },
+  {
+   "title": "Re-Logic",
+   "inDegree": 31
+  },
+  {
+   "title": "Accessories",
+   "inDegree": 30
+  },
+  {
+   "title": "Secret world seeds",
+   "inDegree": 30
+  },
+  {
+   "title": "Plantera",
+   "inDegree": 29
+  },
+  {
+   "title": "NPCs",
+   "inDegree": 23
+  },
+  {
+   "title": "Dyes",
+   "inDegree": 22
+  },
+  {
+   "title": "Food",
+   "inDegree": 22
+  },
+  {
+   "title": "Pets",
+   "inDegree": 22
+  },
+  {
+   "title": "Layers",
+   "inDegree": 22
+  },
+  {
+   "title": "Lava",
+   "inDegree": 21
+  },
+  {
+   "title": "The Crimson",
+   "inDegree": 21
+  },
+  {
+   "title": "Fishing",
+   "inDegree": 21
+  },
+  {
+   "title": "Modifiers",
+   "inDegree": 21
+  },
+  {
+   "title": "Events",
+   "inDegree": 21
+  },
+  {
+   "title": "Bosses",
+   "inDegree": 20
+  },
+  {
+   "title": "1.2",
+   "inDegree": 19
+  },
+  {
+   "title": "The Corruption",
+   "inDegree": 19
+  },
+  {
+   "title": "Armor",
+   "inDegree": 19
+  },
+  {
+   "title": "Critters",
+   "inDegree": 19
+  },
+  {
+   "title": "Debuffs",
+   "inDegree": 19
+  },
+  {
+   "title": "Shimmer",
+   "inDegree": 19
+  },
+  {
+   "title": "Paints",
+   "inDegree": 18
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Hardmode",
+   "betweenness": 38040
+  },
+  {
+   "title": "Coins",
+   "betweenness": 37800
+  },
+  {
+   "title": "Goblin Tinkerer",
+   "betweenness": 36733
+  },
+  {
+   "title": "Cavern",
+   "betweenness": 36558
+  },
+  {
+   "title": "Hellstone",
+   "betweenness": 36547
+  },
+  {
+   "title": "Pot",
+   "betweenness": 35546
+  },
+  {
+   "title": "Block Swap",
+   "betweenness": 34980
+  },
+  {
+   "title": "Dye Trader",
+   "betweenness": 33534
+  },
+  {
+   "title": "Altars",
+   "betweenness": 33474
+  },
+  {
+   "title": "Enemies",
+   "betweenness": 32384
+  },
+  {
+   "title": "Pre-Hardmode",
+   "betweenness": 32250
+  },
+  {
+   "title": "Plantera",
+   "betweenness": 32000
+  },
+  {
+   "title": "Ebonstone Block",
+   "betweenness": 31940
+  },
+  {
+   "title": "Frost Moon",
+   "betweenness": 31820
+  },
+  {
+   "title": "Bosses",
+   "betweenness": 31709
+  },
+  {
+   "title": "Solar Eclipse",
+   "betweenness": 31551
+  },
+  {
+   "title": "The Corruption",
+   "betweenness": 31274
+  },
+  {
+   "title": "Pirate Invasion",
+   "betweenness": 31198
+  },
+  {
+   "title": "Banners (enemy)",
+   "betweenness": 31178
+  },
+  {
+   "title": "Golden Shower",
+   "betweenness": 31122
+  },
+  {
+   "title": "Statues",
+   "betweenness": 31086
+  },
+  {
+   "title": "Bestiary",
+   "betweenness": 31068
+  },
+  {
+   "title": "World",
+   "betweenness": 30821
+  },
+  {
+   "title": "Magnet Sphere",
+   "betweenness": 30422
+  },
+  {
+   "title": "Party",
+   "betweenness": 30391
+  },
+  {
+   "title": "Multiplayer",
+   "betweenness": 30272
+  },
+  {
+   "title": "Salamander",
+   "betweenness": 30240
+  },
+  {
+   "title": "World size",
+   "betweenness": 30240
+  },
+  {
+   "title": "Difficulty",
+   "betweenness": 29926
+  },
+  {
+   "title": "Items",
+   "betweenness": 29772
+  }
+ ]
+}

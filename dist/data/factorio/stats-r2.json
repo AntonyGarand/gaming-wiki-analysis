@@ -1,0 +1,556 @@
+{
+ "wiki": "factorio",
+ "rank": "2",
+ "nodes": 5353,
+ "converge": {
+  "articles": 1834,
+  "pct": 34.26,
+  "deadEnd": 3519,
+  "deadEndPct": 65.74,
+  "noLinks": 1589,
+  "tooFewLinks": 494,
+  "unresolvable": 340
+ },
+ "hopStats": {
+  "mean": 3.68,
+  "median": 2,
+  "p90": 8,
+  "max": 23
+ },
+ "histogram": {
+  "0": 245,
+  "1": 385,
+  "2": 299,
+  "3": 229,
+  "4": 211,
+  "5": 105,
+  "6": 82,
+  "7": 61,
+  "8": 43,
+  "9": 19,
+  "10": 17,
+  "11": 20,
+  "12": 16,
+  "13": 19,
+  "14": 16,
+  "15": 7,
+  "16": 6,
+  "17": 9,
+  "18": 16,
+  "19": 13,
+  "20": 6,
+  "21": 5,
+  "22": 3,
+  "23": 2
+ },
+ "components": 125,
+ "cycleCount": 124,
+ "largestCycle": {
+  "members": [
+   "Lab",
+   "Technologies"
+  ],
+  "size": 2,
+  "basin": 400
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Lab",
+    "Technologies"
+   ],
+   "basin": 400,
+   "pct": 7.47
+  },
+  {
+   "cycle": [
+    "Console",
+    "Rich text"
+   ],
+   "basin": 281,
+   "pct": 5.25
+  },
+  {
+   "cycle": [
+    "Lab/ja",
+    "Technologies/ja"
+   ],
+   "basin": 122,
+   "pct": 2.28
+  },
+  {
+   "cycle": [
+    "Logistic robot",
+    "Construction robot"
+   ],
+   "basin": 96,
+   "pct": 1.79
+  },
+  {
+   "cycle": [
+    "Cannon shell/uk",
+    "Explosive cannon shell/uk"
+   ],
+   "basin": 66,
+   "pct": 1.23
+  },
+  {
+   "cycle": [
+    "Lab/uk",
+    "Technologies/uk"
+   ],
+   "basin": 60,
+   "pct": 1.12
+  },
+  {
+   "cycle": [
+    "Tank/ja",
+    "Cannon shell/ja"
+   ],
+   "basin": 51,
+   "pct": 0.95
+  },
+  {
+   "cycle": [
+    "Rail",
+    "Locomotive"
+   ],
+   "basin": 44,
+   "pct": 0.82
+  },
+  {
+   "cycle": [
+    "Logistic robot/uk",
+    "Construction robot/uk"
+   ],
+   "basin": 39,
+   "pct": 0.73
+  },
+  {
+   "cycle": [
+    "Electric system/ru",
+    "Lamp/ru"
+   ],
+   "basin": 36,
+   "pct": 0.67
+  },
+  {
+   "cycle": [
+    "Construction robot/ru",
+    "Repair pack/ru"
+   ],
+   "basin": 33,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Steam/uk",
+    "Boiler/uk"
+   ],
+   "basin": 30,
+   "pct": 0.56
+  },
+  {
+   "cycle": [
+    "Railway/ja",
+    "Belt transport system/ja"
+   ],
+   "basin": 30,
+   "pct": 0.56
+  },
+  {
+   "cycle": [
+    "Research/ja",
+    "Science pack/ja"
+   ],
+   "basin": 28,
+   "pct": 0.52
+  },
+  {
+   "cycle": [
+    "Speed module",
+    "Speed module 3"
+   ],
+   "basin": 27,
+   "pct": 0.5
+  },
+  {
+   "cycle": [
+    "Logistic robot/ja",
+    "Construction robot/ja"
+   ],
+   "basin": 25,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Logistic robot/pl",
+    "Construction robot/pl"
+   ],
+   "basin": 24,
+   "pct": 0.45
+  },
+  {
+   "cycle": [
+    "Equipment modules",
+    "Power armor"
+   ],
+   "basin": 20,
+   "pct": 0.37
+  },
+  {
+   "cycle": [
+    "Crafting/ja",
+    "Time/ja",
+    "Assembling machine 1/ja"
+   ],
+   "basin": 18,
+   "pct": 0.34
+  },
+  {
+   "cycle": [
+    "Oil refinery/uk",
+    "Heavy oil/uk"
+   ],
+   "basin": 14,
+   "pct": 0.26
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Damage/ru",
+   "chains": 115,
+   "pct": 2.15,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Research/ru",
+   "chains": 107,
+   "pct": 2,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Console/ja",
+   "chains": 73,
+   "pct": 1.36,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Player/uk",
+   "chains": 41,
+   "pct": 0.77,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Version history/2.0.0",
+   "chains": 35,
+   "pct": 0.65,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Concrete/ru",
+   "chains": 30,
+   "pct": 0.56,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Logistic network/fr",
+   "chains": 26,
+   "pct": 0.49,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "News/2023",
+   "chains": 23,
+   "pct": 0.43,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Time/zh",
+   "chains": 23,
+   "pct": 0.43,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Log file",
+   "chains": 20,
+   "pct": 0.37,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Version history/1.1.0",
+   "chains": 20,
+   "pct": 0.37,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Inserters/fr",
+   "chains": 19,
+   "pct": 0.35,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Data.raw",
+   "chains": 15,
+   "pct": 0.28,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Damage/zh",
+   "chains": 14,
+   "pct": 0.26,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Crafting/es",
+   "chains": 13,
+   "pct": 0.24,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Technologies/ja",
+   "inDegree": 60
+  },
+  {
+   "title": "Technologies/ru",
+   "inDegree": 51
+  },
+  {
+   "title": "Research",
+   "inDegree": 44
+  },
+  {
+   "title": "Technologies",
+   "inDegree": 33
+  },
+  {
+   "title": "Time",
+   "inDegree": 32
+  },
+  {
+   "title": "Research/ru",
+   "inDegree": 29
+  },
+  {
+   "title": "Automation science pack",
+   "inDegree": 27
+  },
+  {
+   "title": "Research/ja",
+   "inDegree": 23
+  },
+  {
+   "title": "Gleba",
+   "inDegree": 23
+  },
+  {
+   "title": "News",
+   "inDegree": 21
+  },
+  {
+   "title": "Enemies/de",
+   "inDegree": 17
+  },
+  {
+   "title": "Research/uk",
+   "inDegree": 16
+  },
+  {
+   "title": "Research/de",
+   "inDegree": 15
+  },
+  {
+   "title": "Enemies",
+   "inDegree": 14
+  },
+  {
+   "title": "Enemies/zh",
+   "inDegree": 14
+  },
+  {
+   "title": "Spidertron/ru",
+   "inDegree": 12
+  },
+  {
+   "title": "Technologies/uk",
+   "inDegree": 12
+  },
+  {
+   "title": "Lab",
+   "inDegree": 11
+  },
+  {
+   "title": "Fulgora",
+   "inDegree": 11
+  },
+  {
+   "title": "Circuit network",
+   "inDegree": 10
+  },
+  {
+   "title": "Logistic robot",
+   "inDegree": 10
+  },
+  {
+   "title": "Construction robot",
+   "inDegree": 10
+  },
+  {
+   "title": "Application directory",
+   "inDegree": 10
+  },
+  {
+   "title": "Logistic robot/ja",
+   "inDegree": 10
+  },
+  {
+   "title": "Spidertron/uk",
+   "inDegree": 10
+  },
+  {
+   "title": "Enemies/uk",
+   "inDegree": 10
+  },
+  {
+   "title": "Space platform",
+   "inDegree": 10
+  },
+  {
+   "title": "Map structure/zh",
+   "inDegree": 10
+  },
+  {
+   "title": "Iron plate",
+   "inDegree": 9
+  },
+  {
+   "title": "Enemies/ru",
+   "inDegree": 9
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Inserters",
+   "betweenness": 1133
+  },
+  {
+   "title": "Offshore pump",
+   "betweenness": 1066
+  },
+  {
+   "title": "Inserter capacity bonus (research)",
+   "betweenness": 1050
+  },
+  {
+   "title": "Water",
+   "betweenness": 1050
+  },
+  {
+   "title": "Fluid system",
+   "betweenness": 1020
+  },
+  {
+   "title": "Car",
+   "betweenness": 976
+  },
+  {
+   "title": "Stack",
+   "betweenness": 954
+  },
+  {
+   "title": "Tank",
+   "betweenness": 945
+  },
+  {
+   "title": "Boiler",
+   "betweenness": 870
+  },
+  {
+   "title": "Steam",
+   "betweenness": 848
+  },
+  {
+   "title": "Flamethrower",
+   "betweenness": 816
+  },
+  {
+   "title": "Enemies",
+   "betweenness": 774
+  },
+  {
+   "title": "Flamethrower ammo",
+   "betweenness": 685
+  },
+  {
+   "title": "Flamethrower turret",
+   "betweenness": 564
+  },
+  {
+   "title": "Player",
+   "betweenness": 538
+  },
+  {
+   "title": "Steam engine",
+   "betweenness": 408
+  },
+  {
+   "title": "Steam engine/pl",
+   "betweenness": 357
+  },
+  {
+   "title": "Time",
+   "betweenness": 309
+  },
+  {
+   "title": "Fuel/ru",
+   "betweenness": 304
+  },
+  {
+   "title": "Electric system/pl",
+   "betweenness": 288
+  },
+  {
+   "title": "Oil processing/ru",
+   "betweenness": 280
+  },
+  {
+   "title": "Tank/ru",
+   "betweenness": 279
+  },
+  {
+   "title": "Console",
+   "betweenness": 278
+  },
+  {
+   "title": "Nintendo Switch version",
+   "betweenness": 270
+  },
+  {
+   "title": "Oil refinery/ru",
+   "betweenness": 264
+  },
+  {
+   "title": "Quick panel",
+   "betweenness": 261
+  },
+  {
+   "title": "Power production",
+   "betweenness": 252
+  },
+  {
+   "title": "Quickbar",
+   "betweenness": 240
+  },
+  {
+   "title": "Assembling machine 1",
+   "betweenness": 232
+  },
+  {
+   "title": "Heavy oil/ru",
+   "betweenness": 230
+  }
+ ]
+}

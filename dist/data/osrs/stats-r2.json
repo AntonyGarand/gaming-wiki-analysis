@@ -1,0 +1,554 @@
+{
+ "wiki": "osrs",
+ "rank": "2",
+ "nodes": 36164,
+ "converge": {
+  "articles": 33571,
+  "pct": 92.83,
+  "deadEnd": 2593,
+  "deadEndPct": 7.17,
+  "noLinks": 542,
+  "tooFewLinks": 1305,
+  "unresolvable": 42
+ },
+ "hopStats": {
+  "mean": 4.45,
+  "median": 4,
+  "p90": 9,
+  "max": 20
+ },
+ "histogram": {
+  "0": 915,
+  "1": 3465,
+  "2": 5883,
+  "3": 5721,
+  "4": 4464,
+  "5": 3550,
+  "6": 2424,
+  "7": 1638,
+  "8": 1146,
+  "9": 1317,
+  "10": 1238,
+  "11": 772,
+  "12": 525,
+  "13": 288,
+  "14": 71,
+  "15": 95,
+  "16": 43,
+  "17": 6,
+  "18": 5,
+  "19": 4,
+  "20": 1
+ },
+ "components": 449,
+ "cycleCount": 448,
+ "largestCycle": {
+  "members": [
+   "Gielinor",
+   "Zanaris"
+  ],
+  "size": 2,
+  "basin": 6148
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Gielinor",
+    "Zanaris"
+   ],
+   "basin": 6148,
+   "pct": 17
+  },
+  {
+   "cycle": [
+    "Quests"
+   ],
+   "basin": 3612,
+   "pct": 9.99
+  },
+  {
+   "cycle": [
+    "Body type",
+    "Makeover Mage"
+   ],
+   "basin": 3593,
+   "pct": 9.94
+  },
+  {
+   "cycle": [
+    "Skills",
+    "Skill training guides",
+    "Ironman Mode",
+    "HiScores"
+   ],
+   "basin": 3403,
+   "pct": 9.41
+  },
+  {
+   "cycle": [
+    "Second Age",
+    "Zaros"
+   ],
+   "basin": 3025,
+   "pct": 8.36
+  },
+  {
+   "cycle": [
+    "World map",
+    "Icon"
+   ],
+   "basin": 1805,
+   "pct": 4.99
+  },
+  {
+   "cycle": [
+    "Items",
+    "Bank"
+   ],
+   "basin": 1135,
+   "pct": 3.14
+  },
+  {
+   "cycle": [
+    "Kandarin",
+    "King Lathas"
+   ],
+   "basin": 1013,
+   "pct": 2.8
+  },
+  {
+   "cycle": [
+    "Ranged weapons",
+    "Bow"
+   ],
+   "basin": 775,
+   "pct": 2.14
+  },
+  {
+   "cycle": [
+    "Treasure Trails",
+    "Clue scroll",
+    "Treasure Trails/Full guide/All"
+   ],
+   "basin": 721,
+   "pct": 1.99
+  },
+  {
+   "cycle": [
+    "Fremennik",
+    "Fremennik Province"
+   ],
+   "basin": 538,
+   "pct": 1.49
+  },
+  {
+   "cycle": [
+    "Elf",
+    "Seren"
+   ],
+   "basin": 527,
+   "pct": 1.46
+  },
+  {
+   "cycle": [
+    "Paul Gower",
+    "Ian Gower"
+   ],
+   "basin": 500,
+   "pct": 1.38
+  },
+  {
+   "cycle": [
+    "Mining"
+   ],
+   "basin": 479,
+   "pct": 1.32
+  },
+  {
+   "cycle": [
+    "Turael",
+    "Spria"
+   ],
+   "basin": 429,
+   "pct": 1.19
+  },
+  {
+   "cycle": [
+    "Duke Horacio",
+    "Lumbridge Castle"
+   ],
+   "basin": 374,
+   "pct": 1.03
+  },
+  {
+   "cycle": [
+    "Forgotten Ocean",
+    "Sunset Ocean"
+   ],
+   "basin": 236,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Player-owned house",
+    "Estate agent"
+   ],
+   "basin": 235,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Mount Quidamortem",
+    "Chambers of Xeric"
+   ],
+   "basin": 189,
+   "pct": 0.52
+  },
+  {
+   "cycle": [
+    "Boat",
+    "Mooring point",
+    "Gangplank (Sailing)"
+   ],
+   "basin": 179,
+   "pct": 0.49
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Neck slot table",
+   "chains": 158,
+   "pct": 0.44,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Halloween event",
+   "chains": 152,
+   "pct": 0.42,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Ammunition slot table",
+   "chains": 53,
+   "pct": 0.15,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Christmas event",
+   "chains": 45,
+   "pct": 0.12,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Head slot table",
+   "chains": 35,
+   "pct": 0.1,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Shield slot table",
+   "chains": 24,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Body slot table",
+   "chains": 22,
+   "pct": 0.06,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Legs slot table",
+   "chains": 22,
+   "pct": 0.06,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Easter event",
+   "chains": 18,
+   "pct": 0.05,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Hands slot table",
+   "chains": 15,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mixing vessel",
+   "chains": 14,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Feet slot table",
+   "chains": 12,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Gloves",
+   "chains": 11,
+   "pct": 0.03,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Hunter creatures",
+   "chains": 11,
+   "pct": 0.03,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Ulina",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "only 1 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Construction",
+   "inDegree": 516
+  },
+  {
+   "title": "Quests",
+   "inDegree": 311
+  },
+  {
+   "title": "Treasure Trails",
+   "inDegree": 299
+  },
+  {
+   "title": "Clue scroll (easy)",
+   "inDegree": 262
+  },
+  {
+   "title": "Clue scroll (medium)",
+   "inDegree": 239
+  },
+  {
+   "title": "Clue scroll (hard)",
+   "inDegree": 218
+  },
+  {
+   "title": "Minigames",
+   "inDegree": 215
+  },
+  {
+   "title": "Hitpoints",
+   "inDegree": 197
+  },
+  {
+   "title": "Magic",
+   "inDegree": 194
+  },
+  {
+   "title": "Defence",
+   "inDegree": 169
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 168
+  },
+  {
+   "title": "Thieving",
+   "inDegree": 161
+  },
+  {
+   "title": "Shortcuts",
+   "inDegree": 152
+  },
+  {
+   "title": "Clue scroll (elite)",
+   "inDegree": 149
+  },
+  {
+   "title": "Attack",
+   "inDegree": 144
+  },
+  {
+   "title": "Player-owned house",
+   "inDegree": 142
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 142
+  },
+  {
+   "title": "Gielinor",
+   "inDegree": 135
+  },
+  {
+   "title": "Slayer",
+   "inDegree": 135
+  },
+  {
+   "title": "Courier tasks",
+   "inDegree": 134
+  },
+  {
+   "title": "Item set",
+   "inDegree": 132
+  },
+  {
+   "title": "Prifddinas",
+   "inDegree": 129
+  },
+  {
+   "title": "Examine",
+   "inDegree": 122
+  },
+  {
+   "title": "Farming",
+   "inDegree": 121
+  },
+  {
+   "title": "Wilderness",
+   "inDegree": 108
+  },
+  {
+   "title": "Fossil Island",
+   "inDegree": 108
+  },
+  {
+   "title": "Mining",
+   "inDegree": 104
+  },
+  {
+   "title": "Clue scroll (master)",
+   "inDegree": 104
+  },
+  {
+   "title": "Desert Treasure II - The Fallen Empire",
+   "inDegree": 104
+  },
+  {
+   "title": "Leagues Reward Shop",
+   "inDegree": 103
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Asgarnia",
+   "betweenness": 11528
+  },
+  {
+   "title": "Skills",
+   "betweenness": 10150
+  },
+  {
+   "title": "Kingdom",
+   "betweenness": 10122
+  },
+  {
+   "title": "Non-player character",
+   "betweenness": 9456
+  },
+  {
+   "title": "List of races",
+   "betweenness": 8748
+  },
+  {
+   "title": "Zeah",
+   "betweenness": 7908
+  },
+  {
+   "title": "Abyssal guardian",
+   "betweenness": 7295
+  },
+  {
+   "title": "Player character",
+   "betweenness": 7174
+  },
+  {
+   "title": "Monster",
+   "betweenness": 7124
+  },
+  {
+   "title": "Skill training guides",
+   "betweenness": 6783
+  },
+  {
+   "title": "Veos",
+   "betweenness": 6610
+  },
+  {
+   "title": "Gielinor",
+   "betweenness": 6054
+  },
+  {
+   "title": "Falador",
+   "betweenness": 5904
+  },
+  {
+   "title": "Abyssal Area",
+   "betweenness": 5848
+  },
+  {
+   "title": "Port Sarim",
+   "betweenness": 5628
+  },
+  {
+   "title": "Great Kourend",
+   "betweenness": 5558
+  },
+  {
+   "title": "Third Age",
+   "betweenness": 5314
+  },
+  {
+   "title": "Quests/Series",
+   "betweenness": 4896
+  },
+  {
+   "title": "Construction",
+   "betweenness": 4868
+  },
+  {
+   "title": "Karamja",
+   "betweenness": 4590
+  },
+  {
+   "title": "Combat",
+   "betweenness": 4500
+  },
+  {
+   "title": "Entrana",
+   "betweenness": 4434
+  },
+  {
+   "title": "Abyssal Space",
+   "betweenness": 4395
+  },
+  {
+   "title": "Quest List",
+   "betweenness": 4291
+  },
+  {
+   "title": "Gods",
+   "betweenness": 4116
+  },
+  {
+   "title": "Character Summary",
+   "betweenness": 3684
+  },
+  {
+   "title": "Varlamore",
+   "betweenness": 3626
+  },
+  {
+   "title": "Body type",
+   "betweenness": 3588
+  },
+  {
+   "title": "Ironman Mode",
+   "betweenness": 3436
+  },
+  {
+   "title": "Combat level",
+   "betweenness": 3360
+  }
+ ]
+}

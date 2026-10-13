@@ -1,0 +1,556 @@
+{
+ "wiki": "factorio",
+ "rank": "3",
+ "nodes": 5353,
+ "converge": {
+  "articles": 1448,
+  "pct": 27.05,
+  "deadEnd": 3905,
+  "deadEndPct": 72.95,
+  "noLinks": 1589,
+  "tooFewLinks": 975,
+  "unresolvable": 335
+ },
+ "hopStats": {
+  "mean": 2.91,
+  "median": 2,
+  "p90": 6,
+  "max": 18
+ },
+ "histogram": {
+  "0": 205,
+  "1": 311,
+  "2": 279,
+  "3": 175,
+  "4": 158,
+  "5": 120,
+  "6": 72,
+  "7": 37,
+  "8": 34,
+  "9": 18,
+  "10": 15,
+  "11": 10,
+  "12": 3,
+  "13": 3,
+  "14": 3,
+  "15": 2,
+  "16": 1,
+  "17": 1,
+  "18": 1
+ },
+ "components": 97,
+ "cycleCount": 96,
+ "largestCycle": {
+  "members": [
+   "Science pack",
+   "Technologies"
+  ],
+  "size": 2,
+  "basin": 144
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Science pack",
+    "Technologies"
+   ],
+   "basin": 144,
+   "pct": 2.69
+  },
+  {
+   "cycle": [
+    "Nauvis",
+    "Gleba"
+   ],
+   "basin": 122,
+   "pct": 2.28
+  },
+  {
+   "cycle": [
+    "Space platform",
+    "Asteroids"
+   ],
+   "basin": 118,
+   "pct": 2.2
+  },
+  {
+   "cycle": [
+    "Spidertron remote",
+    "Spidertron (research)"
+   ],
+   "basin": 96,
+   "pct": 1.79
+  },
+  {
+   "cycle": [
+    "Enemies/ja",
+    "Pollution/ja"
+   ],
+   "basin": 74,
+   "pct": 1.38
+  },
+  {
+   "cycle": [
+    "Research/ja",
+    "Lab/ja"
+   ],
+   "basin": 61,
+   "pct": 1.14
+  },
+  {
+   "cycle": [
+    "Module",
+    "Beacon"
+   ],
+   "basin": 58,
+   "pct": 1.08
+  },
+  {
+   "cycle": [
+    "Coal",
+    "Rock"
+   ],
+   "basin": 57,
+   "pct": 1.06
+  },
+  {
+   "cycle": [
+    "Enemies/uk",
+    "Pollution/uk"
+   ],
+   "basin": 44,
+   "pct": 0.82
+  },
+  {
+   "cycle": [
+    "Plastic bar/uk",
+    "Advanced circuit/uk"
+   ],
+   "basin": 43,
+   "pct": 0.8
+  },
+  {
+   "cycle": [
+    "Boiler/ja",
+    "Fuel/ja",
+    "Oil processing/ja",
+    "Crude oil/ja",
+    "Oil refinery/ja"
+   ],
+   "basin": 41,
+   "pct": 0.77
+  },
+  {
+   "cycle": [
+    "Storage chest/ru",
+    "Active provider chest/ru",
+    "Passive provider chest/ru"
+   ],
+   "basin": 39,
+   "pct": 0.73
+  },
+  {
+   "cycle": [
+    "Steam",
+    "Heat exchanger",
+    "Steam turbine",
+    "Nuclear reactor"
+   ],
+   "basin": 35,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Cannon shell/uk",
+    "Uranium cannon shell/uk"
+   ],
+   "basin": 28,
+   "pct": 0.52
+  },
+  {
+   "cycle": [
+    "Logistic network/ja",
+    "Belt transport system/ja"
+   ],
+   "basin": 22,
+   "pct": 0.41
+  },
+  {
+   "cycle": [
+    "Pollution/fr"
+   ],
+   "basin": 20,
+   "pct": 0.37
+  },
+  {
+   "cycle": [
+    "Enemies/de",
+    "Map generator/de"
+   ],
+   "basin": 20,
+   "pct": 0.37
+  },
+  {
+   "cycle": [
+    "Circuit network",
+    "Arithmetic combinator"
+   ],
+   "basin": 19,
+   "pct": 0.35
+  },
+  {
+   "cycle": [
+    "Circuit network/ja",
+    "Arithmetic combinator/ja",
+    "Decider combinator/ja"
+   ],
+   "basin": 19,
+   "pct": 0.35
+  },
+  {
+   "cycle": [
+    "Cannon shell",
+    "Uranium cannon shell"
+   ],
+   "basin": 18,
+   "pct": 0.34
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Spidertron remote/ja",
+   "chains": 68,
+   "pct": 1.27,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Physical projectile damage (research)/ru",
+   "chains": 56,
+   "pct": 1.05,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Spidertron remote/uk",
+   "chains": 50,
+   "pct": 0.93,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Research/ru",
+   "chains": 41,
+   "pct": 0.77,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Electric engine unit/pl",
+   "chains": 28,
+   "pct": 0.52,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "News/2023",
+   "chains": 22,
+   "pct": 0.41,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Landfill/ru",
+   "chains": 22,
+   "pct": 0.41,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Automation science pack/zh",
+   "chains": 21,
+   "pct": 0.39,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Version history/1.1.0",
+   "chains": 20,
+   "pct": 0.37,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Automation science pack/de",
+   "chains": 20,
+   "pct": 0.37,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Stone furnace/fr",
+   "chains": 18,
+   "pct": 0.34,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Piercing rounds magazine/ru",
+   "chains": 18,
+   "pct": 0.34,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Advanced asteroid processing (research)",
+   "chains": 16,
+   "pct": 0.3,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Fuel/nl",
+   "chains": 13,
+   "pct": 0.24,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Steel plate",
+   "chains": 12,
+   "pct": 0.22,
+   "reason": "only 2 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Research",
+   "inDegree": 39
+  },
+  {
+   "title": "Technologies",
+   "inDegree": 36
+  },
+  {
+   "title": "Technologies/ja",
+   "inDegree": 28
+  },
+  {
+   "title": "Technologies/ru",
+   "inDegree": 27
+  },
+  {
+   "title": "Logistic science pack",
+   "inDegree": 26
+  },
+  {
+   "title": "Research/ru",
+   "inDegree": 26
+  },
+  {
+   "title": "Research/ja",
+   "inDegree": 25
+  },
+  {
+   "title": "News/2023",
+   "inDegree": 21
+  },
+  {
+   "title": "Enemies",
+   "inDegree": 16
+  },
+  {
+   "title": "Enemies/de",
+   "inDegree": 15
+  },
+  {
+   "title": "Enemies/uk",
+   "inDegree": 15
+  },
+  {
+   "title": "Modular armor/ja",
+   "inDegree": 14
+  },
+  {
+   "title": "Module",
+   "inDegree": 13
+  },
+  {
+   "title": "Technologies/de",
+   "inDegree": 13
+  },
+  {
+   "title": "Module/ru",
+   "inDegree": 13
+  },
+  {
+   "title": "Enemies/ja",
+   "inDegree": 13
+  },
+  {
+   "title": "Enemies/zh",
+   "inDegree": 12
+  },
+  {
+   "title": "Module/ja",
+   "inDegree": 11
+  },
+  {
+   "title": "Space Age",
+   "inDegree": 11
+  },
+  {
+   "title": "Vulcanus",
+   "inDegree": 11
+  },
+  {
+   "title": "Circuit network",
+   "inDegree": 10
+  },
+  {
+   "title": "Railway",
+   "inDegree": 10
+  },
+  {
+   "title": "Spidertron",
+   "inDegree": 10
+  },
+  {
+   "title": "Molten iron",
+   "inDegree": 10
+  },
+  {
+   "title": "Distractor capsule",
+   "inDegree": 9
+  },
+  {
+   "title": "Petroleum gas",
+   "inDegree": 9
+  },
+  {
+   "title": "Electric system",
+   "inDegree": 9
+  },
+  {
+   "title": "Technologies/uk",
+   "inDegree": 9
+  },
+  {
+   "title": "Aquilo",
+   "inDegree": 9
+  },
+  {
+   "title": "Gleba",
+   "inDegree": 9
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Roboport",
+   "betweenness": 282
+  },
+  {
+   "title": "Player",
+   "betweenness": 272
+  },
+  {
+   "title": "Logistic network",
+   "betweenness": 259
+  },
+  {
+   "title": "Storage chest",
+   "betweenness": 250
+  },
+  {
+   "title": "Car",
+   "betweenness": 210
+  },
+  {
+   "title": "Research",
+   "betweenness": 200
+  },
+  {
+   "title": "Spidertron",
+   "betweenness": 186
+  },
+  {
+   "title": "Module/ja",
+   "betweenness": 180
+  },
+  {
+   "title": "Beacon/ja",
+   "betweenness": 176
+  },
+  {
+   "title": "Module/uk",
+   "betweenness": 165
+  },
+  {
+   "title": "Power switch/ja",
+   "betweenness": 161
+  },
+  {
+   "title": "Beacon/uk",
+   "betweenness": 160
+  },
+  {
+   "title": "Steel furnace/uk",
+   "betweenness": 156
+  },
+  {
+   "title": "Space Age",
+   "betweenness": 156
+  },
+  {
+   "title": "Power switch/uk",
+   "betweenness": 153
+  },
+  {
+   "title": "Copper cable/ja",
+   "betweenness": 144
+  },
+  {
+   "title": "Copper cable/uk",
+   "betweenness": 144
+  },
+  {
+   "title": "Fuel/uk",
+   "betweenness": 135
+  },
+  {
+   "title": "Power production/uk",
+   "betweenness": 133
+  },
+  {
+   "title": "Logistic science pack",
+   "betweenness": 129
+  },
+  {
+   "title": "Power production/ja",
+   "betweenness": 125
+  },
+  {
+   "title": "Water",
+   "betweenness": 123
+  },
+  {
+   "title": "Ghost",
+   "betweenness": 120
+  },
+  {
+   "title": "Boiler/uk",
+   "betweenness": 120
+  },
+  {
+   "title": "Inserters",
+   "betweenness": 117
+  },
+  {
+   "title": "Oil processing/uk",
+   "betweenness": 116
+  },
+  {
+   "title": "Boiler/ja",
+   "betweenness": 115
+  },
+  {
+   "title": "Enemies",
+   "betweenness": 114
+  },
+  {
+   "title": "Map structure",
+   "betweenness": 114
+  },
+  {
+   "title": "Player/ja",
+   "betweenness": 114
+  }
+ ]
+}

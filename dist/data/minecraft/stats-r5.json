@@ -1,0 +1,566 @@
+{
+ "wiki": "minecraft",
+ "rank": "5",
+ "nodes": 14078,
+ "converge": {
+  "articles": 4070,
+  "pct": 28.91,
+  "deadEnd": 10008,
+  "deadEndPct": 71.09,
+  "noLinks": 3970,
+  "tooFewLinks": 3800,
+  "unresolvable": 1216
+ },
+ "hopStats": {
+  "mean": 12.36,
+  "median": 12,
+  "p90": 23,
+  "max": 33
+ },
+ "histogram": {
+  "0": 76,
+  "1": 188,
+  "2": 160,
+  "3": 112,
+  "4": 90,
+  "5": 114,
+  "6": 158,
+  "7": 133,
+  "8": 215,
+  "9": 206,
+  "10": 209,
+  "11": 309,
+  "12": 240,
+  "13": 221,
+  "14": 234,
+  "15": 192,
+  "16": 191,
+  "17": 170,
+  "18": 117,
+  "19": 66,
+  "20": 35,
+  "21": 75,
+  "22": 115,
+  "23": 97,
+  "24": 76,
+  "25": 49,
+  "26": 46,
+  "27": 35,
+  "28": 43,
+  "29": 40,
+  "30": 31,
+  "31": 18,
+  "32": 5,
+  "33": 4
+ },
+ "components": 42,
+ "cycleCount": 41,
+ "largestCycle": {
+  "members": [
+   "Item",
+   "Inventory"
+  ],
+  "size": 2,
+  "basin": 3295
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Item",
+    "Inventory"
+   ],
+   "basin": 3295,
+   "pct": 23.41
+  },
+  {
+   "cycle": [
+    "Golden Armor",
+    "Golden Helmet"
+   ],
+   "basin": 255,
+   "pct": 1.81
+  },
+  {
+   "cycle": [
+    "Water",
+    "Water Bucket"
+   ],
+   "basin": 180,
+   "pct": 1.28
+  },
+  {
+   "cycle": [
+    "Achievement",
+    "Emote"
+   ],
+   "basin": 78,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "Wither",
+    "Wither Skeleton Skull",
+    "Boss"
+   ],
+   "basin": 31,
+   "pct": 0.22
+  },
+  {
+   "cycle": [
+    "Brewing",
+    "Water Bottle"
+   ],
+   "basin": 20,
+   "pct": 0.14
+  },
+  {
+   "cycle": [
+    "CommuniKate",
+    "Command Block (Mini-Series)"
+   ],
+   "basin": 20,
+   "pct": 0.14
+  },
+  {
+   "cycle": [
+    "Experiments",
+    "Minecart Improvements"
+   ],
+   "basin": 18,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Java Edition mob render history/Husk",
+    "Java Edition mob render history/Giant"
+   ],
+   "basin": 18,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Chicken",
+    "Egg"
+   ],
+   "basin": 14,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Ice Spikes",
+    "Frozen River"
+   ],
+   "basin": 14,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Flower",
+    "Bee"
+   ],
+   "basin": 11,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Poisonous Potato Dimension",
+    "Ruined Portatol"
+   ],
+   "basin": 11,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Java Edition mob render history/Ravager",
+    "Java Edition mob render history/Vex"
+   ],
+   "basin": 9,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Shimmering Door",
+    "Shimmering Key"
+   ],
+   "basin": 9,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Activator Rail",
+    "Minecart with Hopper"
+   ],
+   "basin": 8,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Efe",
+    "Sunny"
+   ],
+   "basin": 8,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Deep Cold Ocean",
+    "Deep Frozen Ocean"
+   ],
+   "basin": 7,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Terre de Pomme",
+    "Corrupted Peelgrass Block"
+   ],
+   "basin": 7,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Tropical Fish",
+    "Lush Caves"
+   ],
+   "basin": 6,
+   "pct": 0.04
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Rotation",
+   "chains": 244,
+   "pct": 1.73,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Block tag (Bedrock Edition)",
+   "chains": 170,
+   "pct": 1.21,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Disc Fragment",
+   "chains": 120,
+   "pct": 0.85,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Feature",
+   "chains": 44,
+   "pct": 0.31,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Carl Manneh",
+   "chains": 33,
+   "pct": 0.23,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Cracked Polished Blackstone Bricks",
+   "chains": 30,
+   "pct": 0.21,
+   "reason": "redlink target"
+  },
+  {
+   "title": "TikTok",
+   "chains": 19,
+   "pct": 0.13,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Bedrock Edition 26.52",
+   "chains": 8,
+   "pct": 0.06,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Rendering",
+   "chains": 8,
+   "pct": 0.06,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Ominous Item Spawner",
+   "chains": 8,
+   "pct": 0.06,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Java Edition Classic mc-161648",
+   "chains": 7,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Function tag (Java Edition)",
+   "chains": 7,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Polished Blackstone Bricks",
+   "chains": 7,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Torfi Frans Ólafsson",
+   "chains": 6,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "A Minecraft Movie Hero Pack",
+   "chains": 6,
+   "pct": 0.04,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Player",
+   "inDegree": 52
+  },
+  {
+   "title": "Water",
+   "inDegree": 32
+  },
+  {
+   "title": "Pickaxe",
+   "inDegree": 30
+  },
+  {
+   "title": "Overworld",
+   "inDegree": 29
+  },
+  {
+   "title": "Cracked Polished Blackstone Bricks",
+   "inDegree": 29
+  },
+  {
+   "title": "Piston",
+   "inDegree": 27
+  },
+  {
+   "title": "Block",
+   "inDegree": 26
+  },
+  {
+   "title": "Commands",
+   "inDegree": 26
+  },
+  {
+   "title": "Skeleton",
+   "inDegree": 25
+  },
+  {
+   "title": "Village",
+   "inDegree": 25
+  },
+  {
+   "title": "Villager",
+   "inDegree": 24
+  },
+  {
+   "title": "Spawn Egg",
+   "inDegree": 24
+  },
+  {
+   "title": "Tool",
+   "inDegree": 22
+  },
+  {
+   "title": "Mob",
+   "inDegree": 22
+  },
+  {
+   "title": "Axe",
+   "inDegree": 21
+  },
+  {
+   "title": "Food",
+   "inDegree": 21
+  },
+  {
+   "title": "Biome",
+   "inDegree": 21
+  },
+  {
+   "title": "Diamond",
+   "inDegree": 21
+  },
+  {
+   "title": "Wandering Trader",
+   "inDegree": 20
+  },
+  {
+   "title": "Ancient City",
+   "inDegree": 20
+  },
+  {
+   "title": "Armor",
+   "inDegree": 19
+  },
+  {
+   "title": "The End",
+   "inDegree": 19
+  },
+  {
+   "title": "Silk Touch",
+   "inDegree": 19
+  },
+  {
+   "title": "Lava",
+   "inDegree": 19
+  },
+  {
+   "title": "Raid",
+   "inDegree": 19
+  },
+  {
+   "title": "Creative",
+   "inDegree": 18
+  },
+  {
+   "title": "Chest",
+   "inDegree": 18
+  },
+  {
+   "title": "Shears",
+   "inDegree": 18
+  },
+  {
+   "title": "Java Edition 14w10a",
+   "inDegree": 18
+  },
+  {
+   "title": "Candle",
+   "inDegree": 18
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "The End",
+   "betweenness": 13776
+  },
+  {
+   "title": "Shulker",
+   "betweenness": 12661
+  },
+  {
+   "title": "Chunk",
+   "betweenness": 12259
+  },
+  {
+   "title": "End City",
+   "betweenness": 11630
+  },
+  {
+   "title": "Creative",
+   "betweenness": 11248
+  },
+  {
+   "title": "Enchantment",
+   "betweenness": 10746
+  },
+  {
+   "title": "Village",
+   "betweenness": 10400
+  },
+  {
+   "title": "Flying",
+   "betweenness": 9884
+  },
+  {
+   "title": "Iron Golem",
+   "betweenness": 9870
+  },
+  {
+   "title": "Weapon",
+   "betweenness": 9560
+  },
+  {
+   "title": "Overworld",
+   "betweenness": 9515
+  },
+  {
+   "title": "Village mechanics",
+   "betweenness": 9240
+  },
+  {
+   "title": "Crossbow",
+   "betweenness": 9234
+  },
+  {
+   "title": "Raid",
+   "betweenness": 9129
+  },
+  {
+   "title": "Player",
+   "betweenness": 9030
+  },
+  {
+   "title": "Pillager",
+   "betweenness": 8910
+  },
+  {
+   "title": "Altitude",
+   "betweenness": 8478
+  },
+  {
+   "title": "Elytra",
+   "betweenness": 8280
+  },
+  {
+   "title": "Mechanics",
+   "betweenness": 8136
+  },
+  {
+   "title": "Boat",
+   "betweenness": 8127
+  },
+  {
+   "title": "Nether Portal",
+   "betweenness": 7660
+  },
+  {
+   "title": "Firework Rocket",
+   "betweenness": 7364
+  },
+  {
+   "title": "Dispenser",
+   "betweenness": 6366
+  },
+  {
+   "title": "Breaking",
+   "betweenness": 6364
+  },
+  {
+   "title": "Pickaxe",
+   "betweenness": 6195
+  },
+  {
+   "title": "Obsidian",
+   "betweenness": 5760
+  },
+  {
+   "title": "Fishing",
+   "betweenness": 5016
+  },
+  {
+   "title": "Wooden Pickaxe",
+   "betweenness": 4960
+  },
+  {
+   "title": "Golden Pickaxe",
+   "betweenness": 3729
+  },
+  {
+   "title": "Light",
+   "betweenness": 3598
+  }
+ ]
+}

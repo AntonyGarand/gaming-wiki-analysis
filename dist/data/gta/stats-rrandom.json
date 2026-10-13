@@ -1,0 +1,605 @@
+{
+ "wiki": "gta",
+ "rank": "random",
+ "nodes": 24073,
+ "converge": {
+  "articles": 9381,
+  "pct": 38.97,
+  "deadEnd": 14692,
+  "deadEndPct": 61.03,
+  "noLinks": 878,
+  "tooFewLinks": 0,
+  "unresolvable": 1764
+ },
+ "hopStats": {
+  "mean": 11.56,
+  "median": 5,
+  "p90": 36,
+  "max": 64
+ },
+ "histogram": {
+  "0": 613,
+  "1": 1588,
+  "2": 937,
+  "3": 844,
+  "4": 613,
+  "5": 484,
+  "6": 347,
+  "7": 209,
+  "8": 232,
+  "9": 310,
+  "10": 138,
+  "11": 140,
+  "12": 129,
+  "13": 121,
+  "14": 153,
+  "15": 144,
+  "16": 83,
+  "17": 90,
+  "18": 42,
+  "19": 33,
+  "20": 18,
+  "21": 14,
+  "22": 109,
+  "23": 57,
+  "24": 93,
+  "25": 75,
+  "26": 110,
+  "27": 163,
+  "28": 128,
+  "29": 113,
+  "30": 104,
+  "31": 56,
+  "32": 52,
+  "33": 31,
+  "34": 32,
+  "35": 28,
+  "36": 125,
+  "37": 105,
+  "38": 110,
+  "39": 50,
+  "40": 41,
+  "41": 28,
+  "42": 11,
+  "43": 9,
+  "44": 14,
+  "45": 6,
+  "46": 26,
+  "47": 46,
+  "48": 58,
+  "49": 43,
+  "50": 30,
+  "51": 26,
+  "52": 7,
+  "53": 3,
+  "54": 23,
+  "55": 47,
+  "56": 15,
+  "57": 47,
+  "58": 21,
+  "59": 26,
+  "60": 10,
+  "61": 8,
+  "62": 4,
+  "63": 8,
+  "64": 1
+ },
+ "components": 303,
+ "cycleCount": 302,
+ "largestCycle": {
+  "members": [
+   "Trey Welsh",
+   "Lick Those Loonies!"
+  ],
+  "size": 2,
+  "basin": 2277
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Trey Welsh",
+    "Lick Those Loonies!"
+   ],
+   "basin": 2277,
+   "pct": 9.46
+  },
+  {
+   "cycle": [
+    "Sonny Forelli",
+    "Ocean View Hotel (3D Universe)",
+    "Tommy Vercetti",
+    "Gonzalez",
+    "Forelli Crime Family",
+    "Cap the Collector"
+   ],
+   "basin": 898,
+   "pct": 3.73
+  },
+  {
+   "cycle": [
+    "Los Santos (HD Universe)",
+    "Del Perro City Hall"
+   ],
+   "basin": 861,
+   "pct": 3.58
+  },
+  {
+   "cycle": [
+    "Niko Bellic",
+    "Taking In the Trash",
+    "Diamonds in the Rough"
+   ],
+   "basin": 653,
+   "pct": 2.71
+  },
+  {
+   "cycle": [
+    "Survival",
+    "Forest Survival"
+   ],
+   "basin": 530,
+   "pct": 2.2
+  },
+  {
+   "cycle": [
+    "Trevor Philips",
+    "Booty Call",
+    "Modifications/Hot Coffee",
+    "Entertainment Software Rating Board",
+    "PEGI",
+    "Canada"
+   ],
+   "basin": 394,
+   "pct": 1.64
+  },
+  {
+   "cycle": [
+    "BAWSAQ/Website",
+    "BAWSAQ"
+   ],
+   "basin": 287,
+   "pct": 1.19
+  },
+  {
+   "cycle": [
+    "France",
+    "Bourgeoix"
+   ],
+   "basin": 149,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Weazel News",
+    "Leslie Mitchell"
+   ],
+   "basin": 138,
+   "pct": 0.57
+  },
+  {
+   "cycle": [
+    "Homebrew Café",
+    "Beechwood City"
+   ],
+   "basin": 136,
+   "pct": 0.56
+  },
+  {
+   "cycle": [
+    "Angel Pine",
+    "Angel Pine Sawmill"
+   ],
+   "basin": 100,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Jimmy Matthews",
+    "Ed McCornish"
+   ],
+   "basin": 87,
+   "pct": 0.36
+  },
+  {
+   "cycle": [
+    "San Andreas Federal Mint",
+    "Securicar (3D Universe)"
+   ],
+   "basin": 86,
+   "pct": 0.36
+  },
+  {
+   "cycle": [
+    "Washington Beach Fairground",
+    "Chunder Wheel"
+   ],
+   "basin": 84,
+   "pct": 0.35
+  },
+  {
+   "cycle": [
+    "Head Radio (3D Universe)",
+    "Dil-Don't"
+   ],
+   "basin": 80,
+   "pct": 0.33
+  },
+  {
+   "cycle": [
+    "Yournewbabysname.com",
+    "Lozzyklingers"
+   ],
+   "basin": 72,
+   "pct": 0.3
+  },
+  {
+   "cycle": [
+    "Libertytreeonline.com",
+    "Michael Wayne"
+   ],
+   "basin": 72,
+   "pct": 0.3
+  },
+  {
+   "cycle": [
+    "Crane Bonuses",
+    "Car Crusher Bonuses"
+   ],
+   "basin": 71,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Red Light District",
+    "Dry Cleaning"
+   ],
+   "basin": 65,
+   "pct": 0.27
+  },
+  {
+   "cycle": [
+    "Brocklyn General Hospital",
+    "Brocklyn"
+   ],
+   "basin": 63,
+   "pct": 0.26
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "State of Liberty (HD Universe)",
+   "chains": 1480,
+   "pct": 6.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Panlantic Land Grab",
+   "chains": 1391,
+   "pct": 5.78,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Peep That Shit",
+   "chains": 1241,
+   "pct": 5.16,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Beta Content in GTA Advance/Gameplay Features",
+   "chains": 1142,
+   "pct": 4.74,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Huntington Street",
+   "chains": 830,
+   "pct": 3.45,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Space 103.2",
+   "chains": 811,
+   "pct": 3.37,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Omnitron",
+   "chains": 438,
+   "pct": 1.82,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Coxsack Avenue",
+   "chains": 386,
+   "pct": 1.6,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Hove Beach Station",
+   "chains": 201,
+   "pct": 0.83,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Rockstargames.com/GTALondon",
+   "chains": 187,
+   "pct": 0.78,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Karin",
+   "chains": 171,
+   "pct": 0.71,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Petrovic Mafiya",
+   "chains": 131,
+   "pct": 0.54,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Game Boy Color",
+   "chains": 114,
+   "pct": 0.47,
+   "reason": "redlink target"
+  },
+  {
+   "title": "HJ Silos Galileo Park",
+   "chains": 105,
+   "pct": 0.44,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Blaine County Radio",
+   "chains": 102,
+   "pct": 0.42,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Pedestrians",
+   "inDegree": 1077
+  },
+  {
+   "title": "Pedestrians in GTA IV",
+   "inDegree": 678
+  },
+  {
+   "title": "Los Santos (HD Universe)",
+   "inDegree": 200
+  },
+  {
+   "title": "Algonquin",
+   "inDegree": 169
+  },
+  {
+   "title": "Money",
+   "inDegree": 163
+  },
+  {
+   "title": "Races in GTA Online",
+   "inDegree": 132
+  },
+  {
+   "title": "Weazel News",
+   "inDegree": 126
+  },
+  {
+   "title": "Grand Theft Auto VI/Leaks",
+   "inDegree": 119
+  },
+  {
+   "title": "Liberty Tree (HD Universe)",
+   "inDegree": 117
+  },
+  {
+   "title": "Carl Johnson",
+   "inDegree": 104
+  },
+  {
+   "title": "Los Santos (3D Universe)",
+   "inDegree": 97
+  },
+  {
+   "title": "Portland",
+   "inDegree": 80
+  },
+  {
+   "title": "State of Alderney",
+   "inDegree": 78
+  },
+  {
+   "title": "Franklin Clinton",
+   "inDegree": 76
+  },
+  {
+   "title": "Tricks of the Triad",
+   "inDegree": 71
+  },
+  {
+   "title": "Niko Bellic",
+   "inDegree": 70
+  },
+  {
+   "title": "Trevor Philips",
+   "inDegree": 66
+  },
+  {
+   "title": "Protagonist",
+   "inDegree": 65
+  },
+  {
+   "title": "Grand Theft Auto VI/Trailers",
+   "inDegree": 65
+  },
+  {
+   "title": "Protagonists in GTA (1997 game)",
+   "inDegree": 64
+  },
+  {
+   "title": "Broker",
+   "inDegree": 62
+  },
+  {
+   "title": "Hove Beach",
+   "inDegree": 62
+  },
+  {
+   "title": "San Fierro (3D Universe)",
+   "inDegree": 59
+  },
+  {
+   "title": "Publiclibertyonline.com",
+   "inDegree": 56
+  },
+  {
+   "title": "Vinewood Walk of Fame (HD Universe)",
+   "inDegree": 56
+  },
+  {
+   "title": "United States of America",
+   "inDegree": 50
+  },
+  {
+   "title": "Multiplayer in GTA Vice City Stories",
+   "inDegree": 50
+  },
+  {
+   "title": "Grand Theft Auto VI/Screenshots",
+   "inDegree": 48
+  },
+  {
+   "title": "The Lost MC",
+   "inDegree": 47
+  },
+  {
+   "title": "United Kingdom",
+   "inDegree": 46
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Carl Johnson",
+   "betweenness": 45980
+  },
+  {
+   "title": "Misappropriation",
+   "betweenness": 43932
+  },
+  {
+   "title": "San Fierro (3D Universe)",
+   "betweenness": 42768
+  },
+  {
+   "title": "Las Venturas Bank",
+   "betweenness": 41860
+  },
+  {
+   "title": "Easter Basin",
+   "betweenness": 41446
+  },
+  {
+   "title": "The Dossier Carrier",
+   "betweenness": 39786
+  },
+  {
+   "title": "Community Resources Against Street Hoodlums",
+   "betweenness": 38070
+  },
+  {
+   "title": "Los Santos Riots",
+   "betweenness": 36431
+  },
+  {
+   "title": "Ralph Pendelbury",
+   "betweenness": 34304
+  },
+  {
+   "title": "Jimmy Hernandez",
+   "betweenness": 32175
+  },
+  {
+   "title": "The Informant",
+   "betweenness": 30044
+  },
+  {
+   "title": "Los Santos Police Department (3D Universe)",
+   "betweenness": 28015
+  },
+  {
+   "title": "Los Santos City Hall",
+   "betweenness": 25872
+  },
+  {
+   "title": "Portland",
+   "betweenness": 25848
+  },
+  {
+   "title": "Callahan Bridge",
+   "betweenness": 25480
+  },
+  {
+   "title": "Dodo (3D Universe)",
+   "betweenness": 24990
+  },
+  {
+   "title": "Cropduster",
+   "betweenness": 24288
+  },
+  {
+   "title": "Los Santos Police Headquarters",
+   "betweenness": 23848
+  },
+  {
+   "title": "Foster Valley",
+   "betweenness": 23584
+  },
+  {
+   "title": "San Andreas Sheriff",
+   "betweenness": 23312
+  },
+  {
+   "title": "Are You Going to San Fierro?",
+   "betweenness": 22680
+  },
+  {
+   "title": "Doherty Garage",
+   "betweenness": 22098
+  },
+  {
+   "title": "Downtown San Fierro",
+   "betweenness": 22005
+  },
+  {
+   "title": "Wanted Level in GTA San Andreas",
+   "betweenness": 21960
+  },
+  {
+   "title": "Doherty (3D Universe)",
+   "betweenness": 21588
+  },
+  {
+   "title": "San Fierro Tower",
+   "betweenness": 21216
+  },
+  {
+   "title": "Fort Carson (3D Universe)",
+   "betweenness": 20636
+  },
+  {
+   "title": "The Introduction",
+   "betweenness": 20475
+  },
+  {
+   "title": "Garver Bridge",
+   "betweenness": 20475
+  },
+  {
+   "title": "Cluckin' Bell (3D Universe)",
+   "betweenness": 20339
+  }
+ ]
+}

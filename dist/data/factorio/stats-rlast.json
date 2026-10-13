@@ -1,0 +1,565 @@
+{
+ "wiki": "factorio",
+ "rank": "last",
+ "nodes": 5353,
+ "converge": {
+  "articles": 2255,
+  "pct": 42.13,
+  "deadEnd": 3098,
+  "deadEndPct": 57.87,
+  "noLinks": 1589,
+  "tooFewLinks": 0,
+  "unresolvable": 485
+ },
+ "hopStats": {
+  "mean": 2.97,
+  "median": 2,
+  "p90": 6,
+  "max": 15
+ },
+ "histogram": {
+  "0": 332,
+  "1": 483,
+  "2": 317,
+  "3": 286,
+  "4": 257,
+  "5": 272,
+  "6": 110,
+  "7": 87,
+  "8": 43,
+  "9": 19,
+  "10": 11,
+  "11": 22,
+  "12": 8,
+  "13": 2,
+  "14": 3,
+  "15": 3
+ },
+ "components": 157,
+ "cycleCount": 156,
+ "largestCycle": {
+  "members": [
+   "Space platform",
+   "Oxide asteroid chunk",
+   "Promethium asteroid chunk",
+   "Shattered planet",
+   "Solar system edge"
+  ],
+  "size": 5,
+  "basin": 324
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Space platform",
+    "Oxide asteroid chunk",
+    "Promethium asteroid chunk",
+    "Shattered planet",
+    "Solar system edge"
+   ],
+   "basin": 324,
+   "pct": 6.05
+  },
+  {
+   "cycle": [
+    "Productivity module 3/ja",
+    "Productivity module 2/ja"
+   ],
+   "basin": 233,
+   "pct": 4.35
+  },
+  {
+   "cycle": [
+    "Belt transport system",
+    "Transport belts/Physics"
+   ],
+   "basin": 192,
+   "pct": 3.59
+  },
+  {
+   "cycle": [
+    "Speed module 3/ru",
+    "Speed module 2/ru"
+   ],
+   "basin": 153,
+   "pct": 2.86
+  },
+  {
+   "cycle": [
+    "Pollution",
+    "Enemies"
+   ],
+   "basin": 100,
+   "pct": 1.87
+  },
+  {
+   "cycle": [
+    "Science pack/uk",
+    "Research/uk"
+   ],
+   "basin": 58,
+   "pct": 1.08
+  },
+  {
+   "cycle": [
+    "Pipe to ground",
+    "Pipe",
+    "Fluid system",
+    "Power production"
+   ],
+   "basin": 51,
+   "pct": 0.95
+  },
+  {
+   "cycle": [
+    "Red wire",
+    "Green wire"
+   ],
+   "basin": 45,
+   "pct": 0.84
+  },
+  {
+   "cycle": [
+    "Module/ru",
+    "Beacon/ru"
+   ],
+   "basin": 44,
+   "pct": 0.82
+  },
+  {
+   "cycle": [
+    "Ghost/uk",
+    "Construction robotics (research)/uk"
+   ],
+   "basin": 41,
+   "pct": 0.77
+  },
+  {
+   "cycle": [
+    "Enemies/de",
+    "Pollution/de"
+   ],
+   "basin": 39,
+   "pct": 0.73
+  },
+  {
+   "cycle": [
+    "Pentapod egg",
+    "Biter egg"
+   ],
+   "basin": 38,
+   "pct": 0.71
+  },
+  {
+   "cycle": [
+    "Oil processing",
+    "Barrel",
+    "Crude oil"
+   ],
+   "basin": 37,
+   "pct": 0.69
+  },
+  {
+   "cycle": [
+    "Circuit network",
+    "Roboport",
+    "Repair pack",
+    "Logistic network"
+   ],
+   "basin": 34,
+   "pct": 0.64
+  },
+  {
+   "cycle": [
+    "Crafting/uk",
+    "Map generator/uk",
+    "Time/uk",
+    "Lamp/uk",
+    "Electric system/uk",
+    "Assembling machine 2/uk"
+   ],
+   "basin": 34,
+   "pct": 0.64
+  },
+  {
+   "cycle": [
+    "Railway/uk"
+   ],
+   "basin": 29,
+   "pct": 0.54
+  },
+  {
+   "cycle": [
+    "Damage/ja",
+    "Tank/ja"
+   ],
+   "basin": 29,
+   "pct": 0.54
+  },
+  {
+   "cycle": [
+    "Controls/zh",
+    "Debug mode/zh",
+    "Glossary/zh",
+    "Logistic science pack/zh",
+    "Research/zh",
+    "Nintendo Switch version/zh"
+   ],
+   "basin": 28,
+   "pct": 0.52
+  },
+  {
+   "cycle": [
+    "Uranium processing/uk",
+    "Kovarex enrichment process/uk"
+   ],
+   "basin": 24,
+   "pct": 0.45
+  },
+  {
+   "cycle": [
+    "Railway",
+    "Artillery wagon"
+   ],
+   "basin": 21,
+   "pct": 0.39
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Time/zh",
+   "chains": 109,
+   "pct": 2.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Data.raw",
+   "chains": 96,
+   "pct": 1.79,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lamp/de",
+   "chains": 51,
+   "pct": 0.95,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Map structure/de",
+   "chains": 48,
+   "pct": 0.9,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Player/uk",
+   "chains": 37,
+   "pct": 0.69,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Decider combinator/zh",
+   "chains": 34,
+   "pct": 0.64,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Materials and recipes/fr",
+   "chains": 30,
+   "pct": 0.56,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Logistics (research)/de",
+   "chains": 30,
+   "pct": 0.56,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Version history/2.1.0",
+   "chains": 25,
+   "pct": 0.47,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Space platform hub/ru",
+   "chains": 24,
+   "pct": 0.45,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Energy shield/zh",
+   "chains": 22,
+   "pct": 0.41,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Steam turbine/pl",
+   "chains": 20,
+   "pct": 0.37,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Furnace/nl",
+   "chains": 18,
+   "pct": 0.34,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Electric system/pt-br",
+   "chains": 16,
+   "pct": 0.3,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lab/fr",
+   "chains": 15,
+   "pct": 0.28,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Technologies",
+   "inDegree": 129
+  },
+  {
+   "title": "Technologies/ja",
+   "inDegree": 102
+  },
+  {
+   "title": "Technologies/ru",
+   "inDegree": 96
+  },
+  {
+   "title": "Technologies/uk",
+   "inDegree": 35
+  },
+  {
+   "title": "Enemies/de",
+   "inDegree": 28
+  },
+  {
+   "title": "Damage",
+   "inDegree": 24
+  },
+  {
+   "title": "Version history",
+   "inDegree": 23
+  },
+  {
+   "title": "Gleba",
+   "inDegree": 23
+  },
+  {
+   "title": "Technologies/de",
+   "inDegree": 22
+  },
+  {
+   "title": "Damage/ja",
+   "inDegree": 22
+  },
+  {
+   "title": "Module",
+   "inDegree": 19
+  },
+  {
+   "title": "Damage/uk",
+   "inDegree": 19
+  },
+  {
+   "title": "Damage/zh",
+   "inDegree": 19
+  },
+  {
+   "title": "Enemies/zh",
+   "inDegree": 18
+  },
+  {
+   "title": "Foundry",
+   "inDegree": 17
+  },
+  {
+   "title": "Enemies",
+   "inDegree": 16
+  },
+  {
+   "title": "Space science pack",
+   "inDegree": 16
+  },
+  {
+   "title": "Module/ru",
+   "inDegree": 16
+  },
+  {
+   "title": "Crafting/ja",
+   "inDegree": 14
+  },
+  {
+   "title": "Modular armor/ja",
+   "inDegree": 14
+  },
+  {
+   "title": "Crusher",
+   "inDegree": 14
+  },
+  {
+   "title": "Inserters",
+   "inDegree": 13
+  },
+  {
+   "title": "Application directory",
+   "inDegree": 13
+  },
+  {
+   "title": "Oil processing",
+   "inDegree": 13
+  },
+  {
+   "title": "Utility science pack",
+   "inDegree": 13
+  },
+  {
+   "title": "Module/ja",
+   "inDegree": 13
+  },
+  {
+   "title": "Belt transport system",
+   "inDegree": 12
+  },
+  {
+   "title": "Damage/fr",
+   "inDegree": 12
+  },
+  {
+   "title": "Railway",
+   "inDegree": 12
+  },
+  {
+   "title": "Belt transport system/zh",
+   "inDegree": 12
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Technologies",
+   "betweenness": 1561
+  },
+  {
+   "title": "Science pack",
+   "betweenness": 1416
+  },
+  {
+   "title": "Gleba",
+   "betweenness": 1345
+  },
+  {
+   "title": "Space platform",
+   "betweenness": 1271
+  },
+  {
+   "title": "Oxide asteroid chunk",
+   "betweenness": 952
+  },
+  {
+   "title": "Technologies/ru",
+   "betweenness": 710
+  },
+  {
+   "title": "Technologies/ja",
+   "betweenness": 675
+  },
+  {
+   "title": "Promethium asteroid chunk",
+   "betweenness": 648
+  },
+  {
+   "title": "Science pack/ru",
+   "betweenness": 588
+  },
+  {
+   "title": "Electric system",
+   "betweenness": 474
+  },
+  {
+   "title": "Productivity module/ja",
+   "betweenness": 460
+  },
+  {
+   "title": "Electric system/ja",
+   "betweenness": 450
+  },
+  {
+   "title": "Assembling machine 3/ru",
+   "betweenness": 447
+  },
+  {
+   "title": "Units/ja",
+   "betweenness": 423
+  },
+  {
+   "title": "Transport belts/Physics/ja",
+   "betweenness": 384
+  },
+  {
+   "title": "Belt transport system/ja",
+   "betweenness": 371
+  },
+  {
+   "title": "Crafting",
+   "betweenness": 348
+  },
+  {
+   "title": "Units",
+   "betweenness": 336
+  },
+  {
+   "title": "Shattered planet",
+   "betweenness": 334
+  },
+  {
+   "title": "Long-handed inserter/ja",
+   "betweenness": 330
+  },
+  {
+   "title": "Inserters/ja",
+   "betweenness": 325
+  },
+  {
+   "title": "Speed module/ru",
+   "betweenness": 300
+  },
+  {
+   "title": "Inserter capacity bonus (research)/ja",
+   "betweenness": 264
+  },
+  {
+   "title": "Electric system/zh",
+   "betweenness": 248
+  },
+  {
+   "title": "Enemies/zh",
+   "betweenness": 245
+  },
+  {
+   "title": "Productivity module 3/ja",
+   "betweenness": 231
+  },
+  {
+   "title": "Pollution/zh",
+   "betweenness": 216
+  },
+  {
+   "title": "Water/zh",
+   "betweenness": 195
+  },
+  {
+   "title": "Inserter capacity bonus (research)",
+   "betweenness": 192
+  },
+  {
+   "title": "Units/zh",
+   "betweenness": 189
+  }
+ ]
+}

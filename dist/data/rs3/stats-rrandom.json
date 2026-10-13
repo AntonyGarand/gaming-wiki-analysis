@@ -1,0 +1,617 @@
+{
+ "wiki": "rs3",
+ "rank": "random",
+ "nodes": 79761,
+ "converge": {
+  "articles": 73785,
+  "pct": 92.51,
+  "deadEnd": 5976,
+  "deadEndPct": 7.49,
+  "noLinks": 2191,
+  "tooFewLinks": 0,
+  "unresolvable": 58
+ },
+ "hopStats": {
+  "mean": 13.77,
+  "median": 8,
+  "p90": 44,
+  "max": 77
+ },
+ "histogram": {
+  "0": 2377,
+  "1": 6638,
+  "2": 4133,
+  "3": 4178,
+  "4": 6979,
+  "5": 4452,
+  "6": 4136,
+  "7": 3962,
+  "8": 3458,
+  "9": 2948,
+  "10": 2656,
+  "11": 2045,
+  "12": 1636,
+  "13": 2192,
+  "14": 1725,
+  "15": 2065,
+  "16": 1638,
+  "17": 1354,
+  "18": 1087,
+  "19": 571,
+  "20": 501,
+  "21": 473,
+  "22": 270,
+  "23": 171,
+  "24": 188,
+  "25": 97,
+  "26": 208,
+  "27": 109,
+  "28": 131,
+  "29": 109,
+  "30": 174,
+  "31": 135,
+  "32": 75,
+  "33": 290,
+  "34": 220,
+  "35": 249,
+  "36": 292,
+  "37": 278,
+  "38": 107,
+  "39": 318,
+  "40": 211,
+  "41": 398,
+  "42": 412,
+  "43": 414,
+  "44": 389,
+  "45": 587,
+  "46": 490,
+  "47": 334,
+  "48": 420,
+  "49": 407,
+  "50": 350,
+  "51": 295,
+  "52": 271,
+  "53": 214,
+  "54": 420,
+  "55": 443,
+  "56": 438,
+  "57": 323,
+  "58": 389,
+  "59": 149,
+  "60": 940,
+  "61": 183,
+  "62": 164,
+  "63": 130,
+  "64": 84,
+  "65": 86,
+  "66": 48,
+  "67": 60,
+  "68": 34,
+  "69": 17,
+  "70": 21,
+  "71": 3,
+  "72": 6,
+  "73": 3,
+  "74": 10,
+  "75": 15,
+  "76": 1,
+  "77": 1
+ },
+ "components": 1172,
+ "cycleCount": 1171,
+ "largestCycle": {
+  "members": [
+   "Daemonheim",
+   "Hilda"
+  ],
+  "size": 2,
+  "basin": 15638
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Daemonheim",
+    "Hilda"
+   ],
+   "basin": 15638,
+   "pct": 19.61
+  },
+  {
+   "cycle": [
+    "Meeting History",
+    "Charcoal (Meeting History)",
+    "Laura",
+    "Jack"
+   ],
+   "basin": 7411,
+   "pct": 9.29
+  },
+  {
+   "cycle": [
+    "Shadow spells",
+    "Earth spells"
+   ],
+   "basin": 5302,
+   "pct": 6.65
+  },
+  {
+   "cycle": [
+    "Oddments",
+    "Oddments (Treasure Hunter promotion)"
+   ],
+   "basin": 4495,
+   "pct": 5.64
+  },
+  {
+   "cycle": [
+    "Loyalty Points",
+    "Members Loyalty Programme",
+    "Solomon's General Store",
+    "RuneCoins"
+   ],
+   "basin": 3406,
+   "pct": 4.27
+  },
+  {
+   "cycle": [
+    "Skills",
+    "Money making guide",
+    "Grand Exchange",
+    "Clan Citadel",
+    "Clan cloak"
+   ],
+   "basin": 3365,
+   "pct": 4.22
+  },
+  {
+   "cycle": [
+    "Runecrafting",
+    "Catalytic runes"
+   ],
+   "basin": 3314,
+   "pct": 4.15
+  },
+  {
+   "cycle": [
+    "Player-owned house",
+    "Game square",
+    "Build mode",
+    "House Controls"
+   ],
+   "basin": 2913,
+   "pct": 3.65
+  },
+  {
+   "cycle": [
+    "Buffs and debuffs"
+   ],
+   "basin": 2910,
+   "pct": 3.65
+  },
+  {
+   "cycle": [
+    "Spa",
+    "Warforge Dig Site",
+    "Oo'glog"
+   ],
+   "basin": 2373,
+   "pct": 2.98
+  },
+  {
+   "cycle": [
+    "NPC Contact",
+    "Bert"
+   ],
+   "basin": 1161,
+   "pct": 1.46
+  },
+  {
+   "cycle": [
+    "Pestle and mortar",
+    "Tool belt",
+    "Quest kit (basic)"
+   ],
+   "basin": 1003,
+   "pct": 1.26
+  },
+  {
+   "cycle": [
+    "Dragon battleaxe"
+   ],
+   "basin": 968,
+   "pct": 1.21
+  },
+  {
+   "cycle": [
+    "Settings"
+   ],
+   "basin": 924,
+   "pct": 1.16
+  },
+  {
+   "cycle": [
+    "Obi'Sooth",
+    "Ring of Solomon"
+   ],
+   "basin": 880,
+   "pct": 1.1
+  },
+  {
+   "cycle": [
+    "Worthless old boots",
+    "De-lore-ing device"
+   ],
+   "basin": 789,
+   "pct": 0.99
+  },
+  {
+   "cycle": [
+    "Collections",
+    "Museum - Saradominist II"
+   ],
+   "basin": 701,
+   "pct": 0.88
+  },
+  {
+   "cycle": [
+    "Evolution of Combat",
+    "Bolt spells"
+   ],
+   "basin": 696,
+   "pct": 0.87
+  },
+  {
+   "cycle": [
+    "Bandos",
+    "Goblin book"
+   ],
+   "basin": 685,
+   "pct": 0.86
+  },
+  {
+   "cycle": [
+    "Hit chance",
+    "Affinity"
+   ],
+   "basin": 607,
+   "pct": 0.76
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Macarthur Fortune Holding",
+   "chains": 1670,
+   "pct": 2.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "RuneScape Germany",
+   "chains": 847,
+   "pct": 1.06,
+   "reason": "redlink target"
+  },
+  {
+   "title": "List of SoundCloud exclusive music",
+   "chains": 472,
+   "pct": 0.59,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hidden updates",
+   "chains": 303,
+   "pct": 0.38,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Treasure Trails/Guide/Anagrams",
+   "chains": 52,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bestiary",
+   "chains": 47,
+   "pct": 0.06,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Mod Arantza",
+   "chains": 43,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Tiny bladed bronze salvage",
+   "chains": 31,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Alcrabholic",
+   "chains": 22,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lighten Up",
+   "chains": 19,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "RuneFest 2017",
+   "chains": 18,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Mod Cam",
+   "chains": 15,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "You Really Don't Need Any More Shoes",
+   "chains": 14,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Treasure Hunter/Promotions",
+   "chains": 14,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Doru spear",
+   "chains": 13,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Cosmetic override",
+   "inDegree": 2025
+  },
+  {
+   "title": "Scenery",
+   "inDegree": 864
+  },
+  {
+   "title": "Buffs and debuffs",
+   "inDegree": 837
+  },
+  {
+   "title": "Achievements",
+   "inDegree": 816
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 796
+  },
+  {
+   "title": "Player-owned house",
+   "inDegree": 645
+  },
+  {
+   "title": "Jagex Store",
+   "inDegree": 551
+  },
+  {
+   "title": "Dungeoneering",
+   "inDegree": 551
+  },
+  {
+   "title": "Livestream",
+   "inDegree": 468
+  },
+  {
+   "title": "Video",
+   "inDegree": 443
+  },
+  {
+   "title": "Experience",
+   "inDegree": 426
+  },
+  {
+   "title": "Treasure Hunter",
+   "inDegree": 413
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 383
+  },
+  {
+   "title": "Daemonheim",
+   "inDegree": 356
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 316
+  },
+  {
+   "title": "Patch Notes",
+   "inDegree": 284
+  },
+  {
+   "title": "Defence",
+   "inDegree": 248
+  },
+  {
+   "title": "Construction",
+   "inDegree": 244
+  },
+  {
+   "title": "Invention",
+   "inDegree": 226
+  },
+  {
+   "title": "Magic",
+   "inDegree": 224
+  },
+  {
+   "title": "Items",
+   "inDegree": 223
+  },
+  {
+   "title": "Quests",
+   "inDegree": 222
+  },
+  {
+   "title": "Music",
+   "inDegree": 214
+  },
+  {
+   "title": "Solomon's General Store",
+   "inDegree": 199
+  },
+  {
+   "title": "Farming",
+   "inDegree": 197
+  },
+  {
+   "title": "Titles",
+   "inDegree": 196
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 189
+  },
+  {
+   "title": "Appearance",
+   "inDegree": 181
+  },
+  {
+   "title": "Augmentor",
+   "inDegree": 180
+  },
+  {
+   "title": "Free-to-play",
+   "inDegree": 172
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Quests",
+   "betweenness": 355443
+  },
+  {
+   "title": "A Clockwork Syringe",
+   "betweenness": 344992
+  },
+  {
+   "title": "World map",
+   "betweenness": 341462
+  },
+  {
+   "title": "Delivery note",
+   "betweenness": 334242
+  },
+  {
+   "title": "Estate agent",
+   "betweenness": 323490
+  },
+  {
+   "title": "Gielinorian Housing Agency",
+   "betweenness": 312736
+  },
+  {
+   "title": "Rimmington",
+   "betweenness": 311892
+  },
+  {
+   "title": "Combat",
+   "betweenness": 303291
+  },
+  {
+   "title": "Classic Modes",
+   "betweenness": 293878
+  },
+  {
+   "title": "Auto-retaliate",
+   "betweenness": 282675
+  },
+  {
+   "title": "Aggressiveness",
+   "betweenness": 271632
+  },
+  {
+   "title": "Ravenous ghoul",
+   "betweenness": 260360
+  },
+  {
+   "title": "Ghouls (Slayer assignment)",
+   "betweenness": 249062
+  },
+  {
+   "title": "Slayer assignment",
+   "betweenness": 247338
+  },
+  {
+   "title": "Slayer mask",
+   "betweenness": 237060
+  },
+  {
+   "title": "Lumbridge",
+   "betweenness": 226368
+  },
+  {
+   "title": "Shattered Worlds Reward Shop",
+   "betweenness": 225473
+  },
+  {
+   "title": "Anvil",
+   "betweenness": 224735
+  },
+  {
+   "title": "Abyssal Knight Quartermaster",
+   "betweenness": 213678
+  },
+  {
+   "title": "Shattered anima",
+   "betweenness": 201926
+  },
+  {
+   "title": "Manor Farm",
+   "betweenness": 193776
+  },
+  {
+   "title": "Tool leprechaun",
+   "betweenness": 182460
+  },
+  {
+   "title": "Rock (ore)",
+   "betweenness": 170310
+  },
+  {
+   "title": "Herb patch (Trollheim)",
+   "betweenness": 158197
+  },
+  {
+   "title": "Trollheim Teleport",
+   "betweenness": 146136
+  },
+  {
+   "title": "Farming",
+   "betweenness": 140022
+  },
+  {
+   "title": "Calquat patch",
+   "betweenness": 137482
+  },
+  {
+   "title": "Calquat sapling",
+   "betweenness": 134940
+  },
+  {
+   "title": "Teleport spells",
+   "betweenness": 134178
+  },
+  {
+   "title": "Legends' Guild",
+   "betweenness": 133768
+  }
+ ]
+}

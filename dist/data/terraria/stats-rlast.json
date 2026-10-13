@@ -1,0 +1,560 @@
+{
+ "wiki": "terraria",
+ "rank": "last",
+ "nodes": 5213,
+ "converge": {
+  "articles": 3291,
+  "pct": 63.13,
+  "deadEnd": 1922,
+  "deadEndPct": 36.87,
+  "noLinks": 505,
+  "tooFewLinks": 0,
+  "unresolvable": 511
+ },
+ "hopStats": {
+  "mean": 5.72,
+  "median": 4,
+  "p90": 13,
+  "max": 23
+ },
+ "histogram": {
+  "0": 360,
+  "1": 339,
+  "2": 293,
+  "3": 339,
+  "4": 385,
+  "5": 240,
+  "6": 145,
+  "7": 187,
+  "8": 151,
+  "9": 100,
+  "10": 139,
+  "11": 116,
+  "12": 107,
+  "13": 88,
+  "14": 97,
+  "15": 63,
+  "16": 48,
+  "17": 54,
+  "18": 21,
+  "19": 7,
+  "20": 3,
+  "21": 6,
+  "22": 2,
+  "23": 1
+ },
+ "components": 181,
+ "cycleCount": 180,
+ "largestCycle": {
+  "members": [
+   "Bestiary",
+   "Re-Logic",
+   "Steampunker"
+  ],
+  "size": 3,
+  "basin": 1698
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Bestiary",
+    "Re-Logic",
+    "Steampunker"
+   ],
+   "basin": 1698,
+   "pct": 32.57
+  },
+  {
+   "cycle": [
+    "Planter Boxes",
+    "Seaweed"
+   ],
+   "basin": 289,
+   "pct": 5.54
+  },
+  {
+   "cycle": [
+    "Expert Mode",
+    "Demon Heart",
+    "Minecart Upgrade Kit",
+    "Deactivated Probe",
+    "Master Mode"
+   ],
+   "basin": 208,
+   "pct": 3.99
+  },
+  {
+   "cycle": [
+    "Monoliths",
+    "Music Boxes"
+   ],
+   "basin": 85,
+   "pct": 1.63
+  },
+  {
+   "cycle": [
+    "Balla Hat",
+    "Gangsta Hat"
+   ],
+   "basin": 67,
+   "pct": 1.29
+  },
+  {
+   "cycle": [
+    "Dyes",
+    "Paints"
+   ],
+   "basin": 66,
+   "pct": 1.27
+  },
+  {
+   "cycle": [
+    "Present",
+    "Goodie Bag"
+   ],
+   "basin": 53,
+   "pct": 1.02
+  },
+  {
+   "cycle": [
+    "Djinn's Curse",
+    "Mannequin",
+    "Armor"
+   ],
+   "basin": 40,
+   "pct": 0.77
+  },
+  {
+   "cycle": [
+    "Server"
+   ],
+   "basin": 37,
+   "pct": 0.71
+  },
+  {
+   "cycle": [
+    "Goblin Army",
+    "Tattered Cloth"
+   ],
+   "basin": 34,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Ammo Reservation Potion",
+    "Ammo Box"
+   ],
+   "basin": 30,
+   "pct": 0.58
+  },
+  {
+   "cycle": [
+    "Portable Kiln",
+    "Mitey-Titey"
+   ],
+   "basin": 28,
+   "pct": 0.54
+  },
+  {
+   "cycle": [
+    "Cobalt Bar",
+    "Palladium Bar"
+   ],
+   "basin": 26,
+   "pct": 0.5
+  },
+  {
+   "cycle": [
+    "Truffle Worm",
+    "Prismatic Lacewing"
+   ],
+   "basin": 21,
+   "pct": 0.4
+  },
+  {
+   "cycle": [
+    "Dungeon Bricks",
+    "Dungeon Brick Walls"
+   ],
+   "basin": 19,
+   "pct": 0.36
+  },
+  {
+   "cycle": [
+    "Sand Sharks",
+    "Vampire"
+   ],
+   "basin": 17,
+   "pct": 0.33
+  },
+  {
+   "cycle": [
+    "Stardust armor",
+    "Nebula armor"
+   ],
+   "basin": 16,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Martian Madness",
+    "Lunar Events"
+   ],
+   "basin": 14,
+   "pct": 0.27
+  },
+  {
+   "cycle": [
+    "Sparkle Slime Balloon",
+    "Slime (debuff)"
+   ],
+   "basin": 14,
+   "pct": 0.27
+  },
+  {
+   "cycle": [
+    "Well Fed",
+    "Roasted Duck"
+   ],
+   "basin": 14,
+   "pct": 0.27
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Mechanical bosses",
+   "chains": 377,
+   "pct": 7.23,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Coins",
+   "chains": 161,
+   "pct": 3.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Bars",
+   "chains": 38,
+   "pct": 0.73,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Console version history",
+   "chains": 32,
+   "pct": 0.61,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Hardmode Anvil/register",
+   "chains": 25,
+   "pct": 0.48,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Vanity items",
+   "chains": 18,
+   "pct": 0.35,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Sound IDs",
+   "chains": 15,
+   "pct": 0.29,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Twins",
+   "chains": 13,
+   "pct": 0.25,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Tool speed",
+   "chains": 12,
+   "pct": 0.23,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Recipes/Campfire/register",
+   "chains": 11,
+   "pct": 0.21,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Blood Moon/cs",
+   "chains": 9,
+   "pct": 0.17,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Hardmode/id",
+   "chains": 8,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Seasonal events",
+   "chains": 7,
+   "pct": 0.13,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Woods",
+   "chains": 6,
+   "pct": 0.12,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Recipes/Crystal Ball/register",
+   "chains": 6,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Re-Logic",
+   "inDegree": 47
+  },
+  {
+   "title": "NPCs",
+   "inDegree": 37
+  },
+  {
+   "title": "Background walls",
+   "inDegree": 36
+  },
+  {
+   "title": "Hardmode",
+   "inDegree": 32
+  },
+  {
+   "title": "Shimmer",
+   "inDegree": 32
+  },
+  {
+   "title": "1.2",
+   "inDegree": 28
+  },
+  {
+   "title": "Buffs",
+   "inDegree": 27
+  },
+  {
+   "title": "Enemies",
+   "inDegree": 27
+  },
+  {
+   "title": "Rarity",
+   "inDegree": 26
+  },
+  {
+   "title": "Knockback",
+   "inDegree": 26
+  },
+  {
+   "title": "Multiplayer",
+   "inDegree": 25
+  },
+  {
+   "title": "Debuffs",
+   "inDegree": 25
+  },
+  {
+   "title": "Events",
+   "inDegree": 25
+  },
+  {
+   "title": "Invincibility frame",
+   "inDegree": 25
+  },
+  {
+   "title": "Modifiers",
+   "inDegree": 23
+  },
+  {
+   "title": "Traveling Merchant",
+   "inDegree": 21
+  },
+  {
+   "title": "Achievements",
+   "inDegree": 21
+  },
+  {
+   "title": "Master Mode",
+   "inDegree": 19
+  },
+  {
+   "title": "Dyes",
+   "inDegree": 19
+  },
+  {
+   "title": "House",
+   "inDegree": 19
+  },
+  {
+   "title": "1.3.0.1",
+   "inDegree": 18
+  },
+  {
+   "title": "Informational Accessories",
+   "inDegree": 18
+  },
+  {
+   "title": "The Crimson",
+   "inDegree": 18
+  },
+  {
+   "title": "Crossover content",
+   "inDegree": 18
+  },
+  {
+   "title": "1.4.0.1",
+   "inDegree": 18
+  },
+  {
+   "title": "Lava",
+   "inDegree": 17
+  },
+  {
+   "title": "Mechanical bosses",
+   "inDegree": 17
+  },
+  {
+   "title": "Moon phase",
+   "inDegree": 17
+  },
+  {
+   "title": "Bestiary",
+   "inDegree": 17
+  },
+  {
+   "title": "Liquids",
+   "inDegree": 17
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "The Underworld",
+   "betweenness": 2541
+  },
+  {
+   "title": "Steampunker",
+   "betweenness": 2457
+  },
+  {
+   "title": "Royal Gel",
+   "betweenness": 2184
+  },
+  {
+   "title": "Ambient entities",
+   "betweenness": 2065
+  },
+  {
+   "title": "NPCs",
+   "betweenness": 2040
+  },
+  {
+   "title": "Crossover content",
+   "betweenness": 2020
+  },
+  {
+   "title": "Bats",
+   "betweenness": 1776
+  },
+  {
+   "title": "1.4.5.7",
+   "betweenness": 1620
+  },
+  {
+   "title": "Inventory",
+   "betweenness": 1575
+  },
+  {
+   "title": "Swords",
+   "betweenness": 1565
+  },
+  {
+   "title": "Logic Gates",
+   "betweenness": 1521
+  },
+  {
+   "title": "Cursor modes",
+   "betweenness": 1520
+  },
+  {
+   "title": "Multiplayer",
+   "betweenness": 1507
+  },
+  {
+   "title": "Item Flask",
+   "betweenness": 1467
+  },
+  {
+   "title": "Liquids",
+   "betweenness": 1430
+  },
+  {
+   "title": "Treasure Bag",
+   "betweenness": 1420
+  },
+  {
+   "title": "Ocean",
+   "betweenness": 1378
+  },
+  {
+   "title": "Weapon Rack",
+   "betweenness": 1360
+  },
+  {
+   "title": "Skeletron",
+   "betweenness": 1352
+  },
+  {
+   "title": "Re-Logic",
+   "betweenness": 1329
+  },
+  {
+   "title": "Item IDs",
+   "betweenness": 1302
+  },
+  {
+   "title": "Bestiary",
+   "betweenness": 1302
+  },
+  {
+   "title": "Obsidian",
+   "betweenness": 1284
+  },
+  {
+   "title": "Bosses",
+   "betweenness": 1260
+  },
+  {
+   "title": "The Horseman's Blade",
+   "betweenness": 1256
+  },
+  {
+   "title": "Items",
+   "betweenness": 1250
+  },
+  {
+   "title": "Cthulhu",
+   "betweenness": 1197
+  },
+  {
+   "title": "Map viewers",
+   "betweenness": 1170
+  },
+  {
+   "title": "Candelabras",
+   "betweenness": 1112
+  },
+  {
+   "title": "Title messages",
+   "betweenness": 1056
+  }
+ ]
+}

@@ -1,0 +1,563 @@
+{
+ "wiki": "fortnite",
+ "rank": "random",
+ "nodes": 35312,
+ "converge": {
+  "articles": 28450,
+  "pct": 80.57,
+  "deadEnd": 6862,
+  "deadEndPct": 19.43,
+  "noLinks": 2196,
+  "tooFewLinks": 0,
+  "unresolvable": 1080
+ },
+ "hopStats": {
+  "mean": 3.16,
+  "median": 2,
+  "p90": 7,
+  "max": 16
+ },
+ "histogram": {
+  "0": 484,
+  "1": 10087,
+  "2": 5202,
+  "3": 2427,
+  "4": 1410,
+  "5": 3755,
+  "6": 1715,
+  "7": 1520,
+  "8": 616,
+  "9": 782,
+  "10": 237,
+  "11": 106,
+  "12": 49,
+  "13": 25,
+  "14": 23,
+  "15": 11,
+  "16": 1
+ },
+ "components": 257,
+ "cycleCount": 256,
+ "largestCycle": {
+  "members": [
+   "Fortnite",
+   "Fortnite: Battle Royale",
+   "Vehicles",
+   "Trail Thrasher",
+   "Cars",
+   "Submachine Gun",
+   "Thrasher",
+   "Slasher (Schematic)",
+   "Fortnite: Save the World",
+   "May 2021 Fortnite Crew Pack"
+  ],
+  "size": 10,
+  "basin": 17629
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Fortnite",
+    "Fortnite: Battle Royale",
+    "Vehicles",
+    "Trail Thrasher",
+    "Cars",
+    "Submachine Gun",
+    "Thrasher",
+    "Slasher (Schematic)",
+    "Fortnite: Save the World",
+    "May 2021 Fortnite Crew Pack"
+   ],
+   "basin": 17629,
+   "pct": 49.92
+  },
+  {
+   "cycle": [
+    "XP",
+    "Music Pass"
+   ],
+   "basin": 6964,
+   "pct": 19.72
+  },
+  {
+   "cycle": [
+    "Power B.A.S.E. Kyle"
+   ],
+   "basin": 1734,
+   "pct": 4.91
+  },
+  {
+   "cycle": [
+    "Named Locations",
+    "Logjam Lotus",
+    "Shifty Shafts"
+   ],
+   "basin": 473,
+   "pct": 1.34
+  },
+  {
+   "cycle": [
+    "Kicks",
+    "Fluffy Buns"
+   ],
+   "basin": 197,
+   "pct": 0.56
+  },
+  {
+   "cycle": [
+    "Fortnite: Reload"
+   ],
+   "basin": 150,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Sentry Cameras",
+    "Catty Corner"
+   ],
+   "basin": 69,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Update v6.30",
+    "Update v6.22"
+   ],
+   "basin": 56,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "The Foundation's MK-Seven Assault Rifle",
+    "WIP Mythic Red Dot AR"
+   ],
+   "basin": 52,
+   "pct": 0.15
+  },
+  {
+   "cycle": [
+    "Update v19.00",
+    "The Daily Bugle"
+   ],
+   "basin": 43,
+   "pct": 0.12
+  },
+  {
+   "cycle": [
+    "Stressed Out",
+    "Twenty One Pilots Jam Bundle"
+   ],
+   "basin": 32,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Hero Back Blings",
+    "Support Specialist Hawk"
+   ],
+   "basin": 30,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Item Shop History/February 14th 2023 - Part 2",
+    "Double Gold"
+   ],
+   "basin": 22,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Port-A-Bunker",
+    "Wood-N-Bunker"
+   ],
+   "basin": 21,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Jilly Teacup",
+    "Misfit Toys"
+   ],
+   "basin": 20,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "AMP-UP!",
+    "FROST-UP!"
+   ],
+   "basin": 19,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Mist Monsters",
+    "Husk Monsters"
+   ],
+   "basin": 16,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "B.A.S.E."
+   ],
+   "basin": 15,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Tactical Shotgun/High Tier",
+    "Morphite Tactical Shotgun"
+   ],
+   "basin": 15,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "The Collider",
+    "The Fortress",
+    "Command Cavern"
+   ],
+   "basin": 14,
+   "pct": 0.04
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Item Shop Bundles",
+   "chains": 1526,
+   "pct": 4.32,
+   "reason": "redlink target"
+  },
+  {
+   "title": "V-Bucks",
+   "chains": 205,
+   "pct": 0.58,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Landmarks",
+   "chains": 194,
+   "pct": 0.55,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Power",
+   "chains": 187,
+   "pct": 0.53,
+   "reason": "redlink target"
+  },
+  {
+   "title": "RE-PERK!",
+   "chains": 126,
+   "pct": 0.36,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ventures",
+   "chains": 122,
+   "pct": 0.35,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Consumables",
+   "chains": 120,
+   "pct": 0.34,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Plunger Bow",
+   "chains": 68,
+   "pct": 0.19,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Update v18.00",
+   "chains": 40,
+   "pct": 0.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Infinity Blade",
+   "chains": 38,
+   "pct": 0.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Storm Shield",
+   "chains": 38,
+   "pct": 0.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Port-A-Fort",
+   "chains": 29,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Update v31.30",
+   "chains": 28,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Turn It Up Bundle",
+   "chains": 27,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Full List of Items",
+   "chains": 23,
+   "pct": 0.07,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Fortnite",
+   "inDegree": 7753
+  },
+  {
+   "title": "Battle Pass",
+   "inDegree": 1143
+  },
+  {
+   "title": "Outfits",
+   "inDegree": 928
+  },
+  {
+   "title": "Fortnite: Battle Royale",
+   "inDegree": 779
+  },
+  {
+   "title": "Back Blings",
+   "inDegree": 741
+  },
+  {
+   "title": "Item Shop Bundles",
+   "inDegree": 735
+  },
+  {
+   "title": "Emotes",
+   "inDegree": 704
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "inDegree": 429
+  },
+  {
+   "title": "Sprays",
+   "inDegree": 426
+  },
+  {
+   "title": "Wraps",
+   "inDegree": 413
+  },
+  {
+   "title": "Quests",
+   "inDegree": 383
+  },
+  {
+   "title": "Loading Screens",
+   "inDegree": 377
+  },
+  {
+   "title": "Jam Tracks",
+   "inDegree": 313
+  },
+  {
+   "title": "Emoticons",
+   "inDegree": 307
+  },
+  {
+   "title": "Decals",
+   "inDegree": 307
+  },
+  {
+   "title": "Wheels",
+   "inDegree": 207
+  },
+  {
+   "title": "Prefabs",
+   "inDegree": 194
+  },
+  {
+   "title": "Kicks",
+   "inDegree": 186
+  },
+  {
+   "title": "Music Pass",
+   "inDegree": 156
+  },
+  {
+   "title": "Fortnite Crew",
+   "inDegree": 145
+  },
+  {
+   "title": "Athena",
+   "inDegree": 124
+  },
+  {
+   "title": "Landmarks",
+   "inDegree": 120
+  },
+  {
+   "title": "Devices (Creative)",
+   "inDegree": 116
+  },
+  {
+   "title": "XP",
+   "inDegree": 108
+  },
+  {
+   "title": "Named Locations",
+   "inDegree": 99
+  },
+  {
+   "title": "Contrails",
+   "inDegree": 92
+  },
+  {
+   "title": "Main Quests",
+   "inDegree": 88
+  },
+  {
+   "title": "Unnamed Locations",
+   "inDegree": 83
+  },
+  {
+   "title": "Lobby Music",
+   "inDegree": 81
+  },
+  {
+   "title": "Counterpart Outfits",
+   "inDegree": 79
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Fortnite: Battle Royale",
+   "betweenness": 137698
+  },
+  {
+   "title": "Fortnite",
+   "betweenness": 127507
+  },
+  {
+   "title": "Vehicles",
+   "betweenness": 121599
+  },
+  {
+   "title": "Trail Thrasher",
+   "betweenness": 104070
+  },
+  {
+   "title": "Cars",
+   "betweenness": 86461
+  },
+  {
+   "title": "Submachine Gun",
+   "betweenness": 68952
+  },
+  {
+   "title": "Thrasher",
+   "betweenness": 51333
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "betweenness": 39745
+  },
+  {
+   "title": "Slasher (Schematic)",
+   "betweenness": 33714
+  },
+  {
+   "title": "May 2021 Fortnite Crew Pack",
+   "betweenness": 22136
+  },
+  {
+   "title": "Cosmetic Items",
+   "betweenness": 20028
+  },
+  {
+   "title": "Gifting",
+   "betweenness": 15024
+  },
+  {
+   "title": "Battle Pass",
+   "betweenness": 13232
+  },
+  {
+   "title": "Outfits",
+   "betweenness": 9900
+  },
+  {
+   "title": "Fortnite Festival",
+   "betweenness": 9493
+  },
+  {
+   "title": "Jam Tracks",
+   "betweenness": 9086
+  },
+  {
+   "title": "Guitars",
+   "betweenness": 9070
+  },
+  {
+   "title": "Rocket Racing",
+   "betweenness": 8515
+  },
+  {
+   "title": "Adam's Song",
+   "betweenness": 8340
+  },
+  {
+   "title": "Community Terminology",
+   "betweenness": 8255
+  },
+  {
+   "title": "Update v28.01",
+   "betweenness": 7920
+  },
+  {
+   "title": "Emotes",
+   "betweenness": 7605
+  },
+  {
+   "title": "Victory Royale",
+   "betweenness": 6872
+  },
+  {
+   "title": "XP",
+   "betweenness": 6772
+  },
+  {
+   "title": "Founder's Umbrella",
+   "betweenness": 5157
+  },
+  {
+   "title": "Decals",
+   "betweenness": 5124
+  },
+  {
+   "title": "Quests",
+   "betweenness": 4930
+  },
+  {
+   "title": "Back Blings",
+   "betweenness": 4735
+  },
+  {
+   "title": "Wraps",
+   "betweenness": 4401
+  },
+  {
+   "title": "Marigold",
+   "betweenness": 4040
+  }
+ ]
+}
