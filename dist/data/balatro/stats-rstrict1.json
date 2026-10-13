@@ -1,0 +1,397 @@
+{
+ "wiki": "balatro",
+ "rank": "strict1",
+ "nodes": 517,
+ "converge": {
+  "articles": 479,
+  "pct": 92.65,
+  "deadEnd": 38,
+  "deadEndPct": 7.35,
+  "noLinks": 38,
+  "tooFewLinks": 0,
+  "unresolvable": 0
+ },
+ "hopStats": {
+  "mean": 2.48,
+  "median": 2,
+  "p90": 5,
+  "max": 7
+ },
+ "histogram": {
+  "0": 5,
+  "1": 166,
+  "2": 108,
+  "3": 65,
+  "4": 67,
+  "5": 64,
+  "6": 3,
+  "7": 1
+ },
+ "components": 3,
+ "cycleCount": 2,
+ "largestCycle": {
+  "members": [
+   "Jokers",
+   "Tarot cards",
+   "Consumables"
+  ],
+  "size": 3,
+  "basin": 424
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Jokers",
+    "Tarot cards",
+    "Consumables"
+   ],
+   "basin": 424,
+   "pct": 82.01
+  },
+  {
+   "cycle": [
+    "Card Ranks",
+    "Card Suits"
+   ],
+   "basin": 55,
+   "pct": 10.64
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Playstack",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Languages",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Club",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Goad",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Window",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Serpent",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Needle",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Head",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Cerulean Bell",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Star",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Moon",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Sun",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The World",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Platinum",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "$400",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Jokers",
+   "inDegree": 155
+  },
+  {
+   "title": "Card modifiers",
+   "inDegree": 37
+  },
+  {
+   "title": "Vouchers",
+   "inDegree": 33
+  },
+  {
+   "title": "Achievements",
+   "inDegree": 33
+  },
+  {
+   "title": "Challenge Decks",
+   "inDegree": 20
+  },
+  {
+   "title": "Decks",
+   "inDegree": 19
+  },
+  {
+   "title": "Planet cards",
+   "inDegree": 16
+  },
+  {
+   "title": "Blinds and Antes",
+   "inDegree": 16
+  },
+  {
+   "title": "Stakes",
+   "inDegree": 11
+  },
+  {
+   "title": "Booster Packs",
+   "inDegree": 10
+  },
+  {
+   "title": "Joker",
+   "inDegree": 10
+  },
+  {
+   "title": "Balatro",
+   "inDegree": 9
+  },
+  {
+   "title": "Tags",
+   "inDegree": 9
+  },
+  {
+   "title": "Poker hands",
+   "inDegree": 8
+  },
+  {
+   "title": "LocalThunk",
+   "inDegree": 6
+  },
+  {
+   "title": "Tarot cards",
+   "inDegree": 6
+  },
+  {
+   "title": "The Shop",
+   "inDegree": 6
+  },
+  {
+   "title": "Common Jokers",
+   "inDegree": 6
+  },
+  {
+   "title": "Legendary Jokers",
+   "inDegree": 6
+  },
+  {
+   "title": "Card Ranks",
+   "inDegree": 5
+  },
+  {
+   "title": "Uncommon Jokers",
+   "inDegree": 5
+  },
+  {
+   "title": "Consumables",
+   "inDegree": 4
+  },
+  {
+   "title": "Friends of Jimbo",
+   "inDegree": 4
+  },
+  {
+   "title": "Rare Jokers",
+   "inDegree": 4
+  },
+  {
+   "title": "Jimbo",
+   "inDegree": 3
+  },
+  {
+   "title": "Hand size",
+   "inDegree": 3
+  },
+  {
+   "title": "Collection",
+   "inDegree": 2
+  },
+  {
+   "title": "Hands",
+   "inDegree": 2
+  },
+  {
+   "title": "Naneinf",
+   "inDegree": 2
+  },
+  {
+   "title": "Interest",
+   "inDegree": 2
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Jokers",
+   "betweenness": 813
+  },
+  {
+   "title": "Balatro",
+   "betweenness": 504
+  },
+  {
+   "title": "Tarot cards",
+   "betweenness": 407
+  },
+  {
+   "title": "LocalThunk",
+   "betweenness": 402
+  },
+  {
+   "title": "Stakes",
+   "betweenness": 230
+  },
+  {
+   "title": "Achievements",
+   "betweenness": 204
+  },
+  {
+   "title": "Decks",
+   "betweenness": 200
+  },
+  {
+   "title": "The Shop",
+   "betweenness": 186
+  },
+  {
+   "title": "Vouchers",
+   "betweenness": 132
+  },
+  {
+   "title": "Challenge Decks",
+   "betweenness": 120
+  },
+  {
+   "title": "Card modifiers",
+   "betweenness": 90
+  },
+  {
+   "title": "Blinds and Antes",
+   "betweenness": 85
+  },
+  {
+   "title": "Poker hands",
+   "betweenness": 66
+  },
+  {
+   "title": "Mult",
+   "betweenness": 60
+  },
+  {
+   "title": "Card Ranks",
+   "betweenness": 53
+  },
+  {
+   "title": "Booster Packs",
+   "betweenness": 52
+  },
+  {
+   "title": "Planet cards",
+   "betweenness": 48
+  },
+  {
+   "title": "Consumables",
+   "betweenness": 46
+  },
+  {
+   "title": "Tags",
+   "betweenness": 45
+  },
+  {
+   "title": "Skip",
+   "betweenness": 40
+  },
+  {
+   "title": "Joker",
+   "betweenness": 33
+  },
+  {
+   "title": "Jimbo",
+   "betweenness": 30
+  },
+  {
+   "title": "Main menu",
+   "betweenness": 24
+  },
+  {
+   "title": "Hands",
+   "betweenness": 21
+  },
+  {
+   "title": "Common Jokers",
+   "betweenness": 18
+  },
+  {
+   "title": "Legendary Jokers",
+   "betweenness": 18
+  },
+  {
+   "title": "Hand size",
+   "betweenness": 15
+  },
+  {
+   "title": "Uncommon Jokers",
+   "betweenness": 15
+  },
+  {
+   "title": "Rare Jokers",
+   "betweenness": 12
+  },
+  {
+   "title": "Collection",
+   "betweenness": 10
+  }
+ ]
+}

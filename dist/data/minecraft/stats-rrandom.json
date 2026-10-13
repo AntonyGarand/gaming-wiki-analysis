@@ -1,0 +1,590 @@
+{
+ "wiki": "minecraft",
+ "rank": "random",
+ "nodes": 14078,
+ "converge": {
+  "articles": 1971,
+  "pct": 14,
+  "deadEnd": 12107,
+  "deadEndPct": 86,
+  "noLinks": 3970,
+  "tooFewLinks": 0,
+  "unresolvable": 3678
+ },
+ "hopStats": {
+  "mean": 7.52,
+  "median": 4,
+  "p90": 24,
+  "max": 35
+ },
+ "histogram": {
+  "0": 180,
+  "1": 345,
+  "2": 231,
+  "3": 155,
+  "4": 104,
+  "5": 133,
+  "6": 135,
+  "7": 105,
+  "8": 52,
+  "9": 48,
+  "10": 8,
+  "11": 19,
+  "12": 54,
+  "13": 31,
+  "14": 19,
+  "15": 16,
+  "16": 11,
+  "17": 20,
+  "18": 6,
+  "19": 12,
+  "20": 13,
+  "21": 18,
+  "22": 19,
+  "23": 25,
+  "24": 37,
+  "25": 58,
+  "26": 24,
+  "27": 23,
+  "28": 11,
+  "29": 6,
+  "30": 13,
+  "31": 6,
+  "32": 22,
+  "33": 8,
+  "34": 2,
+  "35": 2
+ },
+ "components": 106,
+ "cycleCount": 105,
+ "largestCycle": {
+  "members": [
+   "Entity",
+   "Spider Jockey",
+   "Skeleton",
+   "Villager",
+   "Zombie Villager",
+   "Mob spawning",
+   "Llama",
+   "Mob"
+  ],
+  "size": 8,
+  "basin": 965
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Entity",
+    "Spider Jockey",
+    "Skeleton",
+    "Villager",
+    "Zombie Villager",
+    "Mob spawning",
+    "Llama",
+    "Mob"
+   ],
+   "basin": 965,
+   "pct": 6.85
+  },
+  {
+   "cycle": [
+    "Heads-up display",
+    "Options"
+   ],
+   "basin": 193,
+   "pct": 1.37
+  },
+  {
+   "cycle": [
+    "Mojang Studios",
+    "Mojam"
+   ],
+   "basin": 170,
+   "pct": 1.21
+  },
+  {
+   "cycle": [
+    "Gold Ingot",
+    "Gold Nugget"
+   ],
+   "basin": 136,
+   "pct": 0.97
+  },
+  {
+   "cycle": [
+    "Ocean Monument",
+    "Prismarine"
+   ],
+   "basin": 72,
+   "pct": 0.51
+  },
+  {
+   "cycle": [
+    "Taiga",
+    "Trail Ruins",
+    "Jungle",
+    "Dark Forest"
+   ],
+   "basin": 72,
+   "pct": 0.51
+  },
+  {
+   "cycle": [
+    "Regeneration",
+    "Undead",
+    "Jockey",
+    "Parched"
+   ],
+   "basin": 49,
+   "pct": 0.35
+  },
+  {
+   "cycle": [
+    "Gravel",
+    "Ore (feature)",
+    "Copper",
+    "Copper Golem",
+    "2022 Mob Vote Event",
+    "Sword",
+    "Bamboo"
+   ],
+   "basin": 40,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Jigsaw Block",
+    "Jigsaw structure"
+   ],
+   "basin": 37,
+   "pct": 0.26
+  },
+  {
+   "cycle": [
+    "Shovel",
+    "Iron Shovel",
+    "Dirt Path"
+   ],
+   "basin": 14,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Boat",
+    "Blue Ice"
+   ],
+   "basin": 14,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Painting",
+    "Kristoffer Zetterstrand"
+   ],
+   "basin": 9,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Java Edition mob render history/Illusioner",
+    "Java Edition mob render history/Pillager"
+   ],
+   "basin": 9,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Boots",
+    "Diamond Boots"
+   ],
+   "basin": 7,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Tiny Takeover",
+    "Tiny Takeover: Mini Mania"
+   ],
+   "basin": 7,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Powered Rail",
+    "Detector Rail"
+   ],
+   "basin": 6,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "A Minecraft Movie Squared",
+    "Warner Bros. Pictures"
+   ],
+   "basin": 6,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Education Edition 1.14.60",
+    "Education Edition 1.14.70",
+    "Camps & Clubs"
+   ],
+   "basin": 5,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Story Mode Skin Pack",
+    "A Minecraft Movie Hero Pack"
+   ],
+   "basin": 5,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Java Edition mob render history/Chicken Jockey",
+    "Java Edition mob render history/Drowned"
+   ],
+   "basin": 5,
+   "pct": 0.04
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Client.jar",
+   "chains": 743,
+   "pct": 5.28,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Dolphin",
+   "chains": 438,
+   "pct": 3.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Copper Pickaxe",
+   "chains": 349,
+   "pct": 2.48,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Red Sandstone",
+   "chains": 261,
+   "pct": 1.85,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Chorus Fruit",
+   "chains": 254,
+   "pct": 1.8,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Identifier",
+   "chains": 231,
+   "pct": 1.64,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Infested Block",
+   "chains": 127,
+   "pct": 0.9,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Birch Forest",
+   "chains": 95,
+   "pct": 0.67,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Server",
+   "chains": 82,
+   "pct": 0.58,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Permission level",
+   "chains": 60,
+   "pct": 0.43,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Trading",
+   "chains": 55,
+   "pct": 0.39,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Commands/gamemode",
+   "chains": 53,
+   "pct": 0.38,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Feature",
+   "chains": 51,
+   "pct": 0.36,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Savanna",
+   "chains": 46,
+   "pct": 0.33,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Cobweb",
+   "chains": 41,
+   "pct": 0.29,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Minecraft Launcher",
+   "inDegree": 196
+  },
+  {
+   "title": "Mojang Studios",
+   "inDegree": 101
+  },
+  {
+   "title": "Skin pack",
+   "inDegree": 72
+  },
+  {
+   "title": "Player",
+   "inDegree": 49
+  },
+  {
+   "title": "Daniel Rosenfeld",
+   "inDegree": 43
+  },
+  {
+   "title": "Pickaxe",
+   "inDegree": 41
+  },
+  {
+   "title": "Mob",
+   "inDegree": 31
+  },
+  {
+   "title": "Overworld",
+   "inDegree": 27
+  },
+  {
+   "title": "Spawn Egg",
+   "inDegree": 27
+  },
+  {
+   "title": "Item",
+   "inDegree": 26
+  },
+  {
+   "title": "Block",
+   "inDegree": 25
+  },
+  {
+   "title": "Minecraft.net",
+   "inDegree": 25
+  },
+  {
+   "title": "Java Edition Alpha",
+   "inDegree": 24
+  },
+  {
+   "title": "Java Edition Classic",
+   "inDegree": 23
+  },
+  {
+   "title": "Snapshot",
+   "inDegree": 23
+  },
+  {
+   "title": "Add-on",
+   "inDegree": 23
+  },
+  {
+   "title": "Marketplace",
+   "inDegree": 23
+  },
+  {
+   "title": "Advancement",
+   "inDegree": 22
+  },
+  {
+   "title": "Data pack",
+   "inDegree": 22
+  },
+  {
+   "title": "Identifier",
+   "inDegree": 22
+  },
+  {
+   "title": "Biome",
+   "inDegree": 21
+  },
+  {
+   "title": "Villager",
+   "inDegree": 21
+  },
+  {
+   "title": "Commands",
+   "inDegree": 20
+  },
+  {
+   "title": "Java Edition 1.7.10",
+   "inDegree": 19
+  },
+  {
+   "title": "Entity",
+   "inDegree": 18
+  },
+  {
+   "title": "Realms",
+   "inDegree": 18
+  },
+  {
+   "title": "Water",
+   "inDegree": 18
+  },
+  {
+   "title": "Smithing Table",
+   "inDegree": 18
+  },
+  {
+   "title": "Chest",
+   "inDegree": 17
+  },
+  {
+   "title": "Bone Meal",
+   "inDegree": 17
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Wolf",
+   "betweenness": 7497
+  },
+  {
+   "title": "Fire",
+   "betweenness": 7375
+  },
+  {
+   "title": "Spectator",
+   "betweenness": 7228
+  },
+  {
+   "title": "Splash Potion",
+   "betweenness": 7200
+  },
+  {
+   "title": "JSON",
+   "betweenness": 7120
+  },
+  {
+   "title": "Potion of Strength",
+   "betweenness": 6923
+  },
+  {
+   "title": "Effect",
+   "betweenness": 6846
+  },
+  {
+   "title": "Strength",
+   "betweenness": 6732
+  },
+  {
+   "title": "Dimension definition",
+   "betweenness": 6705
+  },
+  {
+   "title": "Totem of Undying",
+   "betweenness": 6660
+  },
+  {
+   "title": "Arrow",
+   "betweenness": 6555
+  },
+  {
+   "title": "Dimension",
+   "betweenness": 6300
+  },
+  {
+   "title": "Bow",
+   "betweenness": 6282
+  },
+  {
+   "title": "Light",
+   "betweenness": 6083
+  },
+  {
+   "title": "Redstone Comparator",
+   "betweenness": 5985
+  },
+  {
+   "title": "Warped Forest",
+   "betweenness": 5980
+  },
+  {
+   "title": "Mob spawning",
+   "betweenness": 5940
+  },
+  {
+   "title": "Conductivity",
+   "betweenness": 5816
+  },
+  {
+   "title": "Item Frame",
+   "betweenness": 5600
+  },
+  {
+   "title": "Night Vision",
+   "betweenness": 5532
+  },
+  {
+   "title": "Llama",
+   "betweenness": 4991
+  },
+  {
+   "title": "Mob",
+   "betweenness": 4370
+  },
+  {
+   "title": "Powder Snow",
+   "betweenness": 3996
+  },
+  {
+   "title": "Entity",
+   "betweenness": 3829
+  },
+  {
+   "title": "Item",
+   "betweenness": 3780
+  },
+  {
+   "title": "Void",
+   "betweenness": 3420
+  },
+  {
+   "title": "Health",
+   "betweenness": 3340
+  },
+  {
+   "title": "Block",
+   "betweenness": 3180
+  },
+  {
+   "title": "Red Sand",
+   "betweenness": 3161
+  },
+  {
+   "title": "Java Edition level format",
+   "betweenness": 3159
+  }
+ ]
+}

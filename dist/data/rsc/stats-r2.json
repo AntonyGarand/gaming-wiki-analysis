@@ -1,0 +1,555 @@
+{
+ "wiki": "rsc",
+ "rank": "2",
+ "nodes": 4331,
+ "converge": {
+  "articles": 3164,
+  "pct": 73.05,
+  "deadEnd": 1167,
+  "deadEndPct": 26.95,
+  "noLinks": 479,
+  "tooFewLinks": 112,
+  "unresolvable": 11
+ },
+ "hopStats": {
+  "mean": 5.97,
+  "median": 6,
+  "p90": 11,
+  "max": 19
+ },
+ "histogram": {
+  "0": 129,
+  "1": 360,
+  "2": 329,
+  "3": 227,
+  "4": 219,
+  "5": 149,
+  "6": 248,
+  "7": 467,
+  "8": 338,
+  "9": 146,
+  "10": 135,
+  "11": 118,
+  "12": 77,
+  "13": 52,
+  "14": 64,
+  "15": 59,
+  "16": 40,
+  "17": 4,
+  "18": 2,
+  "19": 1
+ },
+ "components": 63,
+ "cycleCount": 62,
+ "largestCycle": {
+  "members": [
+   "Plate Mail Bodies",
+   "Chain Mail Bodies"
+  ],
+  "size": 2,
+  "basin": 1473
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Plate Mail Bodies",
+    "Chain Mail Bodies"
+   ],
+   "basin": 1473,
+   "pct": 34.01
+  },
+  {
+   "cycle": [
+    "Kandarin",
+    "Ardougne",
+    "East Ardougne"
+   ],
+   "basin": 756,
+   "pct": 17.46
+  },
+  {
+   "cycle": [
+    "The Grand Tree (location)",
+    "Log bridge",
+    "Watch tower (Tree Gnome Stronghold)"
+   ],
+   "basin": 87,
+   "pct": 2.01
+  },
+  {
+   "cycle": [
+    "Yanille",
+    "Ogre"
+   ],
+   "basin": 85,
+   "pct": 1.96
+  },
+  {
+   "cycle": [
+    "Kharid desert",
+    "Shantay Pass"
+   ],
+   "basin": 84,
+   "pct": 1.94
+  },
+  {
+   "cycle": [
+    "Plague City",
+    "Elena"
+   ],
+   "basin": 80,
+   "pct": 1.85
+  },
+  {
+   "cycle": [
+    "Karamja",
+    "Banana plantation",
+    "Banana tree"
+   ],
+   "basin": 58,
+   "pct": 1.34
+  },
+  {
+   "cycle": [
+    "Pickaxes",
+    "Ores"
+   ],
+   "basin": 46,
+   "pct": 1.06
+  },
+  {
+   "cycle": [
+    "Draynor Manor",
+    "Ernest the chicken"
+   ],
+   "basin": 43,
+   "pct": 0.99
+  },
+  {
+   "cycle": [
+    "Digsite",
+    "Unstamped letter of recommendation"
+   ],
+   "basin": 40,
+   "pct": 0.92
+  },
+  {
+   "cycle": [
+    "Crandor",
+    "Dragon (Dragon slayer)"
+   ],
+   "basin": 35,
+   "pct": 0.81
+  },
+  {
+   "cycle": [
+    "Baxtorian Falls",
+    "Waterfall quest"
+   ],
+   "basin": 34,
+   "pct": 0.79
+  },
+  {
+   "cycle": [
+    "Gu'tanoth",
+    "Skavid"
+   ],
+   "basin": 31,
+   "pct": 0.72
+  },
+  {
+   "cycle": [
+    "Soft Clay",
+    "Potter's wheel"
+   ],
+   "basin": 28,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Tai Bwo Wannai",
+    "Jungle potion"
+   ],
+   "basin": 25,
+   "pct": 0.58
+  },
+  {
+   "cycle": [
+    "Phoenix Gang",
+    "Black Arm Gang"
+   ],
+   "basin": 20,
+   "pct": 0.46
+  },
+  {
+   "cycle": [
+    "The Hazeel Cult",
+    "Clivet"
+   ],
+   "basin": 18,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Falador Park",
+    "Wyson the gardener",
+    "Woad Leaf"
+   ],
+   "basin": 14,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Wizard's Tower",
+    "Imp catcher"
+   ],
+   "basin": 14,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Merlin's crystal",
+    "Sir Gawain"
+   ],
+   "basin": 13,
+   "pct": 0.3
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "DeviousMUD",
+   "chains": 499,
+   "pct": 11.52,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Temple of Ikov",
+   "chains": 32,
+   "pct": 0.74,
+   "reason": "redlink target"
+  },
+  {
+   "title": "God letters:Issue 1 - Saradomin Speaks",
+   "chains": 13,
+   "pct": 0.3,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Text effects",
+   "chains": 5,
+   "pct": 0.12,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "World map history",
+   "chains": 5,
+   "pct": 0.12,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Grip",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Aggressiveness",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Friends",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Guide (Tutorial Island)",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Fishing Guild Shop",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Manual:Smithing (2001)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Boots, Gloves, And Caskets",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Post-closure years",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "OB3",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Gnomic Negotiations",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "RuneScape Classic",
+   "inDegree": 67
+  },
+  {
+   "title": "Magic",
+   "inDegree": 66
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 50
+  },
+  {
+   "title": "RuneScape",
+   "inDegree": 50
+  },
+  {
+   "title": "East Ardougne",
+   "inDegree": 49
+  },
+  {
+   "title": "Cooking",
+   "inDegree": 44
+  },
+  {
+   "title": "Quests",
+   "inDegree": 44
+  },
+  {
+   "title": "Defense",
+   "inDegree": 41
+  },
+  {
+   "title": "Attack",
+   "inDegree": 35
+  },
+  {
+   "title": "Legend's Quest",
+   "inDegree": 34
+  },
+  {
+   "title": "West Ardougne",
+   "inDegree": 33
+  },
+  {
+   "title": "Underground Pass (location)",
+   "inDegree": 33
+  },
+  {
+   "title": "Hits",
+   "inDegree": 32
+  },
+  {
+   "title": "Monster",
+   "inDegree": 32
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 29
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 28
+  },
+  {
+   "title": "Skills",
+   "inDegree": 28
+  },
+  {
+   "title": "Items",
+   "inDegree": 26
+  },
+  {
+   "title": "Viyeldi caves",
+   "inDegree": 26
+  },
+  {
+   "title": "Agility",
+   "inDegree": 25
+  },
+  {
+   "title": "Lumbridge",
+   "inDegree": 24
+  },
+  {
+   "title": "Underground pass",
+   "inDegree": 24
+  },
+  {
+   "title": "Wilderness",
+   "inDegree": 23
+  },
+  {
+   "title": "Mage Arena",
+   "inDegree": 22
+  },
+  {
+   "title": "Watchtower",
+   "inDegree": 21
+  },
+  {
+   "title": "Digsite",
+   "inDegree": 21
+  },
+  {
+   "title": "Mining",
+   "inDegree": 20
+  },
+  {
+   "title": "Pay-to-play",
+   "inDegree": 20
+  },
+  {
+   "title": "Yanille",
+   "inDegree": 20
+  },
+  {
+   "title": "Giannes tree gnome cuisine",
+   "inDegree": 20
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Skills",
+   "betweenness": 7434
+  },
+  {
+   "title": "Character",
+   "betweenness": 6560
+  },
+  {
+   "title": "Trade",
+   "betweenness": 5268
+  },
+  {
+   "title": "Inventory",
+   "betweenness": 4377
+  },
+  {
+   "title": "Varrock",
+   "betweenness": 4080
+  },
+  {
+   "title": "Varrock southwest mine",
+   "betweenness": 3690
+  },
+  {
+   "title": "Mining",
+   "betweenness": 3325
+  },
+  {
+   "title": "Clay",
+   "betweenness": 3304
+  },
+  {
+   "title": "Equipment",
+   "betweenness": 2936
+  },
+  {
+   "title": "Al Kharid",
+   "betweenness": 2376
+  },
+  {
+   "title": "Lumbridge",
+   "betweenness": 2136
+  },
+  {
+   "title": "Monster",
+   "betweenness": 1940
+  },
+  {
+   "title": "RuneScape",
+   "betweenness": 1785
+  },
+  {
+   "title": "Legend's Quest",
+   "betweenness": 1524
+  },
+  {
+   "title": "RuneScape Classic",
+   "betweenness": 1476
+  },
+  {
+   "title": "Defense",
+   "betweenness": 1470
+  },
+  {
+   "title": "Plate Mail Bodies",
+   "betweenness": 1469
+  },
+  {
+   "title": "Kandarin",
+   "betweenness": 1382
+  },
+  {
+   "title": "Legends' Guild",
+   "betweenness": 1320
+  },
+  {
+   "title": "Draynor Village",
+   "betweenness": 1261
+  },
+  {
+   "title": "Attack",
+   "betweenness": 1240
+  },
+  {
+   "title": "Quests",
+   "betweenness": 1216
+  },
+  {
+   "title": "Strength",
+   "betweenness": 1088
+  },
+  {
+   "title": "Quest Points",
+   "betweenness": 1085
+  },
+  {
+   "title": "Paul Gower",
+   "betweenness": 986
+  },
+  {
+   "title": "Falador",
+   "betweenness": 948
+  },
+  {
+   "title": "Hits",
+   "betweenness": 873
+  },
+  {
+   "title": "White Knight",
+   "betweenness": 860
+  },
+  {
+   "title": "Magic",
+   "betweenness": 728
+  },
+  {
+   "title": "Cooking",
+   "betweenness": 686
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "wiki": "vampiresurvivors",
+ "generatedAt": "2026-10-12T17:02:40.309Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 61.08,
+   "deadEndPct": 38.92,
+   "components": 7,
+   "cycleCount": 6,
+   "meanHops": 1.86,
+   "medianHops": 2,
+   "maxHops": 6,
+   "topAttractor": [
+    "Characters",
+    "Stages",
+    "Enemies"
+   ],
+   "topAttractorPct": 58.93
+  },
+  {
+   "rank": "2",
+   "convergePct": 56.18,
+   "deadEndPct": 43.82,
+   "components": 7,
+   "cycleCount": 6,
+   "meanHops": 3.03,
+   "medianHops": 3,
+   "maxHops": 8,
+   "topAttractor": [
+    "Weapons",
+    "Enemies",
+    "Level up"
+   ],
+   "topAttractorPct": 39.21
+  },
+  {
+   "rank": "3",
+   "convergePct": 40.42,
+   "deadEndPct": 59.58,
+   "components": 11,
+   "cycleCount": 10,
+   "meanHops": 3.19,
+   "medianHops": 3,
+   "maxHops": 8,
+   "topAttractor": [
+    "Pickups",
+    "Magnet",
+    "PowerUps",
+    "Gold Coin (currency)"
+   ],
+   "topAttractorPct": 29.89
+  },
+  {
+   "rank": "5",
+   "convergePct": 27.38,
+   "deadEndPct": 72.62,
+   "components": 8,
+   "cycleCount": 7,
+   "meanHops": 4.59,
+   "medianHops": 4,
+   "maxHops": 11,
+   "topAttractor": [
+    "Mad Forest",
+    "Boon Marrabbio"
+   ],
+   "topAttractorPct": 15.47
+  },
+  {
+   "rank": "last",
+   "convergePct": 85.46,
+   "deadEndPct": 14.54,
+   "components": 26,
+   "cycleCount": 25,
+   "meanHops": 4.92,
+   "medianHops": 4,
+   "maxHops": 16,
+   "topAttractor": [
+    "Characters",
+    "Gold Coin (currency)"
+   ],
+   "topAttractorPct": 35.52
+  },
+  {
+   "rank": "random",
+   "convergePct": 60.92,
+   "deadEndPct": 39.08,
+   "components": 16,
+   "cycleCount": 15,
+   "meanHops": 3.84,
+   "medianHops": 3,
+   "maxHops": 12,
+   "topAttractor": [
+    "Passive items",
+    "Candelabrador",
+    "Four Seasons",
+    "Area"
+   ],
+   "topAttractorPct": 25.11
+  }
+ ]
+}

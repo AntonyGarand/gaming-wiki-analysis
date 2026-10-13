@@ -10,7 +10,9 @@
     "extract": "tsx scripts/extract-links.ts",
     "analyze": "tsx scripts/analyze.ts",
     "lab": "tsx scripts/lab-server.ts",
-    "pipeline": "tsx scripts/pipeline.ts"
+    "pipeline": "tsx scripts/pipeline.ts",
+    "build:static": "tsx scripts/build-static.ts",
+    "serve:static": "tsx scripts/serve-static.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.17.4"

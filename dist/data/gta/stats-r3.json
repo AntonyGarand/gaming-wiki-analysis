@@ -1,0 +1,571 @@
+{
+ "wiki": "gta",
+ "rank": "3",
+ "nodes": 24073,
+ "converge": {
+  "articles": 11979,
+  "pct": 49.76,
+  "deadEnd": 12094,
+  "deadEndPct": 50.24,
+  "noLinks": 878,
+  "tooFewLinks": 4392,
+  "unresolvable": 983
+ },
+ "hopStats": {
+  "mean": 4.27,
+  "median": 4,
+  "p90": 8,
+  "max": 20
+ },
+ "histogram": {
+  "0": 633,
+  "1": 1952,
+  "2": 1785,
+  "3": 1353,
+  "4": 1557,
+  "5": 1148,
+  "6": 1018,
+  "7": 814,
+  "8": 597,
+  "9": 349,
+  "10": 166,
+  "11": 150,
+  "12": 116,
+  "13": 91,
+  "14": 63,
+  "15": 41,
+  "16": 41,
+  "17": 53,
+  "18": 41,
+  "19": 8,
+  "20": 3
+ },
+ "components": 298,
+ "cycleCount": 297,
+ "largestCycle": {
+  "members": [
+   "Frank Tenpenny",
+   "Los Santos Police Department (3D Universe)",
+   "Community Resources Against Street Hoodlums"
+  ],
+  "size": 3,
+  "basin": 1266
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Frank Tenpenny",
+    "Los Santos Police Department (3D Universe)",
+    "Community Resources Against Street Hoodlums"
+   ],
+   "basin": 1266,
+   "pct": 5.26
+  },
+  {
+   "cycle": [
+    "Interstate 97",
+    "Interstate 397"
+   ],
+   "basin": 797,
+   "pct": 3.31
+  },
+  {
+   "cycle": [
+    "Finland",
+    "Norway"
+   ],
+   "basin": 792,
+   "pct": 3.29
+  },
+  {
+   "cycle": [
+    "8-Track",
+    "Los Santos (3D Universe)",
+    "Los Santos Forum"
+   ],
+   "basin": 589,
+   "pct": 2.45
+  },
+  {
+   "cycle": [
+    "Burton",
+    "Downtown Los Santos (HD Universe)",
+    "Rockford Hills",
+    "Hawick"
+   ],
+   "basin": 521,
+   "pct": 2.16
+  },
+  {
+   "cycle": [
+    "Mikhail Faustin",
+    "Dimitri Rascalov"
+   ],
+   "basin": 502,
+   "pct": 2.09
+  },
+  {
+   "cycle": [
+    "Uncle Fu's Crime Syndicate",
+    "No Chin",
+    "No Chin's Gang",
+    "Uncle Fu",
+    "Mandarin Mayhem"
+   ],
+   "basin": 476,
+   "pct": 1.98
+  },
+  {
+   "cycle": [
+    "Japan",
+    "Grand Theft Auto Double Pack"
+   ],
+   "basin": 447,
+   "pct": 1.86
+  },
+  {
+   "cycle": [
+    "Blaine County",
+    "Sandy Shores",
+    "Senora National Park"
+   ],
+   "basin": 339,
+   "pct": 1.41
+  },
+  {
+   "cycle": [
+    "Umberto Robina",
+    "Little Havana",
+    "Little Haiti",
+    "Haitian Drugs Factory",
+    "Auntie Poulet",
+    "Haitians",
+    "Trojan Voodoo"
+   ],
+   "basin": 327,
+   "pct": 1.36
+  },
+  {
+   "cycle": [
+    "Apple iOS",
+    "PlayStation Portable",
+    "Grand Theft Auto: Chinatown Wars"
+   ],
+   "basin": 323,
+   "pct": 1.34
+  },
+  {
+   "cycle": [
+    "Angel Pine",
+    "Shady Creeks"
+   ],
+   "basin": 272,
+   "pct": 1.13
+  },
+  {
+   "cycle": [
+    "Jane Hopper",
+    "Liberty City Ferry Strike"
+   ],
+   "basin": 253,
+   "pct": 1.05
+  },
+  {
+   "cycle": [
+    "Hepburn Heights",
+    "Harwood"
+   ],
+   "basin": 234,
+   "pct": 0.97
+  },
+  {
+   "cycle": [
+    "East Los Santos (3D Universe)",
+    "Las Colinas"
+   ],
+   "basin": 222,
+   "pct": 0.92
+  },
+  {
+   "cycle": [
+    "Mount Haan",
+    "Mount Gordo"
+   ],
+   "basin": 204,
+   "pct": 0.85
+  },
+  {
+   "cycle": [
+    "Las Venturas (3D Universe)",
+    "The Strip",
+    "Old Venturas Strip",
+    "Redsands East",
+    "The Visage"
+   ],
+   "basin": 193,
+   "pct": 0.8
+  },
+  {
+   "cycle": [
+    "Red County (3D Universe)",
+    "Palomino Creek",
+    "Palomino Creek Safehouse"
+   ],
+   "basin": 176,
+   "pct": 0.73
+  },
+  {
+   "cycle": [
+    "La Puerta",
+    "Los Santos International Airport (HD Universe)"
+   ],
+   "basin": 174,
+   "pct": 0.72
+  },
+  {
+   "cycle": [
+    "Modifications/Hot Coffee",
+    "Entertainment Software Rating Board"
+   ],
+   "basin": 163,
+   "pct": 0.68
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Percell Road",
+   "chains": 1708,
+   "pct": 7.1,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Sawed-Off Shotgun",
+   "chains": 866,
+   "pct": 3.6,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Scott Hill",
+   "chains": 346,
+   "pct": 1.44,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Rockstar Lincoln",
+   "chains": 341,
+   "pct": 1.42,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Panoramic",
+   "chains": 153,
+   "pct": 0.64,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Rockstar New England",
+   "chains": 135,
+   "pct": 0.56,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Pedestrians in GTA IV",
+   "chains": 130,
+   "pct": 0.54,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Valley Forge Avenue",
+   "chains": 91,
+   "pct": 0.38,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Matt Van Orden",
+   "chains": 80,
+   "pct": 0.33,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Nintendo Switch",
+   "chains": 79,
+   "pct": 0.33,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Star Junction",
+   "chains": 75,
+   "pct": 0.31,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Xbox Series X and Series S",
+   "chains": 74,
+   "pct": 0.31,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Phil Collins",
+   "chains": 71,
+   "pct": 0.29,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "TJ Barry",
+   "chains": 69,
+   "pct": 0.29,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Tony Smith",
+   "chains": 58,
+   "pct": 0.24,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Los Santos (HD Universe)",
+   "inDegree": 409
+  },
+  {
+   "title": "Pedestrians",
+   "inDegree": 190
+  },
+  {
+   "title": "Eyefind",
+   "inDegree": 138
+  },
+  {
+   "title": "Carl Johnson",
+   "inDegree": 132
+  },
+  {
+   "title": "Algonquin",
+   "inDegree": 130
+  },
+  {
+   "title": "Pedestrians in GTA IV",
+   "inDegree": 129
+  },
+  {
+   "title": "Protagonists in GTA (1997 game)",
+   "inDegree": 125
+  },
+  {
+   "title": "Los Santos (3D Universe)",
+   "inDegree": 103
+  },
+  {
+   "title": "State of Alderney",
+   "inDegree": 94
+  },
+  {
+   "title": "Grand Theft Auto VI/Trailers",
+   "inDegree": 88
+  },
+  {
+   "title": "Money",
+   "inDegree": 85
+  },
+  {
+   "title": "Anywhere City",
+   "inDegree": 82
+  },
+  {
+   "title": "Franklin Clinton",
+   "inDegree": 79
+  },
+  {
+   "title": "Blaine County",
+   "inDegree": 78
+  },
+  {
+   "title": "Portland",
+   "inDegree": 74
+  },
+  {
+   "title": "Las Venturas (3D Universe)",
+   "inDegree": 72
+  },
+  {
+   "title": "Grand Theft Auto VI/Leaks",
+   "inDegree": 69
+  },
+  {
+   "title": "Broker",
+   "inDegree": 67
+  },
+  {
+   "title": "Trevor Philips",
+   "inDegree": 66
+  },
+  {
+   "title": "Niko Bellic",
+   "inDegree": 65
+  },
+  {
+   "title": "Rockstar Games Social Club",
+   "inDegree": 64
+  },
+  {
+   "title": "Xbox Series X and Series S",
+   "inDegree": 63
+  },
+  {
+   "title": "Staunton Island",
+   "inDegree": 61
+  },
+  {
+   "title": "Tommy Vercetti",
+   "inDegree": 57
+  },
+  {
+   "title": "Protagonists in GTA London",
+   "inDegree": 57
+  },
+  {
+   "title": "Tony Smith",
+   "inDegree": 56
+  },
+  {
+   "title": "San Fierro (3D Universe)",
+   "inDegree": 55
+  },
+  {
+   "title": "United States of America",
+   "inDegree": 53
+  },
+  {
+   "title": "Lucia Caminos",
+   "inDegree": 52
+  },
+  {
+   "title": "GTA Online: Smuggler's Run",
+   "inDegree": 51
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Los Santos (HD Universe)",
+   "betweenness": 6100
+  },
+  {
+   "title": "Los Santos Riots",
+   "betweenness": 4900
+  },
+  {
+   "title": "Eddie Pulaski",
+   "betweenness": 3696
+  },
+  {
+   "title": "Vice-Dale County",
+   "betweenness": 3060
+  },
+  {
+   "title": "Grand Theft Auto VI: Ultimate Edition",
+   "betweenness": 2827
+  },
+  {
+   "title": "Grand Theft Auto VI/Screenshots",
+   "betweenness": 2712
+  },
+  {
+   "title": "Watson Bay",
+   "betweenness": 2620
+  },
+  {
+   "title": "Franklin Clinton",
+   "betweenness": 2574
+  },
+  {
+   "title": "Protagonists in GTA (1997 game)",
+   "betweenness": 2538
+  },
+  {
+   "title": "Frank Tenpenny",
+   "betweenness": 2515
+  },
+  {
+   "title": "Hamlet",
+   "betweenness": 2493
+  },
+  {
+   "title": "Communication",
+   "betweenness": 2472
+  },
+  {
+   "title": "State of Alderney",
+   "betweenness": 2349
+  },
+  {
+   "title": "Leonard County",
+   "betweenness": 2310
+  },
+  {
+   "title": "Southern San Andreas Super Autos",
+   "betweenness": 2240
+  },
+  {
+   "title": "Bluegrass",
+   "betweenness": 2224
+  },
+  {
+   "title": "Kelly",
+   "betweenness": 2195
+  },
+  {
+   "title": "Blazer",
+   "betweenness": 2175
+  },
+  {
+   "title": "La Perle",
+   "betweenness": 2156
+  },
+  {
+   "title": "Toni Cipriani",
+   "betweenness": 2124
+  },
+  {
+   "title": "Lucia Caminos",
+   "betweenness": 2060
+  },
+  {
+   "title": "United States of America",
+   "betweenness": 2058
+  },
+  {
+   "title": "Leone Crime Family",
+   "betweenness": 2030
+  },
+  {
+   "title": "Unnamed GTA VI La Perle auto shop",
+   "betweenness": 2015
+  },
+  {
+   "title": "Staunton Island",
+   "betweenness": 1981
+  },
+  {
+   "title": "Leonida Keys",
+   "betweenness": 1980
+  },
+  {
+   "title": "Anywhere City",
+   "betweenness": 1976
+  },
+  {
+   "title": "Money",
+   "betweenness": 1956
+  },
+  {
+   "title": "Bluegrass Radio Mast",
+   "betweenness": 1953
+  },
+  {
+   "title": "Uncle Fu's Crime Syndicate",
+   "betweenness": 1840
+  }
+ ]
+}

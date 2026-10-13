@@ -1,0 +1,98 @@
+{
+ "wiki": "gta",
+ "generatedAt": "2026-10-12T13:44:45.652Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 91.93,
+   "deadEndPct": 8.07,
+   "components": 410,
+   "cycleCount": 409,
+   "meanHops": 3.47,
+   "medianHops": 3,
+   "maxHops": 15,
+   "topAttractor": [
+    "Protagonist",
+    "GTA Online Protagonist"
+   ],
+   "topAttractorPct": 27.6
+  },
+  {
+   "rank": "2",
+   "convergePct": 62.65,
+   "deadEndPct": 37.35,
+   "components": 399,
+   "cycleCount": 398,
+   "meanHops": 4.13,
+   "medianHops": 3,
+   "maxHops": 23,
+   "topAttractor": [
+    "Broker",
+    "Algonquin",
+    "Humboldt River"
+   ],
+   "topAttractorPct": 8.92
+  },
+  {
+   "rank": "3",
+   "convergePct": 49.76,
+   "deadEndPct": 50.24,
+   "components": 298,
+   "cycleCount": 297,
+   "meanHops": 4.27,
+   "medianHops": 4,
+   "maxHops": 20,
+   "topAttractor": [
+    "Frank Tenpenny",
+    "Los Santos Police Department (3D Universe)",
+    "Community Resources Against Street Hoodlums"
+   ],
+   "topAttractorPct": 5.26
+  },
+  {
+   "rank": "5",
+   "convergePct": 30.03,
+   "deadEndPct": 69.97,
+   "components": 175,
+   "cycleCount": 174,
+   "meanHops": 10.85,
+   "medianHops": 8,
+   "maxHops": 40,
+   "topAttractor": [
+    "Eddie Pulaski",
+    "Los Santos Police Department (3D Universe)"
+   ],
+   "topAttractorPct": 8.89
+  },
+  {
+   "rank": "last",
+   "convergePct": 3.41,
+   "deadEndPct": 96.59,
+   "components": 202,
+   "cycleCount": 201,
+   "meanHops": 0.7,
+   "medianHops": 1,
+   "maxHops": 4,
+   "topAttractor": [
+    "2017 Stunt Race Week",
+    "Stunt - In the City"
+   ],
+   "topAttractorPct": 0.21
+  },
+  {
+   "rank": "random",
+   "convergePct": 38.97,
+   "deadEndPct": 61.03,
+   "components": 303,
+   "cycleCount": 302,
+   "meanHops": 11.56,
+   "medianHops": 5,
+   "maxHops": 64,
+   "topAttractor": [
+    "Trey Welsh",
+    "Lick Those Loonies!"
+   ],
+   "topAttractorPct": 9.46
+  }
+ ]
+}

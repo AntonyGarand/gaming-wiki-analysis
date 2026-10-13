@@ -11,7 +11,7 @@ import * as path from "path";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
 const wikiArg = process.argv.find((a) => a.startsWith("--wiki="))?.slice(7) ?? "osrs";
-const ranksArg = process.argv.find((a) => a.startsWith("--ranks="))?.slice(8) ?? "strict1,1,2,3,5,last,random";
+const ranksArg = process.argv.find((a) => a.startsWith("--ranks="))?.slice(8) ?? "strict1,2,3,5,last,random";
 const RANKS = ranksArg.split(",").map((s) => s.trim()).filter(Boolean);
 const wiki = wikis.find((w) => w.id === wikiArg);
 if (!wiki) { console.error(`Unknown --wiki=${wikiArg}`); process.exit(1); }
@@ -19,6 +19,36 @@ if (!wiki) { console.error(`Unknown --wiki=${wikiArg}`); process.exit(1); }
 const OUT_DIR = path.join(ROOT, "output", wiki.id);
 fs.mkdirSync(OUT_DIR, { recursive: true });
 const db = createClient({ url: `file:${path.join(OUT_DIR, "links.sqlite")}` });
+
+// disambiguation pages ("X may refer to:") are not valid walk targets — the
+// game's rules skip them, so links pointing at one are ineligible
+const disambig = new Set<number>();
+{
+  const wikiDb = createClient({ url: `file:${path.join(OUT_DIR, "wiki.sqlite")}` });
+  const r = await wikiDb.execute(
+    "SELECT id FROM page WHERE namespace = 0 AND ((instr(lower(substr(text,1,400)), 'may refer to:') > 0 OR instr(lower(substr(text,1,400)), '{{disambig') > 0) OR title LIKE '% (disambiguation)')"
+  );
+  for (const row of r.rows) disambig.add(Number(row.id));
+  wikiDb.close();
+}
+console.log(`[${wiki.id}] disambiguation pages: ${disambig.size}`);
+
+// date pages ("28 April", "April 28", "17 March 2019") are update-history
+// indexes, not explanations — the walk skips links that land on them
+const MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December";
+const DATE_RE1 = new RegExp(`^(0?[1-9]|[12]\\d|3[01]) (${MONTHS})( \\d{4})?$`, "i");
+const DATE_RE2 = new RegExp(`^(${MONTHS}) (0?[1-9]|[12]\\d|3[01])(,? \\d{4})?$`, "i");
+const YEAR_RE = /^(1[0-9]{3}|20[0-9]{2})$/; // bare years are update timelines, not articles
+const dateIds = new Set<number>();
+{
+  const r = await db.execute("SELECT id, title FROM page");
+  for (const row of r.rows) {
+    const t = String(row.title);
+    if (DATE_RE1.test(t) || DATE_RE2.test(t) || YEAR_RE.test(t)) dateIds.add(Number(row.id));
+  }
+}
+console.log(`[${wiki.id}] date pages: ${dateIds.size}`);
+const skipTarget = new Set<number>([...disambig, ...dateIds]);
 
 const FAMOUS: Record<string, string[]> = {};
 // wiki-specific famous articles can be added here
@@ -63,21 +93,20 @@ async function main() {
   function successorsFor(rankKey: string): { succ: Int32Array; term: Uint8Array } {
     const succ = new Int32Array(N).fill(-1);
     const term = new Uint8Array(N);
-    const nRank = /^\d+$/.test(rankKey) ? Number(rankKey) : null;
+    // every rank is strict: links in parentheses/italics never count, at any N
+    const nRank = rankKey === "strict1" ? 1 : (/^\d+$/.test(rankKey) ? Number(rankKey) : null);
     for (let i = 0; i < N; i++) {
       const links = linksByPage.get(ids[i]);
       if (!links || links.length === 0) { term[i] = 1; continue; }
+      const eligible = links.filter((l) => !l.paren && !l.italic && !(l.target !== null && skipTarget.has(l.target)));
+      if (eligible.length === 0) { term[i] = 1; continue; }
       let chosen: number | null = null;
-      if (rankKey === "strict1") {
-        const first = links.find((l) => !l.paren && !l.italic);
-        chosen = first ? first.target : null;
-        if (!first) { term[i] = 1; continue; }
-      } else if (rankKey === "last") {
-        chosen = links[links.length - 1].target;
+      if (rankKey === "last") {
+        chosen = eligible[eligible.length - 1].target;
       } else if (rankKey === "random") {
-        chosen = links[Math.floor(rngFor(ids[i]) * links.length)].target;
+        chosen = eligible[Math.floor(rngFor(ids[i]) * eligible.length)].target;
       } else if (nRank !== null) {
-        const at = links.find((l) => l.rank === nRank);
+        const at = eligible[nRank - 1];
         if (!at) { term[i] = 2; continue; }
         chosen = at.target;
       } else { term[i] = 1; continue; }
@@ -149,8 +178,8 @@ async function main() {
       let cur = i; const seen = new Set();
       while (cur >= 0 && !seen.has(cur) && succ[cur] !== -1) { seen.add(cur); cur = succ[cur]; }
       // cur is now the terminal node (succ[cur] === -1 or a cycle back)
-      const reason = term[cur] === 1 ? "no links"
-        : term[cur] === 2 ? `only ${linksByPage.get(ids[cur])?.length ?? 0} links`
+      const reason = term[cur] === 1 ? "no eligible links"
+        : term[cur] === 2 ? `only ${linksByPage.get(ids[cur])?.filter((l) => !l.paren && !l.italic).length ?? 0} eligible links`
         : term[cur] === 3 ? "redlink target"
         : "chain breaks";
       const entry = deadTerminal.get(cur) ?? { count: 0, reason };

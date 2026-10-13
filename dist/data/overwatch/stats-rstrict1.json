@@ -1,0 +1,542 @@
+{
+ "wiki": "overwatch",
+ "rank": "strict1",
+ "nodes": 2808,
+ "converge": {
+  "articles": 2303,
+  "pct": 82.02,
+  "deadEnd": 505,
+  "deadEndPct": 17.98,
+  "noLinks": 420,
+  "tooFewLinks": 0,
+  "unresolvable": 59
+ },
+ "hopStats": {
+  "mean": 3.73,
+  "median": 4,
+  "p90": 6,
+  "max": 9
+ },
+ "histogram": {
+  "0": 64,
+  "1": 144,
+  "2": 360,
+  "3": 498,
+  "4": 318,
+  "5": 653,
+  "6": 183,
+  "7": 69,
+  "8": 13,
+  "9": 1
+ },
+ "components": 34,
+ "cycleCount": 33,
+ "largestCycle": {
+  "members": [
+   "Game Modes",
+   "Competitive Play",
+   "Playlist"
+  ],
+  "size": 3,
+  "basin": 1235
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Game Modes",
+    "Competitive Play",
+    "Playlist"
+   ],
+   "basin": 1235,
+   "pct": 43.98
+  },
+  {
+   "cycle": [
+    "Blizzard Entertainment",
+    "Aaron Keller"
+   ],
+   "basin": 632,
+   "pct": 22.51
+  },
+  {
+   "cycle": [
+    "Omnium",
+    "Omnica Corporation"
+   ],
+   "basin": 193,
+   "pct": 6.87
+  },
+  {
+   "cycle": [
+    "Battle Pass",
+    "Cosmetics"
+   ],
+   "basin": 166,
+   "pct": 5.91
+  },
+  {
+   "cycle": [
+    "Shimada clan",
+    "Shimada Castle"
+   ],
+   "basin": 6,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "Health pack",
+    "Items"
+   ],
+   "basin": 6,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "Arbalest Arms Company",
+    "Caledonia Ashe"
+   ],
+   "basin": 5,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Paqarina Research Group",
+    "Inti Warriors"
+   ],
+   "basin": 4,
+   "pct": 0.14
+  },
+  {
+   "cycle": [
+    "Doomfist (title)",
+    "Adhabu Ngumi"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Nepal",
+    "Nepal (country)"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Pachimari",
+    "Yachemon"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "September 23, 2016 Patch",
+    "September 13, 2016 Patch"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "May 18, 2021 Patch (1)",
+    "May 18, 2021 Patch (2)"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Infinite Empire",
+    "Watchers"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "OWL Skins (Overwatch 1)",
+    "OWL Skins (Overwatch 2)"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Denmark",
+    "Copenhagen"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Communication wheel",
+    "Ping"
+   ],
+   "basin": 2,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Patch Notes"
+   ],
+   "basin": 2,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "January 31, 2017 Patch",
+    "January 24, 2017 Patch"
+   ],
+   "basin": 2,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "November 30, 2016 Patch",
+    "November 16, 2016 Patch"
+   ],
+   "basin": 2,
+   "pct": 0.07
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Cast",
+   "chains": 7,
+   "pct": 0.25,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Team EnVyUs",
+   "chains": 4,
+   "pct": 0.14,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Gale Force eSports",
+   "chains": 4,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Wuxing University",
+   "chains": 4,
+   "pct": 0.14,
+   "reason": "redlink target"
+  },
+  {
+   "title": "May 8, 2018 Patch",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Luminosity Gaming",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Bold Purpose Gaming",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "ELEAGUE Overwatch Open",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "October 19, 2016 Patch",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "June 26, 2018 Patch",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Nicky Drayden",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "TS-1",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "April 10, 2018 Patch",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Fort Starr",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Overwatch Wiki",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Omnic",
+   "inDegree": 80
+  },
+  {
+   "title": "Overwatch (group)",
+   "inDegree": 78
+  },
+  {
+   "title": "Heroes",
+   "inDegree": 75
+  },
+  {
+   "title": "Limited-time event",
+   "inDegree": 65
+  },
+  {
+   "title": "Blizzard Entertainment",
+   "inDegree": 64
+  },
+  {
+   "title": "Omnic Crisis",
+   "inDegree": 55
+  },
+  {
+   "title": "Sub-Roles",
+   "inDegree": 54
+  },
+  {
+   "title": "Talon",
+   "inDegree": 32
+  },
+  {
+   "title": "Overwatch: Undivided",
+   "inDegree": 30
+  },
+  {
+   "title": "United States",
+   "inDegree": 28
+  },
+  {
+   "title": "Season",
+   "inDegree": 28
+  },
+  {
+   "title": "Game Modes",
+   "inDegree": 26
+  },
+  {
+   "title": "Cinematic",
+   "inDegree": 25
+  },
+  {
+   "title": "Numbani",
+   "inDegree": 23
+  },
+  {
+   "title": "LumériCo",
+   "inDegree": 23
+  },
+  {
+   "title": "Overwatch 2",
+   "inDegree": 23
+  },
+  {
+   "title": "Season/2026",
+   "inDegree": 23
+  },
+  {
+   "title": "New Queen Street",
+   "inDegree": 22
+  },
+  {
+   "title": "Efi Oladele",
+   "inDegree": 20
+  },
+  {
+   "title": "Null Sector",
+   "inDegree": 19
+  },
+  {
+   "title": "Experimental",
+   "inDegree": 19
+  },
+  {
+   "title": "Cosmetics",
+   "inDegree": 18
+  },
+  {
+   "title": "Ana",
+   "inDegree": 17
+  },
+  {
+   "title": "Stadium",
+   "inDegree": 17
+  },
+  {
+   "title": "Torbjörn",
+   "inDegree": 16
+  },
+  {
+   "title": "Horizon Lunar Colony",
+   "inDegree": 16
+  },
+  {
+   "title": "Overwatch League",
+   "inDegree": 16
+  },
+  {
+   "title": "Maps",
+   "inDegree": 15
+  },
+  {
+   "title": "Overwatch",
+   "inDegree": 15
+  },
+  {
+   "title": "Boston Uprising",
+   "inDegree": 15
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Sub-Roles",
+   "betweenness": 2930
+  },
+  {
+   "title": "Roles",
+   "betweenness": 2368
+  },
+  {
+   "title": "Game Modes",
+   "betweenness": 2327
+  },
+  {
+   "title": "Heroes",
+   "betweenness": 2052
+  },
+  {
+   "title": "Omnic Crisis",
+   "betweenness": 1544
+  },
+  {
+   "title": "Overwatch: First Strike",
+   "betweenness": 1161
+  },
+  {
+   "title": "Competitive Play",
+   "betweenness": 1101
+  },
+  {
+   "title": "Micky Neilson",
+   "betweenness": 778
+  },
+  {
+   "title": "Blizzard Entertainment",
+   "betweenness": 630
+  },
+  {
+   "title": "Overwatch (group)",
+   "betweenness": 575
+  },
+  {
+   "title": "Vendetta",
+   "betweenness": 372
+  },
+  {
+   "title": "Season/2026",
+   "betweenness": 371
+  },
+  {
+   "title": "Omnic",
+   "betweenness": 352
+  },
+  {
+   "title": "Hybrid",
+   "betweenness": 348
+  },
+  {
+   "title": "Playlist",
+   "betweenness": 271
+  },
+  {
+   "title": "United States",
+   "betweenness": 270
+  },
+  {
+   "title": "Limited-time event",
+   "betweenness": 240
+  },
+  {
+   "title": "Overwatch: Undivided",
+   "betweenness": 240
+  },
+  {
+   "title": "Escort",
+   "betweenness": 237
+  },
+  {
+   "title": "Numbani",
+   "betweenness": 204
+  },
+  {
+   "title": "Omnium",
+   "betweenness": 187
+  },
+  {
+   "title": "Skins",
+   "betweenness": 168
+  },
+  {
+   "title": "Push",
+   "betweenness": 159
+  },
+  {
+   "title": "Control",
+   "betweenness": 153
+  },
+  {
+   "title": "Arcade",
+   "betweenness": 153
+  },
+  {
+   "title": "Seasonal events",
+   "betweenness": 148
+  },
+  {
+   "title": "Talon",
+   "betweenness": 147
+  },
+  {
+   "title": "LumériCo",
+   "betweenness": 140
+  },
+  {
+   "title": "Assault",
+   "betweenness": 138
+  },
+  {
+   "title": "Dorado",
+   "betweenness": 136
+  }
+ ]
+}

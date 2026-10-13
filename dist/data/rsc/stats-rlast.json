@@ -1,0 +1,574 @@
+{
+ "wiki": "rsc",
+ "rank": "last",
+ "nodes": 4331,
+ "converge": {
+  "articles": 3703,
+  "pct": 85.5,
+  "deadEnd": 628,
+  "deadEndPct": 14.5,
+  "noLinks": 479,
+  "tooFewLinks": 0,
+  "unresolvable": 13
+ },
+ "hopStats": {
+  "mean": 8.5,
+  "median": 5,
+  "p90": 23,
+  "max": 37
+ },
+ "histogram": {
+  "0": 295,
+  "1": 352,
+  "2": 332,
+  "3": 321,
+  "4": 323,
+  "5": 231,
+  "6": 184,
+  "7": 154,
+  "8": 139,
+  "9": 108,
+  "10": 99,
+  "11": 122,
+  "12": 129,
+  "13": 166,
+  "14": 99,
+  "15": 74,
+  "16": 53,
+  "17": 37,
+  "18": 18,
+  "19": 20,
+  "20": 11,
+  "21": 18,
+  "22": 45,
+  "23": 42,
+  "24": 35,
+  "25": 21,
+  "26": 20,
+  "27": 58,
+  "28": 24,
+  "29": 30,
+  "30": 55,
+  "31": 29,
+  "32": 20,
+  "33": 18,
+  "34": 10,
+  "35": 8,
+  "36": 2,
+  "37": 1
+ },
+ "components": 145,
+ "cycleCount": 144,
+ "largestCycle": {
+  "members": [
+   "Melee training",
+   "Bestiary",
+   "King Black Dragon",
+   "Defense"
+  ],
+  "size": 4,
+  "basin": 1263
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Melee training",
+    "Bestiary",
+    "King Black Dragon",
+    "Defense"
+   ],
+   "basin": 1263,
+   "pct": 29.16
+  },
+  {
+   "cycle": [
+    "RuneScape Classic",
+    "Veteran",
+    "Jagex"
+   ],
+   "basin": 811,
+   "pct": 18.73
+  },
+  {
+   "cycle": [
+    "Unicorn",
+    "Black Unicorn"
+   ],
+   "basin": 131,
+   "pct": 3.02
+  },
+  {
+   "cycle": [
+    "Magic",
+    "Tank mage"
+   ],
+   "basin": 114,
+   "pct": 2.63
+  },
+  {
+   "cycle": [
+    "Bartender (Blue Moon Inn)",
+    "Sign (blue moon inn)"
+   ],
+   "basin": 112,
+   "pct": 2.59
+  },
+  {
+   "cycle": [
+    "Tai Bwo Wannai",
+    "Tribesman"
+   ],
+   "basin": 88,
+   "pct": 2.03
+  },
+  {
+   "cycle": [
+    "Rope Up",
+    "Rope ladder"
+   ],
+   "basin": 65,
+   "pct": 1.5
+  },
+  {
+   "cycle": [
+    "Grand tree",
+    "Glough"
+   ],
+   "basin": 64,
+   "pct": 1.48
+  },
+  {
+   "cycle": [
+    "Lift",
+    "Lift Platform"
+   ],
+   "basin": 61,
+   "pct": 1.41
+  },
+  {
+   "cycle": [
+    "Vincent",
+    "Victor"
+   ],
+   "basin": 60,
+   "pct": 1.39
+  },
+  {
+   "cycle": [
+    "Pirate's treasure",
+    "The Lady of the Waves"
+   ],
+   "basin": 47,
+   "pct": 1.09
+  },
+  {
+   "cycle": [
+    "Waterfall quest",
+    "Diamond"
+   ],
+   "basin": 39,
+   "pct": 0.9
+  },
+  {
+   "cycle": [
+    "Dwarf commander",
+    "Dwarf Cannon engineer"
+   ],
+   "basin": 38,
+   "pct": 0.88
+  },
+  {
+   "cycle": [
+    "RuneScape Classic Map",
+    "RuneScape"
+   ],
+   "basin": 35,
+   "pct": 0.81
+  },
+  {
+   "cycle": [
+    "Drop trick",
+    "Bank trick"
+   ],
+   "basin": 34,
+   "pct": 0.79
+  },
+  {
+   "cycle": [
+    "Tutorial Island"
+   ],
+   "basin": 33,
+   "pct": 0.76
+  },
+  {
+   "cycle": [
+    "Iban",
+    "Tomb of Iban",
+    "Ibans Ashes"
+   ],
+   "basin": 31,
+   "pct": 0.72
+  },
+  {
+   "cycle": [
+    "Large cog (purple)",
+    "Clock pole purple"
+   ],
+   "basin": 28,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Range",
+    "Cook's Range"
+   ],
+   "basin": 28,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Fight Arena mine",
+    "Port Khazard mine"
+   ],
+   "basin": 19,
+   "pct": 0.44
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Influence",
+   "chains": 48,
+   "pct": 1.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Watchtower",
+   "chains": 44,
+   "pct": 1.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Straven",
+   "chains": 18,
+   "pct": 0.42,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Special curry",
+   "chains": 10,
+   "pct": 0.23,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Manual:Fatigue (2003 Rev 1)",
+   "chains": 5,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Saga of the Antihero",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "God letters:Issue 12 - Guthix Manifests",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Post-closure years",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "God letters",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "God letters:Issue 7 - Unisex?",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Epilepsy (2003)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Jagex Team (2002)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Smithing (2001)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Manual:Getting Started (2003)",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Spirit of the Pass",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Experience",
+   "inDegree": 105
+  },
+  {
+   "title": "Coins",
+   "inDegree": 44
+  },
+  {
+   "title": "The Grand Tree (location)",
+   "inDegree": 37
+  },
+  {
+   "title": "Character",
+   "inDegree": 36
+  },
+  {
+   "title": "Hits",
+   "inDegree": 36
+  },
+  {
+   "title": "Items",
+   "inDegree": 35
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 32
+  },
+  {
+   "title": "Pay-to-play",
+   "inDegree": 32
+  },
+  {
+   "title": "Quests",
+   "inDegree": 29
+  },
+  {
+   "title": "Examine",
+   "inDegree": 24
+  },
+  {
+   "title": "Cooking",
+   "inDegree": 23
+  },
+  {
+   "title": "Fatigue",
+   "inDegree": 23
+  },
+  {
+   "title": "Magic",
+   "inDegree": 22
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 22
+  },
+  {
+   "title": "Legend's Quest",
+   "inDegree": 19
+  },
+  {
+   "title": "Ladder",
+   "inDegree": 19
+  },
+  {
+   "title": "Drop trick",
+   "inDegree": 19
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 18
+  },
+  {
+   "title": "Thieving",
+   "inDegree": 18
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 17
+  },
+  {
+   "title": "Al Kharid",
+   "inDegree": 17
+  },
+  {
+   "title": "Free-to-play",
+   "inDegree": 17
+  },
+  {
+   "title": "Weapon poison",
+   "inDegree": 17
+  },
+  {
+   "title": "RuneScape Classic",
+   "inDegree": 16
+  },
+  {
+   "title": "RuneScape",
+   "inDegree": 15
+  },
+  {
+   "title": "Prayer",
+   "inDegree": 14
+  },
+  {
+   "title": "RuneScape 2",
+   "inDegree": 14
+  },
+  {
+   "title": "East Ardougne",
+   "inDegree": 14
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 14
+  },
+  {
+   "title": "Trade",
+   "inDegree": 14
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Ground unicorn horn",
+   "betweenness": 8925
+  },
+  {
+   "title": "Underground pass",
+   "betweenness": 8832
+  },
+  {
+   "title": "Varrock",
+   "betweenness": 8625
+  },
+  {
+   "title": "Biohazard",
+   "betweenness": 8568
+  },
+  {
+   "title": "Chaos Druid warrior",
+   "betweenness": 8520
+  },
+  {
+   "title": "Unicorn horn",
+   "betweenness": 8470
+  },
+  {
+   "title": "Observatory quest",
+   "betweenness": 8347
+  },
+  {
+   "title": "Cure poison Potion",
+   "betweenness": 8265
+  },
+  {
+   "title": "Observatory dungeon",
+   "betweenness": 7902
+  },
+  {
+   "title": "Telescope",
+   "betweenness": 7872
+  },
+  {
+   "title": "Uncut sapphire",
+   "betweenness": 7395
+  },
+  {
+   "title": "Shilo village",
+   "betweenness": 7126
+  },
+  {
+   "title": "Yanni",
+   "betweenness": 6630
+  },
+  {
+   "title": "Beads of the dead",
+   "betweenness": 6180
+  },
+  {
+   "title": "Scythe",
+   "betweenness": 5824
+  },
+  {
+   "title": "Lady Keli",
+   "betweenness": 5753
+  },
+  {
+   "title": "Varrock Swords",
+   "betweenness": 5694
+  },
+  {
+   "title": "Iron Long Sword",
+   "betweenness": 5643
+  },
+  {
+   "title": "Experience",
+   "betweenness": 5580
+  },
+  {
+   "title": "Rope",
+   "betweenness": 5310
+  },
+  {
+   "title": "Fishing Trawler",
+   "betweenness": 4923
+  },
+  {
+   "title": "Hits",
+   "betweenness": 4668
+  },
+  {
+   "title": "Asgarnian southern peninsula",
+   "betweenness": 4440
+  },
+  {
+   "title": "Pure",
+   "betweenness": 4230
+  },
+  {
+   "title": "Asgarnian Ice Dungeon",
+   "betweenness": 3892
+  },
+  {
+   "title": "Dragon slayer",
+   "betweenness": 3856
+  },
+  {
+   "title": "Melee training",
+   "betweenness": 3743
+  },
+  {
+   "title": "Coins",
+   "betweenness": 3520
+  },
+  {
+   "title": "Player killing",
+   "betweenness": 3460
+  },
+  {
+   "title": "Wilderness",
+   "betweenness": 3443
+  }
+ ]
+}

@@ -1,0 +1,537 @@
+{
+ "wiki": "fortnite",
+ "rank": "5",
+ "nodes": 35312,
+ "converge": {
+  "articles": 1810,
+  "pct": 5.13,
+  "deadEnd": 33502,
+  "deadEndPct": 94.87,
+  "noLinks": 2196,
+  "tooFewLinks": 21278,
+  "unresolvable": 702
+ },
+ "hopStats": {
+  "mean": 3.13,
+  "median": 3,
+  "p90": 6,
+  "max": 11
+ },
+ "histogram": {
+  "0": 304,
+  "1": 298,
+  "2": 237,
+  "3": 268,
+  "4": 116,
+  "5": 276,
+  "6": 131,
+  "7": 63,
+  "8": 58,
+  "9": 38,
+  "10": 20,
+  "11": 1
+ },
+ "components": 181,
+ "cycleCount": 180,
+ "largestCycle": {
+  "members": [
+   "Dead Pixels"
+  ],
+  "size": 1,
+  "basin": 915
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Dead Pixels"
+   ],
+   "basin": 915,
+   "pct": 2.59
+  },
+  {
+   "cycle": [
+    "Heavy Shotgun",
+    "Backbreaker"
+   ],
+   "basin": 109,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Fortnite: Reload"
+   ],
+   "basin": 75,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "Pleasant Park",
+    "Retail Row"
+   ],
+   "basin": 26,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Metal Mouth",
+    "Item Shop History/July 12th 2021",
+    "Metal Mouth Challenges"
+   ],
+   "basin": 26,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Minigun"
+   ],
+   "basin": 23,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Item Shop History/February 5th 2021",
+    "TD Titan"
+   ],
+   "basin": 22,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Kuno",
+    "Kenji"
+   ],
+   "basin": 21,
+   "pct": 0.06
+  },
+  {
+   "cycle": [
+    "Son Goku",
+    "Vegeta"
+   ],
+   "basin": 17,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Bastian"
+   ],
+   "basin": 16,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Grappler",
+    "Icy Grappler"
+   ],
+   "basin": 15,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Riku"
+   ],
+   "basin": 15,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Survivor",
+    "F.O.R.T."
+   ],
+   "basin": 13,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Sol's Curse",
+    "Item Shop History/June 6th 2021"
+   ],
+   "basin": 13,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Dark Voyager (Reality Redacted)"
+   ],
+   "basin": 13,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Fortnite: China",
+    "Mystique's Skull",
+    "Mystique's Orb"
+   ],
+   "basin": 12,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Cosma",
+    "Horizon"
+   ],
+   "basin": 10,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Deku's Smash",
+    "My Hero Academia Supply Drop"
+   ],
+   "basin": 9,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Yoruichi Shihoin"
+   ],
+   "basin": 9,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Shockwave Grenade",
+    "Shockwave Launcher"
+   ],
+   "basin": 8,
+   "pct": 0.02
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Epic Games",
+   "chains": 726,
+   "pct": 2.06,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Twine Peaks Storm Shield Defense 5",
+   "chains": 406,
+   "pct": 1.15,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Sprays",
+   "chains": 315,
+   "pct": 0.89,
+   "reason": "only 7 eligible links"
+  },
+  {
+   "title": "Update v5.30",
+   "chains": 307,
+   "pct": 0.87,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Emotes",
+   "chains": 212,
+   "pct": 0.6,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Better Now",
+   "chains": 177,
+   "pct": 0.5,
+   "reason": "only 5 eligible links"
+  },
+  {
+   "title": "Fortnite Crew",
+   "chains": 144,
+   "pct": 0.41,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Checkpoint Reload",
+   "chains": 142,
+   "pct": 0.4,
+   "reason": "only 5 eligible links"
+  },
+  {
+   "title": "Jam Tracks",
+   "chains": 142,
+   "pct": 0.4,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Faint",
+   "chains": 122,
+   "pct": 0.35,
+   "reason": "only 6 eligible links"
+  },
+  {
+   "title": "Heroes",
+   "chains": 108,
+   "pct": 0.31,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Storm Shield",
+   "chains": 107,
+   "pct": 0.3,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Salty Springs",
+   "chains": 105,
+   "pct": 0.3,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Pistols",
+   "chains": 99,
+   "pct": 0.28,
+   "reason": "only 6 eligible links"
+  },
+  {
+   "title": "Wild X",
+   "chains": 79,
+   "pct": 0.22,
+   "reason": "only 5 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Outfits",
+   "inDegree": 239
+  },
+  {
+   "title": "Quests",
+   "inDegree": 200
+  },
+  {
+   "title": "Fortnite: Battle Royale",
+   "inDegree": 189
+  },
+  {
+   "title": "Back Blings",
+   "inDegree": 125
+  },
+  {
+   "title": "Built-In Cosmetics",
+   "inDegree": 123
+  },
+  {
+   "title": "Fortnite Crew",
+   "inDegree": 118
+  },
+  {
+   "title": "Better Now",
+   "inDegree": 107
+  },
+  {
+   "title": "Update v34.00",
+   "inDegree": 100
+  },
+  {
+   "title": "Counterpart Outfits",
+   "inDegree": 92
+  },
+  {
+   "title": "Athena",
+   "inDegree": 80
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "inDegree": 67
+  },
+  {
+   "title": "Characters (Battle Royale)",
+   "inDegree": 56
+  },
+  {
+   "title": "Decals",
+   "inDegree": 48
+  },
+  {
+   "title": "Hero Back Blings",
+   "inDegree": 46
+  },
+  {
+   "title": "Battle Pass",
+   "inDegree": 45
+  },
+  {
+   "title": "Loading Screens",
+   "inDegree": 42
+  },
+  {
+   "title": "Asteria",
+   "inDegree": 41
+  },
+  {
+   "title": "Emotes",
+   "inDegree": 40
+  },
+  {
+   "title": "XP",
+   "inDegree": 40
+  },
+  {
+   "title": "Fight the Storm",
+   "inDegree": 40
+  },
+  {
+   "title": "Update v33.10",
+   "inDegree": 39
+  },
+  {
+   "title": "Breed",
+   "inDegree": 36
+  },
+  {
+   "title": "Fortnite",
+   "inDegree": 34
+  },
+  {
+   "title": "Jam Tracks",
+   "inDegree": 34
+  },
+  {
+   "title": "The Diary Of Jane",
+   "inDegree": 34
+  },
+  {
+   "title": "Ventures",
+   "inDegree": 33
+  },
+  {
+   "title": "Industry Baby",
+   "inDegree": 33
+  },
+  {
+   "title": "Wraps",
+   "inDegree": 32
+  },
+  {
+   "title": "Fade to Black",
+   "inDegree": 32
+  },
+  {
+   "title": "Mambo No. 5 (A Little Bit of...)",
+   "inDegree": 32
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Outfits",
+   "betweenness": 2172
+  },
+  {
+   "title": "Fortnite: Battle Royale",
+   "betweenness": 2022
+  },
+  {
+   "title": "Giddy-up",
+   "betweenness": 1632
+  },
+  {
+   "title": "Built-In Cosmetics",
+   "betweenness": 1416
+  },
+  {
+   "title": "Trios",
+   "betweenness": 1350
+  },
+  {
+   "title": "Back Blings",
+   "betweenness": 912
+  },
+  {
+   "title": "Update v19.00",
+   "betweenness": 852
+  },
+  {
+   "title": "Named Locations",
+   "betweenness": 816
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "betweenness": 798
+  },
+  {
+   "title": "Coney Crossroads",
+   "betweenness": 742
+  },
+  {
+   "title": "The Daily Bugle",
+   "betweenness": 725
+  },
+  {
+   "title": "Skill Based Matchmaking",
+   "betweenness": 689
+  },
+  {
+   "title": "Volcano",
+   "betweenness": 652
+  },
+  {
+   "title": "XP",
+   "betweenness": 602
+  },
+  {
+   "title": "Bosses",
+   "betweenness": 594
+  },
+  {
+   "title": "Medallions",
+   "betweenness": 584
+  },
+  {
+   "title": "Quests",
+   "betweenness": 566
+  },
+  {
+   "title": "Cosmetic Items",
+   "betweenness": 546
+  },
+  {
+   "title": "Self-Revive Device",
+   "betweenness": 518
+  },
+  {
+   "title": "Weapon Mods",
+   "betweenness": 510
+  },
+  {
+   "title": "Victory Royale",
+   "betweenness": 504
+  },
+  {
+   "title": "Fortnite",
+   "betweenness": 480
+  },
+  {
+   "title": "Locker",
+   "betweenness": 480
+  },
+  {
+   "title": "Weaponry (Battle Royale)",
+   "betweenness": 468
+  },
+  {
+   "title": "Team Rumble",
+   "betweenness": 445
+  },
+  {
+   "title": "Steamy Stacks",
+   "betweenness": 441
+  },
+  {
+   "title": "Building",
+   "betweenness": 416
+  },
+  {
+   "title": "Montague's Modular Nemesis AR",
+   "betweenness": 416
+  },
+  {
+   "title": "Founder's Pack",
+   "betweenness": 414
+  },
+  {
+   "title": "Reality Tree",
+   "betweenness": 408
+  }
+ ]
+}

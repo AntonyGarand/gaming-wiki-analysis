@@ -1,0 +1,111 @@
+{
+ "wiki": "terraria",
+ "generatedAt": "2026-10-12T17:01:59.674Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 71.19,
+   "deadEndPct": 28.81,
+   "components": 19,
+   "cycleCount": 18,
+   "meanHops": 3.98,
+   "medianHops": 3,
+   "maxHops": 14,
+   "topAttractor": [
+    "Items",
+    "World"
+   ],
+   "topAttractorPct": 69.02
+  },
+  {
+   "rank": "2",
+   "convergePct": 63.5,
+   "deadEndPct": 36.5,
+   "components": 38,
+   "cycleCount": 37,
+   "meanHops": 5.42,
+   "medianHops": 4,
+   "maxHops": 15,
+   "topAttractor": [
+    "Layers",
+    "Depth Meter"
+   ],
+   "topAttractorPct": 35.99
+  },
+  {
+   "rank": "3",
+   "convergePct": 53.56,
+   "deadEndPct": 46.44,
+   "components": 62,
+   "cycleCount": 61,
+   "meanHops": 8.85,
+   "medianHops": 7,
+   "maxHops": 24,
+   "topAttractor": [
+    "The Underworld",
+    "Lava"
+   ],
+   "topAttractorPct": 35.24
+  },
+  {
+   "rank": "5",
+   "convergePct": 12.32,
+   "deadEndPct": 87.68,
+   "components": 48,
+   "cycleCount": 47,
+   "meanHops": 1.89,
+   "medianHops": 2,
+   "maxHops": 8,
+   "topAttractor": [
+    "Blocks",
+    "Inventory",
+    "Consumables",
+    "Bosses"
+   ],
+   "topAttractorPct": 4.3
+  },
+  {
+   "rank": "last",
+   "convergePct": 63.13,
+   "deadEndPct": 36.87,
+   "components": 181,
+   "cycleCount": 180,
+   "meanHops": 5.72,
+   "medianHops": 4,
+   "maxHops": 23,
+   "topAttractor": [
+    "Bestiary",
+    "Re-Logic",
+    "Steampunker"
+   ],
+   "topAttractorPct": 32.57
+  },
+  {
+   "rank": "random",
+   "convergePct": 71.69,
+   "deadEndPct": 28.31,
+   "components": 45,
+   "cycleCount": 44,
+   "meanHops": 14.59,
+   "medianHops": 12,
+   "maxHops": 44,
+   "topAttractor": [
+    "Cavern",
+    "Goblin Tinkerer",
+    "Dye Trader",
+    "Party",
+    "NPCs",
+    "Biomes",
+    "Living Wood Chest",
+    "Minecarts",
+    "Minecart Track",
+    "Buffs",
+    "Pets",
+    "Pressure Plates",
+    "Mechanisms",
+    "Wire"
+   ],
+   "topAttractorPct": 63.51
+  }
+ ]
+}

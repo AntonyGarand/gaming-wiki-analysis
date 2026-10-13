@@ -1,0 +1,107 @@
+{
+ "wiki": "minecraft",
+ "generatedAt": "2026-10-12T13:47:16.388Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 58.47,
+   "deadEndPct": 41.53,
+   "components": 137,
+   "cycleCount": 136,
+   "meanHops": 3.79,
+   "medianHops": 3,
+   "maxHops": 14,
+   "topAttractor": [
+    "Block",
+    "Slab"
+   ],
+   "topAttractorPct": 32.84
+  },
+  {
+   "rank": "2",
+   "convergePct": 47.22,
+   "deadEndPct": 52.78,
+   "components": 97,
+   "cycleCount": 96,
+   "meanHops": 3.92,
+   "medianHops": 4,
+   "maxHops": 20,
+   "topAttractor": [
+    "Player",
+    "Mob",
+    "Mob AI",
+    "NBT format",
+    "UUID",
+    "Java Edition 20w12a",
+    "Respawn Anchor"
+   ],
+   "topAttractorPct": 23.72
+  },
+  {
+   "rank": "3",
+   "convergePct": 40.25,
+   "deadEndPct": 59.75,
+   "components": 75,
+   "cycleCount": 74,
+   "meanHops": 6.43,
+   "medianHops": 6,
+   "maxHops": 20,
+   "topAttractor": [
+    "Stronghold",
+    "End portal"
+   ],
+   "topAttractorPct": 20.02
+  },
+  {
+   "rank": "5",
+   "convergePct": 28.91,
+   "deadEndPct": 71.09,
+   "components": 42,
+   "cycleCount": 41,
+   "meanHops": 12.36,
+   "medianHops": 12,
+   "maxHops": 33,
+   "topAttractor": [
+    "Item",
+    "Inventory"
+   ],
+   "topAttractorPct": 23.41
+  },
+  {
+   "rank": "last",
+   "convergePct": 1.22,
+   "deadEndPct": 98.78,
+   "components": 74,
+   "cycleCount": 73,
+   "meanHops": 0.74,
+   "medianHops": 0,
+   "maxHops": 5,
+   "topAttractor": [
+    "Java Edition mob render history/Zombified Piglin",
+    "Java Edition mob render history/Zombie Villager"
+   ],
+   "topAttractorPct": 0.17
+  },
+  {
+   "rank": "random",
+   "convergePct": 14,
+   "deadEndPct": 86,
+   "components": 106,
+   "cycleCount": 105,
+   "meanHops": 7.52,
+   "medianHops": 4,
+   "maxHops": 35,
+   "topAttractor": [
+    "Entity",
+    "Spider Jockey",
+    "Skeleton",
+    "Villager",
+    "Zombie Villager",
+    "Mob spawning",
+    "Llama",
+    "Mob"
+   ],
+   "topAttractorPct": 6.85
+  }
+ ]
+}

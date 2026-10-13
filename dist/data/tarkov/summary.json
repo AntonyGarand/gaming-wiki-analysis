@@ -1,0 +1,96 @@
+{
+ "wiki": "tarkov",
+ "generatedAt": "2026-10-12T17:01:02.294Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 54.57,
+   "deadEndPct": 45.43,
+   "components": 24,
+   "cycleCount": 23,
+   "meanHops": 2.08,
+   "medianHops": 2,
+   "maxHops": 4,
+   "topAttractor": [
+    "Story chapters",
+    "Endings"
+   ],
+   "topAttractorPct": 19.67
+  },
+  {
+   "rank": "2",
+   "convergePct": 41.01,
+   "deadEndPct": 58.99,
+   "components": 74,
+   "cycleCount": 73,
+   "meanHops": 3.51,
+   "medianHops": 3,
+   "maxHops": 11,
+   "topAttractor": [
+    "Transits",
+    "Streets of Tarkov"
+   ],
+   "topAttractorPct": 15.71
+  },
+  {
+   "rank": "3",
+   "convergePct": 9.45,
+   "deadEndPct": 90.55,
+   "components": 51,
+   "cycleCount": 50,
+   "meanHops": 1.96,
+   "medianHops": 2,
+   "maxHops": 6,
+   "topAttractor": [
+    "Hideout",
+    "Crafting"
+   ],
+   "topAttractorPct": 4.3
+  },
+  {
+   "rank": "5",
+   "convergePct": 7.53,
+   "deadEndPct": 92.47,
+   "components": 16,
+   "cycleCount": 15,
+   "meanHops": 1.89,
+   "medianHops": 2,
+   "maxHops": 5,
+   "topAttractor": [
+    "Shoreline",
+    "NSV Utyos 12.7x108 heavy machine gun"
+   ],
+   "topAttractorPct": 4.68
+  },
+  {
+   "rank": "last",
+   "convergePct": 0.03,
+   "deadEndPct": 99.97,
+   "components": 2,
+   "cycleCount": 1,
+   "meanHops": 0,
+   "medianHops": 0,
+   "maxHops": 0,
+   "topAttractor": [
+    "Teacher",
+    "Snowman t-shirt"
+   ],
+   "topAttractorPct": 0.03
+  },
+  {
+   "rank": "random",
+   "convergePct": 22.77,
+   "deadEndPct": 77.23,
+   "components": 42,
+   "cycleCount": 41,
+   "meanHops": 4.46,
+   "medianHops": 4,
+   "maxHops": 13,
+   "topAttractor": [
+    "Map of Tarkov",
+    "Shoreline"
+   ],
+   "topAttractorPct": 14.51
+  }
+ ]
+}

@@ -1,0 +1,523 @@
+{
+ "wiki": "overwatch",
+ "rank": "5",
+ "nodes": 2808,
+ "converge": {
+  "articles": 275,
+  "pct": 9.79,
+  "deadEnd": 2533,
+  "deadEndPct": 90.21,
+  "noLinks": 420,
+  "tooFewLinks": 1104,
+  "unresolvable": 69
+ },
+ "hopStats": {
+  "mean": 1.71,
+  "median": 1,
+  "p90": 3,
+  "max": 8
+ },
+ "histogram": {
+  "0": 35,
+  "1": 108,
+  "2": 76,
+  "3": 35,
+  "4": 13,
+  "5": 2,
+  "6": 1,
+  "7": 3,
+  "8": 2
+ },
+ "components": 19,
+ "cycleCount": 18,
+ "largestCycle": {
+  "members": [
+   "Omnic Crisis",
+   "Omnium"
+  ],
+  "size": 2,
+  "basin": 95
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Omnic Crisis",
+    "Omnium"
+   ],
+   "basin": 95,
+   "pct": 3.38
+  },
+  {
+   "cycle": [
+    "Talon",
+    "Vendetta",
+    "Season/2026"
+   ],
+   "basin": 35,
+   "pct": 1.25
+  },
+  {
+   "cycle": [
+    "Game Modes",
+    "Control"
+   ],
+   "basin": 23,
+   "pct": 0.82
+  },
+  {
+   "cycle": [
+    "Gwishin",
+    "East China Sea"
+   ],
+   "basin": 16,
+   "pct": 0.57
+  },
+  {
+   "cycle": [
+    "Thames District",
+    "London"
+   ],
+   "basin": 15,
+   "pct": 0.53
+  },
+  {
+   "cycle": [
+    "Competitive Points",
+    "Competitive Progression"
+   ],
+   "basin": 12,
+   "pct": 0.43
+  },
+  {
+   "cycle": [
+    "Efi Oladele",
+    "Tonal Abyss"
+   ],
+   "basin": 10,
+   "pct": 0.36
+  },
+  {
+   "cycle": [
+    "Hashimoto clan",
+    "Tokyo"
+   ],
+   "basin": 9,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Shop"
+   ],
+   "basin": 9,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Witch of the Wilds",
+    "Junkenstein's Monster"
+   ],
+   "basin": 9,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Escort",
+    "Overtime"
+   ],
+   "basin": 7,
+   "pct": 0.25
+  },
+  {
+   "cycle": [
+    "Artificial intelligence",
+    "Aurora"
+   ],
+   "basin": 7,
+   "pct": 0.25
+  },
+  {
+   "cycle": [
+    "Ana"
+   ],
+   "basin": 7,
+   "pct": 0.25
+  },
+  {
+   "cycle": [
+    "Mondatta",
+    "R-7000 Ravager",
+    "Phreaks"
+   ],
+   "basin": 6,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "Paris",
+    "France"
+   ],
+   "basin": 6,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "MacReady",
+    "Adams"
+   ],
+   "basin": 5,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Dayo",
+    "Bisi"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Estádio das Rãs"
+   ],
+   "basin": 1,
+   "pct": 0.04
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Wreckers",
+   "chains": 652,
+   "pct": 23.22,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Player Titles",
+   "chains": 58,
+   "pct": 2.07,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Cape Town",
+   "chains": 21,
+   "pct": 0.75,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Ryan Dennis",
+   "chains": 16,
+   "pct": 0.57,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Overwatch Champions Series",
+   "chains": 13,
+   "pct": 0.46,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Durovidro",
+   "chains": 12,
+   "pct": 0.43,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Metal Mary",
+   "chains": 9,
+   "pct": 0.32,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Anya Al-Shahrani",
+   "chains": 9,
+   "pct": 0.32,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Xibalbá",
+   "chains": 8,
+   "pct": 0.28,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Basilio Díaz",
+   "chains": 8,
+   "pct": 0.28,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Stadium/Items",
+   "chains": 7,
+   "pct": 0.25,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "King's Row Constabulary",
+   "chains": 6,
+   "pct": 0.21,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Busan Police Agency",
+   "chains": 6,
+   "pct": 0.21,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Mochi's Pottery Workshop",
+   "chains": 6,
+   "pct": 0.21,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Deadlock Gorge",
+   "chains": 5,
+   "pct": 0.18,
+   "reason": "only 1 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Perks",
+   "inDegree": 46
+  },
+  {
+   "title": "Overwatch (group)",
+   "inDegree": 29
+  },
+  {
+   "title": "Stadium",
+   "inDegree": 28
+  },
+  {
+   "title": "Omnic",
+   "inDegree": 25
+  },
+  {
+   "title": "Omnic Crisis",
+   "inDegree": 19
+  },
+  {
+   "title": "Doomfist",
+   "inDegree": 17
+  },
+  {
+   "title": "Vendetta",
+   "inDegree": 17
+  },
+  {
+   "title": "Season",
+   "inDegree": 14
+  },
+  {
+   "title": "Talon",
+   "inDegree": 13
+  },
+  {
+   "title": "Null Sector",
+   "inDegree": 13
+  },
+  {
+   "title": "Winston",
+   "inDegree": 12
+  },
+  {
+   "title": "Cassidy",
+   "inDegree": 12
+  },
+  {
+   "title": "Genji",
+   "inDegree": 12
+  },
+  {
+   "title": "Skins",
+   "inDegree": 11
+  },
+  {
+   "title": "Tracer",
+   "inDegree": 10
+  },
+  {
+   "title": "Torbjörn",
+   "inDegree": 10
+  },
+  {
+   "title": "Reinhardt",
+   "inDegree": 10
+  },
+  {
+   "title": "Maps",
+   "inDegree": 10
+  },
+  {
+   "title": "Soldier: 76",
+   "inDegree": 9
+  },
+  {
+   "title": "Omnium",
+   "inDegree": 9
+  },
+  {
+   "title": "Echo",
+   "inDegree": 9
+  },
+  {
+   "title": "Baptiste",
+   "inDegree": 9
+  },
+  {
+   "title": "Symmetra",
+   "inDegree": 8
+  },
+  {
+   "title": "Reaper",
+   "inDegree": 8
+  },
+  {
+   "title": "Vishkar Corporation",
+   "inDegree": 8
+  },
+  {
+   "title": "Lúcio",
+   "inDegree": 8
+  },
+  {
+   "title": "Player Icons",
+   "inDegree": 8
+  },
+  {
+   "title": "Efi Oladele",
+   "inDegree": 8
+  },
+  {
+   "title": "Zarya",
+   "inDegree": 7
+  },
+  {
+   "title": "Numbani",
+   "inDegree": 7
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Perks",
+   "betweenness": 5508
+  },
+  {
+   "title": "Roles",
+   "betweenness": 4960
+  },
+  {
+   "title": "While you wait",
+   "betweenness": 4347
+  },
+  {
+   "title": "Practice Range",
+   "betweenness": 3732
+  },
+  {
+   "title": "Hit points",
+   "betweenness": 3125
+  },
+  {
+   "title": "D.Mon",
+   "betweenness": 2544
+  },
+  {
+   "title": "Beast",
+   "betweenness": 1911
+  },
+  {
+   "title": "Anubis",
+   "betweenness": 1776
+  },
+  {
+   "title": "Cairo",
+   "betweenness": 1680
+  },
+  {
+   "title": "Petras",
+   "betweenness": 1638
+  },
+  {
+   "title": "Null Sector",
+   "betweenness": 1620
+  },
+  {
+   "title": "United Kingdom",
+   "betweenness": 1560
+  },
+  {
+   "title": "Widowmaker",
+   "betweenness": 1530
+  },
+  {
+   "title": "Shambali",
+   "betweenness": 1529
+  },
+  {
+   "title": "MEKA Base",
+   "betweenness": 1276
+  },
+  {
+   "title": "Maps",
+   "betweenness": 966
+  },
+  {
+   "title": "Matchmaking",
+   "betweenness": 910
+  },
+  {
+   "title": "Omnic",
+   "betweenness": 901
+  },
+  {
+   "title": "Competitive Play",
+   "betweenness": 876
+  },
+  {
+   "title": "Overwatch (group)",
+   "betweenness": 867
+  },
+  {
+   "title": "Lúcio",
+   "betweenness": 830
+  },
+  {
+   "title": "Lúcioball",
+   "betweenness": 814
+  },
+  {
+   "title": "Junkers",
+   "betweenness": 650
+  },
+  {
+   "title": "Mystery Heroes",
+   "betweenness": 465
+  },
+  {
+   "title": "Arcade",
+   "betweenness": 432
+  },
+  {
+   "title": "Stadium",
+   "betweenness": 420
+  },
+  {
+   "title": "Doomfist",
+   "betweenness": 370
+  },
+  {
+   "title": "Zarya",
+   "betweenness": 210
+  },
+  {
+   "title": "Genji",
+   "betweenness": 190
+  },
+  {
+   "title": "Numbani",
+   "betweenness": 176
+  }
+ ]
+}

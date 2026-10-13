@@ -1,0 +1,585 @@
+{
+ "wiki": "osrs",
+ "rank": "5",
+ "nodes": 36164,
+ "converge": {
+  "articles": 16859,
+  "pct": 46.62,
+  "deadEnd": 19305,
+  "deadEndPct": 53.38,
+  "noLinks": 542,
+  "tooFewLinks": 12440,
+  "unresolvable": 38
+ },
+ "hopStats": {
+  "mean": 10.27,
+  "median": 9,
+  "p90": 21,
+  "max": 41
+ },
+ "histogram": {
+  "0": 770,
+  "1": 1241,
+  "2": 841,
+  "3": 648,
+  "4": 739,
+  "5": 1027,
+  "6": 1239,
+  "7": 984,
+  "8": 724,
+  "9": 438,
+  "10": 681,
+  "11": 659,
+  "12": 949,
+  "13": 910,
+  "14": 770,
+  "15": 685,
+  "16": 494,
+  "17": 452,
+  "18": 301,
+  "19": 230,
+  "20": 246,
+  "21": 365,
+  "22": 206,
+  "23": 163,
+  "24": 247,
+  "25": 123,
+  "26": 86,
+  "27": 50,
+  "28": 127,
+  "29": 90,
+  "30": 38,
+  "31": 27,
+  "32": 51,
+  "33": 31,
+  "34": 43,
+  "35": 41,
+  "36": 65,
+  "37": 38,
+  "38": 19,
+  "39": 13,
+  "40": 7,
+  "41": 1
+ },
+ "components": 374,
+ "cycleCount": 373,
+ "largestCycle": {
+  "members": [
+   "Port Khazard",
+   "Fishing Trawler"
+  ],
+  "size": 2,
+  "basin": 4196
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Port Khazard",
+    "Fishing Trawler"
+   ],
+   "basin": 4196,
+   "pct": 11.6
+  },
+  {
+   "cycle": [
+    "Remains",
+    "Bones",
+    "Sacred Bone Burner"
+   ],
+   "basin": 3308,
+   "pct": 9.15
+  },
+  {
+   "cycle": [
+    "Corporeal Beast",
+    "Holy elixir",
+    "Arcane sigil",
+    "Elidinis' ward (f)",
+    "Arcane spirit shield"
+   ],
+   "basin": 2714,
+   "pct": 7.5
+  },
+  {
+   "cycle": [
+    "Ectofuntus",
+    "Bucket of slime"
+   ],
+   "basin": 1719,
+   "pct": 4.75
+  },
+  {
+   "cycle": [
+    "Ranged",
+    "Weapons",
+    "Worn Equipment",
+    "Crystal bow"
+   ],
+   "basin": 537,
+   "pct": 1.48
+  },
+  {
+   "cycle": [
+    "Nora T. Hagg",
+    "Boy",
+    "Witch's house (location)"
+   ],
+   "basin": 326,
+   "pct": 0.9
+  },
+  {
+   "cycle": [
+    "Dragon equipment",
+    "Orikalkum"
+   ],
+   "basin": 274,
+   "pct": 0.76
+  },
+  {
+   "cycle": [
+    "Runecraft",
+    "Runic altar",
+    "Tiara"
+   ],
+   "basin": 220,
+   "pct": 0.61
+  },
+  {
+   "cycle": [
+    "Water rune",
+    "Weaken"
+   ],
+   "basin": 200,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "The Grand Tree",
+    "Grand Tree",
+    "Rometti",
+    "Gnome Restaurant"
+   ],
+   "basin": 198,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "Crew Management",
+    "Barracuda Trials",
+    "Skiff",
+    "Sloop"
+   ],
+   "basin": 176,
+   "pct": 0.49
+  },
+  {
+   "cycle": [
+    "Spawning",
+    "Death"
+   ],
+   "basin": 142,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Miscellania",
+    "Etceteria",
+    "Queen Sigrid"
+   ],
+   "basin": 123,
+   "pct": 0.34
+  },
+  {
+   "cycle": [
+    "Blue gold-trimmed wizard robes",
+    "Black gold-trimmed wizard robes"
+   ],
+   "basin": 110,
+   "pct": 0.3
+  },
+  {
+   "cycle": [
+    "Thieving"
+   ],
+   "basin": 109,
+   "pct": 0.3
+  },
+  {
+   "cycle": [
+    "Marimbo",
+    "Gorilla Statue"
+   ],
+   "basin": 104,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Leech",
+    "Laguna Aurorae"
+   ],
+   "basin": 102,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Scimitar",
+    "Slash weapons",
+    "Sword"
+   ],
+   "basin": 82,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Weapons/Categories"
+   ],
+   "basin": 69,
+   "pct": 0.19
+  },
+  {
+   "cycle": [
+    "Port Piscarilius",
+    "Veos"
+   ],
+   "basin": 66,
+   "pct": 0.18
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Icon",
+   "chains": 2288,
+   "pct": 6.33,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Guide Prices",
+   "chains": 220,
+   "pct": 0.61,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Uncooked botanical pie",
+   "chains": 174,
+   "pct": 0.48,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Bookcase",
+   "chains": 108,
+   "pct": 0.3,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Crate (Last Man Standing)",
+   "chains": 101,
+   "pct": 0.28,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Lightning rod",
+   "chains": 97,
+   "pct": 0.27,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Elder Strom's Hunting Stall",
+   "chains": 82,
+   "pct": 0.23,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Wilderness Statistics",
+   "chains": 82,
+   "pct": 0.23,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Event rewards",
+   "chains": 72,
+   "pct": 0.2,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Raulyn",
+   "chains": 66,
+   "pct": 0.18,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Lliann's Wares",
+   "chains": 57,
+   "pct": 0.16,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Trophy case space",
+   "chains": 53,
+   "pct": 0.15,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Redwood tree (Auburnvale)",
+   "chains": 50,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Petrified Pete's Ore Shop",
+   "chains": 39,
+   "pct": 0.11,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Hunter creatures",
+   "chains": 37,
+   "pct": 0.1,
+   "reason": "only 1 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Experience",
+   "inDegree": 474
+  },
+  {
+   "title": "Quests",
+   "inDegree": 261
+  },
+  {
+   "title": "Construction",
+   "inDegree": 219
+  },
+  {
+   "title": "Defence",
+   "inDegree": 182
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 170
+  },
+  {
+   "title": "Player-owned house",
+   "inDegree": 168
+  },
+  {
+   "title": "Magic",
+   "inDegree": 145
+  },
+  {
+   "title": "Coins",
+   "inDegree": 140
+  },
+  {
+   "title": "Crew Management",
+   "inDegree": 126
+  },
+  {
+   "title": "Hitpoints",
+   "inDegree": 125
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 109
+  },
+  {
+   "title": "Prayer",
+   "inDegree": 96
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 96
+  },
+  {
+   "title": "Hammer",
+   "inDegree": 93
+  },
+  {
+   "title": "Sailing",
+   "inDegree": 93
+  },
+  {
+   "title": "Thieving",
+   "inDegree": 89
+  },
+  {
+   "title": "Attack",
+   "inDegree": 89
+  },
+  {
+   "title": "Grand Exchange",
+   "inDegree": 86
+  },
+  {
+   "title": "Herblore",
+   "inDegree": 81
+  },
+  {
+   "title": "Cooking",
+   "inDegree": 79
+  },
+  {
+   "title": "Farming",
+   "inDegree": 71
+  },
+  {
+   "title": "Strength",
+   "inDegree": 70
+  },
+  {
+   "title": "Wilderness",
+   "inDegree": 70
+  },
+  {
+   "title": "Agility",
+   "inDegree": 67
+  },
+  {
+   "title": "Unrestricted world",
+   "inDegree": 59
+  },
+  {
+   "title": "Crate (Last Man Standing)",
+   "inDegree": 59
+  },
+  {
+   "title": "Gielinor",
+   "inDegree": 58
+  },
+  {
+   "title": "God Wars Dungeon",
+   "inDegree": 58
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 57
+  },
+  {
+   "title": "Range",
+   "inDegree": 53
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Quests",
+   "betweenness": 35480
+  },
+  {
+   "title": "Miniquests",
+   "betweenness": 33795
+  },
+  {
+   "title": "Quest points",
+   "betweenness": 30072
+  },
+  {
+   "title": "Tutorial Island",
+   "betweenness": 27258
+  },
+  {
+   "title": "Game client",
+   "betweenness": 23418
+  },
+  {
+   "title": "First Age",
+   "betweenness": 22392
+  },
+  {
+   "title": "Varlamore",
+   "betweenness": 21080
+  },
+  {
+   "title": "World Gate",
+   "betweenness": 20537
+  },
+  {
+   "title": "Kebos Lowlands",
+   "betweenness": 20448
+  },
+  {
+   "title": "HDOS",
+   "betweenness": 19530
+  },
+  {
+   "title": "Mount Karuulm",
+   "betweenness": 19290
+  },
+  {
+   "title": "Fairy (race)",
+   "betweenness": 18720
+  },
+  {
+   "title": "Karamja Volcano",
+   "betweenness": 18144
+  },
+  {
+   "title": "Wilderness",
+   "betweenness": 17857
+  },
+  {
+   "title": "Crandor and Karamja Dungeon",
+   "betweenness": 16861
+  },
+  {
+   "title": "Co-ordinator",
+   "betweenness": 16857
+  },
+  {
+   "title": "Fairy ring",
+   "betweenness": 16096
+  },
+  {
+   "title": "Cooking",
+   "betweenness": 15910
+  },
+  {
+   "title": "Herblore",
+   "betweenness": 15768
+  },
+  {
+   "title": "Musa Point",
+   "betweenness": 15720
+  },
+  {
+   "title": "RuneLite",
+   "betweenness": 15644
+  },
+  {
+   "title": "Herblore secondaries",
+   "betweenness": 15410
+  },
+  {
+   "title": "Fishing",
+   "betweenness": 15389
+  },
+  {
+   "title": "Corporeal Beast's Lair",
+   "betweenness": 15312
+  },
+  {
+   "title": "Rimmington",
+   "betweenness": 14970
+  },
+  {
+   "title": "Fire",
+   "betweenness": 14805
+  },
+  {
+   "title": "Apothecary",
+   "betweenness": 14784
+  },
+  {
+   "title": "Dramen staff",
+   "betweenness": 14133
+  },
+  {
+   "title": "Diary (Shades of Mort'ton)",
+   "betweenness": 14133
+  },
+  {
+   "title": "Experience",
+   "betweenness": 13644
+  }
+ ]
+}

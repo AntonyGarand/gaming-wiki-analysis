@@ -1,0 +1,104 @@
+{
+ "wiki": "balatro",
+ "generatedAt": "2026-10-12T13:35:36.493Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 92.65,
+   "deadEndPct": 7.35,
+   "components": 3,
+   "cycleCount": 2,
+   "meanHops": 2.48,
+   "medianHops": 2,
+   "maxHops": 7,
+   "topAttractor": [
+    "Jokers",
+    "Tarot cards",
+    "Consumables"
+   ],
+   "topAttractorPct": 82.01
+  },
+  {
+   "rank": "2",
+   "convergePct": 80.85,
+   "deadEndPct": 19.15,
+   "components": 4,
+   "cycleCount": 3,
+   "meanHops": 4.95,
+   "medianHops": 5,
+   "maxHops": 11,
+   "topAttractor": [
+    "The Shop",
+    "Consumables"
+   ],
+   "topAttractorPct": 78.72
+  },
+  {
+   "rank": "3",
+   "convergePct": 74.47,
+   "deadEndPct": 25.53,
+   "components": 4,
+   "cycleCount": 3,
+   "meanHops": 2.03,
+   "medianHops": 2,
+   "maxHops": 5,
+   "topAttractor": [
+    "Tarot cards",
+    "Decks",
+    "Stakes",
+    "Blinds and Antes",
+    "Tags",
+    "Card modifiers",
+    "Consumables"
+   ],
+   "topAttractorPct": 69.05
+  },
+  {
+   "rank": "5",
+   "convergePct": 38.3,
+   "deadEndPct": 61.7,
+   "components": 2,
+   "cycleCount": 1,
+   "meanHops": 2.27,
+   "medianHops": 2,
+   "maxHops": 5,
+   "topAttractor": [
+    "The Shop",
+    "Booster Packs",
+    "Spectral cards"
+   ],
+   "topAttractorPct": 38.3
+  },
+  {
+   "rank": "last",
+   "convergePct": 1.74,
+   "deadEndPct": 98.26,
+   "components": 3,
+   "cycleCount": 2,
+   "meanHops": 0.44,
+   "medianHops": 0,
+   "maxHops": 1,
+   "topAttractor": [
+    "Guide: naneinf",
+    "Steel cards",
+    "Naneinf"
+   ],
+   "topAttractorPct": 1.35
+  },
+  {
+   "rank": "random",
+   "convergePct": 92.65,
+   "deadEndPct": 7.35,
+   "components": 4,
+   "cycleCount": 3,
+   "meanHops": 3.1,
+   "medianHops": 3,
+   "maxHops": 7,
+   "topAttractor": [
+    "Stakes",
+    "Blinds and Antes"
+   ],
+   "topAttractorPct": 91.68
+  }
+ ]
+}

@@ -1,0 +1,549 @@
+{
+ "wiki": "terraria",
+ "rank": "2",
+ "nodes": 5213,
+ "converge": {
+  "articles": 3310,
+  "pct": 63.5,
+  "deadEnd": 1903,
+  "deadEndPct": 36.5,
+  "noLinks": 505,
+  "tooFewLinks": 232,
+  "unresolvable": 478
+ },
+ "hopStats": {
+  "mean": 5.42,
+  "median": 4,
+  "p90": 11,
+  "max": 15
+ },
+ "histogram": {
+  "0": 75,
+  "1": 509,
+  "2": 454,
+  "3": 419,
+  "4": 267,
+  "5": 136,
+  "6": 149,
+  "7": 133,
+  "8": 205,
+  "9": 349,
+  "10": 213,
+  "11": 207,
+  "12": 83,
+  "13": 51,
+  "14": 58,
+  "15": 2
+ },
+ "components": 38,
+ "cycleCount": 37,
+ "largestCycle": {
+  "members": [
+   "Layers",
+   "Depth Meter"
+  ],
+  "size": 2,
+  "basin": 1876
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Layers",
+    "Depth Meter"
+   ],
+   "basin": 1876,
+   "pct": 35.99
+  },
+  {
+   "cycle": [
+    "Enemies",
+    "Debuffs",
+    "NPCs",
+    "Coins"
+   ],
+   "basin": 744,
+   "pct": 14.27
+  },
+  {
+   "cycle": [
+    "Blocks",
+    "Pickaxes"
+   ],
+   "basin": 380,
+   "pct": 7.29
+  },
+  {
+   "cycle": [
+    "Arrows",
+    "Bows"
+   ],
+   "basin": 43,
+   "pct": 0.82
+  },
+  {
+   "cycle": [
+    "Wire",
+    "Pressure Plates"
+   ],
+   "basin": 40,
+   "pct": 0.77
+  },
+  {
+   "cycle": [
+    "The Corruption",
+    "The Crimson"
+   ],
+   "basin": 39,
+   "pct": 0.75
+  },
+  {
+   "cycle": [
+    "Bullets",
+    "Guns"
+   ],
+   "basin": 29,
+   "pct": 0.56
+  },
+  {
+   "cycle": [
+    "Critters",
+    "Bug Net"
+   ],
+   "basin": 29,
+   "pct": 0.56
+  },
+  {
+   "cycle": [
+    "Ash Block",
+    "The Underworld"
+   ],
+   "basin": 17,
+   "pct": 0.33
+  },
+  {
+   "cycle": [
+    "Resource Pack",
+    "Workshop Hub"
+   ],
+   "basin": 16,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Golf",
+    "Golf Balls"
+   ],
+   "basin": 13,
+   "pct": 0.25
+  },
+  {
+   "cycle": [
+    "Fishing poles",
+    "Bait"
+   ],
+   "basin": 8,
+   "pct": 0.15
+  },
+  {
+   "cycle": [
+    "Ores/vi",
+    "Bars/vi"
+   ],
+   "basin": 7,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Sky Mill",
+    "Cloud furniture"
+   ],
+   "basin": 5,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Slime Block",
+    "Solidifier",
+    "Slime furniture"
+   ],
+   "basin": 5,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "House/cs"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Copper Pickaxe/no",
+    "Iron Pickaxe/no"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Tin Pickaxe/cs",
+    "Cactus Pickaxe/cs"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Pyramid",
+    "Sandstone Brick"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Copper Pickaxe/lt",
+    "Iron Pickaxe/lt"
+   ],
+   "basin": 4,
+   "pct": 0.08
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Game mechanics",
+   "chains": 374,
+   "pct": 7.17,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/By Hand/register",
+   "chains": 35,
+   "pct": 0.67,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hardmode/id",
+   "chains": 33,
+   "pct": 0.63,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Immunity accessories",
+   "chains": 22,
+   "pct": 0.42,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Crafted walls",
+   "chains": 16,
+   "pct": 0.31,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Console version history",
+   "chains": 15,
+   "pct": 0.29,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mods",
+   "chains": 15,
+   "pct": 0.29,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Underground/id",
+   "chains": 11,
+   "pct": 0.21,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Debuffs/id",
+   "chains": 8,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Blocks/tr",
+   "chains": 6,
+   "pct": 0.12,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Blocks/cs",
+   "chains": 6,
+   "pct": 0.12,
+   "reason": "redlink target"
+  },
+  {
+   "title": "House/nl",
+   "chains": 6,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Enemies/cs",
+   "chains": 6,
+   "pct": 0.12,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Coins/id",
+   "chains": 6,
+   "pct": 0.12,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Seasonal events",
+   "chains": 5,
+   "pct": 0.1,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Enemies",
+   "inDegree": 222
+  },
+  {
+   "title": "Plantera",
+   "inDegree": 158
+  },
+  {
+   "title": "Accessories",
+   "inDegree": 102
+  },
+  {
+   "title": "Swords",
+   "inDegree": 72
+  },
+  {
+   "title": "Armor",
+   "inDegree": 66
+  },
+  {
+   "title": "Golem",
+   "inDegree": 61
+  },
+  {
+   "title": "Well Fed",
+   "inDegree": 52
+  },
+  {
+   "title": "Mechanical bosses",
+   "inDegree": 49
+  },
+  {
+   "title": "Lunatic Cultist",
+   "inDegree": 48
+  },
+  {
+   "title": "Blocks",
+   "inDegree": 45
+  },
+  {
+   "title": "Buffs",
+   "inDegree": 44
+  },
+  {
+   "title": "Traveling Merchant",
+   "inDegree": 40
+  },
+  {
+   "title": "Fishing",
+   "inDegree": 39
+  },
+  {
+   "title": "Skeletron",
+   "inDegree": 32
+  },
+  {
+   "title": "Pickaxes",
+   "inDegree": 31
+  },
+  {
+   "title": "Moon Lord",
+   "inDegree": 30
+  },
+  {
+   "title": "Hardmode/id",
+   "inDegree": 30
+  },
+  {
+   "title": "Grasses",
+   "inDegree": 29
+  },
+  {
+   "title": "Vanity items",
+   "inDegree": 28
+  },
+  {
+   "title": "Bows",
+   "inDegree": 28
+  },
+  {
+   "title": "Ores",
+   "inDegree": 27
+  },
+  {
+   "title": "Underground",
+   "inDegree": 26
+  },
+  {
+   "title": "Bosses",
+   "inDegree": 26
+  },
+  {
+   "title": "Wands",
+   "inDegree": 26
+  },
+  {
+   "title": "Furniture",
+   "inDegree": 25
+  },
+  {
+   "title": "Crates",
+   "inDegree": 25
+  },
+  {
+   "title": "Summon weapons",
+   "inDegree": 25
+  },
+  {
+   "title": "Dyes",
+   "inDegree": 24
+  },
+  {
+   "title": "Background walls",
+   "inDegree": 24
+  },
+  {
+   "title": "Informational Accessories",
+   "inDegree": 24
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Bosses",
+   "betweenness": 6912
+  },
+  {
+   "title": "Ores",
+   "betweenness": 6895
+  },
+  {
+   "title": "Bars",
+   "betweenness": 6042
+  },
+  {
+   "title": "Flat-surface items",
+   "betweenness": 5245
+  },
+  {
+   "title": "Fancy Dishes",
+   "betweenness": 4200
+  },
+  {
+   "title": "Traveling Merchant",
+   "betweenness": 3279
+  },
+  {
+   "title": "Plantera",
+   "betweenness": 3105
+  },
+  {
+   "title": "Day and night cycle",
+   "betweenness": 2950
+  },
+  {
+   "title": "Weapons",
+   "betweenness": 2808
+  },
+  {
+   "title": "Damage",
+   "betweenness": 2610
+  },
+  {
+   "title": "Layers",
+   "betweenness": 1869
+  },
+  {
+   "title": "Enemies",
+   "betweenness": 1773
+  },
+  {
+   "title": "Golem",
+   "betweenness": 1580
+  },
+  {
+   "title": "Health",
+   "betweenness": 1320
+  },
+  {
+   "title": "Debuffs",
+   "betweenness": 1309
+  },
+  {
+   "title": "NPCs",
+   "betweenness": 1025
+  },
+  {
+   "title": "Potions",
+   "betweenness": 960
+  },
+  {
+   "title": "Lunatic Cultist",
+   "betweenness": 957
+  },
+  {
+   "title": "Storage items",
+   "betweenness": 900
+  },
+  {
+   "title": "Food",
+   "betweenness": 897
+  },
+  {
+   "title": "Inventory",
+   "betweenness": 865
+  },
+  {
+   "title": "Multiplayer",
+   "betweenness": 796
+  },
+  {
+   "title": "Well Fed",
+   "betweenness": 756
+  },
+  {
+   "title": "Character",
+   "betweenness": 756
+  },
+  {
+   "title": "Server",
+   "betweenness": 609
+  },
+  {
+   "title": "Swords",
+   "betweenness": 592
+  },
+  {
+   "title": "Mechanical bosses",
+   "betweenness": 576
+  },
+  {
+   "title": "Lava",
+   "betweenness": 548
+  },
+  {
+   "title": "Accessories",
+   "betweenness": 516
+  },
+  {
+   "title": "Piggy Bank",
+   "betweenness": 515
+  }
+ ]
+}

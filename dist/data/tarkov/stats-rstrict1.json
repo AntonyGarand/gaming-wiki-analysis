@@ -1,0 +1,537 @@
+{
+ "wiki": "tarkov",
+ "rank": "strict1",
+ "nodes": 6135,
+ "converge": {
+  "articles": 3348,
+  "pct": 54.57,
+  "deadEnd": 2787,
+  "deadEndPct": 45.43,
+  "noLinks": 1,
+  "tooFewLinks": 0,
+  "unresolvable": 30
+ },
+ "hopStats": {
+  "mean": 2.08,
+  "median": 2,
+  "p90": 3,
+  "max": 4
+ },
+ "histogram": {
+  "0": 46,
+  "1": 808,
+  "2": 1606,
+  "3": 616,
+  "4": 272
+ },
+ "components": 24,
+ "cycleCount": 23,
+ "largestCycle": {
+  "members": [
+   "Story chapters",
+   "Endings"
+  ],
+  "size": 2,
+  "basin": 1207
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Story chapters",
+    "Endings"
+   ],
+   "basin": 1207,
+   "pct": 19.67
+  },
+  {
+   "cycle": [
+    "Norvinsk region",
+    "Tarkov"
+   ],
+   "basin": 743,
+   "pct": 12.11
+  },
+  {
+   "cycle": [
+    "Loot",
+    "Looting"
+   ],
+   "basin": 367,
+   "pct": 5.98
+  },
+  {
+   "cycle": [
+    "Headwear",
+    "Helmet mods"
+   ],
+   "basin": 289,
+   "pct": 4.71
+  },
+  {
+   "cycle": [
+    "Map of Tarkov",
+    "Transits",
+    "Ground Zero"
+   ],
+   "basin": 270,
+   "pct": 4.4
+  },
+  {
+   "cycle": [
+    "Armor vests",
+    "Armor plates"
+   ],
+   "basin": 194,
+   "pct": 3.16
+  },
+  {
+   "cycle": [
+    "Medical",
+    "Health system"
+   ],
+   "basin": 155,
+   "pct": 2.53
+  },
+  {
+   "cycle": [
+    "Hideout",
+    "Crafts"
+   ],
+   "basin": 79,
+   "pct": 1.29
+  },
+  {
+   "cycle": [
+    "The Labyrinth",
+    "The Labyrinth (story chapter)"
+   ],
+   "basin": 12,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Roubles",
+    "Currency"
+   ],
+   "basin": 6,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Reserve",
+    "Reserve (quest)"
+   ],
+   "basin": 3,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Immunity",
+    "Immunity (quest)"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Duffle bag",
+    "Sports bag"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Medcase",
+    "Medicine case"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Toolbox",
+    "Toolbox (Discord Version)"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Superfors DB 2020 Dead Blow Hammer",
+    "Fierce Blow sledgehammer"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Bloodhounds (quest)",
+    "Bloodhounds"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Hustle (2023)",
+    "Hustle (2024)"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Achievements",
+    "Prestige"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "AK-50 dust cover",
+    "AK-50 dust cover (quest item)"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Weapons",
+   "chains": 2444,
+   "pct": 39.84,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Face cover",
+   "chains": 133,
+   "pct": 2.17,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Backpacks",
+   "chains": 50,
+   "pct": 0.81,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Armbands",
+   "chains": 40,
+   "pct": 0.65,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Containers",
+   "chains": 34,
+   "pct": 0.55,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Earpieces",
+   "chains": 29,
+   "pct": 0.47,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Bosses",
+   "chains": 18,
+   "pct": 0.29,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Secure containers",
+   "chains": 12,
+   "pct": 0.2,
+   "reason": "redlink target"
+  },
+  {
+   "title": "23x75mm Barrikada slug",
+   "chains": 2,
+   "pct": 0.03,
+   "reason": "redlink target"
+  },
+  {
+   "title": "23x75mm Shrapnel-25 buckshot",
+   "chains": 2,
+   "pct": 0.03,
+   "reason": "redlink target"
+  },
+  {
+   "title": "23x75mm Shrapnel-10 buckshot",
+   "chains": 2,
+   "pct": 0.03,
+   "reason": "redlink target"
+  },
+  {
+   "title": "23x75mm Zvezda flashbang round",
+   "chains": 2,
+   "pct": 0.03,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Escape from Tarkov Wiki",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Escape from Tarkov Wiki/Section 4",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "SIG Sauer Folding Knuckle Stock Adapter",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Weapon mods",
+   "inDegree": 2123
+  },
+  {
+   "title": "Quests",
+   "inDegree": 894
+  },
+  {
+   "title": "Loot",
+   "inDegree": 301
+  },
+  {
+   "title": "Keys & Intel",
+   "inDegree": 263
+  },
+  {
+   "title": "Weapons",
+   "inDegree": 215
+  },
+  {
+   "title": "Tactical clothing",
+   "inDegree": 210
+  },
+  {
+   "title": "Headwear",
+   "inDegree": 151
+  },
+  {
+   "title": "Face cover",
+   "inDegree": 132
+  },
+  {
+   "title": "Chest rigs",
+   "inDegree": 103
+  },
+  {
+   "title": "Helmet mods",
+   "inDegree": 103
+  },
+  {
+   "title": "Weapon camouflages",
+   "inDegree": 99
+  },
+  {
+   "title": "Posters",
+   "inDegree": 66
+  },
+  {
+   "title": "Looting",
+   "inDegree": 61
+  },
+  {
+   "title": "Character skills",
+   "inDegree": 58
+  },
+  {
+   "title": "Armor vests",
+   "inDegree": 51
+  },
+  {
+   "title": "Backpacks",
+   "inDegree": 49
+  },
+  {
+   "title": "Medical",
+   "inDegree": 48
+  },
+  {
+   "title": "Provisions",
+   "inDegree": 46
+  },
+  {
+   "title": "Armor plates",
+   "inDegree": 40
+  },
+  {
+   "title": "Armbands",
+   "inDegree": 39
+  },
+  {
+   "title": "Eyewear",
+   "inDegree": 35
+  },
+  {
+   "title": "Ammunition",
+   "inDegree": 33
+  },
+  {
+   "title": "Containers",
+   "inDegree": 33
+  },
+  {
+   "title": "The Ticket",
+   "inDegree": 33
+  },
+  {
+   "title": "Earpieces",
+   "inDegree": 28
+  },
+  {
+   "title": "Batya",
+   "inDegree": 24
+  },
+  {
+   "title": "12/70",
+   "inDegree": 20
+  },
+  {
+   "title": "Map of Tarkov",
+   "inDegree": 19
+  },
+  {
+   "title": "The Unheard",
+   "inDegree": 18
+  },
+  {
+   "title": "Bosses",
+   "inDegree": 17
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Quests",
+   "betweenness": 2136
+  },
+  {
+   "title": "Weapon mods",
+   "betweenness": 2123
+  },
+  {
+   "title": "Story chapters",
+   "betweenness": 1205
+  },
+  {
+   "title": "Ammunition",
+   "betweenness": 916
+  },
+  {
+   "title": "Tactical clothing",
+   "betweenness": 840
+  },
+  {
+   "title": "Tarkov",
+   "betweenness": 724
+  },
+  {
+   "title": "Arena",
+   "betweenness": 708
+  },
+  {
+   "title": "Map of Tarkov",
+   "betweenness": 534
+  },
+  {
+   "title": "Keys & Intel",
+   "betweenness": 526
+  },
+  {
+   "title": "Loot",
+   "betweenness": 305
+  },
+  {
+   "title": "Transits",
+   "betweenness": 267
+  },
+  {
+   "title": "Character skills",
+   "betweenness": 212
+  },
+  {
+   "title": "Chest rigs",
+   "betweenness": 206
+  },
+  {
+   "title": "Provisions",
+   "betweenness": 184
+  },
+  {
+   "title": "Medical",
+   "betweenness": 153
+  },
+  {
+   "title": "Headwear",
+   "betweenness": 150
+  },
+  {
+   "title": "Armor plates",
+   "betweenness": 142
+  },
+  {
+   "title": "Metabolism",
+   "betweenness": 141
+  },
+  {
+   "title": "Helmet mods",
+   "betweenness": 137
+  },
+  {
+   "title": "Posters",
+   "betweenness": 132
+  },
+  {
+   "title": "9x18mm Makarov",
+   "betweenness": 129
+  },
+  {
+   "title": "12/70",
+   "betweenness": 111
+  },
+  {
+   "title": "5.45x39mm",
+   "betweenness": 108
+  },
+  {
+   "title": "Weapon camouflages",
+   "betweenness": 99
+  },
+  {
+   "title": "5.56x45mm NATO",
+   "betweenness": 96
+  },
+  {
+   "title": "Hideout",
+   "betweenness": 76
+  },
+  {
+   "title": "20/70",
+   "betweenness": 75
+  },
+  {
+   "title": "The Ticket",
+   "betweenness": 72
+  },
+  {
+   "title": "Eyewear",
+   "betweenness": 70
+  },
+  {
+   "title": "7.62x25mm Tokarev",
+   "betweenness": 63
+  }
+ ]
+}

@@ -1,0 +1,549 @@
+{
+ "wiki": "valheim",
+ "rank": "random",
+ "nodes": 1284,
+ "converge": {
+  "articles": 991,
+  "pct": 77.18,
+  "deadEnd": 293,
+  "deadEndPct": 22.82,
+  "noLinks": 10,
+  "tooFewLinks": 0,
+  "unresolvable": 28
+ },
+ "hopStats": {
+  "mean": 4.46,
+  "median": 4,
+  "p90": 10,
+  "max": 16
+ },
+ "histogram": {
+  "0": 52,
+  "1": 207,
+  "2": 102,
+  "3": 84,
+  "4": 128,
+  "5": 113,
+  "6": 70,
+  "7": 42,
+  "8": 37,
+  "9": 43,
+  "10": 44,
+  "11": 27,
+  "12": 17,
+  "13": 11,
+  "14": 8,
+  "15": 5,
+  "16": 1
+ },
+ "components": 27,
+ "cycleCount": 26,
+ "largestCycle": {
+  "members": [
+   "Mistlands",
+   "Infested Mine"
+  ],
+  "size": 2,
+  "basin": 260
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Mistlands",
+    "Infested Mine"
+   ],
+   "basin": 260,
+   "pct": 20.25
+  },
+  {
+   "cycle": [
+    "Rested",
+    "Comfort"
+   ],
+   "basin": 201,
+   "pct": 15.65
+  },
+  {
+   "cycle": [
+    "Creatures"
+   ],
+   "basin": 111,
+   "pct": 8.64
+  },
+  {
+   "cycle": [
+    "Wooden Battle Idol",
+    "Wooden Protection Idol"
+   ],
+   "basin": 108,
+   "pct": 8.41
+  },
+  {
+   "cycle": [
+    "Forge of Potential",
+    "Flint Spear"
+   ],
+   "basin": 94,
+   "pct": 7.32
+  },
+  {
+   "cycle": [
+    "Forge",
+    "Crafting"
+   ],
+   "basin": 57,
+   "pct": 4.44
+  },
+  {
+   "cycle": [
+    "Forsaken Altars",
+    "Sacrificial Stones"
+   ],
+   "basin": 49,
+   "pct": 3.82
+  },
+  {
+   "cycle": [
+    "Windmill",
+    "Artisan Table"
+   ],
+   "basin": 32,
+   "pct": 2.49
+  },
+  {
+   "cycle": [
+    "Fish",
+    "Raw Fish"
+   ],
+   "basin": 10,
+   "pct": 0.78
+  },
+  {
+   "cycle": [
+    "Forsaken power",
+    "Inventory",
+    "Encumbered"
+   ],
+   "basin": 9,
+   "pct": 0.7
+  },
+  {
+   "cycle": [
+    "Troll Set",
+    "Bear Set"
+   ],
+   "basin": 8,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Hen",
+    "Chicken"
+   ],
+   "basin": 6,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Ocean",
+    "Leviathan",
+    "Abyssal Barnacle"
+   ],
+   "basin": 6,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Portal",
+    "Hildir's Chests"
+   ],
+   "basin": 5,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Sconce",
+    "Standing Iron Torch"
+   ],
+   "basin": 5,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Dvergr Tankard",
+    "Mead"
+   ],
+   "basin": 5,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Meatballs and Poteitr",
+    "Oven Pancake"
+   ],
+   "basin": 4,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Iron Protection Idol",
+    "Iron Battle Idol"
+   ],
+   "basin": 4,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Wishbone",
+    "Silver Ore"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Catapult",
+    "Grausten Payload"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Grausten",
+   "chains": 234,
+   "pct": 18.22,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Status effects",
+   "chains": 10,
+   "pct": 0.78,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Developer console",
+   "chains": 8,
+   "pct": 0.62,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Greydwarf Eye",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Smelter",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Valheim",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Queen Bee",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Wood Stack",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Roundpole Fence",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Valheim Wiki",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Neck",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Gull",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Yule Hat",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Dverger Circlet",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Dragon Tear",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Forge of Potential",
+   "inDegree": 75
+  },
+  {
+   "title": "Ashlands",
+   "inDegree": 44
+  },
+  {
+   "title": "Mistlands",
+   "inDegree": 37
+  },
+  {
+   "title": "Hildir",
+   "inDegree": 35
+  },
+  {
+   "title": "Creatures",
+   "inDegree": 30
+  },
+  {
+   "title": "Damage",
+   "inDegree": 27
+  },
+  {
+   "title": "Black Forest",
+   "inDegree": 21
+  },
+  {
+   "title": "Workbench",
+   "inDegree": 18
+  },
+  {
+   "title": "Cauldron",
+   "inDegree": 18
+  },
+  {
+   "title": "The Bog Witch",
+   "inDegree": 17
+  },
+  {
+   "title": "Swamp",
+   "inDegree": 15
+  },
+  {
+   "title": "Forge",
+   "inDegree": 13
+  },
+  {
+   "title": "Deep North",
+   "inDegree": 13
+  },
+  {
+   "title": "Weapons",
+   "inDegree": 13
+  },
+  {
+   "title": "Biomes",
+   "inDegree": 12
+  },
+  {
+   "title": "Plains",
+   "inDegree": 12
+  },
+  {
+   "title": "Point of interest",
+   "inDegree": 12
+  },
+  {
+   "title": "Mountain",
+   "inDegree": 11
+  },
+  {
+   "title": "Food",
+   "inDegree": 10
+  },
+  {
+   "title": "Stamina",
+   "inDegree": 10
+  },
+  {
+   "title": "Wood",
+   "inDegree": 9
+  },
+  {
+   "title": "Fermenter",
+   "inDegree": 9
+  },
+  {
+   "title": "Damage mechanics",
+   "inDegree": 9
+  },
+  {
+   "title": "Status effects",
+   "inDegree": 9
+  },
+  {
+   "title": "Crossbows",
+   "inDegree": 9
+  },
+  {
+   "title": "Coal",
+   "inDegree": 8
+  },
+  {
+   "title": "Artisan Table",
+   "inDegree": 8
+  },
+  {
+   "title": "Comfort",
+   "inDegree": 8
+  },
+  {
+   "title": "Skills",
+   "inDegree": 8
+  },
+  {
+   "title": "Loot chest",
+   "inDegree": 8
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Winding Tunnels",
+   "betweenness": 1158
+  },
+  {
+   "title": "Moulds",
+   "betweenness": 1000
+  },
+  {
+   "title": "Point of interest",
+   "betweenness": 854
+  },
+  {
+   "title": "Frost Foundry",
+   "betweenness": 828
+  },
+  {
+   "title": "Damage",
+   "betweenness": 764
+  },
+  {
+   "title": "Swamp",
+   "betweenness": 735
+  },
+  {
+   "title": "Poison",
+   "betweenness": 660
+  },
+  {
+   "title": "Black Forge",
+   "betweenness": 639
+  },
+  {
+   "title": "Leech",
+   "betweenness": 636
+  },
+  {
+   "title": "Mountain",
+   "betweenness": 625
+  },
+  {
+   "title": "Ashlands",
+   "betweenness": 603
+  },
+  {
+   "title": "Staff of the Wild",
+   "betweenness": 576
+  },
+  {
+   "title": "Frost Resistance Mead",
+   "betweenness": 572
+  },
+  {
+   "title": "Putrid Hole",
+   "betweenness": 544
+  },
+  {
+   "title": "Cover",
+   "betweenness": 528
+  },
+  {
+   "title": "Beehive",
+   "betweenness": 490
+  },
+  {
+   "title": "Creature level",
+   "betweenness": 476
+  },
+  {
+   "title": "Biomes",
+   "betweenness": 464
+  },
+  {
+   "title": "Bee Nest",
+   "betweenness": 459
+  },
+  {
+   "title": "Skeleton",
+   "betweenness": 456
+  },
+  {
+   "title": "Player base",
+   "betweenness": 452
+  },
+  {
+   "title": "Cold",
+   "betweenness": 447
+  },
+  {
+   "title": "Abandoned House",
+   "betweenness": 424
+  },
+  {
+   "title": "Stone Golem",
+   "betweenness": 420
+  },
+  {
+   "title": "Magic",
+   "betweenness": 396
+  },
+  {
+   "title": "Frost Caves",
+   "betweenness": 390
+  },
+  {
+   "title": "Black Forest",
+   "betweenness": 387
+  },
+  {
+   "title": "Abandoned Village",
+   "betweenness": 378
+  },
+  {
+   "title": "Red Jute",
+   "betweenness": 360
+  },
+  {
+   "title": "Runestone",
+   "betweenness": 352
+  }
+ ]
+}

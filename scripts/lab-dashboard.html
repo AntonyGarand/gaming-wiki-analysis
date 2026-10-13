@@ -6,22 +6,23 @@
 <title>LINK LAB — first-link networks</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script src="/meshfield.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <style>
-  /* field.io instantiation — tokens */
+  /* field.io instantiation — tokens (warm paper editorial; --cy/--vi = accent / accent-2) */
   :root {
-    --ground-0: #07070b;
-    --ground-1: #0b0b0f;
-    --ink: #ffffff;
-    --ink-2: #a0a4b0;
-    --ink-3: #565a68;
-    --hairline: #1d1d28;
-    --cy: #0ce0e5;
-    --vi: #5b2eff;
+    --ground-0: #f8f4ea;
+    --ground-1: #f1ebdd;
+    --ink: #201b14;
+    --ink-2: #5f574a;
+    --ink-3: #93897a;
+    --hairline: #ddd3c0;
+    --cy: #bc4b27;
+    --vi: #6d3b7e;
     --ease-expo: cubic-bezier(0.83, 0, 0.17, 1);
-    --font-display: "Anybody", sans-serif;
+    --font-display: "Fraunces", Georgia, serif;
     --font-body: "Space Grotesk", sans-serif;
     --font-mono: "Space Mono", monospace;
   }
@@ -40,8 +41,8 @@
   #cursorAura {
     position: fixed; width: 380px; height: 380px; border-radius: 50%;
     left: 0; top: 0; z-index: 1; pointer-events: none; opacity: 0;
-    background: radial-gradient(closest-side, oklch(72% 0.19 240 / 0.13), transparent 70%);
-    mix-blend-mode: screen; will-change: transform;
+    background: radial-gradient(closest-side, oklch(70% 0.12 45 / 0.10), transparent 70%);
+    mix-blend-mode: multiply; will-change: transform;
   }
 
   /* masthead + nebula */
@@ -51,29 +52,22 @@
   .mast-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.35em; color: var(--ink-2); text-transform: uppercase; margin-bottom: 3vh; }
   .mast-kicker .dot { color: var(--cy); }
   h1.mast-title {
-    font-family: var(--font-display); font-size: clamp(56px, 11vw, 168px);
-    line-height: 0.88; font-weight: 800; text-transform: uppercase;
-    font-variation-settings: "wdth" 100, "wght" 800; letter-spacing: -0.01em;
+    font-family: var(--font-display); font-size: clamp(52px, 10vw, 150px);
+    line-height: 0.98; font-variation-settings: "opsz" 144, "wght" 620;
+    letter-spacing: -0.015em;
     animation: titleResolve 1.6s var(--ease-expo) both;
     will-change: font-variation-settings;
   }
   h1.mast-title .lab {
-    display: block; font-variation-settings: "wdth" 62, "wght" 200;
-    color: transparent; -webkit-text-stroke: 1px var(--ink-2);
+    display: block; font-style: italic; font-variation-settings: "opsz" 144, "wght" 420;
+    color: var(--cy);
     animation: titleResolve 1.6s var(--ease-expo) 0.15s both;
   }
   @keyframes titleResolve { from { opacity: 0; transform: translateY(28px); letter-spacing: 0.06em; } to { opacity: 1; transform: translateY(0); } }
   .masthead::after {
     content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background: radial-gradient(58% 52% at 28% 42%, rgba(7,7,11,0.78), transparent 72%);
+    background: radial-gradient(58% 52% at 28% 42%, rgba(248,244,234,0.72), transparent 72%);
   }
-  .loop-tag {
-    position: absolute; z-index: 2; pointer-events: none;
-    font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.2em;
-    color: var(--ink-2); text-transform: uppercase; white-space: nowrap;
-    transform: translateX(-50%);
-  }
-  .loop-tag b { color: var(--ink); }
   .mast-sub { max-width: 560px; margin-top: 4vh; color: var(--ink-2); font-size: 15px; line-height: 1.65; }
   .mast-sub b { color: var(--ink); font-weight: 500; }
   .mast-readout {
@@ -127,7 +121,7 @@
   .tab.on { color: var(--ink); }
   .tab.on::after { width: 100%; }
   .hint { width: 100%; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; color: var(--ink-3); }
-  #status { color: #ff7d7d; font-family: var(--font-mono); font-size: 12px; padding: 12px 5vw; display: none; }
+  #status { color: #a03d2e; font-family: var(--font-mono); font-size: 12px; padding: 12px 5vw; display: none; }
 
   /* scenes */
   .scene {
@@ -146,8 +140,8 @@
   .hero-num-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: start; }
   .hero-num {
     grid-column: 1 / 8;
-    font-family: var(--font-display); font-weight: 850;
-    font-variation-settings: "wdth" 110;
+    font-family: var(--font-display); font-weight: 640;
+    font-variation-settings: "opsz" 144, "wght" 640;
     font-size: clamp(72px, 12vw, 200px);
     line-height: 0.82; letter-spacing: -0.02em;
     background: linear-gradient(94deg, var(--cy) 8%, var(--vi) 78%);
@@ -181,7 +175,7 @@
   .roads td:first-child { color: var(--ink); }
   .roads td.num { color: var(--cy); text-align: right; padding-right: 0; }
   .roads tbody tr { transition: background 0.3s var(--ease-expo); }
-  .roads tbody tr:hover { background: #101018; }
+  .roads tbody tr:hover { background: #e9e0cd; }
 
   .game-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; }
   .game-row input {
@@ -213,7 +207,7 @@
   .pill.dead { border-style: dashed; color: var(--ink-3); }
   .arrow { color: var(--ink-3); font-size: 10px; }
   .fate { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; margin-left: 10px; color: var(--ink-2); }
-  .fate .cyc { color: var(--cy); } .fate .dead { color: #ff7d7d; }
+  .fate .cyc { color: var(--cy); } .fate .dead { color: #8c8172; }
 
   .exports { padding: 6vh 5vw 8vh; display: flex; flex-wrap: wrap; gap: 10px; }
   .exp {
@@ -229,8 +223,7 @@
   .graphwrap { position: relative; background: var(--ground-1); border: 1px solid var(--hairline); padding: 10px; }
   .graphwrap.dragging #graph { cursor: grabbing; }
   .ginfo {
-    position: absolute; left: 22px; bottom: 18px; pointer-events: none;
-    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em;
+    position: absolute; left: 22px; bottom: 18px; pointer-events: none;    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em;
     color: var(--ink-2); max-width: 60%; line-height: 1.8;
     background: color-mix(in oklab, var(--ground-0) 85%, transparent);
     border: 1px solid var(--hairline); padding: 12px 18px; border-radius: 0;
@@ -242,10 +235,6 @@
   .ginfo .stat em { color: var(--cy); font-style: normal; font-weight: 700; }
   .glegend { display: flex; flex-wrap: wrap; gap: 8px 26px; padding: 14px 6px 2px; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-2); text-transform: uppercase; align-items: center; }
   .glegend .sw { display: inline-block; width: 14px; height: 1px; vertical-align: middle; margin-right: 8px; }
-  @keyframes twk { from { opacity: 0.06; } to { opacity: 0.28; } }
-  .star.tw { animation: twk 2.8s ease-in-out infinite alternate; }
-  @keyframes breathe { from { opacity: 0.55; } to { opacity: 1; } }
-  circle.halo { animation: breathe 3.2s ease-in-out infinite alternate; }
 
   /* tweaks panel */
   .tweaks-btn {
@@ -271,13 +260,13 @@
   /* footer finale */
   footer { padding: 6vh 5vw 8vh; border-top: 1px solid var(--hairline); }
   .foot-word {
-    font-family: var(--font-display); font-weight: 850;
-    font-variation-settings: "wdth" 115, "wght" 850;
-    font-size: clamp(34px, 7.4vw, 110px); line-height: 0.98; text-transform: uppercase;
-    color: var(--ink-2); opacity: 0.55;
-    letter-spacing: 0.04em; user-select: none;
+    font-family: var(--font-display); font-style: italic;
+    font-variation-settings: "opsz" 144, "wght" 480;
+    font-size: clamp(30px, 6vw, 92px); line-height: 1.05;
+    color: var(--ink-2); opacity: 0.75;
+    letter-spacing: -0.01em; user-select: none;
   }
-  .foot-word em { font-style: normal; color: var(--ink); opacity: 1; }
+  .foot-word em { font-style: italic; color: var(--cy); }
   .foot-meta { margin-top: 3vh; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--ink-3); text-transform: uppercase; line-height: 2.2; }
 
   @media (max-width: 1080px) {
@@ -325,7 +314,7 @@
     <button class="tab on" data-tab="stats">Data</button>
     <button class="tab" data-tab="graph">Constellation</button>
   </div>
-  <span class="hint">strict-1st = canonical game (skips parenthesised / italicised links) · Nth = raw Nth prose link · last · random</span>
+  <span class="hint">parenthesised, italicised, disambiguation and date links never count, at any rank · 1st · 2nd · 3rd · 5th · last · random</span>
 </nav>
 <div id="status"></div>
 
@@ -379,17 +368,14 @@
 <section class="graphscene" id="graphScene" style="display:none">
   <div class="scene-label"><span>The constellation — loops of the first-link network</span><span class="idx">05</span></div>
   <div class="graphwrap" id="graphWrap">
-    <div id="graph" style="width:100%;height:min(78vh,820px);"></div>
-    <div class="ginfo" id="ginfo">hover a node to trace its path to the loop</div>
+    <canvas id="meshCanvas" style="width:100%;height:min(78vh,820px);display:block;"></canvas>
+    <div class="ginfo" id="ginfo">hover a node to read its article · scroll to zoom · drag to pan</div>
     <div style="position:absolute;right:18px;top:14px;display:flex;gap:4px;z-index:5;align-items:center;" id="detailCtl">
-      <input id="graphSearch" list="graphTitles" placeholder="find article…" autocomplete="off"
-        style="background:transparent;border:1px solid var(--hairline);color:var(--ink);font-family:var(--font-mono);font-size:10px;padding:5px 10px;width:140px;margin-right:8px;border-radius:0;">
-      <datalist id="graphTitles"></datalist>
-      <button class="btn ghost" data-d="1" style="padding:6px 12px;font-size:9px;">sparse</button>
-      <button class="btn ghost on" data-d="2" style="padding:6px 12px;font-size:9px;background:var(--ink);color:var(--ground-0);border-color:var(--ink);">normal</button>
-      <button class="btn ghost" data-d="3" style="padding:6px 12px;font-size:9px;">dense</button>
-      <button class="btn ghost" data-d="4" style="padding:6px 12px;font-size:9px;">all</button>
-      <button class="btn ghost" data-d="5" style="padding:6px 12px;font-size:9px;">max</button>
+      <button class="btn ghost" data-d="1" style="padding:6px 12px;font-size:9px;">80</button>
+      <button class="btn ghost on" data-d="2" style="padding:6px 12px;font-size:9px;background:var(--ink);color:var(--ground-0);border-color:var(--ink);">150</button>
+      <button class="btn ghost" data-d="3" style="padding:6px 12px;font-size:9px;">250</button>
+      <button class="btn ghost" data-d="4" style="padding:6px 12px;font-size:9px;">400</button>
+      <button class="btn ghost" data-d="5" style="padding:6px 12px;font-size:9px;">600</button>
     </div>
     <div class="glegend" id="glegend"></div>
   </div>
@@ -410,10 +396,6 @@
     <label>hue spin <span id="hueVal">0°</span></label>
     <input type="range" id="hueShift" min="-180" max="180" step="5" value="0">
   </div>
-  <div class="row">
-    <label>nebula density <span id="nebVal">1.0×</span></label>
-    <input type="range" id="nebulaMult" min="0" max="2" step="0.1" value="1">
-  </div>
 </div>
 
 <script>
@@ -421,17 +403,16 @@
  * generative hue system — one pair, spinnable live via Tweaks
  * ==================================================================== */
 let HUE_SHIFT = Number(localStorage.getItem("lab_hue") ?? 0);
-let NEBULA_MULT = Number(localStorage.getItem("lab_nebula") ?? 1);
 function hueAt(t) {
-  const L = 0.86 + (0.62 - 0.86) * t;
-  const C = 0.13 + (0.26 - 0.13) * t;
-  const H = (200 + HUE_SHIFT) + ((288 + HUE_SHIFT) - (200 + HUE_SHIFT)) * t;
+  const L = 0.60 + (0.46 - 0.60) * t;
+  const C = 0.155 + (0.125 - 0.155) * t;
+  const H = (40 + HUE_SHIFT) - 78 * t; // rust → red → plum, the warm side of the wheel
   return `oklch(${(L * 100).toFixed(1)}% ${C.toFixed(3)} ${((H % 360) + 360) % 360})`;
 }
 
 const WIKIS = __WIKI_OPTIONS__;
-const state = { wiki: WIKIS[0]?.id ?? "osrs", rank: "1", tab: "stats", detail: 2 };
-const RANK_LABELS = { strict1: "strict 1st", last: "last", random: "random" };
+const state = { wiki: WIKIS[0]?.id ?? "osrs", rank: "strict1", tab: "stats", detail: 2 };
+const RANK_LABELS = { strict1: "1st", last: "last", random: "random" };
 const rankLabel = (r) => RANK_LABELS[r] ?? (r + (r === "1" ? "st" : r === "2" ? "nd" : r === "3" ? "rd" : "th")) + " link";
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -446,266 +427,9 @@ async function api(path) {
 }
 function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
 
-/* ==================================================================== *
- * WHIRLPOOLS — the game itself, animated.
- * Article-particles stream in from the screen edges, curve toward their
- * loop, and join a circulating ring (articles orbit the loop forever).
- * ~14% die mid-flight — the real dead-end rate. Rings are labeled with
- * the actual loops and their basin share. Cursor deflects in-flight
- * particles. One visual language with the constellation tab.
- * ==================================================================== */
-(function whirlpools() {
-  const canvas = document.getElementById("fieldCanvas");
-  const ctx = canvas.getContext("2d");
-  const masthead = document.querySelector(".masthead");
-  let W = 0, H = 0, dpr = Math.min(2, window.devicePixelRatio || 1);
-  let loops = [], flyers = [], tags = [];
-  const mouse = { x: -9999, y: -9999 };
-  let visible = true, running = true;
-  let MULT = NEBULA_MULT;
-
-  // dynamic: replaced by __whirlpoolUpdate(topAttractors, deadEndPct) on loadStats
-  let LOOPS_DEF = [
-    { xf: 0.74, yf: 0.30, rf: 0.105, hue: 0,   w: 0.45, label: "loading…", pct: 31 },
-  ];
-  let DEAD_RATE = 0.14;
-
-  function layout() {
-    const r = masthead.getBoundingClientRect();
-    W = r.width; H = r.height;
-    canvas.width = W * dpr; canvas.height = H * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const base = Math.min(W, H);
-    loops = LOOPS_DEF.map((d) => ({
-      x: d.xf * W, y: d.yf * H, r: d.rf * base, hue: d.hue, w: d.w,
-      label: d.label, pct: d.pct, spin: (d.w > 0.4 ? 1 : d.w > 0.3 ? -1 : 1),
-      orbiters: [],
-    }));
-    // HTML labels
-    for (const t of tags) t.remove();
-    tags = loops.map((l) => {
-      const el = document.createElement("div");
-      el.className = "loop-tag";
-      el.innerHTML = `<b>${l.label}</b> · ${l.pct}%`;
-      masthead.appendChild(el);
-      return el;
-    });
-    placeTags();
-    // seed each ring with a resident population
-    for (const l of loops) {
-      const n = Math.round((l.pct / 31) * 26 * Math.max(0.4, MULT));
-      for (let i = 0; i < n; i++) l.orbiters.push(newOrbiter(l, Math.random() * Math.PI * 2, 4000 + Math.random() * 6000));
-    }
-  }
-  function placeTags() {
-    loops.forEach((l, i) => {
-      tags[i].style.left = l.x + "px";
-      tags[i].style.top = (l.y + l.r + 14) + "px";
-    });
-  }
-  function newOrbiter(l, angle, ttl) {
-    return { a: angle, sp: (0.5 + 0.9 / Math.sqrt(l.r / 40)) * l.spin, ttl, max: ttl, jr: (Math.random() - 0.5) * 6, born: performance.now() };
-  }
-
-  function spawnFlyer() {
-    const dead = Math.random() < DEAD_RATE;
-    let l;
-    if (!dead) {
-      const r = Math.random(); let acc = 0;
-      for (const c of loops) { acc += c.w; if (r < acc) { l = c; break; } }
-      l = l ?? loops[0];
-    }
-    // spawn on a random edge
-    const side = Math.floor(Math.random() * 4);
-    const sx = side === 0 ? -20 : side === 1 ? W + 20 : Math.random() * W;
-    const sy = side === 2 ? -20 : side === 3 ? H + 20 : Math.random() * H;
-    let tx, ty;
-    if (dead) { tx = Math.random() * W; ty = Math.random() * H; }
-    else {
-      const a = Math.random() * Math.PI * 2;
-      tx = l.x + Math.cos(a) * l.r; ty = l.y + Math.sin(a) * l.r;
-    }
-    // bezier control points — swing wide for orbital approach
-    const mx = (sx + tx) / 2, my = (sy + ty) / 2;
-    const dx = tx - sx, dy = ty - sy, len = Math.hypot(dx, dy) || 1;
-    const swing = (Math.random() - 0.5) * len * 0.7;
-    const c1x = sx + dx * 0.25 - dy / len * swing, c1y = sy + dy * 0.25 + dx / len * swing;
-    const c2x = sx + dx * 0.75 - dy / len * swing * 0.4, c2y = sy + dy * 0.75 + dx / len * swing * 0.4;
-    flyers.push({
-      p0: [sx, sy], p1: [c1x, c1y], p2: [c2x, c2y], p3: [tx, ty],
-      t: 0, speed: 0.25 + Math.random() * 0.3, hue: dead ? -1 : l.hue + (Math.random() - 0.5) * 0.15,
-      loop: dead ? null : l, dead, deadAt: 0.35 + Math.random() * 0.4,
-      off: [0, 0], sz: 0.8 + Math.random() * 1.4,
-    });
-  }
-  function bez(p, t) {
-    const u = 1 - t;
-    return [
-      u * u * u * p.p0[0] + 3 * u * u * t * p.p1[0] + 3 * u * t * t * p.p2[0] + t * t * t * p.p3[0],
-      u * u * u * p.p0[1] + 3 * u * u * t * p.p1[1] + 3 * u * t * t * p.p2[1] + t * t * t * p.p3[1],
-    ];
-  }
-
-  layout();
-  window.addEventListener("resize", () => { layout(); });
-  masthead.addEventListener("pointermove", (e) => { const r = canvas.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
-  masthead.addEventListener("pointerleave", () => { mouse.x = -9999; mouse.y = -9999; });
-  new IntersectionObserver((en) => { visible = en[0].isIntersecting; }, { threshold: 0.02 }).observe(masthead);
-  document.addEventListener("visibilitychange", () => { running = !document.hidden; if (running) requestAnimationFrame(tick); });
-
-  let frame = 0;
-  function tick() {
-    if (!running) return;
-    requestAnimationFrame(tick);
-    if (!visible) return;
-    frame++;
-    const now = performance.now();
-
-    ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = "rgba(7,7,11,0.22)";
-    ctx.fillRect(0, 0, W, H);
-    ctx.globalCompositeOperation = "lighter";
-
-    // rings
-    for (const l of loops) {
-      ctx.strokeStyle = hueAt(l.hue);
-      ctx.globalAlpha = 0.16;
-      ctx.lineWidth = 1;
-      ctx.beginPath(); ctx.arc(l.x, l.y, l.r, 0, Math.PI * 2); ctx.stroke();
-      // core glow
-      const g = ctx.createRadialGradient(l.x, l.y, 0, l.x, l.y, l.r * 0.55);
-      g.addColorStop(0, hueAt(l.hue).replace(")", " / 0.16)"));
-      g.addColorStop(1, "rgba(0,0,0,0)");
-      ctx.fillStyle = g;
-      ctx.beginPath(); ctx.arc(l.x, l.y, l.r * 0.55, 0, Math.PI * 2); ctx.fill();
-    }
-
-    // orbiters — articles circulating the loop forever
-    for (const l of loops) {
-      for (let i = l.orbiters.length - 1; i >= 0; i--) {
-        const o = l.orbiters[i];
-        o.ttl -= 16;
-        if (o.ttl <= 0) { l.orbiters.splice(i, 1); continue; }
-        o.a += o.sp * 0.02;
-        const fade = Math.min(1, o.ttl / 1200) * Math.min(1, (now - o.born) / 500);
-        const px = l.x + Math.cos(o.a) * (l.r + o.jr);
-        const py = l.y + Math.sin(o.a) * (l.r + o.jr);
-        const px2 = l.x + Math.cos(o.a - 0.12) * (l.r + o.jr);
-        const py2 = l.y + Math.sin(o.a - 0.12) * (l.r + o.jr);
-        ctx.strokeStyle = hueAt(l.hue);
-        ctx.globalAlpha = 0.35 * fade;
-        ctx.lineWidth = 1;
-        ctx.beginPath(); ctx.moveTo(px2, py2); ctx.lineTo(px, py); ctx.stroke();
-        ctx.fillStyle = hueAt(l.hue);
-        ctx.globalAlpha = 0.85 * fade;
-        ctx.fillRect(px - 0.8, py - 0.8, 1.8, 1.8);
-      }
-    }
-
-    // flyers — articles travelling to their fate
-    if (Math.random() < 0.35 * MULT) spawnFlyer();
-    for (let i = flyers.length - 1; i >= 0; i--) {
-      const f = flyers[i];
-      f.t += f.speed * 0.008 * (1 + f.t * 0.8); // accelerate as they approach
-      // dead-end: dies mid-flight
-      if (f.dead && f.t >= f.deadAt) {
-        f.t = Math.min(f.t, f.deadAt);
-        f.dying = (f.dying ?? 1) - 0.05;
-        if (f.dying <= 0) { flyers.splice(i, 1); continue; }
-      }
-      if (f.t >= 1) {
-        // arrive: join the ring
-        const l = f.loop;
-        if (l && l.orbiters.length < 90) {
-          l.orbiters.push(newOrbiter(l, Math.atan2(f.p3[1] - l.y, f.p3[0] - l.x), 5000 + Math.random() * 5000));
-        }
-        flyers.splice(i, 1);
-        continue;
-      }
-      let [x, y] = bez(f, f.t);
-      // cursor deflection
-      const dx = x - mouse.x, dy = y - mouse.y, d2 = dx * dx + dy * dy;
-      if (d2 < 14400) {
-        const d = Math.sqrt(d2) || 1, push = (1 - d2 / 14400) * 2.2;
-        f.off[0] += (dx / d) * push; f.off[1] += (dy / d) * push;
-      }
-      f.off[0] *= 0.92; f.off[1] *= 0.92;
-      x += f.off[0]; y += f.off[1];
-      const alpha = (f.dying ?? 1) * (0.25 + 0.65 * f.t);
-      if (f.dead) {
-        ctx.fillStyle = "#8b8b9c";
-        ctx.globalAlpha = alpha * 0.8;
-        ctx.fillRect(x - 0.7, y - 0.7, 1.4, 1.4);
-      } else {
-        const col = hueAt(((f.hue % 1) + 1) % 1);
-        ctx.fillStyle = col;
-        ctx.globalAlpha = alpha;
-        ctx.fillRect(x - f.sz / 2, y - f.sz / 2, f.sz, f.sz);
-        // short trail
-        const [tx, ty] = bez(f, Math.max(0, f.t - 0.03));
-        ctx.strokeStyle = col;
-        ctx.globalAlpha = alpha * 0.5;
-        ctx.lineWidth = f.sz * 0.7;
-        ctx.beginPath(); ctx.moveTo(tx + f.off[0] * 0.9, ty + f.off[1] * 0.9); ctx.lineTo(x, y); ctx.stroke();
-      }
-    }
-    ctx.globalAlpha = 1;
-  }
-
-  if (reduced) {
-    // static composition: rings + resident orbiters + a few stream arcs
-    for (const l of loops) {
-      ctx.strokeStyle = hueAt(l.hue); ctx.globalAlpha = 0.3; ctx.lineWidth = 1;
-      ctx.beginPath(); ctx.arc(l.x, l.y, l.r, 0, Math.PI * 2); ctx.stroke();
-      ctx.fillStyle = hueAt(l.hue);
-      for (let i = 0; i < 24; i++) {
-        const a = (i / 24) * Math.PI * 2;
-        ctx.globalAlpha = 0.7;
-        ctx.fillRect(l.x + Math.cos(a) * l.r - 1, l.y + Math.sin(a) * l.r - 1, 2, 2);
-      }
-    }
-    ctx.globalAlpha = 0.25;
-    for (let i = 0; i < 14; i++) {
-      spawnFlyer();
-      const f = flyers[i]; f.t = 0.25 + (i % 5) * 0.13;
-      const [x, y] = bez(f, f.t); const [x0, y0] = bez(f, f.t - 0.2);
-      ctx.strokeStyle = f.dead ? "#8b8b9c" : hueAt(f.hue);
-      ctx.beginPath(); ctx.moveTo(x0, y0);
-      for (let k = 1; k <= 8; k++) { const [px, py] = bez(f, f.t - 0.2 + (0.2 * k / 8) * 1.0); ctx.lineTo(px, py); }
-      ctx.stroke();
-    }
-    ctx.globalAlpha = 1;
-  } else {
-    requestAnimationFrame(tick);
-  }
-
-  window.__setNebula = (m) => {
-    MULT = m;
-    for (const l of loops) {
-      const n = Math.round((l.pct / 31) * 26 * Math.max(0.4, MULT));
-      while (l.orbiters.length > n) l.orbiters.pop();
-    }
-  };
-  // public API: update loops from the current wiki's stats
-  __whirlpoolUpdate = function(topAttractors, deadEndPct) {
-    const top3 = topAttractors.slice(0, 3).filter((a) => a.pct >= 1);
-    if (!top3.length) return;
-    const pos = [
-      { xf: 0.74, yf: 0.30, rf: 0.105 },
-      { xf: 0.86, yf: 0.74, rf: 0.082 },
-      { xf: 0.55, yf: 0.82, rf: 0.066 },
-    ];
-    const hues = [0, 0.55, 1];
-    const totalPct = top3.reduce((acc, a) => acc + a.pct, 0);
-    DEAD_RATE = Math.min(0.5, deadEndPct / 100);
-    LOOPS_DEF = top3.map((a, i) => ({
-      ...pos[i], hue: hues[i], w: a.pct / totalPct,
-      label: a.cycle.join(" → "), pct: a.pct,
-    }));
-    flyers = [];
-    layout();
-  };
-})();
+let __meshUpdate = null;
+const __mastMesh = createMeshField(document.getElementById("fieldCanvas"), document.querySelector(".masthead"), {});
+__meshUpdate = (wiki, rank) => { __mastMesh.update(wiki, rank, 150); };
 
 /* ==================================================================== *
  * cursor aura + scroll progress + scroll-morphing masthead type
@@ -733,10 +457,9 @@ function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
     requestAnimationFrame(() => {
       const max = document.documentElement.scrollHeight - innerHeight;
       progress.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + "%";
-      // masthead type narrows as it leaves
+      // masthead type settles as it leaves
       const p = Math.min(1, scrollY / 520);
-      const wdth = Math.round(100 - p * 26);
-      title.style.fontVariationSettings = `"wdth" ${wdth}, "wght" ${Math.round(800 - p * 250)}`;
+      title.style.fontVariationSettings = `"opsz" ${Math.round(144 - p * 90)}, "wght" ${Math.round(620 - p * 140)}`;
       ticking = false;
     });
   }, { passive: true });
@@ -764,11 +487,11 @@ function countTo(el, target, decimals, suffix) {
 /* charts */
 const chartBase = {
   backgroundColor: "transparent", animationDuration: 850, animationEasing: "cubicOut",
-  textStyle: { color: "#a0a4b0", fontSize: 10, fontFamily: "Space Mono, monospace" },
+  textStyle: { color: "#5f574a", fontSize: 10, fontFamily: "Space Mono, monospace" },
   grid: { left: 6, right: 14, top: 16, bottom: 20, containLabel: true },
-  tooltip: { backgroundColor: "#101018", borderColor: "#1d1d28", borderWidth: 1, textStyle: { color: "#fff", fontSize: 11, fontFamily: "Space Mono, monospace" }, axisPointer: { lineStyle: { color: "#33333f" } } },
+  tooltip: { backgroundColor: "#fffdf5", borderColor: "#ddd3c0", borderWidth: 1, textStyle: { color: "#201b14", fontSize: 11, fontFamily: "Space Mono, monospace" }, axisPointer: { lineStyle: { color: "#cfc4ad" } } },
 };
-const axisCommon = { axisLine: { show: false }, axisTick: { show: false }, axisLabel: { color: "#565a68", fontSize: 9 }, splitLine: { lineStyle: { color: "#14141d", type: "solid" } } };
+const axisCommon = { axisLine: { show: false }, axisTick: { show: false }, axisLabel: { color: "#93897a", fontSize: 9 }, splitLine: { lineStyle: { color: "#e4dbc8", type: "solid" } } };
 function mk(id) { return echarts.init(document.getElementById(id)); }
 const charts = { hist: mk("histChart"), attr: mk("attrChart"), decay: mk("decayChart"), frag: mk("fragChart"), deg: mk("degChart"), bet: mk("betChart") };
 window.addEventListener("resize", () => Object.values(charts).forEach((c) => c.resize()));
@@ -820,7 +543,7 @@ async function loadStats() {
       (st.converge.deadEndPct > 0.5 ? `<span><b>1</b> graveyard</span>` : "");
   }
   // update masthead whirlpool animation with this wiki's actual attractors
-  if (__whirlpoolUpdate) __whirlpoolUpdate(st.topAttractors, st.converge.deadEndPct);
+  if (__meshUpdate) __meshUpdate(state.wiki, state.rank);
 
   const conv = st.converge, hops = st.hopStats, top = st.topAttractors[0];
   countTo(document.getElementById("heroNum"), conv.pct, 1, "%");
@@ -846,41 +569,41 @@ async function loadStats() {
   const topA = st.topAttractors.slice(0, 9);
   charts.attr.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 56 },
     xAxis: { type: "value", ...axisCommon },
-    yAxis: { type: "category", data: topA.map((a) => a.cycle.join("→")).reverse(), ...axisCommon, axisLabel: { color: "#a0a4b0", fontSize: 9, width: 190, overflow: "truncate" }, splitLine: { show: false } },
+    yAxis: { type: "category", data: topA.map((a) => a.cycle.join("→")).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 190, overflow: "truncate" }, splitLine: { show: false } },
     series: [{ type: "bar", data: topA.map((a) => a.basin).reverse(),
       itemStyle: { color: (p) => hueAt(0.15 + 0.75 * (p.dataIndex / Math.max(1, topA.length - 1))), borderRadius: 0 },
-      label: { show: true, position: "right", color: "#565a68", fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => topA[topA.length - 1 - p.dataIndex].pct + "%" },
+      label: { show: true, position: "right", color: "#93897a", fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => topA[topA.length - 1 - p.dataIndex].pct + "%" },
       animationDelay: (i) => i * 55 }] }, true);
 
   const s = summaryCache[state.wiki];
   if (s) {
     const order = s.ranks;
     charts.decay.setOption({ ...chartBase,
-      xAxis: { type: "category", data: order.map((r) => rankLabel(r.rank)), ...axisCommon, splitLine: { show: false }, axisLabel: { color: "#565a68", fontSize: 8, rotate: 18 } },
-      yAxis: { type: "value", max: 100, ...axisCommon, axisLabel: { color: "#565a68", fontSize: 9, formatter: "{value}%" } },
+      xAxis: { type: "category", data: order.map((r) => rankLabel(r.rank)), ...axisCommon, splitLine: { show: false }, axisLabel: { color: "#93897a", fontSize: 8, rotate: 18 } },
+      yAxis: { type: "value", max: 100, ...axisCommon, axisLabel: { color: "#93897a", fontSize: 9, formatter: "{value}%" } },
       series: [
         { type: "line", data: order.map((r) => r.convergePct), smooth: 0.4, symbolSize: 5, lineStyle: { color: hueAt(0), width: 2 }, itemStyle: { color: hueAt(0) },
           animationDelay: (i) => i * 70,
-          areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "oklch(86% 0.13 200 / 0.22)" }, { offset: 1, color: "oklch(86% 0.13 200 / 0)" }] } } },
+          areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "oklch(70% 0.13 40 / 0.16)" }, { offset: 1, color: "oklch(70% 0.13 40 / 0)" }] } } },
         { type: "line", data: order.map((r) => r.topAttractorPct), smooth: 0.4, symbolSize: 5, lineStyle: { color: hueAt(1), width: 2, type: "dashed" }, itemStyle: { color: hueAt(1) },
           animationDelay: (i) => 120 + i * 70 } ] }, true);
     charts.frag.setOption({ ...chartBase,
-      xAxis: { type: "category", data: order.map((r) => rankLabel(r.rank)), ...axisCommon, splitLine: { show: false }, axisLabel: { color: "#565a68", fontSize: 8, rotate: 18 } },
+      xAxis: { type: "category", data: order.map((r) => rankLabel(r.rank)), ...axisCommon, splitLine: { show: false }, axisLabel: { color: "#93897a", fontSize: 8, rotate: 18 } },
       yAxis: { type: "value", ...axisCommon },
       series: [
         { type: "line", data: order.map((r) => r.components), smooth: 0.4, symbolSize: 5, lineStyle: { color: hueAt(0.8), width: 2 }, itemStyle: { color: hueAt(0.8) }, animationDelay: (i) => i * 70 },
-        { type: "line", data: order.map((r) => r.tooFewLinks), smooth: 0.4, symbolSize: 4, lineStyle: { color: "#565a68", width: 1, type: "dotted" }, itemStyle: { color: "#565a68" }, animationDelay: (i) => 120 + i * 70 } ] }, true);
+        { type: "line", data: order.map((r) => r.tooFewLinks), smooth: 0.4, symbolSize: 4, lineStyle: { color: "#8c8172", width: 1, type: "dotted" }, itemStyle: { color: "#8c8172" }, animationDelay: (i) => 120 + i * 70 } ] }, true);
   }
 
   charts.deg.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 48 },
     xAxis: { type: "value", ...axisCommon },
-    yAxis: { type: "category", data: st.topInDegree.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#a0a4b0", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
+    yAxis: { type: "category", data: st.topInDegree.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
     series: [{ type: "bar", data: st.topInDegree.slice(0, 10).map((r) => r.inDegree).reverse(),
       itemStyle: { color: (p) => hueAt(0.9 - 0.8 * (p.dataIndex / 10)), borderRadius: 0 }, animationDelay: (i) => i * 40 }] }, true);
 
   charts.bet.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 48 },
     xAxis: { type: "value", ...axisCommon },
-    yAxis: { type: "category", data: st.topBetweenness.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#a0a4b0", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
+    yAxis: { type: "category", data: st.topBetweenness.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
     series: [{ type: "bar", data: st.topBetweenness.slice(0, 10).map((r) => r.betweenness).reverse(),
       itemStyle: { color: (p) => hueAt(0.35 + 0.5 * (p.dataIndex / 10)), borderRadius: 0 }, animationDelay: (i) => i * 40 }] }, true);
 
@@ -930,7 +653,7 @@ async function playChain(title) {
     pieces.push({ html: fate });
     out.innerHTML = pieces.map((p) => p.html).join("");
   } catch (e) {
-    out.innerHTML = `<span style="color:#ff7d7d;font-family:var(--font-mono);font-size:12px">${esc(e.message)}</span>`;
+    out.innerHTML = `<span style="color:#a03d2e;font-family:var(--font-mono);font-size:12px">${esc(e.message)}</span>`;
   }
 }
 document.getElementById("playBtn").onclick = () => { const v = document.getElementById("titleInput").value.trim(); if (v) playChain(v); };
@@ -976,231 +699,33 @@ document.querySelectorAll("#detailCtl button").forEach((b) => b.onclick = () => 
  * constellation — deterministic orbital layout + comet pulse on hover
  * ==================================================================== */
 let graphLoaded = false;
-let graphChart = null;
-let graphData = null; // { nodes, edges, loops, byTitle }
+let constMesh = null;
 async function loadGraph() {
   if (graphLoaded) return;
-  let g;
-  try { g = await api(`/api/graph?wiki=${state.wiki}&rank=${state.rank}&detail=${state.detail ?? 2}`); }
-  catch (e) { document.getElementById("graphWrap").insertAdjacentHTML("afterbegin", `<p style='color:#ff7d7d;font-family:var(--font-mono);font-size:12px;padding:12px'>No graph data (${esc(e.message)})</p>`); return; }
   graphLoaded = true;
-  graphData = g;
-
-  const NODES = g.nodes, EDGES = g.edges, LOOPS = g.loops;
-  const HUES = [hueAt(0), hueAt(0.55), hueAt(1), hueAt(0.8), "#8b8b9c"];
-
-  // successor map for path tracing
-  const succOf = new Map();
-  for (const e of EDGES) succOf.set(e.source, e.target);
-  const byId = new Map(NODES.map((n) => [n.id, n]));
-
-  // entry-point hue shifts
-  const cycleIndex = new Map();
-  for (const l of LOOPS) l.cycle.forEach((t, i) => {
-    const n = NODES.find((x) => x.title === t);
-    if (n) cycleIndex.set(n.id, i);
-  });
-  const entryOf = new Map();
-  for (const n of NODES) {
-    if (n.isCycle) { entryOf.set(n.id, cycleIndex.get(n.id) ?? 0); continue; }
-    let cur = n.id; const seen = new Set(); let entry = null;
-    while (succOf.has(cur) && !seen.has(cur)) { seen.add(cur); const nx = succOf.get(cur); if (cycleIndex.has(nx)) { entry = cycleIndex.get(nx); break; } cur = nx; }
-    entryOf.set(n.id, entry ?? 0);
+  const N = [80, 150, 250, 400, 600][(state.detail ?? 2) - 1] ?? 150;
+  const legend = () => {
+    const s = constMesh.stats();
+    const loops = constMesh.loops();
+    const head = s.growing ? `growing — ${s.nodes}/${s.target} articles…` : `${s.nodes} articles`;
+    document.getElementById("glegend").innerHTML =
+      head + " · " +
+      loops.slice(0, 4).map((l, i) => `<span><span class="sw" style="background:${[hueAt(0), hueAt(0.55), hueAt(1), hueAt(0.8)][i] ?? "#93897a"}"></span>${esc(l.cycle.join(" → "))} · ${l.pct}%</span>`).join(" ") +
+      (loops.length ? `<span><span class="sw" style="background:#93897a"></span>dead ends</span>` : "") +
+      `<span style="color:var(--ink-3)">▸ hover to read · scroll to zoom · drag to pan</span>`;
+  };
+  document.getElementById("glegend").innerHTML = `growing — 0/${N} articles…`;
+  try {
+    if (!constMesh) constMesh = createMeshField(document.getElementById("meshCanvas"), document.getElementById("meshCanvas"), { explore: true });
+    constMesh.update(state.wiki, state.rank, N);
+    const poll = setInterval(() => {
+      legend();
+      const s = constMesh.stats();
+      if (!s.growing) { clearInterval(poll); }
+    }, 700);
+  } catch (e) {
+    document.getElementById("glegend").innerHTML = `<span style="color:#a03d2e">no mesh data (${esc(e.message)})</span>`;
   }
-  function nodeColor(n) {
-    if (n.deadEnd || n.group === 4) return "#8b8b9c";
-    const base = [0, 0.5, 1, 0.8, 0.8][Math.min(n.group, 4)] ?? 0;
-    const entry = entryOf.get(n.id) ?? 0;
-    const cl = LOOPS[Math.min(n.group, LOOPS.length - 1)]?.cycle.length ?? 2;
-    const shift = cl <= 1 ? 0 : ((entry / (cl - 1)) * 2 - 1) * 0.22;
-    return hueAt(Math.min(0.99, Math.max(0.01, base + shift)));
-  }
-
-  // --- ECharts canvas rendering ---
-  const container = document.getElementById("graph");
-  if (!container) return;
-  container.innerHTML = "";
-
-  if (graphChart) { graphChart.dispose(); }
-  graphChart = echarts.init(container);
-
-  // find bounds
-  const xs = NODES.map((n) => n.x), ys = NODES.map((n) => n.y);
-  const xMin = Math.min(...xs) - 50, xMax = Math.max(...xs) + 50;
-  const yMin = Math.min(...ys) - 50, yMax = Math.max(...ys) + 50;
-
-  const chartNodes = NODES.map((n) => ({
-    id: String(n.id),
-    name: n.title,
-    x: n.x, y: n.y,
-    symbolSize: Math.max(3, Math.min(36, n.isCycle ? 16 : 3 + 2.2 * Math.sqrt(n.inDeg))),
-    itemStyle: {
-      color: nodeColor(n),
-      borderColor: n.isCycle ? "#fff" : "rgba(255,255,255,0.3)",
-      borderWidth: n.isCycle ? 2 : 0.5,
-    },
-    label: {
-      show: n.isCycle || (n.inDeg >= 60 && n.inDeg <= 300),
-      position: "bottom", distance: 3,
-      color: n.isCycle ? "#fff" : "#a0a4b0",
-      fontSize: n.isCycle ? 10 : 8,
-      fontWeight: n.isCycle ? 700 : 400,
-      fontFamily: "Space Mono, monospace",
-    },
-    // custom fields for tooltip + path tracing
-    raw: n,
-  }));
-
-  const chartLinks = EDGES.map((e) => {
-    const src = byId.get(e.source), tgt = byId.get(e.target);
-    const isCycle = src?.isCycle && tgt?.isCycle;
-    const isDead = src?.group === 4 || tgt?.group === 4;
-    const width = 0.5 + 1.0 * Math.log10(Math.max(1, src?.flow || 1));
-    return {
-      source: String(e.source), target: String(e.target),
-      lineStyle: {
-        color: isDead ? "rgba(139,139,156,0.3)" : isCycle ? (HUES[tgt?.group] ?? "#fff") : "rgba(190,200,230,0.2)",
-        width: isCycle ? width + 1.2 : width,
-        opacity: isCycle ? 0.8 : 0.4,
-        curveness: 0.12,
-        type: isDead ? "dashed" : "solid",
-      },
-      symbol: ["none", "arrow"],
-      symbolSize: [0, Math.max(3, Math.min(8, width))],
-    };
-  });
-
-  const ginfo = document.getElementById("ginfo");
-  const infoDefault = "hover a node to trace its path · click to open wiki · scroll to zoom";
-
-  graphChart.setOption({
-    backgroundColor: "transparent",
-    animation: false,
-    tooltip: {
-      trigger: "item",
-      backgroundColor: "#101018", borderColor: "#1d1d28", borderWidth: 1,
-      textStyle: { color: "#fff", fontSize: 11, fontFamily: "Space Mono, monospace" },
-      formatter: (p) => {
-        if (p.dataType !== "node") return "";
-        const d = p.data.raw;
-        return `<b>${esc(d.title)}</b>${d.isCycle ? " · loop" : ""}<br>` +
-          `${d.inDeg} articles link here` +
-          (d.flow ? ` · ${d.flow} chains through` : "") +
-          `<br>→ ${d.target || "dies"}`;
-      },
-    },
-    series: [{
-      type: "graph",
-      layout: "none",
-      data: chartNodes,
-      links: chartLinks,
-      roam: true,
-      draggable: true,
-      zoom: 1,
-      center: [(xMin + xMax) / 2, (yMin + yMax) / 2],
-      left: 0, right: 0, top: 0, bottom: 0,
-      boundingCoords: [[xMin, yMin], [xMax, yMax]],
-      scaleLimit: { min: 0.3, max: 8 },
-      emphasis: { focus: "none" },
-      itemStyle: { shadowBlur: 4, shadowColor: "rgba(0,0,0,0.3)" },
-      progressive: 500,
-    }],
-    xAxis: { show: false, min: xMin, max: xMax },
-    yAxis: { show: false, min: yMin, max: yMax },
-  });
-
-  // hover path tracing
-  graphChart.on("mouseover", (params) => {
-    if (params.dataType !== "node") return;
-    const d = params.data.raw;
-    const pathN = new Set([d.id]);
-    let cur = d.id; const seen = new Set();
-    while (succOf.has(cur) && !seen.has(cur)) { seen.add(cur); const nx = succOf.get(cur); if (pathN.has(nx)) break; pathN.add(nx); cur = nx; }
-    // update node styles
-    const updatedNodes = chartNodes.map((cn) => ({
-      ...cn,
-      itemStyle: { ...cn.itemStyle,
-        opacity: pathN.has(Number(cn.id)) ? 1 : 0.15,
-        borderWidth: Number(cn.id) === d.id ? 3 : pathN.has(Number(cn.id)) ? 2 : cn.itemStyle.borderWidth,
-      },
-      label: { ...cn.label, show: pathN.has(Number(cn.id)) || cn.label.show },
-    }));
-    const updatedLinks = chartLinks.map((cl) => ({
-      ...cl,
-      lineStyle: { ...cl.lineStyle,
-        color: pathN.has(Number(cl.source)) && pathN.has(Number(cl.target)) ? "#ffffff" : cl.lineStyle.color,
-        opacity: pathN.has(Number(cl.source)) && pathN.has(Number(cl.target)) ? 1 : 0.06,
-        width: pathN.has(Number(cl.source)) && pathN.has(Number(cl.target)) ? (cl.lineStyle.width + 1.5) : cl.lineStyle.width,
-      },
-    }));
-    graphChart.setOption({ series: [{ data: updatedNodes, links: updatedLinks }] });
-    if (ginfo) {
-      const wikiOrigin2 = WIKIS.find((w) => w.id === state.wiki)?.name ? "" : "";
-      ginfo.innerHTML = `<b>${esc(d.title)}</b>${d.isCycle ? " · loop member" : ""} ` +
-        `<a href="${d.url}" target="_blank" rel="noopener" style="pointer-events:auto;">[wiki ↗]</a><br>` +
-        `<em style="color:var(--cy);font-style:normal;font-weight:700;">${d.inDeg}</em> articles link here` +
-        (d.flow ? ` · <em style="color:var(--cy);font-style:normal;font-weight:700;">${d.flow}</em> chains through` : "") +
-        `<br>first link → ${d.target ? esc(d.target) : "<span style='color:#ff7d7d'>✝ dies</span>"}`;
-    }
-  });
-
-  graphChart.on("mouseout", () => {
-    graphChart.setOption({ series: [{ data: chartNodes, links: chartLinks }] });
-    if (ginfo) ginfo.innerHTML = infoDefault;
-  });
-
-  // click to open wiki
-  graphChart.on("click", (params) => {
-    if (params.dataType !== "node") return;
-    const d = params.data.raw;
-    if (d.url) window.open(d.url, "_blank", "noopener");
-  });
-
-  // search + trace
-  const searchInput = document.getElementById("graphSearch");
-  const searchList = document.getElementById("graphTitles");
-  if (searchInput) {
-    searchList.innerHTML = NODES.map((n) => `<option value="${esc(n.title)}">`).join("");
-    let searchDebounce;
-    searchInput.oninput = () => {
-      clearTimeout(searchDebounce);
-      const q = searchInput.value.trim();
-      if (q.length < 2) return;
-      searchDebounce = setTimeout(async () => {
-        const local = NODES.find((n) => n.title.toLowerCase() === q.toLowerCase());
-        if (local) {
-          graphChart.dispatchAction({ type: "highlight", seriesIndex: 0, name: local.title });
-          graphChart.dispatchAction({ type: "showTip", seriesIndex: 0, name: local.title });
-          return;
-        }
-        try {
-          const s = await api(`/api/search?wiki=${state.wiki}&q=${encodeURIComponent(q)}`);
-          if (s.titles.length) searchList.innerHTML = s.titles.map((t) => `<option value="${esc(t)}">`).join("");
-        } catch {}
-      }, 250);
-    };
-    searchInput.onkeydown = (e) => {
-      if (e.key !== "Enter") return;
-      const q = searchInput.value.trim();
-      if (!q) return;
-      const local = NODES.find((n) => n.title.toLowerCase() === q.toLowerCase());
-      if (local) {
-        graphChart.dispatchAction({ type: "showTip", seriesIndex: 0, dataIndex: NODES.indexOf(local) });
-        return;
-      }
-      api(`/api/chain?wiki=${state.wiki}&rank=${state.rank}&title=${encodeURIComponent(q)}`)
-        .then((c) => { if (ginfo) ginfo.innerHTML = `<b>${esc(c.title)}</b> (not in view)<br>${c.chain.slice(0, 6).map(esc).join(" → ")}…`; })
-        .catch(() => { if (ginfo) ginfo.innerHTML = `<b>${esc(q)}</b> not found`; });
-    };
-  }
-
-  // legend
-  document.getElementById("glegend").innerHTML =
-    LOOPS.map((l, i) => `<span><span class="sw" style="background:${HUES[i]}"></span>${esc(l.cycle.join(" → "))} · ${l.pct}%</span>`).join("") +
-    `<span><span class="sw" style="background:#8b8b9c"></span>dead-end chains</span>` +
-    `<span style="color:var(--ink-3)">▸ ${NODES.length} articles · hover to trace · click to open wiki · scroll to zoom</span>`;
-
-  window.addEventListener("resize", () => { if (graphChart) graphChart.resize(); });
 }
 
 /* ==================================================================== *
@@ -1210,11 +735,9 @@ async function loadGraph() {
   const btn = document.getElementById("tweaksBtn");
   const panel = document.getElementById("tweaksPanel");
   const hue = document.getElementById("hueShift");
-  const neb = document.getElementById("nebulaMult");
   const hueVal = document.getElementById("hueVal");
-  const nebVal = document.getElementById("nebVal");
-  hue.value = HUE_SHIFT; neb.value = NEBULA_MULT;
-  hueVal.textContent = HUE_SHIFT + "°"; nebVal.textContent = Number(NEBULA_MULT).toFixed(1) + "×";
+  hue.value = HUE_SHIFT;
+  hueVal.textContent = HUE_SHIFT + "°";
 
   btn.onclick = () => panel.classList.toggle("open");
   let hueTimer;
@@ -1228,12 +751,6 @@ async function loadGraph() {
       graphLoaded = false;
       if (state.tab === "graph") loadGraph();
     }, 120);
-  };
-  neb.oninput = () => {
-    NEBULA_MULT = Number(neb.value);
-    nebVal.textContent = NEBULA_MULT.toFixed(1) + "×";
-    localStorage.setItem("lab_nebula", String(NEBULA_MULT));
-    if (window.__setNebula) window.__setNebula(NEBULA_MULT);
   };
 })();
 

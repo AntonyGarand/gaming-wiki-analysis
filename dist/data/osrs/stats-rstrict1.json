@@ -1,0 +1,553 @@
+{
+ "wiki": "osrs",
+ "rank": "strict1",
+ "nodes": 36164,
+ "converge": {
+  "articles": 34943,
+  "pct": 96.62,
+  "deadEnd": 1221,
+  "deadEndPct": 3.38,
+  "noLinks": 542,
+  "tooFewLinks": 0,
+  "unresolvable": 21
+ },
+ "hopStats": {
+  "mean": 6.07,
+  "median": 5,
+  "p90": 11,
+  "max": 18
+ },
+ "histogram": {
+  "0": 361,
+  "1": 1836,
+  "2": 2806,
+  "3": 3893,
+  "4": 4418,
+  "5": 4689,
+  "6": 4074,
+  "7": 2872,
+  "8": 1566,
+  "9": 1379,
+  "10": 1824,
+  "11": 2193,
+  "12": 996,
+  "13": 987,
+  "14": 676,
+  "15": 267,
+  "16": 85,
+  "17": 19,
+  "18": 2
+ },
+ "components": 188,
+ "cycleCount": 187,
+ "largestCycle": {
+  "members": [
+   "Gielinor",
+   "Guthix",
+   "Gods"
+  ],
+  "size": 3,
+  "basin": 12033
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Gielinor",
+    "Guthix",
+    "Gods"
+   ],
+   "basin": 12033,
+   "pct": 33.27
+  },
+  {
+   "cycle": [
+    "Monster",
+    "Combat",
+    "Bestiary"
+   ],
+   "basin": 11540,
+   "pct": 31.91
+  },
+  {
+   "cycle": [
+    "Currencies",
+    "Coins"
+   ],
+   "basin": 5846,
+   "pct": 16.17
+  },
+  {
+   "cycle": [
+    "Items",
+    "Inventory"
+   ],
+   "basin": 1524,
+   "pct": 4.21
+  },
+  {
+   "cycle": [
+    "Hitpoints",
+    "Death"
+   ],
+   "basin": 824,
+   "pct": 2.28
+  },
+  {
+   "cycle": [
+    "Jagex",
+    "Andrew Gower"
+   ],
+   "basin": 655,
+   "pct": 1.81
+  },
+  {
+   "cycle": [
+    "Mahjarrat",
+    "Freneskae"
+   ],
+   "basin": 429,
+   "pct": 1.19
+  },
+  {
+   "cycle": [
+    "Treasure Trails/Guide/Cryptic clues",
+    "Clue scroll (beginner) - Always walking around the castle grounds"
+   ],
+   "basin": 306,
+   "pct": 0.85
+  },
+  {
+   "cycle": [
+    "Vampyre",
+    "Vampyrium"
+   ],
+   "basin": 270,
+   "pct": 0.75
+  },
+  {
+   "cycle": [
+    "Zanaris",
+    "Fairy (race)"
+   ],
+   "basin": 110,
+   "pct": 0.3
+  },
+  {
+   "cycle": [
+    "Dragon (race)",
+    "Dragonfire"
+   ],
+   "basin": 106,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Shields",
+    "Square shield"
+   ],
+   "basin": 88,
+   "pct": 0.24
+  },
+  {
+   "cycle": [
+    "Treasure Trails/Guide/Anagrams",
+    "Clue scroll (beginner) - AN EARL"
+   ],
+   "basin": 88,
+   "pct": 0.24
+  },
+  {
+   "cycle": [
+    "Mos Le'Harmless",
+    "Pirate (Mos Le'Harmless)"
+   ],
+   "basin": 65,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Miniquests"
+   ],
+   "basin": 64,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Dorgesh-Kaan",
+    "Cave goblin (Dorgesh-Kaan)"
+   ],
+   "basin": 50,
+   "pct": 0.14
+  },
+  {
+   "cycle": [
+    "Treasure Trails/Guide/Maps",
+    "Clue scroll (beginner) - West of the Champions' Guild"
+   ],
+   "basin": 42,
+   "pct": 0.12
+  },
+  {
+   "cycle": [
+    "Gnome Child (Realm of Memories)",
+    "Realm of Memories",
+    "20th Anniversary event"
+   ],
+   "basin": 33,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Lliann's Wares",
+    "Lliann"
+   ],
+   "basin": 32,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Rashiliyia",
+    "King Danthalas"
+   ],
+   "basin": 28,
+   "pct": 0.08
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Ring slot table",
+   "chains": 462,
+   "pct": 1.28,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Player spoof",
+   "chains": 43,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Shield slot table",
+   "chains": 30,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Neck slot table",
+   "chains": 29,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hands slot table",
+   "chains": 24,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Cape slot table",
+   "chains": 23,
+   "pct": 0.06,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Pride event",
+   "chains": 20,
+   "pct": 0.06,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Head slot table",
+   "chains": 19,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Legs slot table",
+   "chains": 6,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ammunition slot table",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Chair",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Feet slot table",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Body slot table",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "TzHaar Fight Cave/Rotations/1",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Deryk Paulson",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Music",
+   "inDegree": 855
+  },
+  {
+   "title": "Interface items",
+   "inDegree": 554
+  },
+  {
+   "title": "Jingles",
+   "inDegree": 325
+  },
+  {
+   "title": "Agility",
+   "inDegree": 311
+  },
+  {
+   "title": "Treasure Trails/Guide/Cryptic clues",
+   "inDegree": 299
+  },
+  {
+   "title": "Quest items",
+   "inDegree": 287
+  },
+  {
+   "title": "Gielinor",
+   "inDegree": 217
+  },
+  {
+   "title": "Quests",
+   "inDegree": 197
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 193
+  },
+  {
+   "title": "Last Man Standing",
+   "inDegree": 175
+  },
+  {
+   "title": "Treasure Trails/Guide/Coordinates",
+   "inDegree": 173
+  },
+  {
+   "title": "Combat Achievements/Master",
+   "inDegree": 173
+  },
+  {
+   "title": "Members",
+   "inDegree": 172
+  },
+  {
+   "title": "Combat Achievements/Elite",
+   "inDegree": 167
+  },
+  {
+   "title": "Scenery",
+   "inDegree": 160
+  },
+  {
+   "title": "The Gauntlet",
+   "inDegree": 134
+  },
+  {
+   "title": "Ledger table",
+   "inDegree": 134
+  },
+  {
+   "title": "Treasure Trails/Guide/Emote clues",
+   "inDegree": 127
+  },
+  {
+   "title": "Hotspot",
+   "inDegree": 125
+  },
+  {
+   "title": "Grand Exchange Clerk",
+   "inDegree": 125
+  },
+  {
+   "title": "Deadman Mode",
+   "inDegree": 125
+  },
+  {
+   "title": "Defence",
+   "inDegree": 123
+  },
+  {
+   "title": "Combat Achievements/Grandmaster",
+   "inDegree": 122
+  },
+  {
+   "title": "Food",
+   "inDegree": 119
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 118
+  },
+  {
+   "title": "Herblore",
+   "inDegree": 117
+  },
+  {
+   "title": "Farming",
+   "inDegree": 113
+  },
+  {
+   "title": "March 2025 Sailing Alpha",
+   "inDegree": 111
+  },
+  {
+   "title": "Items",
+   "inDegree": 108
+  },
+  {
+   "title": "Unobtainable items",
+   "inDegree": 108
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Player character",
+   "betweenness": 65480
+  },
+  {
+   "title": "Human",
+   "betweenness": 60858
+  },
+  {
+   "title": "List of races",
+   "betweenness": 53622
+  },
+  {
+   "title": "Abyssal demon",
+   "betweenness": 44760
+  },
+  {
+   "title": "Skills",
+   "betweenness": 40509
+  },
+  {
+   "title": "Strongest monster",
+   "betweenness": 35812
+  },
+  {
+   "title": "Boss",
+   "betweenness": 27732
+  },
+  {
+   "title": "Gielinor",
+   "betweenness": 23073
+  },
+  {
+   "title": "Members",
+   "betweenness": 22204
+  },
+  {
+   "title": "Monster",
+   "betweenness": 20443
+  },
+  {
+   "title": "Attack",
+   "betweenness": 18756
+  },
+  {
+   "title": "Melee",
+   "betweenness": 17980
+  },
+  {
+   "title": "World",
+   "betweenness": 16914
+  },
+  {
+   "title": "Minigames",
+   "betweenness": 16137
+  },
+  {
+   "title": "Experience",
+   "betweenness": 15490
+  },
+  {
+   "title": "Combat triangle",
+   "betweenness": 14223
+  },
+  {
+   "title": "Combat",
+   "betweenness": 12854
+  },
+  {
+   "title": "Kingdom",
+   "betweenness": 11814
+  },
+  {
+   "title": "Guthix",
+   "betweenness": 11607
+  },
+  {
+   "title": "Quests",
+   "betweenness": 11502
+  },
+  {
+   "title": "Shop",
+   "betweenness": 11474
+  },
+  {
+   "title": "Magic",
+   "betweenness": 11292
+  },
+  {
+   "title": "Locations",
+   "betweenness": 11224
+  },
+  {
+   "title": "Icon",
+   "betweenness": 9600
+  },
+  {
+   "title": "Non-player character",
+   "betweenness": 9420
+  },
+  {
+   "title": "World map",
+   "betweenness": 9228
+  },
+  {
+   "title": "Character",
+   "betweenness": 8487
+  },
+  {
+   "title": "Capital",
+   "betweenness": 7032
+  },
+  {
+   "title": "Treasure Trails",
+   "betweenness": 6448
+  },
+  {
+   "title": "Distractions and Diversions",
+   "betweenness": 6156
+  }
+ ]
+}

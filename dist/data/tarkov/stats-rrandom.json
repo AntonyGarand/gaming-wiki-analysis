@@ -1,0 +1,545 @@
+{
+ "wiki": "tarkov",
+ "rank": "random",
+ "nodes": 6135,
+ "converge": {
+  "articles": 1397,
+  "pct": 22.77,
+  "deadEnd": 4738,
+  "deadEndPct": 77.23,
+  "noLinks": 1,
+  "tooFewLinks": 0,
+  "unresolvable": 2485
+ },
+ "hopStats": {
+  "mean": 4.46,
+  "median": 4,
+  "p90": 8,
+  "max": 13
+ },
+ "histogram": {
+  "0": 82,
+  "1": 157,
+  "2": 133,
+  "3": 285,
+  "4": 198,
+  "5": 44,
+  "6": 36,
+  "7": 147,
+  "8": 201,
+  "9": 83,
+  "10": 11,
+  "11": 12,
+  "12": 6,
+  "13": 2
+ },
+ "components": 42,
+ "cycleCount": 41,
+ "largestCycle": {
+  "members": [
+   "Map of Tarkov",
+   "Shoreline"
+  ],
+  "size": 2,
+  "basin": 890
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Map of Tarkov",
+    "Shoreline"
+   ],
+   "basin": 890,
+   "pct": 14.51
+  },
+  {
+   "cycle": [
+    "Character skills"
+   ],
+   "basin": 325,
+   "pct": 5.3
+  },
+  {
+   "cycle": [
+    "Sports bag",
+    "Duffle bag"
+   ],
+   "basin": 40,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Provisions",
+    "Metabolism"
+   ],
+   "basin": 16,
+   "pct": 0.26
+  },
+  {
+   "cycle": [
+    "MS2000 Marker",
+    "Tigr Safari"
+   ],
+   "basin": 15,
+   "pct": 0.24
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 8",
+    "Colt M1911A1 .45 ACP pistol"
+   ],
+   "basin": 7,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Cultist knife",
+    "Night Sweep"
+   ],
+   "basin": 7,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 11",
+    "AR-15 Magpul PRS GEN3 stock"
+   ],
+   "basin": 6,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Revolvers",
+    "MTs-255-12 12ga shotgun"
+   ],
+   "basin": 5,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "AKS-74U Zenit B-11 handguard",
+    "Gunsmith - AKS-74U"
+   ],
+   "basin": 5,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Kalashnikov AK-105 5.45x39 assault rifle",
+    "Kalashnikov AK-104 7.62x39 assault rifle"
+   ],
+   "basin": 5,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Norvinsk region",
+    "Factions",
+    "Tarkov"
+   ],
+   "basin": 4,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Documents",
+    "Military documents 1"
+   ],
+   "basin": 4,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Magnum Research Desert Eagle L5 .50 AE pistol",
+    "Magnum Research Desert Eagle L5 .357 pistol"
+   ],
+   "basin": 4,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Kalashnikov AKS-74UN 5.45x39 assault rifle",
+    "Kalashnikov AKS-74UB 5.45x39 assault rifle"
+   ],
+   "basin": 3,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Malboro Cigarettes",
+    "Strike Cigarettes"
+   ],
+   "basin": 3,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Chemical - Part 2",
+    "Sealed letter with a TG logo"
+   ],
+   "basin": 3,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Health Resort west wing room 306 key",
+    "Health Care Privacy - Part 2"
+   ],
+   "basin": 3,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Reshala",
+    "The Huntsman Path - Justice"
+   ],
+   "basin": 3,
+   "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Tagilla",
+    "The Huntsman Path - Factory Chief"
+   ],
+   "basin": 3,
+   "pct": 0.05
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Weapon mods",
+   "chains": 767,
+   "pct": 12.5,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Weapons",
+   "chains": 232,
+   "pct": 3.78,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ballistics",
+   "chains": 209,
+   "pct": 3.41,
+   "reason": "redlink target"
+  },
+  {
+   "title": "BNTI Kirasa-N body armor",
+   "chains": 168,
+   "pct": 2.74,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Helmet mods",
+   "chains": 150,
+   "pct": 2.44,
+   "reason": "redlink target"
+  },
+  {
+   "title": "TerraGroup",
+   "chains": 108,
+   "pct": 1.76,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Face cover",
+   "chains": 89,
+   "pct": 1.45,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Experience",
+   "chains": 79,
+   "pct": 1.29,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Technical supply crate",
+   "chains": 42,
+   "pct": 0.68,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Backpacks",
+   "chains": 24,
+   "pct": 0.39,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Armbands",
+   "chains": 23,
+   "pct": 0.37,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Weapon box (6x2)",
+   "chains": 19,
+   "pct": 0.31,
+   "reason": "redlink target"
+  },
+  {
+   "title": "The Lab",
+   "chains": 18,
+   "pct": 0.29,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Jack of All Trades",
+   "chains": 14,
+   "pct": 0.23,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Plastic suitcase",
+   "chains": 13,
+   "pct": 0.21,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Weapon mods",
+   "inDegree": 755
+  },
+  {
+   "title": "Hideout",
+   "inDegree": 126
+  },
+  {
+   "title": "Weapons",
+   "inDegree": 102
+  },
+  {
+   "title": "Face cover",
+   "inDegree": 86
+  },
+  {
+   "title": "Headwear",
+   "inDegree": 75
+  },
+  {
+   "title": "Arena BattlePass",
+   "inDegree": 74
+  },
+  {
+   "title": "Quests",
+   "inDegree": 70
+  },
+  {
+   "title": "Experience",
+   "inDegree": 65
+  },
+  {
+   "title": "Tactical clothing",
+   "inDegree": 65
+  },
+  {
+   "title": "Weapon camouflages",
+   "inDegree": 56
+  },
+  {
+   "title": "Loot",
+   "inDegree": 54
+  },
+  {
+   "title": "Helmet mods",
+   "inDegree": 52
+  },
+  {
+   "title": "Keys & Intel",
+   "inDegree": 42
+  },
+  {
+   "title": "Ragman",
+   "inDegree": 40
+  },
+  {
+   "title": "Posters",
+   "inDegree": 40
+  },
+  {
+   "title": "Chest rigs",
+   "inDegree": 38
+  },
+  {
+   "title": "Found in raid",
+   "inDegree": 38
+  },
+  {
+   "title": "USEC",
+   "inDegree": 37
+  },
+  {
+   "title": "Sports bag",
+   "inDegree": 37
+  },
+  {
+   "title": "BEAR",
+   "inDegree": 36
+  },
+  {
+   "title": "Scavs",
+   "inDegree": 36
+  },
+  {
+   "title": "Jacket",
+   "inDegree": 34
+  },
+  {
+   "title": "Shoreline",
+   "inDegree": 29
+  },
+  {
+   "title": "Character skills",
+   "inDegree": 28
+  },
+  {
+   "title": "Reserve",
+   "inDegree": 28
+  },
+  {
+   "title": "Ground cache",
+   "inDegree": 26
+  },
+  {
+   "title": "Easter eggs and References",
+   "inDegree": 25
+  },
+  {
+   "title": "Armor vests",
+   "inDegree": 23
+  },
+  {
+   "title": "Backpacks",
+   "inDegree": 22
+  },
+  {
+   "title": "Customs",
+   "inDegree": 22
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Trading",
+   "betweenness": 2802
+  },
+  {
+   "title": "Physical Bitcoin",
+   "betweenness": 2365
+  },
+  {
+   "title": "Dorm room 314 marked key",
+   "betweenness": 1904
+  },
+  {
+   "title": "Looting",
+   "betweenness": 1582
+  },
+  {
+   "title": "Lightkeeper",
+   "betweenness": 1452
+  },
+  {
+   "title": "Lighthouse",
+   "betweenness": 1018
+  },
+  {
+   "title": "Loot",
+   "betweenness": 984
+  },
+  {
+   "title": "Map of Tarkov",
+   "betweenness": 855
+  },
+  {
+   "title": "Mechanic",
+   "betweenness": 784
+  },
+  {
+   "title": "Quests",
+   "betweenness": 728
+  },
+  {
+   "title": "Hideout",
+   "betweenness": 588
+  },
+  {
+   "title": "Jacket",
+   "betweenness": 540
+  },
+  {
+   "title": "Prestige",
+   "betweenness": 486
+  },
+  {
+   "title": "Arena BattlePass",
+   "betweenness": 364
+  },
+  {
+   "title": "Achievements",
+   "betweenness": 328
+  },
+  {
+   "title": "Ragman",
+   "betweenness": 301
+  },
+  {
+   "title": "Hideout Management",
+   "betweenness": 295
+  },
+  {
+   "title": "Tactical clothing",
+   "betweenness": 264
+  },
+  {
+   "title": "Drawer",
+   "betweenness": 232
+  },
+  {
+   "title": "Woods",
+   "betweenness": 216
+  },
+  {
+   "title": "Dead Scav",
+   "betweenness": 192
+  },
+  {
+   "title": "Therapist",
+   "betweenness": 168
+  },
+  {
+   "title": "Kaban",
+   "betweenness": 166
+  },
+  {
+   "title": "Easter eggs and References",
+   "betweenness": 160
+  },
+  {
+   "title": "USEC cottage first safe key",
+   "betweenness": 160
+  },
+  {
+   "title": "Keys & Intel",
+   "betweenness": 156
+  },
+  {
+   "title": "Changelog",
+   "betweenness": 153
+  },
+  {
+   "title": "Ammunition",
+   "betweenness": 140
+  },
+  {
+   "title": "Found in raid",
+   "betweenness": 129
+  },
+  {
+   "title": "Safe",
+   "betweenness": 121
+  }
+ ]
+}

@@ -1,0 +1,380 @@
+{
+ "wiki": "tarkov",
+ "rank": "last",
+ "nodes": 6135,
+ "converge": {
+  "articles": 2,
+  "pct": 0.03,
+  "deadEnd": 6133,
+  "deadEndPct": 99.97,
+  "noLinks": 1,
+  "tooFewLinks": 0,
+  "unresolvable": 5579
+ },
+ "hopStats": {
+  "mean": 0,
+  "median": 0,
+  "p90": 0,
+  "max": 0
+ },
+ "histogram": {
+  "0": 2
+ },
+ "components": 2,
+ "cycleCount": 1,
+ "largestCycle": {
+  "members": [
+   "Teacher",
+   "Snowman t-shirt"
+  ],
+  "size": 2,
+  "basin": 2
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Teacher",
+    "Snowman t-shirt"
+   ],
+   "basin": 2,
+   "pct": 0.03
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Arena BattlePass",
+   "chains": 84,
+   "pct": 1.37,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Weapon mods",
+   "chains": 79,
+   "pct": 1.29,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Helmet mods",
+   "chains": 26,
+   "pct": 0.42,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Headwear",
+   "chains": 21,
+   "pct": 0.34,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ragman",
+   "chains": 19,
+   "pct": 0.31,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Changelog",
+   "chains": 17,
+   "pct": 0.28,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Hideout",
+   "chains": 10,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Prestige",
+   "chains": 10,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Seasons",
+   "chains": 10,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Panacea crate",
+   "chains": 10,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "BEAR",
+   "chains": 9,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Lighthouse",
+   "chains": 9,
+   "pct": 0.15,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Shoreline",
+   "chains": 8,
+   "pct": 0.13,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Lega Medal",
+   "chains": 8,
+   "pct": 0.13,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Customs",
+   "chains": 7,
+   "pct": 0.11,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Weapon mods",
+   "inDegree": 78
+  },
+  {
+   "title": "Arena BattlePass",
+   "inDegree": 73
+  },
+  {
+   "title": "Helmet mods",
+   "inDegree": 25
+  },
+  {
+   "title": "Headwear",
+   "inDegree": 20
+  },
+  {
+   "title": "Ragman",
+   "inDegree": 18
+  },
+  {
+   "title": "Easter eggs and References",
+   "inDegree": 15
+  },
+  {
+   "title": "Morbus crate",
+   "inDegree": 10
+  },
+  {
+   "title": "Hideout",
+   "inDegree": 9
+  },
+  {
+   "title": "Prestige",
+   "inDegree": 9
+  },
+  {
+   "title": "Seasons",
+   "inDegree": 9
+  },
+  {
+   "title": "Panacea crate",
+   "inDegree": 9
+  },
+  {
+   "title": "BEAR",
+   "inDegree": 8
+  },
+  {
+   "title": "Lighthouse",
+   "inDegree": 8
+  },
+  {
+   "title": "Shoreline",
+   "inDegree": 7
+  },
+  {
+   "title": "Lega Medal",
+   "inDegree": 7
+  },
+  {
+   "title": "Customs",
+   "inDegree": 6
+  },
+  {
+   "title": "Achievements",
+   "inDegree": 6
+  },
+  {
+   "title": "Peacekeeper",
+   "inDegree": 5
+  },
+  {
+   "title": "The Labyrinth",
+   "inDegree": 5
+  },
+  {
+   "title": "Woods",
+   "inDegree": 4
+  },
+  {
+   "title": "RSP-30 reactive signal cartridge (Yellow)",
+   "inDegree": 4
+  },
+  {
+   "title": "Weapons",
+   "inDegree": 3
+  },
+  {
+   "title": "9x18mm PMM PstM gzh",
+   "inDegree": 3
+  },
+  {
+   "title": "Loot",
+   "inDegree": 3
+  },
+  {
+   "title": "Ground Zero",
+   "inDegree": 3
+  },
+  {
+   "title": "USEC",
+   "inDegree": 2
+  },
+  {
+   "title": "5.45x39mm PRS gs",
+   "inDegree": 2
+  },
+  {
+   "title": "Reserve",
+   "inDegree": 2
+  },
+  {
+   "title": "Streets of Tarkov",
+   "inDegree": 2
+  },
+  {
+   "title": "Terminal",
+   "inDegree": 2
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Easter eggs and References",
+   "betweenness": 15
+  },
+  {
+   "title": "Morbus crate",
+   "betweenness": 10
+  },
+  {
+   "title": "Maska-1SCh bulletproof helmet (Christmas Edition)",
+   "betweenness": 2
+  },
+  {
+   "title": "Vengeful Killa",
+   "betweenness": 2
+  },
+  {
+   "title": "Shturman",
+   "betweenness": 1
+  },
+  {
+   "title": "Hard drive (Seeking Information)",
+   "betweenness": 1
+  },
+  {
+   "title": "Trade Embargo - Last Chance",
+   "betweenness": 1
+  },
+  {
+   "title": "Khorovod",
+   "betweenness": 1
+  },
+  {
+   "title": "5.8x42mm DBX95",
+   "betweenness": 1
+  },
+  {
+   "title": "Norvinsk region",
+   "betweenness": 0
+  },
+  {
+   "title": "Tarkov",
+   "betweenness": 0
+  },
+  {
+   "title": "Factions",
+   "betweenness": 0
+  },
+  {
+   "title": "USEC",
+   "betweenness": 0
+  },
+  {
+   "title": "BEAR",
+   "betweenness": 0
+  },
+  {
+   "title": "Scavs",
+   "betweenness": 0
+  },
+  {
+   "title": "Tarkov conflict",
+   "betweenness": 0
+  },
+  {
+   "title": "Map of Tarkov",
+   "betweenness": 0
+  },
+  {
+   "title": "Weapons",
+   "betweenness": 0
+  },
+  {
+   "title": "Pistols",
+   "betweenness": 0
+  },
+  {
+   "title": "Escape from Tarkov",
+   "betweenness": 0
+  },
+  {
+   "title": "Game modes",
+   "betweenness": 0
+  },
+  {
+   "title": "Ammunition",
+   "betweenness": 0
+  },
+  {
+   "title": "Weapon mods",
+   "betweenness": 0
+  },
+  {
+   "title": "Health system",
+   "betweenness": 0
+  },
+  {
+   "title": "Character skills",
+   "betweenness": 0
+  },
+  {
+   "title": "Combat groups",
+   "betweenness": 0
+  },
+  {
+   "title": "Trading",
+   "betweenness": 0
+  },
+  {
+   "title": "Quests",
+   "betweenness": 0
+  },
+  {
+   "title": "Armor vests",
+   "betweenness": 0
+  },
+  {
+   "title": "Containers",
+   "betweenness": 0
+  }
+ ]
+}

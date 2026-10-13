@@ -1,0 +1,384 @@
+{
+ "wiki": "subnautica",
+ "rank": "random",
+ "nodes": 710,
+ "converge": {
+  "articles": 705,
+  "pct": 99.3,
+  "deadEnd": 5,
+  "deadEndPct": 0.7,
+  "noLinks": 4,
+  "tooFewLinks": 0,
+  "unresolvable": 1
+ },
+ "hopStats": {
+  "mean": 10.92,
+  "median": 12,
+  "p90": 20,
+  "max": 25
+ },
+ "histogram": {
+  "0": 11,
+  "1": 58,
+  "2": 36,
+  "3": 39,
+  "4": 34,
+  "5": 20,
+  "6": 12,
+  "7": 18,
+  "8": 26,
+  "9": 20,
+  "10": 29,
+  "11": 44,
+  "12": 32,
+  "13": 49,
+  "14": 51,
+  "15": 39,
+  "16": 31,
+  "17": 39,
+  "18": 30,
+  "19": 16,
+  "20": 22,
+  "21": 10,
+  "22": 23,
+  "23": 8,
+  "24": 5,
+  "25": 3
+ },
+ "components": 7,
+ "cycleCount": 6,
+ "largestCycle": {
+  "members": [
+   "Seabases",
+   "Hull Integrity"
+  ],
+  "size": 2,
+  "basin": 619
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Seabases",
+    "Hull Integrity"
+   ],
+   "basin": 619,
+   "pct": 87.18
+  },
+  {
+   "cycle": [
+    "Achievements"
+   ],
+   "basin": 51,
+   "pct": 7.18
+  },
+  {
+   "cycle": [
+    "Rabbit Ray Egg",
+    "Rabbit Ray"
+   ],
+   "basin": 21,
+   "pct": 2.96
+  },
+  {
+   "cycle": [
+    "Warper",
+    "Architects"
+   ],
+   "basin": 7,
+   "pct": 0.99
+  },
+  {
+   "cycle": [
+    "Mountains Caves",
+    "Cave Bush"
+   ],
+   "basin": 5,
+   "pct": 0.7
+  },
+  {
+   "cycle": [
+    "Ghostray",
+    "Crimson Ray"
+   ],
+   "basin": 2,
+   "pct": 0.28
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Key Bindings",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Steam Badges",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Crater/Map",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lani Minella (Voice Actor)",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Red Tablet",
+   "chains": 1,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Seabases",
+   "inDegree": 26
+  },
+  {
+   "title": "Achievements",
+   "inDegree": 23
+  },
+  {
+   "title": "Habitat Builder",
+   "inDegree": 17
+  },
+  {
+   "title": "Cyclops",
+   "inDegree": 16
+  },
+  {
+   "title": "Flora",
+   "inDegree": 15
+  },
+  {
+   "title": "Food & Water",
+   "inDegree": 14
+  },
+  {
+   "title": "Alien Containment",
+   "inDegree": 14
+  },
+  {
+   "title": "Aurora",
+   "inDegree": 14
+  },
+  {
+   "title": "Ryley Robinson",
+   "inDegree": 13
+  },
+  {
+   "title": "Seamoth",
+   "inDegree": 11
+  },
+  {
+   "title": "Prawn Suit",
+   "inDegree": 11
+  },
+  {
+   "title": "Survival Knife",
+   "inDegree": 8
+  },
+  {
+   "title": "Fauna",
+   "inDegree": 8
+  },
+  {
+   "title": "Fabricator",
+   "inDegree": 7
+  },
+  {
+   "title": "Bioluminescence",
+   "inDegree": 7
+  },
+  {
+   "title": "Primary Containment Facility",
+   "inDegree": 7
+  },
+  {
+   "title": "Vehicles",
+   "inDegree": 6
+  },
+  {
+   "title": "Quartz",
+   "inDegree": 6
+  },
+  {
+   "title": "PDA",
+   "inDegree": 6
+  },
+  {
+   "title": "Floating Island",
+   "inDegree": 6
+  },
+  {
+   "title": "Energy",
+   "inDegree": 6
+  },
+  {
+   "title": "Raw Materials",
+   "inDegree": 6
+  },
+  {
+   "title": "Bioreactor",
+   "inDegree": 6
+  },
+  {
+   "title": "Vehicle Upgrade Console",
+   "inDegree": 6
+  },
+  {
+   "title": "Coral",
+   "inDegree": 6
+  },
+  {
+   "title": "Inactive Lava Zone",
+   "inDegree": 6
+  },
+  {
+   "title": "Kelp Forest",
+   "inDegree": 5
+  },
+  {
+   "title": "Grassy Plateaus",
+   "inDegree": 5
+  },
+  {
+   "title": "Bulb Zone",
+   "inDegree": 5
+  },
+  {
+   "title": "Sea Dragon Leviathan",
+   "inDegree": 5
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Ryley Robinson",
+   "betweenness": 2600
+  },
+  {
+   "title": "Alien Thermal Plant",
+   "betweenness": 2541
+  },
+  {
+   "title": "Kharaa Bacterium",
+   "betweenness": 2436
+  },
+  {
+   "title": "Inactive Lava Zone",
+   "betweenness": 2382
+  },
+  {
+   "title": "Energy",
+   "betweenness": 2380
+  },
+  {
+   "title": "Lifepod 5",
+   "betweenness": 2299
+  },
+  {
+   "title": "Ion Power Cell",
+   "betweenness": 2160
+  },
+  {
+   "title": "Deep Grand Reef",
+   "betweenness": 1995
+  },
+  {
+   "title": "Alien Data Terminal",
+   "betweenness": 1960
+  },
+  {
+   "title": "Flashlight",
+   "betweenness": 1600
+  },
+  {
+   "title": "Kelp Forest",
+   "betweenness": 1456
+  },
+  {
+   "title": "Lead",
+   "betweenness": 1440
+  },
+  {
+   "title": "Metal Salvage",
+   "betweenness": 1394
+  },
+  {
+   "title": "Battery",
+   "betweenness": 1372
+  },
+  {
+   "title": "Raw Materials",
+   "betweenness": 1350
+  },
+  {
+   "title": "Crabsquid",
+   "betweenness": 1203
+  },
+  {
+   "title": "Alien Containment",
+   "betweenness": 1200
+  },
+  {
+   "title": "Seeds",
+   "betweenness": 1178
+  },
+  {
+   "title": "Quartz",
+   "betweenness": 936
+  },
+  {
+   "title": "Prawn Suit",
+   "betweenness": 920
+  },
+  {
+   "title": "Vehicle Upgrade Console",
+   "betweenness": 900
+  },
+  {
+   "title": "Large Resource Deposits",
+   "betweenness": 896
+  },
+  {
+   "title": "Bioluminescence",
+   "betweenness": 870
+  },
+  {
+   "title": "Prawn Suit Torpedo Arm",
+   "betweenness": 847
+  },
+  {
+   "title": "Power Cell",
+   "betweenness": 837
+  },
+  {
+   "title": "Subnautica",
+   "betweenness": 826
+  },
+  {
+   "title": "Thermoblade",
+   "betweenness": 816
+  },
+  {
+   "title": "Power Cell Charger",
+   "betweenness": 752
+  },
+  {
+   "title": "Blueprints",
+   "betweenness": 728
+  },
+  {
+   "title": "Scanner",
+   "betweenness": 630
+  }
+ ]
+}

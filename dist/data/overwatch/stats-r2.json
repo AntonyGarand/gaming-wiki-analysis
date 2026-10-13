@@ -1,0 +1,546 @@
+{
+ "wiki": "overwatch",
+ "rank": "2",
+ "nodes": 2808,
+ "converge": {
+  "articles": 1290,
+  "pct": 45.94,
+  "deadEnd": 1518,
+  "deadEndPct": 54.06,
+  "noLinks": 420,
+  "tooFewLinks": 350,
+  "unresolvable": 78
+ },
+ "hopStats": {
+  "mean": 5.55,
+  "median": 5,
+  "p90": 11,
+  "max": 14
+ },
+ "histogram": {
+  "0": 58,
+  "1": 143,
+  "2": 195,
+  "3": 172,
+  "4": 75,
+  "5": 112,
+  "6": 61,
+  "7": 46,
+  "8": 13,
+  "9": 52,
+  "10": 157,
+  "11": 102,
+  "12": 60,
+  "13": 41,
+  "14": 3
+ },
+ "components": 30,
+ "cycleCount": 29,
+ "largestCycle": {
+  "members": [
+   "Unranked",
+   "Game Modes"
+  ],
+  "size": 2,
+  "basin": 619
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Unranked",
+    "Game Modes"
+   ],
+   "basin": 619,
+   "pct": 22.04
+  },
+  {
+   "cycle": [
+    "Aurora"
+   ],
+   "basin": 305,
+   "pct": 10.86
+  },
+  {
+   "cycle": [
+    "French Dubbing",
+    "Brazilian Portuguese Dubbing"
+   ],
+   "basin": 166,
+   "pct": 5.91
+  },
+  {
+   "cycle": [
+    "Omnium",
+    "Fusion core"
+   ],
+   "basin": 48,
+   "pct": 1.71
+  },
+  {
+   "cycle": [
+    "Mexico",
+    "LumériCo"
+   ],
+   "basin": 30,
+   "pct": 1.07
+  },
+  {
+   "cycle": [
+    "Hard-light",
+    "Palatine Fang"
+   ],
+   "basin": 24,
+   "pct": 0.85
+  },
+  {
+   "cycle": [
+    "Formula Lux",
+    "Monaco"
+   ],
+   "basin": 10,
+   "pct": 0.36
+  },
+  {
+   "cycle": [
+    "Shambali",
+    "Mondatta"
+   ],
+   "basin": 9,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Portugal",
+    "Cláudio Martins"
+   ],
+   "basin": 9,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "The Bahamas",
+    "Cuba"
+   ],
+   "basin": 8,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Port-de-Paix",
+    "Lefort"
+   ],
+   "basin": 7,
+   "pct": 0.25
+  },
+  {
+   "cycle": [
+    "Inti Warriors",
+    "Solar rifle"
+   ],
+   "basin": 7,
+   "pct": 0.25
+  },
+  {
+   "cycle": [
+    "Super coral",
+    "Coral Restoration Initiative",
+    "Aleluia Taupega"
+   ],
+   "basin": 5,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Justina Borda",
+    "Colombia"
+   ],
+   "basin": 5,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "SST Laboratories",
+    "Bastion Siege Automaton E54"
+   ],
+   "basin": 4,
+   "pct": 0.14
+  },
+  {
+   "cycle": [
+    "Command ship",
+    "Power relay"
+   ],
+   "basin": 4,
+   "pct": 0.14
+  },
+  {
+   "cycle": [
+    "Melee",
+    "Barrier"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Erik Swift",
+    "Baleog Fierce"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Nevsky",
+    "Patel"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Talents",
+    "Hero Missions"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "June 26, 2018 Patch",
+   "chains": 582,
+   "pct": 20.73,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Alec Dawson",
+   "chains": 23,
+   "pct": 0.82,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Rome",
+   "chains": 5,
+   "pct": 0.18,
+   "reason": "redlink target"
+  },
+  {
+   "title": "BlizzCon 2015",
+   "chains": 4,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "July 6, 2016 Patch",
+   "chains": 4,
+   "pct": 0.14,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Amazon",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "True Steel, Inc.",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "October 11, 2016 Patch",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Workshop Expanse",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Vancouver Titans",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Ichiko",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Sahr Ngaujah",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Polynesian League",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Chiara Preziosi",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Khaya Fraites",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Cast",
+   "inDegree": 92
+  },
+  {
+   "title": "Omnic Crisis",
+   "inDegree": 70
+  },
+  {
+   "title": "Roles",
+   "inDegree": 67
+  },
+  {
+   "title": "Overwatch (group)",
+   "inDegree": 55
+  },
+  {
+   "title": "French Dubbing",
+   "inDegree": 51
+  },
+  {
+   "title": "Maps",
+   "inDegree": 47
+  },
+  {
+   "title": "Talon",
+   "inDegree": 36
+  },
+  {
+   "title": "Stadium",
+   "inDegree": 35
+  },
+  {
+   "title": "Season",
+   "inDegree": 34
+  },
+  {
+   "title": "Omnic",
+   "inDegree": 33
+  },
+  {
+   "title": "Overwatch",
+   "inDegree": 29
+  },
+  {
+   "title": "Toronto",
+   "inDegree": 25
+  },
+  {
+   "title": "Cosmetics",
+   "inDegree": 22
+  },
+  {
+   "title": "Brazilian Portuguese Dubbing",
+   "inDegree": 20
+  },
+  {
+   "title": "Null Sector",
+   "inDegree": 19
+  },
+  {
+   "title": "Skins",
+   "inDegree": 17
+  },
+  {
+   "title": "Overwatch 2",
+   "inDegree": 17
+  },
+  {
+   "title": "Heroes",
+   "inDegree": 15
+  },
+  {
+   "title": "Health pack",
+   "inDegree": 14
+  },
+  {
+   "title": "Tracer",
+   "inDegree": 13
+  },
+  {
+   "title": "Game Modes",
+   "inDegree": 13
+  },
+  {
+   "title": "Soldier: 76",
+   "inDegree": 13
+  },
+  {
+   "title": "Season/2026",
+   "inDegree": 13
+  },
+  {
+   "title": "D.Va",
+   "inDegree": 11
+  },
+  {
+   "title": "Doomfist",
+   "inDegree": 11
+  },
+  {
+   "title": "Ashe",
+   "inDegree": 11
+  },
+  {
+   "title": "Sojourn",
+   "inDegree": 11
+  },
+  {
+   "title": "Story Missions",
+   "inDegree": 11
+  },
+  {
+   "title": "Winston",
+   "inDegree": 10
+  },
+  {
+   "title": "Hard-light",
+   "inDegree": 10
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Maps",
+   "betweenness": 3357
+  },
+  {
+   "title": "Competitive Play",
+   "betweenness": 3320
+  },
+  {
+   "title": "Overwatch 2",
+   "betweenness": 3080
+  },
+  {
+   "title": "Null Sector",
+   "betweenness": 2802
+  },
+  {
+   "title": "Overwatch",
+   "betweenness": 2480
+  },
+  {
+   "title": "Overwatch: Origins Edition",
+   "betweenness": 1988
+  },
+  {
+   "title": "Skins",
+   "betweenness": 1548
+  },
+  {
+   "title": "Heroes",
+   "betweenness": 1144
+  },
+  {
+   "title": "Season",
+   "betweenness": 1089
+  },
+  {
+   "title": "Busan",
+   "betweenness": 1020
+  },
+  {
+   "title": "Roles",
+   "betweenness": 580
+  },
+  {
+   "title": "Unranked",
+   "betweenness": 575
+  },
+  {
+   "title": "Story Missions",
+   "betweenness": 528
+  },
+  {
+   "title": "Overwatch (group)",
+   "betweenness": 412
+  },
+  {
+   "title": "Stadium",
+   "betweenness": 350
+  },
+  {
+   "title": "Toronto",
+   "betweenness": 338
+  },
+  {
+   "title": "Playlist",
+   "betweenness": 324
+  },
+  {
+   "title": "United Nations",
+   "betweenness": 312
+  },
+  {
+   "title": "Omnic",
+   "betweenness": 303
+  },
+  {
+   "title": "Omnic Crisis",
+   "betweenness": 286
+  },
+  {
+   "title": "King's Row",
+   "betweenness": 250
+  },
+  {
+   "title": "God program",
+   "betweenness": 226
+  },
+  {
+   "title": "Talon",
+   "betweenness": 213
+  },
+  {
+   "title": "Horizon Lunar Colony",
+   "betweenness": 210
+  },
+  {
+   "title": "Cast",
+   "betweenness": 190
+  },
+  {
+   "title": "London",
+   "betweenness": 187
+  },
+  {
+   "title": "Aatlis",
+   "betweenness": 180
+  },
+  {
+   "title": "Hyperloop",
+   "betweenness": 176
+  },
+  {
+   "title": "Numbani",
+   "betweenness": 170
+  },
+  {
+   "title": "Doomfist",
+   "betweenness": 168
+  }
+ ]
+}

@@ -1,0 +1,582 @@
+{
+ "wiki": "osrs",
+ "rank": "last",
+ "nodes": 36164,
+ "converge": {
+  "articles": 34835,
+  "pct": 96.33,
+  "deadEnd": 1329,
+  "deadEndPct": 3.67,
+  "noLinks": 542,
+  "tooFewLinks": 0,
+  "unresolvable": 123
+ },
+ "hopStats": {
+  "mean": 12.89,
+  "median": 11,
+  "p90": 27,
+  "max": 47
+ },
+ "histogram": {
+  "0": 1620,
+  "1": 2377,
+  "2": 1793,
+  "3": 1954,
+  "4": 1679,
+  "5": 1366,
+  "6": 1307,
+  "7": 1213,
+  "8": 1269,
+  "9": 1114,
+  "10": 1313,
+  "11": 1263,
+  "12": 1063,
+  "13": 916,
+  "14": 970,
+  "15": 1038,
+  "16": 935,
+  "17": 801,
+  "18": 860,
+  "19": 806,
+  "20": 1029,
+  "21": 616,
+  "22": 541,
+  "23": 463,
+  "24": 471,
+  "25": 751,
+  "26": 1348,
+  "27": 693,
+  "28": 721,
+  "29": 417,
+  "30": 234,
+  "31": 154,
+  "32": 143,
+  "33": 195,
+  "34": 297,
+  "35": 262,
+  "36": 145,
+  "37": 131,
+  "38": 156,
+  "39": 118,
+  "40": 88,
+  "41": 93,
+  "42": 54,
+  "43": 29,
+  "44": 19,
+  "45": 4,
+  "46": 5,
+  "47": 1
+ },
+ "components": 819,
+ "cycleCount": 818,
+ "largestCycle": {
+  "members": [
+   "Mod Ash",
+   "My Arm"
+  ],
+  "size": 2,
+  "basin": 8159
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Mod Ash",
+    "My Arm"
+   ],
+   "basin": 8159,
+   "pct": 22.56
+  },
+  {
+   "cycle": [
+    "Chat Interface",
+    "Agility dispenser"
+   ],
+   "basin": 6181,
+   "pct": 17.09
+  },
+  {
+   "cycle": [
+    "Tombs of Amascut",
+    "Theatre of Blood"
+   ],
+   "basin": 4924,
+   "pct": 13.62
+  },
+  {
+   "cycle": [
+    "March 2025 Sailing Alpha",
+    "Portmaster's watch"
+   ],
+   "basin": 3746,
+   "pct": 10.36
+  },
+  {
+   "cycle": [
+    "Fourth wall",
+    "Real life"
+   ],
+   "basin": 1356,
+   "pct": 3.75
+  },
+  {
+   "cycle": [
+    "Mudskipper Point",
+    "Skippy"
+   ],
+   "basin": 525,
+   "pct": 1.45
+  },
+  {
+   "cycle": [
+    "Ranged melee",
+    "Ranged magic"
+   ],
+   "basin": 320,
+   "pct": 0.88
+  },
+  {
+   "cycle": [
+    "Sea Shanty 2",
+    "Sea Shanty Xmas"
+   ],
+   "basin": 292,
+   "pct": 0.81
+  },
+  {
+   "cycle": [
+    "Botting",
+    "Real world trading"
+   ],
+   "basin": 286,
+   "pct": 0.79
+  },
+  {
+   "cycle": [
+    "Bones",
+    "Peach"
+   ],
+   "basin": 273,
+   "pct": 0.75
+  },
+  {
+   "cycle": [
+    "Shade Catacombs",
+    "Undead Zealot",
+    "Single-way combat"
+   ],
+   "basin": 268,
+   "pct": 0.74
+  },
+  {
+   "cycle": [
+    "Forgettable Tale...",
+    "Grunsh",
+    "Commander Veldaban",
+    "Laughing Miner Pub"
+   ],
+   "basin": 240,
+   "pct": 0.66
+  },
+  {
+   "cycle": [
+    "Recipe for Disaster",
+    "Culinaromancer"
+   ],
+   "basin": 218,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Safespot",
+    "Temple of Ikov (dungeon)"
+   ],
+   "basin": 189,
+   "pct": 0.52
+  },
+  {
+   "cycle": [
+    "Steam Trading Cards",
+    "Steam Profile Backgrounds"
+   ],
+   "basin": 183,
+   "pct": 0.51
+  },
+  {
+   "cycle": [
+    "Castle Wars",
+    "Greenman's ale"
+   ],
+   "basin": 175,
+   "pct": 0.48
+  },
+  {
+   "cycle": [
+    "Dr Fenkenstrain",
+    "Ring of Charos"
+   ],
+   "basin": 171,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Royal Trouble",
+    "Empty box"
+   ],
+   "basin": 162,
+   "pct": 0.45
+  },
+  {
+   "cycle": [
+    "Tower of Life (building)",
+    "Telekinetic Grab"
+   ],
+   "basin": 159,
+   "pct": 0.44
+  },
+  {
+   "cycle": [
+    "Drop trick",
+    "Drop"
+   ],
+   "basin": 156,
+   "pct": 0.43
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Dwarf multicannon",
+   "chains": 204,
+   "pct": 0.56,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Bank note",
+   "chains": 138,
+   "pct": 0.38,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ultimate Ironman Guide",
+   "chains": 59,
+   "pct": 0.16,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Standard spellbook",
+   "chains": 43,
+   "pct": 0.12,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Wise Old Man",
+   "chains": 34,
+   "pct": 0.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "List of spells",
+   "chains": 32,
+   "pct": 0.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Fancy Clothes Store",
+   "chains": 19,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Shield slot table",
+   "chains": 19,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Deadman: Annihilation/Breach monsters",
+   "chains": 16,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bob (cat)",
+   "chains": 10,
+   "pct": 0.03,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Shayzien Agility Course",
+   "chains": 10,
+   "pct": 0.03,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Cape slot table",
+   "chains": 9,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Vannaka",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Red dragon",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Sliske",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Treasure Trails",
+   "inDegree": 804
+  },
+  {
+   "title": "Examine",
+   "inDegree": 342
+  },
+  {
+   "title": "Grand Exchange",
+   "inDegree": 284
+  },
+  {
+   "title": "Experience",
+   "inDegree": 260
+  },
+  {
+   "title": "Player-owned house",
+   "inDegree": 249
+  },
+  {
+   "title": "Saw",
+   "inDegree": 233
+  },
+  {
+   "title": "Quests",
+   "inDegree": 194
+  },
+  {
+   "title": "Player killing",
+   "inDegree": 174
+  },
+  {
+   "title": "Coins",
+   "inDegree": 171
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 170
+  },
+  {
+   "title": "Hitpoints",
+   "inDegree": 148
+  },
+  {
+   "title": "God Wars Dungeon",
+   "inDegree": 142
+  },
+  {
+   "title": "Collection log",
+   "inDegree": 142
+  },
+  {
+   "title": "Crew Management",
+   "inDegree": 142
+  },
+  {
+   "title": "Gielinor",
+   "inDegree": 125
+  },
+  {
+   "title": "Sailing",
+   "inDegree": 125
+  },
+  {
+   "title": "Thieving",
+   "inDegree": 122
+  },
+  {
+   "title": "Prifddinas",
+   "inDegree": 107
+  },
+  {
+   "title": "Defence",
+   "inDegree": 102
+  },
+  {
+   "title": "March 2025 Sailing Alpha",
+   "inDegree": 101
+  },
+  {
+   "title": "June 2025 Sailing Beta",
+   "inDegree": 99
+  },
+  {
+   "title": "Tombs of Amascut",
+   "inDegree": 93
+  },
+  {
+   "title": "Desert Treasure II - The Fallen Empire",
+   "inDegree": 93
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 89
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 88
+  },
+  {
+   "title": "Building mode",
+   "inDegree": 84
+  },
+  {
+   "title": "Song of the Elves",
+   "inDegree": 84
+  },
+  {
+   "title": "Slayer task",
+   "inDegree": 82
+  },
+  {
+   "title": "Magic",
+   "inDegree": 81
+  },
+  {
+   "title": "Construction",
+   "inDegree": 80
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Construction",
+   "betweenness": 122584
+  },
+  {
+   "title": "Player-owned house",
+   "betweenness": 121475
+  },
+  {
+   "title": "Construction/Level up table",
+   "betweenness": 117033
+  },
+  {
+   "title": "Portal (Player-owned house)",
+   "betweenness": 116736
+  },
+  {
+   "title": "Teleport to house (tablet)",
+   "betweenness": 111964
+  },
+  {
+   "title": "Fire of Eternal Light",
+   "betweenness": 111580
+  },
+  {
+   "title": "Lumbridge Swamp Caves",
+   "betweenness": 106077
+  },
+  {
+   "title": "Chasm of Tears",
+   "betweenness": 100566
+  },
+  {
+   "title": "Poison karambwan",
+   "betweenness": 95013
+  },
+  {
+   "title": "Karamja",
+   "betweenness": 89936
+  },
+  {
+   "title": "Jungle Troubles",
+   "betweenness": 84330
+  },
+  {
+   "title": "The Shaikahan",
+   "betweenness": 80164
+  },
+  {
+   "title": "Ardougne Zoo",
+   "betweenness": 74581
+  },
+  {
+   "title": "Scorpion",
+   "betweenness": 68856
+  },
+  {
+   "title": "Scorpion (Varlamore)",
+   "betweenness": 63129
+  },
+  {
+   "title": "Fortis Colosseum",
+   "betweenness": 58110
+  },
+  {
+   "title": "Treasure Trails",
+   "betweenness": 54782
+  },
+  {
+   "title": "Sunfire splinters",
+   "betweenness": 52335
+  },
+  {
+   "title": "Minimus",
+   "betweenness": 46536
+  },
+  {
+   "title": "Slayer task",
+   "betweenness": 46440
+  },
+  {
+   "title": "Teoki",
+   "betweenness": 40740
+  },
+  {
+   "title": "Krystilia",
+   "betweenness": 40705
+  },
+  {
+   "title": "Draynor Village",
+   "betweenness": 35828
+  },
+  {
+   "title": "Misthalin",
+   "betweenness": 35166
+  },
+  {
+   "title": "Tempestus",
+   "betweenness": 34932
+  },
+  {
+   "title": "Sailing",
+   "betweenness": 33166
+  },
+  {
+   "title": "Veronica",
+   "betweenness": 33084
+  },
+  {
+   "title": "2025 Christmas event/Gallery",
+   "betweenness": 32592
+  },
+  {
+   "title": "Experience",
+   "betweenness": 32320
+  },
+  {
+   "title": "Game tick",
+   "betweenness": 31733
+  }
+ ]
+}

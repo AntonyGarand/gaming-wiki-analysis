@@ -1,0 +1,405 @@
+{
+ "wiki": "valheim",
+ "rank": "last",
+ "nodes": 1284,
+ "converge": {
+  "articles": 12,
+  "pct": 0.93,
+  "deadEnd": 1272,
+  "deadEndPct": 99.07,
+  "noLinks": 10,
+  "tooFewLinks": 0,
+  "unresolvable": 920
+ },
+ "hopStats": {
+  "mean": 0.33,
+  "median": 0,
+  "p90": 1,
+  "max": 1
+ },
+ "histogram": {
+  "0": 8,
+  "1": 4
+ },
+ "components": 5,
+ "cycleCount": 4,
+ "largestCycle": {
+  "members": [
+   "Tables",
+   "Chairs"
+  ],
+  "size": 2,
+  "basin": 4
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Tables",
+    "Chairs"
+   ],
+   "basin": 4,
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Thatch Roofs",
+    "Shingle Roofs"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Krigen",
+    "Hexen"
+   ],
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Liquid Frost",
+    "Moulds"
+   ],
+   "basin": 2,
+   "pct": 0.16
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Rag Armor",
+   "chains": 69,
+   "pct": 5.37,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Deep North",
+   "chains": 21,
+   "pct": 1.64,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Damage",
+   "chains": 19,
+   "pct": 1.48,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Stamina",
+   "chains": 18,
+   "pct": 1.4,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Coins",
+   "chains": 11,
+   "pct": 0.86,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Developer console",
+   "chains": 10,
+   "pct": 0.78,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Galdr Table",
+   "chains": 10,
+   "pct": 0.78,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Cauldron",
+   "chains": 9,
+   "pct": 0.7,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Swamp",
+   "chains": 8,
+   "pct": 0.62,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Mistlands",
+   "chains": 7,
+   "pct": 0.55,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ward",
+   "chains": 7,
+   "pct": 0.55,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Creatures",
+   "chains": 5,
+   "pct": 0.39,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Coal",
+   "chains": 5,
+   "pct": 0.39,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Plains",
+   "chains": 5,
+   "pct": 0.39,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Dvergr (race)",
+   "chains": 5,
+   "pct": 0.39,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Bloodgold Battle Idol",
+   "inDegree": 34
+  },
+  {
+   "title": "Forge of Potential",
+   "inDegree": 17
+  },
+  {
+   "title": "Deep North",
+   "inDegree": 16
+  },
+  {
+   "title": "Damage",
+   "inDegree": 15
+  },
+  {
+   "title": "Cauldron",
+   "inDegree": 8
+  },
+  {
+   "title": "Developer console",
+   "inDegree": 8
+  },
+  {
+   "title": "Kall Fimbulbringer",
+   "inDegree": 7
+  },
+  {
+   "title": "Bloodgold Protection Idol",
+   "inDegree": 7
+  },
+  {
+   "title": "Mistlands",
+   "inDegree": 6
+  },
+  {
+   "title": "Trader",
+   "inDegree": 5
+  },
+  {
+   "title": "Creatures",
+   "inDegree": 4
+  },
+  {
+   "title": "Coal",
+   "inDegree": 4
+  },
+  {
+   "title": "Plains",
+   "inDegree": 4
+  },
+  {
+   "title": "Loot chest",
+   "inDegree": 4
+  },
+  {
+   "title": "Dvergr (race)",
+   "inDegree": 4
+  },
+  {
+   "title": "Mörkhalla",
+   "inDegree": 4
+  },
+  {
+   "title": "Stone",
+   "inDegree": 3
+  },
+  {
+   "title": "Cultivator",
+   "inDegree": 3
+  },
+  {
+   "title": "Fuling",
+   "inDegree": 3
+  },
+  {
+   "title": "Stamina",
+   "inDegree": 3
+  },
+  {
+   "title": "Health",
+   "inDegree": 3
+  },
+  {
+   "title": "Eitr",
+   "inDegree": 3
+  },
+  {
+   "title": "Chairs",
+   "inDegree": 3
+  },
+  {
+   "title": "Ice",
+   "inDegree": 3
+  },
+  {
+   "title": "Frost Foundry",
+   "inDegree": 3
+  },
+  {
+   "title": "Winding Tunnels",
+   "inDegree": 3
+  },
+  {
+   "title": "Swamp",
+   "inDegree": 2
+  },
+  {
+   "title": "Hammer",
+   "inDegree": 2
+  },
+  {
+   "title": "Smelter",
+   "inDegree": 2
+  },
+  {
+   "title": "Greydwarf",
+   "inDegree": 2
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Bloodgold Battle Idol",
+   "betweenness": 70
+  },
+  {
+   "title": "Forge of Potential",
+   "betweenness": 67
+  },
+  {
+   "title": "Winding Tunnels",
+   "betweenness": 32
+  },
+  {
+   "title": "Intricate Key",
+   "betweenness": 27
+  },
+  {
+   "title": "Mörkhalla",
+   "betweenness": 26
+  },
+  {
+   "title": "Loot chest",
+   "betweenness": 20
+  },
+  {
+   "title": "Grappling Hook",
+   "betweenness": 14
+  },
+  {
+   "title": "Bloodgold Protection Idol",
+   "betweenness": 14
+  },
+  {
+   "title": "Kall Fimbulbringer",
+   "betweenness": 9
+  },
+  {
+   "title": "Frost Foundry",
+   "betweenness": 8
+  },
+  {
+   "title": "Ice",
+   "betweenness": 6
+  },
+  {
+   "title": "Iron Protection Idol",
+   "betweenness": 6
+  },
+  {
+   "title": "Timber Structures",
+   "betweenness": 6
+  },
+  {
+   "title": "Scalewood Structures",
+   "betweenness": 6
+  },
+  {
+   "title": "Trader",
+   "betweenness": 5
+  },
+  {
+   "title": "Elaking",
+   "betweenness": 5
+  },
+  {
+   "title": "Bloodgold",
+   "betweenness": 4
+  },
+  {
+   "title": "Timberwood",
+   "betweenness": 4
+  },
+  {
+   "title": "Memorial Site",
+   "betweenness": 4
+  },
+  {
+   "title": "Black Metal Battle Idol",
+   "betweenness": 4
+  },
+  {
+   "title": "Timberwood Gate",
+   "betweenness": 4
+  },
+  {
+   "title": "Fallen Warrior",
+   "betweenness": 3
+  },
+  {
+   "title": "Northern Vengeance",
+   "betweenness": 3
+  },
+  {
+   "title": "Shield of Roots",
+   "betweenness": 3
+  },
+  {
+   "title": "Boss strategies",
+   "betweenness": 2
+  },
+  {
+   "title": "Strategies",
+   "betweenness": 2
+  },
+  {
+   "title": "Chairs",
+   "betweenness": 2
+  },
+  {
+   "title": "Moose",
+   "betweenness": 2
+  },
+  {
+   "title": "Jotun Invasion",
+   "betweenness": 2
+  },
+  {
+   "title": "Moose Saddle",
+   "betweenness": 2
+  }
+ ]
+}

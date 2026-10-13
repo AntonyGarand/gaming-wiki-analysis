@@ -1,0 +1,542 @@
+{
+ "wiki": "hytale",
+ "rank": "2",
+ "nodes": 4498,
+ "converge": {
+  "articles": 3597,
+  "pct": 79.97,
+  "deadEnd": 901,
+  "deadEndPct": 20.03,
+  "noLinks": 67,
+  "tooFewLinks": 204,
+  "unresolvable": 27
+ },
+ "hopStats": {
+  "mean": 3.76,
+  "median": 4,
+  "p90": 6,
+  "max": 10
+ },
+ "histogram": {
+  "0": 43,
+  "1": 83,
+  "2": 523,
+  "3": 1123,
+  "4": 1088,
+  "5": 333,
+  "6": 117,
+  "7": 108,
+  "8": 53,
+  "9": 117,
+  "10": 9
+ },
+ "components": 22,
+ "cycleCount": 21,
+ "largestCycle": {
+  "members": [
+   "Hypixel Network"
+  ],
+  "size": 1,
+  "basin": 2947
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Hypixel Network"
+   ],
+   "basin": 2947,
+   "pct": 65.52
+  },
+  {
+   "cycle": [
+    "Zone",
+    "Region"
+   ],
+   "basin": 368,
+   "pct": 8.18
+  },
+  {
+   "cycle": [
+    "Item",
+    "Storage"
+   ],
+   "basin": 136,
+   "pct": 3.02
+  },
+  {
+   "cycle": [
+    "Ore",
+    "Furnace"
+   ],
+   "basin": 20,
+   "pct": 0.44
+  },
+  {
+   "cycle": [
+    "Ancient Gateway",
+    "Fragment",
+    "Fragment Key"
+   ],
+   "basin": 18,
+   "pct": 0.4
+  },
+  {
+   "cycle": [
+    "Tilled Dirt",
+    "Hoe"
+   ],
+   "basin": 17,
+   "pct": 0.38
+  },
+  {
+   "cycle": [
+    "Multiplayer",
+    "Server"
+   ],
+   "basin": 17,
+   "pct": 0.38
+  },
+  {
+   "cycle": [
+    "Shield",
+    "Rusty Shield"
+   ],
+   "basin": 17,
+   "pct": 0.38
+  },
+  {
+   "cycle": [
+    "Signature Energy",
+    "Signature Attack"
+   ],
+   "basin": 11,
+   "pct": 0.24
+  },
+  {
+   "cycle": [
+    "Light Leather",
+    "Tanning Rack",
+    "Light Hide"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Release Patchline",
+    "Patchline"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Forgotten Temple (Edge of the Echo)",
+    "Forgotten Temple Gateway"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Simple Wooden Bookshelf",
+    "Simple Wooden Shelf"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Emote",
+    "Emote Selector"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Stone",
+    "Cobblestone"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Small Boomshroom",
+    "Large Boomshroom"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Chair",
+    "Bench (furniture)"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Puffy Green Common Mushroom",
+    "Puffy Green Common Mushroom (Large)"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Bamboo Roots",
+    "Bamboo Roots (Deco)"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Woolen Cloth Armor",
+    "Light Leather Armor"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Creative Mode",
+   "chains": 373,
+   "pct": 8.29,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Update 6",
+   "chains": 144,
+   "pct": 3.2,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Pickaxe",
+   "chains": 56,
+   "pct": 1.24,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Oasis",
+   "chains": 8,
+   "pct": 0.18,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Asset Editor",
+   "chains": 5,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Controls",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Demonic Axe",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Concept Art",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Projectiles",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Animation",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hytale Blog",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Friends List",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Server browser",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Wallpapers",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "List of Bushes",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Exploration Mode",
+   "inDegree": 865
+  },
+  {
+   "title": "Builder's Workbench",
+   "inDegree": 814
+  },
+  {
+   "title": "Creative Inventory",
+   "inDegree": 315
+  },
+  {
+   "title": "Hytale",
+   "inDegree": 205
+  },
+  {
+   "title": "Tree",
+   "inDegree": 154
+  },
+  {
+   "title": "NPC",
+   "inDegree": 125
+  },
+  {
+   "title": "Prefab",
+   "inDegree": 117
+  },
+  {
+   "title": "Furniture Workbench",
+   "inDegree": 112
+  },
+  {
+   "title": "Emerald Wilds",
+   "inDegree": 69
+  },
+  {
+   "title": "Howling Sands",
+   "inDegree": 51
+  },
+  {
+   "title": "Farmer's Workbench",
+   "inDegree": 38
+  },
+  {
+   "title": "Whisperfrost Frontiers",
+   "inDegree": 37
+  },
+  {
+   "title": "Devastated Lands",
+   "inDegree": 37
+  },
+  {
+   "title": "The Guttering Hollows",
+   "inDegree": 35
+  },
+  {
+   "title": "Goblin Tinkerer's Workbench",
+   "inDegree": 29
+  },
+  {
+   "title": "Tropical Jungle",
+   "inDegree": 24
+  },
+  {
+   "title": "Food",
+   "inDegree": 23
+  },
+  {
+   "title": "The Fens",
+   "inDegree": 20
+  },
+  {
+   "title": "Blacksmith's Anvil",
+   "inDegree": 20
+  },
+  {
+   "title": "Cave",
+   "inDegree": 18
+  },
+  {
+   "title": "Cinder Wastes",
+   "inDegree": 18
+  },
+  {
+   "title": "Orbis",
+   "inDegree": 16
+  },
+  {
+   "title": "Chest",
+   "inDegree": 16
+  },
+  {
+   "title": "Health Regen",
+   "inDegree": 16
+  },
+  {
+   "title": "Shield",
+   "inDegree": 16
+  },
+  {
+   "title": "Avatar",
+   "inDegree": 15
+  },
+  {
+   "title": "Ocean",
+   "inDegree": 15
+  },
+  {
+   "title": "Arrow",
+   "inDegree": 15
+  },
+  {
+   "title": "Creative Mode",
+   "inDegree": 15
+  },
+  {
+   "title": "Kweebec Village",
+   "inDegree": 13
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Exploration Mode",
+   "betweenness": 3476
+  },
+  {
+   "title": "Hytale",
+   "betweenness": 2926
+  },
+  {
+   "title": "Builder's Workbench",
+   "betweenness": 2523
+  },
+  {
+   "title": "NPC",
+   "betweenness": 948
+  },
+  {
+   "title": "Furniture Workbench",
+   "betweenness": 928
+  },
+  {
+   "title": "Memories",
+   "betweenness": 903
+  },
+  {
+   "title": "Avatar",
+   "betweenness": 810
+  },
+  {
+   "title": "Monster",
+   "betweenness": 807
+  },
+  {
+   "title": "Bench",
+   "betweenness": 804
+  },
+  {
+   "title": "Orbis",
+   "betweenness": 724
+  },
+  {
+   "title": "Gaia",
+   "betweenness": 684
+  },
+  {
+   "title": "Hostile",
+   "betweenness": 576
+  },
+  {
+   "title": "Lore",
+   "betweenness": 516
+  },
+  {
+   "title": "Emerald Wilds",
+   "betweenness": 495
+  },
+  {
+   "title": "Zone",
+   "betweenness": 358
+  },
+  {
+   "title": "Food",
+   "betweenness": 357
+  },
+  {
+   "title": "Creative Inventory",
+   "betweenness": 348
+  },
+  {
+   "title": "Official Q&As",
+   "betweenness": 346
+  },
+  {
+   "title": "Devastated Lands",
+   "betweenness": 345
+  },
+  {
+   "title": "Entity Effect",
+   "betweenness": 342
+  },
+  {
+   "title": "Tree",
+   "betweenness": 332
+  },
+  {
+   "title": "Health Regen",
+   "betweenness": 316
+  },
+  {
+   "title": "Grilled Fish",
+   "betweenness": 290
+  },
+  {
+   "title": "Health",
+   "betweenness": 285
+  },
+  {
+   "title": "Weapon",
+   "betweenness": 225
+  },
+  {
+   "title": "Inventory",
+   "betweenness": 220
+  },
+  {
+   "title": "Howling Sands",
+   "betweenness": 200
+  },
+  {
+   "title": "The Fens",
+   "betweenness": 148
+  },
+  {
+   "title": "Prefab",
+   "betweenness": 141
+  },
+  {
+   "title": "Item",
+   "betweenness": 134
+  }
+ ]
+}

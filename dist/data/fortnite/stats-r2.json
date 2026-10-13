@@ -1,0 +1,547 @@
+{
+ "wiki": "fortnite",
+ "rank": "2",
+ "nodes": 35312,
+ "converge": {
+  "articles": 31203,
+  "pct": 88.36,
+  "deadEnd": 4109,
+  "deadEndPct": 11.64,
+  "noLinks": 2196,
+  "tooFewLinks": 1192,
+  "unresolvable": 242
+ },
+ "hopStats": {
+  "mean": 4.58,
+  "median": 5,
+  "p90": 6,
+  "max": 11
+ },
+ "histogram": {
+  "0": 66,
+  "1": 1278,
+  "2": 3506,
+  "3": 1549,
+  "4": 403,
+  "5": 18945,
+  "6": 4851,
+  "7": 380,
+  "8": 158,
+  "9": 50,
+  "10": 16,
+  "11": 1
+ },
+ "components": 34,
+ "cycleCount": 33,
+ "largestCycle": {
+  "members": [
+   "Victory Royale",
+   "Lobby Music"
+  ],
+  "size": 2,
+  "basin": 28734
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Victory Royale",
+    "Lobby Music"
+   ],
+   "basin": 28734,
+   "pct": 81.37
+  },
+  {
+   "cycle": [
+    "Fortnite: Save the World",
+    "Heroes",
+    "Soldiers"
+   ],
+   "basin": 1467,
+   "pct": 4.15
+  },
+  {
+   "cycle": [
+    "Cosmetic Items",
+    "Battle Pass"
+   ],
+   "basin": 767,
+   "pct": 2.17
+  },
+  {
+   "cycle": [
+    "Update v36.10",
+    "Update v36.20",
+    "Update v36.30",
+    "Update v37.00",
+    "Update v37.10",
+    "Update v37.50"
+   ],
+   "basin": 66,
+   "pct": 0.19
+  },
+  {
+   "cycle": [
+    "Fortnite: Ballistic",
+    "Rift Point Device"
+   ],
+   "basin": 37,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Party Royale",
+    "Main Stage"
+   ],
+   "basin": 29,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Gadgets"
+   ],
+   "basin": 9,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Content Update v11.31 - 2",
+    "Content Update v11.31 - 3",
+    "Update v11.31"
+   ],
+   "basin": 9,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Boney Burbs",
+    "Primal Biome"
+   ],
+   "basin": 9,
+   "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Winterfest 2024",
+    "Defrosting Event"
+   ],
+   "basin": 8,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Shield Mushroom",
+    "Golden Truffle"
+   ],
+   "basin": 7,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Dragon's Breath Shotgun",
+    "Dragon's Belch Shotgun"
+   ],
+   "basin": 7,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Update v29.20",
+    "Jackrabbit"
+   ],
+   "basin": 6,
+   "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Limited Time Offers",
+    "Item Shop Bundles"
+   ],
+   "basin": 5,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Nevermore",
+    "Armored (support bonus)"
+   ],
+   "basin": 4,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "The Getaway",
+    "Update v5.40"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "TIE Whisper",
+    "Live at Risky Reels"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "AMP-UP!",
+    "FIRE-UP!"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Update v18.40"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Cold Blooded",
+    "Getaway Gang"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Update v42.30",
+   "chains": 73,
+   "pct": 0.21,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Update v28.01",
+   "chains": 31,
+   "pct": 0.09,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Healing Items",
+   "chains": 27,
+   "pct": 0.08,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Loading Screens",
+   "chains": 23,
+   "pct": 0.07,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Ocean (Battle Royale)",
+   "chains": 19,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Consumables",
+   "chains": 15,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Venture XP",
+   "chains": 14,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Utility Items",
+   "chains": 14,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Update v8.20",
+   "chains": 11,
+   "pct": 0.03,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Creative Showcases",
+   "chains": 9,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Update v28.20",
+   "chains": 9,
+   "pct": 0.03,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Flash",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Phase Scout",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Update v6.21",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Survive the Storm",
+   "chains": 7,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Fortnite",
+   "inDegree": 18761
+  },
+  {
+   "title": "Fortnite: Battle Royale",
+   "inDegree": 2928
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "inDegree": 703
+  },
+  {
+   "title": "Battle Pass",
+   "inDegree": 414
+  },
+  {
+   "title": "Fortnite: Reload",
+   "inDegree": 214
+  },
+  {
+   "title": "Athena",
+   "inDegree": 173
+  },
+  {
+   "title": "Music Pass",
+   "inDegree": 122
+  },
+  {
+   "title": "Fortnite Festival",
+   "inDegree": 109
+  },
+  {
+   "title": "Blitz Royale",
+   "inDegree": 84
+  },
+  {
+   "title": "Fortnite Crew",
+   "inDegree": 77
+  },
+  {
+   "title": "Rocket Racing",
+   "inDegree": 51
+  },
+  {
+   "title": "XP",
+   "inDegree": 50
+  },
+  {
+   "title": "Africa",
+   "inDegree": 50
+  },
+  {
+   "title": "Update v7.00",
+   "inDegree": 46
+  },
+  {
+   "title": "Just Pretend",
+   "inDegree": 34
+  },
+  {
+   "title": "Fortnite: Ballistic",
+   "inDegree": 33
+  },
+  {
+   "title": "AAAHH MEN!",
+   "inDegree": 33
+  },
+  {
+   "title": "Hexsylvania",
+   "inDegree": 32
+  },
+  {
+   "title": "Seven Nation Army",
+   "inDegree": 32
+  },
+  {
+   "title": "Battery",
+   "inDegree": 32
+  },
+  {
+   "title": "Update v11.00",
+   "inDegree": 31
+  },
+  {
+   "title": "Update v9.00",
+   "inDegree": 30
+  },
+  {
+   "title": "Update v28.01",
+   "inDegree": 29
+  },
+  {
+   "title": "Cheap Thrills",
+   "inDegree": 29
+  },
+  {
+   "title": "Outfits",
+   "inDegree": 28
+  },
+  {
+   "title": "Lapti Nek (Jabba's Palace)",
+   "inDegree": 28
+  },
+  {
+   "title": "Tournament",
+   "inDegree": 24
+  },
+  {
+   "title": "Fly",
+   "inDegree": 24
+  },
+  {
+   "title": "Flannel Falls",
+   "inDegree": 23
+  },
+  {
+   "title": "Loading Screens",
+   "inDegree": 22
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Fortnite",
+   "betweenness": 120265
+  },
+  {
+   "title": "Unreal Engine",
+   "betweenness": 96364
+  },
+  {
+   "title": "Rust Lord",
+   "betweenness": 72276
+  },
+  {
+   "title": "Fortnite: Battle Royale",
+   "betweenness": 56924
+  },
+  {
+   "title": "Victory Royale",
+   "betweenness": 28730
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "betweenness": 2808
+  },
+  {
+   "title": "Heroes",
+   "betweenness": 1521
+  },
+  {
+   "title": "Fortnite Festival",
+   "betweenness": 750
+  },
+  {
+   "title": "Athena",
+   "betweenness": 717
+  },
+  {
+   "title": "Fortnite: Reload",
+   "betweenness": 696
+  },
+  {
+   "title": "Fortnite Crew",
+   "betweenness": 632
+  },
+  {
+   "title": "Battle Pass",
+   "betweenness": 617
+  },
+  {
+   "title": "Item Shop History/December 2nd 2020",
+   "betweenness": 560
+  },
+  {
+   "title": "Update v40.20",
+   "betweenness": 550
+  },
+  {
+   "title": "Update v40.30",
+   "betweenness": 530
+  },
+  {
+   "title": "Blitz Royale",
+   "betweenness": 516
+  },
+  {
+   "title": "Update v40.40",
+   "betweenness": 495
+  },
+  {
+   "title": "Gutbomb",
+   "betweenness": 486
+  },
+  {
+   "title": "Duos",
+   "betweenness": 470
+  },
+  {
+   "title": "Update v40.41",
+   "betweenness": 448
+  },
+  {
+   "title": "Update v41.00",
+   "betweenness": 413
+  },
+  {
+   "title": "XP",
+   "betweenness": 396
+  },
+  {
+   "title": "Update v40.10",
+   "betweenness": 396
+  },
+  {
+   "title": "Music Pass",
+   "betweenness": 375
+  },
+  {
+   "title": "Update v41.10",
+   "betweenness": 360
+  },
+  {
+   "title": "Update v40.00",
+   "betweenness": 325
+  },
+  {
+   "title": "Plankerton",
+   "betweenness": 322
+  },
+  {
+   "title": "The Last Reality",
+   "betweenness": 322
+  },
+  {
+   "title": "Update v39.40",
+   "betweenness": 315
+  },
+  {
+   "title": "Rocket Racing",
+   "betweenness": 312
+  }
+ ]
+}

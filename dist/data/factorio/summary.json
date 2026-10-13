@@ -1,0 +1,99 @@
+{
+ "wiki": "factorio",
+ "generatedAt": "2026-10-12T13:36:11.862Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 50.46,
+   "deadEndPct": 49.54,
+   "components": 143,
+   "cycleCount": 142,
+   "meanHops": 2.81,
+   "medianHops": 2,
+   "maxHops": 16,
+   "topAttractor": [
+    "Player",
+    "Multiplayer"
+   ],
+   "topAttractorPct": 8.03
+  },
+  {
+   "rank": "2",
+   "convergePct": 34.26,
+   "deadEndPct": 65.74,
+   "components": 125,
+   "cycleCount": 124,
+   "meanHops": 3.68,
+   "medianHops": 2,
+   "maxHops": 23,
+   "topAttractor": [
+    "Lab",
+    "Technologies"
+   ],
+   "topAttractorPct": 7.47
+  },
+  {
+   "rank": "3",
+   "convergePct": 27.05,
+   "deadEndPct": 72.95,
+   "components": 97,
+   "cycleCount": 96,
+   "meanHops": 2.91,
+   "medianHops": 2,
+   "maxHops": 18,
+   "topAttractor": [
+    "Science pack",
+    "Technologies"
+   ],
+   "topAttractorPct": 2.69
+  },
+  {
+   "rank": "5",
+   "convergePct": 8.44,
+   "deadEndPct": 91.56,
+   "components": 47,
+   "cycleCount": 46,
+   "meanHops": 3.6,
+   "medianHops": 3,
+   "maxHops": 12,
+   "topAttractor": [
+    "Low density structure",
+    "Low density structure productivity (research)"
+   ],
+   "topAttractorPct": 1.23
+  },
+  {
+   "rank": "last",
+   "convergePct": 42.13,
+   "deadEndPct": 57.87,
+   "components": 157,
+   "cycleCount": 156,
+   "meanHops": 2.97,
+   "medianHops": 2,
+   "maxHops": 15,
+   "topAttractor": [
+    "Space platform",
+    "Oxide asteroid chunk",
+    "Promethium asteroid chunk",
+    "Shattered planet",
+    "Solar system edge"
+   ],
+   "topAttractorPct": 6.05
+  },
+  {
+   "rank": "random",
+   "convergePct": 45.28,
+   "deadEndPct": 54.72,
+   "components": 141,
+   "cycleCount": 140,
+   "meanHops": 3.84,
+   "medianHops": 3,
+   "maxHops": 17,
+   "topAttractor": [
+    "Steel plate",
+    "Iron plate"
+   ],
+   "topAttractorPct": 5.77
+  }
+ ]
+}

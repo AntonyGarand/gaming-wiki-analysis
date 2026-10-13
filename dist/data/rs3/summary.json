@@ -1,0 +1,114 @@
+{
+ "wiki": "rs3",
+ "generatedAt": "2026-10-12T14:05:58.637Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 96.86,
+   "deadEndPct": 3.14,
+   "components": 339,
+   "cycleCount": 338,
+   "meanHops": 3.99,
+   "medianHops": 3,
+   "maxHops": 17,
+   "topAttractor": [
+    "Elder Gods",
+    "Gods",
+    "Elder artefacts"
+   ],
+   "topAttractorPct": 18.05
+  },
+  {
+   "rank": "2",
+   "convergePct": 85.07,
+   "deadEndPct": 14.93,
+   "components": 974,
+   "cycleCount": 973,
+   "meanHops": 6.49,
+   "medianHops": 5,
+   "maxHops": 25,
+   "topAttractor": [
+    "Gielinor",
+    "Gods",
+    "Elder Gods",
+    "Jas"
+   ],
+   "topAttractorPct": 23.41
+  },
+  {
+   "rank": "3",
+   "convergePct": 65.42,
+   "deadEndPct": 34.58,
+   "components": 1091,
+   "cycleCount": 1090,
+   "meanHops": 8.67,
+   "medianHops": 6,
+   "maxHops": 38,
+   "topAttractor": [
+    "Guthix",
+    "Gielinor"
+   ],
+   "topAttractorPct": 28.37
+  },
+  {
+   "rank": "5",
+   "convergePct": 27.14,
+   "deadEndPct": 72.86,
+   "components": 682,
+   "cycleCount": 681,
+   "meanHops": 6.42,
+   "medianHops": 5,
+   "maxHops": 27,
+   "topAttractor": [
+    "Melee",
+    "Ranged",
+    "Combat triangle"
+   ],
+   "topAttractorPct": 5.94
+  },
+  {
+   "rank": "last",
+   "convergePct": 61.36,
+   "deadEndPct": 38.64,
+   "components": 1553,
+   "cycleCount": 1552,
+   "meanHops": 7.09,
+   "medianHops": 5,
+   "maxHops": 42,
+   "topAttractor": [
+    "Grand Exchange",
+    "Grand Exchange/History",
+    "Abyssal whip",
+    "Carnillean Rising",
+    "RuneMetrics/Adventurer's Log",
+    "Infernal orb",
+    "JMod clone",
+    "The Drop",
+    "Mod Chris L",
+    "Divination",
+    "Guthixian Cache",
+    "Invaders Must Die II",
+    "Distractions and Diversions",
+    "Balthazar Beauregard's Big Top Bonanza",
+    "Circus barker",
+    "Raffle barker"
+   ],
+   "topAttractorPct": 14.76
+  },
+  {
+   "rank": "random",
+   "convergePct": 92.51,
+   "deadEndPct": 7.49,
+   "components": 1172,
+   "cycleCount": 1171,
+   "meanHops": 13.77,
+   "medianHops": 8,
+   "maxHops": 77,
+   "topAttractor": [
+    "Daemonheim",
+    "Hilda"
+   ],
+   "topAttractorPct": 19.61
+  }
+ ]
+}

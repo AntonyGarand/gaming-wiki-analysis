@@ -1,0 +1,413 @@
+{
+ "wiki": "balatro",
+ "rank": "3",
+ "nodes": 517,
+ "converge": {
+  "articles": 385,
+  "pct": 74.47,
+  "deadEnd": 132,
+  "deadEndPct": 25.53,
+  "noLinks": 38,
+  "tooFewLinks": 90,
+  "unresolvable": 0
+ },
+ "hopStats": {
+  "mean": 2.03,
+  "median": 2,
+  "p90": 3,
+  "max": 5
+ },
+ "histogram": {
+  "0": 13,
+  "1": 165,
+  "2": 49,
+  "3": 125,
+  "4": 21,
+  "5": 12
+ },
+ "components": 4,
+ "cycleCount": 3,
+ "largestCycle": {
+  "members": [
+   "Tarot cards",
+   "Decks",
+   "Stakes",
+   "Blinds and Antes",
+   "Tags",
+   "Card modifiers",
+   "Consumables"
+  ],
+  "size": 7,
+  "basin": 357
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Tarot cards",
+    "Decks",
+    "Stakes",
+    "Blinds and Antes",
+    "Tags",
+    "Card modifiers",
+    "Consumables"
+   ],
+   "basin": 357,
+   "pct": 69.05
+  },
+  {
+   "cycle": [
+    "Challenge Decks",
+    "Achievements"
+   ],
+   "basin": 19,
+   "pct": 3.68
+  },
+  {
+   "cycle": [
+    "Seed",
+    "Stats",
+    "Collection",
+    "Gameplay loop"
+   ],
+   "basin": 9,
+   "pct": 1.74
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Interest",
+   "chains": 2,
+   "pct": 0.39,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Update 1.0.1o",
+   "chains": 2,
+   "pct": 0.39,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Rare Jokers",
+   "chains": 2,
+   "pct": 0.39,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Settings",
+   "chains": 2,
+   "pct": 0.39,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Balatro Wiki",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Playstack",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Update 1.0.0L",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Languages",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Planet X",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Ceres",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Eris",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Black Hole",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Talisman",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Deja Vu",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Decks",
+   "inDegree": 65
+  },
+  {
+   "title": "Poker hands",
+   "inDegree": 65
+  },
+  {
+   "title": "Blinds and Antes",
+   "inDegree": 34
+  },
+  {
+   "title": "Jokers",
+   "inDegree": 26
+  },
+  {
+   "title": "The Shop",
+   "inDegree": 25
+  },
+  {
+   "title": "Card modifiers",
+   "inDegree": 17
+  },
+  {
+   "title": "Challenge Decks",
+   "inDegree": 13
+  },
+  {
+   "title": "Tags",
+   "inDegree": 12
+  },
+  {
+   "title": "Tarot cards",
+   "inDegree": 11
+  },
+  {
+   "title": "Planet cards",
+   "inDegree": 11
+  },
+  {
+   "title": "Negative",
+   "inDegree": 10
+  },
+  {
+   "title": "Consumables",
+   "inDegree": 9
+  },
+  {
+   "title": "Vouchers",
+   "inDegree": 9
+  },
+  {
+   "title": "Spectral cards",
+   "inDegree": 8
+  },
+  {
+   "title": "Booster Packs",
+   "inDegree": 8
+  },
+  {
+   "title": "Stakes",
+   "inDegree": 7
+  },
+  {
+   "title": "Eternal",
+   "inDegree": 5
+  },
+  {
+   "title": "LocalThunk",
+   "inDegree": 4
+  },
+  {
+   "title": "Joker slot",
+   "inDegree": 4
+  },
+  {
+   "title": "Collection",
+   "inDegree": 3
+  },
+  {
+   "title": "Card Ranks",
+   "inDegree": 3
+  },
+  {
+   "title": "Mult",
+   "inDegree": 3
+  },
+  {
+   "title": "Seed",
+   "inDegree": 3
+  },
+  {
+   "title": "Gameplay loop",
+   "inDegree": 2
+  },
+  {
+   "title": "Card Suits",
+   "inDegree": 2
+  },
+  {
+   "title": "Chips",
+   "inDegree": 2
+  },
+  {
+   "title": "Discards",
+   "inDegree": 2
+  },
+  {
+   "title": "Consumable slot",
+   "inDegree": 2
+  },
+  {
+   "title": "Shortcut",
+   "inDegree": 1
+  },
+  {
+   "title": "Guide: Deck Manipulation",
+   "inDegree": 1
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Decks",
+   "betweenness": 1503
+  },
+  {
+   "title": "Tarot cards",
+   "betweenness": 1314
+  },
+  {
+   "title": "Stakes",
+   "betweenness": 1195
+  },
+  {
+   "title": "Blinds and Antes",
+   "betweenness": 1111
+  },
+  {
+   "title": "Consumables",
+   "betweenness": 838
+  },
+  {
+   "title": "Tags",
+   "betweenness": 838
+  },
+  {
+   "title": "Spectral cards",
+   "betweenness": 756
+  },
+  {
+   "title": "Card modifiers",
+   "betweenness": 656
+  },
+  {
+   "title": "Poker hands",
+   "betweenness": 552
+  },
+  {
+   "title": "Vouchers",
+   "betweenness": 406
+  },
+  {
+   "title": "The Shop",
+   "betweenness": 384
+  },
+  {
+   "title": "Jokers",
+   "betweenness": 248
+  },
+  {
+   "title": "Planet cards",
+   "betweenness": 198
+  },
+  {
+   "title": "Booster Packs",
+   "betweenness": 80
+  },
+  {
+   "title": "Negative",
+   "betweenness": 70
+  },
+  {
+   "title": "Card Ranks",
+   "betweenness": 49
+  },
+  {
+   "title": "LocalThunk",
+   "betweenness": 35
+  },
+  {
+   "title": "Joker slot",
+   "betweenness": 35
+  },
+  {
+   "title": "Mult",
+   "betweenness": 27
+  },
+  {
+   "title": "Steel cards",
+   "betweenness": 21
+  },
+  {
+   "title": "Consumable slot",
+   "betweenness": 20
+  },
+  {
+   "title": "Playing Cards",
+   "betweenness": 18
+  },
+  {
+   "title": "Challenge Decks",
+   "betweenness": 17
+  },
+  {
+   "title": "Card Suits",
+   "betweenness": 16
+  },
+  {
+   "title": "Chips",
+   "betweenness": 16
+  },
+  {
+   "title": "Guide: naneinf",
+   "betweenness": 16
+  },
+  {
+   "title": "Gold cards",
+   "betweenness": 14
+  },
+  {
+   "title": "Discards",
+   "betweenness": 14
+  },
+  {
+   "title": "Seed",
+   "betweenness": 13
+  },
+  {
+   "title": "Collection",
+   "betweenness": 11
+  }
+ ]
+}

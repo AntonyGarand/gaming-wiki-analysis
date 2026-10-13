@@ -1,0 +1,544 @@
+{
+ "wiki": "hytale",
+ "rank": "3",
+ "nodes": 4498,
+ "converge": {
+  "articles": 2102,
+  "pct": 46.73,
+  "deadEnd": 2396,
+  "deadEndPct": 53.27,
+  "noLinks": 67,
+  "tooFewLinks": 1586,
+  "unresolvable": 23
+ },
+ "hopStats": {
+  "mean": 3.09,
+  "median": 3,
+  "p90": 5,
+  "max": 10
+ },
+ "histogram": {
+  "0": 55,
+  "1": 166,
+  "2": 268,
+  "3": 1188,
+  "4": 166,
+  "5": 110,
+  "6": 49,
+  "7": 81,
+  "8": 14,
+  "9": 4,
+  "10": 1
+ },
+ "components": 29,
+ "cycleCount": 28,
+ "largestCycle": {
+  "members": [
+   "Orbis",
+   "Faction",
+   "Whisperfrost Frontiers"
+  ],
+  "size": 3,
+  "basin": 1818
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Orbis",
+    "Faction",
+    "Whisperfrost Frontiers"
+   ],
+   "basin": 1818,
+   "pct": 40.42
+  },
+  {
+   "cycle": [
+    "Tilled Dirt"
+   ],
+   "basin": 46,
+   "pct": 1.02
+  },
+  {
+   "cycle": [
+    "Armor",
+    "Mana"
+   ],
+   "basin": 44,
+   "pct": 0.98
+  },
+  {
+   "cycle": [
+    "Cooled Magma",
+    "Cracked Magma"
+   ],
+   "basin": 30,
+   "pct": 0.67
+  },
+  {
+   "cycle": [
+    "Memories"
+   ],
+   "basin": 27,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Furnace",
+    "Ingot"
+   ],
+   "basin": 23,
+   "pct": 0.51
+  },
+  {
+   "cycle": [
+    "Arcanist's Workbench",
+    "Ancient Gateway"
+   ],
+   "basin": 21,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Hypixel Network",
+    "Simon Collins-Laflamme"
+   ],
+   "basin": 12,
+   "pct": 0.27
+  },
+  {
+   "cycle": [
+    "Light Leather",
+    "Light Hide",
+    "Tanning Rack"
+   ],
+   "basin": 11,
+   "pct": 0.24
+  },
+  {
+   "cycle": [
+    "Tower",
+    "Launch Platform",
+    "Burnt Mage Tower"
+   ],
+   "basin": 10,
+   "pct": 0.22
+  },
+  {
+   "cycle": [
+    "Fishing Trap",
+    "Fish Bait (Wild)"
+   ],
+   "basin": 9,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Lore",
+    "Developer Interviews"
+   ],
+   "basin": 6,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Shale",
+    "Shale Cobble"
+   ],
+   "basin": 5,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Crystal Shards",
+    "Crystal"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Skeleton Arena",
+    "Metal Spike Trap"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Drylands Temple",
+    "Statue of a Silent Deity"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Snowlands Temple",
+    "Outlander Deity Statue"
+   ],
+   "basin": 4,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Leaf",
+    "Plant Fiber"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Salt",
+    "Salt Block"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Chair",
+    "Stool"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Early Access",
+   "chains": 157,
+   "pct": 3.49,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Plant",
+   "chains": 145,
+   "pct": 3.22,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Builder's Workbench",
+   "chains": 109,
+   "pct": 2.42,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Furniture Workbench",
+   "chains": 47,
+   "pct": 1.04,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Rubble",
+   "chains": 31,
+   "pct": 0.69,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Forgotten Temple Gateway",
+   "chains": 27,
+   "pct": 0.6,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Boiler",
+   "chains": 20,
+   "pct": 0.44,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Friendly",
+   "chains": 19,
+   "pct": 0.42,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Skeleton Knight",
+   "chains": 18,
+   "pct": 0.4,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Pickaxe",
+   "chains": 14,
+   "pct": 0.31,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Coffin",
+   "chains": 13,
+   "pct": 0.29,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Seeds",
+   "chains": 12,
+   "pct": 0.27,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Health Boost",
+   "chains": 11,
+   "pct": 0.24,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Stamina Boost",
+   "chains": 10,
+   "pct": 0.22,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Asset Node Editor",
+   "chains": 8,
+   "pct": 0.18,
+   "reason": "only 2 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Creative Inventory",
+   "inDegree": 928
+  },
+  {
+   "title": "Crude Shears",
+   "inDegree": 95
+  },
+  {
+   "title": "Emerald Wilds",
+   "inDegree": 70
+  },
+  {
+   "title": "Hytale",
+   "inDegree": 61
+  },
+  {
+   "title": "Builder's Workbench",
+   "inDegree": 51
+  },
+  {
+   "title": "Howling Sands",
+   "inDegree": 45
+  },
+  {
+   "title": "Prefab",
+   "inDegree": 45
+  },
+  {
+   "title": "Exploration Mode",
+   "inDegree": 43
+  },
+  {
+   "title": "Whisperfrost Frontiers",
+   "inDegree": 37
+  },
+  {
+   "title": "Chest",
+   "inDegree": 36
+  },
+  {
+   "title": "Tilled Dirt",
+   "inDegree": 33
+  },
+  {
+   "title": "NPC",
+   "inDegree": 32
+  },
+  {
+   "title": "Devastated Lands",
+   "inDegree": 27
+  },
+  {
+   "title": "Salvager's Workbench",
+   "inDegree": 25
+  },
+  {
+   "title": "Trork Camp",
+   "inDegree": 24
+  },
+  {
+   "title": "Bench",
+   "inDegree": 22
+  },
+  {
+   "title": "Health Regen",
+   "inDegree": 21
+  },
+  {
+   "title": "Furniture Workbench",
+   "inDegree": 18
+  },
+  {
+   "title": "Scrap Drill",
+   "inDegree": 18
+  },
+  {
+   "title": "Tropical Jungle",
+   "inDegree": 17
+  },
+  {
+   "title": "Shield",
+   "inDegree": 16
+  },
+  {
+   "title": "The Guttering Hollows",
+   "inDegree": 16
+  },
+  {
+   "title": "Orbis",
+   "inDegree": 15
+  },
+  {
+   "title": "Weapon",
+   "inDegree": 14
+  },
+  {
+   "title": "Stick",
+   "inDegree": 14
+  },
+  {
+   "title": "Faction",
+   "inDegree": 14
+  },
+  {
+   "title": "Loot",
+   "inDegree": 14
+  },
+  {
+   "title": "Alchemist's Workbench",
+   "inDegree": 13
+  },
+  {
+   "title": "Cave",
+   "inDegree": 13
+  },
+  {
+   "title": "Emerald Wilds Ruins",
+   "inDegree": 13
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Creative Inventory",
+   "betweenness": 3820
+  },
+  {
+   "title": "Adventure Mode",
+   "betweenness": 3423
+  },
+  {
+   "title": "Orbis",
+   "betweenness": 3229
+  },
+  {
+   "title": "Faction",
+   "betweenness": 1933
+  },
+  {
+   "title": "Emerald Wilds",
+   "betweenness": 984
+  },
+  {
+   "title": "The Fens",
+   "betweenness": 771
+  },
+  {
+   "title": "Exploration Mode",
+   "betweenness": 732
+  },
+  {
+   "title": "Weapon",
+   "betweenness": 654
+  },
+  {
+   "title": "Creative Mode",
+   "betweenness": 625
+  },
+  {
+   "title": "Hidey Hole",
+   "betweenness": 445
+  },
+  {
+   "title": "Prefab",
+   "betweenness": 426
+  },
+  {
+   "title": "Salvager's Workbench",
+   "betweenness": 328
+  },
+  {
+   "title": "Ore",
+   "betweenness": 315
+  },
+  {
+   "title": "Hatchet",
+   "betweenness": 308
+  },
+  {
+   "title": "Chest",
+   "betweenness": 288
+  },
+  {
+   "title": "Whisperfrost Frontiers",
+   "betweenness": 286
+  },
+  {
+   "title": "Howling Sands",
+   "betweenness": 279
+  },
+  {
+   "title": "NPC",
+   "betweenness": 264
+  },
+  {
+   "title": "Food",
+   "betweenness": 161
+  },
+  {
+   "title": "Hytale",
+   "betweenness": 153
+  },
+  {
+   "title": "Trork Camp",
+   "betweenness": 150
+  },
+  {
+   "title": "Meat",
+   "betweenness": 144
+  },
+  {
+   "title": "Workbench",
+   "betweenness": 136
+  },
+  {
+   "title": "Avatar",
+   "betweenness": 135
+  },
+  {
+   "title": "Campfire",
+   "betweenness": 130
+  },
+  {
+   "title": "Stick",
+   "betweenness": 126
+  },
+  {
+   "title": "Fuel",
+   "betweenness": 120
+  },
+  {
+   "title": "Devastated Lands",
+   "betweenness": 114
+  },
+  {
+   "title": "Varyn",
+   "betweenness": 112
+  },
+  {
+   "title": "Wood",
+   "betweenness": 105
+  }
+ ]
+}

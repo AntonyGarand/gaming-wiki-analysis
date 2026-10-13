@@ -1,0 +1,553 @@
+{
+ "wiki": "factorio",
+ "rank": "strict1",
+ "nodes": 5353,
+ "converge": {
+  "articles": 2701,
+  "pct": 50.46,
+  "deadEnd": 2652,
+  "deadEndPct": 49.54,
+  "noLinks": 1589,
+  "tooFewLinks": 0,
+  "unresolvable": 371
+ },
+ "hopStats": {
+  "mean": 2.81,
+  "median": 2,
+  "p90": 6,
+  "max": 16
+ },
+ "histogram": {
+  "0": 278,
+  "1": 727,
+  "2": 510,
+  "3": 477,
+  "4": 233,
+  "5": 164,
+  "6": 112,
+  "7": 52,
+  "8": 26,
+  "9": 10,
+  "10": 17,
+  "11": 31,
+  "12": 34,
+  "13": 18,
+  "14": 6,
+  "15": 3,
+  "16": 3
+ },
+ "components": 143,
+ "cycleCount": 142,
+ "largestCycle": {
+  "members": [
+   "Player",
+   "Multiplayer"
+  ],
+  "size": 2,
+  "basin": 430
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Player",
+    "Multiplayer"
+   ],
+   "basin": 430,
+   "pct": 8.03
+  },
+  {
+   "cycle": [
+    "Research",
+    "Technologies"
+   ],
+   "basin": 264,
+   "pct": 4.93
+  },
+  {
+   "cycle": [
+    "Science pack/ja",
+    "Lab/ja"
+   ],
+   "basin": 148,
+   "pct": 2.76
+  },
+  {
+   "cycle": [
+    "Lab/ru",
+    "Research/ru"
+   ],
+   "basin": 112,
+   "pct": 2.09
+  },
+  {
+   "cycle": [
+    "Player/uk",
+    "Multiplayer/uk"
+   ],
+   "basin": 92,
+   "pct": 1.72
+  },
+  {
+   "cycle": [
+    "Fluid system",
+    "Water"
+   ],
+   "basin": 73,
+   "pct": 1.36
+  },
+  {
+   "cycle": [
+    "Heavy armor",
+    "Light armor"
+   ],
+   "basin": 67,
+   "pct": 1.25
+  },
+  {
+   "cycle": [
+    "Electric system/de",
+    "Power production/de",
+    "Time/de",
+    "Module/de"
+   ],
+   "basin": 66,
+   "pct": 1.23
+  },
+  {
+   "cycle": [
+    "Research/uk",
+    "Technologies/uk"
+   ],
+   "basin": 62,
+   "pct": 1.16
+  },
+  {
+   "cycle": [
+    "Fuel/ru"
+   ],
+   "basin": 57,
+   "pct": 1.06
+  },
+  {
+   "cycle": [
+    "Map structure/zh",
+    "Map generator/zh"
+   ],
+   "basin": 49,
+   "pct": 0.92
+  },
+  {
+   "cycle": [
+    "Fluid system/ru",
+    "Storage tank/ru",
+    "Pump/ru",
+    "Offshore pump/ru",
+    "Boiler/ru",
+    "Water/ru"
+   ],
+   "basin": 40,
+   "pct": 0.75
+  },
+  {
+   "cycle": [
+    "Electric system/ru",
+    "Solar panel/ru",
+    "Accumulator/ru"
+   ],
+   "basin": 39,
+   "pct": 0.73
+  },
+  {
+   "cycle": [
+    "Enemies/de",
+    "Map generator/de"
+   ],
+   "basin": 39,
+   "pct": 0.73
+  },
+  {
+   "cycle": [
+    "Iron plate",
+    "Iron ore"
+   ],
+   "basin": 37,
+   "pct": 0.69
+  },
+  {
+   "cycle": [
+    "News"
+   ],
+   "basin": 32,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Inserter",
+    "Inserters"
+   ],
+   "basin": 29,
+   "pct": 0.54
+  },
+  {
+   "cycle": [
+    "Multiplayer/de",
+    "Game modes and options/de"
+   ],
+   "basin": 29,
+   "pct": 0.54
+  },
+  {
+   "cycle": [
+    "Inserters/de",
+    "Inserter capacity bonus (research)/de"
+   ],
+   "basin": 29,
+   "pct": 0.54
+  },
+  {
+   "cycle": [
+    "Factorio HTTP API usage guidelines",
+    "Download API"
+   ],
+   "basin": 28,
+   "pct": 0.52
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Time/zh",
+   "chains": 77,
+   "pct": 1.44,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Materials and recipes/fr",
+   "chains": 42,
+   "pct": 0.78,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Materials and recipes/uk",
+   "chains": 38,
+   "pct": 0.71,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lab/fr",
+   "chains": 33,
+   "pct": 0.62,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Materials and recipes/nl",
+   "chains": 25,
+   "pct": 0.47,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Railway (research)/de",
+   "chains": 19,
+   "pct": 0.35,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Energy shield/zh",
+   "chains": 17,
+   "pct": 0.32,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Offshore pump/ja",
+   "chains": 17,
+   "pct": 0.32,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Player/pt-br",
+   "chains": 15,
+   "pct": 0.28,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Electric system/pt-br",
+   "chains": 15,
+   "pct": 0.28,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Gleba/ja",
+   "chains": 15,
+   "pct": 0.28,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Enemies/pl",
+   "chains": 14,
+   "pct": 0.26,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Belt transport system/nl",
+   "chains": 13,
+   "pct": 0.24,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Construction robot/pl",
+   "chains": 13,
+   "pct": 0.24,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Light armor/pl",
+   "chains": 12,
+   "pct": 0.22,
+   "reason": "no eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Research/ja",
+   "inDegree": 71
+  },
+  {
+   "title": "Time",
+   "inDegree": 62
+  },
+  {
+   "title": "Research/ru",
+   "inDegree": 52
+  },
+  {
+   "title": "Research",
+   "inDegree": 44
+  },
+  {
+   "title": "News",
+   "inDegree": 32
+  },
+  {
+   "title": "Enemies/de",
+   "inDegree": 26
+  },
+  {
+   "title": "Enemies/zh",
+   "inDegree": 24
+  },
+  {
+   "title": "Space Age",
+   "inDegree": 23
+  },
+  {
+   "title": "Modular armor/ru",
+   "inDegree": 19
+  },
+  {
+   "title": "Fluid system",
+   "inDegree": 19
+  },
+  {
+   "title": "Iron plate",
+   "inDegree": 17
+  },
+  {
+   "title": "Enemies",
+   "inDegree": 17
+  },
+  {
+   "title": "Player",
+   "inDegree": 17
+  },
+  {
+   "title": "Fluid system/de",
+   "inDegree": 17
+  },
+  {
+   "title": "Materials and recipes/fr",
+   "inDegree": 16
+  },
+  {
+   "title": "Map generator",
+   "inDegree": 16
+  },
+  {
+   "title": "Research/uk",
+   "inDegree": 16
+  },
+  {
+   "title": "Gleba",
+   "inDegree": 15
+  },
+  {
+   "title": "Circuit network",
+   "inDegree": 14
+  },
+  {
+   "title": "Belt transport system/zh",
+   "inDegree": 14
+  },
+  {
+   "title": "Research/de",
+   "inDegree": 14
+  },
+  {
+   "title": "Fluid system/ru",
+   "inDegree": 14
+  },
+  {
+   "title": "Electric system/de",
+   "inDegree": 14
+  },
+  {
+   "title": "Enemies/ja",
+   "inDegree": 14
+  },
+  {
+   "title": "Belt transport system",
+   "inDegree": 13
+  },
+  {
+   "title": "Damage/zh",
+   "inDegree": 12
+  },
+  {
+   "title": "Electric system",
+   "inDegree": 12
+  },
+  {
+   "title": "Electric system/zh",
+   "inDegree": 12
+  },
+  {
+   "title": "Player/ja",
+   "inDegree": 12
+  },
+  {
+   "title": "Map structure/zh",
+   "inDegree": 12
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Player/ja",
+   "betweenness": 1070
+  },
+  {
+   "title": "Space Age",
+   "betweenness": 1055
+  },
+  {
+   "title": "Application directory",
+   "betweenness": 1008
+  },
+  {
+   "title": "Multiplayer/ja",
+   "betweenness": 981
+  },
+  {
+   "title": "Scenario system",
+   "betweenness": 889
+  },
+  {
+   "title": "Recycler",
+   "betweenness": 856
+  },
+  {
+   "title": "Achievements",
+   "betweenness": 768
+  },
+  {
+   "title": "Space platform",
+   "betweenness": 672
+  },
+  {
+   "title": "Space platform hub",
+   "betweenness": 456
+  },
+  {
+   "title": "Enemies/ja",
+   "betweenness": 429
+  },
+  {
+   "title": "Player",
+   "betweenness": 425
+  },
+  {
+   "title": "Research/ja",
+   "betweenness": 345
+  },
+  {
+   "title": "Construction robot/ja",
+   "betweenness": 297
+  },
+  {
+   "title": "Enemies",
+   "betweenness": 294
+  },
+  {
+   "title": "Roboport/ja",
+   "betweenness": 264
+  },
+  {
+   "title": "Research",
+   "betweenness": 260
+  },
+  {
+   "title": "Logistic network/ja",
+   "betweenness": 260
+  },
+  {
+   "title": "Technologies/ja",
+   "betweenness": 236
+  },
+  {
+   "title": "Fuel",
+   "betweenness": 228
+  },
+  {
+   "title": "Time",
+   "betweenness": 222
+  },
+  {
+   "title": "Damage",
+   "betweenness": 210
+  },
+  {
+   "title": "Belt transport system/ja",
+   "betweenness": 209
+  },
+  {
+   "title": "Oil processing",
+   "betweenness": 174
+  },
+  {
+   "title": "Electric system",
+   "betweenness": 165
+  },
+  {
+   "title": "Fuel/ja",
+   "betweenness": 162
+  },
+  {
+   "title": "Science pack",
+   "betweenness": 159
+  },
+  {
+   "title": "Lab",
+   "betweenness": 158
+  },
+  {
+   "title": "Module",
+   "betweenness": 156
+  },
+  {
+   "title": "Fluid system/ru",
+   "betweenness": 154
+  },
+  {
+   "title": "Science pack/ja",
+   "betweenness": 145
+  }
+ ]
+}

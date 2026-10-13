@@ -1,0 +1,95 @@
+{
+ "wiki": "subnautica",
+ "generatedAt": "2026-10-12T17:00:03.150Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 74.37,
+   "deadEndPct": 25.63,
+   "components": 9,
+   "cycleCount": 8,
+   "meanHops": 2.41,
+   "medianHops": 2,
+   "maxHops": 7,
+   "topAttractor": [
+    "Planet 4546B",
+    "Architects"
+   ],
+   "topAttractorPct": 40.42
+  },
+  {
+   "rank": "2",
+   "convergePct": 55.49,
+   "deadEndPct": 44.51,
+   "components": 8,
+   "cycleCount": 7,
+   "meanHops": 3.53,
+   "medianHops": 3,
+   "maxHops": 10,
+   "topAttractor": [
+    "Game Modes",
+    "Oxygen"
+   ],
+   "topAttractorPct": 27.61
+  },
+  {
+   "rank": "3",
+   "convergePct": 87.32,
+   "deadEndPct": 12.68,
+   "components": 13,
+   "cycleCount": 12,
+   "meanHops": 5.04,
+   "medianHops": 5,
+   "maxHops": 12,
+   "topAttractor": [
+    "Mountains",
+    "Bulb Zone"
+   ],
+   "topAttractorPct": 44.93
+  },
+  {
+   "rank": "5",
+   "convergePct": 28.45,
+   "deadEndPct": 71.55,
+   "components": 11,
+   "cycleCount": 10,
+   "meanHops": 3.36,
+   "medianHops": 3,
+   "maxHops": 12,
+   "topAttractor": [
+    "Cyclops",
+    "Habitat Builder"
+   ],
+   "topAttractorPct": 14.93
+  },
+  {
+   "rank": "last",
+   "convergePct": 29.72,
+   "deadEndPct": 70.28,
+   "components": 10,
+   "cycleCount": 9,
+   "meanHops": 2.69,
+   "medianHops": 2,
+   "maxHops": 5,
+   "topAttractor": [
+    "Achievements"
+   ],
+   "topAttractorPct": 15.63
+  },
+  {
+   "rank": "random",
+   "convergePct": 99.3,
+   "deadEndPct": 0.7,
+   "components": 7,
+   "cycleCount": 6,
+   "meanHops": 10.92,
+   "medianHops": 12,
+   "maxHops": 25,
+   "topAttractor": [
+    "Seabases",
+    "Hull Integrity"
+   ],
+   "topAttractorPct": 87.18
+  }
+ ]
+}

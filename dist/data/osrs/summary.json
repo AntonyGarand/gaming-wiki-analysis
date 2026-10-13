@@ -1,0 +1,97 @@
+{
+ "wiki": "osrs",
+ "generatedAt": "2026-10-12T13:52:17.391Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 96.62,
+   "deadEndPct": 3.38,
+   "components": 188,
+   "cycleCount": 187,
+   "meanHops": 6.07,
+   "medianHops": 5,
+   "maxHops": 18,
+   "topAttractor": [
+    "Gielinor",
+    "Guthix",
+    "Gods"
+   ],
+   "topAttractorPct": 33.27
+  },
+  {
+   "rank": "2",
+   "convergePct": 92.83,
+   "deadEndPct": 7.17,
+   "components": 449,
+   "cycleCount": 448,
+   "meanHops": 4.45,
+   "medianHops": 4,
+   "maxHops": 20,
+   "topAttractor": [
+    "Gielinor",
+    "Zanaris"
+   ],
+   "topAttractorPct": 17
+  },
+  {
+   "rank": "3",
+   "convergePct": 74.32,
+   "deadEndPct": 25.68,
+   "components": 571,
+   "cycleCount": 570,
+   "meanHops": 7.02,
+   "medianHops": 6,
+   "maxHops": 29,
+   "topAttractor": [
+    "Experience",
+    "Book of Knowledge"
+   ],
+   "topAttractorPct": 28.85
+  },
+  {
+   "rank": "5",
+   "convergePct": 46.62,
+   "deadEndPct": 53.38,
+   "components": 374,
+   "cycleCount": 373,
+   "meanHops": 10.27,
+   "medianHops": 9,
+   "maxHops": 41,
+   "topAttractor": [
+    "Port Khazard",
+    "Fishing Trawler"
+   ],
+   "topAttractorPct": 11.6
+  },
+  {
+   "rank": "last",
+   "convergePct": 96.33,
+   "deadEndPct": 3.67,
+   "components": 819,
+   "cycleCount": 818,
+   "meanHops": 12.89,
+   "medianHops": 11,
+   "maxHops": 47,
+   "topAttractor": [
+    "Mod Ash",
+    "My Arm"
+   ],
+   "topAttractorPct": 22.56
+  },
+  {
+   "rank": "random",
+   "convergePct": 97.97,
+   "deadEndPct": 2.03,
+   "components": 462,
+   "cycleCount": 461,
+   "meanHops": 14.23,
+   "medianHops": 13,
+   "maxHops": 50,
+   "topAttractor": [
+    "Slayer",
+    "Slayer/Experience table"
+   ],
+   "topAttractorPct": 48.92
+  }
+ ]
+}

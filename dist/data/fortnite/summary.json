@@ -1,0 +1,103 @@
+{
+ "wiki": "fortnite",
+ "generatedAt": "2026-10-12T13:40:34.846Z",
+ "ranks": [
+  {
+   "rank": "strict1",
+   "convergePct": 92.87,
+   "deadEndPct": 7.13,
+   "components": 16,
+   "cycleCount": 15,
+   "meanHops": 4.09,
+   "medianHops": 4,
+   "maxHops": 38,
+   "topAttractor": [
+    "Epic Games",
+    "Tim Sweeney"
+   ],
+   "topAttractorPct": 91.91
+  },
+  {
+   "rank": "2",
+   "convergePct": 88.36,
+   "deadEndPct": 11.64,
+   "components": 34,
+   "cycleCount": 33,
+   "meanHops": 4.58,
+   "medianHops": 5,
+   "maxHops": 11,
+   "topAttractor": [
+    "Victory Royale",
+    "Lobby Music"
+   ],
+   "topAttractorPct": 81.37
+  },
+  {
+   "rank": "3",
+   "convergePct": 42.5,
+   "deadEndPct": 57.5,
+   "components": 1118,
+   "cycleCount": 1117,
+   "meanHops": 3.12,
+   "medianHops": 1,
+   "maxHops": 21,
+   "topAttractor": [
+    "V-Bucks",
+    "Battle Pass"
+   ],
+   "topAttractorPct": 13.02
+  },
+  {
+   "rank": "5",
+   "convergePct": 5.13,
+   "deadEndPct": 94.87,
+   "components": 181,
+   "cycleCount": 180,
+   "meanHops": 3.13,
+   "medianHops": 3,
+   "maxHops": 11,
+   "topAttractor": [
+    "Dead Pixels"
+   ],
+   "topAttractorPct": 2.59
+  },
+  {
+   "rank": "last",
+   "convergePct": 15.61,
+   "deadEndPct": 84.39,
+   "components": 369,
+   "cycleCount": 368,
+   "meanHops": 2.03,
+   "medianHops": 2,
+   "maxHops": 15,
+   "topAttractor": [
+    "Quests",
+    "High Stakes Challenges"
+   ],
+   "topAttractorPct": 6.88
+  },
+  {
+   "rank": "random",
+   "convergePct": 80.57,
+   "deadEndPct": 19.43,
+   "components": 257,
+   "cycleCount": 256,
+   "meanHops": 3.16,
+   "medianHops": 2,
+   "maxHops": 16,
+   "topAttractor": [
+    "Fortnite",
+    "Fortnite: Battle Royale",
+    "Vehicles",
+    "Trail Thrasher",
+    "Cars",
+    "Submachine Gun",
+    "Thrasher",
+    "Slasher (Schematic)",
+    "Fortnite: Save the World",
+    "May 2021 Fortnite Crew Pack"
+   ],
+   "topAttractorPct": 49.92
+  }
+ ]
+}

@@ -1,0 +1,561 @@
+{
+ "wiki": "rsc",
+ "rank": "5",
+ "nodes": 4331,
+ "converge": {
+  "articles": 933,
+  "pct": 21.54,
+  "deadEnd": 3398,
+  "deadEndPct": 78.46,
+  "noLinks": 479,
+  "tooFewLinks": 1136,
+  "unresolvable": 6
+ },
+ "hopStats": {
+  "mean": 5.73,
+  "median": 4,
+  "p90": 13,
+  "max": 20
+ },
+ "histogram": {
+  "0": 138,
+  "1": 145,
+  "2": 81,
+  "3": 62,
+  "4": 80,
+  "5": 41,
+  "6": 23,
+  "7": 33,
+  "8": 21,
+  "9": 65,
+  "10": 47,
+  "11": 33,
+  "12": 36,
+  "13": 40,
+  "14": 21,
+  "15": 16,
+  "16": 16,
+  "17": 14,
+  "18": 11,
+  "19": 8,
+  "20": 2
+ },
+ "components": 63,
+ "cycleCount": 62,
+ "largestCycle": {
+  "members": [
+   "Bunny ears",
+   "Thessalia"
+  ],
+  "size": 2,
+  "basin": 420
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Bunny ears",
+    "Thessalia"
+   ],
+   "basin": 420,
+   "pct": 9.7
+  },
+  {
+   "cycle": [
+    "Draynor Village",
+    "Certificates",
+    "Bars"
+   ],
+   "basin": 101,
+   "pct": 2.33
+  },
+  {
+   "cycle": [
+    "Goblin",
+    "Goblin diplomacy"
+   ],
+   "basin": 46,
+   "pct": 1.06
+  },
+  {
+   "cycle": [
+    "RuneScape",
+    "Crandor",
+    "Oziach"
+   ],
+   "basin": 31,
+   "pct": 0.72
+  },
+  {
+   "cycle": [
+    "West Ardougne",
+    "Underground pass"
+   ],
+   "basin": 24,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "White Knight",
+    "Zamorak",
+    "Asgarnia"
+   ],
+   "basin": 18,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Grand Tree dungeon",
+    "Watch tower (Glough)",
+    "Stone stand (Grand tree)"
+   ],
+   "basin": 18,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "White Wolf Mountain",
+    "Dwarven tunnel",
+    "Catherby"
+   ],
+   "basin": 15,
+   "pct": 0.35
+  },
+  {
+   "cycle": [
+    "Miles",
+    "Giles"
+   ],
+   "basin": 15,
+   "pct": 0.35
+  },
+  {
+   "cycle": [
+    "The Holy Grail",
+    "Merlin"
+   ],
+   "basin": 14,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Log raft",
+    "Waterfall quest",
+    "Hudon"
+   ],
+   "basin": 14,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Staff of Iban",
+    "Iban blast"
+   ],
+   "basin": 13,
+   "pct": 0.3
+  },
+  {
+   "cycle": [
+    "Heckel funch's grocery store",
+    "Hudo glenfad's grocery store"
+   ],
+   "basin": 12,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Monk's friend",
+    "Thief"
+   ],
+   "basin": 9,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "WeaponPower",
+    "Dragon axe"
+   ],
+   "basin": 8,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Thread",
+    "Leather Armour"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Shield of Arrav",
+    "Baraek"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Blessed Golden Bowl with Pure Water",
+    "Yommi tree seed",
+    "Yommi Tree"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Hangover cure",
+    "Scruffy note",
+    "Bravek"
+   ],
+   "basin": 7,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Ice queen",
+    "Firebird Feather",
+    "Ice Gloves"
+   ],
+   "basin": 6,
+   "pct": 0.14
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Experience",
+   "chains": 732,
+   "pct": 16.9,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "King",
+   "chains": 142,
+   "pct": 3.28,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Inventory",
+   "chains": 105,
+   "pct": 2.42,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Hellhound",
+   "chains": 96,
+   "pct": 2.22,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Protect items",
+   "chains": 46,
+   "pct": 1.06,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Feather",
+   "chains": 34,
+   "pct": 0.79,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Mining instructor",
+   "chains": 32,
+   "pct": 0.74,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Open period",
+   "chains": 25,
+   "pct": 0.58,
+   "reason": "only 15 eligible links"
+  },
+  {
+   "title": "Non-player character",
+   "chains": 24,
+   "pct": 0.55,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Hedge",
+   "chains": 22,
+   "pct": 0.51,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Forum Moderator",
+   "chains": 18,
+   "pct": 0.42,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Player killers",
+   "chains": 17,
+   "pct": 0.39,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Pastry dough",
+   "chains": 17,
+   "pct": 0.39,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Watchtower wizard",
+   "chains": 16,
+   "pct": 0.37,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Camel",
+   "chains": 14,
+   "pct": 0.32,
+   "reason": "only 4 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Experience",
+   "inDegree": 65
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 63
+  },
+  {
+   "title": "Quests",
+   "inDegree": 39
+  },
+  {
+   "title": "Thieving",
+   "inDegree": 31
+  },
+  {
+   "title": "Magic",
+   "inDegree": 25
+  },
+  {
+   "title": "Cooking",
+   "inDegree": 24
+  },
+  {
+   "title": "RuneScape",
+   "inDegree": 24
+  },
+  {
+   "title": "Coins",
+   "inDegree": 22
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 19
+  },
+  {
+   "title": "Fletching",
+   "inDegree": 17
+  },
+  {
+   "title": "Crafting",
+   "inDegree": 15
+  },
+  {
+   "title": "Attack",
+   "inDegree": 13
+  },
+  {
+   "title": "Hits",
+   "inDegree": 13
+  },
+  {
+   "title": "Strength",
+   "inDegree": 12
+  },
+  {
+   "title": "East Ardougne",
+   "inDegree": 12
+  },
+  {
+   "title": "Mining",
+   "inDegree": 11
+  },
+  {
+   "title": "Air-Rune",
+   "inDegree": 11
+  },
+  {
+   "title": "Inventory",
+   "inDegree": 11
+  },
+  {
+   "title": "Defense",
+   "inDegree": 10
+  },
+  {
+   "title": "Armour",
+   "inDegree": 9
+  },
+  {
+   "title": "The Grand Tree (location)",
+   "inDegree": 9
+  },
+  {
+   "title": "Scenery",
+   "inDegree": 9
+  },
+  {
+   "title": "Prayer",
+   "inDegree": 8
+  },
+  {
+   "title": "Wilderness",
+   "inDegree": 8
+  },
+  {
+   "title": "Pay-to-play",
+   "inDegree": 8
+  },
+  {
+   "title": "Flour",
+   "inDegree": 8
+  },
+  {
+   "title": "Examine",
+   "inDegree": 8
+  },
+  {
+   "title": "Brimhaven",
+   "inDegree": 8
+  },
+  {
+   "title": "Thrander",
+   "inDegree": 8
+  },
+  {
+   "title": "Vial (water)",
+   "inDegree": 8
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Teleportation",
+   "betweenness": 2004
+  },
+  {
+   "title": "Charged Dragonstone Amulet",
+   "betweenness": 1848
+  },
+  {
+   "title": "Crystal chest",
+   "betweenness": 1720
+  },
+  {
+   "title": "General Store",
+   "betweenness": 1656
+  },
+  {
+   "title": "Flour",
+   "betweenness": 1610
+  },
+  {
+   "title": "Thieving",
+   "betweenness": 1608
+  },
+  {
+   "title": "Gem drop table",
+   "betweenness": 1557
+  },
+  {
+   "title": "Low level alchemy",
+   "betweenness": 1480
+  },
+  {
+   "title": "Cooking",
+   "betweenness": 1428
+  },
+  {
+   "title": "Chaos Druid",
+   "betweenness": 1400
+  },
+  {
+   "title": "Fire-Rune",
+   "betweenness": 1337
+  },
+  {
+   "title": "Pies",
+   "betweenness": 1331
+  },
+  {
+   "title": "Edgeville dungeon",
+   "betweenness": 1323
+  },
+  {
+   "title": "Strange Barrel",
+   "betweenness": 1260
+  },
+  {
+   "title": "Items",
+   "betweenness": 1218
+  },
+  {
+   "title": "Armour",
+   "betweenness": 1185
+  },
+  {
+   "title": "Giant",
+   "betweenness": 1158
+  },
+  {
+   "title": "Lockpick",
+   "betweenness": 1100
+  },
+  {
+   "title": "Wilderness",
+   "betweenness": 1092
+  },
+  {
+   "title": "Magic",
+   "betweenness": 1053
+  },
+  {
+   "title": "Ranged",
+   "betweenness": 1036
+  },
+  {
+   "title": "Free-to-play",
+   "betweenness": 976
+  },
+  {
+   "title": "Big Bones",
+   "betweenness": 970
+  },
+  {
+   "title": "Al Kharid",
+   "betweenness": 924
+  },
+  {
+   "title": "Hits",
+   "betweenness": 858
+  },
+  {
+   "title": "Trade",
+   "betweenness": 828
+  },
+  {
+   "title": "Dragon Bones",
+   "betweenness": 800
+  },
+  {
+   "title": "Al Kharid Palace",
+   "betweenness": 798
+  },
+  {
+   "title": "Smithing",
+   "betweenness": 792
+  },
+  {
+   "title": "Quests",
+   "betweenness": 792
+  }
+ ]
+}

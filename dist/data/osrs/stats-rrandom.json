@@ -1,0 +1,586 @@
+{
+ "wiki": "osrs",
+ "rank": "random",
+ "nodes": 36164,
+ "converge": {
+  "articles": 35431,
+  "pct": 97.97,
+  "deadEnd": 733,
+  "deadEndPct": 2.03,
+  "noLinks": 542,
+  "tooFewLinks": 0,
+  "unresolvable": 51
+ },
+ "hopStats": {
+  "mean": 14.23,
+  "median": 13,
+  "p90": 29,
+  "max": 50
+ },
+ "histogram": {
+  "0": 965,
+  "1": 2011,
+  "2": 1513,
+  "3": 1312,
+  "4": 1254,
+  "5": 1412,
+  "6": 987,
+  "7": 979,
+  "8": 1327,
+  "9": 1366,
+  "10": 1418,
+  "11": 1621,
+  "12": 1499,
+  "13": 1279,
+  "14": 1467,
+  "15": 1129,
+  "16": 1168,
+  "17": 971,
+  "18": 1112,
+  "19": 980,
+  "20": 655,
+  "21": 699,
+  "22": 907,
+  "23": 785,
+  "24": 583,
+  "25": 650,
+  "26": 487,
+  "27": 668,
+  "28": 507,
+  "29": 558,
+  "30": 440,
+  "31": 337,
+  "32": 362,
+  "33": 359,
+  "34": 276,
+  "35": 137,
+  "36": 106,
+  "37": 94,
+  "38": 52,
+  "39": 52,
+  "40": 371,
+  "41": 76,
+  "42": 119,
+  "43": 113,
+  "44": 103,
+  "45": 92,
+  "46": 39,
+  "47": 17,
+  "48": 13,
+  "49": 2,
+  "50": 2
+ },
+ "components": 462,
+ "cycleCount": 461,
+ "largestCycle": {
+  "members": [
+   "Slayer",
+   "Slayer/Experience table"
+  ],
+  "size": 2,
+  "basin": 17690
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Slayer",
+    "Slayer/Experience table"
+   ],
+   "basin": 17690,
+   "pct": 48.92
+  },
+  {
+   "cycle": [
+    "Runes",
+    "Magic shops"
+   ],
+   "basin": 4990,
+   "pct": 13.8
+  },
+  {
+   "cycle": [
+    "Defence"
+   ],
+   "basin": 2351,
+   "pct": 6.5
+  },
+  {
+   "cycle": [
+    "Veos",
+    "Copper's crimson collar"
+   ],
+   "basin": 886,
+   "pct": 2.45
+  },
+  {
+   "cycle": [
+    "Strength"
+   ],
+   "basin": 868,
+   "pct": 2.4
+  },
+  {
+   "cycle": [
+    "Ice troll",
+    "Trollweiss Dungeon",
+    "Brambickle",
+    "Ice gate"
+   ],
+   "basin": 853,
+   "pct": 2.36
+  },
+  {
+   "cycle": [
+    "Huntsman's kit",
+    "Guild Scribe Verity",
+    "Hunters' loot sack (master)",
+    "Hunters' loot sack (expert)",
+    "Guild hunter outfit"
+   ],
+   "basin": 777,
+   "pct": 2.15
+  },
+  {
+   "cycle": [
+    "Jagex Moderator",
+    "Rotten strawberry"
+   ],
+   "basin": 639,
+   "pct": 1.77
+  },
+  {
+   "cycle": [
+    "Castle Wars",
+    "Bandages"
+   ],
+   "basin": 291,
+   "pct": 0.8
+  },
+  {
+   "cycle": [
+    "Agility"
+   ],
+   "basin": 284,
+   "pct": 0.79
+  },
+  {
+   "cycle": [
+    "Temple of the Eye (location)",
+    "Justiciar Aliya"
+   ],
+   "basin": 224,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Warriors' Guild",
+    "Jimmy (Warriors' Guild)"
+   ],
+   "basin": 223,
+   "pct": 0.62
+  },
+  {
+   "cycle": [
+    "Leagues Reward Shop",
+    "Leagues Tutor"
+   ],
+   "basin": 218,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Dragon pickaxe",
+    "Dragon pickaxe (upgraded)"
+   ],
+   "basin": 213,
+   "pct": 0.59
+  },
+  {
+   "cycle": [
+    "Unidentified minerals",
+    "Soft clay pack",
+    "Belona"
+   ],
+   "basin": 170,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Aris"
+   ],
+   "basin": 146,
+   "pct": 0.4
+  },
+  {
+   "cycle": [
+    "Spyglass",
+    "Cargo hold"
+   ],
+   "basin": 141,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Barrel of naphtha",
+    "Barrel",
+    "Coal Tar",
+    "Barrel bomb"
+   ],
+   "basin": 139,
+   "pct": 0.38
+  },
+  {
+   "cycle": [
+    "Vial of water",
+    "Water-filled vial pack"
+   ],
+   "basin": 104,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Mouse hole",
+    "Witch's house (location)"
+   ],
+   "basin": 102,
+   "pct": 0.28
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "TzHaar Fight Cave/Rotations/1",
+   "chains": 36,
+   "pct": 0.1,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hands slot table",
+   "chains": 22,
+   "pct": 0.06,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Rosewood tree (Farming)",
+   "chains": 16,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Legs slot table",
+   "chains": 15,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Player spoof",
+   "chains": 10,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Head slot table",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Shield slot table",
+   "chains": 7,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Chair",
+   "chains": 7,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Feet slot table",
+   "chains": 5,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hex edit detected",
+   "chains": 5,
+   "pct": 0.01,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Magic cape",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Ironwood tree (Farming)",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Gnome Child (Realm of Memories)",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Body slot table",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Barbarianism",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Construction",
+   "inDegree": 309
+  },
+  {
+   "title": "Quests",
+   "inDegree": 266
+  },
+  {
+   "title": "Player-owned house",
+   "inDegree": 256
+  },
+  {
+   "title": "Treasure Trails/Guide/Cryptic clues",
+   "inDegree": 236
+  },
+  {
+   "title": "Treasure Trails",
+   "inDegree": 201
+  },
+  {
+   "title": "Examine",
+   "inDegree": 188
+  },
+  {
+   "title": "Treasure Trails/Guide/Coordinates",
+   "inDegree": 162
+  },
+  {
+   "title": "Experience",
+   "inDegree": 160
+  },
+  {
+   "title": "Agility",
+   "inDegree": 137
+  },
+  {
+   "title": "Thieving",
+   "inDegree": 137
+  },
+  {
+   "title": "Magic",
+   "inDegree": 134
+  },
+  {
+   "title": "Defence",
+   "inDegree": 129
+  },
+  {
+   "title": "Cargo hold",
+   "inDegree": 128
+  },
+  {
+   "title": "Grand Exchange",
+   "inDegree": 121
+  },
+  {
+   "title": "Combat Achievements/Elite",
+   "inDegree": 121
+  },
+  {
+   "title": "Gielinor",
+   "inDegree": 119
+  },
+  {
+   "title": "Combat Achievements/Master",
+   "inDegree": 118
+  },
+  {
+   "title": "Last Man Standing",
+   "inDegree": 110
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 107
+  },
+  {
+   "title": "God Wars Dungeon",
+   "inDegree": 107
+  },
+  {
+   "title": "Music",
+   "inDegree": 101
+  },
+  {
+   "title": "Hitpoints",
+   "inDegree": 98
+  },
+  {
+   "title": "Sailing",
+   "inDegree": 97
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 96
+  },
+  {
+   "title": "Coins",
+   "inDegree": 95
+  },
+  {
+   "title": "Prayer",
+   "inDegree": 93
+  },
+  {
+   "title": "March 2025 Sailing Alpha",
+   "inDegree": 93
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 90
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 86
+  },
+  {
+   "title": "Minigames",
+   "inDegree": 83
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Members",
+   "betweenness": 115340
+  },
+  {
+   "title": "Quests",
+   "betweenness": 111353
+  },
+  {
+   "title": "Mage Training Arena",
+   "betweenness": 104004
+  },
+  {
+   "title": "Telekinetic Grab",
+   "betweenness": 92616
+  },
+  {
+   "title": "Wyrmscraig",
+   "betweenness": 81263
+  },
+  {
+   "title": "Sailing",
+   "betweenness": 77886
+  },
+  {
+   "title": "Current Affairs",
+   "betweenness": 64910
+  },
+  {
+   "title": "Multicombat area",
+   "betweenness": 63924
+  },
+  {
+   "title": "Magic",
+   "betweenness": 62437
+  },
+  {
+   "title": "Collection log",
+   "betweenness": 62340
+  },
+  {
+   "title": "Mor Ul Rek",
+   "betweenness": 62289
+  },
+  {
+   "title": "TzHaar-Mej-Roh",
+   "betweenness": 60008
+  },
+  {
+   "title": "Troll",
+   "betweenness": 59262
+  },
+  {
+   "title": "Hammer",
+   "betweenness": 58656
+  },
+  {
+   "title": "The Collector",
+   "betweenness": 58212
+  },
+  {
+   "title": "Tokkul",
+   "betweenness": 57900
+  },
+  {
+   "title": "Last Man Standing",
+   "betweenness": 57392
+  },
+  {
+   "title": "Making Friends with My Arm",
+   "betweenness": 56764
+  },
+  {
+   "title": "Rock (Troll)",
+   "betweenness": 56480
+  },
+  {
+   "title": "Protect from Melee",
+   "betweenness": 56259
+  },
+  {
+   "title": "Minigames",
+   "betweenness": 55488
+  },
+  {
+   "title": "Varrock Museum",
+   "betweenness": 55458
+  },
+  {
+   "title": "Prayer points",
+   "betweenness": 55116
+  },
+  {
+   "title": "My Arm",
+   "betweenness": 54978
+  },
+  {
+   "title": "Varrock Palace",
+   "betweenness": 53484
+  },
+  {
+   "title": "Experience",
+   "betweenness": 53388
+  },
+  {
+   "title": "Weapons",
+   "betweenness": 52802
+  },
+  {
+   "title": "Obelisk of Water",
+   "betweenness": 51932
+  },
+  {
+   "title": "Ranged/Level up table",
+   "betweenness": 49712
+  },
+  {
+   "title": "Ranged",
+   "betweenness": 48594
+  }
+ ]
+}

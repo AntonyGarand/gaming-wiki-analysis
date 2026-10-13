@@ -1,0 +1,571 @@
+{
+ "wiki": "osrs",
+ "rank": "3",
+ "nodes": 36164,
+ "converge": {
+  "articles": 26878,
+  "pct": 74.32,
+  "deadEnd": 9286,
+  "deadEndPct": 25.68,
+  "noLinks": 542,
+  "tooFewLinks": 4252,
+  "unresolvable": 37
+ },
+ "hopStats": {
+  "mean": 7.02,
+  "median": 6,
+  "p90": 13,
+  "max": 29
+ },
+ "histogram": {
+  "0": 1172,
+  "1": 2500,
+  "2": 2311,
+  "3": 2341,
+  "4": 2267,
+  "5": 1864,
+  "6": 1597,
+  "7": 1579,
+  "8": 1291,
+  "9": 1433,
+  "10": 1738,
+  "11": 1334,
+  "12": 2017,
+  "13": 840,
+  "14": 611,
+  "15": 370,
+  "16": 271,
+  "17": 301,
+  "18": 290,
+  "19": 217,
+  "20": 104,
+  "21": 55,
+  "22": 89,
+  "23": 77,
+  "24": 70,
+  "25": 53,
+  "26": 32,
+  "27": 19,
+  "28": 28,
+  "29": 7
+ },
+ "components": 571,
+ "cycleCount": 570,
+ "largestCycle": {
+  "members": [
+   "Experience",
+   "Book of Knowledge"
+  ],
+  "size": 2,
+  "basin": 10433
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Experience",
+    "Book of Knowledge"
+   ],
+   "basin": 10433,
+   "pct": 28.85
+  },
+  {
+   "cycle": [
+    "Kandarin",
+    "East Ardougne",
+    "Ardougne Market",
+    "Outpost",
+    "Making History"
+   ],
+   "basin": 4345,
+   "pct": 12.01
+  },
+  {
+   "cycle": [
+    "Varlamore",
+    "Western Ocean",
+    "Kebos Lowlands"
+   ],
+   "basin": 1856,
+   "pct": 5.13
+  },
+  {
+   "cycle": [
+    "Combat",
+    "Melee",
+    "Defence"
+   ],
+   "basin": 1689,
+   "pct": 4.67
+  },
+  {
+   "cycle": [
+    "Tutorial Island",
+    "The Node",
+    "Ironman helm"
+   ],
+   "basin": 774,
+   "pct": 2.14
+  },
+  {
+   "cycle": [
+    "Ranged",
+    "Crossbow (weapon)"
+   ],
+   "basin": 769,
+   "pct": 2.13
+  },
+  {
+   "cycle": [
+    "The Fremennik Trials",
+    "Peer the Seer"
+   ],
+   "basin": 593,
+   "pct": 1.64
+  },
+  {
+   "cycle": [
+    "Temporary skill boost",
+    "Potions"
+   ],
+   "basin": 369,
+   "pct": 1.02
+  },
+  {
+   "cycle": [
+    "King Roald",
+    "Varrock Palace Secret Guard"
+   ],
+   "basin": 332,
+   "pct": 0.92
+  },
+  {
+   "cycle": [
+    "Vampyre",
+    "Vampyre Houses"
+   ],
+   "basin": 309,
+   "pct": 0.85
+  },
+  {
+   "cycle": [
+    "Official Client",
+    "Jagex Launcher"
+   ],
+   "basin": 289,
+   "pct": 0.8
+  },
+  {
+   "cycle": [
+    "Fishing spots",
+    "Raw karambwan",
+    "Fishing"
+   ],
+   "basin": 268,
+   "pct": 0.74
+  },
+  {
+   "cycle": [
+    "Herblore"
+   ],
+   "basin": 162,
+   "pct": 0.45
+  },
+  {
+   "cycle": [
+    "Grand bookshelf",
+    "Serafina's diary"
+   ],
+   "basin": 104,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Plague City",
+    "Edmond",
+    "Elena"
+   ],
+   "basin": 102,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Tree Gnome Village",
+    "Gnome",
+    "Tree Gnome Village (location)",
+    "Elkoy"
+   ],
+   "basin": 100,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Ali Morrisane",
+    "Pollnivneach",
+    "The Feud"
+   ],
+   "basin": 88,
+   "pct": 0.24
+  },
+  {
+   "cycle": [
+    "Regicide",
+    "Tirannwn"
+   ],
+   "basin": 83,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Items Kept on Death (Interface)",
+    "Items Kept on Death"
+   ],
+   "basin": 81,
+   "pct": 0.22
+  },
+  {
+   "cycle": [
+    "Werewolf",
+    "Wolf bones"
+   ],
+   "basin": 79,
+   "pct": 0.22
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Icon",
+   "chains": 3045,
+   "pct": 8.42,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Hunter creatures",
+   "chains": 272,
+   "pct": 0.75,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Bloody key",
+   "chains": 115,
+   "pct": 0.32,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Bandit (Varlamore)",
+   "chains": 84,
+   "pct": 0.23,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Event rewards",
+   "chains": 66,
+   "pct": 0.18,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Port master",
+   "chains": 45,
+   "pct": 0.12,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Zombie pirate (Harmony Island)",
+   "chains": 31,
+   "pct": 0.09,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Old One Statue",
+   "chains": 31,
+   "pct": 0.09,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Wester chocolate",
+   "chains": 31,
+   "pct": 0.09,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Conveyor belt (Mastering Mixology)",
+   "chains": 28,
+   "pct": 0.08,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Christmas event",
+   "chains": 26,
+   "pct": 0.07,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Halloween event",
+   "chains": 24,
+   "pct": 0.07,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Stone table (While Guthix Sleeps)",
+   "chains": 16,
+   "pct": 0.04,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Cape slot table",
+   "chains": 14,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Music Player",
+   "chains": 14,
+   "pct": 0.04,
+   "reason": "only 2 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Treasure Trails",
+   "inDegree": 979
+  },
+  {
+   "title": "Player-owned house",
+   "inDegree": 615
+  },
+  {
+   "title": "Quests",
+   "inDegree": 510
+  },
+  {
+   "title": "Magic",
+   "inDegree": 261
+  },
+  {
+   "title": "Defence",
+   "inDegree": 217
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 169
+  },
+  {
+   "title": "Minigames",
+   "inDegree": 165
+  },
+  {
+   "title": "Boat",
+   "inDegree": 158
+  },
+  {
+   "title": "Examine",
+   "inDegree": 136
+  },
+  {
+   "title": "Attack",
+   "inDegree": 134
+  },
+  {
+   "title": "Construction",
+   "inDegree": 125
+  },
+  {
+   "title": "Farming",
+   "inDegree": 116
+  },
+  {
+   "title": "Hitpoints",
+   "inDegree": 115
+  },
+  {
+   "title": "Thieving",
+   "inDegree": 113
+  },
+  {
+   "title": "Varrock",
+   "inDegree": 112
+  },
+  {
+   "title": "Prayer",
+   "inDegree": 106
+  },
+  {
+   "title": "Experience",
+   "inDegree": 105
+  },
+  {
+   "title": "Sailing",
+   "inDegree": 102
+  },
+  {
+   "title": "Hunter",
+   "inDegree": 100
+  },
+  {
+   "title": "Coins",
+   "inDegree": 96
+  },
+  {
+   "title": "Chest (Last Man Standing)",
+   "inDegree": 95
+  },
+  {
+   "title": "Free-to-play",
+   "inDegree": 92
+  },
+  {
+   "title": "Workshop",
+   "inDegree": 90
+  },
+  {
+   "title": "Wilderness",
+   "inDegree": 86
+  },
+  {
+   "title": "Strength",
+   "inDegree": 85
+  },
+  {
+   "title": "Smithing",
+   "inDegree": 82
+  },
+  {
+   "title": "Song of the Elves",
+   "inDegree": 80
+  },
+  {
+   "title": "Fletching",
+   "inDegree": 79
+  },
+  {
+   "title": "Agility",
+   "inDegree": 74
+  },
+  {
+   "title": "Skills",
+   "inDegree": 71
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Monster",
+   "betweenness": 37506
+  },
+  {
+   "title": "Non-player character",
+   "betweenness": 36904
+  },
+  {
+   "title": "Rat",
+   "betweenness": 32310
+  },
+  {
+   "title": "Gielinor",
+   "betweenness": 30376
+  },
+  {
+   "title": "Stronghold of Security",
+   "betweenness": 27620
+  },
+  {
+   "title": "Zeah",
+   "betweenness": 26635
+  },
+  {
+   "title": "Varrock",
+   "betweenness": 24536
+  },
+  {
+   "title": "Wilderness",
+   "betweenness": 23728
+  },
+  {
+   "title": "Port Sarim",
+   "betweenness": 23658
+  },
+  {
+   "title": "Ferox Enclave",
+   "betweenness": 23370
+  },
+  {
+   "title": "Ferox",
+   "betweenness": 21826
+  },
+  {
+   "title": "Karamja",
+   "betweenness": 20690
+  },
+  {
+   "title": "Spawning",
+   "betweenness": 20358
+  },
+  {
+   "title": "World map",
+   "betweenness": 19970
+  },
+  {
+   "title": "Free-to-play",
+   "betweenness": 19968
+  },
+  {
+   "title": "Skills",
+   "betweenness": 19152
+  },
+  {
+   "title": "Items",
+   "betweenness": 18996
+  },
+  {
+   "title": "Coins",
+   "betweenness": 18936
+  },
+  {
+   "title": "Quests",
+   "betweenness": 18800
+  },
+  {
+   "title": "Minimap",
+   "betweenness": 18522
+  },
+  {
+   "title": "Locations",
+   "betweenness": 17982
+  },
+  {
+   "title": "Item IDs",
+   "betweenness": 17424
+  },
+  {
+   "title": "Kandarin",
+   "betweenness": 16831
+  },
+  {
+   "title": "Second Age",
+   "betweenness": 16038
+  },
+  {
+   "title": "Zarosian Empire",
+   "betweenness": 15878
+  },
+  {
+   "title": "Treasure Trails",
+   "betweenness": 13152
+  },
+  {
+   "title": "East Ardougne",
+   "betweenness": 13136
+  },
+  {
+   "title": "Reward casket",
+   "betweenness": 12573
+  },
+  {
+   "title": "Stackable items",
+   "betweenness": 11450
+  },
+  {
+   "title": "God Wars",
+   "betweenness": 10944
+  }
+ ]
+}

@@ -1,0 +1,387 @@
+{
+ "wiki": "balatro",
+ "rank": "5",
+ "nodes": 517,
+ "converge": {
+  "articles": 198,
+  "pct": 38.3,
+  "deadEnd": 319,
+  "deadEndPct": 61.7,
+  "noLinks": 38,
+  "tooFewLinks": 181,
+  "unresolvable": 1
+ },
+ "hopStats": {
+  "mean": 2.27,
+  "median": 2,
+  "p90": 4,
+  "max": 5
+ },
+ "histogram": {
+  "0": 3,
+  "1": 30,
+  "2": 120,
+  "3": 7,
+  "4": 32,
+  "5": 6
+ },
+ "components": 2,
+ "cycleCount": 1,
+ "largestCycle": {
+  "members": [
+   "The Shop",
+   "Booster Packs",
+   "Spectral cards"
+  ],
+  "size": 3,
+  "basin": 198
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "The Shop",
+    "Booster Packs",
+    "Spectral cards"
+   ],
+   "basin": 198,
+   "pct": 38.3
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Vouchers",
+   "chains": 40,
+   "pct": 7.74,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Challenge Decks",
+   "chains": 28,
+   "pct": 5.42,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Tags",
+   "chains": 17,
+   "pct": 3.29,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Friends of Jimbo",
+   "chains": 7,
+   "pct": 1.35,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Eternal",
+   "chains": 6,
+   "pct": 1.16,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Interest",
+   "chains": 3,
+   "pct": 0.58,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Music",
+   "chains": 2,
+   "pct": 0.39,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Naneinf",
+   "chains": 2,
+   "pct": 0.39,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Legendary Jokers",
+   "chains": 2,
+   "pct": 0.39,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Settings",
+   "chains": 2,
+   "pct": 0.39,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Balatro Wiki",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Playstack",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Updates",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Clever Joker",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Mad Joker",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "only 4 eligible links"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Jokers",
+   "inDegree": 69
+  },
+  {
+   "title": "Poker hands",
+   "inDegree": 32
+  },
+  {
+   "title": "Vouchers",
+   "inDegree": 27
+  },
+  {
+   "title": "Card modifiers",
+   "inDegree": 27
+  },
+  {
+   "title": "Decks",
+   "inDegree": 22
+  },
+  {
+   "title": "Consumables",
+   "inDegree": 17
+  },
+  {
+   "title": "Spectral cards",
+   "inDegree": 14
+  },
+  {
+   "title": "The Shop",
+   "inDegree": 11
+  },
+  {
+   "title": "Tarot cards",
+   "inDegree": 9
+  },
+  {
+   "title": "Booster Packs",
+   "inDegree": 8
+  },
+  {
+   "title": "Blinds and Antes",
+   "inDegree": 7
+  },
+  {
+   "title": "Planet cards",
+   "inDegree": 6
+  },
+  {
+   "title": "Tags",
+   "inDegree": 6
+  },
+  {
+   "title": "Card Ranks",
+   "inDegree": 4
+  },
+  {
+   "title": "Eternal",
+   "inDegree": 4
+  },
+  {
+   "title": "Seed",
+   "inDegree": 4
+  },
+  {
+   "title": "Gameplay loop",
+   "inDegree": 3
+  },
+  {
+   "title": "Challenge Decks",
+   "inDegree": 3
+  },
+  {
+   "title": "Interest",
+   "inDegree": 2
+  },
+  {
+   "title": "Negative Effects",
+   "inDegree": 2
+  },
+  {
+   "title": "Stakes",
+   "inDegree": 1
+  },
+  {
+   "title": "Anaglyph Deck",
+   "inDegree": 1
+  },
+  {
+   "title": "Joker",
+   "inDegree": 1
+  },
+  {
+   "title": "Update 1.0.0k",
+   "inDegree": 1
+  },
+  {
+   "title": "Bugs",
+   "inDegree": 1
+  },
+  {
+   "title": "Friends of Jimbo",
+   "inDegree": 1
+  },
+  {
+   "title": "Negative",
+   "inDegree": 1
+  },
+  {
+   "title": "Chips",
+   "inDegree": 1
+  },
+  {
+   "title": "Naneinf",
+   "inDegree": 1
+  },
+  {
+   "title": "Hand size",
+   "inDegree": 1
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Jokers",
+   "betweenness": 330
+  },
+  {
+   "title": "The Shop",
+   "betweenness": 282
+  },
+  {
+   "title": "Booster Packs",
+   "betweenness": 204
+  },
+  {
+   "title": "Poker hands",
+   "betweenness": 190
+  },
+  {
+   "title": "Update 1.0.0k",
+   "betweenness": 156
+  },
+  {
+   "title": "Spectral cards",
+   "betweenness": 102
+  },
+  {
+   "title": "Card modifiers",
+   "betweenness": 90
+  },
+  {
+   "title": "Consumables",
+   "betweenness": 51
+  },
+  {
+   "title": "Planet cards",
+   "betweenness": 36
+  },
+  {
+   "title": "Decks",
+   "betweenness": 24
+  },
+  {
+   "title": "Seed",
+   "betweenness": 12
+  },
+  {
+   "title": "Tarot cards",
+   "betweenness": 9
+  },
+  {
+   "title": "Negative Effects",
+   "betweenness": 8
+  },
+  {
+   "title": "Blinds and Antes",
+   "betweenness": 7
+  },
+  {
+   "title": "Main menu",
+   "betweenness": 6
+  },
+  {
+   "title": "Card Ranks",
+   "betweenness": 5
+  },
+  {
+   "title": "Bugs",
+   "betweenness": 4
+  },
+  {
+   "title": "Chips",
+   "betweenness": 4
+  },
+  {
+   "title": "Guide: naneinf",
+   "betweenness": 4
+  },
+  {
+   "title": "Money",
+   "betweenness": 4
+  },
+  {
+   "title": "Discoverability",
+   "betweenness": 4
+  },
+  {
+   "title": "Gameplay loop",
+   "betweenness": 3
+  },
+  {
+   "title": "Anaglyph Deck",
+   "betweenness": 3
+  },
+  {
+   "title": "Negative",
+   "betweenness": 3
+  },
+  {
+   "title": "Hand size",
+   "betweenness": 3
+  },
+  {
+   "title": "Steel cards",
+   "betweenness": 3
+  },
+  {
+   "title": "Stakes",
+   "betweenness": 2
+  },
+  {
+   "title": "Joker",
+   "betweenness": 2
+  },
+  {
+   "title": "Consumable slot",
+   "betweenness": 2
+  },
+  {
+   "title": "Listed probability",
+   "betweenness": 1
+  }
+ ]
+}

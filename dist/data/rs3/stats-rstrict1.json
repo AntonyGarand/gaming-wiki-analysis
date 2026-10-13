@@ -1,0 +1,558 @@
+{
+ "wiki": "rs3",
+ "rank": "strict1",
+ "nodes": 79761,
+ "converge": {
+  "articles": 77256,
+  "pct": 96.86,
+  "deadEnd": 2505,
+  "deadEndPct": 3.14,
+  "noLinks": 2191,
+  "tooFewLinks": 0,
+  "unresolvable": 46
+ },
+ "hopStats": {
+  "mean": 3.99,
+  "median": 3,
+  "p90": 8,
+  "max": 17
+ },
+ "histogram": {
+  "0": 596,
+  "1": 6236,
+  "2": 18995,
+  "3": 16116,
+  "4": 12609,
+  "5": 6921,
+  "6": 3179,
+  "7": 2710,
+  "8": 3228,
+  "9": 2630,
+  "10": 2119,
+  "11": 1257,
+  "12": 494,
+  "13": 140,
+  "14": 20,
+  "15": 2,
+  "16": 3,
+  "17": 1
+ },
+ "components": 339,
+ "cycleCount": 338,
+ "largestCycle": {
+  "members": [
+   "Elder Gods",
+   "Gods",
+   "Elder artefacts"
+  ],
+  "size": 3,
+  "basin": 14395
+ },
+ "topAttractors": [
+  {
+   "cycle": [
+    "Elder Gods",
+    "Gods",
+    "Elder artefacts"
+   ],
+   "basin": 14395,
+   "pct": 18.05
+  },
+  {
+   "cycle": [
+    "Skills",
+    "Skill training guides",
+    "Experience"
+   ],
+   "basin": 11442,
+   "pct": 14.35
+  },
+  {
+   "cycle": [
+    "Interface",
+    "Tutorial Island",
+    "Sunken Tutorial Island",
+    "Beneath Cursed Tides",
+    "Quests"
+   ],
+   "basin": 11072,
+   "pct": 13.88
+  },
+  {
+   "cycle": [
+    "Items",
+    "Backpack"
+   ],
+   "basin": 9244,
+   "pct": 11.59
+  },
+  {
+   "cycle": [
+    "Members",
+    "Membership subscription"
+   ],
+   "basin": 7332,
+   "pct": 9.19
+  },
+  {
+   "cycle": [
+    "Jagex",
+    "Andrew Gower"
+   ],
+   "basin": 5997,
+   "pct": 7.52
+  },
+  {
+   "cycle": [
+    "Titles",
+    "Customisations"
+   ],
+   "basin": 4648,
+   "pct": 5.83
+  },
+  {
+   "cycle": [
+    "Trading",
+    "Coins",
+    "Grand Exchange"
+   ],
+   "basin": 4613,
+   "pct": 5.78
+  },
+  {
+   "cycle": [
+    "List of races",
+    "Abyssal"
+   ],
+   "basin": 2141,
+   "pct": 2.68
+  },
+  {
+   "cycle": [
+    "Treasure Hunter",
+    "Treasure Hunter Key"
+   ],
+   "basin": 1546,
+   "pct": 1.94
+  },
+  {
+   "cycle": [
+    "Construction",
+    "Player-owned house"
+   ],
+   "basin": 1044,
+   "pct": 1.31
+  },
+  {
+   "cycle": [
+    "Worn Equipment",
+    "Combat Stats"
+   ],
+   "basin": 501,
+   "pct": 0.63
+  },
+  {
+   "cycle": [
+    "Saradomin",
+    "White Knights",
+    "Temple Knights"
+   ],
+   "basin": 457,
+   "pct": 0.57
+  },
+  {
+   "cycle": [
+    "Demon",
+    "Infernus"
+   ],
+   "basin": 277,
+   "pct": 0.35
+  },
+  {
+   "cycle": [
+    "Goebie",
+    "Goebie (race)",
+    "Mazcab"
+   ],
+   "basin": 165,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "Dragon (race)",
+    "Dragonfire"
+   ],
+   "basin": 159,
+   "pct": 0.2
+  },
+  {
+   "cycle": [
+    "Treasure Trails/Guide/Emotes",
+    "Hidey-holes"
+   ],
+   "basin": 125,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Ilujanka",
+    "Iaia"
+   ],
+   "basin": 100,
+   "pct": 0.13
+  },
+  {
+   "cycle": [
+    "Desert Treasure",
+    "Diamonds of Azzanadra"
+   ],
+   "basin": 93,
+   "pct": 0.12
+  },
+  {
+   "cycle": [
+    "Ghostweave",
+    "Ghostly outfit"
+   ],
+   "basin": 93,
+   "pct": 0.12
+  }
+ ],
+ "deadEndTerminals": [
+  {
+   "title": "Equipment tier",
+   "chains": 87,
+   "pct": 0.11,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Treasure Trails/Guide/Anagrams",
+   "chains": 57,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "2006 Halloween event",
+   "chains": 32,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Albums",
+   "chains": 19,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "One Piercing Note",
+   "chains": 17,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Prayer powder",
+   "chains": 8,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Squeal of Fortune/Promotions",
+   "chains": 6,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Treasure Hunter/Promotions",
+   "chains": 6,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Macarthur Fortune Holding",
+   "chains": 5,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "God Wars Dungeon 2",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Post-quest rewards",
+   "chains": 3,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Small bladed rune salvage",
+   "chains": 3,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Tiny bladed orikalkum salvage",
+   "chains": 3,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Folded-arm figurine (female)",
+   "chains": 3,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Vestments of havoc boots",
+   "chains": 3,
+   "pct": 0,
+   "reason": "redlink target"
+  }
+ ],
+ "roadsToTopAttractor": [],
+ "topInDegree": [
+  {
+   "title": "Cosmetic override",
+   "inDegree": 3682
+  },
+  {
+   "title": "Scenery",
+   "inDegree": 3233
+  },
+  {
+   "title": "Achievements",
+   "inDegree": 2567
+  },
+  {
+   "title": "Items",
+   "inDegree": 1421
+  },
+  {
+   "title": "Music",
+   "inDegree": 1284
+  },
+  {
+   "title": "Player-owned port",
+   "inDegree": 1075
+  },
+  {
+   "title": "Buffs and debuffs",
+   "inDegree": 922
+  },
+  {
+   "title": "Treasure Hunter",
+   "inDegree": 862
+  },
+  {
+   "title": "Dungeoneering",
+   "inDegree": 780
+  },
+  {
+   "title": "Titles",
+   "inDegree": 664
+  },
+  {
+   "title": "Livestream",
+   "inDegree": 657
+  },
+  {
+   "title": "Non-player character",
+   "inDegree": 631
+  },
+  {
+   "title": "Jagex Store",
+   "inDegree": 555
+  },
+  {
+   "title": "Jagex",
+   "inDegree": 512
+  },
+  {
+   "title": "Video",
+   "inDegree": 500
+  },
+  {
+   "title": "Construction",
+   "inDegree": 434
+  },
+  {
+   "title": "Melee",
+   "inDegree": 391
+  },
+  {
+   "title": "Daemonheim",
+   "inDegree": 385
+  },
+  {
+   "title": "Quest items",
+   "inDegree": 377
+  },
+  {
+   "title": "Attack",
+   "inDegree": 354
+  },
+  {
+   "title": "Defence",
+   "inDegree": 354
+  },
+  {
+   "title": "Magic",
+   "inDegree": 352
+  },
+  {
+   "title": "Furniture",
+   "inDegree": 343
+  },
+  {
+   "title": "Ranged",
+   "inDegree": 330
+  },
+  {
+   "title": "Solomon's General Store",
+   "inDegree": 291
+  },
+  {
+   "title": "Patch Notes",
+   "inDegree": 285
+  },
+  {
+   "title": "Members",
+   "inDegree": 285
+  },
+  {
+   "title": "Unlock tokens",
+   "inDegree": 277
+  },
+  {
+   "title": "Behind the Scenes",
+   "inDegree": 270
+  },
+  {
+   "title": "Quests",
+   "inDegree": 258
+  }
+ ],
+ "topBetweenness": [
+  {
+   "title": "Character",
+   "betweenness": 41532
+  },
+  {
+   "title": "Locations",
+   "betweenness": 41445
+  },
+  {
+   "title": "Kingdom",
+   "betweenness": 41004
+  },
+  {
+   "title": "Interface",
+   "betweenness": 40314
+  },
+  {
+   "title": "Combat",
+   "betweenness": 39285
+  },
+  {
+   "title": "Life points",
+   "betweenness": 38848
+  },
+  {
+   "title": "Gielinor",
+   "betweenness": 37140
+  },
+  {
+   "title": "Minimap",
+   "betweenness": 34955
+  },
+  {
+   "title": "Death (mechanic)",
+   "betweenness": 34118
+  },
+  {
+   "title": "World map",
+   "betweenness": 33216
+  },
+  {
+   "title": "Tutorial Island",
+   "betweenness": 29517
+  },
+  {
+   "title": "Elder Gods",
+   "betweenness": 25497
+  },
+  {
+   "title": "Misthalin",
+   "betweenness": 21392
+  },
+  {
+   "title": "Skills",
+   "betweenness": 21248
+  },
+  {
+   "title": "Sunken Tutorial Island",
+   "betweenness": 18475
+  },
+  {
+   "title": "Magic",
+   "betweenness": 17190
+  },
+  {
+   "title": "Gods",
+   "betweenness": 15872
+  },
+  {
+   "title": "Quests",
+   "betweenness": 14826
+  },
+  {
+   "title": "Achievements",
+   "betweenness": 14420
+  },
+  {
+   "title": "Non-player character",
+   "betweenness": 14322
+  },
+  {
+   "title": "Melee",
+   "betweenness": 13150
+  },
+  {
+   "title": "Group Ironman Mode",
+   "betweenness": 11576
+  },
+  {
+   "title": "Scenery",
+   "betweenness": 11388
+  },
+  {
+   "title": "Kharidian Desert",
+   "betweenness": 11144
+  },
+  {
+   "title": "Monster",
+   "betweenness": 11030
+  },
+  {
+   "title": "Asgarnia",
+   "betweenness": 10815
+  },
+  {
+   "title": "Kandarin",
+   "betweenness": 10633
+  },
+  {
+   "title": "Skill training guides",
+   "betweenness": 9812
+  },
+  {
+   "title": "Items",
+   "betweenness": 9181
+  },
+  {
+   "title": "Ironman Mode",
+   "betweenness": 8751
+  }
+ ]
+}
