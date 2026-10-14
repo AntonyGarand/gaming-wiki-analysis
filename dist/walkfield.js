@@ -455,6 +455,10 @@
       // padded cache, so labels a pan away are already in place when they
       // slide into view
       const CW = cacheW / dpr, CH = cacheH / dpr;
+      // labels are placed with toScreen(), which already bakes in tx/ty/k —
+      // drop the world transform before drawing them, or the pan applies
+      // twice and the zoom squares, drifting labels off their nodes
+      cctx.setTransform(dpr, 0, 0, dpr, cacheOX, cacheOY);
       cctx.globalAlpha = 1; cctx.textAlign = "center"; cctx.textBaseline = "middle";
       const placed = [];
       const fits = (r) => !(r.x < 0 || r.x + r.w > CW || r.y < 0 || r.y + r.h > CH) && !placed.some((p) => r.x < p.x + p.w && r.x + r.w > p.x && r.y < p.y + p.h && r.y + r.h > p.y);

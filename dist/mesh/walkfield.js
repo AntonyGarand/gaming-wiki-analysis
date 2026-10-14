@@ -283,8 +283,11 @@
     container.style.touchAction = opts.touchAction;
     const bctx = base.getContext("2d"), lctx = live.getContext("2d"), cctx = cacheC.getContext("2d");
     let W = 0, H = 0, dpr = 1;
-    // pixel budget: retina sharpness on a panel, fewer pixels to push on a fullscreen canvas
-    const pickDpr = () => Math.max(1, Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(3.2e6 / Math.max(1, W * H))));
+    // pixel budget: retina sharpness on a panel, fewer pixels to push on a fullscreen canvas.
+    // 8.3MP ≈ one 4K frame: panels and 1080p-at-2x render at native dpr; only
+    // larger viewports clamp — dropping below native dpr makes the compositor
+    // upscale the bitmap, which reads as the whole field going soft
+    const pickDpr = () => Math.max(1, Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(8.3e6 / Math.max(1, W * H))));
     let g = null, L = null, colorOf = null;
     const view = { k: 1, tx: 0, ty: 0 };
     let cacheView = null, anim = null, lastView = null;
@@ -306,9 +309,16 @@
 
     function resize() {
       const r = container.getBoundingClientRect();
-      W = Math.max(1, r.width); H = Math.max(1, r.height);
+      // round the CSS size and pin it: a fractional rect (width:100% of an odd
+      // viewport, 125%/150% Windows scaling) against a rounded backing store
+      // leaves the canvas resampled by the compositor — soft ink everywhere
+      W = Math.max(1, Math.round(r.width)); H = Math.max(1, Math.round(r.height));
       dpr = pickDpr();
-      for (const c of [base, live]) { c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); }
+      for (const c of [base, live]) {
+        c.style.width = W + "px"; c.style.height = H + "px";
+        c.width = Math.round(W * dpr); c.height = Math.round(H * dpr);
+      }
+      dpr = base.width / W; // exact achieved scale, so every setTransform(dpr,…) lands on device pixels
       cacheOX = Math.round(W * dpr * CACHE_PAD); cacheOY = Math.round(H * dpr * CACHE_PAD);
       cacheW = base.width + 2 * cacheOX; cacheH = base.height + 2 * cacheOY;
       cacheC.width = cacheW; cacheC.height = cacheH;
@@ -445,6 +455,10 @@
       // padded cache, so labels a pan away are already in place when they
       // slide into view
       const CW = cacheW / dpr, CH = cacheH / dpr;
+      // labels are placed with toScreen(), which already bakes in tx/ty/k —
+      // drop the world transform before drawing them, or the pan applies
+      // twice and the zoom squares, drifting labels off their nodes
+      cctx.setTransform(dpr, 0, 0, dpr, cacheOX, cacheOY);
       cctx.globalAlpha = 1; cctx.textAlign = "center"; cctx.textBaseline = "middle";
       const placed = [];
       const fits = (r) => !(r.x < 0 || r.x + r.w > CW || r.y < 0 || r.y + r.h > CH) && !placed.some((p) => r.x < p.x + p.w && r.x + r.w > p.x && r.y < p.y + p.h && r.y + r.h > p.y);
