@@ -36,9 +36,13 @@
   }
   ::selection { background: var(--vi); color: #fff; }
 
-  /* the field IS the page — walkfield mounts its canvases in here */
+  /* the field IS the page — walkfield mounts its canvases in this inner div,
+     and the chrome lives OUTSIDE it: pointerdowns on controls must never
+     reach the field container (it captures the pointer for panning, which
+     would retarget — and eat — their clicks) */
   .stage { position: fixed; inset: 0; overflow: hidden; }
   .stage:fullscreen { background: var(--ground-0); }
+  .stage .field { position: absolute; inset: 0; }
 
   /* top chrome — floats over the field, never pushes it around */
   .bar {
@@ -153,6 +157,7 @@
 <body>
 
 <div class="stage" id="stage">
+  <div class="field" id="fieldMount"></div>
   <header class="bar">
     <div class="brand">
       <div class="kicker">FIRST-LINK NETWORK ANALYSIS <span class="dot">●</span> THE WHOLE WIKI</div>
@@ -267,11 +272,13 @@ function showError(msg) {
 const urlFor = (title) =>
   `${origins.get(state.wiki) ?? ""}${ARTICLE_PATH[state.wiki] ?? "/w/"}${encodeURIComponent(title.replace(/ /g, "_"))}`;
 
-/* the field — same settings as the article's hero, explore everywhere */
+/* the field — same settings as the article's hero, explore everywhere.
+ * mounted on its own inner div: the chrome must stay outside the walkfield
+ * container so its pointer capture never swallows control clicks */
 const stage = document.getElementById("stage");
 const legendEl = document.getElementById("legend");
 let idleLegend = "waking the field…";
-const field = createWalkField(stage, {
+const field = createWalkField(document.getElementById("fieldMount"), {
   explore: true, wheel: "always", touchAction: "none",
   walkers: reduced ? 0 : 360, speed: 85, labels: 6, maxLabels: 28, edgeAlpha: 0.09,
   reduced, urlFor,
