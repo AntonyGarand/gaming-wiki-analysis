@@ -1,1 +1,0 @@
-{"nodes":[{"t":"Teacher","c":true},{"t":"Snowman t-shirt","c":true}],"edges":[[0,1,1],[1,0,1]],"loops":[{"cycle":["Teacher","Snowman t-shirt"],"pct":0}]}

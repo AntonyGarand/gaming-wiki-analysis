@@ -11,6 +11,7 @@
     "analyze": "tsx scripts/analyze.ts",
     "lab": "tsx scripts/lab-server.ts",
     "pipeline": "tsx scripts/pipeline.ts",
+    "convert:legacy": "tsx scripts/convert-legacy-chains.ts",
     "build:static": "tsx scripts/build-static.ts",
     "serve:static": "tsx scripts/serve-static.ts"
   },

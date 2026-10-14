@@ -1,15 +1,7 @@
 # gaming-wiki-analysis
 
-> ## ⚠️ Fully AI-generated — early draft
->
-> **Everything in this repository was produced by an AI agent** (code, analysis, article prose,
-> this README included) in a single working session, at the direction of the repo owner.
->
-> **All article content is placeholder.** The prose will be entirely rewritten by the human owner —
-> treat the words as scaffolding, not writing. What *does* work and is worth reviewing:
-> the data pipeline, the walk rules, the visualizations, and the static build. The article's
-> numbers are real (computed from local wiki dumps); the storytelling around them is disposable.
->
+> **Status:** article, charts and build are a working draft. Prose is written for OSRS; every number in it is
+> bound to the data files at render time, so regenerating the data never leaves a stale figure behind.
 > Pushes to the `draft` branch auto-deploy the static site via GitHub Actions.
 
 First-link network analysis for gaming wikis — the ["Getting to Philosophy"](https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy) experiment applied to game knowledge bases.
@@ -21,30 +13,30 @@ Follow the first link of any article, then that article's first link, forever. O
 ```bash
 npm install
 
-# fetch a single wiki (respects rate limits)
+# fetch + extract + analyze one wiki (respects rate limits)
 npx tsx scripts/pipeline.ts --wiki=minecraft
 
-# fetch ALL configured wikis at once
+# or all configured wikis
 npx tsx scripts/pipeline.ts --all
 
-# or just the fetch step for all wikis
-npx tsx scripts/fetch-wiki.ts --all
+# bake the article into dist/ (pure file copy, no server needed)
+npm run build:static
 
-# or step by step for a single wiki
-npx tsx scripts/fetch-wiki.ts --wiki=terraria
-npx tsx scripts/extract-links.ts --wiki=terraria
-npx tsx scripts/analyze.ts --wiki=terraria
+# preview it
+npm run serve:static        # → http://localhost:8080
 
-# launch the article + interactive dashboard
-npx tsx scripts/lab-server.ts
+# the lab dashboard + article over the live analysis output
+npm run lab                 # → http://localhost:8787  (/ = article, /lab = dashboard)
 ```
 
-The server serves two views over the same data:
+The article (`scripts/article.html`) is fully static. It reads, per wiki, `titles.json`, one
+`succ-r<rank>.json` successor table per link rank, `stats-r<rank>.json` and `summary.json`, and
+computes everything else client-side: loops, basins, the drainage-map layout, chain walks, search.
+`scripts/walkfield.js` is the engine behind the hero and the map. The exact file contract is in
+[`docs/data-pipeline-brief.md`](docs/data-pipeline-brief.md).
 
-| Route | View |
-|---|---|
-| `/` | **The article** — "Where does everything lead?" An OSRS-focused scrollytelling piece with cross-wiki comparisons baked in, in two reading modes (toggle in the top bar): **article + data** (prose on the left, a sticky panel on the right whose charts transform as you scroll) and **full width** (the same figures embedded inline between paragraphs). The chain walker has its own local rank switch. |
-| `/lab` | **The laboratory** — the original full dashboard: hero stats, distributions, roads, graveyard, chain walker and the interactive constellation. |
+If your `output/` folders still hold the old `chains-r*.json` tables, run
+`npm run convert:legacy -- --src=<dir>` once to produce the successor tables.
 
 ## Available wikis
 
@@ -96,12 +88,14 @@ For each wiki and each link rank (1st, 2nd, 3rd, 5th, last, random — all stric
 ```
 output/
 ├── <wiki>/
-│   ├── wiki.sqlite       # raw page dumps (text, aliases, revisions)
-│   ├── links.sqlite      # parsed link tables (ordered, with paren/italic flags)
-│   ├── stats-*.json      # per-rank statistics
-│   ├── summary.json      # cross-rank decay summary
-│   ├── graph-*.json      # interactive graph data
-│   └── *.csv             # exportable datasets
+│   ├── wiki.sqlite          # raw page dumps (text, aliases, revisions)
+│   ├── links.sqlite         # parsed link tables (ordered, with paren/italic flags)
+│   ├── titles.json          # node id → title (shared by every rank)
+│   ├── succ-r<rank>.json    # { succ[], term[] } successor table per rank
+│   ├── stats-r<rank>.json   # per-rank statistics
+│   ├── summary.json         # cross-rank summary
+│   └── *.csv                # exportable datasets
+dist/                        # static site: index.html + walkfield.js + data/
 ```
 
 ## Polite scraping

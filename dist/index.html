@@ -3,525 +3,326 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Where Does Everything Lead? — the first-link network of the OSRS wiki</title>
+<title>Where Does Everything Lead? — the first-link network of fifteen gaming wikis</title>
+<meta name="description" content="Follow the first link of every article on fifteen gaming wikis and see where the wiki stops explaining and starts believing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
-<script src="meshfield.js"></script>
+<script src="walkfield.js"></script>
 <style>
-  /* tokens — warm paper editorial. --cy/--vi are legacy var names: accent / accent-2 */
   :root {
-    --ground-0: #f8f4ea;
-    --ground-1: #f1ebdd;
-    --ink: #201b14;
-    --ink-2: #5f574a;
-    --ink-3: #93897a;
-    --hairline: #ddd3c0;
-    --cy: #bc4b27;
-    --vi: #6d3b7e;
-    --ease-expo: cubic-bezier(0.83, 0, 0.17, 1);
-    --font-display: "Fraunces", Georgia, serif;
-    --font-body: "Space Grotesk", sans-serif;
-    --font-mono: "Space Mono", monospace;
-    --bar-h: 58px;
+    --ground-0: #f8f4ea; --ground-1: #f1ebdd;
+    --ink: #201b14; --ink-2: #5f574a; --ink-3: #93897a; --hairline: #ddd3c0;
+    --rust: #bc4b27; --plum: #6d3b7e; --ochre: #b8862b; --teal: #2f6f73; --dead: #9a9183;
+    --ease: cubic-bezier(0.83, 0, 0.17, 1);
+    --font-display: "Fraunces", Georgia, serif; --font-body: "Space Grotesk", sans-serif; --font-mono: "Space Mono", monospace;
+    --bar-h: 54px;
   }
   * { box-sizing: border-box; margin: 0; }
   html { scroll-behavior: smooth; }
   body { background: var(--ground-0); color: var(--ink); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
-  ::selection { background: var(--vi); color: #fff; }
-  p, .dek { text-wrap: pretty; }
+  ::selection { background: var(--plum); color: #fff; }
+  p { text-wrap: pretty; }
+  a { color: var(--rust); }
 
-  #progress {
-    position: fixed; top: 0; left: 0; height: 2px; width: 0; z-index: 300;
-    background: linear-gradient(90deg, var(--cy), var(--vi));
-    transition: width 0.1s linear;
-  }
-  #cursorAura {
-    position: fixed; width: 380px; height: 380px; border-radius: 50%;
-    left: 0; top: 0; z-index: 1; pointer-events: none; opacity: 0;
-    background: radial-gradient(closest-side, oklch(70% 0.12 45 / 0.10), transparent 70%);
-    mix-blend-mode: multiply; will-change: transform;
-  }
+  #progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; z-index: 300; background: linear-gradient(90deg, var(--rust), var(--plum)); }
 
-  /* ------------------------------------------------------------------ *
-   * hero
-   * ------------------------------------------------------------------ */
-  .masthead { position: relative; padding: 0 0 10vh; overflow: hidden; }
-  #fieldCanvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
-  .mast-inner { position: relative; padding: 9vh 5vw 0; z-index: 2; }
-  .mast-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em; color: var(--ink-2); text-transform: uppercase; margin-bottom: 3vh; }
-  h1.mast-title {
-    font-family: var(--font-display); font-size: clamp(52px, 9vw, 148px);
-    line-height: 0.98; font-variation-settings: "opsz" 144, "wght" 620;
-    letter-spacing: -0.015em; max-width: 11ch;
-    animation: titleResolve 1.6s var(--ease-expo) both;
-  }
-  h1.mast-title em { font-style: italic; display: block; font-variation-settings: "opsz" 144, "wght" 420; color: var(--cy); }
-  @keyframes titleResolve { from { opacity: 0; transform: translateY(28px); letter-spacing: 0.06em; } to { opacity: 1; transform: translateY(0); } }
-  .masthead::after {
-    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background: radial-gradient(58% 52% at 28% 42%, rgba(248,244,234,0.72), transparent 72%);
-  }
-  .dek { position: relative; z-index: 2; max-width: 620px; margin-top: 4vh; color: var(--ink-2); font-size: 16.5px; line-height: 1.7; }
-  .dek b { color: var(--ink); font-weight: 500; }
-  .dek .num { color: var(--cy); font-weight: 500; }
-  .mast-readout {
-    position: relative; z-index: 2; margin-top: 3.5vh; display: flex; gap: 34px; flex-wrap: wrap;
-    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.18em;
-    color: var(--ink-3); text-transform: uppercase;
-  }
-  .mast-readout b { color: var(--cy); font-weight: 700; }
+  /* masthead */
+  .masthead { position: relative; min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); overflow: hidden; }
+  .mast-copy { padding: 7vh 5vw 6vh; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
+  .mast-kicker { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 4vh; }
+  .mast-title { font-family: var(--font-display); font-variation-settings: "opsz" 144, "wght" 620; font-size: clamp(54px, 9.5vw, 150px); line-height: 0.92; letter-spacing: -0.035em; }
+  .mast-title em { font-style: italic; color: var(--rust); font-variation-settings: "opsz" 144, "wght" 420; }
+  .dek { font-size: clamp(16px, 1.45vw, 21px); line-height: 1.55; color: var(--ink-2); max-width: 46ch; margin-top: 4vh; }
+  .dek b { color: var(--ink); font-weight: 600; }
+  .dek i { font-family: var(--font-display); font-style: italic; }
+  .mast-readout { margin-top: 4vh; display: flex; flex-wrap: wrap; gap: 6px 26px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+  .mast-readout b { color: var(--rust); font-weight: 700; }
+  .mast-field { position: relative; min-height: 60vh; }
+  .mast-field .hint { position: absolute; left: 14px; bottom: 12px; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); pointer-events: none; }
+  .field { position: absolute; inset: 0; }
+  .field canvas { position: absolute; inset: 0; }
 
-  /* ------------------------------------------------------------------ *
-   * control bar — mode switch lives here
-   * ------------------------------------------------------------------ */
-  .controlbar {
-    position: sticky; top: 0; z-index: 100;
-    background: color-mix(in oklab, var(--ground-0) 88%, transparent);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--hairline);
-    min-height: var(--bar-h);
-    padding: 10px 5vw; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center;
-  }
-  .brand {
-    font-family: var(--font-mono); font-weight: 700; text-transform: uppercase;
-    font-size: 14px; letter-spacing: 0.08em;
-    color: var(--ink); text-decoration: none; margin-right: 6px;
-  }
-  .brand span { color: var(--cy); }
-
+  /* control bar */
+  .controlbar { position: sticky; top: 0; z-index: 120; height: var(--bar-h); display: flex; align-items: center; gap: 18px; padding: 0 5vw;
+    background: color-mix(in oklab, var(--ground-0) 86%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
   .mode-toggle { display: flex; border: 1px solid var(--hairline); }
-  .mode-toggle button {
-    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.16em;
-    padding: 9px 16px; background: transparent; color: var(--ink-2);
-    border: 0; cursor: pointer; text-transform: uppercase; white-space: nowrap;
-    display: inline-flex; align-items: center; gap: 8px;
-    transition: color 0.25s var(--ease-expo), background 0.25s var(--ease-expo);
-  }
-  .mode-toggle button:hover { color: var(--ink); }
-  .mode-toggle button.on { background: var(--ink); color: var(--ground-0); font-weight: 700; }
-  .mode-toggle .glyph { font-size: 13px; line-height: 1; }
+  .mode-toggle button { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 8px 12px; border: 0; background: transparent; color: var(--ink-2); cursor: pointer; }
+  .mode-toggle button.on { background: var(--ink); color: var(--ground-0); }
+  .datachip { margin-left: auto; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .datachip b { color: var(--ink); font-weight: 400; }
+  .gearbtn { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; background: transparent; border: 1px solid var(--hairline); color: var(--ink-2); padding: 8px 12px; cursor: pointer; }
+  .gearbtn:hover, .gearbtn[aria-expanded="true"] { color: var(--rust); border-color: var(--rust); }
+  .gear { position: absolute; right: 5vw; top: calc(var(--bar-h) + 8px); width: 280px; display: none; padding: 16px 18px; background: color-mix(in oklab, var(--ground-1) 97%, transparent); border: 1px solid var(--hairline); box-shadow: 0 8px 30px rgba(32,27,20,0.1); font-family: var(--font-mono); z-index: 121; }
+  .gear.open { display: block; }
+  .gear label { display: block; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 12px; }
+  .gear select { width: 100%; margin-top: 6px; font-family: var(--font-mono); font-size: 11px; background: var(--ground-0); color: var(--ink); border: 1px solid var(--hairline); padding: 8px 10px; border-radius: 0; }
+  .gear small { display: block; font-size: 9.5px; line-height: 1.7; letter-spacing: 0.05em; color: var(--ink-3); }
+  #status { display: none; margin: 0 5vw; padding: 8px 12px; font-family: var(--font-mono); font-size: 11px; color: #a03d2e; border: 1px solid #e3b8ac; }
 
-  .datachip {
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
-    color: var(--ink-3); text-transform: uppercase; border: 1px solid var(--hairline);
-    padding: 9px 14px; background: var(--ground-1); white-space: nowrap;
-  }
-  .datachip b { color: var(--cy); font-weight: 700; }
+  /* article layout */
+  #articleWrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 3vw; padding: 0 5vw; max-width: 1600px; margin: 0 auto; }
+  .prose { padding: 6vh 0 12vh; max-width: 62ch; }
+  .sect { margin-top: 14vh; }
+  .sect:first-child { margin-top: 4vh; }
+  .sect-label { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-3); border-top: 1px solid var(--hairline); padding-top: 10px; margin-bottom: 2.2vh; }
+  h2 { font-family: var(--font-display); font-variation-settings: "opsz" 96, "wght" 520; font-size: clamp(30px, 3.4vw, 50px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 3vh; }
+  h2 em { font-style: italic; color: var(--rust); font-variation-settings: "opsz" 96, "wght" 400; }
+  .step { min-height: 62vh; padding-bottom: 10vh; opacity: 0.42; transition: opacity 0.5s var(--ease); }
+  .step.on { opacity: 1; }
+  .step p { font-size: clamp(16px, 1.25vw, 19px); line-height: 1.68; margin-bottom: 2.4vh; }
+  .step p.lede::first-letter { font-family: var(--font-display); font-size: 3.1em; float: left; line-height: 0.82; padding: 6px 8px 0 0; color: var(--plum); }
+  .num { font-family: var(--font-mono); font-size: 0.9em; color: var(--rust); font-weight: 700; }
+  .lo { font-family: var(--font-mono); font-size: 0.85em; color: var(--ink); background: var(--ground-1); padding: 1px 5px; border: 1px solid var(--hairline); white-space: nowrap; }
+  a.lo { text-decoration: none; }
+  a.lo:hover { border-color: var(--rust); color: var(--rust); }
+  .live-missing { color: #a03d2e; font-family: var(--font-mono); font-size: 0.8em; background: #f7e3dd; padding: 0 4px; }
+  .pull { font-family: var(--font-display); font-style: italic; font-variation-settings: "opsz" 120, "wght" 400; font-size: clamp(22px, 2.3vw, 34px); line-height: 1.25; color: var(--ink-2); border-left: 3px solid var(--rust); padding-left: 22px; margin: 6vh 0; }
+  .pull small { display: block; font-family: var(--font-mono); font-style: normal; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin-top: 12px; }
 
-  .lablink {
-    margin-left: auto; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.2em;
-    color: var(--ink-3); text-decoration: none; text-transform: uppercase;
-    border-bottom: 1px solid transparent; padding-bottom: 2px;
-    transition: color 0.3s var(--ease-expo), border-color 0.3s var(--ease-expo);
-  }
-  .lablink:hover { color: var(--cy); border-color: var(--cy); }
-  #status { color: #a03d2e; font-family: var(--font-mono); font-size: 12px; padding: 12px 5vw; display: none; }
+  /* sticky panel */
+  .panel { position: sticky; top: var(--bar-h); height: calc(100vh - var(--bar-h)); padding: 2.5vh 0 2.5vh; display: flex; flex-direction: column; }
+  .panel-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1.5vh; }
+  .panel-head b { color: var(--rust); }
+  #panelDots { display: flex; gap: 5px; }
+  #panelDots button { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--ink-3); background: transparent; padding: 0; cursor: pointer; }
+  #panelDots button.on { background: var(--rust); border-color: var(--rust); }
+  .panel-stack { position: relative; flex: 1; min-height: 0; }
+  .panel-stack > .embed { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.45s var(--ease), transform 0.6s var(--ease); transform: translateY(10px); }
+  .panel-stack > .embed.on { opacity: 1; pointer-events: auto; transform: none; }
 
-  /* ------------------------------------------------------------------ *
-   * article body — two modes
-   * ------------------------------------------------------------------ */
-  #articleWrap { display: block; }
-  body[data-mode="split"] #articleWrap {
-    display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
-    align-items: start;
-  }
+  /* figures */
+  .embed { background: var(--ground-1); border: 1px solid var(--hairline); display: flex; flex-direction: column; min-height: 0; }
+  .figslot { display: none; }
+  body[data-mode="wide"] .figslot { display: block; margin: 2vh 0 6vh; }
+  body[data-mode="wide"] .figslot .embed { height: min(68vh, 640px); }
+  body[data-mode="wide"] #articleWrap { grid-template-columns: minmax(0, 1fr); }
+  body[data-mode="wide"] .panel { display: none; }
+  body[data-mode="wide"] .prose { max-width: 72ch; margin: 0 auto; }
+  body[data-mode="wide"] .step { min-height: 0; padding-bottom: 2vh; opacity: 1; }
+  .cap { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--hairline); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2); }
+  .cap-k { color: var(--rust); font-weight: 700; }
+  .cap-btn { margin-left: auto; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; background: transparent; border: 1px solid var(--hairline); color: var(--ink-2); padding: 4px 9px; cursor: pointer; }
+  .cap-btn:hover { color: var(--rust); border-color: var(--rust); }
+  .chart { flex: 1; min-height: 0; position: relative; }
+  .cap-note { padding: 8px 14px; border-top: 1px solid var(--hairline); font-family: var(--font-mono); font-size: 10px; line-height: 1.7; letter-spacing: 0.04em; color: var(--ink-3); }
+  .cap-note b { color: var(--ink-2); font-weight: 400; }
+  .legend { display: inline-flex; gap: 4px 14px; flex-wrap: wrap; }
+  .sw { display: inline-block; width: 9px; height: 9px; margin-right: 5px; vertical-align: -1px; }
 
-  .prose { max-width: 720px; margin-inline: auto; padding: 4vh 5vw 10vh; }
-  body[data-mode="split"] .prose { margin-inline: 0; margin-left: auto; margin-right: 5vw; padding: 4vh 0 12vh; max-width: 640px; }
+  /* chain pills */
+  .chainfill { padding: 16px 14px; overflow: auto; font-family: var(--font-mono); font-size: 11px; line-height: 2.3; }
+  .pill { display: inline-block; border: 1px solid var(--hairline); background: var(--ground-0); padding: 1px 8px; margin: 2px 0; color: var(--ink); white-space: nowrap; }
+  .pill.start { border-color: var(--ink); font-weight: 700; }
+  .pill.cyc { border-color: var(--rust); color: var(--rust); }
+  .pill.dead { border-color: var(--dead); color: var(--dead); text-decoration: line-through; }
+  .arrow { color: var(--ink-3); margin: 0 5px; }
+  .fate { display: block; margin-top: 10px; color: var(--ink-2); letter-spacing: 0.08em; text-transform: uppercase; font-size: 10px; }
+  .fate .cyc { color: var(--rust); } .fate .dead { color: var(--dead); }
 
-  section.sect { padding: 5vh 0 7vh; border-top: 1px solid var(--hairline); }
-  section.sect:first-of-type { border-top: 0; }
-  .sect-label {
-    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.32em;
-    color: var(--ink-3); text-transform: uppercase; margin-bottom: 3.2vh;
-    display: flex; justify-content: space-between; gap: 12px;
-  }
-  .sect-label .idx { color: var(--cy); }
-  h2 {
-    font-family: var(--font-display); font-variation-settings: "opsz" 72, "wght" 560;
-    font-size: clamp(28px, 3.6vw, 46px); line-height: 1.08;
-    letter-spacing: -0.01em; margin-bottom: 3.4vh; max-width: 18ch;
-  }
-  h2 em { font-style: italic; color: var(--cy); }
-  .prose p {
-    font-size: 17px; line-height: 1.78; color: #3d362c; margin: 0 0 1.5em;
-  }
-  .prose p b, .prose p strong { color: var(--ink); font-weight: 500; }
-  .prose p .num { color: var(--cy); font-weight: 500; font-variant-numeric: tabular-nums; }
-  .prose p .lo { font-family: var(--font-mono); font-size: 0.88em; color: var(--ink); background: #ece4d2; border: 1px solid var(--hairline); padding: 1px 7px; white-space: nowrap; }
-  .prose p a { color: var(--cy); text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--cy) 45%, transparent); text-underline-offset: 3px; transition: text-decoration-color 0.25s var(--ease-expo); }
-  .prose p a:hover { text-decoration-color: var(--cy); }
-  .prose a.lo { text-decoration: none; }
-  .prose a.lo:hover { color: var(--cy); border-color: var(--cy); }
-  .prose p.lede::first-letter {
-    font-family: var(--font-display); font-weight: 640; font-variation-settings: "opsz" 144, "wght" 640;
-    font-size: 3.4em; float: left; line-height: 0.82; padding: 0.08em 0.14em 0 0;
-    background: linear-gradient(94deg, var(--cy), var(--vi));
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-  }
-  .pull {
-    border-left: 2px solid var(--vi); padding: 4px 0 4px 22px; margin: 4.4vh 0;
-    font-family: var(--font-display); font-style: italic; font-variation-settings: "opsz" 40, "wght" 460;
-    font-size: clamp(20px, 2.1vw, 26px); line-height: 1.4; color: var(--ink);
-  }
-  .pull small { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.24em; color: var(--ink-3); text-transform: uppercase; }
+  /* waffle */
+  .waffle-wrap { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(150px, 0.7fr); gap: 16px; padding: 16px 14px; height: 100%; min-height: 0; align-items: center; }
+  .waffle { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; aspect-ratio: 1; align-self: center; width: 100%; max-height: 100%; }
+  .waffle i { display: block; background: var(--hairline); transition: background-color 0.6s var(--ease), transform 0.4s var(--ease); }
+  .waffle i.hot { transform: scale(0.82); }
+  .wlegend { font-family: var(--font-mono); font-size: 10px; line-height: 1.5; overflow: auto; min-height: 0; }
+  .wlegend div { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; border-bottom: 1px dashed var(--hairline); color: var(--ink-2); }
+  .wlegend .sw { flex: none; }
+  .wlegend .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink); }
+  .wlegend .pc { color: var(--ink-3); }
 
-  /* steps — split mode gives them pacing height so the panel can react */
-  .step { position: relative; }
-  body[data-mode="split"] .step { min-height: 34vh; padding-bottom: 4vh; }
+  /* census table */
+  .ptable-wrap { overflow: auto; padding: 4px 0; }
+  .ptable { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 10.5px; }
+  .ptable th { text-align: left; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); padding: 6px 12px; border-bottom: 1px solid var(--hairline); font-size: 9.5px; }
+  .ptable td { padding: 6px 10px; border-bottom: 1px dashed var(--hairline); color: var(--ink-2); vertical-align: middle; white-space: nowrap; }
+  .ptable tr.hi td { color: var(--ink); background: color-mix(in oklab, var(--rust) 7%, transparent); }
+  .ptable td.ph { color: var(--ink); max-width: 230px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .ptable td.num, .ptable th.num { text-align: right; }
+  .ptable .bar { display: inline-block; height: 7px; background: var(--rust); vertical-align: middle; margin-right: 6px; }
+  .ptable .bar.dead { background: var(--dead); }
 
-  /* ------------------------------------------------------------------ *
-   * data panel (split mode)
-   * ------------------------------------------------------------------ */
-  .panel {
-    display: none; position: sticky; top: var(--bar-h);
-    height: calc(100vh - var(--bar-h));
-    border-left: 1px solid var(--hairline); background: var(--ground-1);
-    flex-direction: column; overflow: hidden;
-  }
-  body[data-mode="split"] .panel { display: flex; }
-  .panel-head {
-    padding: 16px 22px 12px; border-bottom: 1px solid var(--hairline);
-    display: flex; align-items: center; gap: 14px; flex: 0 0 auto;
-  }
-  #panelLabel {
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em;
-    color: var(--ink-2); text-transform: uppercase; line-height: 1.7; flex: 1;
-  }
-  #panelLabel b { color: var(--ink); }
-  #panelDots { display: flex; gap: 6px; }
-  #panelDots button {
-    width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%;
-    background: var(--hairline); cursor: pointer;
-    transition: background 0.3s var(--ease-expo), transform 0.3s var(--ease-expo);
-  }
-  #panelDots button:hover { background: var(--ink-3); }
-  #panelDots button.on { background: var(--cy); transform: scale(1.35); }
-  .panel-stack { position: relative; flex: 1 1 auto; min-height: 0; }
-  .panel-stack .embed {
-    position: absolute; inset: 0; padding: 16px 20px 18px;
-    display: flex; flex-direction: column; gap: 10px;
-    opacity: 0; transform: translateY(16px) scale(0.988);
-    pointer-events: none; visibility: hidden;
-    transition: opacity 0.55s var(--ease-expo), transform 0.55s var(--ease-expo), visibility 0s linear 0.55s;
-  }
-  .panel-stack .embed.on {
-    opacity: 1; transform: none; pointer-events: auto; visibility: visible;
-    transition: opacity 0.55s var(--ease-expo), transform 0.55s var(--ease-expo), visibility 0s;
-  }
-  .panel-stack .embed .chart { flex: 1 1 auto; min-height: 0; }
-
-  /* ------------------------------------------------------------------ *
-   * embed snippets — inline appearance (wide mode + mobile)
-   * ------------------------------------------------------------------ */
-  .figslot { margin: 5.5vh 0; }
-  body[data-mode="split"] .figslot { display: none; }
-  .figslot .embed {
-    border: 1px solid var(--hairline); background: var(--ground-1);
-    padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 12px;
-  }
-  .figslot .embed .chart { height: 360px; }
-  .figslot .embed .chart.tall { height: 440px; }
-  .figslot .embed .chart.chainfill { height: auto; min-height: 220px; max-height: 560px; }
-
-  .embed .cap { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-  .embed .cap .cap-k { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.26em; color: var(--cy); text-transform: uppercase; white-space: nowrap; }
-  .embed .cap .cap-t { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; color: var(--ink-2); text-transform: uppercase; }
-  .embed .cap .cap-btn {
-    margin-left: auto; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.18em;
-    color: var(--ink-3); background: none; border: 1px solid var(--hairline); padding: 5px 12px;
-    cursor: pointer; text-transform: uppercase;
-    transition: color 0.25s var(--ease-expo), border-color 0.25s var(--ease-expo);
-  }
-  .embed .cap .cap-btn:hover { color: var(--cy); border-color: var(--cy); }
-  .embed .cap-note { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; line-height: 1.8; color: var(--ink-3); }
-  .embed .cap-note b { color: var(--ink-2); }
-
-  /* pantheons table */
-  .ptable-wrap { flex: 1 1 auto; min-height: 0; overflow: auto; scrollbar-width: thin; }
-  .figslot .ptable-wrap { max-height: 460px; }
-  table.ptable { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 11.5px; }
-  .ptable th {
-    text-align: left; font-weight: 400; font-size: 9px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--ink-3); padding: 0 12px 10px 0;
-    border-bottom: 1px solid var(--hairline); position: sticky; top: 0; background: var(--ground-1);
-  }
-  .ptable th.num, .ptable td.num { text-align: right; padding-right: 0; }
-  .ptable td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--hairline); color: var(--ink-2); }
-  .ptable td:first-child { color: var(--ink); white-space: nowrap; }
-  .ptable td.ph { color: var(--ink-2); }
-  .ptable td.num { color: var(--cy); font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .ptable tbody tr { transition: background 0.3s var(--ease-expo); }
-  .ptable tbody tr:hover { background: #e9e0cd; }
-  .ptable tr.hi td { background: color-mix(in oklab, var(--vi) 12%, transparent); }
-  .ptable tr.hi td:first-child { color: var(--cy); font-weight: 700; }
-
-  /* chain pills (shared by fig-chain + fig-play) */
-  .chainfill { display: flex; flex-direction: column; justify-content: center; justify-content: safe center; flex: 1 1 auto; min-height: 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--hairline) transparent; }
-  .pill {
-    display: inline-block; padding: 6px 13px; border: 1px solid var(--hairline); color: var(--ink-2);
-    white-space: nowrap; margin: 0 6px 8px 0; font-family: var(--font-mono); font-size: 12px;
-  }
-  .pill.start { border-color: var(--ink); color: var(--ink); font-weight: 700; }
-  .pill.cyc { border-color: var(--cy); color: var(--cy); }
-  .pill.dead { border-style: dashed; color: var(--ink-3); }
-  .arrow { color: var(--ink-3); font-size: 10px; margin-right: 6px; }
-  .fate { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--ink-2); margin-top: 6px; }
-  .fate .cyc { color: var(--cy); } .fate .dead { color: #8c8172; }
-
-  .playrow { display: flex; gap: 8px; margin-bottom: 12px; }
-  .playrow input {
-    flex: 1; min-width: 0; padding: 11px 14px; background: transparent;
-    border: 1px solid var(--hairline); color: var(--ink);
-    font-family: var(--font-mono); font-size: 12px;
-    transition: border-color 0.3s var(--ease-expo);
-  }
-  .playrow input:focus { outline: none; border-color: var(--cy); }
-  .playrow input::placeholder { color: var(--ink-3); }
-  .btn {
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
-    padding: 11px 16px; background: transparent; color: var(--ink);
-    border: 1px solid var(--ink); cursor: pointer; text-transform: uppercase; white-space: nowrap;
-    transition: background 0.3s var(--ease-expo), color 0.3s var(--ease-expo);
-  }
-  .btn:hover { background: var(--ink); color: var(--ground-0); }
-  .btn.ghost { border-color: var(--hairline); color: var(--ink-2); }
-  .btn.ghost:hover { border-color: var(--cy); color: var(--cy); background: transparent; }
-
-  .rankrow { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
-  .rpill {
-    font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.14em;
-    padding: 6px 11px; color: var(--ink-2); background: transparent;
-    border: 1px solid var(--hairline); cursor: pointer; text-transform: uppercase;
-    transition: color 0.25s var(--ease-expo), border-color 0.25s var(--ease-expo), background 0.25s var(--ease-expo);
-  }
-  .rpill:hover { color: var(--ink); }
-  .rpill.on { background: var(--ink); color: var(--ground-0); font-weight: 700; border-color: var(--ink); }
+  /* play */
+  .rankrow { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .rpill { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; border: 1px solid var(--hairline); color: var(--ink-2); padding: 4px 9px; cursor: pointer; }
+  .rpill.on { background: var(--ink); color: var(--ground-0); border-color: var(--ink); }
+  .playrow { display: flex; gap: 8px; margin-bottom: 8px; }
+  .playrow input { flex: 1; font-family: var(--font-mono); font-size: 12px; padding: 8px 10px; background: var(--ground-0); border: 1px solid var(--hairline); color: var(--ink); border-radius: 0; }
+  .playrow input:focus { outline: none; border-color: var(--rust); }
+  .btn { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 8px 12px; cursor: pointer; background: var(--ink); color: var(--ground-0); border: 1px solid var(--ink); }
+  .btn.ghost { background: transparent; color: var(--ink-2); border-color: var(--hairline); }
 
   /* footer */
   footer { border-top: 1px solid var(--hairline); padding: 7vh 5vw 9vh; }
-  .foot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 6vh; max-width: 1400px; margin: 0 auto; }
-  .foot-word {
-    font-family: var(--font-display); font-style: italic;
-    font-variation-settings: "opsz" 144, "wght" 480;
-    font-size: clamp(30px, 6vw, 92px); line-height: 1.05;
-    color: var(--ink-2); opacity: 0.75; letter-spacing: -0.01em; user-select: none;
-  }
-  .foot-word em { font-style: italic; color: var(--cy); }
-  .foot-meta { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.12em; color: var(--ink-3); line-height: 2.3; text-transform: uppercase; }
+  .foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 6vh; max-width: 1400px; margin: 0 auto; }
+  .foot-word { font-family: var(--font-display); font-style: italic; font-variation-settings: "opsz" 144, "wght" 480; font-size: clamp(30px, 6vw, 92px); line-height: 1.05; color: var(--ink-2); opacity: 0.75; }
+  .foot-word em { color: var(--rust); }
+  .foot-meta { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-3); line-height: 2.2; text-transform: uppercase; }
   .foot-meta a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--hairline); }
-  .foot-meta a:hover { color: var(--cy); border-color: var(--cy); }
-
-  /* data settings — the cogwheel */
-  .gear-btn {
-    position: fixed; right: 18px; bottom: 18px; z-index: 150;
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.24em;
-    color: var(--ink-2); background: color-mix(in oklab, var(--ground-1) 88%, transparent);
-    border: 1px solid var(--hairline); padding: 10px 14px; cursor: pointer;
-    text-transform: uppercase; backdrop-filter: blur(8px);
-    transition: color 0.25s var(--ease-expo), border-color 0.25s var(--ease-expo);
-  }
-  .gear-btn:hover { color: var(--cy); border-color: var(--cy); }
-  .gear {
-    position: fixed; right: 18px; bottom: 60px; z-index: 150; display: none;
-    background: color-mix(in oklab, var(--ground-1) 96%, transparent);
-    border: 1px solid var(--hairline); padding: 16px 18px; width: 260px;
-    font-family: var(--font-mono); backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px rgba(32,27,20,0.10);
-  }
-  .gear.open { display: block; }
-  .gear h4 { font-size: 9.5px; letter-spacing: 0.3em; color: var(--ink-3); text-transform: uppercase; font-weight: 400; margin-bottom: 12px; }
-  .gear label { display: block; font-size: 10px; letter-spacing: 0.14em; color: var(--ink-2); text-transform: uppercase; margin-bottom: 12px; }
-  .gear select {
-    width: 100%; margin-top: 6px; font-family: var(--font-mono); font-size: 11px;
-    background: var(--ground-0); color: var(--ink); border: 1px solid var(--hairline);
-    padding: 8px 10px; border-radius: 0; cursor: pointer;
-  }
-  .gear select:focus { outline: none; border-color: var(--cy); }
-  .gear-note { font-size: 9.5px; line-height: 1.8; letter-spacing: 0.06em; color: var(--ink-3); }
-
-  .draft-note {
-    font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--ink-2); background: color-mix(in oklab, var(--cy) 7%, var(--ground-1));
-    border-bottom: 1px solid var(--hairline);
-    padding: 6px 5vw; text-align: center;
-  }
-  .draft-note b { color: var(--cy); }
+  .foot-meta code { text-transform: none; letter-spacing: 0; color: var(--ink-2); }
 
   @media (max-width: 1100px) {
-    body[data-mode="split"] #articleWrap { display: block; }
-    body[data-mode="split"] .panel { display: none; }
-    body[data-mode="split"] .figslot { display: block; }
-    body[data-mode="split"] .step { min-height: 0; padding-bottom: 0; }
-    body[data-mode="split"] .prose { margin-inline: auto; padding: 4vh 5vw 10vh; }
+    .masthead { grid-template-columns: 1fr; }
+    .mast-field { min-height: 48vh; }
+    #articleWrap { display: block; }
+    .panel { display: none; }
+    .figslot { display: block; margin: 2vh 0 6vh; }
+    .figslot .embed { height: min(64vh, 560px); }
+    .step { min-height: 0; padding-bottom: 2vh; opacity: 1; }
+    .prose { margin-inline: auto; }
     .foot-grid { grid-template-columns: 1fr; }
+    .waffle-wrap { grid-template-columns: 1fr; }
   }
-
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
     html { scroll-behavior: auto; }
-    #cursorAura { display: none; }
   }
 </style>
 </head>
 <body data-mode="split">
-
 <div id="progress"></div>
-<div id="cursorAura"></div>
 
-<!-- ============================ HERO ============================ -->
+<!-- ============================ MASTHEAD ============================ -->
 <header class="masthead">
-  <canvas id="fieldCanvas"></canvas>
-  <div class="mast-inner">
-    <div class="mast-kicker">Getting to Philosophy, played on a game wiki · October 2026</div>
-    <h1 class="mast-title" id="mastTitle">Where does<em>everything</em> lead?</h1>
+  <div class="mast-copy">
+    <div class="mast-kicker">Getting to Philosophy, played on game wikis · October 2026</div>
+    <h1 class="mast-title">Where does<br><em>everything</em><br>lead?</h1>
     <p class="dek">
       Follow the first link of any article, then that article's first link, and keep going. On Wikipedia
-      that walk drags <b>97% of the encyclopedia into a single loop</b>, the one that runs through
-      <i>Philosophy</i>. Philosophy doesn't end the walk — nothing does, you just keep circling — but it's
-      the page the most roads pass through. Less a destination than a traffic jam. We played the same game
-      on fifteen gaming wikis, <span class="num" data-live="total-articles">…</span> articles in all. This
-      one is about the <b>Old School RuneScape Wiki</b>, where following your nose gets you a world, a god,
-      and a lap.
+      the walk drags <b>97% of the encyclopedia into one loop</b>, the loop through <i>Philosophy</i>.
+      We ran the same walk on <b><span data-live="total.wikis"></span> gaming wikis</b>,
+      <span class="num" data-live="total.articles|int"></span> articles in all, and drew the result:
+      every article as a speck, every first link as a thread, every loop as the whirlpool it drains into.
+      This one is about the <b>Old School RuneScape Wiki</b>.
     </p>
-    <div class="mast-readout" id="mastReadout"><span>loading wiki data…</span></div>
+    <div class="mast-readout" id="mastReadout"><span>loading…</span></div>
+  </div>
+  <div class="mast-field">
+    <div class="field" id="heroField"></div>
+    <div class="hint" id="heroHint">hover an article to trace its walk · click to read it</div>
   </div>
 </header>
 
 <!-- ========================= CONTROL BAR ========================= -->
-<div class="draft-note">early draft — <b>fully ai-generated</b> · all prose is placeholder and will be rewritten</div>
-
 <nav class="controlbar" aria-label="Article controls">
   <div class="mode-toggle" role="group" aria-label="Reading mode">
-    <button id="btnSplit" class="on" type="button" aria-pressed="true">
-      <span class="glyph">◧</span> article + data
-    </button>
-    <button id="btnWide" type="button" aria-pressed="false">
-      <span class="glyph">▬</span> full width
-    </button>
+    <button id="btnSplit" class="on" type="button" aria-pressed="true">◧ article + data</button>
+    <button id="btnWide" type="button" aria-pressed="false">▬ full width</button>
   </div>
-
-  <span class="datachip" id="datachip">Old School RuneScape Wiki · first link · 15 wikis compared</span>
-
-  <a class="lablink" href="/lab" data-lab-only>full dashboard ↗</a>
+  <span class="datachip" id="datachip">—</span>
+  <button class="gearbtn" id="gearBtn" type="button" aria-expanded="false" aria-controls="gearPanel">⚙ charts</button>
+  <div class="gear" id="gearPanel" role="dialog" aria-label="Chart settings">
+    <label>wiki in the charts <select id="gearWiki"></select></label>
+    <label>link rank <select id="gearRank"></select></label>
+    <small>every chart, the map and the walkers follow this. the prose and its numbers stay on OSRS at the first link.</small>
+  </div>
 </nav>
 <div id="status" role="alert"></div>
 
-<!-- ========================= ARTICLE ========================= -->
+<!-- ============================ ARTICLE ============================ -->
 <div id="articleWrap">
   <main class="prose">
 
     <section class="sect" id="s-experiment">
-      <div class="sect-label"><span>The experiment</span><span class="idx">01</span></div>
+      <div class="sect-label"><span>The experiment</span><span>01</span></div>
       <h2>A very silly game, <em>taken seriously</em></h2>
 
-      <div class="step" data-fig="fig-overview" data-label="the field — every wiki's convergence">
+      <div class="step" data-fig="fig-field" data-label="the field — what happens to every wiki's articles">
         <p class="lede">
           Start at Falador, the white city. Its first link is Capital, because Falador is one. Capital's
           first link is Kingdom. Kingdom's is Gielinor, the world the game runs on. Gielinor's is Guthix,
-          the god who shaped it. Guthix's is Gods. And Gods points back at Gielinor. Five clicks from a
+          the god who shaped it. Guthix's is Gods, and Gods points back at Gielinor. Five clicks from a
           castle to a circle. You can keep clicking forever; the circle doesn't care.
         </p>
         <p>
           <a href="https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy" target="_blank" rel="noopener">People
-          noticed years ago</a> that on Wikipedia this game always ends the same way. About 97% of articles
-          drain into one loop, and the loop runs through Philosophy. The game caught on because it feels
-          like it should mean something: click enough first links and you find out what an encyclopedia
-          thinks everything is made of. Wikipedia's answer is philosophy, which is very Wikipedia of it.
-          We wanted the gaming version of that answer.
+          noticed years ago</a> that on Wikipedia this game nearly always ends the same way, in the loop
+          that runs through Philosophy. It caught on because it feels like it should mean something: click
+          enough first links and you learn what an encyclopedia thinks everything is made of. We wanted the
+          gaming version of that answer, so we fetched <span data-live="total.wikis"></span> wikis and followed
+          every first link of every article.
         </p>
         <p>
-          To get it, we fetched fifteen wikis — this one, RuneScape 3 and RuneScape Classic, Minecraft,
-          Terraria, GTA, Fortnite, Factorio, Tarkov, and seven more — and followed every first link of
-          every article. Each bar shows how many of that wiki's articles end up in a loop before their
-          walk dies. GTA, a guide to a fictional America, is the best-behaved of the big wikis at 87%. OSRS
-          is right behind at <span class="num" data-live="conv-pct">—</span>. Factorio barely participates:
-          44%, and more than half its walks just die. Hover a bar to see what that wiki believes in.
+          Each bar is a wiki, split three ways. The dark segment is the share of articles that drain into
+          that wiki's single biggest loop. The lighter segment is everything that finds some other loop.
+          The grey tail is the graveyard: walks that run out of links before they find any loop at all.
+          On this wiki <span class="num" data-live="o.convergePct|pct"></span> of
+          <span data-live="o.nodes|int"></span> articles find a loop, which puts it
+          <span data-live="o.convergeRank|ordinal"></span> of <span data-live="total.wikis"></span>. The
+          champion is <span data-live="most.converge.name"></span> at
+          <span data-live="most.converge.pct|pct"></span>; the straggler is
+          <span data-live="least.converge.name"></span>, where
+          <span data-live="least.converge.deadPct|pct"></span> of walks just die.
         </p>
       </div>
-
-      <div class="figslot" data-fig="fig-overview">
-        <figure class="embed" id="fig-overview" aria-label="Convergence by wiki">
-          <div class="cap">
-            <span class="cap-k">01</span>
-            <span class="cap-t">the field — convergence by wiki · first link</span>
-          </div>
-          <div class="chart" id="ch-overview"></div>
-          <div class="cap-note" id="note-overview">—</div>
+      <div class="figslot" data-fig="fig-field">
+        <figure class="embed" id="fig-field" aria-label="Where every wiki's articles end up">
+          <div class="cap"><span class="cap-k">01</span><span>the field — where every article ends up · <span data-live="rankLabel"></span></span></div>
+          <div class="chart" id="ch-field"></div>
+          <div class="cap-note" id="note-field">—</div>
         </figure>
       </div>
     </section>
 
     <section class="sect" id="s-rules">
-      <div class="sect-label"><span>The rules</span><span class="idx">02</span></div>
+      <div class="sect-label"><span>The rules</span><span>02</span></div>
       <h2>The rules, <em>such as they are</em></h2>
 
-      <div class="step" data-fig="fig-chain" data-label="one walk — a random OSRS article's fate">
+      <div class="step" data-fig="fig-chain" data-label="one walk — a random article's fate">
         <p>
-          A wiki offers a hundred ways to cheat at this game. Infoboxes and nav templates are packed with
-          links, but nobody reads those as sentences, so the walk ignores them. Links in parentheses are
-          disambiguators, like <span class="lo">Dragon (race)</span>; italics usually mark titles and
-          foreign words. Skipped, skipped. Links that land on disambiguation pages — the "X may refer
-          to…" junctions, 1,568 of them here — and on date pages like <span class="lo">28 April</span>,
-          which are update logs wearing article costumes, are skipped too. Red links, images, categories:
-          skipped. If the first link fails a test, the walk takes the next one. If a page offers nothing
-          that passes, the walk ends there and the article goes in the graveyard column.
+          A wiki offers a hundred ways to cheat at this game. Infoboxes and navigation templates are
+          packed with links, but nobody reads those as sentences, so the walk ignores them. Links inside
+          parentheses are usually disambiguators, like <span class="lo">Dragon (race)</span>; italics mark
+          titles and foreign words. Skipped, skipped. Links that land on a disambiguation page or a date
+          page, which on a game wiki is an update log wearing an article costume, are skipped too. Red
+          links, images, categories: skipped. If the first link fails a test, the walk takes the next
+          one. If nothing on the page passes, the walk ends and the article goes in the graveyard.
         </p>
         <p>
-          What survives all that skipping is the part of the wiki that explains itself in sentences: the
-          chain of read-this-first that a real reader falls down. The panel is running one right now, on a
-          random OSRS article. Every pill is one click. They come out shorter than you'd think.
+          What survives the skipping is the part of the wiki that explains itself in sentences, the chain
+          of read-this-first that a real reader falls down. The panel is running one now, on a random
+          article. Every pill is one click. The walks come out shorter than you'd think: the median article
+          on this wiki is in its loop after <span class="num" data-live="o.medianHops"></span> clicks, and
+          the longest walk in the whole wiki takes <span data-live="o.maxHops"></span>.
         </p>
       </div>
-
       <div class="figslot" data-fig="fig-chain">
         <figure class="embed" id="fig-chain" aria-label="A random article's chain">
-          <div class="cap">
-            <span class="cap-k">02</span>
-            <span class="cap-t">one walk — <span data-live="wiki-id">osrs</span> · <span data-live="rank-label">1st link</span></span>
-            <button class="cap-btn" id="rerollBtn" type="button">↻ reroll</button>
-          </div>
-          <div class="chart chainfill" id="ch-chain"><span class="fate">walking…</span></div>
+          <div class="cap"><span class="cap-k">02</span><span>one walk · <span data-live="focus.name"></span> · <span data-live="rankLabel"></span></span><button class="cap-btn" id="rerollBtn" type="button">↻ reroll</button></div>
+          <div class="chart chainfill" id="ch-chain"></div>
         </figure>
       </div>
     </section>
 
     <section class="sect" id="s-convergence">
-      <div class="sect-label"><span>Convergence</span><span class="idx">03</span></div>
+      <div class="sect-label"><span>Convergence</span><span>03</span></div>
       <h2>Half-life of <em>a click</em></h2>
 
-      <div class="step" data-fig="fig-fate" data-state="bars" data-label="steps to a loop — the distribution">
+      <div class="step" data-fig="fig-fate" data-state="bars" data-label="hops to a loop — the distribution">
         <p>
-          On this wiki, <span class="num" data-live="conv-pct">—</span> of
-          <span data-live="wiki-nodes">—</span> articles fall into a loop before they run out of links.
-          Count the hops each one takes first, and you get a bell curve, as tidy as anything in an
-          economics textbook. The median article joins its loop in
-          <b><span data-live="med-hops">—</span> clicks</b>; the longest walk in the entire wiki is 18.
-          Editors keep definitions short on purpose. A reference work that recursed forever would be
-          unusable, and everyone involved knows it.
+          Count the clicks each article takes before it enters its loop and you get a hump, not a
+          bell: a fast rise, a peak, and a long thin tail of articles hiking through lore. Mean
+          <span data-live="o.meanHops"></span>, median <span data-live="o.medianHops"></span>, and
+          ninety percent of articles are home within <span data-live="o.p90"></span> clicks. Editors
+          keep definitions short on purpose. A reference work that recursed forever would be unusable,
+          and everyone involved knows it.
         </p>
       </div>
-
-      <div class="step" data-fig="fig-fate" data-state="cumu" data-label="the funnel — nearly everyone is in by hop 10">
+      <div class="step" data-fig="fig-fate" data-state="cumu" data-label="the funnel — every wiki's cumulative curve">
         <p>
-          Turn the histogram into a running total and the funnel shows up. Nearly everything that ever
-          converges has converged by hop ten; the tail after that is the long-winded minority, articles
-          hiking through twenty links of lore before they find their whirlpool. The dashed line is the
-          median, so half the wiki is home by then. One comparison surprised us: OSRS and GTA tie for the
-          deepest median walk of the fifteen wikis, six hops, while RuneScape 3 and Terraria wrap up in
-          three. This wiki defines its subjects in terms of deeper subjects more often than almost anyone
-          else. Its readers read the lore. All of it.
+          Turn the histogram into a running total and lay the other wikis on top. The faint curves are
+          the other <span data-live="total.others"></span>; the dark one is this wiki. It is one of the slow ones.
+          <span data-live="shallowest.name"></span> gets its median article home in
+          <span data-live="shallowest.hops"></span> clicks; <span data-live="deepest.name"></span> takes
+          <span data-live="deepest.hops"></span>, the deepest of the lot. A long walk means a wiki
+          that defines its subjects in terms of deeper subjects, which is to say a wiki whose readers
+          read the lore. All of it.
         </p>
       </div>
-
       <div class="figslot" data-fig="fig-fate">
-        <figure class="embed" id="fig-fate" aria-label="Steps to reach a loop">
-          <div class="cap">
-            <span class="cap-k">03</span>
-            <span class="cap-t">steps to a loop — <span data-live="wiki-id">osrs</span> · <span data-live="rank-label">1st link</span></span>
-          </div>
+        <figure class="embed" id="fig-fate" aria-label="Clicks to reach a loop">
+          <div class="cap"><span class="cap-k">03</span><span>clicks to a loop · <span data-live="focus.name"></span> · <span data-live="rankLabel"></span></span></div>
           <div class="chart" id="ch-fate"></div>
           <div class="cap-note" id="note-fate">—</div>
         </figure>
@@ -529,128 +330,129 @@
     </section>
 
     <section class="sect" id="s-attractors">
-      <div class="sect-label"><span>The attractors</span><span class="idx">04</span></div>
-      <h2>Three gods and <em>a monster manual</em></h2>
+      <div class="sect-label"><span>The attractors</span><span>04</span></div>
+      <h2>Two religions and <em>a treasury</em></h2>
 
-      <div class="step" data-fig="fig-attractors" data-state="three" data-label="the pantheon — top three loops by basin">
+      <div class="step" data-fig="fig-waffle" data-state="three" data-label="the pantheon — every square is 1% of the wiki">
         <p>
-          A loop that articles drain into is an <b>attractor</b>, and the articles draining into it are its
-          <b>basin</b>. Run the strict walk over the whole wiki and one loop takes a third of everything:
-          <span class="lo">Gielinor → Guthix → Gods</span>. The world, the god who made the world, and
-          gods in general. Strip off the XP grinds and the margin trading, and this encyclopedia has
-          decided that the most fundamental thing about its game is that it's a place with a theology. In
-          second place, <span class="lo">Monster → Combat → Bestiary</span> at 28%: the monster manual,
-          the other thing this game is about.
+          A loop that articles drain into is an <b>attractor</b>, and the articles draining into it are
+          its <b>basin</b>. The waffle is the whole wiki, one square per percent. The biggest basin on
+          this wiki belongs to <span class="lo" data-live="o.loop1.name"></span>, with
+          <span class="num" data-live="o.loop1.pct|pct"></span> of all articles: the world, the god who
+          made it, and gods in general. But it barely wins. <span class="lo" data-live="o.loop2.name"></span>
+          holds <span class="num" data-live="o.loop2.pct|pct"></span>, just
+          <span data-live="o.gap12|pts"></span> behind. This encyclopedia has two religions, theology and
+          the monster manual, and they are the same size.
         </p>
         <p>
-          Third place goes to <span class="lo">Currencies → Coins</span>, at 15%: the economy is this
-          game's third religion, which tracks — for a lot of players the Grand Exchange is the endgame
-          and everything else is a delivery mechanism for it. Between the world, the monsters and the
-          money, roughly three quarters of the wiki has a god to fall into. The remainder splits among
-          dozens of much smaller congregations, and that is where it gets good.
-        </p>
-      </div>
-
-      <div class="step" data-fig="fig-attractors" data-state="nine" data-label="the long tail — nine loops deep, the cults begin">
-        <p>
-          Below the big basins it gets weird. <span class="lo">Vampyre → Vampyrium</span>.
-          <span class="lo">Grain → Wheat</span>. <span class="lo">Shields → Square shield</span>.
-          <span class="lo">Zanaris → Fairy (race)</span>. Each of these loops holds a few dozen faithful
-          articles, whirlpools the main current never notices. The chart grows from the top three basins
-          to the top nine; the tail continues long past where the chart stops.
+          Third place is the treasury, <span class="lo" data-live="o.loop3.name"></span> at
+          <span data-live="o.loop3.pct|pct"></span>. For a lot of players the Grand Exchange is the endgame
+          and everything else is a delivery mechanism for it, and the first links agree. Between the three,
+          <span class="num" data-live="o.top3Pct|pct"></span> of the wiki has a god to fall into.
         </p>
       </div>
-
-      <div class="figslot" data-fig="fig-attractors">
-        <figure class="embed" id="fig-attractors" aria-label="Top attractor loops by basin size">
-          <div class="cap">
-            <span class="cap-k">04</span>
-            <span class="cap-t">the pantheon — attractor loops by basin · <span data-live="wiki-id">osrs</span></span>
-          </div>
-          <div class="chart" id="ch-attr"></div>
-          <div class="cap-note" id="note-attr">—</div>
+      <div class="step" data-fig="fig-waffle" data-state="nine" data-label="the long tail — the cults">
+        <p>
+          Below the big three it gets strange. <span data-live="o.loop4.name"></span>.
+          <span data-live="o.loop5.name"></span>. <span data-live="o.loop7.name"></span>. Each of these
+          holds a few dozen faithful articles, whirlpools the main current never notices. There are
+          <span class="num" data-live="o.cycleCount|int"></span> loops in all, most of them two pages
+          pointing at each other in a corner of the wiki nobody else visits.
+        </p>
+      </div>
+      <div class="step" data-fig="fig-waffle" data-state="all" data-label="everything — and the graveyard">
+        <p>
+          Colour every loop and the picture is a pantheon with a ragged edge: a handful of great basins,
+          a scatter of cults, and the grey squares, <span data-live="o.deadPct|pct"></span> of the wiki,
+          whose walks die before they find anything to believe in.
+        </p>
+      </div>
+      <div class="figslot" data-fig="fig-waffle">
+        <figure class="embed" id="fig-waffle" aria-label="Attractor basins as a waffle chart">
+          <div class="cap"><span class="cap-k">04</span><span>the pantheon · <span data-live="focus.name"></span> · one square = 1% of articles</span></div>
+          <div class="chart waffle-wrap"><div class="waffle" id="waffle"></div><div class="wlegend" id="wlegend"></div></div>
+          <div class="cap-note" id="note-waffle">—</div>
         </figure>
       </div>
     </section>
 
-    <section class="sect" id="s-religions">
-      <div class="sect-label"><span>The census</span><span class="idx">05</span></div>
+    <section class="sect" id="s-census">
+      <div class="sect-label"><span>The census</span><span>05</span></div>
       <h2>What the <em>neighbours</em> worship</h2>
 
-      <div class="step" data-fig="fig-pantheons" data-label="the census — every wiki's godhead">
+      <div class="step" data-fig="fig-census" data-label="the census — every wiki's godhead">
         <p>
-          Line the fifteen up and each one's answer is on display. Terraria's is itemisation itself:
-          <span class="lo">Items → World</span>, 67% of the wiki. Fortnite's ends at
-          <span class="lo">Epic Games → Tim Sweeney</span>, 84% of it, a corporation and then a person, in
-          that order. Minecraft bottoms out at <span class="lo">Block → Slab</span>, two shapes. GTA
-          drains into <span class="lo">Scotland → United Kingdom</span>, an actual country, which is
-          on-brand for a series that keeps insisting it's satire. And the RuneScape wikis are a family
-          portrait: OSRS believes in the world, <span class="lo">Gielinor → Guthix → Gods</span>. RuneScape
-          3 believes in the pantheon, <span class="lo">Elder Gods → Gods → Elder artefacts</span>. RuneScape
-          Classic, preserved exactly as the game died, believes in the two men who made it:
-          <span class="lo">Andrew Gower → Jagex</span>, 44%.
+          Line the wikis up and each one's answer is on display, ranked by devoutness: how much of the
+          wiki drains into its single biggest loop. The most devout is <span data-live="most.devout.name"></span>,
+          where <span class="num" data-live="most.devout.pct|pct"></span> of articles end in
+          <span class="lo" data-live="most.devout.loop"></span>. The least is
+          <span data-live="least.devout.name"></span>, whose top loop holds only
+          <span data-live="least.devout.pct|pct"></span>. The RuneScape wikis make a family portrait:
+          OSRS believes in <span class="lo" data-live="w.osrs.loop"></span>, RuneScape 3 in
+          <span class="lo" data-live="w.rs3.loop"></span>, and RuneScape Classic, frozen the day the game
+          died, in <span class="lo" data-live="w.rsc.loop"></span>.
         </p>
         <p>
-          The table ranks the wikis by how much of themselves drains into their single top loop. Balatro,
-          a poker roguelite with 517 pages, is the most devout wiki we measured: 81.8% of its articles end
-          in <span class="lo">Jokers → Tarot cards → Consumables</span>. Factorio is the mirror image. Its
-          top loop holds 7.8%, and more than half its walks die without finding any loop at all, a wiki of
-          engineers who will not be told what anything is. OSRS lands in the middle: enough consensus to
-          keep a god, enough sects to keep the god busy.
+          Read the loops as answers to "what is this game, really?" Terraria says
+          <span class="lo" data-live="w.terraria.loop"></span>. Minecraft says
+          <span class="lo" data-live="w.minecraft.loop"></span>. Fortnite says
+          <span class="lo" data-live="w.fortnite.loop"></span>, a company and then a man. GTA says
+          <span class="lo" data-live="w.gta.loop"></span>. None of them chose these answers; they are what
+          happens when thousands of editors each write one sentence that starts with "X is a …".
         </p>
       </div>
-
-      <div class="figslot" data-fig="fig-pantheons">
-        <figure class="embed" id="fig-pantheons" aria-label="Every wiki's philosophy">
-          <div class="cap">
-            <span class="cap-k">05</span>
-            <span class="cap-t">the census — every wiki's godhead · first link</span>
-          </div>
-          <div class="chart ptable-wrap" id="ch-pantheons"></div>
-          <div class="cap-note" id="note-pantheons">—</div>
+      <div class="figslot" data-fig="fig-census">
+        <figure class="embed" id="fig-census" aria-label="Every wiki's philosophy">
+          <div class="cap"><span class="cap-k">05</span><span>the census · every wiki's godhead · <span data-live="rankLabel"></span></span></div>
+          <div class="chart ptable-wrap" id="ch-census"></div>
+          <div class="cap-note" id="note-census">—</div>
         </figure>
       </div>
     </section>
 
     <section class="sect" id="s-decay">
-      <div class="sect-label"><span>The decay of consensus</span><span class="idx">06</span></div>
-      <h2>By the fifth link, <em>everyone disagrees</em></h2>
+      <div class="sect-label"><span>Below the first link</span><span>06</span></div>
+      <h2>Second links find <em>different gods</em></h2>
 
-      <div class="step" data-fig="fig-decay" data-state="conv" data-label="decay — convergence by link rank">
+      <div class="step" data-fig="fig-decay" data-state="top" data-label="deeper links — the top loop and the loop count">
         <p>
-          Everything so far used the first link, the sentence editors fight over most. There's no
-          law saying the game stops there. So we re-ran all 36,164 walks five more times: second link,
-          third, fifth, last, and one run where every click is random.
+          Everything so far used the first link, the sentence editors fight over most. There's no law
+          saying the game stops there, so we re-ran all <span data-live="o.nodes|int"></span> walks
+          following the second link, the third, the fifth, the last, and a random one. The naive
+          expectation is decay: deeper links, less agreement. What actually happens is stranger. The
+          second link's biggest loop is <span class="lo" data-live="o.r2.loop"></span>
+          (<span data-live="o.r2.topPct|pct"></span>). The third's is
+          <span class="lo" data-live="o.r3.loop"></span> (<span data-live="o.r3.topPct|pct"></span>).
+          The fifth's is <span class="lo" data-live="o.r5.loop"></span>. Each rank has its own god, and
+          the pantheon fragments: <span data-live="o.cycleCount|int"></span> loops at the first link,
+          <span data-live="o.r3.cycleCount|int"></span> at the third.
         </p>
       </div>
-
-      <div class="step" data-fig="fig-decay" data-state="both" data-label="decay — the top attractor dissolves">
+      <div class="step" data-fig="fig-decay" data-state="conv" data-label="deeper links — why convergence falls">
         <p>
-          Convergence drops from 85% to 29% by the fifth link. The top attractor drops faster, from 31%
-          of the wiki to 9%. The trinity, it turns out, is an editing habit, not a law of nature.
-          Editors agree sharply on what earns the first mention and agree on almost nothing by the fifth.
-          Factorio, for scale, starts where OSRS ends: 44% on its first link.
+          Convergence does fall, from <span data-live="o.convergePct|pct"></span> to
+          <span data-live="o.r5.convergePct|pct"></span> by the fifth link, but mostly for a boring
+          reason: only <span class="num" data-live="o.r5.eligiblePct|pct"></span> of articles even
+          have five links that pass the rules. The dotted line is the share of pages with enough links;
+          convergence tracks it. Where the walk is possible at all, it still mostly finds a loop. And the
+          walks get longer: median <span data-live="o.medianHops"></span> clicks at the first link,
+          <span data-live="o.r5.medianHops"></span> at the fifth.
         </p>
       </div>
-
-      <div class="step" data-fig="fig-decay" data-state="full" data-label="decay — dead ends take over">
+      <div class="step" data-fig="fig-decay" data-state="tail" data-label="last links and random links — convergence is cheap">
         <p>
-          The dotted line shows where the missing agreement went: into dead ends. At the higher ranks
-          most walks simply run out of links, and the network comes apart. Follow last links and 56% of
-          articles still find loops — oddly, better than the fifth link's 29% — though the wiki shatters
-          into 814 separate little worlds doing it. The random rank lands at 45%: pick links with no plan
-          at all, and nearly half of all articles still find a loop. That's one roll of the dice per
-          article, seeded by page id, so read it as about 45%. The structure lives in the graph itself,
-          and you can't click your way out of a graph.
+          The two detached points are the control group. Follow the <i>last</i> link and
+          <span data-live="o.rlast.convergePct|pct"></span> of articles still find a loop; follow a random
+          one and <span data-live="o.rrandom.convergePct|pct"></span> do. That is the mathematics talking:
+          any walk on a finite graph that doesn't hit a dead end has to loop eventually. Convergence is
+          cheap. What the first link has that the others don't is <i>agreement</i>: the random walk's
+          biggest loop is <span class="lo" data-live="o.rrandom.loop"></span>, which no one would call a
+          philosophy. Editors agree sharply on what earns the first mention, and on nothing after it.
         </p>
       </div>
-
       <div class="figslot" data-fig="fig-decay">
-        <figure class="embed" id="fig-decay" aria-label="Convergence by link rank">
-          <div class="cap">
-            <span class="cap-k">06</span>
-            <span class="cap-t">decay of consensus — <span data-live="wiki-id">osrs</span>, all ranks</span>
-          </div>
+        <figure class="embed" id="fig-decay" aria-label="How the picture changes at deeper link ranks">
+          <div class="cap"><span class="cap-k">06</span><span>below the first link · <span data-live="focus.name"></span> · all ranks</span></div>
           <div class="chart" id="ch-decay"></div>
           <div class="cap-note" id="note-decay">—</div>
         </figure>
@@ -658,78 +460,93 @@
     </section>
 
     <section class="sect" id="s-hubs">
-      <div class="sect-label"><span>Hubs &amp; bridges</span><span class="idx">07</span></div>
+      <div class="sect-label"><span>Hubs &amp; bridges</span><span>07</span></div>
       <h2>Famous pages, <em>load-bearing pages</em></h2>
 
-      <div class="step" data-fig="fig-hubs-deg" data-label="hubs — the most linked-at articles">
+      <div class="step" data-fig="fig-hubs-deg" data-label="hubs — the pages most often chosen as a first link">
         <p>
-          A wiki has two kinds of importance, and they barely overlap. The visible kind is
-          <b>degree</b>: the pages that the most other pages link to. On OSRS the list is topped by
-          <span class="lo">Music</span>, with 855 inbound links, then interface items, jingles, and clue
-          guides. No gods, no dragons, no bosses. The most-linked pages in any wiki turn out to be the
-          plumbing: the shared vocabulary every article leans on without thinking about it.
+          A wiki has two kinds of importance, and they barely overlap. The visible kind is being chosen:
+          the pages that the most other articles pick as their very first link. On this wiki the list is
+          topped by <span class="lo" data-live="o.hub1.title"></span>, the first link of
+          <span class="num" data-live="o.hub1.count|int"></span> articles, then
+          <span class="lo" data-live="o.hub2.title"></span> and <span class="lo" data-live="o.hub3.title"></span>.
+          No gods, no dragons. The most-chosen pages are the plumbing, the shared vocabulary every article
+          leans on without thinking about it.
         </p>
       </div>
-
-      <div class="step" data-fig="fig-hubs-bet" data-label="bridges — what everything passes through">
+      <div class="step" data-fig="fig-hubs-bet" data-label="bridges — the pages the most walks pass through">
         <p>
-          The quieter kind is <b>betweenness</b>: pages that sit between other pages, where deleting one
-          would snap the wiki's explanatory paths. This is where the lore finally shows up. OSRS's
-          load-bearing pages are <span class="lo">Player character</span>, then
-          <span class="lo">Human</span>, then <span class="lo">List of races</span>. Nearly every monster
-          and NPC definition passes through the question of what counts as you, which is a lot of
-          philosophy per drop table.
+          The quieter kind is being passed through: pages that sit in the middle of other articles' walks,
+          where deleting one would snap the wiki's explanatory paths. This is where the lore shows up.
+          The most-travelled page is <span class="lo" data-live="o.bridge1.title"></span>, then
+          <span class="lo" data-live="o.bridge2.title"></span> and <span class="lo" data-live="o.bridge3.title"></span>.
+          Nearly every monster and NPC definition passes through the question of what counts as you,
+          which is a lot of philosophy per drop table.
         </p>
       </div>
-
       <div class="figslot" data-fig="fig-hubs-deg">
-        <figure class="embed" id="fig-hubs-deg" aria-label="Most linked-at articles">
-          <div class="cap">
-            <span class="cap-k">07·a</span>
-            <span class="cap-t">degree — most linked-at · <span data-live="wiki-id">osrs</span> · <span data-live="rank-label">1st link</span></span>
-          </div>
+        <figure class="embed" id="fig-hubs-deg" aria-label="Pages most often chosen as a first link">
+          <div class="cap"><span class="cap-k">07·a</span><span>hubs · chosen as first link by the most articles · <span data-live="focus.name"></span></span></div>
           <div class="chart" id="ch-deg"></div>
         </figure>
       </div>
       <div class="figslot" data-fig="fig-hubs-bet">
-        <figure class="embed" id="fig-hubs-bet" aria-label="Highest betweenness articles">
-          <div class="cap">
-            <span class="cap-k">07·b</span>
-            <span class="cap-t">betweenness — the bridges · <span data-live="wiki-id">osrs</span> · <span data-live="rank-label">1st link</span></span>
-          </div>
+        <figure class="embed" id="fig-hubs-bet" aria-label="Pages the most walks pass through">
+          <div class="cap"><span class="cap-k">07·b</span><span>bridges · walks passing through · <span data-live="focus.name"></span></span></div>
           <div class="chart" id="ch-bet"></div>
         </figure>
       </div>
     </section>
 
-    <section class="sect" id="s-constellation">
-      <div class="sect-label"><span>The constellation</span><span class="idx">08</span></div>
-      <h2>The map that looks <em>like outer space</em></h2>
+    <section class="sect" id="s-grave">
+      <div class="sect-label"><span>The graveyard</span><span>08</span></div>
+      <h2>Where the walks <em>go to die</em></h2>
 
-      <div class="step" data-fig="fig-graph" data-label="the constellation — loops as stars">
+      <div class="step" data-fig="fig-grave" data-label="the graveyard — where dead walks end">
         <p>
-          Draw the OSRS network as a night sky and it cooperates. The loops are stars, tributaries stream
-          toward them, dead-end chains drift at the edge like comets nobody claimed. Node size is inbound
-          links, and every arrow follows one article's first link, so the picture really is the direction
-          the wiki thinks in. Hover a node to trace its path to the loop it belongs to. Click one and
-          you're on the live wiki, reading the real article.
+          <span data-live="o.deadCount|int"></span> articles on this wiki never find a loop. Most of them
+          die on the same few pages. The biggest open grave is
+          <span class="lo" data-live="o.grave1.title"></span>, which swallows
+          <span class="num" data-live="o.grave1.chains|int"></span> walks: <span data-live="o.grave1.reason"></span>.
+          A page like that is a list with no prose, a table of items that never says what an item is.
+          The walk arrives, finds nothing that reads as a sentence, and stops. Every wiki has a few of
+          these, and they tell you where the editors ran out of patience for explaining.
         </p>
       </div>
+      <div class="figslot" data-fig="fig-grave">
+        <figure class="embed" id="fig-grave" aria-label="Pages where the most walks die">
+          <div class="cap"><span class="cap-k">08</span><span>the graveyard · dead walks by terminal page · <span data-live="focus.name"></span></span></div>
+          <div class="chart" id="ch-grave"></div>
+          <div class="cap-note" id="note-grave">—</div>
+        </figure>
+      </div>
+    </section>
 
-      <div class="figslot" data-fig="fig-graph">
-        <figure class="embed" id="fig-graph" aria-label="Constellation of the first-link network">
-          <div class="cap">
-            <span class="cap-k">08</span>
-            <span class="cap-t">the constellation — <span data-live="wiki-id">osrs</span> · <span data-live="rank-label">1st link</span></span>
-          </div>
-          <div class="chart tall" id="ch-graph"></div>
-          <div class="cap-note" id="note-graph">loading network…</div>
+    <section class="sect" id="s-map">
+      <div class="sect-label"><span>The map</span><span>09</span></div>
+      <h2>The whole wiki, <em>as drainage</em></h2>
+
+      <div class="step" data-fig="fig-map" data-label="the drainage map — every article, every first link">
+        <p>
+          This is all <span data-live="focus.nodes|int"></span> articles at once. Each loop is a basin,
+          sized by how many articles drain into it, and every article sits in its basin at the distance
+          it takes to get there: one ring per click. The threads are first links. The moving sparks are
+          walkers, starting on random articles and following first links until they fall in. Watch where
+          they pile up. Hover any speck to trace its walk, scroll to zoom, click to open the real article.
+          The dust at the rim is the orphans: tiny loops and lonely dead ends with no basin to join.
+        </p>
+      </div>
+      <div class="figslot" data-fig="fig-map">
+        <figure class="embed" id="fig-map" aria-label="Drainage map of the first-link network">
+          <div class="cap"><span class="cap-k">09</span><span>the drainage map · <span data-live="focus.name"></span> · <span data-live="rankLabel"></span></span><button class="cap-btn" id="mapReset" type="button">⌂ reset view</button></div>
+          <div class="chart"><div class="field" id="mapField"></div></div>
+          <div class="cap-note" id="note-map">—</div>
         </figure>
       </div>
     </section>
 
     <section class="sect" id="s-play">
-      <div class="sect-label"><span>Your turn</span><span class="idx">09</span></div>
+      <div class="sect-label"><span>Your turn</span><span>10</span></div>
       <h2>Feed it <em>an article</em></h2>
 
       <div class="step" data-fig="fig-play" data-label="your turn — follow any chain">
@@ -740,20 +557,16 @@
           occasionally somewhere better.
         </p>
         <p>
-          Caveats, for honesty's sake. Everything here is one snapshot of wikis that change every day.
-          The parser trips over the occasional exotic template, and when it does, that page's walk is
-          wrong — we believe this is rare, and we would say that either way. And the walk's rules — skip
-          the parentheses, skip the italics — are a house style rather than a law of nature; every link
-          at every rank is counted the same way.
+          Caveats, for honesty's sake. Everything here is one snapshot of wikis that change every day. The
+          parser trips over the occasional exotic template, and when it does, that page's walk is wrong;
+          we believe this is rare, and we would say that either way. The rules, skip the parentheses, skip
+          the italics, are a house style, not a law of nature. The random rank is one seeded draw per
+          article, so read its numbers as about right rather than exact.
         </p>
       </div>
-
       <div class="figslot" data-fig="fig-play">
         <figure class="embed" id="fig-play" aria-label="Follow any article's chain">
-          <div class="cap">
-            <span class="cap-k">09</span>
-            <span class="cap-t">your turn — <span data-live="wiki-id">osrs</span> · pick a rank</span>
-          </div>
+          <div class="cap"><span class="cap-k">10</span><span>your turn · <span data-live="focus.name"></span> · pick a rank</span></div>
           <div class="chart chainfill" id="ch-play">
             <div class="rankrow" id="playRanks"></div>
             <div class="playrow">
@@ -762,679 +575,571 @@
               <button class="btn" id="playBtn" type="button">follow</button>
               <button class="btn ghost" id="playRand" type="button">random</button>
             </div>
-            <div id="playOut" class="chainfill"><span class="fate" style="color:var(--ink-3)">pick something and press follow…</span></div>
+            <div id="playOut"><span class="fate" style="color:var(--ink-3)">pick something and press follow…</span></div>
           </div>
         </figure>
       </div>
     </section>
 
-    <div class="pull" style="margin-top:8vh">
+    <div class="pull">
       A wiki explains things in terms of other things. Keep following, and you reach the pages it stopped
       explaining and simply believes in.
-      <small>osrs in focus · 15 wikis compared</small>
+      <small>osrs in focus · <span data-live="total.wikis"></span> wikis compared</small>
     </div>
-
   </main>
 
-  <!-- sticky data panel — figures are moved here in split mode -->
   <aside class="panel" id="panel" aria-label="Data visualisation">
-    <div class="panel-head">
-      <div id="panelLabel">—</div>
-      <div id="panelDots"></div>
-    </div>
+    <div class="panel-head"><div id="panelLabel">—</div><div id="panelDots"></div></div>
     <div class="panel-stack" id="panelStack"></div>
   </aside>
 </div>
 
-<!-- ============================ FOOTER ============================ -->
 <footer>
   <div class="foot-grid">
     <div class="foot-word">where does<br><em>everything</em> lead?</div>
     <div class="foot-meta">
-      one snapshot, october 2026 · osrs in focus · 15 wikis and
-      <span data-live="total-articles">…</span> articles in context · scraped politely at one request per
-      second, recomputed locally<br>
-      method: the first non-parenthesised, non-italicised prose link · disambiguation and date pages,
-      infoboxes, red links and namespaces skipped · the walk stops at a loop or a dead page<br>
-      every wiki and every rank lives in the <a href="/lab" data-lab-only>full dashboard ↗</a> ·
-      run it on your own wiki — any mediawiki with a public api.php ·
-      <a href="#" onclick="return false">npx tsx scripts/pipeline.ts --wiki=yourwiki</a><br>
-      find a weirder attractor than grain → wheat? tell us
+      one snapshot · <span data-live="total.wikis"></span> wikis · <span data-live="total.articles|int"></span> articles ·
+      scraped politely at one request per second, recomputed locally<br>
+      method: the first non-parenthesised, non-italicised prose link · disambiguation and date pages, infoboxes,
+      red links and namespaces skipped · the walk stops at a loop or a dead page<br>
+      run it on your own wiki, any mediawiki with a public api.php:
+      <a href="https://github.com/AntonyGarand/gaming-wiki-analysis" target="_blank" rel="noopener">github.com/AntonyGarand/gaming-wiki-analysis</a><br>
+      found a weirder attractor than grain → wheat? tell us
     </div>
   </div>
 </footer>
 
-<button class="gear-btn" id="gearBtn" type="button" aria-expanded="false" aria-controls="gearPanel">⚙ data</button>
-<div class="gear" id="gearPanel" role="dialog" aria-label="Data settings">
-  <h4>data settings</h4>
-  <label>wiki
-    <select id="gearWiki"></select>
-  </label>
-  <label>link rank
-    <select id="gearRank"></select>
-  </label>
-  <p class="gear-note">changes every chart and every live number. the prose stays osrs.</p>
-</div>
-
-<script>window.__STATIC__ = true;
-
+<script>
 /* ==================================================================== *
- * shared helpers
+ * data layer — everything is a static file under data/
  * ==================================================================== */
-const WIKIS = [{"id":"osrs","name":"Old School RuneScape Wiki","description":"The original target"},{"id":"rs3","name":"RuneScape Wiki","description":"RS3 — same engine, different decade"},{"id":"rsc","name":"RuneScape Classic Wiki","description":"The deprecated original"},{"id":"minecraft","name":"Minecraft Wiki","description":"Best-selling game of all time"},{"id":"gta","name":"GTA Wiki","description":"Grand Theft Auto"},{"id":"overwatch","name":"Overwatch Wiki","description":"Hero shooter"},{"id":"fortnite","name":"Fortnite Wiki","description":"Battle royale"},{"id":"valheim","name":"Valheim Wiki","description":"Viking survival"},{"id":"vampiresurvivors","name":"Vampire Survivors Wiki","description":"Bullet-heaven roguelite"},{"id":"balatro","name":"Balatro Wiki","description":"Poker roguelite"},{"id":"hytale","name":"Hytale Wiki","description":"Blocky adventure"},{"id":"subnautica","name":"Subnautica Wiki","description":"Underwater survival"},{"id":"terraria","name":"Terraria Wiki","description":"2D sandbox"},{"id":"factorio","name":"Factorio Wiki","description":"Factory-building"},{"id":"tarkov","name":"Escape from Tarkov Wiki","description":"Hardcore FPS"}];
-const SHORT = {
-  osrs: "OSRS", rs3: "RuneScape 3", rsc: "RuneScape Classic", minecraft: "Minecraft", gta: "GTA",
-  overwatch: "Overwatch", fortnite: "Fortnite", valheim: "Valheim", vampiresurvivors: "Vampire Survivors",
-  balatro: "Balatro", hytale: "Hytale", subnautica: "Subnautica", terraria: "Terraria", factorio: "Factorio",
-  tarkov: "Tarkov",
-};
-const shortName = (o) => SHORT[o.id] ?? o.id;
-const state = { wiki: localStorage.getItem("article_wiki") || "osrs", rank: localStorage.getItem("article_rank") || "strict1", mode: localStorage.getItem("article_mode") || "split", step: null, playRank: "strict1" };
-const RANK_LABELS = { strict1: "1st link", last: "last link", random: "random link" };
-const rankLabel = (r) => RANK_LABELS[r] ?? (r + (r === "1" ? "st" : r === "2" ? "nd" : r === "3" ? "rd" : "th")) + " link";
+const DATA = "data/";
+const ARTICLE_PATH = { tarkov: "/wiki/", terraria: "/wiki/", subnautica: "/wiki/", factorio: "/" }; // default /w/
+const SHORT = { osrs: "OSRS", rs3: "RuneScape 3", rsc: "RS Classic", minecraft: "Minecraft", gta: "GTA", overwatch: "Overwatch", fortnite: "Fortnite", valheim: "Valheim", vampiresurvivors: "Vampire Survivors", balatro: "Balatro", hytale: "Hytale", subnautica: "Subnautica", terraria: "Terraria", factorio: "Factorio", tarkov: "Tarkov" };
+const RANK_LABELS = { strict1: "1st link", 1: "1st link", 2: "2nd link", 3: "3rd link", 5: "5th link", last: "last link", random: "random link" };
+const rankLabel = (r) => RANK_LABELS[r] ?? (r + "th link");
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const narrow = window.matchMedia("(max-width: 1100px)");
+const state = { wiki: localStorage.getItem("article_wiki") || "osrs", rank: localStorage.getItem("article_rank") || "strict1", mode: localStorage.getItem("article_mode") || "split", playRank: "strict1" };
+const PROSE_WIKI = "osrs", PROSE_RANK = "strict1";
 
-function hueAt(t) {
-  const L = 0.60 + (0.46 - 0.60) * t;
-  const C = 0.155 + (0.125 - 0.155) * t;
-  const H = (((40 - 78 * t) % 360) + 360) % 360; // rust → red → plum, the warm side of the wheel
-  return `oklch(${(L * 100).toFixed(1)}% ${C.toFixed(3)} ${H})`;
-}
-function showError(msg) {
-  const el = document.getElementById("status");
-  el.textContent = msg; el.style.display = msg ? "" : "none";
-}
-async function api(path) {
-  if (!window.__STATIC__) {
-    const res = await fetch(path);
-    if (!res.ok) throw new Error((await res.text()) || res.statusText);
-    return res.json();
-  }
-  // static mode: every endpoint maps to a precomputed file under data/.
-  // chains/random/search run off a lazily-loaded per-wiki+rank chain table.
-  const u = new URL(path, "http://static.local");
-  const p = u.pathname, q = u.searchParams;
-  const jf = async (f) => { const r = await fetch(f); if (!r.ok) throw new Error(r.statusText); return r.json(); };
-  if (p === "/api/overview") return jf("data/overview.json");
-  if (p === "/api/summary") return jf(`data/${q.get("wiki")}/summary.json`);
-  if (p === "/api/stats") return jf(`data/${q.get("wiki")}/stats-r${q.get("rank")}.json`);
-  if (p === "/api/graph") return jf(`data/${q.get("wiki")}/graph-r${q.get("rank")}.json`);
-  if (p === "/api/mesh") return jf(`data/${q.get("wiki")}/mesh-r${q.get("rank")}.json`);
-  if (p === "/api/wikis") return WIKIS.map((w) => ({ id: w.id, name: w.name, available: true }));
-  if (p === "/api/chain" || p === "/api/random" || p === "/api/search") {
-    const table = await loadChainTable(q.get("wiki"), q.get("rank") ?? "strict1");
-    if (p === "/api/chain") {
-      const rec = table.map.get(q.get("title"));
-      if (!rec) throw new Error(`article not found: ${q.get("title")}`);
-      const [chain, fate, cycleSize, reason] = rec;
-      return { title: q.get("title"), rank: q.get("rank"), chain, hops: chain.length - 1, fate: fate ? "dead" : "cycle", reason, cycleSize };
-    }
-    if (p === "/api/random") return { title: table.keys[(Math.random() * table.keys.length) | 0] };
-    const needle = (q.get("q") ?? "").toLowerCase();
-    const titles = table.keys.filter((t) => t.toLowerCase().includes(needle)).slice(0, 12);
-    return { titles };
-  }
-  throw new Error(`static mode has no ${p}`);
-}
-const __chainTables = new Map();
-function loadChainTable(wiki, rank) {
-  const key = `${wiki}|${rank}`;
-  if (!__chainTables.has(key)) {
-    __chainTables.set(key, (async () => {
-      const r = await fetch(`data/${wiki}/chains-r${rank}.json`);
-      if (!r.ok) throw new Error(`no chain table for ${wiki} @ ${rank}`);
-      const raw = await r.json();
-      const map = new Map(Object.entries(raw));
-      return { map, keys: [...map.keys()] };
-    })());
-  }
-  return __chainTables.get(key);
-}
-function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+let WIKIS = [];
+const wikiById = (id) => WIKIS.find((w) => w.id === id);
+const shortName = (id) => SHORT[id] ?? wikiById(id)?.name ?? id;
+const urlFor = (wikiId, title) => `${wikiById(wikiId)?.origin ?? ""}${ARTICLE_PATH[wikiId] ?? "/w/"}${encodeURIComponent(title.replace(/ /g, "_"))}`;
 
-let __meshUpdate = null;
-const __mastMesh = createMeshField(document.getElementById("fieldCanvas"), document.querySelector(".masthead"), {});
-__meshUpdate = (wiki, rank) => { __mastMesh.update(wiki, rank, 150); };
+const cache = new Map();
+function jf(path) {
+  if (!cache.has(path)) cache.set(path, fetch(DATA + path).then((r) => { if (!r.ok) throw new Error(`${r.status} ${path}`); return r.json(); }).catch((e) => { cache.delete(path); throw e; }));
+  return cache.get(path);
+}
+const loadStats = (w, r) => jf(`${w}/stats-r${r}.json`);
+const loadSummary = (w) => jf(`${w}/summary.json`);
+const loadTitles = (w) => jf(`${w}/titles.json`);
+const loadSucc = (w, r) => jf(`${w}/succ-r${r}.json`);
+const graphs = new Map();
+async function loadGraph(w, r) {
+  const key = `${w}|${r}`;
+  if (!graphs.has(key)) graphs.set(key, Promise.all([loadTitles(w), loadSucc(w, r)]).then(([t, s]) => buildWalkGraph(t, s.succ, s.term)).catch((e) => { graphs.delete(key); throw e; }));
+  return graphs.get(key);
+}
+async function loadAllStats(rank) {
+  const out = [];
+  await Promise.all(WIKIS.map(async (w) => {
+    if (!w.ranks.includes(rank)) return;
+    try { out.push({ id: w.id, name: w.name, stats: await loadStats(w.id, rank) }); } catch {}
+  }));
+  return out.sort((a, b) => WIKIS.findIndex((w) => w.id === a.id) - WIKIS.findIndex((w) => w.id === b.id));
+}
+
+/* ---- stats accessors (tolerant of old + new key names) ---- */
+const topTargets = (st) => st.topFirstLinkTargets ?? st.topInDegree ?? [];
+const targetCount = (row) => row.count ?? row.inDegree ?? 0;
+const throughTraffic = (st) => st.topThroughTraffic ?? st.topBetweenness ?? [];
+const trafficCount = (row) => row.chains ?? row.betweenness ?? 0;
+const loopName = (cycle) => (cycle ?? []).join(" → ");
+const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const fmt = {
+  pct: (v) => (typeof v === "number" ? (v >= 10 ? v.toFixed(0) : v.toFixed(1)) + "%" : null),
+  pct1: (v) => (typeof v === "number" ? v.toFixed(1) + "%" : null),
+  pts: (v) => (typeof v === "number" ? v.toFixed(1) + " points" : null),
+  int: (v) => (typeof v === "number" ? v.toLocaleString("en-US") : null),
+  ordinal: (v) => (typeof v === "number" ? v + (["th", "st", "nd", "rd"][(v % 100 >> 3 ^ 1 && v % 10) || 0] ?? "th") : null),
+  str: (v) => (v === undefined || v === null ? null : String(v)),
+};
 
 /* ==================================================================== *
- * data + figures
+ * facts — the one object every number in the prose is read from
  * ==================================================================== */
-let overview = [], summary = null, stats = null;
-const graphCache = new Map();
-
-const chartBase = {
-  backgroundColor: "transparent", animationDuration: 850, animationEasing: "cubicOut",
-  textStyle: { color: "#5f574a", fontSize: 10, fontFamily: "Space Mono, monospace" },
-  grid: { left: 6, right: 14, top: 16, bottom: 20, containLabel: true },
-  tooltip: {
-    backgroundColor: "#fffdf5", borderColor: "#ddd3c0", borderWidth: 1,
-    textStyle: { color: "#201b14", fontSize: 11, fontFamily: "Space Mono, monospace" },
-    axisPointer: { lineStyle: { color: "#cfc4ad" } },
-  },
-};
-const axisCommon = { axisLine: { show: false }, axisTick: { show: false }, axisLabel: { color: "#93897a", fontSize: 9 }, splitLine: { lineStyle: { color: "#e4dbc8", type: "solid" } } };
-
-const figEls = {}, slots = {}, charts = {}, figInit = {};
-const panelStack = document.getElementById("panelStack");
-
-function el(id) { return document.getElementById(id); }
-function chartOf(figId, chartId) {
-  if (!charts[figId]) charts[figId] = echarts.init(el(chartId));
-  return charts[figId];
+let F = {};
+function hueAt(t) { return `oklch(${(60 - 14 * t).toFixed(1)}% ${(0.155 - 0.03 * t).toFixed(3)} ${(((40 - 78 * t) % 360) + 360) % 360})`; }
+function loopEntry(st, i) {
+  const a = st?.topAttractors?.[i];
+  return a ? { name: loopName(a.cycle), pct: a.pct, basin: a.basin, size: a.cycle.length } : { name: null, pct: null };
 }
+function rankFacts(summary, st, rank, g) {
+  const r = summary?.ranks?.find((x) => x.rank === rank);
+  const eligible = st?.eligibleLinks?.atLeast ? (rank === "strict1" ? st.eligibleLinks.atLeast["1"] : st.eligibleLinks.atLeast[rank]) : (g ? eligibleFromGraph(g, rank) : undefined);
+  return r ? { loop: loopName(r.topAttractor), topPct: r.topAttractorPct, convergePct: r.convergePct, deadPct: r.deadEndPct, cycleCount: r.cycleCount, medianHops: r.medianHops, maxHops: r.maxHops, eligiblePct: eligible } : {};
+}
+function eligibleFromGraph(g, rank) {
+  if (rank === "last" || rank === "random") return 100;
+  let short = 0;
+  for (let i = 0; i < g.N; i++) if (g.succ[i] < 0 && (g.term[i] === 1 || g.term[i] === 2)) short++;
+  return +(100 * (1 - short / g.N)).toFixed(1);
+}
+function computeFacts(all, proseStats, proseSummary, proseGraphs) {
+  const rows = all.map((x) => ({ id: x.id, name: shortName(x.id), full: x.name, st: x.stats, nodes: x.stats.nodes, convergePct: x.stats.converge.pct, deadPct: x.stats.converge.deadEndPct, median: x.stats.hopStats.median, loop: loopEntry(x.stats, 0) }));
+  const by = (k, dir) => rows.slice().sort((a, b) => dir * (b[k] - a[k]))[0];
+  const o = proseStats;
+  const cum = []; let run = 0; const total = Object.values(o.histogram).reduce((a, b) => a + b, 0);
+  for (let h = 0; h <= 60; h++) { run += o.histogram[String(h)] ?? 0; cum[h] = 100 * run / total; }
+  const osrsRow = rows.find((r) => r.id === PROSE_WIKI);
+  const convergeRank = rows.slice().sort((a, b) => b.convergePct - a.convergePct).findIndex((r) => r.id === PROSE_WIKI) + 1;
+  const l = (i) => loopEntry(o, i);
+  const g1 = l(0), g2 = l(1), g3 = l(2);
+  const grave = o.deadEndTerminals?.[0];
+  F = {
+    total: { wikis: rows.length, others: rows.length - 1, articles: rows.reduce((a, r) => a + r.nodes, 0) },
+    rankLabel: rankLabel(state.rank),
+    focus: F.focus ?? { name: wikiById(state.wiki)?.name ?? state.wiki, short: shortName(state.wiki) },
+    most: { converge: by("convergePct", 1) && { name: by("convergePct", 1).name, pct: by("convergePct", 1).convergePct }, devout: by("loopPct", 1) },
+    least: { converge: by("convergePct", -1) && { name: by("convergePct", -1).name, pct: by("convergePct", -1).convergePct, deadPct: by("convergePct", -1).deadPct }, devout: null },
+    deepest: { name: by("median", 1).name, hops: by("median", 1).median },
+    shallowest: { name: by("median", -1).name, hops: by("median", -1).median },
+    w: Object.fromEntries(rows.map((r) => [r.id, { name: r.name, loop: r.loop.name, loopPct: r.loop.pct, convergePct: r.convergePct, nodes: r.nodes }])),
+    o: {
+      nodes: o.nodes, convergePct: o.converge.pct, deadPct: o.converge.deadEndPct, deadCount: o.converge.deadEnd,
+      meanHops: o.hopStats.mean, medianHops: o.hopStats.median, p90: o.hopStats.p90, maxHops: o.hopStats.max,
+      cycleCount: o.cycleCount, convergeRank, cum10: +cum[10].toFixed(1),
+      loop1: g1, loop2: g2, loop3: g3, loop4: l(3), loop5: l(4), loop6: l(5), loop7: l(6), loop8: l(7), loop9: l(8),
+      gap12: g1.pct != null && g2.pct != null ? +(g1.pct - g2.pct).toFixed(1) : null,
+      top3Pct: o.concentration?.top3Pct ?? +((g1.pct ?? 0) + (g2.pct ?? 0) + (g3.pct ?? 0)).toFixed(1),
+      hub1: hub(o, 0), hub2: hub(o, 1), hub3: hub(o, 2),
+      bridge1: bridge(o, 0), bridge2: bridge(o, 1), bridge3: bridge(o, 2),
+      grave1: grave ? { title: grave.title, chains: grave.chains, reason: grave.reason } : {},
+      r2: rankFacts(proseSummary, null, "2", proseGraphs["2"]), r3: rankFacts(proseSummary, null, "3", proseGraphs["3"]),
+      r5: rankFacts(proseSummary, null, "5", proseGraphs["5"]), rlast: rankFacts(proseSummary, null, "last", proseGraphs["last"]),
+      rrandom: rankFacts(proseSummary, null, "random", proseGraphs["random"]),
+    },
+  };
+  // devoutness needs loop pct on rows
+  rows.forEach((r) => { r.loopPct = r.loop.pct ?? -1; });
+  const md = by("loopPct", 1), ld = by("loopPct", -1);
+  F.most.devout = { name: md.name, pct: md.loop.pct, loop: md.loop.name };
+  F.least.devout = { name: ld.name, pct: ld.loop.pct, loop: ld.loop.name };
+  function hub(st, i) { const r = topTargets(st)[i]; return r ? { title: r.title, count: targetCount(r) } : {}; }
+  function bridge(st, i) { const r = throughTraffic(st)[i]; return r ? { title: r.title, count: trafficCount(r) } : {}; }
+  renderLive();
+}
+function renderLive() {
+  document.querySelectorAll("[data-live]").forEach((el) => {
+    const [path, f = "str"] = el.dataset.live.split("|");
+    let v = F; for (const k of path.split(".")) v = v?.[k];
+    const out = (fmt[f] ?? fmt.str)(v);
+    if (out === null || out === undefined) { el.innerHTML = `<span class="live-missing">⟨${esc(path)}⟩</span>`; return; }
+    el.textContent = out;
+    if (el.classList.contains("lo") && el.tagName !== "A" && !String(out).includes("→")) {
+      const a = document.createElement("a"); a.className = "lo"; a.href = urlFor(PROSE_WIKI, out); a.target = "_blank"; a.rel = "noopener"; a.textContent = out; a.dataset.live = el.dataset.live; el.replaceWith(a);
+    }
+  });
+}
+
+/* ==================================================================== *
+ * figures
+ * ==================================================================== */
+const chartBase = {
+  backgroundColor: "transparent", animationDuration: 800, animationEasing: "cubicOut",
+  textStyle: { color: "#5f574a", fontSize: 10, fontFamily: "Space Mono, monospace" },
+  grid: { left: 8, right: 16, top: 18, bottom: 22, containLabel: true },
+  tooltip: { backgroundColor: "#fffdf5", borderColor: "#ddd3c0", borderWidth: 1, textStyle: { color: "#201b14", fontSize: 11, fontFamily: "Space Mono, monospace" }, axisPointer: { lineStyle: { color: "#cfc4ad" } } },
+};
+const axisCommon = { axisLine: { show: false }, axisTick: { show: false }, axisLabel: { color: "#93897a", fontSize: 9 }, splitLine: { lineStyle: { color: "#e4dbc8" } } };
+const C = { rust: "#bc4b27", plum: "#6d3b7e", ochre: "#b8862b", teal: "#2f6f73", dead: "#9a9183", ink: "#201b14", ink2: "#5f574a", ink3: "#93897a" };
+const charts = {}, figInit = {}, figState = {};
+const el = (id) => document.getElementById(id);
+function chartOf(figId, chartId) { if (!charts[figId]) charts[figId] = echarts.init(el(chartId)); return charts[figId]; }
 function resizeAll() { Object.values(charts).forEach((c) => { try { c.resize(); } catch {} }); }
 window.addEventListener("resize", resizeAll);
 
-/* ---------- fig-overview : the field (all wikis, OSRS highlighted) ---------- */
-function renderOverview() {
-  const c = chartOf("fig-overview", "ch-overview");
-  const desc = overview.slice().sort((a, b) => b.convergePct - a.convergePct);
-  const ord = desc.slice().reverse(); // category yAxis draws index 0 at the bottom → highest on top
+let cur = { stats: null, summary: null, graph: null, all: [] };
+
+/* ---- 01 the field: stacked bars ---- */
+function renderField() {
+  const c = chartOf("fig-field", "ch-field");
+  const rows = cur.all.map((x) => ({ id: x.id, name: shortName(x.id), st: x.stats, top: loopEntry(x.stats, 0), conv: x.stats.converge.pct, dead: x.stats.converge.deadEndPct }))
+    .sort((a, b) => a.conv - b.conv); // category axis draws index 0 at the bottom
+  const isF = (r) => r.id === state.wiki;
+  c.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 44 }, color: [C.rust, "#dca08a", "#d9d2c3"],
+    tooltip: { ...chartBase.tooltip, trigger: "axis", axisPointer: { type: "shadow", shadowStyle: { color: "rgba(32,27,20,0.05)" } },
+      formatter: (ps) => { const r = rows[ps[0]?.dataIndex]; if (!r) return ""; return `<b>${esc(r.name)}</b> · ${r.st.nodes.toLocaleString()} articles<br>top loop <span style="color:${C.rust}">${esc(r.top.name)}</span> · ${r.top.pct}%<br>other loops ${(r.conv - r.top.pct).toFixed(1)}% · graveyard ${r.dead}%<br>median walk ${r.st.hopStats.median} clicks`; } },
+    legend: { top: 0, right: 0, itemWidth: 10, itemHeight: 8, textStyle: { color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace" } },
+    xAxis: { type: "value", max: 100, ...axisCommon, axisLabel: { ...axisCommon.axisLabel, formatter: "{value}%" } },
+    yAxis: { type: "category", data: rows.map((r) => r.name), ...axisCommon, splitLine: { show: false }, axisLabel: { fontSize: 9, width: 110, overflow: "truncate", color: (v, i) => isF(rows[i]) ? C.ink : C.ink2, fontWeight: (v, i) => isF(rows[i]) ? 700 : 400 } },
+    series: [
+      { name: "biggest loop", type: "bar", stack: "s", barWidth: "64%", data: rows.map((r) => ({ value: r.top.pct, itemStyle: { color: isF(r) ? C.ink : C.rust } })) },
+      { name: "other loops", type: "bar", stack: "s", data: rows.map((r) => ({ value: +(r.conv - r.top.pct).toFixed(2), itemStyle: { color: isF(r) ? "#6f675a" : "#dca08a" } })),
+        label: { show: true, position: "right", color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => rows[p.dataIndex].conv.toFixed(0) + "%" } },
+      { name: "graveyard", type: "bar", stack: "s", data: rows.map((r) => r.dead), itemStyle: { color: "#d9d2c3" } },
+    ],
+  }, true);
+  const f = rows.find(isF);
+  el("note-field").innerHTML = f ? `<b>${esc(wikiById(f.id)?.name ?? f.id)}</b> in focus · ${f.conv}% find a loop · its biggest loop <b>${esc(f.top.name)}</b> holds ${f.top.pct}% · bars sorted by convergence · hover for the others` : "—";
+}
+
+/* ---- 02 one walk ---- */
+function chainHTML(g, wk, wikiId) {
+  const n = wk.chain.length;
+  const html = wk.chain.map((i, k) => {
+    const isCyc = wk.fate === "cycle" && k >= n - wk.cycleSize;
+    const cls = k === 0 ? " start" : isCyc ? " cyc" : (wk.fate === "dead" && k === n - 1 ? " dead" : "");
+    return `<a class="pill${cls}" href="${urlFor(wikiId, g.titles[i])}" target="_blank" rel="noopener" style="text-decoration:none">${esc(g.titles[i])}</a>` + (k < n - 1 ? `<span class="arrow">→</span>` : "");
+  }).join("");
+  const fate = wk.fate === "cycle"
+    ? `<span class="fate"><span class="cyc">↻</span> ${wk.hops === 0 ? `starts inside a loop of ${wk.cycleSize} · loops forever` : `loops forever · ${wk.hops} click${wk.hops === 1 ? "" : "s"} to enter a loop of ${wk.cycleSize}`}</span>`
+    : `<span class="fate"><span class="dead">✝</span> dies after ${wk.hops} click${wk.hops === 1 ? "" : "s"} · ${esc(wk.reason)}</span>`;
+  return html + fate;
+}
+function rollChain() {
+  const g = cur.graph, box = el("ch-chain"); if (!g) return;
+  let i = (Math.random() * g.N) | 0, tries = 0;
+  while (g.succ[i] < 0 && tries++ < 10) i = (Math.random() * g.N) | 0;
+  box.innerHTML = chainHTML(g, g.walk(i), state.wiki);
+}
+
+/* ---- 03 fate: histogram ⇄ cumulative with every wiki ---- */
+function cdfOf(st) { const bins = Object.keys(st.histogram).map(Number).sort((a, b) => a - b); const total = bins.reduce((a, b) => a + st.histogram[String(b)], 0); let run = 0; return bins.map((b) => { run += st.histogram[String(b)]; return [b, +(100 * run / total).toFixed(1)]; }); }
+function renderFate() { if (!cur.stats?.histogram) return; chartOf("fig-fate", "ch-fate"); applyFate(figState["fig-fate"] || "bars"); }
+function applyFate(st) {
+  const c = charts["fig-fate"], S = cur.stats; if (!c || !S?.histogram) return;
+  const bins = Object.keys(S.histogram).map(Number).sort((a, b) => a - b);
+  const counts = bins.map((b) => S.histogram[String(b)]);
+  const maxBin = Math.max(...bins, ...(st === "cumu" ? cur.all.map((x) => Math.max(...Object.keys(x.stats.histogram).map(Number))) : [0]));
+  const cumu = st === "cumu";
+  const others = cumu ? cur.all.filter((x) => x.id !== state.wiki).map((x) => ({ name: shortName(x.id), type: "line", data: cdfOf(x.stats), smooth: 0.3, symbol: "none", yAxisIndex: 1, xAxisIndex: 1, lineStyle: { color: C.ink3, width: 0.8, opacity: 0.55 }, emphasis: { lineStyle: { width: 2, color: C.plum, opacity: 1 } }, animationDuration: 600 })) : [];
   c.setOption({ ...chartBase,
     grid: { ...chartBase.grid, right: 44 },
-    tooltip: { ...chartBase.tooltip,
-      trigger: "axis", axisPointer: { type: "shadow", shadowStyle: { color: "rgba(32,27,20,0.06)" } },
-      formatter: (ps) => {
-        const p = ps[0]; if (!p) return "";
-        const o = ord[p.dataIndex]; if (!o) return "";
-        return `<b>${esc(o.name)}</b><br>${o.nodes.toLocaleString()} pages · ${o.convergePct}% converge` +
-          `<br>median walk ${o.medianHops} hops · dead ends ${o.deadEndPct}%` +
-          `<br>worships — <span style="color:#bc4b27">${esc(o.topAttractor.join(" → "))}</span> (${o.topAttractorPct}%)`;
-      } },
-    xAxis: { type: "value", max: 100, ...axisCommon, axisLabel: { ...axisCommon.axisLabel, formatter: "{value}%" } },
-    yAxis: { type: "category", data: ord.map(shortName), ...axisCommon, splitLine: { show: false }, axisLabel: { color: (v) => v === SHORT[state.wiki] ? "#201b14" : "#5f574a", fontSize: 9 } },
-    series: [{ type: "bar", name: "convergence",
-      data: ord.map((o, i) => ({
-        value: o.convergePct,
-        itemStyle: { color: o.id === state.wiki ? "#201b14" : hueAt(0.15 + 0.75 * (i / Math.max(1, ord.length - 1))) },
-      })),
-      barWidth: "66%",
-      label: { show: true, position: "right", color: "#93897a", fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => p.value.toFixed(0) + "%" },
-      animationDelay: (i) => i * 40 }],
-  }, true);
-  const hi = desc.find((o) => o.id === state.wiki);
-  el("note-overview").innerHTML = hi
-    ? `in focus — <b>${esc(hi.name)}</b> · ${hi.nodes.toLocaleString()} pages · ${hi.convergePct}% converge · philosophy: <b>${esc(hi.topAttractor.join(" → "))}</b> (${hi.topAttractorPct}%) · hover bars for the others`
-    : "—";
-}
-
-/* ---------- fig-chain : one walk ---------- */
-async function rollChain() {
-  const box = el("ch-chain");
-  if (!box) return;
-  box.innerHTML = "<span class='fate' style='color:var(--ink-3)'>walking…</span>";
-  try {
-    const r = await api(`/api/random?wiki=${state.wiki}`);
-    const c = await api(`/api/chain?wiki=${state.wiki}&rank=${state.rank}&title=${encodeURIComponent(r.title)}`);
-    const html = c.chain.map((t, i) => {
-      const isCyc = c.fate === "cycle" && i >= c.chain.length - (c.cycleSize || 3);
-      return `<span class="pill${i === 0 ? " start" : isCyc ? " cyc" : ""}">${esc(t)}</span>` +
-        (i < c.chain.length - 1 ? `<span class="arrow">→</span>` : "");
-    }).join("") + (c.fate === "cycle"
-      ? `<span class="fate"><span class="cyc">↻</span> loops forever — ${c.hops} hops, loop of ${c.cycleSize}</span>`
-      : `<span class="fate"><span class="dead">✝</span> dies after ${c.hops} hops — ${esc(c.reason)}</span>`);
-    box.innerHTML = html;
-  } catch (e) {
-    box.innerHTML = `<span class='fate' style='color:#a03d2e'>${esc(e.message)}</span>`;
-  }
-}
-
-/* ---------- fig-fate : histogram ⇄ cumulative (OSRS) ---------- */
-function renderFate() {
-  if (!stats?.histogram) return;
-  const c = chartOf("fig-fate", "ch-fate");
-  const bins = Object.keys(stats.histogram).map(Number).sort((a, b) => a - b);
-  const counts = bins.map((b) => stats.histogram[String(b)]);
-  const total = counts.reduce((a, b) => a + b, 0);
-  let run = 0;
-  const cum = counts.map((v) => { run += v; return +(100 * run / total).toFixed(1); });
-  c._fate = { bins, counts, cum };
-  el("note-fate").innerHTML = `N = <b>${total.toLocaleString()}</b> OSRS articles that reached a loop · median <b>${stats.hopStats.median}</b> · mean ${stats.hopStats.mean} · max ${stats.hopStats.max} hops`;
-  applyState("fig-fate", figState["fig-fate"] || "bars", true);
-}
-function applyFate(st, force) {
-  const c = charts["fig-fate"]; if (!c || !c._fate) return;
-  const { bins, counts, cum } = c._fate;
-  const median = stats?.hopStats?.median;
-  const lineData = st === "cumu" ? cum : [];
-  c.setOption({ ...chartBase,
-    xAxis: { type: "category", data: bins.map(String), ...axisCommon, splitLine: { show: false } },
+    tooltip: { ...chartBase.tooltip, trigger: "item", formatter: (p) => p.seriesType === "bar" ? `${p.value.toLocaleString()} articles reach their loop in ${bins[p.dataIndex]} clicks` : `<b>${esc(p.seriesName)}</b> · ${p.value[1]}% in a loop by click ${p.value[0]}` },
+    xAxis: [
+      { type: "category", data: bins.map(String), ...axisCommon, splitLine: { show: false } },
+      { type: "value", min: -0.5, max: maxBin + 0.5, show: false },
+    ],
     yAxis: [
-      { type: "value", ...axisCommon },
+      { type: "value", ...axisCommon, axisLabel: { ...axisCommon.axisLabel, formatter: (v) => v >= 1000 ? (v / 1000) + "k" : v } },
       { type: "value", max: 100, ...axisCommon, splitLine: { show: false }, axisLabel: { ...axisCommon.axisLabel, formatter: "{value}%" } },
     ],
     series: [
-      { type: "bar", data: counts, itemStyle: { color: hueAt(0.08) }, barWidth: "72%",
-        animationDelay: (i) => i * 40,
-        markLine: median != null ? { symbol: "none", silent: true, lineStyle: { color: "#201b14", type: "dashed", opacity: 0.4, width: 1 },
-          label: { color: "#5f574a", fontSize: 9, formatter: "median " + median, position: "insideEndTop" },
-          data: [{ xAxis: String(median) }] } : undefined },
-      { type: "line", data: lineData, yAxisIndex: 1, smooth: 0.35, symbol: "none",
-        lineStyle: { color: hueAt(1), width: 2 },
-        animationDuration: force ? 850 : 900,
-        endLabel: { show: st === "cumu", formatter: "in a loop by now", color: "#93897a", fontSize: 9, fontFamily: "Space Mono, monospace" } },
+      { type: "bar", data: counts, itemStyle: { color: cumu ? "#dcc9b8" : C.rust }, barWidth: "72%", animationDelay: (i) => i * 30,
+        markLine: { symbol: "none", silent: true, lineStyle: { color: C.ink, type: "dashed", opacity: 0.45, width: 1 }, label: { color: C.ink2, fontSize: 9, formatter: "median " + S.hopStats.median + " clicks", position: "end" }, data: [{ xAxis: String(S.hopStats.median) }] } },
+      ...others,
+      { name: shortName(state.wiki), type: "line", data: cumu ? cdfOf(S) : [], xAxisIndex: 1, yAxisIndex: 1, smooth: 0.3, symbol: "none", lineStyle: { color: C.ink, width: 2.2 }, z: 10,
+        endLabel: { show: cumu, formatter: "in a loop by now", color: C.ink2, fontSize: 9, fontFamily: "Space Mono, monospace" } },
     ],
-  }, st === "cumu" && !force ? false : true);
+  }, true);
+  el("note-fate").innerHTML = cumu
+    ? `cumulative share of converging articles home by click N · <b>${esc(shortName(state.wiki))}</b> in ink, the other ${cur.all.length - 1} wikis in grey · hover a curve to name it`
+    : `x = clicks to enter a loop · N = <b>${Object.values(S.histogram).reduce((a, b) => a + b, 0).toLocaleString()}</b> articles that reached one · median <b>${S.hopStats.median}</b> · mean ${S.hopStats.mean} · p90 ${S.hopStats.p90} · max ${S.hopStats.max}`;
 }
 
-/* ---------- fig-attractors : 3 ⇄ 9 (OSRS) ---------- */
-function renderAttractors() {
-  if (!stats?.topAttractors) return;
-  chartOf("fig-attractors", "ch-attr");
-  applyState("fig-attractors", figState["fig-attractors"] || "three", true);
+/* ---- 04 waffle ---- */
+function loopColor(i) { return i < WALK_COLORS.loops.length ? WALK_COLORS.loops[i] : hueAt(0.3 + 0.7 * ((i * 0.37) % 1)); }
+function renderWaffle() {
+  const w = el("waffle");
+  if (!w.children.length) for (let i = 0; i < 100; i++) w.appendChild(document.createElement("i"));
+  applyWaffle(figState["fig-waffle"] || "three");
 }
-function applyAttractors(st) {
-  const c = charts["fig-attractors"]; if (!c || !stats?.topAttractors) return;
-  const n = st === "nine" ? 9 : 3;
-  const topA = stats.topAttractors.slice(0, n);
-  c.setOption({ ...chartBase,
-    grid: { ...chartBase.grid, right: 56 },
-    xAxis: { type: "value", ...axisCommon },
-    yAxis: { type: "category", data: topA.map((a) => a.cycle.join("→")).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 190, overflow: "truncate" }, splitLine: { show: false } },
-    series: [{ type: "bar", data: topA.map((a) => a.basin).reverse(),
-      itemStyle: { color: (p) => hueAt(0.15 + 0.75 * (p.dataIndex / Math.max(1, topA.length - 1))) },
-      label: { show: true, position: "right", color: "#93897a", fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => topA[topA.length - 1 - p.dataIndex].pct + "%" },
-      animationDelay: (i) => i * 55 }],
-  });
-  el("note-attr").innerHTML = `basin = OSRS articles draining into the loop · top loop holds <b>${stats.topAttractors[0]?.pct ?? 0}%</b> of the wiki · long tail = the cults`;
-}
-
-/* ---------- fig-pantheons : every wiki's godhead ---------- */
-function renderPantheons() {
-  const wrap = el("ch-pantheons");
-  if (!wrap || !overview.length) return;
-  const rows = overview.slice().sort((a, b) => b.topAttractorPct - a.topAttractorPct);
-  wrap.innerHTML =
-    "<table class='ptable'><thead><tr><th>wiki</th><th>philosophy — first link</th><th class='num'>basin</th><th class='num'>converge</th><th class='num'>pages</th></tr></thead><tbody>" +
-    rows.map((o) =>
-      `<tr${o.id === state.wiki ? " class='hi'" : ""}><td>${esc(shortName(o))}</td><td class="ph">${esc(o.topAttractor.join(" → "))}</td>` +
-      `<td class="num">${o.topAttractorPct}%</td><td class="num">${o.convergePct}%</td><td class="num">${o.nodes.toLocaleString()}</td></tr>`
-    ).join("") + "</tbody></table>";
-  el("note-pantheons").innerHTML =
-    `fifteen wikis, ranked by devoutness (technical term: top attractor basin share) · <b>OSRS highlighted</b> · ` +
-    window.__STATIC__ ? "" : `every wiki and every rank, in the <a href="/lab" style="color:var(--cy)">full dashboard ↗</a>`;
+function applyWaffle(st) {
+  const S = cur.stats; if (!S?.topAttractors) return;
+  const show = st === "three" ? 3 : st === "nine" ? 9 : 999;
+  const loops = S.topAttractors;
+  const cells = el("waffle").children;
+  const N = S.nodes;
+  // allocate cells by largest remainder so shares add to 100
+  const shares = loops.map((l, i) => ({ i, exact: 100 * l.basin / N }));
+  const otherLoops = Math.max(0, S.converge.pct - shares.reduce((a, s) => a + s.exact, 0));
+  shares.push({ i: -2, exact: otherLoops }); shares.push({ i: -1, exact: S.converge.deadEndPct });
+  let used = 0; shares.forEach((s) => { s.n = Math.floor(s.exact); used += s.n; });
+  shares.slice().sort((a, b) => (b.exact - b.n) - (a.exact - a.n)).slice(0, 100 - used).forEach((s) => s.n++);
+  let k = 0;
+  const color = (i) => i === -1 ? "#d9d2c3" : i === -2 || i >= show ? (st === "all" ? "#c9bca8" : "#c9bca8") : loopColor(i);
+  for (const s of shares) for (let j = 0; j < s.n && k < 100; j++, k++) {
+    const cellEl = cells[k]; const col = color(s.i);
+    if (cellEl.dataset.col !== col) { cellEl.classList.add("hot"); setTimeout(() => cellEl.classList.remove("hot"), 350 + k * 4); }
+    cellEl.style.backgroundColor = col; cellEl.dataset.col = col;
+    cellEl.title = s.i >= 0 ? `${loopName(loops[s.i].cycle)} · ${loops[s.i].pct}%` : s.i === -1 ? `graveyard · ${S.converge.deadEndPct}%` : `smaller loops · ${otherLoops.toFixed(1)}%`;
+  }
+  const legend = loops.slice(0, Math.min(show, 12)).map((l, i) => `<div><span class="sw" style="background:${loopColor(i)}"></span><span class="nm" title="${esc(loopName(l.cycle))}">${esc(loopName(l.cycle))}</span><span class="pc">${l.pct}%</span></div>`).join("")
+    + (show < loops.length || otherLoops > 0.5 ? `<div><span class="sw" style="background:#c9bca8"></span><span class="nm">${show < loops.length ? `${(S.cycleCount - show).toLocaleString()} smaller loops` : "smaller loops"}</span><span class="pc">${(st === "all" ? otherLoops : (S.converge.pct - loops.slice(0, show).reduce((a, l) => a + l.pct, 0))).toFixed(1)}%</span></div>` : "")
+    + `<div><span class="sw" style="background:#d9d2c3"></span><span class="nm">graveyard · walks that die</span><span class="pc">${S.converge.deadEndPct}%</span></div>`;
+  el("wlegend").innerHTML = legend;
+  el("note-waffle").innerHTML = `${S.cycleCount.toLocaleString()} loops in <b>${esc(shortName(state.wiki))}</b> · top loop ${loops[0]?.pct ?? 0}% · top three ${(loops.slice(0, 3).reduce((a, l) => a + l.pct, 0)).toFixed(1)}% · hover a square`;
 }
 
-/* ---------- fig-decay : conv → +top → +dead (OSRS) ---------- */
-function renderDecay() {
-  if (!summary) return;
+/* ---- 05 census ---- */
+function renderCensus() {
+  const rows = cur.all.map((x) => ({ id: x.id, st: x.stats, top: loopEntry(x.stats, 0) })).sort((a, b) => (b.top.pct ?? 0) - (a.top.pct ?? 0));
+  el("ch-census").innerHTML = "<table class='ptable'><thead><tr><th>wiki</th><th>biggest loop</th><th class='num'>basin</th><th class='num'>loops</th><th class='num'>graveyard</th><th class='num'>articles</th></tr></thead><tbody>" +
+    rows.map((r) => `<tr${r.id === state.wiki ? " class='hi'" : ""}><td>${esc(shortName(r.id))}</td><td class="ph" title="${esc(r.top.name ?? "")}">${esc(r.top.name ?? "—")}</td>` +
+      `<td class="num"><span class="bar" style="width:${Math.round((r.top.pct ?? 0) * 0.45)}px"></span>${r.top.pct ?? 0}%</td><td class="num">${r.st.cycleCount.toLocaleString()}</td>` +
+      `<td class="num"><span class="bar dead" style="width:${Math.round(r.st.converge.deadEndPct * 0.45)}px"></span>${r.st.converge.deadEndPct}%</td><td class="num">${r.st.nodes.toLocaleString()}</td></tr>`).join("") + "</tbody></table>";
+  el("note-census").innerHTML = `ranked by devoutness: share of the wiki that drains into its single biggest loop · <b>${esc(shortName(state.wiki))}</b> highlighted · ${rankLabel(state.rank)}`;
+}
+
+/* ---- 06 decay ---- */
+const ORDINAL_RANKS = ["strict1", "2", "3", "5"], TAIL_RANKS = ["last", "random"];
+let eligibleCache = new Map();
+async function renderDecay() {
+  if (!cur.summary) return;
   chartOf("fig-decay", "ch-decay");
-  applyState("fig-decay", figState["fig-decay"] || "conv", true);
+  applyDecay(figState["fig-decay"] || "top");
+  // eligible-link shares come from stats if present, otherwise from the succ tables (lazy)
+  const need = cur.summary.ranks.filter((r) => !eligiblePct(r.rank)).map((r) => r.rank);
+  if (need.length) {
+    await Promise.all(need.map(async (r) => { try { const g = await loadGraph(state.wiki, r); eligibleCache.set(`${state.wiki}|${r}`, eligibleFromGraph(g, r)); } catch {} }));
+    applyDecay(figState["fig-decay"] || "top");
+    if (state.wiki === PROSE_WIKI) refreshProseEligible();
+  }
+}
+function eligiblePct(rank) {
+  return eligibleCache.get(`${state.wiki}|${rank}`) ?? (rank === "last" || rank === "random" ? 100 : undefined);
 }
 function applyDecay(st) {
-  const c = charts["fig-decay"]; if (!c || !summary) return;
-  const order = summary.ranks;
-  const labels = order.map((r) => rankLabel(r.rank));
-  const conv = order.map((r) => r.convergePct);
-  const top = st === "both" || st === "full" ? order.map((r) => r.topAttractorPct) : [];
-  const dead = st === "full" ? order.map((r) => r.deadEndPct) : [];
+  const c = charts["fig-decay"], S = cur.summary; if (!c || !S) return;
+  const get = (r) => S.ranks.find((x) => x.rank === r);
+  const cats = [...ORDINAL_RANKS.map(rankLabel), "", ...TAIL_RANKS.map(rankLabel)];
+  const ord = ORDINAL_RANKS.map(get), tail = TAIL_RANKS.map(get);
+  const showConv = st === "conv" || st === "tail", showTail = st === "tail";
+  const pt = (rows, k, offset) => rows.map((r, i) => (r ? { value: [cats[i + offset], r[k]] } : null)).filter(Boolean);
+  const elig = ORDINAL_RANKS.map((r) => eligiblePct(r));
   c.setOption({ ...chartBase,
-    legend: { top: 0, right: 0, textStyle: { color: "#93897a", fontSize: 9, fontFamily: "Space Mono, monospace" }, itemWidth: 14 },
-    xAxis: { type: "category", data: labels, ...axisCommon, splitLine: { show: false }, axisLabel: { color: "#93897a", fontSize: 8, rotate: 18 } },
-    yAxis: { type: "value", max: 100, ...axisCommon, axisLabel: { ...axisCommon.axisLabel, formatter: "{value}%" } },
-    series: [
-      { name: "converge", type: "line", data: conv, smooth: 0.4, symbolSize: 5, lineStyle: { color: hueAt(0), width: 2 }, itemStyle: { color: hueAt(0) },
-        areaStyle: { color: { type: "linear", x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: "oklch(70% 0.13 40 / 0.16)" }, { offset: 1, color: "oklch(70% 0.13 40 / 0)" }] } },
-        animationDelay: (i) => i * 70 },
-      { name: "top attractor", type: "line", data: top, smooth: 0.4, symbolSize: 5, lineStyle: { color: hueAt(1), width: 2, type: "dashed" }, itemStyle: { color: hueAt(1) }, animationDelay: (i) => 120 + i * 70 },
-      { name: "dead ends", type: "line", data: dead, smooth: 0.4, symbolSize: 4, lineStyle: { color: "#8c8172", width: 1.5, type: "dotted" }, itemStyle: { color: "#8c8172" }, animationDelay: (i) => 200 + i * 70 },
+    grid: { ...chartBase.grid, right: 44 },
+    legend: { top: 0, right: 0, itemWidth: 12, itemHeight: 8, textStyle: { color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace" } },
+    tooltip: { ...chartBase.tooltip, trigger: "axis", formatter: (ps) => { const r = S.ranks.find((x) => rankLabel(x.rank) === ps[0]?.axisValue); if (!r) return ""; return `<b>${esc(rankLabel(r.rank))}</b><br>top loop <span style="color:${C.rust}">${esc(loopName(r.topAttractor))}</span> · ${r.topAttractorPct}%<br>${r.cycleCount.toLocaleString()} loops · ${r.convergePct}% converge · median ${r.medianHops} clicks`; } },
+    xAxis: { type: "category", data: cats, ...axisCommon, splitLine: { show: false }, axisLabel: { color: C.ink3, fontSize: 8.5, interval: 0 } },
+    yAxis: [
+      { type: "value", max: 100, ...axisCommon, axisLabel: { ...axisCommon.axisLabel, formatter: "{value}%" } },
+      { type: "value", ...axisCommon, splitLine: { show: false }, axisLabel: { ...axisCommon.axisLabel, formatter: (v) => v + " loops" }, name: "", show: true },
     ],
-  });
-  const r = order.find((x) => x.rank === state.rank);
-  el("note-decay").innerHTML = r
-    ? `each point recomputes all ${stats.nodes.toLocaleString()} walks with a different link rank · ${rankLabel(state.rank)}: ${r.convergePct}% converge, top loop ${r.topAttractorPct}%`
-    : "—";
+    series: [
+      { name: "biggest loop's share", type: "line", data: pt(ord, "topAttractorPct", 0), symbolSize: 7, lineStyle: { color: C.rust, width: 2.4 }, itemStyle: { color: C.rust }, z: 5,
+        label: { show: true, position: "top", color: C.rust, fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => p.value[1] + "%" } },
+      { name: "number of loops", type: "bar", yAxisIndex: 1, data: pt(ord, "cycleCount", 0), barWidth: "38%", itemStyle: { color: "rgba(109,59,126,0.22)" }, z: 1 },
+      { name: "find a loop", type: "line", data: showConv ? pt(ord, "convergePct", 0) : [], symbolSize: 5, lineStyle: { color: C.ink, width: 1.6 }, itemStyle: { color: C.ink } },
+      { name: "have enough links", type: "line", data: showConv ? ORDINAL_RANKS.map((r, i) => elig[i] == null ? null : { value: [cats[i], elig[i]] }).filter(Boolean) : [], symbolSize: 4, lineStyle: { color: C.ink3, width: 1.4, type: "dotted" }, itemStyle: { color: C.ink3 } },
+      { name: "biggest loop's share", type: "scatter", data: showTail ? pt(tail, "topAttractorPct", 5) : [], symbolSize: 9, itemStyle: { color: C.rust }, label: { show: true, position: "top", color: C.rust, fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => p.value[1] + "%" } },
+      { name: "find a loop", type: "scatter", data: showTail ? pt(tail, "convergePct", 5) : [], symbolSize: 7, itemStyle: { color: C.ink } },
+      { name: "number of loops", type: "bar", yAxisIndex: 1, data: showTail ? pt(tail, "cycleCount", 5) : [], barWidth: "38%", itemStyle: { color: "rgba(109,59,126,0.22)" } },
+    ],
+  }, true);
+  const r = get(state.rank);
+  el("note-decay").innerHTML = (r ? `${rankLabel(state.rank)}: top loop <b>${esc(loopName(r.topAttractor))}</b> ${r.topAttractorPct}% · ${r.cycleCount.toLocaleString()} loops · ${r.convergePct}% converge · ` : "") + `ranks 1–5 are ordinal; last and random are detached controls`;
 }
+function refreshProseEligible() { F.o.r5.eligiblePct = eligiblePct("5"); F.o.r2.eligiblePct = eligiblePct("2"); F.o.r3.eligiblePct = eligiblePct("3"); renderLive(); }
 
-/* ---------- fig-hubs-deg / fig-hubs-bet (OSRS) ---------- */
+/* ---- 07 hubs ---- */
 function renderHubs(which) {
-  if (!stats) return;
-  const key = which === "deg" ? "topInDegree" : "topBetweenness";
-  const list = (stats[key] ?? []).slice(0, 10);
+  const S = cur.stats; if (!S) return;
+  const list = (which === "deg" ? topTargets(S) : throughTraffic(S)).slice(0, 12);
   if (!list.length) return;
   const c = chartOf(which === "deg" ? "fig-hubs-deg" : "fig-hubs-bet", which === "deg" ? "ch-deg" : "ch-bet");
-  c.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 48 },
+  const val = (r) => which === "deg" ? targetCount(r) : trafficCount(r);
+  c.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 52 },
+    tooltip: { ...chartBase.tooltip, trigger: "item", formatter: (p) => { const r = list[list.length - 1 - p.dataIndex]; return `<b>${esc(r.title)}</b><br>${which === "deg" ? `first link of ${val(r).toLocaleString()} articles` : `${val(r).toLocaleString()} walks pass through`}`; } },
+    xAxis: { type: "value", ...axisCommon, axisLabel: { ...axisCommon.axisLabel, formatter: (v) => v >= 1000 ? (v / 1000).toFixed(v >= 10000 ? 0 : 1) + "k" : v } },
+    yAxis: { type: "category", data: list.map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: C.ink2, fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
+    series: [{ type: "bar", data: list.map(val).reverse(), itemStyle: { color: which === "deg" ? C.ochre : C.teal }, barWidth: "66%",
+      label: { show: true, position: "right", color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => p.value.toLocaleString() }, animationDelay: (i) => i * 35 }],
+  }, true);
+}
+
+/* ---- 08 graveyard ---- */
+function renderGrave() {
+  const S = cur.stats; if (!S?.deadEndTerminals) return;
+  const list = S.deadEndTerminals.slice(0, 10);
+  const c = chartOf("fig-grave", "ch-grave");
+  c.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 52 },
+    tooltip: { ...chartBase.tooltip, trigger: "item", formatter: (p) => { const r = list[list.length - 1 - p.dataIndex]; return `<b>${esc(r.title)}</b><br>${r.chains.toLocaleString()} walks die here (${r.pct}% of the wiki)<br>${esc(r.reason)}`; } },
     xAxis: { type: "value", ...axisCommon },
-    yAxis: { type: "category", data: list.map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
-    series: [{ type: "bar", data: list.map((r) => r[which === "deg" ? "inDegree" : "betweenness"]).reverse(),
-      itemStyle: { color: (p) => hueAt(which === "deg" ? 0.9 - 0.7 * (p.dataIndex / 10) : 0.35 + 0.5 * (p.dataIndex / 10)) },
-      animationDelay: (i) => i * 40 }],
+    yAxis: { type: "category", data: list.map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: C.ink2, fontSize: 9, width: 170, overflow: "truncate" }, splitLine: { show: false } },
+    series: [{ type: "bar", data: list.map((r) => r.chains).reverse(), itemStyle: { color: C.dead }, barWidth: "66%",
+      label: { show: true, position: "right", color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => p.value.toLocaleString() }, animationDelay: (i) => i * 35 }],
   }, true);
+  const covered = list.reduce((a, r) => a + r.chains, 0);
+  el("note-grave").innerHTML = `${S.converge.deadEnd.toLocaleString()} walks die on <b>${esc(shortName(state.wiki))}</b> (${S.converge.deadEndPct}%) · the ten pages shown account for ${covered.toLocaleString()} of them · hover for the cause of death`;
 }
 
-/* ---------- fig-graph : the OSRS constellation ---------- */
-async function renderGraph() {
-  const key = `${state.wiki}|${state.rank}|2`;
-  try {
-    if (!graphCache.has(key)) graphCache.set(key, await api(`/api/graph?wiki=${state.wiki}&rank=${state.rank}&detail=2`));
-  } catch (e) {
-    el("note-graph").textContent = `no graph data (${e.message})`;
-    return;
-  }
-  const g = graphCache.get(key);
-  const c = chartOf("fig-graph", "ch-graph");
-  const HUES = [hueAt(0), hueAt(0.55), hueAt(1), hueAt(0.8), "#93897a"];
-  const byId = new Map(g.nodes.map((n) => [n.id, n]));
-
-  const chartNodes = g.nodes.map((n) => ({
-    id: String(n.id), name: n.title, x: n.x, y: n.y,
-    symbolSize: Math.max(3, Math.min(30, n.isCycle ? 15 : 3 + 2.1 * Math.sqrt(n.inDeg))),
-    itemStyle: { color: n.deadEnd || n.group === 4 ? "#93897a" : HUES[Math.min(n.group, 4)] ?? "#201b14", borderColor: n.isCycle ? "#201b14" : "rgba(32,27,20,0.35)", borderWidth: n.isCycle ? 1.6 : 0.4 },
-    label: { show: n.isCycle || (n.inDeg >= 60 && n.inDeg <= 300), position: "bottom", distance: 3, color: n.isCycle ? "#201b14" : "#5f574a", fontSize: n.isCycle ? 10 : 8, fontWeight: n.isCycle ? 700 : 400, fontFamily: "Space Mono, monospace" },
-    raw: n,
-  }));
-  const chartLinks = g.edges.map((e) => {
-    const src = byId.get(e.source), tgt = byId.get(e.target);
-    const width = 0.5 + 1.0 * Math.log10(Math.max(1, src?.flow || 1));
-    const isDead = src?.group === 4 || tgt?.group === 4;
-    return {
-      source: String(e.source), target: String(e.target),
-      lineStyle: { color: isDead ? "rgba(147,137,122,0.35)" : "rgba(60,50,35,0.20)", width, opacity: isDead ? 0.4 : 0.5, curveness: 0.12, type: isDead ? "dashed" : "solid" },
-      symbol: ["none", "arrow"], symbolSize: [0, Math.max(3, Math.min(7, width))],
-    };
-  });
-  const xs = g.nodes.map((n) => n.x), ys = g.nodes.map((n) => n.y);
-  c.setOption({
-    backgroundColor: "transparent", animation: false,
-    tooltip: {
-      backgroundColor: "#fffdf5", borderColor: "#ddd3c0", borderWidth: 1,
-      textStyle: { color: "#201b14", fontSize: 11, fontFamily: "Space Mono, monospace" },
-      formatter: (p) => p.dataType !== "node" ? "" :
-        `<b>${esc(p.data.raw.title)}</b>${p.data.raw.isCycle ? " · loop" : ""}<br>${p.data.raw.inDeg} articles link here` +
-        (p.data.raw.flow ? ` · ${p.data.raw.flow} chains through` : "") + `<br>→ ${p.data.raw.target || "dies"}`,
-    },
-    series: [{ type: "graph", layout: "none", data: chartNodes, links: chartLinks, roam: true, draggable: true,
-      center: [(Math.min(...xs) + Math.max(...xs)) / 2, (Math.min(...ys) + Math.max(...ys)) / 2],
-      left: 0, right: 0, top: 0, bottom: 0, scaleLimit: { min: 0.3, max: 8 },
-      emphasis: { focus: "none" }, progressive: 500 }],
-  }, true);
-  c.off("click"); c.on("click", (p) => { if (p.dataType === "node" && p.data.raw.url) window.open(p.data.raw.url, "_blank", "noopener"); });
-  el("note-graph").innerHTML =
-    g.loops.map((l, i) => `<span style="color:${HUES[i]}">■</span> ${esc(l.cycle.join(" → "))} · ${l.pct}%`).join(" &nbsp; ") +
-    ` <span style="color:#93897a">■</span> dead ends &nbsp;·&nbsp; ${g.nodes.length} of ${g.mainspace.toLocaleString()} articles · hover to read · click to open · scroll to zoom`;
+/* ---- 09 the drainage map (explore) + hero ---- */
+let heroField = null, mapField = null;
+function fieldHover(noteId) {
+  return (i, wk) => {
+    const n = el(noteId); if (!n || !cur.graph) return;
+    if (i < 0) { n.innerHTML = n.dataset.idle ?? ""; return; }
+    const g = cur.graph, t = g.titles[i];
+    n.innerHTML = wk.fate === "cycle"
+      ? `<b>${esc(t)}</b> → ${wk.hops} click${wk.hops === 1 ? "" : "s"} → loop <span style="color:${loopColor(wk.loop)}">${esc(loopName(wk.chain.slice(-wk.cycleSize).map((k) => g.titles[k])))}</span>`
+      : `<b>${esc(t)}</b> → dies after ${wk.hops} click${wk.hops === 1 ? "" : "s"} at <b>${esc(g.titles[wk.terminal])}</b> · ${esc(wk.reason)}`;
+  };
+}
+function ensureMap() {
+  if (!mapField) mapField = createWalkField(el("mapField"), { explore: true, walkers: reduced ? 0 : 220, speed: 70, labels: 8, edgeAlpha: 0.11, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: fieldHover("note-map") });
+  if (cur.graph) mapField.setGraph(cur.graph);
+  const g = cur.graph; if (!g) return;
+  const n = el("note-map");
+  n.dataset.idle = `<span class="legend">` + g.loops.slice(0, 6).map((l) => `<span><span class="sw" style="background:${loopColor(l.id)}"></span>${esc(loopName(l.nodes.map((k) => g.titles[k])))} · ${(100 * l.basin / g.N).toFixed(1)}%</span>`).join("") + `<span><span class="sw" style="background:${C.dead}"></span>dead ends</span></span>`;
+  n.innerHTML = n.dataset.idle;
+}
+function renderHero() {
+  if (!heroField) heroField = createWalkField(el("heroField"), { explore: false, walkers: reduced ? 0 : 360, speed: 85, labels: 5, edgeAlpha: 0.08, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: (i, wk) => {
+    const h = el("heroHint");
+    if (i < 0 || !cur.graph) { h.textContent = "hover an article to trace its walk · click to read it"; return; }
+    const g = cur.graph;
+    h.textContent = wk.fate === "cycle" ? `${g.titles[i]} → ${wk.hops} clicks → ${loopName(wk.chain.slice(-wk.cycleSize).map((k) => g.titles[k]))}` : `${g.titles[i]} → dies after ${wk.hops} clicks at ${g.titles[wk.terminal]}`;
+  } });
+  if (cur.graph) heroField.setGraph(cur.graph);
+}
+function updateReadout() {
+  const S = cur.stats; if (!S) return;
+  const top = S.topAttractors?.[0];
+  el("mastReadout").innerHTML =
+    `<span><b>${S.nodes.toLocaleString()}</b> articles</span><span><b>${S.converge.pct}%</b> fall into a loop</span>` +
+    `<span><b>${S.cycleCount.toLocaleString()}</b> loops</span><span><b>${S.converge.deadEndPct}%</b> die</span>` +
+    (top ? `<span>biggest whirlpool <b>${esc(loopName(top.cycle))}</b> · ${top.pct}%</span>` : "");
 }
 
-/* ---------- fig-play : the game ---------- */
-let playLastTitle = "";
+/* ---- 10 play ---- */
+let playLast = "";
 async function playChain(title) {
-  const out = el("playOut");
-  playLastTitle = title;
-  out.innerHTML = `<span class='fate' style='color:var(--ink-3)'>walking @ ${esc(rankLabel(state.playRank))}…</span>`;
+  const out = el("playOut"); playLast = title;
+  out.innerHTML = `<span class="fate" style="color:var(--ink-3)">walking @ ${esc(rankLabel(state.playRank))}…</span>`;
   try {
-    const c = await api(`/api/chain?wiki=${state.wiki}&rank=${state.playRank}&title=${encodeURIComponent(title)}`);
-    if (title !== playLastTitle) return;
-    const html = c.chain.map((t, i) => {
-      const isCyc = c.fate === "cycle" && i >= c.chain.length - (c.cycleSize || 3);
-      return `<span class="pill${i === 0 ? " start" : isCyc ? " cyc" : ""}">${esc(t)}</span>` +
-        (i < c.chain.length - 1 ? `<span class="arrow">→</span>` : "");
-    }).join("") + (c.fate === "cycle"
-      ? `<span class="fate"><span class="cyc">↻</span> loops forever — ${c.hops} hops to enter a loop of ${c.cycleSize}</span>`
-      : `<span class="fate"><span class="dead">✝</span> chain dies after ${c.hops} hops — ${esc(c.reason)}</span>`);
-    out.innerHTML = html;
-  } catch (e) {
-    out.innerHTML = `<span class='fate' style='color:#a03d2e'>${esc(e.message)}</span>`;
-  }
+    const g = await loadGraph(state.wiki, state.playRank);
+    if (title !== playLast) return;
+    let i = g.titles.indexOf(title);
+    if (i < 0) { const low = title.toLowerCase(); i = g.titles.findIndex((t) => t.toLowerCase() === low); }
+    if (i < 0) throw new Error(`no article called "${title}" on ${shortName(state.wiki)}`);
+    out.innerHTML = chainHTML(g, g.walk(i), state.wiki);
+  } catch (e) { out.innerHTML = `<span class="fate" style="color:#a03d2e">${esc(e.message)}</span>`; }
 }
 function buildPlayRanks() {
-  const row = el("playRanks");
-  const opts = ["strict1", "2", "3", "5", "last", "random"];
-  row.innerHTML = "";
-  for (const r of opts) {
-    const b = document.createElement("button");
-    b.type = "button";
-    b.className = "rpill" + (r === state.playRank ? " on" : "");
-    b.textContent = rankLabel(r);
-    b.onclick = () => {
-      state.playRank = r;
-      [...row.children].forEach((x) => x.classList.toggle("on", x === b));
-      if (playLastTitle) playChain(playLastTitle);
-    };
+  const row = el("playRanks"); row.innerHTML = "";
+  const ranks = wikiById(state.wiki)?.ranks ?? ["strict1"];
+  if (!ranks.includes(state.playRank)) state.playRank = ranks[0];
+  for (const r of ranks) {
+    const b = document.createElement("button"); b.type = "button"; b.className = "rpill" + (r === state.playRank ? " on" : ""); b.textContent = rankLabel(r);
+    b.onclick = () => { state.playRank = r; [...row.children].forEach((x) => x.classList.toggle("on", x === b)); if (playLast) playChain(playLast); };
     row.appendChild(b);
   }
 }
 
-/* ---------- registry ---------- */
+/* ---- registry ---- */
 const renderers = {
-  "fig-overview": renderOverview,
-  "fig-chain": rollChain,
-  "fig-fate": renderFate,
-  "fig-attractors": renderAttractors,
-  "fig-pantheons": renderPantheons,
-  "fig-decay": renderDecay,
-  "fig-hubs-deg": () => renderHubs("deg"),
-  "fig-hubs-bet": () => renderHubs("bet"),
-  "fig-graph": renderGraph,
-  "fig-play": () => {},
+  "fig-field": renderField, "fig-chain": rollChain, "fig-fate": renderFate, "fig-waffle": renderWaffle, "fig-census": renderCensus,
+  "fig-decay": renderDecay, "fig-hubs-deg": () => renderHubs("deg"), "fig-hubs-bet": () => renderHubs("bet"), "fig-grave": renderGrave,
+  "fig-map": ensureMap, "fig-play": () => {},
 };
-const figState = {};
-function ensureFig(id) {
-  if (figInit[id] || !renderers[id]) return;
-  figInit[id] = true;
-  renderers[id]();
-}
-function applyState(id, st, force) {
+function ensureFig(id) { if (figInit[id] || !renderers[id]) return; figInit[id] = true; renderers[id](); }
+function applyState(id, st) {
   figState[id] = st;
-  if (id === "fig-fate") applyFate(st, force);
-  else if (id === "fig-attractors") applyAttractors(st);
-  else if (id === "fig-decay") applyDecay(st);
+  if (id === "fig-fate") applyFate(st); else if (id === "fig-waffle") applyWaffle(st); else if (id === "fig-decay") applyDecay(st);
 }
 
 /* ==================================================================== *
- * steps — the scrollytelling engine (drives both modes)
+ * scrollytelling engine
  * ==================================================================== */
 const steps = [...document.querySelectorAll(".step")];
+const figEls = {}, slots = {};
+const panelStack = el("panelStack");
 function activate(stepEl) {
-  state.step = stepEl;
   steps.forEach((s) => s.classList.toggle("on", s === stepEl));
   const id = stepEl.dataset.fig;
   ensureFig(id);
   if (stepEl.dataset.state) applyState(id, stepEl.dataset.state);
-  if (effectiveMode() === "split") showLayer(id);
+  if (effectiveMode() === "split") for (const child of panelStack.children) child.classList.toggle("on", child.id === id);
   const i = steps.indexOf(stepEl);
-  const lbl = el("panelLabel");
-  lbl.innerHTML = `<b>${String(i + 1).padStart(2, "0")}</b> / ${String(steps.length).padStart(2, "0")} — ${esc(stepEl.dataset.label ?? "")}`;
+  el("panelLabel").innerHTML = `<b>${String(i + 1).padStart(2, "0")}</b> / ${String(steps.length).padStart(2, "0")} — ${esc(stepEl.dataset.label ?? "")}`;
   [...el("panelDots").children].forEach((d, di) => d.classList.toggle("on", di === i));
+  requestAnimationFrame(resizeAll);
 }
-function showLayer(id) {
-  for (const child of panelStack.children) child.classList.toggle("on", child.id === id);
-}
-const band = new IntersectionObserver((entries) => {
-  for (const e of entries) if (e.isIntersecting) activate(e.target);
-}, { rootMargin: "-42% 0px -42% 0px", threshold: 0 });
+const band = new IntersectionObserver((entries) => { for (const e of entries) if (e.isIntersecting) activate(e.target); }, { rootMargin: "-42% 0px -42% 0px", threshold: 0 });
 steps.forEach((s) => band.observe(s));
+steps.forEach((s, i) => { const d = document.createElement("button"); d.type = "button"; d.setAttribute("aria-label", "Go to step " + (i + 1)); d.onclick = () => s.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" }); el("panelDots").appendChild(d); });
+window.addEventListener("scroll", () => { const h = document.documentElement; el("progress").style.width = (100 * h.scrollTop / (h.scrollHeight - h.clientHeight)) + "%"; }, { passive: true });
 
-/* dots */
-steps.forEach((s, i) => {
-  const d = document.createElement("button");
-  d.type = "button";
-  d.setAttribute("aria-label", "Go to step " + (i + 1));
-  d.onclick = () => s.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
-  el("panelDots").appendChild(d);
-});
-
-/* ==================================================================== *
- * mode switching — split ⇄ wide (figures physically move)
- * ==================================================================== */
 function effectiveMode() { return narrow.matches ? "wide" : state.mode; }
 function setMode(m, save = true) {
-  state.mode = m;
-  if (save) localStorage.setItem("article_mode", m);
-  document.body.dataset.mode = m;
+  state.mode = m; if (save) localStorage.setItem("article_mode", m);
   const eff = effectiveMode();
-  for (const [id, figEl] of Object.entries(figEls)) {
-    if (eff === "split") panelStack.appendChild(figEl);
-    else slots[id].appendChild(figEl);
-  }
-  el("btnSplit").classList.toggle("on", eff === "split");
-  el("btnWide").classList.toggle("on", eff === "wide");
-  el("btnSplit").setAttribute("aria-pressed", String(eff === "split"));
-  el("btnWide").setAttribute("aria-pressed", String(eff === "wide"));
-  el("panelLabel").innerHTML = eff === "split"
-    ? "the data follows the story"
-    : "figures sit inline with the text";
-  requestAnimationFrame(() => { resizeAll(); setTimeout(resizeAll, 600); });
+  document.body.dataset.mode = eff;
+  for (const [id, figEl] of Object.entries(figEls)) { if (eff === "split") panelStack.appendChild(figEl); else slots[id].appendChild(figEl); }
+  el("btnSplit").classList.toggle("on", eff === "split"); el("btnWide").classList.toggle("on", eff === "wide");
+  el("btnSplit").setAttribute("aria-pressed", String(eff === "split")); el("btnWide").setAttribute("aria-pressed", String(eff === "wide"));
+  if (eff === "wide") steps.forEach((s) => ensureFig(s.dataset.fig));
+  requestAnimationFrame(() => { resizeAll(); setTimeout(resizeAll, 500); });
 }
-el("btnSplit").onclick = () => setMode("split");
-el("btnWide").onclick = () => setMode("wide");
+el("btnSplit").onclick = () => setMode("split"); el("btnWide").onclick = () => setMode("wide");
 narrow.addEventListener("change", () => setMode(state.mode, false));
 
 /* ==================================================================== *
- * data + live text
+ * loading + settings
  * ==================================================================== */
-function updateLive() {
-  if (!stats) return;
-  const top = stats.topAttractors?.[0];
-  const vals = {
-    "wiki-name": WIKIS.find((w) => w.id === state.wiki)?.name ?? state.wiki,
-    "wiki-id": state.wiki,
-    "rank-label": rankLabel(state.rank),
-    "wiki-nodes": stats.nodes?.toLocaleString(),
-    "conv-pct": stats.converge?.pct + "%",
-    "dead-pct": stats.converge?.deadEndPct + "%",
-    "med-hops": stats.hopStats?.median,
-    "mean-hops": stats.hopStats?.mean,
-    "max-hops": stats.hopStats?.max,
-    "top-loop": top ? top.cycle.join(" → ") : "—",
-    "top-loop-pct": (top?.pct ?? 0) + "%",
-    "components": stats.components?.toLocaleString(),
-    "total-articles": overview.reduce((a, b) => a + (b.nodes || 0), 0).toLocaleString(),
-    "total-wikis": overview.length,
-  };
-  for (const [k, v] of Object.entries(vals)) {
-    document.querySelectorAll(`[data-live="${k}"]`).forEach((n) => { n.textContent = v; });
-  }
+function showError(msg) { const s = el("status"); s.textContent = msg; s.style.display = msg ? "block" : "none"; }
+function updateChip() { el("datachip").innerHTML = `charts: <b>${esc(wikiById(state.wiki)?.name ?? state.wiki)}</b> · <b>${esc(rankLabel(state.rank))}</b> &nbsp;·&nbsp; prose: osrs · 1st link`; }
+function buildGear() {
+  el("gearWiki").innerHTML = WIKIS.map((w) => `<option value="${w.id}"${w.id === state.wiki ? " selected" : ""}>${esc(w.name)}</option>`).join("");
+  const ranks = wikiById(state.wiki)?.ranks ?? [];
+  el("gearRank").innerHTML = ranks.map((r) => `<option value="${r}"${r === state.rank ? " selected" : ""}>${esc(rankLabel(r))}</option>`).join("");
 }
-
-function updateHero() {
-  const readout = el("mastReadout");
-  const topCycles = (stats.topAttractors ?? []).filter((a) => a.pct >= 2);
-  readout.innerHTML =
-    `<span><b>${stats.nodes.toLocaleString()}</b> pages</span>` +
-    `<span><b>${stats.converge.pct}%</b> converge</span>` +
-    `<span><b>${topCycles.length}</b> whirlpools</span>` +
-    (stats.converge.deadEndPct > 0.5 ? `<span><b>1</b> graveyard</span>` : "");
-  if (__meshUpdate) __meshUpdate(state.wiki, state.rank);
-}
-
-async function loadData() {
+async function loadFocus() {
+  const w = wikiById(state.wiki); if (!w) return;
+  if (!w.ranks.includes(state.rank)) state.rank = w.ranks[0];
+  buildGear(); updateChip();
   try {
-    summary = await api(`/api/summary?wiki=${state.wiki}`);
-    if (!summary.ranks.some((r) => r.rank === state.rank)) state.rank = "strict1";
-    buildGearRanks();
-    stats = await api(`/api/stats?wiki=${state.wiki}&rank=${state.rank}`);
+    const [summary, stats, all, graph] = await Promise.all([loadSummary(state.wiki), loadStats(state.wiki, state.rank), loadAllStats(state.rank), loadGraph(state.wiki, state.rank)]);
+    cur = { summary, stats, all, graph };
     showError("");
-    updateChip();
-    updateLive();
-    updateHero();
+    F.rankLabel = rankLabel(state.rank); F.focus = { name: w.name, short: shortName(w.id), nodes: stats.nodes }; renderLive();
+    updateReadout(); renderHero();
     for (const id of Object.keys(figInit)) renderers[id]();
-  } catch (e) {
-    showError(`data unavailable for ${state.wiki} — ${e.message}`);
-  }
+    buildPlayRanks(); el("playTitles").innerHTML = "";
+  } catch (e) { showError(`data unavailable for ${state.wiki} @ ${rankLabel(state.rank)} — ${e.message}`); }
 }
-
-/* data settings — the cogwheel */
-function updateChip() {
-  const w = WIKIS.find((x) => x.id === state.wiki);
-  el("datachip").innerHTML =
-    `${esc(w?.name ?? state.wiki)} · ${esc(rankLabel(state.rank))} · 15 wikis compared`;
-}
-function buildGearRanks() {
-  const sel = el("gearRank");
-  sel.innerHTML = "";
-  for (const r of summary.ranks) {
-    const o = document.createElement("option");
-    o.value = r.rank; o.textContent = rankLabel(r.rank);
-    if (r.rank === state.rank) o.selected = true;
-    sel.appendChild(o);
-  }
-}
-el("gearBtn").onclick = () => {
-  const open = el("gearPanel").classList.toggle("open");
-  el("gearBtn").setAttribute("aria-expanded", String(open));
-};
-el("gearWiki").onchange = async () => {
-  state.wiki = el("gearWiki").value;
-  localStorage.setItem("article_wiki", state.wiki);
-  await loadData();
-};
-el("gearRank").onchange = async () => {
-  state.rank = el("gearRank").value;
-  localStorage.setItem("article_rank", state.rank);
-  await loadData();
-};
-
-/* play wiring */
-buildPlayRanks();
+el("gearBtn").onclick = () => { const open = el("gearPanel").classList.toggle("open"); el("gearBtn").setAttribute("aria-expanded", String(open)); };
+el("gearWiki").onchange = async () => { state.wiki = el("gearWiki").value; localStorage.setItem("article_wiki", state.wiki); await loadFocus(); };
+el("gearRank").onchange = async () => { state.rank = el("gearRank").value; localStorage.setItem("article_rank", state.rank); await loadFocus(); };
+el("rerollBtn").onclick = rollChain;
+el("mapReset").onclick = () => mapField?.resetView();
 el("playBtn").onclick = () => { const v = el("playInput").value.trim(); if (v) playChain(v); };
 el("playInput").addEventListener("keydown", (e) => { if (e.key === "Enter") el("playBtn").click(); });
-el("playRand").onclick = async () => {
-  try {
-    const r = await api(`/api/random?wiki=${state.wiki}`);
-    el("playInput").value = r.title;
-    playChain(r.title);
-  } catch {}
-};
+el("playRand").onclick = async () => { const g = await loadGraph(state.wiki, state.playRank); let i = (Math.random() * g.N) | 0; while (g.succ[i] < 0) i = (Math.random() * g.N) | 0; el("playInput").value = g.titles[i]; playChain(g.titles[i]); };
 let searchTimer;
 el("playInput").addEventListener("input", (e) => {
-  clearTimeout(searchTimer);
-  const q = e.target.value.trim();
-  if (q.length < 2) return;
+  clearTimeout(searchTimer); const q = e.target.value.trim().toLowerCase(); if (q.length < 2) return;
   searchTimer = setTimeout(async () => {
-    try {
-      const s = await api(`/api/search?wiki=${state.wiki}&q=${encodeURIComponent(q)}`);
-      el("playTitles").innerHTML = s.titles.map((t) => `<option value="${esc(t)}">`).join("");
-    } catch {}
-  }, 180);
+    const titles = await loadTitles(state.wiki);
+    const hits = []; for (const t of titles) { if (t.toLowerCase().includes(q)) { hits.push(t); if (hits.length >= 12) break; } }
+    hits.sort((a, b) => a.length - b.length);
+    el("playTitles").innerHTML = hits.map((t) => `<option value="${esc(t)}">`).join("");
+  }, 160);
 });
-el("rerollBtn").onclick = () => rollChain();
 
-/* ==================================================================== *
- * boot
- * ==================================================================== */
 (async () => {
-  if (window.__STATIC__) {
-    document.querySelectorAll("[data-lab-only]").forEach((el) => { el.style.display = "none"; });
-  }
-  // evidence links — single-title chips point at the live wiki (chains stay as chips)
-  const OSRS_WIKI = "https://oldschool.runescape.wiki";
-  document.querySelectorAll(".prose .lo").forEach((el) => {
-    const t = el.textContent.trim();
-    if (t.includes("→")) return;
-    const a = document.createElement("a");
-    a.href = `${OSRS_WIKI}/w/${encodeURIComponent(t.replace(/ /g, "_"))}`;
-    a.target = "_blank"; a.rel = "noopener";
-    a.className = "lo";
-    el.replaceWith(a);
-  });
-
-  // collect figures + their inline slots
   document.querySelectorAll("figure.embed").forEach((f) => { figEls[f.id] = f; });
   document.querySelectorAll(".figslot").forEach((s) => { slots[s.dataset.fig] = s; });
-
   setMode(state.mode, false);
-
+  try { WIKIS = (await jf("wikis.json")).wikis; } catch (e) { showError("could not load data/wikis.json — run the static build first"); return; }
+  if (!wikiById(state.wiki)) state.wiki = wikiById(PROSE_WIKI) ? PROSE_WIKI : WIKIS[0].id;
+  // facts for the prose: OSRS at the first link, plus every wiki at the first link
   try {
-    const avail = (await api("/api/wikis")).filter((w) => w.available);
-    el("gearWiki").innerHTML = avail.map((w) => `<option value="${w.id}">${esc(w.name)}</option>`).join("");
-    if (!avail.some((w) => w.id === state.wiki)) state.wiki = avail.some((w) => w.id === "osrs") ? "osrs" : (avail[0]?.id ?? "osrs");
-    el("gearWiki").value = state.wiki;
-  } catch {}
-
-  try { overview = await api("/api/overview"); } catch { overview = []; }
-  await loadData();
+    const [all, proseStats, proseSummary] = await Promise.all([loadAllStats(PROSE_RANK), loadStats(PROSE_WIKI, PROSE_RANK), loadSummary(PROSE_WIKI)]);
+    computeFacts(all, proseStats, proseSummary, {});
+  } catch (e) { showError(`prose facts unavailable — ${e.message}`); }
+  await loadFocus();
   activate(steps[0]);
-
-  // pre-initialise figures as they approach the viewport (wide mode benefit)
-  const pre = new IntersectionObserver((entries) => {
-    if (effectiveMode() !== "wide") return;
-    for (const e of entries) {
-      if (!e.isIntersecting) continue;
-      const fig = e.target.closest(".embed");
-      if (fig) { ensureFig(fig.id); pre.unobserve(fig); }
-    }
-  }, { rootMargin: "500px 0px" });
-  document.querySelectorAll("figure.embed").forEach((f) => pre.observe(f));
+  // eligible-link shares for the prose (needs the OSRS succ tables; cheap, lazy)
+  (async () => {
+    for (const r of ["2", "3", "5"]) { try { const g = await loadGraph(PROSE_WIKI, r); eligibleCache.set(`${PROSE_WIKI}|${r}`, eligibleFromGraph(g, r)); } catch {} }
+    if (F.o) { for (const r of ["2", "3", "5"]) F.o["r" + r].eligiblePct = eligibleCache.get(`${PROSE_WIKI}|${r}`); renderLive(); }
+  })();
 })();
 </script>
 </body>

@@ -415,6 +415,21 @@ const server = http.createServer(async (req, res) => {
       res.end(html ?? "dashboard html missing");
       return;
     }
+    if (url.pathname === "/walkfield.js") {
+      const raw = readSafe(path.join(ROOT, "scripts", "walkfield.js"));
+      if (!raw) { res.writeHead(404); res.end("walkfield.js missing"); return; }
+      res.writeHead(200, { "Content-Type": "text/javascript; charset=utf-8", "Cache-Control": "no-cache" });
+      res.end(raw);
+      return;
+    }
+    if (url.pathname.startsWith("/data/")) {
+      // the article reads the static build's data files (run build-static first)
+      const file = path.join(ROOT, "dist", decodeURIComponent(url.pathname));
+      if (!file.startsWith(path.join(ROOT, "dist", "data")) || !fs.existsSync(file)) { res.writeHead(404); res.end("not built — run npm run build:static"); return; }
+      res.writeHead(200, { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-cache" });
+      fs.createReadStream(file).pipe(res);
+      return;
+    }
     if (url.pathname === "/meshfield.js") {
       const raw = readSafe(path.join(ROOT, "scripts", "meshfield.js"));
       if (!raw) { res.writeHead(404); res.end("meshfield.js missing"); return; }
