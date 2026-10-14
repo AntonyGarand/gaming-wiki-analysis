@@ -362,8 +362,9 @@
         };
         // the morph rasterises at reduced device pixels — a field in flight hides
         // the softness, and the landing render restores full sharpness
-        { const bw = Math.max(1, Math.round(W * morph.px)); if (base.width !== bw) base.width = bw;
-          const bh = Math.max(1, Math.round(H * morph.px)); if (base.height !== bh) base.height = bh; }
+        let shrunk = false; // resizing the backing store clears it — remember to repaint in-task
+        { const bw = Math.max(1, Math.round(W * morph.px)); if (base.width !== bw) { base.width = bw; shrunk = true; }
+          const bh = Math.max(1, Math.round(H * morph.px)); if (base.height !== bh) { base.height = bh; shrunk = true; } }
         for (let i = 0; i < graph.N; i++) {
           if (morph.succ0[i] === g.succ[i] && morph.colorOf0(i) === colorOf(i)) morph.keep.push(i);
           else { morph.out.push(i); morph.inn.push(i); }  // changed edge or colour: old fades out, new fades in
@@ -372,16 +373,19 @@
         if (view.k !== 1 || view.tx !== 0 || view.ty !== 0)
           anim = { from: { ...view }, to: { k: 1, tx: 0, ty: 0 }, t0: morph.t0, dur: morph.dur }; // ride the view home with the morph
         cacheView = null; baseDirty = false; baseStale = false; // the morph owns the base layer until it lands
+        if (shrunk) stepMorph(performance.now()); // paint the first frame now — never show the cleared bitmap
         if (!running) kickOnce();
         return;
       }
       morph = null;
-      { const bw = Math.round(W * dpr); if (base.width !== bw) base.width = bw;   // a cancelled morph may have shrunk it
-        const bh = Math.round(H * dpr); if (base.height !== bh) base.height = bh; }
+      let restored = false; // restoring the backing store clears it — remember to repaint in-task
+      { const bw = Math.round(W * dpr); if (base.width !== bw) { base.width = bw; restored = true; }   // a cancelled morph may have shrunk it
+        const bh = Math.round(H * dpr); if (base.height !== bh) { base.height = bh; restored = true; } }
       view.k = 1; view.tx = 0; view.ty = 0; anim = null;
       L = layoutWalkGraph(g, W, H, opts.layout);
       buildGrid(); respawnAll();
-      baseDirty = true;
+      if (restored) drawBase(); // repaint now — the browser must never see the cleared bitmap
+      else baseDirty = true;
       if (!running) kickOnce();
     }
     function buildGrid() {
@@ -580,9 +584,12 @@
         const nodes = g.N, frames = morph.frames, ms = morph.ms;
         morph = null;
         buildGrid();
-        { const bw = Math.round(W * dpr); if (base.width !== bw) base.width = bw; // full sharpness for the landing render
-          const bh = Math.round(H * dpr); if (base.height !== bh) base.height = bh; }
-        cacheView = null; baseStale = false; baseDirty = true; // the full render brings labels back
+        let restored = false; // restoring the backing store clears it — remember to repaint in-task
+        { const bw = Math.round(W * dpr); if (base.width !== bw) { base.width = bw; restored = true; } // full sharpness for the landing render
+          const bh = Math.round(H * dpr); if (base.height !== bh) { base.height = bh; restored = true; } }
+        cacheView = null; baseStale = false;
+        if (restored) drawBase(); // repaint now — the browser must never see the cleared bitmap
+        else baseDirty = true;    // the full render brings labels back next frame
         console.info("walkfield morph: " + nodes.toLocaleString() + " nodes, " + (ms / Math.max(1, frames)).toFixed(1) + " ms/frame over " + frames + " frames");
       }
       return true;

@@ -52,10 +52,12 @@ export function loadCorpus(wikiId: string): Promise<Corpus> {
 // date pages ("28 April", "April 28", "17 March 2019") are update-history
 // indexes, not explanations — links that land on them are skipped
 const MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December";
-const DATE_TITLE_RE = new RegExp(
+// exported: extract-links.ts mirrors these to decide when a page's strict
+// links are all walk-ineligible (fallback trigger)
+export const DATE_TITLE_RE = new RegExp(
   `^((0?[1-9]|[12]\\d|3[01]) (${MONTHS})|(${MONTHS}) (0?[1-9]|[12]\\d|3[01]))(,? \\d{4})?$`, "i"
 );
-const YEAR_RE = /^(1[0-9]{3}|20[0-9]{2})$/; // bare years are update timelines
+export const YEAR_RE = /^(1[0-9]{3}|20[0-9]{2})$/; // bare years are update timelines
 
 async function buildCorpus(wikiId: string): Promise<Corpus> {
   const wikiDir = path.join(ROOT, "output", wikiId);
