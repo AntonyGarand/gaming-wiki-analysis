@@ -249,26 +249,31 @@
    * ------------------------------------------------------------------ */
   function createWalkField(container, opts) {
     opts = Object.assign({
-      walkers: 320, speed: 90, explore: false, labels: 6, edgeAlpha: 0.09,
-      reduced: false, onHover: null, onClick: null, urlFor: null,
+      walkers: 320, speed: 90, explore: true, labels: 6, maxLabels: 28, edgeAlpha: 0.09,
+      wheel: "always",            // "always" | "modifier" (ctrl/⌘ + wheel, so the page can still scroll)
+      reduced: false, onHover: null, onClick: null, urlFor: null, onView: null,
     }, opts || {});
-    const base = document.createElement("canvas"), live = document.createElement("canvas");
+    const base = document.createElement("canvas"), live = document.createElement("canvas"), cacheC = document.createElement("canvas");
     for (const c of [base, live]) { c.style.cssText = "position:absolute;inset:0;width:100%;height:100%;display:block;"; container.appendChild(c); }
-    const bctx = base.getContext("2d"), lctx = live.getContext("2d");
+    container.style.touchAction = "none";
+    const bctx = base.getContext("2d"), lctx = live.getContext("2d"), cctx = cacheC.getContext("2d");
     let W = 0, H = 0, dpr = Math.min(2, window.devicePixelRatio || 1);
     let g = null, L = null, colorOf = null;
     const view = { k: 1, tx: 0, ty: 0 };
+    let cacheView = null, anim = null;
     let walkers = [], hover = -1, hoverChain = null, visible = true, running = !opts.reduced;
     let lastT = 0, baseDirty = true, grid = null, gridCell = 18;
     const mouse = { x: -1e9, y: -1e9 };
+    const MIN_K = 0.5, MAX_K = 40;
 
     function resize() {
       const r = container.getBoundingClientRect();
       W = Math.max(1, r.width); H = Math.max(1, r.height);
-      for (const c of [base, live]) { c.width = W * dpr; c.height = H * dpr; }
+      for (const c of [base, live, cacheC]) { c.width = W * dpr; c.height = H * dpr; }
       if (g) { L = layoutWalkGraph(g, W, H, opts.layout); buildGrid(); respawnAll(); }
+      view.k = 1; view.tx = 0; view.ty = 0; anim = null;
       baseDirty = true;
-      if (!running) frame(performance.now());
+      if (!running) kickOnce();
     }
     function setGraph(graph) {
       g = graph;
@@ -276,11 +281,11 @@
         const a = g.attractor[i];
         return a < 0 ? WALK_COLORS.dead : a < WALK_COLORS.loops.length ? WALK_COLORS.loops[a] : WALK_COLORS.other;
       };
-      view.k = 1; view.tx = 0; view.ty = 0;
+      view.k = 1; view.tx = 0; view.ty = 0; anim = null;
       L = layoutWalkGraph(g, W, H, opts.layout);
       buildGrid(); respawnAll();
       baseDirty = true; hover = -1; hoverChain = null;
-      if (!running) frame(performance.now());
+      if (!running) kickOnce();
     }
     function buildGrid() {
       grid = new Map();
@@ -291,20 +296,52 @@
     }
     function nearest(wx, wy, maxD) {
       if (!grid) return -1;
+      const reach = Math.max(1, Math.ceil(maxD / gridCell));
       const cx = (wx / gridCell) | 0, cy = (wy / gridCell) | 0;
       let best = maxD * maxD, hit = -1;
-      for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
+      for (let dx = -reach; dx <= reach; dx++) for (let dy = -reach; dy <= reach; dy++) {
         const a = grid.get((cx + dx) + "," + (cy + dy)); if (!a) continue;
         for (const i of a) { const d = (L.x[i] - wx) ** 2 + (L.y[i] - wy) ** 2; if (d < best) { best = d; hit = i; } }
       }
       return hit;
     }
-    // world <-> screen
     const toScreen = (wx, wy) => [wx * view.k + view.tx, wy * view.k + view.ty];
     const toWorld = (sx, sy) => [(sx - view.tx) / view.k, (sy - view.ty) / view.k];
 
+    // ---- view control (zoom toward a screen point, animated) ----
+    function clampView(v) {
+      v.k = Math.min(MAX_K, Math.max(MIN_K, v.k));
+      // keep the picture on screen: at least a third of the canvas must stay covered
+      const minX = -W * v.k + W / 3, maxX = W * 2 / 3, minY = -H * v.k + H / 3, maxY = H * 2 / 3;
+      v.tx = Math.min(maxX, Math.max(minX, v.tx)); v.ty = Math.min(maxY, Math.max(minY, v.ty));
+      return v;
+    }
+    function zoomAt(factor, sx, sy, animate) {
+      const from = anim ? anim.to : { ...view };
+      const k2 = Math.min(MAX_K, Math.max(MIN_K, from.k * factor));
+      const to = clampView({ k: k2, tx: sx - (sx - from.tx) * (k2 / from.k), ty: sy - (sy - from.ty) * (k2 / from.k) });
+      if (animate === false || opts.reduced) { Object.assign(view, to); anim = null; baseDirty = true; }
+      else anim = { from: { ...view }, to, t0: performance.now(), dur: 260 };
+      kickOnce(); if (opts.onView) opts.onView(view);
+    }
+    function panBy(dx, dy) { clampView(view); view.tx += dx; view.ty += dy; clampView(view); anim = null; baseDirty = true; kickOnce(); }
+    function resetView(animate) {
+      const to = { k: 1, tx: 0, ty: 0 };
+      if (animate === false || opts.reduced) { Object.assign(view, to); anim = null; baseDirty = true; }
+      else anim = { from: { ...view }, to, t0: performance.now(), dur: 320 };
+      kickOnce();
+    }
+    function stepAnim(now) {
+      if (!anim) return false;
+      const t = Math.min(1, (now - anim.t0) / anim.dur), e = 1 - Math.pow(1 - t, 3);
+      view.k = anim.from.k + (anim.to.k - anim.from.k) * e;
+      view.tx = anim.from.tx + (anim.to.tx - anim.from.tx) * e;
+      view.ty = anim.from.ty + (anim.to.ty - anim.from.ty) * e;
+      if (t >= 1) { anim = null; baseDirty = true; }
+      return true;
+    }
+
     function spawn(w) {
-      // start anywhere; big basins get more walkers simply because they have more articles
       let i = (Math.random() * g.N) | 0, tries = 0;
       while (g.succ[i] < 0 && tries++ < 8) i = (Math.random() * g.N) | 0;
       w.node = i; w.next = g.succ[i]; w.t = 0; w.alpha = 0; w.loopHops = 0; w.dying = false;
@@ -314,7 +351,8 @@
     }
     function respawnAll() {
       walkers = [];
-      const n = opts.reduced ? 0 : opts.walkers;
+      // more canvas, more walkers (fullscreen gets a denser flow)
+      const n = opts.reduced ? 0 : Math.round(Math.min(1200, Math.max(80, opts.walkers * (W * H) / (700 * 520))));
       for (let k = 0; k < n; k++) { const w = {}; spawn(w); w.t = Math.random(); walkers.push(w); }
     }
 
@@ -325,71 +363,105 @@
       if (!g) return;
       bctx.translate(view.tx, view.ty); bctx.scale(view.k, view.k);
       const { x, y } = L;
-      // edges, batched per colour so the canvas does few strokes
+      const k = view.k;
+      // visible world rect (with margin) — skip everything else when zoomed in
+      const vx0 = -view.tx / k - 40, vy0 = -view.ty / k - 40, vx1 = (W - view.tx) / k + 40, vy1 = (H - view.ty) / k + 40;
+      const vis = (i) => x[i] >= vx0 && x[i] <= vx1 && y[i] >= vy0 && y[i] <= vy1;
       const buckets = new Map();
       for (let i = 0; i < g.N; i++) {
         const s = g.succ[i]; if (s < 0 || s === i) continue;
+        if (k > 1.5 && !vis(i) && !vis(s)) continue;
         const c = colorOf(i); let p = buckets.get(c); if (!p) { p = new Path2D(); buckets.set(c, p); }
         p.moveTo(x[i], y[i]); p.lineTo(x[s], y[s]);
       }
-      bctx.lineWidth = Math.max(0.35, 0.7 / view.k);
-      bctx.globalAlpha = opts.edgeAlpha;
+      bctx.lineWidth = (k > 4 ? 1.1 : k > 1.5 ? 0.85 : 0.7) / k;
+      bctx.globalAlpha = Math.min(0.35, opts.edgeAlpha * (1 + Math.log2(Math.max(1, k)) * 0.45));
       for (const [c, p] of buckets) { bctx.strokeStyle = c; bctx.stroke(p); }
-      // specks
       bctx.globalAlpha = 0.55;
-      const sz = Math.max(0.8, 1.3 / view.k);
+      const sz = (k > 4 ? 2.6 : k > 1.5 ? 1.8 : 1.3) / k;
       const dots = new Map();
-      for (let i = 0; i < g.N; i++) { const c = colorOf(i); let p = dots.get(c); if (!p) { p = new Path2D(); dots.set(c, p); } p.rect(x[i] - sz / 2, y[i] - sz / 2, sz, sz); }
+      for (let i = 0; i < g.N; i++) { if (k > 1.5 && !vis(i)) continue; const c = colorOf(i); let p = dots.get(c); if (!p) { p = new Path2D(); dots.set(c, p); } p.rect(x[i] - sz / 2, y[i] - sz / 2, sz, sz); }
       for (const [c, p] of dots) { bctx.fillStyle = c; bctx.fill(p); }
-      // loop nodes: a small ring
-      bctx.globalAlpha = 0.9; bctx.lineWidth = Math.max(0.6, 1 / view.k);
-      for (const l of g.loops.slice(0, 40)) {
+      bctx.globalAlpha = 0.9; bctx.lineWidth = Math.max(0.6, 1 / k);
+      for (const l of g.loops.slice(0, 60)) {
         bctx.strokeStyle = l.id < WALK_COLORS.loops.length ? WALK_COLORS.loops[l.id] : WALK_COLORS.other;
-        for (const n of l.nodes) { bctx.beginPath(); bctx.arc(x[n], y[n], Math.max(1.6, 2.6 / view.k), 0, TAU); bctx.stroke(); }
+        for (const n of l.nodes) { if (!vis(n)) continue; bctx.beginPath(); bctx.arc(x[n], y[n], Math.max(1.6, 2.6 / k), 0, TAU); bctx.stroke(); }
       }
-      // labels for the biggest territories
+
+      // labels — territories first (bigger ones always, smaller ones as they grow on screen),
+      // then individual articles once zoomed in far enough
       bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      bctx.globalAlpha = 1;
-      bctx.font = "600 10.5px 'Space Mono', monospace"; bctx.textAlign = "center"; bctx.textBaseline = "middle";
-      let shown = 0;
+      bctx.globalAlpha = 1; bctx.textAlign = "center"; bctx.textBaseline = "middle";
       const placed = [];
-      for (const c of L.centers) {
-        if (shown >= opts.labels) break;
-        if (c.loop < 0 && shown > 2) continue;
+      const fits = (r) => !(r.x < 0 || r.x + r.w > W || r.y < 0 || r.y + r.h > H) && !placed.some((p) => r.x < p.x + p.w && r.x + r.w > p.x && r.y < p.y + p.h && r.y + r.h > p.y);
+      let shown = 0;
+      bctx.font = "600 10.5px 'Space Mono', monospace";
+      for (let ci = 0; ci < L.centers.length && shown < opts.maxLabels; ci++) {
+        const c = L.centers[ci];
+        const rs = c.r * k;
+        if (ci >= opts.labels && rs < 16) continue;
+        if (c.loop < 0 && (ci > 6 || rs < 22)) continue;
         const [sx, sy] = toScreen(c.x, c.y);
-        if (sx < 0 || sx > W || sy < 0 || sy > H) continue;
+        if (sx < -rs || sx > W + rs || sy < -rs || sy > H + rs) continue;
         const label = c.loop >= 0 ? g.loops[c.loop].nodes.map((n) => g.titles[n]).join(" → ") : g.titles[c.root] + " ✝";
         const text = label.length > 44 ? label.slice(0, 43) + "…" : label;
         const tw = bctx.measureText(text).width;
-        // try above, then below, then centred; skip if it would overlap an existing label
-        let ok = false, ly = 0;
-        for (const cand of [sy - c.r * view.k - 9, sy + c.r * view.k + 9, sy]) {
-          const r = { x: sx - tw / 2 - 3, y: cand - 8, w: tw + 6, h: 16 };
-          if (r.x < 0 || r.x + r.w > W || r.y < 0 || r.y + r.h > H) continue;
-          if (placed.some((p) => r.x < p.x + p.w && r.x + r.w > p.x && r.y < p.y + p.h && r.y + r.h > p.y)) continue;
-          placed.push(r); ly = cand; ok = true; break;
-        }
-        if (!ok) continue;
+        let ly = null;
+        for (const cand of [sy - rs - 9, sy + rs + 9, sy]) { const r = { x: sx - tw / 2 - 3, y: cand - 8, w: tw + 6, h: 16 }; if (fits(r)) { placed.push(r); ly = cand; break; } }
+        if (ly === null) continue;
         bctx.lineWidth = 4; bctx.strokeStyle = "rgba(248,244,234,0.9)"; bctx.strokeText(text, sx, ly);
         bctx.fillStyle = c.loop >= 0 ? (c.loop < WALK_COLORS.loops.length ? WALK_COLORS.loops[c.loop] : WALK_COLORS.other) : WALK_COLORS.dead;
         bctx.fillText(text, sx, ly);
         shown++;
       }
+      if (k >= 3) {
+        // article names: the most linked-to articles on screen, up to a budget that grows with zoom
+        const budget = Math.min(160, Math.round(10 * k));
+        const minIn = k >= 14 ? 0 : k >= 8 ? 1 : 3;
+        const cand = [];
+        for (let i = 0; i < g.N; i++) if (vis(i) && (g.inDeg[i] >= minIn || (g.depth[i] === 0 && g.attractor[i] >= 0))) cand.push(i);
+        cand.sort((a, b) => g.inDeg[b] - g.inDeg[a]);
+        bctx.font = "9.5px 'Space Mono', monospace"; bctx.textBaseline = "bottom"; bctx.textAlign = "left";
+        let n = 0;
+        for (const i of cand) {
+          if (n >= budget) break;
+          const [sx, sy] = toScreen(x[i], y[i]);
+          const t = g.titles[i]; const text = t.length > 30 ? t.slice(0, 29) + "…" : t;
+          const tw = bctx.measureText(text).width;
+          const r = { x: sx + 4, y: sy - 14, w: tw + 4, h: 13 };
+          if (!fits(r)) continue;
+          placed.push(r); n++;
+          bctx.lineWidth = 3; bctx.strokeStyle = "rgba(248,244,234,0.85)"; bctx.strokeText(text, sx + 5, sy - 3);
+          bctx.fillStyle = g.depth[i] === 0 && g.attractor[i] >= 0 ? colorOf(i) : "#5f574a"; bctx.fillText(text, sx + 5, sy - 3);
+        }
+      }
+      // keep a copy for cheap redraws while a zoom animates
+      cctx.setTransform(1, 0, 0, 1, 0, 0); cctx.clearRect(0, 0, cacheC.width, cacheC.height); cctx.drawImage(base, 0, 0);
+      cacheView = { ...view };
+    }
+    function drawBaseFromCache() {
+      if (!cacheView) return drawBase();
+      const s = view.k / cacheView.k;
+      bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      bctx.clearRect(0, 0, W, H);
+      bctx.translate(view.tx - cacheView.tx * s, view.ty - cacheView.ty * s); bctx.scale(s / dpr, s / dpr);
+      bctx.drawImage(cacheC, 0, 0);
     }
 
     function frame(now) {
-      if (baseDirty) drawBase();
+      const animating = stepAnim(now);
+      if (animating) drawBaseFromCache(); else if (baseDirty) drawBase();
       const dt = Math.min(0.05, (now - lastT) / 1000 || 0.016); lastT = now;
       lctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      if (running) {
+      if (running && !animating) {
         lctx.globalCompositeOperation = "destination-out";
         lctx.fillStyle = "rgba(0,0,0,0.16)"; lctx.fillRect(0, 0, W, H);
       } else lctx.clearRect(0, 0, W, H);
       lctx.globalCompositeOperation = "source-over";
       if (!g) return;
       lctx.translate(view.tx, view.ty); lctx.scale(view.k, view.k);
-      if (running) {
-        const sp = opts.speed;
+      if (running && !animating) {
+        const sp = opts.speed / Math.sqrt(view.k);
         lctx.lineCap = "round";
         for (const w of walkers) {
           if (w.dying) { w.alpha -= dt * 2.2; if (w.alpha <= 0) spawn(w); continue; }
@@ -409,59 +481,57 @@
             continue;
           }
           const nx = L.x[w.node] + (L.x[w.next] - L.x[w.node]) * w.t, ny = L.y[w.node] + (L.y[w.next] - L.y[w.node]) * w.t;
-          lctx.strokeStyle = w.col; lctx.globalAlpha = 0.85 * w.alpha; lctx.lineWidth = 1.4 / view.k;
+          lctx.strokeStyle = w.col; lctx.globalAlpha = 0.85 * w.alpha; lctx.lineWidth = 1.4 / Math.sqrt(view.k);
           lctx.beginPath(); lctx.moveTo(w.px, w.py); lctx.lineTo(nx, ny); lctx.stroke();
           w.px = nx; w.py = ny;
         }
       }
-      // hovered chain
       if (hoverChain) {
         const ch = hoverChain.chain;
-        lctx.globalAlpha = 0.95; lctx.lineWidth = 1.8 / view.k; lctx.strokeStyle = WALK_COLORS.ink;
+        lctx.globalAlpha = 0.95; lctx.lineWidth = 1.8 / Math.sqrt(view.k); lctx.strokeStyle = WALK_COLORS.ink;
         lctx.beginPath(); lctx.moveTo(L.x[ch[0]], L.y[ch[0]]);
         for (let i = 1; i < ch.length; i++) lctx.lineTo(L.x[ch[i]], L.y[ch[i]]);
         if (hoverChain.fate === "cycle") lctx.lineTo(L.x[ch[ch.length - hoverChain.cycleSize]], L.y[ch[ch.length - hoverChain.cycleSize]]);
         lctx.stroke();
         lctx.fillStyle = WALK_COLORS.ink;
-        for (const n of ch) { lctx.beginPath(); lctx.arc(L.x[n], L.y[n], 2.2 / view.k, 0, TAU); lctx.fill(); }
-        // labels along the chain (start, a few waypoints, loop)
+        for (const n of ch) { lctx.beginPath(); lctx.arc(L.x[n], L.y[n], 2.2 / Math.sqrt(view.k), 0, TAU); lctx.fill(); }
         lctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         lctx.font = "10px 'Space Mono', monospace"; lctx.textAlign = "left"; lctx.textBaseline = "bottom";
         const picks = new Set([0, ch.length - 1]);
         if (hoverChain.fate === "cycle") for (let i = ch.length - hoverChain.cycleSize; i < ch.length; i++) picks.add(i);
         if (ch.length > 4) picks.add(Math.floor(ch.length / 2));
+        if (view.k >= 3) for (let i = 0; i < ch.length; i++) picks.add(i);
         const placed = [];
         for (const i of [...picks].sort((a, b) => a - b)) {
           const [sx, sy] = toScreen(L.x[ch[i]], L.y[ch[i]]);
+          if (sx < -200 || sx > W + 50 || sy < -30 || sy > H + 30) continue;
           const t = g.titles[ch[i]]; const text = (i === 0 ? "▶ " : "") + (t.length > 34 ? t.slice(0, 33) + "…" : t);
           const wpx = lctx.measureText(text).width;
           let ly = sy - 5;
           for (const r of placed) if (Math.abs(r.y - ly) < 13 && sx < r.x + r.w + 6 && sx + wpx > r.x - 6) ly = r.y - 13;
           placed.push({ x: sx, y: ly, w: wpx });
           lctx.lineWidth = 3.5; lctx.strokeStyle = "rgba(248,244,234,0.92)"; lctx.strokeText(text, sx + 5, ly);
-          lctx.fillStyle = i === 0 ? WALK_COLORS.ink : (hoverChain.fate === "cycle" && i >= ch.length - hoverChain.cycleSize ? (colorOf(ch[i])) : "#5f574a");
+          lctx.fillStyle = i === 0 ? WALK_COLORS.ink : (hoverChain.fate === "cycle" && i >= ch.length - hoverChain.cycleSize ? colorOf(ch[i]) : "#5f574a");
           lctx.fillText(text, sx + 5, ly);
         }
       }
       lctx.globalAlpha = 1;
+      if (animating) kickOnce();
     }
     let raf = 0;
     function tick(now) {
       raf = 0;
       if (!visible || document.hidden) return;
       frame(now);
-      if (running) raf = requestAnimationFrame(tick);
+      if (running && !raf) raf = requestAnimationFrame(tick);
     }
     function kick() { if (!raf && visible && !document.hidden) raf = requestAnimationFrame(tick); }
+    function kickOnce() { if (!raf && visible && !document.hidden) raf = requestAnimationFrame(tick); }
 
-    // interaction
-    container.addEventListener("pointermove", (e) => {
-      const r = container.getBoundingClientRect();
-      mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
-      if (drag) {
-        view.tx = drag.tx + (mouse.x - drag.x); view.ty = drag.ty + (mouse.y - drag.y);
-        baseDirty = true; if (!running) kickOnce(); return;
-      }
+    // ---- interaction: hover, click, drag-pan, wheel-zoom, pinch, double-click ----
+    const pointers = new Map();
+    let drag = null, downAt = null, pinch = null, lastTap = 0;
+    function updateHover() {
       if (!g) return;
       const [wx, wy] = toWorld(mouse.x, mouse.y);
       const hit = nearest(wx, wy, 9 / view.k);
@@ -469,32 +539,68 @@
         hover = hit; hoverChain = hit >= 0 ? g.walk(hit) : null;
         container.style.cursor = hit >= 0 ? "pointer" : (opts.explore ? "grab" : "");
         if (opts.onHover) opts.onHover(hit, hoverChain);
-        if (!running) kickOnce();
+        kickOnce();
       }
-    });
-    container.addEventListener("pointerleave", () => { hover = -1; hoverChain = null; container.style.cursor = ""; if (opts.onHover) opts.onHover(-1, null); if (!running) kickOnce(); });
-    let drag = null, downAt = null;
+    }
     container.addEventListener("pointerdown", (e) => {
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      container.setPointerCapture(e.pointerId);
+      if (pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        pinch = { d: Math.hypot(a.x - b.x, a.y - b.y), k: view.k, tx: view.tx, ty: view.ty, mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2 };
+        drag = null; return;
+      }
       downAt = { x: e.clientX, y: e.clientY };
-      if (opts.explore && hover < 0) { drag = { x: mouse.x, y: mouse.y, tx: view.tx, ty: view.ty }; container.setPointerCapture(e.pointerId); container.style.cursor = "grabbing"; }
+      const r = container.getBoundingClientRect();
+      mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+      if (e.pointerType === "touch") updateHover();
+      if (opts.explore && hover < 0) { drag = { x: mouse.x, y: mouse.y, tx: view.tx, ty: view.ty }; container.style.cursor = "grabbing"; anim = null; }
     });
-    container.addEventListener("pointerup", (e) => {
+    container.addEventListener("pointermove", (e) => {
+      const r = container.getBoundingClientRect();
+      if (pointers.has(e.pointerId)) pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pinch && pointers.size >= 2) {
+        const [a, b] = [...pointers.values()];
+        const d = Math.hypot(a.x - b.x, a.y - b.y), mx = (a.x + b.x) / 2 - r.left, my = (a.y + b.y) / 2 - r.top;
+        const k2 = Math.min(MAX_K, Math.max(MIN_K, pinch.k * (d / Math.max(1, pinch.d))));
+        const sx = pinch.mx - r.left, sy = pinch.my - r.top;
+        view.k = k2; view.tx = sx - (sx - pinch.tx) * (k2 / pinch.k) + (mx - sx); view.ty = sy - (sy - pinch.ty) * (k2 / pinch.k) + (my - sy);
+        clampView(view); baseDirty = true; kickOnce(); return;
+      }
+      mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+      if (drag) {
+        view.tx = drag.tx + (mouse.x - drag.x); view.ty = drag.ty + (mouse.y - drag.y);
+        clampView(view); baseDirty = true; kickOnce(); return;
+      }
+      if (e.pointerType !== "touch") updateHover();
+    });
+    const endPointer = (e) => {
+      pointers.delete(e.pointerId);
+      if (pointers.size < 2) pinch = null;
       const moved = downAt && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) > 4;
+      const wasDrag = !!drag;
       drag = null; downAt = null; container.style.cursor = hover >= 0 ? "pointer" : (opts.explore ? "grab" : "");
-      if (!moved && hover >= 0) {
+      if (e.type !== "pointerup" || moved || pinch) return;
+      const now = performance.now();
+      if (now - lastTap < 320 && hover < 0) { lastTap = 0; zoomAt(1.9, mouse.x, mouse.y); return; } // double-tap/double-click: zoom in
+      lastTap = now;
+      if (hover >= 0 && !wasDrag) {
         if (opts.onClick) opts.onClick(hover, hoverChain);
         else if (opts.urlFor) window.open(opts.urlFor(g.titles[hover]), "_blank", "noopener");
       }
-    });
-    if (opts.explore) {
-      container.addEventListener("wheel", (e) => {
-        e.preventDefault();
-        const k2 = Math.min(12, Math.max(0.5, view.k * Math.exp(-e.deltaY * 0.0014)));
-        view.tx = mouse.x - (mouse.x - view.tx) * (k2 / view.k); view.ty = mouse.y - (mouse.y - view.ty) * (k2 / view.k);
-        view.k = k2; baseDirty = true; if (!running) kickOnce();
-      }, { passive: false });
-    }
-    function kickOnce() { if (!raf) raf = requestAnimationFrame((t) => { raf = 0; frame(t); }); }
+    };
+    container.addEventListener("pointerup", endPointer);
+    container.addEventListener("pointercancel", endPointer);
+    container.addEventListener("pointerleave", () => { if (!drag && !pinch) { mouse.x = -1e9; mouse.y = -1e9; hover = -1; hoverChain = null; container.style.cursor = ""; if (opts.onHover) opts.onHover(-1, null); kickOnce(); } });
+    container.addEventListener("wheel", (e) => {
+      if (!opts.explore) return;
+      if (opts.wheel === "modifier" && !(e.ctrlKey || e.metaKey) && !document.fullscreenElement) return; // let the page scroll
+      e.preventDefault();
+      const r = container.getBoundingClientRect();
+      const f = Math.exp(-e.deltaY * (e.ctrlKey ? 0.01 : 0.0022)); // trackpad pinch arrives as ctrl+wheel
+      zoomAt(f, e.clientX - r.left, e.clientY - r.top, false);
+    }, { passive: false });
+    container.addEventListener("dblclick", (e) => { e.preventDefault(); });
 
     new IntersectionObserver((en) => { visible = en[0].isIntersecting; if (visible) kick(); }, { threshold: 0.02 }).observe(container);
     document.addEventListener("visibilitychange", () => { if (!document.hidden) kick(); });
@@ -508,7 +614,16 @@
       pause() { running = false; },
       resume() { running = !opts.reduced; kick(); },
       focus(i) { hover = i; hoverChain = i >= 0 ? g.walk(i) : null; kickOnce(); },
-      resetView() { view.k = 1; view.tx = 0; view.ty = 0; baseDirty = true; kickOnce(); },
+      zoomBy(f) { zoomAt(f, W / 2, H / 2); },
+      zoomToNode(i, k) {
+        if (!g || i < 0) return;
+        const kk = Math.min(MAX_K, Math.max(MIN_K, k ?? 6));
+        anim = { from: { ...view }, to: clampView({ k: kk, tx: W / 2 - L.x[i] * kk, ty: H / 2 - L.y[i] * kk }), t0: performance.now(), dur: 420 };
+        kickOnce();
+      },
+      resetView,
+      setWheel(mode) { opts.wheel = mode; },
+      view: () => ({ ...view }),
       layout: () => L,
       graph: () => g,
       destroy() { ro.disconnect(); running = false; base.remove(); live.remove(); },

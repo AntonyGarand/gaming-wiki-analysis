@@ -43,6 +43,23 @@
   .mast-field .hint { position: absolute; left: 14px; bottom: 12px; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); pointer-events: none; }
   .field { position: absolute; inset: 0; }
   .field canvas { position: absolute; inset: 0; }
+  .field-ui { position: absolute; right: 12px; bottom: 12px; z-index: 5; display: flex; gap: 4px; }
+  .field-ui button { font-family: var(--font-mono); font-size: 12px; width: 30px; height: 30px; line-height: 1; cursor: pointer; color: var(--ink-2);
+    background: color-mix(in oklab, var(--ground-0) 88%, transparent); border: 1px solid var(--hairline); backdrop-filter: blur(6px); }
+  .field-ui button:hover { color: var(--rust); border-color: var(--rust); }
+  .field-bar { position: absolute; left: 14px; top: 14px; z-index: 5; display: none; gap: 8px; align-items: center; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+  .field-bar select, .field-bar input { font-family: var(--font-mono); font-size: 11px; background: color-mix(in oklab, var(--ground-0) 92%, transparent); color: var(--ink); border: 1px solid var(--hairline); padding: 6px 8px; border-radius: 0; }
+  .field-bar input { width: 240px; }
+  .field-bar input:focus, .field-bar select:focus { outline: none; border-color: var(--rust); }
+  .field-bar .fb-title { font-family: var(--font-display); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 20px; color: var(--ink); margin-right: 8px; }
+  .field-legend { position: absolute; left: 14px; bottom: 14px; z-index: 5; display: none; font-family: var(--font-mono); font-size: 10px; line-height: 1.9; color: var(--ink-2); max-width: 46vw; }
+  .field-legend b { color: var(--ink); font-weight: 400; }
+  .field-wrap:fullscreen { background: var(--ground-0); }
+  .field-wrap:fullscreen .field-bar { display: flex; }
+  .field-wrap:fullscreen .field-legend { display: block; }
+  .field-wrap:fullscreen .hint { left: auto; right: 190px; bottom: 20px; }
+  .field-wrap:fullscreen .field-ui { bottom: 14px; }
 
   /* control bar */
   .controlbar { position: sticky; top: 0; z-index: 120; height: var(--bar-h); display: flex; align-items: center; gap: 18px; padding: 0 5vw;
@@ -198,9 +215,9 @@
     </p>
     <div class="mast-readout" id="mastReadout"><span>loading…</span></div>
   </div>
-  <div class="mast-field">
+  <div class="mast-field field-wrap" id="heroWrap">
     <div class="field" id="heroField"></div>
-    <div class="hint" id="heroHint">hover an article to trace its walk · click to read it</div>
+    <div class="hint" id="heroHint">hover to trace a walk · click to read it · drag to pan · ⌘/ctrl + scroll or pinch to zoom · ⛶ fullscreen</div>
   </div>
 </header>
 
@@ -539,7 +556,7 @@
       <div class="figslot" data-fig="fig-map">
         <figure class="embed" id="fig-map" aria-label="Drainage map of the first-link network">
           <div class="cap"><span class="cap-k">09</span><span>the drainage map · <span data-live="focus.name"></span> · <span data-live="rankLabel"></span></span><button class="cap-btn" id="mapReset" type="button">⌂ reset view</button></div>
-          <div class="chart"><div class="field" id="mapField"></div></div>
+          <div class="chart field-wrap" id="mapWrap"><div class="field" id="mapField"></div></div>
           <div class="cap-note" id="note-map">—</div>
         </figure>
       </div>
@@ -970,6 +987,56 @@ function renderGrave() {
 
 /* ---- 09 the drainage map (explore) + hero ---- */
 let heroField = null, mapField = null;
+const HINT_IDLE = "hover to trace a walk · click to read it · drag to pan · ⌘/ctrl + scroll or pinch to zoom · ⛶ fullscreen";
+/* zoom toolbar + fullscreen controls shared by the hero and the map */
+function mountFieldUI(wrap, getField, title) {
+  const ui = document.createElement("div"); ui.className = "field-ui";
+  const btn = (label, aria, fn) => { const b = document.createElement("button"); b.type = "button"; b.textContent = label; b.setAttribute("aria-label", aria); b.title = aria; b.onclick = fn; ui.appendChild(b); return b; };
+  btn("−", "zoom out", () => getField()?.zoomBy(1 / 1.6));
+  btn("+", "zoom in", () => getField()?.zoomBy(1.6));
+  btn("⌂", "reset view", () => getField()?.resetView());
+  const fs = btn("⛶", "fullscreen", () => { if (document.fullscreenElement === wrap) document.exitFullscreen(); else wrap.requestFullscreen?.({ navigationUI: "hide" }).catch(() => {}); });
+  const bar = document.createElement("div"); bar.className = "field-bar";
+  bar.innerHTML = `<span class="fb-title">${esc(title)}</span>
+    <label>wiki <select class="fb-wiki"></select></label>
+    <label>rank <select class="fb-rank"></select></label>
+    <input class="fb-find" placeholder="find an article and fly to it ↵" autocomplete="off">
+    <button type="button" class="fb-exit" title="exit fullscreen">✕ esc</button>`;
+  bar.querySelector(".fb-exit").onclick = () => document.exitFullscreen();
+  bar.querySelector(".fb-wiki").onchange = async (e) => { state.wiki = e.target.value; localStorage.setItem("article_wiki", state.wiki); await loadFocus(); };
+  bar.querySelector(".fb-rank").onchange = async (e) => { state.rank = e.target.value; localStorage.setItem("article_rank", state.rank); await loadFocus(); };
+  bar.querySelector(".fb-find").addEventListener("keydown", (e) => {
+    if (e.key !== "Enter") return;
+    const f = getField(), g = f?.graph(); if (!g) return;
+    const q = e.target.value.trim().toLowerCase(); if (!q) return;
+    let i = g.titles.findIndex((t) => t.toLowerCase() === q);
+    if (i < 0) i = g.titles.findIndex((t) => t.toLowerCase().startsWith(q));
+    if (i < 0) i = g.titles.findIndex((t) => t.toLowerCase().includes(q));
+    if (i < 0) { e.target.style.borderColor = "#a03d2e"; return; }
+    e.target.style.borderColor = ""; e.target.value = g.titles[i];
+    f.zoomToNode(i, 7); f.focus(i);
+  });
+  const legend = document.createElement("div"); legend.className = "field-legend";
+  wrap.appendChild(bar); wrap.appendChild(legend); wrap.appendChild(ui);
+  wrap._fieldBar = bar; wrap._fieldLegend = legend;
+  document.addEventListener("fullscreenchange", () => {
+    const on = document.fullscreenElement === wrap;
+    fs.textContent = on ? "⤢" : "⛶"; fs.title = on ? "exit fullscreen" : "fullscreen";
+    getField()?.setWheel(on ? "always" : wrap.dataset.wheel ?? "always");
+    if (on) syncFieldBars();
+  });
+}
+function syncFieldBars() {
+  const w = wikiById(state.wiki), g = cur.graph;
+  document.querySelectorAll(".field-wrap").forEach((wrap) => {
+    const bar = wrap._fieldBar; if (!bar) return;
+    bar.querySelector(".fb-wiki").innerHTML = WIKIS.map((x) => `<option value="${x.id}"${x.id === state.wiki ? " selected" : ""}>${esc(x.name)}</option>`).join("");
+    bar.querySelector(".fb-rank").innerHTML = (w?.ranks ?? []).map((r) => `<option value="${r}"${r === state.rank ? " selected" : ""}>${esc(rankLabel(r))}</option>`).join("");
+    if (g) wrap._fieldLegend.innerHTML = `<b>${esc(w?.name ?? state.wiki)}</b> · ${g.N.toLocaleString()} articles · ${g.loops.length.toLocaleString()} loops<br>` +
+      g.loops.slice(0, 6).map((l) => `<span><span class="sw" style="background:${loopColor(l.id)}"></span>${esc(loopName(l.nodes.map((k) => g.titles[k])))} · ${(100 * l.basin / g.N).toFixed(1)}%</span>`).join("<br>") +
+      `<br><span><span class="sw" style="background:${C.dead}"></span>dead ends · ${(100 * g.dead / g.N).toFixed(1)}%</span>`;
+  });
+}
 function fieldHover(noteId) {
   return (i, wk) => {
     const n = el(noteId); if (!n || !cur.graph) return;
@@ -981,7 +1048,11 @@ function fieldHover(noteId) {
   };
 }
 function ensureMap() {
-  if (!mapField) mapField = createWalkField(el("mapField"), { explore: true, walkers: reduced ? 0 : 220, speed: 70, labels: 8, edgeAlpha: 0.11, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: fieldHover("note-map") });
+  if (!mapField) {
+    mapField = createWalkField(el("mapField"), { explore: true, wheel: "always", walkers: reduced ? 0 : 220, speed: 70, labels: 8, edgeAlpha: 0.11, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: fieldHover("note-map") });
+    el("mapWrap").dataset.wheel = "always";
+    mountFieldUI(el("mapWrap"), () => mapField, "the drainage map");
+  }
   if (cur.graph) mapField.setGraph(cur.graph);
   const g = cur.graph; if (!g) return;
   const n = el("note-map");
@@ -989,9 +1060,13 @@ function ensureMap() {
   n.innerHTML = n.dataset.idle;
 }
 function renderHero() {
-  if (!heroField) heroField = createWalkField(el("heroField"), { explore: false, walkers: reduced ? 0 : 360, speed: 85, labels: 5, edgeAlpha: 0.08, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: (i, wk) => {
+  if (!heroField) {
+    el("heroWrap").dataset.wheel = "modifier";
+    mountFieldUI(el("heroWrap"), () => heroField, "where does everything lead?");
+  }
+  if (!heroField) heroField = createWalkField(el("heroField"), { explore: true, wheel: "modifier", walkers: reduced ? 0 : 360, speed: 85, labels: 5, edgeAlpha: 0.08, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: (i, wk) => {
     const h = el("heroHint");
-    if (i < 0 || !cur.graph) { h.textContent = "hover an article to trace its walk · click to read it"; return; }
+    if (i < 0 || !cur.graph) { h.textContent = HINT_IDLE; return; }
     const g = cur.graph;
     h.textContent = wk.fate === "cycle" ? `${g.titles[i]} → ${wk.hops} clicks → ${loopName(wk.chain.slice(-wk.cycleSize).map((k) => g.titles[k]))}` : `${g.titles[i]} → dies after ${wk.hops} clicks at ${g.titles[wk.terminal]}`;
   } });
@@ -1098,7 +1173,7 @@ async function loadFocus() {
     cur = { summary, stats, all, graph };
     showError("");
     F.rankLabel = rankLabel(state.rank); F.focus = { name: w.name, short: shortName(w.id), nodes: stats.nodes }; renderLive();
-    updateReadout(); renderHero();
+    updateReadout(); renderHero(); syncFieldBars();
     for (const id of Object.keys(figInit)) renderers[id]();
     buildPlayRanks(); el("playTitles").innerHTML = "";
   } catch (e) { showError(`data unavailable for ${state.wiki} @ ${rankLabel(state.rank)} — ${e.message}`); }
