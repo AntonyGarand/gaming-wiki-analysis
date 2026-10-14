@@ -134,14 +134,31 @@ Optional fields on a wiki entry:
 
 ## Polite scraping
 
-- **Hard-capped at 1 request/second** — every request is serialized through one
-  throttle chain (modeled on the parsed-osrs wiki-scraper's `WikiRequestService`);
-  `RATE_LIMIT_MS` can only slow it down, never speed it up
+- **Hard-capped at 1 request/second, machine-wide** — every process shares one
+  file-locked budget, so parallel extraction shards and simultaneous wikis
+  still emit ≤1 request/s *combined* (all target wikis are Weird Gloop
+  infrastructure; the budget is global, not per-wiki). `RATE_LIMIT_MS` can
+  only slow it down, never speed it up
 - Identifies itself with a descriptive User-Agent
 - Pauses on 429/5xx responses with Retry-After-aware exponential backoff
 - Only fetches mainspace content pages (no images, no user pages), plus the
   handful of template pages needed by fallback pages (batched, 50/request)
 - All data stored locally; nothing re-fetched unless missing
+
+## Parallel extraction
+
+Extraction is CPU-bound, so big wikis can be split across processes by
+page-id shard — all shards share `links.sqlite` (WAL + busy-retry) and the
+global 1 req/s budget:
+
+```bash
+npx tsx scripts/extract-parallel.ts --wiki=rs3 --shards=4 --analyze
+```
+
+Rule of thumb at ~50–57 pages/s per core: rs3 (80k pages) ≈ 7–8 min with 4
+shards vs ~27 min single-process; osrs/fortnite ≈ 3 min. Run wikis
+concurrently for more speedup — the rate limiter keeps the network side
+polite regardless of process count.
 
 ## Baseline scraper & seeding (osrs, rs3)
 

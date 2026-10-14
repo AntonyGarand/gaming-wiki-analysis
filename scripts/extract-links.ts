@@ -10,23 +10,41 @@
  *   - italic (italicised)
  *
  * Usage: npx tsx scripts/extract-links.ts --wiki=minecraft
+ *        npx tsx scripts/extract-links.ts --wiki=rs3 --shard=0/4  (parallel shard;
+ *        scripts/extract-parallel.ts orchestrates all shards + analyze)
  */
 import { createClient } from "@libsql/client";
 import * as fs from "fs";
 import * as path from "path";
-import { politeFetch, makeUA } from "./lib/http.js";
+import { politeFetch, makeUA, withBusyRetry } from "./lib/http.js";
 import { DATE_TITLE_RE, YEAR_RE } from "./lib/walk.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
 const wikiArg = process.argv.find((a) => a.startsWith("--wiki="))?.slice(7);
 const FORCE = process.argv.includes("--force"); // re-parse every page, ignoring revision match
+// optional page-id sharding for parallel extraction: --shard=i/n processes
+// pages where (id % n) == i, so N processes share one wiki's CPU load
+const shardArg = process.argv.find((a) => a.startsWith("--shard="))?.slice(8);
+let SHARD_I = 0, SHARD_N = 1;
+if (shardArg) {
+  const m = shardArg.match(/^(\d+)\/(\d+)$/);
+  if (!m || Number(m[2]) < 1 || Number(m[2]) > 32 || Number(m[1]) >= Number(m[2])) {
+    console.error(`Bad --shard=${shardArg}; expected i/n with 0 <= i < n <= 32`);
+    process.exit(1);
+  }
+  SHARD_I = Number(m[1]);
+  SHARD_N = Number(m[2]);
+}
+const SHARD_TAG = SHARD_N > 1 ? ` (shard ${SHARD_I}/${SHARD_N})` : "";
 const wiki = wikis.find((w) => w.id === wikiArg);
 if (!wiki) { console.error(`Unknown --wiki=${wikiArg}`); process.exit(1); }
 
 const OUT_DIR = path.join(ROOT, "output", wiki.id);
 const SRC = createClient({ url: `file:${path.join(OUT_DIR, "wiki.sqlite")}` });
 const LINKS = createClient({ url: `file:${path.join(OUT_DIR, "links.sqlite")}` });
+// parallel shards also touch wiki.sqlite (template table) — same busy rules
+try { await SRC.execute("PRAGMA busy_timeout = 10000"); } catch { /* non-fatal */ }
 
 // --- wikitext parsing (same logic as the OSRS analysis, namespace-agnostic) ---
 const INTERWIKI = new Set(["w","wikipedia","wp","wiktionary","wikt","m","mw","meta",
@@ -227,11 +245,25 @@ function collectTemplateNames(text: string): string[] {
 
 /** fetch uncached templates via the API (50/request) and persist them */
 async function ensureTemplates(names: string[]): Promise<void> {
-  const want = [...new Map(
+  let want = [...new Map(
     names.map((n) => n.trim()).filter(Boolean)
       .filter((n) => !templateCache.has(n.toLowerCase()))
       .map((n) => [n.toLowerCase(), n.charAt(0).toUpperCase() + n.slice(1)])
   ).values()];
+  if (!want.length) return;
+  // a concurrent shard may have fetched+stored these since our cache loaded —
+  // re-check the table and warm the cache instead of double-fetching
+  for (let i = 0; i < want.length; i += 500) {
+    const chunk = want.slice(i, i + 500);
+    const res = await withBusyRetry(() => SRC.execute({
+      sql: `SELECT title, text FROM template WHERE title IN (${chunk.map(() => "?").join(",")})`,
+      args: chunk,
+    }));
+    for (const r of res.rows) {
+      templateCache.set(String(r.title).toLowerCase(), r.text === null ? null : String(r.text));
+    }
+  }
+  want = want.filter((n) => !templateCache.has(n.toLowerCase()));
   if (!want.length) return;
   for (let i = 0; i < want.length; i += 50) {
     const chunk = want.slice(i, i + 50);
@@ -264,7 +296,7 @@ async function ensureTemplates(names: string[]): Promise<void> {
       rows.push({ sql: "INSERT OR REPLACE INTO template (title, text, revision_id) VALUES (?, ?, ?)",
         args: [reqName, body, revid] });
     }
-    for (let j = 0; j < rows.length; j += 50) await SRC.batch(rows.slice(j, j + 50) as never);
+    for (let j = 0; j < rows.length; j += 50) await withBusyRetry(() => SRC.batch(rows.slice(j, j + 50) as never));
   }
 }
 
@@ -429,19 +461,26 @@ const resolve = (t: string): number | null => {
 console.log(`resolution: ${byKey.size} titles, ${aliasKey.size} aliases, ${walkSkip.size} walk-ineligible targets`);
 
 // --- create output tables ---
-await LINKS.execute(`CREATE TABLE IF NOT EXISTS page (id INTEGER PRIMARY KEY, title TEXT NOT NULL, revision_id INTEGER)`);
-await LINKS.execute(`CREATE TABLE IF NOT EXISTS link (
+// parallel shards write this same file: set the busy timeout FIRST (before
+// any other statement on this connection), enable WAL, and wrap the DDL in
+// busy-retry — concurrent startup DDL is the first thing two shards contest
+await withBusyRetry(() => LINKS.execute("PRAGMA busy_timeout = 10000"));
+try {
+  await withBusyRetry(() => LINKS.execute("PRAGMA journal_mode = WAL"));
+} catch { /* another shard mid-conversion — WAL is sticky, any mode works */ }
+await withBusyRetry(() => LINKS.execute(`CREATE TABLE IF NOT EXISTS page (id INTEGER PRIMARY KEY, title TEXT NOT NULL, revision_id INTEGER)`));
+await withBusyRetry(() => LINKS.execute(`CREATE TABLE IF NOT EXISTS link (
   page_id INTEGER NOT NULL, rank INTEGER NOT NULL,
   target_id INTEGER, paren INTEGER DEFAULT 0, italic INTEGER DEFAULT 0,
   PRIMARY KEY (page_id, rank)
-)`);
+)`));
 // migration: add revision_id column if upgrading from old schema
 try {
-  await LINKS.execute("ALTER TABLE page ADD COLUMN revision_id INTEGER");
+  await withBusyRetry(() => LINKS.execute("ALTER TABLE page ADD COLUMN revision_id INTEGER"));
 } catch { /* column already exists */ }
 
 // template bodies fetched for fallback pages live next to the raw pages
-await SRC.execute(`CREATE TABLE IF NOT EXISTS template (title TEXT PRIMARY KEY, text TEXT, revision_id INTEGER)`);
+await withBusyRetry(() => SRC.execute(`CREATE TABLE IF NOT EXISTS template (title TEXT PRIMARY KEY, text TEXT, revision_id INTEGER)`));
 {
   const res = await SRC.execute("SELECT title, text FROM template");
   for (const r of res.rows) templateCache.set(String(r.title).toLowerCase(), r.text === null ? null : String(r.text));
@@ -452,14 +491,14 @@ await SRC.execute(`CREATE TABLE IF NOT EXISTS template (title TEXT PRIMARY KEY, 
 const PARSER_VERSION = "3-walk-aware-fallback";
 await LINKS.execute(`CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT)`);
 const prevParserVersion = String(
-  (await LINKS.execute({ sql: "SELECT value FROM meta WHERE key = 'parserVersion'", args: [] })).rows[0]?.value ?? ""
+  (await withBusyRetry(() => LINKS.execute({ sql: "SELECT value FROM meta WHERE key = 'parserVersion'", args: [] }))).rows[0]?.value ?? ""
 );
 const parserChanged = prevParserVersion !== PARSER_VERSION;
 
 // --- incremental: load already-extracted pages with their revision IDs ---
 const extractedRevs = new Map<number, number>(); // page_id → revision_id at extract time
 {
-  const res = await LINKS.execute("SELECT id, revision_id FROM page");
+  const res = await withBusyRetry(() => LINKS.execute("SELECT id, revision_id FROM page"));
   for (const r of res.rows) {
     extractedRevs.set(Number(r.id), r.revision_id === null ? -1 : Number(r.revision_id));
   }
@@ -476,26 +515,26 @@ let fallbackPages = 0, expandedFallback = 0;
   let deleteBatch: Array<{ sql: string; args: any[] }> = [];
 
   const flush = async () => {
-    for (const d of deleteBatch) await LINKS.execute(d);
+    for (const d of deleteBatch) await withBusyRetry(() => LINKS.execute(d));
     deleteBatch = [];
-    if (pageBatch.length) { await LINKS.batch(pageBatch as never); pageBatch = []; }
+    if (pageBatch.length) { await withBusyRetry(() => LINKS.batch(pageBatch as never)); pageBatch = []; }
     for (let i = 0; i < linkBatch.length; i += 150) {
-      await LINKS.batch(linkBatch.slice(i, i + 150) as never);
+      await withBusyRetry(() => LINKS.batch(linkBatch.slice(i, i + 150) as never));
     }
     linkBatch = [];
   };
 
-  const seenIds = new Set<number>();
   for (;;) {
     const res = await SRC.execute({
-      sql: "SELECT id, title, text, revision_id FROM page WHERE namespace = 0 AND id > ? AND text IS NOT NULL ORDER BY id LIMIT 1000",
-      args: [lastId],
+      sql: "SELECT id, title, text, revision_id FROM page WHERE namespace = 0 AND id > ? AND text IS NOT NULL"
+        + (SHARD_N > 1 ? " AND (id % ?) = ?" : "")
+        + " ORDER BY id LIMIT 1000",
+      args: SHARD_N > 1 ? [lastId, SHARD_N, SHARD_I] : [lastId],
     });
     if (res.rows.length === 0) break;
     for (const r of res.rows) {
       lastId = Number(r.id);
       totalPages++;
-      seenIds.add(lastId);
       const revId = r.revision_id === null ? -1 : Number(r.revision_id);
       const prevRev = extractedRevs.get(lastId);
 
@@ -537,7 +576,13 @@ let fallbackPages = 0, expandedFallback = 0;
         fallbackPages++;
         const needed = collectTemplateNames(String(r.text ?? ""));
         if (needed.length) {
-          await ensureTemplates(needed);
+          // a network hiccup must never kill a long extraction — continue
+          // with whatever is cached; unfetched templates stay inert
+          try {
+            await ensureTemplates(needed);
+          } catch (e) {
+            console.log(`  template fetch failed: ${(e as Error).message} — continuing without`);
+          }
           const anyProse = needed.some((n) => {
             const body = templateCache.get(n.toLowerCase());
             return body != null && isProseTemplateBody(n.toLowerCase(), body);
@@ -555,24 +600,39 @@ let fallbackPages = 0, expandedFallback = 0;
       }
     }
     if (pageBatch.length >= 200 || deleteBatch.length > 0) await flush();
-    if (totalPages % 5000 === 0) console.log(`  ${totalPages} pages scanned (${newPages} new, ${reExtracted} changed, ${skipped} unchanged)`);
+    if (totalPages % 5000 === 0) console.log(`  ${SHARD_TAG ? SHARD_TAG.slice(1, -1) + " " : ""}${totalPages} pages scanned (${newPages} new, ${reExtracted} changed, ${skipped} unchanged)`);
     if (res.rows.length < 1000) break;
   }
   await flush();
 
-  // remove pages that no longer exist in the source
+  // remove pages that no longer exist in the source. Compares against the
+  // FULL source id set (not what this process scanned), so it stays correct
+  // when run from one shard of a parallel extraction.
+  const sourceIds = new Set<number>();
+  {
+    let lastSrc = -1;
+    for (;;) {
+      const res = await SRC.execute({
+        sql: "SELECT id FROM page WHERE namespace = 0 AND text IS NOT NULL AND id > ? ORDER BY id LIMIT 20000",
+        args: [lastSrc],
+      });
+      if (res.rows.length === 0) break;
+      for (const r of res.rows) { lastSrc = Number(r.id); sourceIds.add(lastSrc); }
+      if (res.rows.length < 20000) break;
+    }
+  }
   let removed = 0;
   for (const [pid] of extractedRevs) {
-    if (!seenIds.has(pid)) {
-      await LINKS.execute({ sql: "DELETE FROM link WHERE page_id = ?", args: [pid] });
-      await LINKS.execute({ sql: "DELETE FROM page WHERE id = ?", args: [pid] });
+    if (!sourceIds.has(pid)) {
+      await withBusyRetry(() => LINKS.execute({ sql: "DELETE FROM link WHERE page_id = ?", args: [pid] }));
+      await withBusyRetry(() => LINKS.execute({ sql: "DELETE FROM page WHERE id = ?", args: [pid] }));
       removed++;
     }
   }
   if (removed > 0) console.log(`  removed ${removed} deleted pages`);
 }
 
-await LINKS.execute({ sql: "INSERT OR REPLACE INTO meta (key, value) VALUES ('parserVersion', ?)", args: [PARSER_VERSION] });
+await withBusyRetry(() => LINKS.execute({ sql: "INSERT OR REPLACE INTO meta (key, value) VALUES ('parserVersion', ?)", args: [PARSER_VERSION] }));
 
-console.log(`[${wiki.id}] extract done: ${newPages} new, ${reExtracted} updated, ${skipped} unchanged (${totalLinks} links) → ${path.join(OUT_DIR, "links.sqlite")}`);
-console.log(`[${wiki.id}] fallback pages: ${fallbackPages} (${expandedFallback} gained prose-template links; templates: ${templatesFetched} fetched, ${templatesMissing} missing)`);
+console.log(`[${wiki.id}${SHARD_TAG}] extract done: ${newPages} new, ${reExtracted} updated, ${skipped} unchanged (${totalLinks} links) → ${path.join(OUT_DIR, "links.sqlite")}`);
+console.log(`[${wiki.id}${SHARD_TAG}] fallback pages: ${fallbackPages} (${expandedFallback} gained prose-template links; templates: ${templatesFetched} fetched, ${templatesMissing} missing)`);
