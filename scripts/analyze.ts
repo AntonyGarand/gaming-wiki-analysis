@@ -138,12 +138,45 @@ async function main() {
     }));
 
     const key = rankKey.replace(/[^a-z0-9]+/gi, "");
+
+    // eligible-link distribution: how many walkable links each page has
+    const hist: Record<string, number> = {};
+    let atLeast1 = 0, atLeast2 = 0, atLeast3 = 0, atLeast5 = 0;
+    for (let i = 0; i < N; i++) {
+      const c = eligibleLinkCount(corpus, i);
+      const bucket = c >= 10 ? "10" : String(c);
+      hist[bucket] = (hist[bucket] ?? 0) + 1;
+      if (c >= 1) atLeast1++;
+      if (c >= 2) atLeast2++;
+      if (c >= 3) atLeast3++;
+      if (c >= 5) atLeast5++;
+    }
+    const eligibleLinks = {
+      histogram: hist, // pages by eligible-link count, capped at "10" = 10+
+      atLeast: {
+        "1": +(100 * atLeast1 / N).toFixed(1),
+        "2": +(100 * atLeast2 / N).toFixed(1),
+        "3": +(100 * atLeast3 / N).toFixed(1),
+        "5": +(100 * atLeast5 / N).toFixed(1),
+      }, // % of pages with >= N eligible links
+    };
+
+    // how concentrated the wiki's attention is across its attractor loops
+    const pctSum = (k: number) => +(ranked.slice(0, k).reduce((acc, [, b]) => acc + b, 0) * 100 / N).toFixed(2);
+    let entropyBits = 0;
+    if (cycled > 0) for (const [, b] of ranked) { const p = b / cycled; entropyBits -= p * Math.log2(p); }
+    const concentration = {
+      top1Pct: pctSum(1), top3Pct: pctSum(3), top10Pct: pctSum(10),
+      cycleCount: ranked.length,
+      entropyBits: +entropyBits.toFixed(2), // Shannon entropy of basin shares, loops only
+    };
+
     const stats = {
       wiki: wiki.id, rank: rankKey, nodes: N,
       converge: { articles: cycled, pct: +(100 * cycled / N).toFixed(2),
         deadEnd: deadBasin, deadEndPct: +(100 * deadBasin / N).toFixed(2),
         noLinks, tooFewLinks: tooFew, unresolvable },
-      hopStats, histogram,
+      hopStats, histogram, eligibleLinks, concentration,
       components: ranked.length + (deadBasin > 0 ? 1 : 0),
       cycleCount: ranked.length,
       largestCycle: cycles[0] ? { members: cycles[0].cycle, size: cycles[0].cycle.length, basin: cycles[0].basin } : null,
@@ -151,6 +184,7 @@ async function main() {
       deadEndTerminals: topDeadTerminals,
       roadsToTopAttractor: [],
       topFirstLinkTargets, topThroughTraffic,
+      ...(randomSeeds ? { randomSeeds } : {}),
     };
     fs.writeFileSync(path.join(OUT_DIR, `stats-r${key}.json`), JSON.stringify(stats, null, 1));
     fs.writeFileSync(path.join(OUT_DIR, `distances-r${key}.csv`),
@@ -161,11 +195,14 @@ async function main() {
         return `${ids[i]},"${(titles[i] ?? "").replace(/"/g, '""')}","${attr}",${dist[i]},${fate}`;
       }).join("\n"));
 
+    const nRank = rankKey === "strict1" ? 1 : (/^\d+$/.test(rankKey) ? Number(rankKey) : null);
     summary.push({
       rank: rankKey, convergePct: stats.converge.pct, deadEndPct: stats.converge.deadEndPct,
       components: stats.components, cycleCount: stats.cycleCount,
       meanHops: hopStats.mean, medianHops: hopStats.median, maxHops: hopStats.max,
       topAttractor: cycles[0]?.cycle ?? null, topAttractorPct: cycles[0]?.pct ?? 0,
+      top3Pct: concentration.top3Pct,
+      eligiblePct: nRank !== null ? eligibleLinks.atLeast[String(nRank)] : 100,
     });
     console.log(`  rank=${rankKey}: ${stats.converge.pct}% converge, top attractor ${cycles[0]?.pct ?? 0}%`);
   }
