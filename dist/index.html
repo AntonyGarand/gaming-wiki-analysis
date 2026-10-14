@@ -95,6 +95,18 @@
   a.lo { text-decoration: none; }
   a.lo:hover { border-color: var(--rust); color: var(--rust); }
   .live-missing { color: #a03d2e; font-family: var(--font-mono); font-size: 0.8em; background: #f7e3dd; padding: 0 4px; }
+  .fnote { margin: 1vh 0 3vh; padding: 14px 18px; border: 1px solid var(--hairline); border-left: 3px solid var(--plum); background: var(--ground-1); font-size: clamp(14px, 1.05vw, 16px); line-height: 1.6; color: var(--ink-2); }
+  .fnote b { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--plum); font-weight: 700; margin-right: 6px; }
+  .questlog { margin: 0 0 2vh; padding: 14px 18px 12px; border: 1px solid var(--hairline); background: var(--ground-1); }
+  .ql-k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; }
+  .questlog ol { columns: 2; column-gap: 24px; padding-left: 22px; margin: 0; font-family: var(--font-mono); font-size: 11.5px; line-height: 1.9; color: var(--ink-2); }
+  .questlog a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--hairline); }
+  .questlog a:hover { color: var(--rust); border-color: var(--rust); }
+  .souvenirs { list-style: none; padding: 0; margin: 0 0 4vh; }
+  .souvenirs li { position: relative; padding: 10px 0 10px 30px; border-top: 1px solid var(--hairline); font-size: clamp(15px, 1.15vw, 18px); line-height: 1.55; }
+  .souvenirs li::before { content: "◆"; position: absolute; left: 4px; top: 11px; color: var(--rust); font-size: 11px; }
+  .souvenirs li:last-child { border-bottom: 1px solid var(--hairline); }
+  .souvenirs b { font-weight: 600; color: var(--ink); }
   .pull { font-family: var(--font-display); font-style: italic; font-variation-settings: "opsz" 120, "wght" 400; font-size: clamp(22px, 2.3vw, 34px); line-height: 1.25; color: var(--ink-2); border-left: 3px solid var(--rust); padding-left: 22px; margin: 6vh 0; }
   .pull small { display: block; font-family: var(--font-mono); font-style: normal; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin-top: 12px; }
 
@@ -203,15 +215,15 @@
 <!-- ============================ MASTHEAD ============================ -->
 <header class="masthead">
   <div class="mast-copy">
-    <div class="mast-kicker">Getting to Philosophy, played on game wikis · October 2026</div>
+    <div class="mast-kicker">A first-link expedition through <span data-live="total.wikis"></span> gaming wikis · October 2026</div>
     <h1 class="mast-title">Where does<br><em>everything</em><br>lead?</h1>
     <p class="dek">
-      Follow the first link of any article, then that article's first link, and keep going. On Wikipedia
-      the walk drags <b>97% of the encyclopedia into one loop</b>, the loop through <i>Philosophy</i>.
-      We ran the same walk on <b><span data-live="total.wikis"></span> gaming wikis</b>,
-      <span class="num" data-live="total.articles|int"></span> articles in all, and drew the result:
-      every article as a speck, every first link as a thread, every loop as the whirlpool it drains into.
-      This one is about the <b>Old School RuneScape Wiki</b>.
+      Open any article. Click the first link in its text. Click the first link on <i>that</i> page, and keep
+      going. On Wikipedia this walk drags <b>97% of the encyclopedia into one loop</b>, the loop through
+      <i>Philosophy</i>. We played the same game on <b><span data-live="total.wikis"></span> gaming wikis</b>,
+      <span class="num" data-live="total.articles|int"></span> articles in all, and drew what we found:
+      every article a speck, every first link a thread, every loop the whirlpool it drains into. Our guide
+      for the trip is the <b>Old School RuneScape Wiki</b>. Hover the field to follow a walk.
     </p>
     <div class="mast-readout" id="mastReadout"><span>loading…</span></div>
   </div>
@@ -241,37 +253,67 @@
 <div id="articleWrap">
   <main class="prose">
 
+    <div class="questlog" aria-label="Table of contents">
+      <div class="ql-k">Itinerary</div>
+      <ol>
+        <li><a href="#s-experiment">The briefing</a></li>
+        <li><a href="#s-rules">The rulebook</a></li>
+        <li><a href="#s-convergence">How far is the drop</a></li>
+        <li><a href="#s-attractors">The three temples</a></li>
+        <li><a href="#s-census">The neighbouring kingdoms</a></li>
+        <li><a href="#s-decay">Taking the second door</a></li>
+        <li><a href="#s-hubs">Crossroads and bridges</a></li>
+        <li><a href="#s-grave">The graveyard</a></li>
+        <li><a href="#s-map">The map</a></li>
+        <li><a href="#s-play">Your turn</a></li>
+      </ol>
+    </div>
+
+    <!-- ───────────────────────── 01 ───────────────────────── -->
     <section class="sect" id="s-experiment">
-      <div class="sect-label"><span>The experiment</span><span>01</span></div>
-      <h2>A very silly game, <em>taken seriously</em></h2>
+      <div class="sect-label"><span>Stage 01 · The briefing</span><span>01</span></div>
+      <h2>Pack light. <em>Click the first link.</em></h2>
 
       <div class="step" data-fig="fig-field" data-label="the field — what happens to every wiki's articles">
         <p class="lede">
           Start at Falador, the white city. Its first link is Capital, because Falador is one. Capital's
           first link is Kingdom. Kingdom's is Gielinor, the world the game runs on. Gielinor's is Guthix,
           the god who shaped it. Guthix's is Gods, and Gods points back at Gielinor. Five clicks from a
-          castle to a circle. You can keep clicking forever; the circle doesn't care.
+          castle to a circle, and from there you can click forever. The circle doesn't care.
         </p>
         <p>
-          <a href="https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy" target="_blank" rel="noopener">People
-          noticed years ago</a> that on Wikipedia this game nearly always ends the same way, in the loop
-          that runs through Philosophy. It caught on because it feels like it should mean something: click
-          enough first links and you learn what an encyclopedia thinks everything is made of. We wanted the
-          gaming version of that answer, so we fetched <span data-live="total.wikis"></span> wikis and followed
-          every first link of every article.
+          That is the whole game. <a href="https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy" target="_blank" rel="noopener">Wikipedia
+          readers found it years ago</a> and called it <i>Getting to Philosophy</i>, because on Wikipedia nearly
+          every walk ends in the same loop, the one that passes through Philosophy. It stuck because it feels
+          like it ought to mean something: follow enough "X is a…" sentences and you find out what an
+          encyclopedia thinks everything is made of.
         </p>
         <p>
-          Each bar is a wiki, split three ways. The dark segment is the share of articles that drain into
-          that wiki's single biggest loop. The lighter segment is everything that finds some other loop.
-          The grey tail is the graveyard: walks that run out of links before they find any loop at all.
-          On this wiki <span class="num" data-live="o.convergePct|pct"></span> of
+          So we asked the obvious question. What is a <i>game</i> wiki made of? We fetched
+          <span data-live="total.wikis"></span> of them, <span class="num" data-live="total.articles|int"></span>
+          articles in all, and sent a walker down every first link of every page. This article follows the
+          expedition through one wiki in particular, the <b>Old School RuneScape Wiki</b>, with the other
+          <span data-live="total.others"></span> along as a control group. Every number in the text is read
+          from the data, so if it looks suspicious, it is at least honestly suspicious.
+        </p>
+        <p>
+          The first thing the walkers reported back is on the right. Each bar is one wiki, split three ways:
+          the dark segment is the share of articles that drain into that wiki's single biggest loop, the
+          lighter one is everything that finds some other loop, and the grey tail is the graveyard, walks
+          that ran out of links before they found any loop at all. On our wiki
+          <span class="num" data-live="o.convergePct|pct"></span> of
           <span data-live="o.nodes|int"></span> articles find a loop, which puts it
-          <span data-live="o.convergeRank|ordinal"></span> of <span data-live="total.wikis"></span>. The
-          champion is <span data-live="most.converge.name"></span> at
-          <span data-live="most.converge.pct|pct"></span>; the straggler is
+          <span data-live="o.convergeRank|ordinal"></span> of <span data-live="total.wikis"></span>.
+          The champion is <span data-live="most.converge.name"></span> at
+          <span data-live="most.converge.pct|pct"></span>. The straggler is
           <span data-live="least.converge.name"></span>, where
-          <span data-live="least.converge.deadPct|pct"></span> of walks just die.
+          <span data-live="least.converge.deadPct|pct"></span> of walks simply die.
         </p>
+        <div class="fnote">
+          <b>Field note.</b> A game wiki is a better subject for this than Wikipedia, not a worse one.
+          Wikipedia has one sprawling topic, everything. A game wiki has one small world, written by
+          fans who all played the same game, so when their first links agree, they agree about something.
+        </div>
       </div>
       <div class="figslot" data-fig="fig-field">
         <figure class="embed" id="fig-field" aria-label="Where every wiki's articles end up">
@@ -282,26 +324,32 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 02 ───────────────────────── -->
     <section class="sect" id="s-rules">
-      <div class="sect-label"><span>The rules</span><span>02</span></div>
-      <h2>The rules, <em>such as they are</em></h2>
+      <div class="sect-label"><span>Stage 02 · The rulebook</span><span>02</span></div>
+      <h2>What counts as <em>a first link</em></h2>
 
       <div class="step" data-fig="fig-chain" data-label="one walk — a random article's fate">
         <p>
-          A wiki offers a hundred ways to cheat at this game. Infoboxes and navigation templates are
-          packed with links, but nobody reads those as sentences, so the walk ignores them. Links inside
-          parentheses are usually disambiguators, like <span class="lo">Dragon (race)</span>; italics mark
-          titles and foreign words. Skipped, skipped. Links that land on a disambiguation page or a date
-          page, which on a game wiki is an update log wearing an article costume, are skipped too. Red
-          links, images, categories: skipped. If the first link fails a test, the walk takes the next
-          one. If nothing on the page passes, the walk ends and the article goes in the graveyard.
+          A wiki page offers a hundred ways to cheat at this game, so the walker carries a short rulebook.
+          Infoboxes and navigation boxes are stuffed with links, but nobody reads them as sentences, so
+          they don't count. Neither does anything inside parentheses, which is nearly always a
+          disambiguator like <span class="lo">Dragon (race)</span>, or anything in italics, which is
+          usually a title or a foreign word. Links to disambiguation pages are skipped, and so are links to
+          date pages, which on a game wiki are update logs wearing an article costume. Red links, images,
+          files, categories: skipped, skipped, skipped.
         </p>
         <p>
-          What survives the skipping is the part of the wiki that explains itself in sentences, the chain
-          of read-this-first that a real reader falls down. The panel is running one now, on a random
-          article. Every pill is one click. The walks come out shorter than you'd think: the median article
-          on this wiki is in its loop after <span class="num" data-live="o.medianHops"></span> clicks, and
-          the longest walk in the whole wiki takes <span data-live="o.maxHops"></span>.
+          The walker takes the first link that passes every test. If nothing on the page passes, the walk
+          ends there and the article goes in the graveyard. What survives is the part of the wiki that
+          explains itself in sentences, the read-this-first chain a real reader would actually fall down.
+        </p>
+        <p>
+          The panel is running one such walk right now, on a random article. Every pill is a click; the
+          highlighted pills at the end are the loop. Reroll it a few times and a pattern appears fast: the
+          walks are shorter than you'd expect. The median article on this wiki is inside its loop after
+          <span class="num" data-live="o.medianHops"></span> clicks, and the longest walk in the entire wiki
+          takes <span data-live="o.maxHops"></span>.
         </p>
       </div>
       <div class="figslot" data-fig="fig-chain">
@@ -312,29 +360,37 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 03 ───────────────────────── -->
     <section class="sect" id="s-convergence">
-      <div class="sect-label"><span>Convergence</span><span>03</span></div>
-      <h2>Half-life of <em>a click</em></h2>
+      <div class="sect-label"><span>Stage 03 · Convergence</span><span>03</span></div>
+      <h2>How far <em>is the drop?</em></h2>
 
       <div class="step" data-fig="fig-fate" data-state="bars" data-label="hops to a loop — the distribution">
         <p>
-          Count the clicks each article takes before it enters its loop and you get a hump, not a
-          bell: a fast rise, a peak, and a long thin tail of articles hiking through lore. Mean
-          <span data-live="o.meanHops"></span>, median <span data-live="o.medianHops"></span>, and
-          ninety percent of articles are home within <span data-live="o.p90"></span> clicks. Editors
-          keep definitions short on purpose. A reference work that recursed forever would be unusable,
-          and everyone involved knows it.
+          Count the clicks each article needs before it lands in its loop and you get a hump, not a bell:
+          a sharp rise, a peak, and a long thin tail of articles hiking through lore. Mean
+          <span data-live="o.meanHops"></span>, median <span data-live="o.medianHops"></span>, and nine
+          articles in ten are home within <span data-live="o.p90"></span> clicks.
+        </p>
+        <p>
+          The short walks are not an accident. Editors keep opening sentences short on purpose; a reference
+          work that defined everything in terms of something more obscure would be unusable, and everyone
+          who writes one knows it. The tail is where that discipline slips, and the tail is where the
+          interesting articles live.
         </p>
       </div>
       <div class="step" data-fig="fig-fate" data-state="cumu" data-label="the funnel — every wiki's cumulative curve">
         <p>
-          Turn the histogram into a running total and lay the other wikis on top. The faint curves are
-          the other <span data-live="total.others"></span>; the dark one is this wiki. It is one of the slow ones.
-          <span data-live="shallowest.name"></span> gets its median article home in
-          <span data-live="shallowest.hops"></span> clicks; <span data-live="deepest.name"></span> takes
-          <span data-live="deepest.hops"></span>, the deepest of the lot. A long walk means a wiki
-          that defines its subjects in terms of deeper subjects, which is to say a wiki whose readers
-          read the lore. All of it.
+          Turn the histogram into a running total and lay the neighbours on top. The faint curves are the
+          other <span data-live="total.others"></span> wikis; the dark one is ours, and it is one of the slow
+          ones. <span data-live="shallowest.name"></span> gets its median article home in
+          <span data-live="shallowest.hops"></span> clicks. The deepest of the lot is
+          <span data-live="deepest.name"></span> at <span data-live="deepest.hops"></span>.
+        </p>
+        <p>
+          A long walk means a wiki that defines its subjects in terms of deeper subjects, which is to say a
+          wiki whose readers read the lore. All of it. A short one means a wiki that mostly says "this is
+          an item" and moves on.
         </p>
       </div>
       <div class="figslot" data-fig="fig-fate">
@@ -346,42 +402,49 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 04 ───────────────────────── -->
     <section class="sect" id="s-attractors">
-      <div class="sect-label"><span>The attractors</span><span>04</span></div>
-      <h2>Two religions and <em>a treasury</em></h2>
+      <div class="sect-label"><span>Stage 04 · The attractors</span><span>04</span></div>
+      <h2>Two religions <em>and a treasury</em></h2>
 
       <div class="step" data-fig="fig-waffle" data-state="three" data-label="the pantheon — every square is 1% of the wiki">
         <p>
-          A loop that articles drain into is an <b>attractor</b>, and the articles draining into it are
-          its <b>basin</b>. The waffle is the whole wiki, one square per percent. The biggest basin on
-          this wiki belongs to <span class="lo" data-live="o.loop1.name"></span>, with
+          Time for some vocabulary. A loop that walks drain into is an <b>attractor</b>, and the articles
+          that drain into it are its <b>basin</b>. The waffle on the right is the whole wiki, one square per
+          percent, coloured by basin.
+        </p>
+        <p>
+          The biggest basin belongs to <span class="lo" data-live="o.loop1.name"></span>, which claims
           <span class="num" data-live="o.loop1.pct|pct"></span> of all articles: the world, the god who
-          made it, and gods in general. But it barely wins. <span class="lo" data-live="o.loop2.name"></span>
-          holds <span class="num" data-live="o.loop2.pct|pct"></span>, just
+          made it, and gods in general. A proper philosophy. But it barely wins.
+          <span class="lo" data-live="o.loop2.name"></span> holds
+          <span class="num" data-live="o.loop2.pct|pct"></span>, only
           <span data-live="o.gap12|pts"></span> behind. This encyclopedia has two religions, theology and
           the monster manual, and they are the same size.
         </p>
         <p>
-          Third place is the treasury, <span class="lo" data-live="o.loop3.name"></span> at
-          <span data-live="o.loop3.pct|pct"></span>. For a lot of players the Grand Exchange is the endgame
-          and everything else is a delivery mechanism for it, and the first links agree. Between the three,
-          <span class="num" data-live="o.top3Pct|pct"></span> of the wiki has a god to fall into.
+          Third is the treasury, <span class="lo" data-live="o.loop3.name"></span> at
+          <span data-live="o.loop3.pct|pct"></span>. For a lot of players the Grand Exchange is the
+          endgame and everything else is a delivery mechanism for it, and the first links quietly agree.
+          Between the three, <span class="num" data-live="o.top3Pct|pct"></span> of the wiki has a god to
+          fall into.
         </p>
       </div>
       <div class="step" data-fig="fig-waffle" data-state="nine" data-label="the long tail — the cults">
         <p>
-          Below the big three it gets strange. <span data-live="o.loop4.name"></span>.
-          <span data-live="o.loop5.name"></span>. <span data-live="o.loop7.name"></span>. Each of these
-          holds a few dozen faithful articles, whirlpools the main current never notices. There are
-          <span class="num" data-live="o.cycleCount|int"></span> loops in all, most of them two pages
+          Below the big three the map gets strange, and this is the fun part of the trip.
+          <span class="lo" data-live="o.loop4.name"></span>. <span class="lo" data-live="o.loop5.name"></span>.
+          <span class="lo" data-live="o.loop7.name"></span>. Each of these holds a few hundred faithful
+          articles, little whirlpools the main current never notices. There are
+          <span class="num" data-live="o.cycleCount|int"></span> loops in all, and most are two pages
           pointing at each other in a corner of the wiki nobody else visits.
         </p>
       </div>
       <div class="step" data-fig="fig-waffle" data-state="all" data-label="everything — and the graveyard">
         <p>
-          Colour every loop and the picture is a pantheon with a ragged edge: a handful of great basins,
-          a scatter of cults, and the grey squares, <span data-live="o.deadPct|pct"></span> of the wiki,
-          whose walks die before they find anything to believe in.
+          Colour every loop and the picture is a pantheon with a ragged edge: a handful of great basins, a
+          scatter of cults, and the grey squares, <span data-live="o.deadPct|pct"></span> of the wiki,
+          whose walks die before they find anything to believe in. We'll visit them later. Bring a shovel.
         </p>
       </div>
       <div class="figslot" data-fig="fig-waffle">
@@ -393,29 +456,37 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 05 ───────────────────────── -->
     <section class="sect" id="s-census">
-      <div class="sect-label"><span>The census</span><span>05</span></div>
+      <div class="sect-label"><span>Stage 05 · The census</span><span>05</span></div>
       <h2>What the <em>neighbours</em> worship</h2>
 
       <div class="step" data-fig="fig-census" data-label="the census — every wiki's godhead">
         <p>
-          Line the wikis up and each one's answer is on display, ranked by devoutness: how much of the
-          wiki drains into its single biggest loop. The most devout is <span data-live="most.devout.name"></span>,
-          where <span class="num" data-live="most.devout.pct|pct"></span> of articles end in
-          <span class="lo" data-live="most.devout.loop"></span>. The least is
-          <span data-live="least.devout.name"></span>, whose top loop holds only
-          <span data-live="least.devout.pct|pct"></span>. The RuneScape wikis make a family portrait:
-          OSRS believes in <span class="lo" data-live="w.osrs.loop"></span>, RuneScape 3 in
-          <span class="lo" data-live="w.rs3.loop"></span>, and RuneScape Classic, frozen the day the game
-          died, in <span class="lo" data-live="w.rsc.loop"></span>.
+          The other <span data-live="total.others"></span> wikis each have a philosophy too, and no two
+          are alike. Line them up by devoutness, the share of a wiki that drains into its
+          single biggest loop, and the spread is enormous. The most devout is
+          <span data-live="most.devout.name"></span>, where
+          <span class="num" data-live="most.devout.pct|pct"></span> of articles end in
+          <span class="lo" data-live="most.devout.loop"></span>: a company and then a man. The least is
+          <span data-live="least.devout.name"></span>, whose biggest loop holds only
+          <span data-live="least.devout.pct|pct"></span> of its pages.
         </p>
         <p>
-          Read the loops as answers to "what is this game, really?" Terraria says
+          Read each loop as the wiki's answer to "what is this game, really?" Terraria says
           <span class="lo" data-live="w.terraria.loop"></span>. Minecraft says
-          <span class="lo" data-live="w.minecraft.loop"></span>. Fortnite says
-          <span class="lo" data-live="w.fortnite.loop"></span>, a company and then a man. GTA says
-          <span class="lo" data-live="w.gta.loop"></span>. None of them chose these answers; they are what
-          happens when thousands of editors each write one sentence that starts with "X is a …".
+          <span class="lo" data-live="w.minecraft.loop"></span>, which is correct. Tarkov says
+          <span class="lo" data-live="w.tarkov.loop"></span>, which is bleak. GTA says
+          <span class="lo" data-live="w.gta.loop"></span>. Fortnite says
+          <span class="lo" data-live="w.fortnite.loop"></span>, and means it.
+        </p>
+        <p>
+          The RuneScape wikis make a family portrait. Old School believes in
+          <span class="lo" data-live="w.osrs.loop"></span>. RuneScape 3, the grown-up sibling, in
+          <span class="lo" data-live="w.rs3.loop"></span>. And RuneScape Classic, frozen the day the game
+          shut down, in <span class="lo" data-live="w.rsc.loop"></span>: the man who wrote it and the
+          company he founded. Nobody chose any of these. They are what happens when thousands of editors
+          each write one sentence that starts with "X is a…".
         </p>
       </div>
       <div class="figslot" data-fig="fig-census">
@@ -427,44 +498,52 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 06 ───────────────────────── -->
     <section class="sect" id="s-decay">
-      <div class="sect-label"><span>Below the first link</span><span>06</span></div>
-      <h2>Second links find <em>different gods</em></h2>
+      <div class="sect-label"><span>Stage 06 · Below the first link</span><span>06</span></div>
+      <h2>Taking the <em>second door</em></h2>
 
       <div class="step" data-fig="fig-decay" data-state="top" data-label="deeper links — the top loop and the loop count">
         <p>
-          Everything so far used the first link, the sentence editors fight over most. There's no law
-          saying the game stops there, so we re-ran all <span data-live="o.nodes|int"></span> walks
-          following the second link, the third, the fifth, the last, and a random one. The naive
-          expectation is decay: deeper links, less agreement. What actually happens is stranger. The
-          second link's biggest loop is <span class="lo" data-live="o.r2.loop"></span>
+          Everything so far followed the first link, the sentence editors fight over most. There is no law
+          saying the game stops there. So we sent the walkers back out with new orders: take the second
+          link instead. Then the third, the fifth, the last link on the page, and a random one.
+        </p>
+        <p>
+          The naive guess is decay, deeper links and less agreement. What happens is stranger. Each rank
+          has its own god. The second link's biggest loop is <span class="lo" data-live="o.r2.loop"></span>
           (<span data-live="o.r2.topPct|pct"></span>). The third's is
-          <span class="lo" data-live="o.r3.loop"></span> (<span data-live="o.r3.topPct|pct"></span>).
-          The fifth's is <span class="lo" data-live="o.r5.loop"></span>. Each rank has its own god, and
-          the pantheon fragments: <span data-live="o.cycleCount|int"></span> loops at the first link,
+          <span class="lo" data-live="o.r3.loop"></span> (<span data-live="o.r3.topPct|pct"></span>). The
+          fifth's is <span class="lo" data-live="o.r5.loop"></span>. And the
+          pantheon shatters: <span data-live="o.cycleCount|int"></span> loops at the first link,
           <span data-live="o.r3.cycleCount|int"></span> at the third.
         </p>
       </div>
       <div class="step" data-fig="fig-decay" data-state="conv" data-label="deeper links — why convergence falls">
         <p>
-          Convergence does fall, from <span data-live="o.convergePct|pct"></span> to
-          <span data-live="o.r5.convergePct|pct"></span> by the fifth link, but mostly for a boring
-          reason: only <span class="num" data-live="o.r5.eligiblePct|pct"></span> of articles even
-          have five links that pass the rules. The dotted line is the share of pages with enough links;
-          convergence tracks it. Where the walk is possible at all, it still mostly finds a loop. And the
-          walks get longer: median <span data-live="o.medianHops"></span> clicks at the first link,
+          Convergence does fall, from <span data-live="o.convergePct|pct"></span> at the first link to
+          <span data-live="o.r5.convergePct|pct"></span> at the fifth, but for a boring reason: only
+          <span class="num" data-live="o.r5.eligiblePct|pct"></span> of articles even have five links that
+          pass the rulebook. The dotted line is that share, and convergence tracks it closely. Wherever the
+          walk is possible at all, it still mostly finds a loop. It just takes longer: a median of
+          <span data-live="o.medianHops"></span> clicks at the first link,
           <span data-live="o.r5.medianHops"></span> at the fifth.
         </p>
       </div>
       <div class="step" data-fig="fig-decay" data-state="tail" data-label="last links and random links — convergence is cheap">
         <p>
-          The two detached points are the control group. Follow the <i>last</i> link and
-          <span data-live="o.rlast.convergePct|pct"></span> of articles still find a loop; follow a random
-          one and <span data-live="o.rrandom.convergePct|pct"></span> do. That is the mathematics talking:
-          any walk on a finite graph that doesn't hit a dead end has to loop eventually. Convergence is
-          cheap. What the first link has that the others don't is <i>agreement</i>: the random walk's
-          biggest loop is <span class="lo" data-live="o.rrandom.loop"></span>, which no one would call a
-          philosophy. Editors agree sharply on what earns the first mention, and on nothing after it.
+          The two detached points on the right are the control group, and they're the real lesson of this
+          stage. Follow the <i>last</i> link on every page and
+          <span data-live="o.rlast.convergePct|pct"></span> of articles still end in a loop. Follow a random
+          one and <span data-live="o.rrandom.convergePct|pct"></span> do. That is mathematics talking, not
+          editors: any walk through a finite graph that doesn't hit a dead end has to loop eventually.
+          Looping is cheap.
+        </p>
+        <p>
+          What the first link has that no other link has is <i>agreement</i>. The random walk's biggest loop
+          is <span class="lo" data-live="o.rrandom.loop"></span>, and the last link's is
+          <span class="lo" data-live="o.rlast.loop"></span>, neither of which anyone would call a philosophy.
+          Editors agree sharply about what deserves the first mention, and about nothing after it.
         </p>
       </div>
       <div class="figslot" data-fig="fig-decay">
@@ -476,34 +555,39 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 07 ───────────────────────── -->
     <section class="sect" id="s-hubs">
-      <div class="sect-label"><span>Hubs &amp; bridges</span><span>07</span></div>
-      <h2>Famous pages, <em>load-bearing pages</em></h2>
+      <div class="sect-label"><span>Stage 07 · Hubs &amp; bridges</span><span>07</span></div>
+      <h2>Crossroads <em>and toll bridges</em></h2>
 
       <div class="step" data-fig="fig-hubs-deg" data-label="hubs — the pages most often chosen as a first link">
         <p>
-          A wiki has two kinds of importance, and they barely overlap. The visible kind is being chosen:
-          the pages that the most other articles pick as their very first link. On this wiki the list is
-          topped by <span class="lo" data-live="o.hub1.title"></span>, the first link of
-          <span class="num" data-live="o.hub1.count|int"></span> articles, then
+          Every map has a few places everyone passes through. On a wiki there are two kinds, and they barely
+          overlap. The loud kind is the crossroads: the pages the most other articles pick as their very
+          first link. On this wiki the busiest is <span class="lo" data-live="o.hub1.title"></span>, chosen
+          first by <span class="num" data-live="o.hub1.count|int"></span> articles, then
           <span class="lo" data-live="o.hub2.title"></span> and <span class="lo" data-live="o.hub3.title"></span>.
-          No gods, no dragons. The most-chosen pages are the plumbing, the shared vocabulary every article
-          leans on without thinking about it.
+        </p>
+        <p>
+          No gods, no dragons. The most-chosen pages are plumbing: the shared vocabulary every article
+          leans on without thinking about it. Which is exactly why they aren't attractors. A crossroads is a
+          place you pass through, not a place you stay.
         </p>
       </div>
       <div class="step" data-fig="fig-hubs-bet" data-label="bridges — the pages the most walks pass through">
         <p>
-          The quieter kind is being passed through: pages that sit in the middle of other articles' walks,
-          where deleting one would snap the wiki's explanatory paths. This is where the lore shows up.
-          The most-travelled page is <span class="lo" data-live="o.bridge1.title"></span>, then
-          <span class="lo" data-live="o.bridge2.title"></span> and <span class="lo" data-live="o.bridge3.title"></span>.
-          Nearly every monster and NPC definition passes through the question of what counts as you,
-          which is a lot of philosophy per drop table.
+          The quiet kind is the toll bridge: a page in the <i>middle</i> of other articles' walks, where
+          removing it would snap thousands of explanatory paths at once. Here the lore shows up. The most
+          travelled bridge is <span class="lo" data-live="o.bridge1.title"></span>, then
+          <span class="lo" data-live="o.bridge2.title"></span> and
+          <span class="lo" data-live="o.bridge3.title"></span>. Nearly every monster and every NPC is
+          defined by comparison with you, so nearly every walk has to settle what <i>you</i> are before it
+          can go anywhere. That is a surprising amount of philosophy per drop table.
         </p>
       </div>
       <div class="figslot" data-fig="fig-hubs-deg">
         <figure class="embed" id="fig-hubs-deg" aria-label="Pages most often chosen as a first link">
-          <div class="cap"><span class="cap-k">07·a</span><span>hubs · chosen as first link by the most articles · <span data-live="focus.name"></span></span></div>
+          <div class="cap"><span class="cap-k">07·a</span><span>crossroads · chosen as first link by the most articles · <span data-live="focus.name"></span></span></div>
           <div class="chart" id="ch-deg"></div>
         </figure>
       </div>
@@ -515,20 +599,30 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 08 ───────────────────────── -->
     <section class="sect" id="s-grave">
-      <div class="sect-label"><span>The graveyard</span><span>08</span></div>
+      <div class="sect-label"><span>Stage 08 · The graveyard</span><span>08</span></div>
       <h2>Where the walks <em>go to die</em></h2>
 
       <div class="step" data-fig="fig-grave" data-label="the graveyard — where dead walks end">
         <p>
-          <span data-live="o.deadCount|int"></span> articles on this wiki never find a loop. Most of them
-          die on the same few pages. The biggest open grave is
+          We promised a shovel. <span data-live="o.deadCount|int"></span> articles on this wiki never find a
+          loop, and most of them die on the same few pages. The biggest open grave is
           <span class="lo" data-live="o.grave1.title"></span>, which swallows
-          <span class="num" data-live="o.grave1.chains|int"></span> walks: <span data-live="o.grave1.reason"></span>.
-          A page like that is a list with no prose, a table of items that never says what an item is.
-          The walk arrives, finds nothing that reads as a sentence, and stops. Every wiki has a few of
-          these, and they tell you where the editors ran out of patience for explaining.
+          <span class="num" data-live="o.grave1.chains|int"></span> walks. The cause of death, every time:
+          <span data-live="o.grave1.reason"></span>.
         </p>
+        <p>
+          Picture the page: a table of every item that fits one equipment slot, with its stats. Enormously
+          useful, and not one sentence in it. The walker arrives, finds nothing it's allowed to click, and
+          stops. Every wiki has a few of these, and they mark the exact spot where the editors ran out of
+          patience for explaining and started listing instead.
+        </p>
+        <div class="fnote">
+          <b>Field note.</b> The graveyard is also where the parser's own mistakes would show up. A page
+          that dies with a reason like "no eligible links" when it plainly has prose is a bug report. We
+          read the top of this list for every wiki, and so should you if you run this on your own.
+        </div>
       </div>
       <div class="figslot" data-fig="fig-grave">
         <figure class="embed" id="fig-grave" aria-label="Pages where the most walks die">
@@ -539,18 +633,24 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 09 ───────────────────────── -->
     <section class="sect" id="s-map">
-      <div class="sect-label"><span>The map</span><span>09</span></div>
+      <div class="sect-label"><span>Stage 09 · The map</span><span>09</span></div>
       <h2>The whole wiki, <em>as drainage</em></h2>
 
       <div class="step" data-fig="fig-map" data-label="the drainage map — every article, every first link">
         <p>
-          This is all <span data-live="focus.nodes|int"></span> articles at once. Each loop is a basin,
-          sized by how many articles drain into it, and every article sits in its basin at the distance
-          it takes to get there: one ring per click. The threads are first links. The moving sparks are
-          walkers, starting on random articles and following first links until they fall in. Watch where
-          they pile up. Hover any speck to trace its walk, scroll to zoom, click to open the real article.
-          The dust at the rim is the orphans: tiny loops and lonely dead ends with no basin to join.
+          Here is the territory we've been describing, all <span data-live="focus.nodes|int"></span>
+          articles at once. Think of it as a watershed. Each loop is a basin, sized by how many articles
+          drain into it, and every article sits in its basin at exactly the distance it takes to get there:
+          one ring per click. The threads are first links. The dust at the rim is the orphans, tiny loops
+          and lonely dead ends with no basin to join.
+        </p>
+        <p>
+          The moving sparks are walkers. Each starts on a random article and follows first links until it
+          falls in, and then another takes its place. Watch where they pile up. Hover any speck to trace its
+          walk, scroll to zoom, click to open the real article, and press ⛶ to take the whole thing
+          fullscreen. There are articles out at ring fifteen. Go find them.
         </p>
       </div>
       <div class="figslot" data-fig="fig-map">
@@ -562,24 +662,30 @@
       </div>
     </section>
 
+    <!-- ───────────────────────── 10 ───────────────────────── -->
     <section class="sect" id="s-play">
-      <div class="sect-label"><span>Your turn</span><span>10</span></div>
+      <div class="sect-label"><span>Stage 10 · Your turn</span><span>10</span></div>
       <h2>Feed it <em>an article</em></h2>
 
       <div class="step" data-fig="fig-play" data-label="your turn — follow any chain">
         <p>
-          Type anything and watch it walk: a boss, a quest, an item, a city. Guess which whirlpool it
-          falls into before the pills stop. You get scarily good at this. Then switch the rank and follow
-          the same article's fifth link instead. It usually ends somewhere completely different,
-          occasionally somewhere better.
+          The expedition is over; the game is yours. Type anything and watch it walk: a boss, a quest, an
+          item, a city. Bet on which whirlpool it falls into before the pills stop. You will get scarily
+          good at this within about six tries. Then switch the rank and follow the same article's fifth
+          link instead. It usually ends somewhere completely different, and occasionally somewhere better.
         </p>
         <p>
-          Caveats, for honesty's sake. Everything here is one snapshot of wikis that change every day. The
-          parser trips over the occasional exotic template, and when it does, that page's walk is wrong;
-          we believe this is rare, and we would say that either way. The rules, skip the parentheses, skip
-          the italics, are a house style, not a law of nature. The random rank is one seeded draw per
-          article, so read its numbers as about right rather than exact.
+          Use the ⚙ button in the bar at the top to point every chart, the map and the walkers at a
+          different wiki. The prose stays loyal to Old School RuneScape, but the pictures will follow you
+          anywhere.
         </p>
+        <div class="fnote">
+          <b>Honesty box.</b> Everything here is one snapshot of wikis that change daily. The rulebook is a
+          house style, not a law of nature; change "skip italics" to "keep italics" and some basins will
+          shift. The parser trips over the occasional exotic template, and when it does, that one page's walk
+          is wrong. The random rank is a single seeded draw per article, so read its numbers as about right
+          rather than exact.
+        </div>
       </div>
       <div class="figslot" data-fig="fig-play">
         <figure class="embed" id="fig-play" aria-label="Follow any article's chain">
@@ -598,11 +704,24 @@
       </div>
     </section>
 
-    <div class="pull">
-      A wiki explains things in terms of other things. Keep following, and you reach the pages it stopped
-      explaining and simply believes in.
-      <small>osrs in focus · <span data-live="total.wikis"></span> wikis compared</small>
-    </div>
+    <!-- ───────────────────────── epilogue ───────────────────────── -->
+    <section class="sect" id="s-end">
+      <div class="sect-label"><span>Souvenirs</span><span>∞</span></div>
+      <h2>Things we <em>brought back</em></h2>
+      <ul class="souvenirs">
+        <li><b><span data-live="most.devout.name"></span></b> is the most single-minded wiki we found: <span data-live="most.devout.pct|pct"></span> of it ends at <span class="lo" data-live="most.devout.loop"></span>.</li>
+        <li><b>Minecraft</b> reduced itself to <span class="lo" data-live="w.minecraft.loop"></span>. You cannot argue with that.</li>
+        <li><b>RuneScape Classic</b> has no world left to believe in, so it believes in its maker: <span class="lo" data-live="w.rsc.loop"></span>.</li>
+        <li><b>Old School RuneScape</b> cannot decide whether it is about gods or monsters, and the margin is <span data-live="o.gap12|pts"></span>.</li>
+        <li>Following a <i>random</i> link finds a loop <span data-live="o.rrandom.convergePct|pct"></span> of the time. Looping is free; agreeing is the hard part.</li>
+        <li>The busiest page on the OSRS Wiki is <span class="lo" data-live="o.hub1.title"></span>, the first link of <span data-live="o.hub1.count|int"></span> articles, and nobody drains into it.</li>
+      </ul>
+      <div class="pull">
+        A wiki explains things in terms of other things. Keep following, and you reach the pages it stopped
+        explaining and simply believes in.
+        <small>osrs in focus · <span data-live="total.wikis"></span> wikis compared · <span data-live="total.articles|int"></span> articles walked</small>
+      </div>
+    </section>
   </main>
 
   <aside class="panel" id="panel" aria-label="Data visualisation">
@@ -621,7 +740,7 @@
       red links and namespaces skipped · the walk stops at a loop or a dead page<br>
       run it on your own wiki, any mediawiki with a public api.php:
       <a href="https://github.com/AntonyGarand/gaming-wiki-analysis" target="_blank" rel="noopener">github.com/AntonyGarand/gaming-wiki-analysis</a><br>
-      found a weirder attractor than grain → wheat? tell us
+      found a weirder whirlpool than block ⇄ slab? tell us
     </div>
   </div>
 </footer>
@@ -734,7 +853,7 @@ function computeFacts(all, proseStats, proseSummary, proseGraphs) {
       top3Pct: o.concentration?.top3Pct ?? +((g1.pct ?? 0) + (g2.pct ?? 0) + (g3.pct ?? 0)).toFixed(1),
       hub1: hub(o, 0), hub2: hub(o, 1), hub3: hub(o, 2),
       bridge1: bridge(o, 0), bridge2: bridge(o, 1), bridge3: bridge(o, 2),
-      grave1: grave ? { title: grave.title, chains: grave.chains, reason: grave.reason } : {},
+      grave1: grave ? { title: grave.title, chains: grave.chains, pct: grave.pct, reason: grave.reason } : {},
       r2: rankFacts(proseSummary, null, "2", proseGraphs["2"]), r3: rankFacts(proseSummary, null, "3", proseGraphs["3"]),
       r5: rankFacts(proseSummary, null, "5", proseGraphs["5"]), rlast: rankFacts(proseSummary, null, "last", proseGraphs["last"]),
       rrandom: rankFacts(proseSummary, null, "random", proseGraphs["random"]),
