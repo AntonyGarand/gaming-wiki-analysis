@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
-<script src="/meshfield.js"></script>
+<script src="/walkfield.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <style>
   /* field.io instantiation — tokens (warm paper editorial; --cy/--vi = accent / accent-2) */
@@ -47,7 +47,6 @@
 
   /* masthead + nebula */
   .masthead { position: relative; padding: 0 0 14vh; overflow: hidden; }
-  #fieldCanvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
   .mast-inner { position: relative; padding: 9vh 5vw 0; z-index: 2; }
   .mast-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.35em; color: var(--ink-2); text-transform: uppercase; margin-bottom: 3vh; }
   .mast-kicker .dot { color: var(--cy); }
@@ -221,7 +220,6 @@
   /* constellation */
   .graphscene { padding: 8vh 3vw 6vh; }
   .graphwrap { position: relative; background: var(--ground-1); border: 1px solid var(--hairline); padding: 10px; }
-  .graphwrap.dragging #graph { cursor: grabbing; }
   .ginfo {
     position: absolute; left: 22px; bottom: 18px; pointer-events: none;    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em;
     color: var(--ink-2); max-width: 60%; line-height: 1.8;
@@ -293,7 +291,6 @@
 <div id="cursorAura"></div>
 
 <header class="masthead">
-  <canvas id="fieldCanvas"></canvas>
   <div class="mast-inner">
     <div class="mast-kicker">FIRST-LINK NETWORK ANALYSIS <span class="dot">●</span> OSRS <span class="dot">/</span> RS3 WIKIS</div>
     <h1 class="mast-title" id="mastTitle">Link<span class="lab">Laboratory</span></h1>
@@ -366,17 +363,10 @@
 </div>
 
 <section class="graphscene" id="graphScene" style="display:none">
-  <div class="scene-label"><span>The constellation — loops of the first-link network · <a id="meshLink" href="/mesh" style="color:var(--cy);text-decoration:underline;text-underline-offset:3px;">open full-page ↗</a></span><span class="idx">05</span></div>
+  <div class="scene-label"><span>The drainage map — every article around the loop it drains into · <a id="meshLink" href="/mesh" style="color:var(--cy);text-decoration:underline;text-underline-offset:3px;">open full-page ↗</a></span><span class="idx">05</span></div>
   <div class="graphwrap" id="graphWrap">
-    <canvas id="meshCanvas" style="width:100%;height:min(78vh,820px);display:block;"></canvas>
-    <div class="ginfo" id="ginfo">hover a node to read its article · scroll to zoom · drag to pan</div>
-    <div style="position:absolute;right:18px;top:14px;display:flex;gap:4px;z-index:5;align-items:center;" id="detailCtl">
-      <button class="btn ghost" data-d="1" style="padding:6px 12px;font-size:9px;">80</button>
-      <button class="btn ghost on" data-d="2" style="padding:6px 12px;font-size:9px;background:var(--ink);color:var(--ground-0);border-color:var(--ink);">150</button>
-      <button class="btn ghost" data-d="3" style="padding:6px 12px;font-size:9px;">250</button>
-      <button class="btn ghost" data-d="4" style="padding:6px 12px;font-size:9px;">400</button>
-      <button class="btn ghost" data-d="5" style="padding:6px 12px;font-size:9px;">600</button>
-    </div>
+    <div id="fieldMount" style="position:relative;width:100%;height:min(78vh,820px);overflow:hidden;"></div>
+    <div class="ginfo" id="ginfo">hover a dot to trace its walk · click to open the article · scroll to zoom · drag to pan</div>
     <div class="glegend" id="glegend"></div>
   </div>
 </section>
@@ -411,7 +401,7 @@ function hueAt(t) {
 }
 
 const WIKIS = __WIKI_OPTIONS__;
-const state = { wiki: WIKIS[0]?.id ?? "osrs", rank: "strict1", tab: "stats", detail: 2 };
+const state = { wiki: WIKIS[0]?.id ?? "osrs", rank: "strict1", tab: "stats" };
 const RANK_LABELS = { strict1: "1st", last: "last", random: "random" };
 const rankLabel = (r) => RANK_LABELS[r] ?? (r + (r === "1" ? "st" : r === "2" ? "nd" : r === "3" ? "rd" : "th")) + " link";
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -427,9 +417,6 @@ async function api(path) {
 }
 function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
 
-let __meshUpdate = null;
-const __mastMesh = createMeshField(document.getElementById("fieldCanvas"), document.querySelector(".masthead"), {});
-__meshUpdate = (wiki, rank) => { __mastMesh.update(wiki, rank, 150); };
 
 /* ==================================================================== *
  * cursor aura + scroll progress + scroll-morphing masthead type
@@ -542,8 +529,6 @@ async function loadStats() {
       `<span><b>${topCycles.length}</b> whirlpools</span>` +
       (st.converge.deadEndPct > 0.5 ? `<span><b>1</b> graveyard</span>` : "");
   }
-  // update masthead whirlpool animation with this wiki's actual attractors
-  if (__meshUpdate) __meshUpdate(state.wiki, state.rank);
 
   const conv = st.converge, hops = st.hopStats, top = st.topAttractors[0];
   countTo(document.getElementById("heroNum"), conv.pct, 1, "%");
@@ -684,54 +669,64 @@ document.querySelectorAll(".tab").forEach((t) => t.onclick = () => {
 });
 // (wiki switch is wired in the boot block above)
 
-// detail control for the graph
-document.querySelectorAll("#detailCtl button").forEach((b) => b.onclick = () => {
-  document.querySelectorAll("#detailCtl button").forEach((x) => {
-    x.style.background = ""; x.style.color = ""; x.style.borderColor = "";
-  });
-  b.style.background = "var(--ink)"; b.style.color = "var(--ground-0)"; b.style.borderColor = "var(--ink)";
-  state.detail = Math.max(1, Math.min(5, Number(b.dataset.d)));
-  graphLoaded = false;
-  if (state.tab === "graph") loadGraph();
-});
-
-// open the mesh field as its own page, carrying the current view over
+// open the walk field as its own page, carrying the current view over
 document.getElementById("meshLink").onclick = (e) => {
   e.preventDefault();
-  const N = [80, 150, 250, 400, 600][(state.detail ?? 2) - 1] ?? 150;
-  location.href = `/mesh?wiki=${state.wiki}&rank=${state.rank}&n=${N}`;
+  location.href = `/mesh?wiki=${state.wiki}&rank=${state.rank}`;
 };
 
 /* ==================================================================== *
- * constellation — deterministic orbital layout + comet pulse on hover
+ * drainage map — the article's walk field, fed live successor tables
  * ==================================================================== */
 let graphLoaded = false;
-let constMesh = null;
+let constField = null;
+let wikiOrigins = null; // id -> origin, for opening articles
+const ARTICLE_PATH = { tarkov: "/wiki/", terraria: "/wiki/", subnautica: "/wiki/", factorio: "/" }; // default /w/
+const loopColor = (id) => WALK_COLORS.loops[id] ?? WALK_COLORS.other;
+const loopName = (nodes) => { const s = nodes.join(" → "); return s.length > 44 ? s.slice(0, 43) + "…" : s; };
+const fieldUrlFor = (t) =>
+  `${(wikiOrigins && wikiOrigins.get(state.wiki)) || ""}${ARTICLE_PATH[state.wiki] ?? "/w/"}${encodeURIComponent(t.replace(/ /g, "_"))}`;
+const graphCache = new Map();
 async function loadGraph() {
   if (graphLoaded) return;
   graphLoaded = true;
-  const N = [80, 150, 250, 400, 600][(state.detail ?? 2) - 1] ?? 150;
-  const legend = () => {
-    const s = constMesh.stats();
-    const loops = constMesh.loops();
-    const head = s.growing ? `growing — ${s.nodes}/${s.target} articles…` : `${s.nodes} articles`;
-    document.getElementById("glegend").innerHTML =
-      head + " · " +
-      loops.slice(0, 4).map((l, i) => `<span><span class="sw" style="background:${[hueAt(0), hueAt(0.55), hueAt(1), hueAt(0.8)][i] ?? "#93897a"}"></span>${esc(l.cycle.join(" → "))} · ${l.pct}%</span>`).join(" ") +
-      (loops.length ? `<span><span class="sw" style="background:#93897a"></span>dead ends</span>` : "") +
-      `<span style="color:var(--ink-3)">▸ hover to read · scroll to zoom · drag to pan</span>`;
-  };
-  document.getElementById("glegend").innerHTML = `growing — 0/${N} articles…`;
+  const legendEl = document.getElementById("glegend");
+  const infoEl = document.getElementById("ginfo");
+  legendEl.innerHTML = "laying out the drainage map…";
   try {
-    if (!constMesh) constMesh = createMeshField(document.getElementById("meshCanvas"), document.getElementById("meshCanvas"), { explore: true });
-    constMesh.update(state.wiki, state.rank, N);
-    const poll = setInterval(() => {
-      legend();
-      const s = constMesh.stats();
-      if (!s.growing) { clearInterval(poll); }
-    }, 700);
+    if (!wikiOrigins) {
+      try { wikiOrigins = new Map((await api("/api/wikis")).map((w) => [w.id, w.origin])); }
+      catch { wikiOrigins = new Map(); }
+    }
+    const key = `${state.wiki}|${state.rank}`;
+    if (!graphCache.has(key)) graphCache.set(key, (async () => {
+      const j = await api(`/api/walktable?wiki=${state.wiki}&rank=${state.rank}`);
+      return buildWalkGraph(j.titles, j.table.succ, j.table.term);
+    })().catch((e) => { graphCache.delete(key); throw e; }));
+    const g = await graphCache.get(key);
+    if (!constField) {
+      const idleInfo = infoEl.innerHTML;
+      constField = createWalkField(document.getElementById("fieldMount"), {
+        explore: true, wheel: "always", walkers: reduced ? 0 : 260, speed: 80,
+        labels: 8, edgeAlpha: 0.11, reduced, urlFor: fieldUrlFor,
+        onHover: (i, wk) => {
+          const g2 = constField.graph();
+          if (i < 0 || !wk || !g2) { infoEl.innerHTML = idleInfo; return; }
+          const t = g2.titles[i];
+          infoEl.innerHTML = wk.fate === "cycle"
+            ? `<b>${esc(t)}</b> → ${wk.hops} click${wk.hops === 1 ? "" : "s"} → loop <span style="color:${loopColor(wk.loop)}">${esc(loopName(wk.chain.slice(-wk.cycleSize).map((k) => g2.titles[k])))}</span>`
+            : `<b>${esc(t)}</b> → dies after ${wk.hops} click${wk.hops === 1 ? "" : "s"} at <b>${esc(g2.titles[wk.terminal])}</b> · ${esc(wk.reason)}`;
+        },
+      });
+    }
+    constField.setGraph(g);
+    legendEl.innerHTML =
+      `${g.N.toLocaleString()} articles · ${g.loops.length.toLocaleString()} loops · ` +
+      g.loops.slice(0, 4).map((l) => `<span><span class="sw" style="background:${loopColor(l.id)}"></span>${esc(loopName(l.nodes.map((k) => g.titles[k])))} · ${(100 * l.basin / g.N).toFixed(1)}%</span>`).join(" ") +
+      `<span><span class="sw" style="background:${WALK_COLORS.dead}"></span>dead ends</span>` +
+      `<span style="color:var(--ink-3)">▸ hover to read · scroll to zoom · drag to pan</span>`;
   } catch (e) {
-    document.getElementById("glegend").innerHTML = `<span style="color:#a03d2e">no mesh data (${esc(e.message)})</span>`;
+    legendEl.innerHTML = `<span style="color:#a03d2e">no walk table (${esc(e.message)})</span>`;
   }
 }
 

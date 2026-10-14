@@ -29,7 +29,7 @@ npx tsx scripts/pipeline.ts --all
 npm run build:static
 
 # preview it
-npm run serve:static        # → http://localhost:8080  (/ = article, /mesh/ = full-page mesh field)
+npm run serve:static        # → http://localhost:8080  (/ = article, /mesh/ = full-page walk field)
 
 # the lab dashboard + article over the live analysis output
 npm run lab                 # → http://localhost:8787  (/ = article, /lab = dashboard, /mesh = full-page mesh field)
@@ -41,10 +41,10 @@ computes everything else client-side: loops, basins, the drainage-map layout, ch
 `scripts/walkfield.js` is the engine behind the hero and the map. The exact file contract is in
 [`docs/data-pipeline-brief.md`](docs/data-pipeline-brief.md).
 
-The mesh field page (`scripts/meshfield.html`) ships in the same build at `dist/mesh/` and is
-static too: it draws random starts from `titles.json` and walks chains client-side over the same
-successor tables, so it grows identically on GitHub Pages. Served by the lab server at `/mesh` it
-uses the live API instead.
+The walk field page (`scripts/walkfield.html`) ships in the same build at `dist/mesh/` — the
+article's drainage map as its own full page. It is static too: it reads the same successor tables
+and builds the graph client-side, so it renders identically on GitHub Pages. Served by the lab
+server at `/mesh` it uses the live output via `/api/walktable` instead.
 
 If your `output/` folders still hold the old `chains-r*.json` tables, run
 `npm run convert:legacy -- --src=<dir>` once to produce the successor tables.

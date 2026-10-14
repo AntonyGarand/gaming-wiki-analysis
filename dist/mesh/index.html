@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mesh Field — the first-link network, grown live</title>
-<meta name="description" content="A full-page living mesh of gaming wiki articles — random starts, real first links, loops closing themselves as the walks arrive.">
+<title>Walk Field — the whole wiki as a drainage map</title>
+<meta name="description" content="Every article on the wiki laid out around the loop it drains into — hover to trace a walk, click to open the article. The page is the field.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <!-- relative on purpose: resolves next to this page both on the lab server (/mesh)
      and in the static build (dist/mesh/index.html), whatever the site root is -->
-<script src="meshfield.js"></script>
+<script src="walkfield.js"></script>
 <style>
   /* same instantiation tokens as the lab dashboard (warm paper editorial) */
   :root {
@@ -36,10 +36,9 @@
   }
   ::selection { background: var(--vi); color: #fff; }
 
-  /* the field IS the page */
-  .stage { position: fixed; inset: 0; overflow: hidden; touch-action: none; }
+  /* the field IS the page — walkfield mounts its canvases in here */
+  .stage { position: fixed; inset: 0; overflow: hidden; }
   .stage:fullscreen { background: var(--ground-0); }
-  .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
 
   /* top chrome — floats over the field, never pushes it around */
   .bar {
@@ -85,32 +84,47 @@
   .chipgroup button:disabled { opacity: 0.35; cursor: not-allowed; }
   .ctl-note { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-3); text-align: right; max-width: 52ch; }
 
+  .find {
+    display: flex; align-items: center; gap: 8px;
+    border: 1px solid var(--hairline);
+    background: color-mix(in oklab, var(--ground-0) 72%, transparent);
+    backdrop-filter: blur(8px); padding: 0 12px;
+  }
+  .find span { font-family: var(--font-mono); font-size: 12px; color: var(--ink-3); }
+  .find input {
+    font-family: var(--font-mono); font-size: 11px; color: var(--ink);
+    background: transparent; border: 0; padding: 9px 0; width: min(300px, 46vw);
+  }
+  .find input:focus { outline: none; }
+  .find input::placeholder { color: var(--ink-3); }
+  .find:focus-within { border-color: var(--cy); }
+
   .pagelinks { display: flex; gap: 18px; align-items: center; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; }
   .pagelinks a { color: var(--ink-3); text-decoration: none; transition: color 0.3s var(--ease-expo); }
   .pagelinks a:hover { color: var(--cy); text-decoration: underline; text-underline-offset: 3px; }
-  .pagelinks button {
-    font-family: var(--font-mono); font-size: 13px; width: 32px; height: 32px; line-height: 1;
+
+  /* zoom cluster, article field-ui style */
+  .fieldui { position: absolute; right: 22px; bottom: 18px; z-index: 10; display: flex; gap: 4px; }
+  .fieldui button {
+    font-family: var(--font-mono); font-size: 13px; width: 34px; height: 34px; line-height: 1;
     cursor: pointer; color: var(--ink-2); background: color-mix(in oklab, var(--ground-0) 72%, transparent);
     border: 1px solid var(--hairline); backdrop-filter: blur(8px);
     transition: color 0.25s var(--ease-expo), border-color 0.25s var(--ease-expo);
   }
-  .pagelinks button:hover { color: var(--cy); border-color: var(--cy); }
+  .fieldui button:hover { color: var(--cy); border-color: var(--cy); }
 
-  /* bottom chrome */
+  /* legend doubles as the hover readout, like the article's field legend */
   .legend {
     position: absolute; left: 22px; bottom: 18px; z-index: 10;
-    display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center;
     font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em;
     color: var(--ink-2); text-transform: uppercase; pointer-events: none;
     max-width: min(66vw, 940px); line-height: 1.9;
+    background: color-mix(in oklab, var(--ground-0) 72%, transparent);
+    border: 1px solid var(--hairline); padding: 10px 16px;
+    backdrop-filter: blur(8px);
   }
+  .legend b { color: var(--ink); font-weight: 700; text-transform: none; letter-spacing: 0.04em; }
   .legend .sw { display: inline-block; width: 14px; height: 1px; vertical-align: middle; margin-right: 8px; }
-  .hints {
-    position: absolute; right: 22px; bottom: 18px; z-index: 10;
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
-    color: var(--ink-3); text-transform: uppercase; text-align: right;
-    pointer-events: none; line-height: 1.9; max-width: 34vw;
-  }
   #status {
     position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 30;
     font-family: var(--font-mono); font-size: 11px; color: #a03d2e;
@@ -124,79 +138,71 @@
     .ctl-row { justify-content: flex-start; }
     .ctl .k { text-align: left; }
     .ctl-note { text-align: left; }
-    .legend { max-width: calc(100vw - 44px); }
-    .hints { display: none; }
+    .legend { max-width: calc(100vw - 44px - 170px); }
   }
   @media (max-width: 640px) {
     .brand .sub, .ctl-note { display: none; }
     .bar { padding-bottom: 26px; }
+    .legend { max-width: calc(100vw - 44px); bottom: 64px; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .chipgroup button, .pagelinks a, .pagelinks button { transition-duration: 0.01ms; }
+    .chipgroup button, .pagelinks a, .fieldui button { transition-duration: 0.01ms; }
   }
 </style>
 </head>
 <body>
 
 <div class="stage" id="stage">
-  <canvas id="meshCanvas"></canvas>
-
   <header class="bar">
     <div class="brand">
-      <div class="kicker">FIRST-LINK NETWORK ANALYSIS <span class="dot">●</span> GROWN LIVE</div>
-      <h1>Mesh<span class="it">Field</span></h1>
+      <div class="kicker">FIRST-LINK NETWORK ANALYSIS <span class="dot">●</span> THE WHOLE WIKI</div>
+      <h1>Walk<span class="it">Field</span></h1>
       <p class="sub">
-        The whole page is the field. Random articles are walked <b>first link by first link</b>,
-        materialising as they arrive; revisits close loops, runners trace them forever.
+        The whole wiki as a <b>drainage map</b> — every article laid out around the loop it
+        drains into. The page is the field: hover a dot to trace its walk, click to open the article.
       </p>
     </div>
     <div class="controls">
       <div class="ctl-row">
         <div class="ctl"><div class="k">wiki</div><div class="chipgroup" id="wikiSwitch"></div></div>
         <div class="ctl"><div class="k">rank</div><div class="chipgroup" id="ranks"></div></div>
-        <div class="ctl"><div class="k">articles</div><div class="chipgroup" id="sizes"></div></div>
       </div>
       <div class="ctl-note">parenthesised, italicised, disambiguation and date links never count, at any rank</div>
+      <div class="find">
+        <span>🔍</span>
+        <input id="findInput" placeholder="find an article and fly to it ↵" autocomplete="off" aria-label="find an article">
+      </div>
       <div class="pagelinks">
         <a href="/" id="artLink">article</a>
         <a href="/lab" id="labLink">lab</a>
-        <button id="fsBtn" title="fullscreen" aria-label="toggle fullscreen">⤢</button>
       </div>
     </div>
   </header>
 
   <div class="legend" id="legend">waking the field…</div>
-  <div class="hints">hover to read · click a node to fire its first link<br>scroll to zoom · drag to pan</div>
+  <div class="fieldui" id="fieldui"></div>
   <div id="status"></div>
 </div>
 
 <script>
-/* meshfield.js deps (globals at call time): hueAt(t), api(path), reduced.
- * hue preference is shared with the lab dashboard via localStorage. */
-let HUE_SHIFT = Number(localStorage.getItem("lab_hue") ?? 0);
-function hueAt(t) {
-  const L = 0.60 + (0.46 - 0.60) * t;
-  const C = 0.155 + (0.125 - 0.155) * t;
-  const H = (40 + HUE_SHIFT) - 78 * t; // rust → red → plum, the warm side of the wheel
-  return `oklch(${(L * 100).toFixed(1)}% ${C.toFixed(3)} ${((H % 360) + 360) % 360})`;
-}
+/* walkfield.js exports buildWalkGraph / createWalkField / WALK_COLORS as globals. */
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+const loopColor = (id) => WALK_COLORS.loops[id] ?? WALK_COLORS.other;
+const loopName = (nodes) => { const s = nodes.join(" → "); return s.length > 44 ? s.slice(0, 43) + "…" : s; };
 
 /* ==================================================================== *
- * data layer — two backends, one api(path) for meshfield.js.
+ * data layer — two backends, one graph builder.
  *
- * live:   the lab server answers /api/wikis, /api/summary, /api/random,
- *         /api/chain straight from the freshest analysis output.
+ * live:   the lab server answers /api/wikis and /api/walktable straight
+ *         from the freshest analysis output.
  * static: no server (github pages). the build ships the same successor
- *         tables under data/{wiki}/, so random starts are drawn from
- *         titles.json and chains are walked client-side — the exact
- *         walkFrom() semantics from lib/walk.ts, cap and all.
+ *         tables under data/{wiki}/, and the graph is built client-side
+ *         exactly like the article's hero and drainage map.
  * ==================================================================== */
-let STATIC = false;
-let staticWikis = null; // [{id, name, ranks}] from data/wikis.json
-let DATA = "data/"; // static data prefix — "../data/" when the page is dist/mesh/index.html
-const fileCache = new Map(); // resolved path -> Promise<parsed json>
+let LIVE = false;
+let DATA = "data/"; // "../data/" when the page is dist/mesh/index.html
+const fileCache = new Map(); // resolved url -> Promise<parsed json>
 function fetchJson(url) {
   return fetch(url).then((r) => {
     if (!r.ok) throw new Error(`${r.status} ${url}`);
@@ -216,94 +222,113 @@ async function liveFetch(path) {
   return res.json();
 }
 
-const wikiData = new Map(); // wiki -> { titles: {idx:title}, byTitle: Map<title, idx> }
-const succData = new Map(); // "wiki|rank" -> Int32Array
-async function loadWikiData(wiki) {
-  if (!wikiData.has(wiki)) {
-    const titles = await jf(`${wiki}/titles.json`);
-    const byTitle = new Map();
-    for (const k in titles) byTitle.set(titles[k], Number(k));
-    wikiData.set(wiki, { titles, byTitle });
+const graphs = new Map(); // "wiki|rank" -> Promise<graph>
+function loadGraph(w, r) {
+  const key = `${w}|${r}`;
+  if (!graphs.has(key)) {
+    graphs.set(key, (async () => {
+      let titles, succ, term;
+      if (LIVE) {
+        const j = await liveFetch(`/api/walktable?wiki=${w}&rank=${r}`);
+        ({ succ, term } = j.table); titles = j.titles;
+      } else {
+        const [t, s] = await Promise.all([jf(`${w}/titles.json`), jf(`${w}/succ-r${r}.json`)]);
+        titles = t; ({ succ, term } = s);
+      }
+      return buildWalkGraph(titles, succ, term);
+    })().catch((e) => { graphs.delete(key); throw e; }));
   }
-  return wikiData.get(wiki);
-}
-async function loadSucc(wiki, rank) {
-  const key = `${wiki}|${rank}`;
-  if (!succData.has(key)) {
-    const j = await jf(`${wiki}/succ-r${rank}.json`);
-    succData.set(key, Int32Array.from(j.succ));
-  }
-  return succData.get(key);
-}
-function staticWalk(titles, succ, start) { // mirrors walkFrom(succ, start) in lib/walk.ts
-  const chain = [start];
-  const seen = new Set([start]);
-  let cur = start;
-  for (;;) {
-    if (chain.length >= 120) return { idx: chain, fate: "cycle", cycleSize: 1 };
-    const nx = succ[cur];
-    if (nx === -1) return { idx: chain, fate: "dead", cycleSize: 0 };
-    if (seen.has(nx)) {
-      const firstIdx = chain.indexOf(nx);
-      return { idx: chain, fate: "cycle", cycleSize: firstIdx >= 0 ? chain.length - firstIdx : 1 };
-    }
-    seen.add(nx);
-    chain.push(nx);
-    cur = nx;
-  }
-}
-async function api(path) {
-  if (!STATIC) return liveFetch(path);
-  const u = new URL(path, "http://mesh.local");
-  const q = u.searchParams;
-  if (u.pathname === "/api/random") {
-    const d = await loadWikiData(q.get("wiki"));
-    const keys = Object.keys(d.titles);
-    return { title: d.titles[keys[(Math.random() * keys.length) | 0]] ?? "" };
-  }
-  if (u.pathname === "/api/chain") {
-    const d = await loadWikiData(q.get("wiki"));
-    const succ = await loadSucc(q.get("wiki"), q.get("rank"));
-    const start = d.byTitle.get(q.get("title"));
-    if (start === undefined) throw new Error(`article not found: ${q.get("title")}`);
-    const w = staticWalk(d.titles, succ, start);
-    return { chain: w.idx.map((i) => d.titles[i]), hops: w.idx.length - 1, fate: w.fate, cycleSize: w.cycleSize };
-  }
-  throw new Error(`not available without the lab server: ${path}`);
+  return graphs.get(key);
 }
 
 /* ==================================================================== *
- * page state — URL-driven (?wiki=&rank=&n=) so any view is shareable
+ * page state — URL-driven (?wiki=&rank=) so any view is shareable
  * ==================================================================== */
 const WIKIS = [{"id":"osrs","name":"Old School RuneScape Wiki","description":"The original target"},{"id":"rs3","name":"RuneScape Wiki","description":"RS3 — same engine, different decade"},{"id":"rsc","name":"RuneScape Classic Wiki","description":"The deprecated original"},{"id":"minecraft","name":"Minecraft Wiki","description":"Best-selling game of all time"},{"id":"gta","name":"GTA Wiki","description":"Grand Theft Auto"},{"id":"overwatch","name":"Overwatch Wiki","description":"Hero shooter"},{"id":"fortnite","name":"Fortnite Wiki","description":"Battle royale"},{"id":"valheim","name":"Valheim Wiki","description":"Viking survival"},{"id":"vampiresurvivors","name":"Vampire Survivors Wiki","description":"Bullet-heaven roguelite"},{"id":"balatro","name":"Balatro Wiki","description":"Poker roguelite"},{"id":"hytale","name":"Hytale Wiki","description":"Blocky adventure"},{"id":"subnautica","name":"Subnautica Wiki","description":"Underwater survival"},{"id":"terraria","name":"Terraria Wiki","description":"2D sandbox"},{"id":"factorio","name":"Factorio Wiki","description":"Factory-building"},{"id":"tarkov","name":"Escape from Tarkov Wiki","description":"Hardcore FPS"}];
-const SIZES = [80, 150, 250, 400, 600];
+const origins = new Map(); // wiki id -> origin (for opening articles)
+const ranksOf = new Map(); // wiki id -> string[] (static manifest fills this; live uses summaries)
+const ARTICLE_PATH = { tarkov: "/wiki/", terraria: "/wiki/", subnautica: "/wiki/", factorio: "/" }; // default /w/
 const RANK_LABELS = { strict1: "1st", last: "last", random: "random" };
 const rankLabel = (r) => RANK_LABELS[r] ?? (r + (r === "1" ? "st" : r === "2" ? "nd" : r === "3" ? "rd" : "th")) + " link";
 
 const params = new URLSearchParams(location.search);
-function nearestSize(n) {
-  if (!Number.isFinite(n)) return 250;
-  let best = SIZES[0];
-  for (const s of SIZES) if (Math.abs(s - n) < Math.abs(best - n)) best = s;
-  return best;
-}
 const state = {
   wiki: params.get("wiki") || WIKIS[0]?.id || "osrs",
   rank: params.get("rank") || "strict1",
-  n: nearestSize(parseInt(params.get("n") ?? "", 10)),
 };
 function syncUrl() {
   // query-only: keeps whatever path the site lives under (lab /mesh, pages /repo/mesh/)
-  history.replaceState(null, "", "?" + new URLSearchParams({ wiki: state.wiki, rank: state.rank, n: String(state.n) }));
+  history.replaceState(null, "", "?" + new URLSearchParams({ wiki: state.wiki, rank: state.rank }));
 }
 function showError(msg) {
   const el = document.getElementById("status");
   el.textContent = msg; el.style.display = msg ? "block" : "none";
 }
+const urlFor = (title) =>
+  `${origins.get(state.wiki) ?? ""}${ARTICLE_PATH[state.wiki] ?? "/w/"}${encodeURIComponent(title.replace(/ /g, "_"))}`;
 
-/* the field — explore mode: pan, zoom, hover, click-to-trace */
+/* the field — same settings as the article's hero, explore everywhere */
 const stage = document.getElementById("stage");
-const mesh = createMeshField(document.getElementById("meshCanvas"), stage, { explore: true });
+const legendEl = document.getElementById("legend");
+let idleLegend = "waking the field…";
+const field = createWalkField(stage, {
+  explore: true, wheel: "always", touchAction: "none",
+  walkers: reduced ? 0 : 360, speed: 85, labels: 6, maxLabels: 28, edgeAlpha: 0.09,
+  reduced, urlFor,
+  onHover: (i, wk) => {
+    const g = field.graph();
+    if (i < 0 || !wk || !g) { legendEl.innerHTML = idleLegend; return; }
+    const t = g.titles[i];
+    legendEl.innerHTML = wk.fate === "cycle"
+      ? `<b>${esc(t)}</b> → ${wk.hops} click${wk.hops === 1 ? "" : "s"} → loop <span style="color:${loopColor(wk.loop)}">${esc(loopName(wk.chain.slice(-wk.cycleSize).map((k) => g.titles[k])))}</span>`
+      : `<b>${esc(t)}</b> → dies after ${wk.hops} click${wk.hops === 1 ? "" : "s"} at <b>${esc(g.titles[wk.terminal])}</b> · ${esc(wk.reason)}`;
+  },
+});
+
+/* zoom cluster + fullscreen (article field-ui pattern) */
+const uiEl = document.getElementById("fieldui");
+function uiBtn(label, aria, fn) {
+  const b = document.createElement("button");
+  b.type = "button"; b.textContent = label; b.setAttribute("aria-label", aria); b.title = aria;
+  b.onclick = fn; uiEl.appendChild(b); return b;
+}
+uiBtn("−", "zoom out", () => field.zoomBy(1 / 1.6));
+uiBtn("+", "zoom in", () => field.zoomBy(1.6));
+uiBtn("⌂", "reset view", () => field.resetView());
+const fsBtn = uiBtn("⛶", "fullscreen", () => {
+  if (document.fullscreenElement === stage) document.exitFullscreen();
+  else stage.requestFullscreen?.({ navigationUI: "hide" }).catch(() => {});
+});
+document.addEventListener("fullscreenchange", () => {
+  const on = document.fullscreenElement === stage;
+  fsBtn.textContent = on ? "⤢" : "⛶";
+  fsBtn.title = on ? "exit fullscreen" : "fullscreen";
+});
+
+/* find — exact, then prefix, then substring; shortest title wins (article logic) */
+function findTitleIdx(g, q) {
+  const ql = q.toLowerCase();
+  const exact = g.titles.findIndex((t) => t.toLowerCase() === ql);
+  if (exact >= 0) return exact;
+  let best = -1, bestScore = Infinity;
+  for (let j = 0; j < g.titles.length; j++) {
+    const tl = g.titles[j].toLowerCase();
+    if (!tl.includes(ql)) continue;
+    const score = (tl.startsWith(ql) ? 0 : 1e9) + tl.length;
+    if (score < bestScore) { bestScore = score; best = j; }
+  }
+  return best;
+}
+document.getElementById("findInput").addEventListener("keydown", (e) => {
+  if (e.key === "Escape") { e.target.blur(); return; }
+  if (e.key !== "Enter") return;
+  const g = field.graph(); if (!g) return;
+  const q = e.target.value.trim().toLowerCase(); if (!q) return;
+  const i = findTitleIdx(g, q);
+  if (i < 0) { e.target.style.color = "#a03d2e"; return; }
+  e.target.style.color = ""; e.target.value = g.titles[i];
+  field.zoomToNode(i, 7); field.focus(i);
+});
 
 /* wiki switch (populated now; availability/rebuild happens during boot) */
 const wikiSwitch = document.getElementById("wikiSwitch");
@@ -315,7 +340,8 @@ function buildWikiButtons(list) {
       if (b.disabled || b.dataset.wiki === state.wiki) return;
       state.wiki = b.dataset.wiki;
       markWiki();
-      if (await loadSummary()) regrow();
+      await loadRanks();
+      loadField();
     };
   }
   markWiki();
@@ -325,29 +351,28 @@ const markWiki = () => wikiBtnsOf().forEach((b) => b.classList.toggle("on", b.da
 buildWikiButtons(WIKIS);
 
 /* rank switch — rebuilt per wiki (live: /api/summary · static: data/wikis.json) */
-async function loadSummary() {
+async function loadRanks() {
   const ranksEl = document.getElementById("ranks");
   let ranks = null;
   try {
-    if (STATIC) {
-      const w = staticWikis.find((x) => x.id === state.wiki);
-      ranks = (w?.ranks ?? []).map((r) => ({ rank: r }));
-      if (!ranks.length) throw new Error("no ranks in data/wikis.json");
-    } else {
+    if (LIVE) {
       const s = await liveFetch(`/api/summary?wiki=${state.wiki}`);
-      ranks = s.ranks ?? [];
+      ranks = (s.ranks ?? []).map((r) => r.rank);
+    } else {
+      ranks = ranksOf.get(state.wiki) ?? [];
     }
+    if (!ranks.length) throw new Error("no ranks");
     showError("");
-    if (!ranks.some((r) => r.rank === state.rank) && ranks.length) state.rank = ranks[0].rank;
+    if (!ranks.includes(state.rank)) state.rank = ranks[0];
     ranksEl.innerHTML = "";
     for (const r of ranks) {
       const b = document.createElement("button");
-      b.textContent = rankLabel(r.rank);
-      if (r.rank === state.rank) b.classList.add("on");
+      b.textContent = rankLabel(r);
+      if (r === state.rank) b.classList.add("on");
       b.onclick = () => {
-        state.rank = r.rank;
+        state.rank = r;
         ranksEl.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
-        regrow();
+        loadField();
       };
       ranksEl.appendChild(b);
     }
@@ -359,39 +384,38 @@ async function loadSummary() {
   }
 }
 
-/* article-count control */
-const sizesEl = document.getElementById("sizes");
-sizesEl.innerHTML = SIZES.map((n) => `<button data-n="${n}">${n}</button>`).join("");
-const sizeBtns = [...sizesEl.querySelectorAll("button")];
-const markSize = () => sizeBtns.forEach((b) => b.classList.toggle("on", Number(b.dataset.n) === state.n));
-sizeBtns.forEach((b) => b.onclick = () => { state.n = Number(b.dataset.n); markSize(); regrow(); });
-markSize();
-
-function regrow() { syncUrl(); mesh.update(state.wiki, state.rank, state.n); }
-
-/* legend — live readout of what the mesh has found so far */
-const legendEl = document.getElementById("legend");
-const LOOP_COLS = [hueAt(0), hueAt(0.55), hueAt(1), hueAt(0.8)];
-setInterval(() => {
-  const s = mesh.stats();
-  const loops = mesh.loops();
-  const head = s.growing ? `growing — ${s.nodes}/${s.target} articles…` : `${s.nodes} articles`;
-  legendEl.innerHTML = head + " · " +
-    loops.slice(0, 4).map((l, i) => `<span><span class="sw" style="background:${LOOP_COLS[i] ?? "#93897a"}"></span>${esc(l.cycle.join(" → "))} · ${l.pct}%</span>`).join(" ") +
-    (loops.length ? `<span><span class="sw" style="background:#93897a"></span>dead ends</span>` : "");
-}, 700);
-
-/* fullscreen — the field, edge to edge, browser chrome and all */
-document.getElementById("fsBtn").onclick = () => {
-  if (document.fullscreenElement) document.exitFullscreen();
-  else stage.requestFullscreen?.();
-};
+/* load the current wiki+rank into the field */
+async function loadField() {
+  syncUrl();
+  legendEl.innerHTML = idleLegend = "loading the successor table…";
+  let g;
+  try { g = await loadGraph(state.wiki, state.rank); }
+  catch (e) {
+    showError(`Could not load ${state.wiki} at rank ${esc(state.rank)} (${esc(e.message)}).`);
+    legendEl.innerHTML = idleLegend = "no data";
+    return;
+  }
+  showError("");
+  legendEl.innerHTML = idleLegend = `laying out ${g.N.toLocaleString()} articles…`;
+  await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+  field.setGraph(g);
+  idleLegend =
+    `<b>${g.N.toLocaleString()}</b> articles · <b>${g.loops.length.toLocaleString()}</b> loops<br>` +
+    g.loops.slice(0, 6).map((l) => `<span><span class="sw" style="background:${loopColor(l.id)}"></span>${esc(loopName(l.nodes.map((k) => g.titles[k])))} · ${(100 * l.basin / g.N).toFixed(1)}%</span>`).join("<br>") +
+    `<br><span><span class="sw" style="background:${WALK_COLORS.dead}"></span>dead ends · ${(100 * g.dead / g.N).toFixed(1)}%</span>`;
+  legendEl.innerHTML = idleLegend;
+}
 
 /* boot: prefer the live lab server, fall back to the static data files */
 (async () => {
   try {
     const list = await liveFetch("/api/wikis"); // lab server present → live mode
-    const avail = new Set(list.filter((w) => w.available).map((w) => w.id));
+    LIVE = true;
+    const avail = new Set();
+    for (const w of list) {
+      origins.set(w.id, w.origin);
+      if (w.available) avail.add(w.id);
+    }
     wikiBtnsOf().forEach((b) => { if (!avail.has(b.dataset.wiki)) { b.disabled = true; b.title = "not fetched yet"; } });
     if (!avail.has(state.wiki) && avail.size) { state.wiki = [...avail][0]; markWiki(); }
   } catch {
@@ -403,11 +427,11 @@ document.getElementById("fsBtn").onclick = () => {
         try { manifest = await fetchJson(prefix + "wikis.json"); DATA = prefix; break; } catch { /* next */ }
       }
       if (!manifest) throw new Error("data/wikis.json not found");
-      STATIC = true;
-      staticWikis = manifest.wikis ?? [];
-      if (!staticWikis.length) throw new Error("empty data/wikis.json — run the static build");
-      buildWikiButtons(staticWikis);
-      if (!staticWikis.some((w) => w.id === state.wiki)) state.wiki = staticWikis[0].id;
+      const wikis = manifest.wikis ?? [];
+      if (!wikis.length) throw new Error("empty data/wikis.json — run the static build");
+      for (const w of wikis) { origins.set(w.id, w.origin); ranksOf.set(w.id, w.ranks ?? []); }
+      buildWikiButtons(wikis);
+      if (!wikis.some((w) => w.id === state.wiki)) state.wiki = wikis[0].id;
       markWiki();
       // no lab dashboard without a server — the article is one level up
       document.getElementById("artLink").href = "../";
@@ -417,7 +441,7 @@ document.getElementById("fsBtn").onclick = () => {
       return;
     }
   }
-  if (await loadSummary()) regrow();
+  if (await loadRanks()) loadField();
 })();
 </script>
 </body>

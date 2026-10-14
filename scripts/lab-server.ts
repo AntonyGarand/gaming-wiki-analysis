@@ -10,17 +10,17 @@ import { createClient } from "@libsql/client";
 import * as fs from "fs";
 import * as http from "http";
 import * as path from "path";
-import { loadCorpus, successorsFor, analyzeFunctionalGraph, predecessors, walkFrom, rngFor, DEAD, TERM, eligibleLinkCount } from "./lib/walk.js";
+import { loadCorpus, successorsFor, analyzeFunctionalGraph, predecessors, walkFrom, DEAD, TERM, eligibleLinkCount } from "./lib/walk.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const PORT = Number(process.env.PORT ?? 8787);
 const ARTICLE = path.join(ROOT, "scripts", "article.html");
 const DASHBOARD = path.join(ROOT, "scripts", "lab-dashboard.html");
-const MESHPAGE = path.join(ROOT, "scripts", "meshfield.html");
+const FIELDPAGE = path.join(ROOT, "scripts", "walkfield.html");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
 
-// small LRU cache for the expensive viz endpoints (/api/graph, /api/mesh) —
-// they reload and re-analyse the whole link table per request otherwise
+// small LRU cache for the expensive viz endpoints (/api/graph) — they reload
+// and re-analyse the whole link table per request otherwise
 const vizCache = new Map<string, string>();
 function sendCache(res: http.ServerResponse, key: string): boolean {
   const hit = vizCache.get(key);
@@ -297,26 +297,26 @@ const server = http.createServer(async (req, res) => {
       fs.createReadStream(file).pipe(res);
       return;
     }
-    if (url.pathname === "/meshfield.js") {
-      const raw = readSafe(path.join(ROOT, "scripts", "meshfield.js"));
-      if (!raw) { res.writeHead(404); res.end("meshfield.js missing"); return; }
+    if (url.pathname === "/walkfield.js") {
+      const raw = readSafe(path.join(ROOT, "scripts", "walkfield.js"));
+      if (!raw) { res.writeHead(404); res.end("walkfield.js missing"); return; }
       res.writeHead(200, { "Content-Type": "text/javascript; charset=utf-8", "Cache-Control": "no-cache" });
       res.end(raw);
       return;
     }
-    if (url.pathname === "/mesh/" || url.pathname === "/meshfield.html") {
+    if (url.pathname === "/mesh/" || url.pathname === "/meshfield.html" || url.pathname === "/walkfield.html") {
       // the page's asset refs are relative, so keep the canonical slash-free /mesh
       res.writeHead(308, { Location: "/mesh" });
       res.end();
       return;
     }
     if (url.pathname === "/mesh" || url.pathname === "/meshfield") {
-      // the constellation as its own page — the field fills the whole viewport
-      const raw = readSafe(MESHPAGE) ?? "";
+      // the drainage map as its own page — the field fills the whole viewport
+      const raw = readSafe(FIELDPAGE) ?? "";
       const wikiJson = JSON.stringify(wikis.map((w) => ({ id: w.id, name: w.name, description: w.description })));
       const html = raw.replace("__WIKI_OPTIONS__", wikiJson);
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-      res.end(html ?? "meshfield html missing");
+      res.end(html ?? "field html missing");
       return;
     }
     if (url.pathname === "/api/wikis") {
@@ -416,92 +416,16 @@ const server = http.createServer(async (req, res) => {
       catch (e) { res.writeHead(500); res.end((e as Error).message); }
       return;
     }
-    if (url.pathname === "/api/mesh") {
-      // abstract mesh for the hero: top attractor cycles + tributaries + random
-      // articles, with successor links AND sibling links between them.
-      // layout is computed client-side; here we just pick nodes and edges.
-      const rank = q.get("rank") ?? "strict1";
-      const target = Math.max(60, Math.min(600, Number(q.get("n") ?? 150)));
-      const mck = `m|${wiki}|${rank}|${target}`;
-      if (sendCache(res, mck)) return;
-      const linksPath = path.join(wikiDir, "links.sqlite");
-      if (!fs.existsSync(linksPath)) { res.writeHead(404); res.end("not extracted yet"); return; }
-      const corpus = await loadCorpus(wiki);
-      const ids = corpus.ids;
-      const N = ids.length;
-      const linksByPage = corpus.linksByPage;
-      // strict successor map + attractor detection (parenthesised/italicised/disambiguation links never count)
-      const { succ } = successorsFor(corpus, rank);
-      const { attractor, loops: attractors, inDeg } = analyzeFunctionalGraph(succ);
-      const basin = new Map<number, number>();
-      for (let i = 0; i < N; i++) { const a = attractor[i]; if (a >= 0) basin.set(a, (basin.get(a) ?? 0) + 1); }
-      const ranked = [...basin.entries()].sort((x, y) => y[1] - x[1]);
-      const preds = predecessors(succ);
-      // selection: loop members, then tributaries by in-degree, then random fill
-      const include = new Set<number>();
-      const isCycle = new Uint8Array(N);
-      ranked.slice(0, 4).forEach(([a]) => attractors[a].forEach((n) => { include.add(n); isCycle[n] = 1; }));
-      let frontier = [...include];
-      const budgets = [1e9, Math.round(target * 0.18), Math.round(target * 0.10), Math.round(target * 0.06)];
-      for (let depth = 0; depth < 3 && include.size < target * 0.65; depth++) {
-        const cand: number[] = [];
-        for (const f of frontier) for (const p of preds.get(f) ?? []) if (!include.has(p)) cand.push(p);
-        const uniq = [...new Set(cand)].sort((a, b) => inDeg[b] - inDeg[a]).slice(0, budgets[depth + 1] ?? 0);
-        for (const p of uniq) include.add(p);
-        frontier = uniq;
-      }
-      let guard = 0;
-      const linksInto = (v: number) => {
-        const links = linksByPage.get(ids[v]) ?? [];
-        for (const l of links) {
-          if (l.target >= 0 && include.has(l.target)) return true;
-        }
-        return false;
-      };
-      while (include.size < target && guard++ < target * 30) {
-        const i = Math.floor(rngFor(ids[Math.floor(Math.random() * N)] ?? 0) * N + Math.random() * N) % N;
-        if (!linksByPage.has(ids[i]) || include.has(i)) continue;
-        if (!linksInto(i)) continue; // random fill must connect to something already in the mesh
-        include.add(i);
-      }
-      // edges: every link between selected nodes, successor flagged, capped per source
-      const idxs = [...include];
-      const local = new Map(idxs.map((v, i) => [v, i]));
-      const outNodes = idxs.map((v) => ({ t: corpus.titles[v], c: isCycle[v] === 1 }));
-      const rawEdges: Array<[number, number, number]> = [];
-      const seen = new Set<string>();
-      for (const v of idxs) {
-        const links = linksByPage.get(ids[v]) ?? [];
-        const s = local.get(v)!;
-        let count = 0;
-        for (const l of links) {
-          const tl = l.target;
-          if (tl < 0) continue;
-          const li = local.get(tl);
-          if (li === undefined || li === s) continue;
-          const key = s + ":" + li;
-          if (seen.has(key)) continue;
-          seen.add(key);
-          rawEdges.push([s, li, succ[v] === tl ? 1 : 0]);
-          if (++count >= 4) break;
-        }
-      }
-      // belt and braces: drop anything that still ended up with no connections
-      const deg = new Map<number, number>();
-      for (const [s, t] of rawEdges) {
-        deg.set(s, (deg.get(s) ?? 0) + 1);
-        deg.set(t, (deg.get(t) ?? 0) + 1);
-      }
-      const keep = idxs.map((_, i) => i).filter((i) => (deg.get(i) ?? 0) > 0);
-      const remap = new Map(keep.map((old, nu) => [old, nu]));
-      const meshNodes = keep.map((i) => outNodes[i]);
-      const meshEdges = rawEdges.filter(([s, t]) => remap.has(s) && remap.has(t))
-        .map(([s, t, m]) => [remap.get(s)!, remap.get(t)!, m]);
-      const loopsPayload = ranked.slice(0, 4).map(([a, b]) => ({
-        cycle: attractors[a].map((n) => corpus.titles[n]),
-        pct: +(100 * b / N).toFixed(1),
-      }));
-      cachePut(res, mck, { nodes: meshNodes, edges: meshEdges, loops: loopsPayload });
+    if (url.pathname === "/api/walktable") {
+      // successor table for the walk field pages: titles + succ + term for one
+      // wiki/rank, straight from the analysis output — the exact files the
+      // static build ships, so the client builds the same graph either way
+      const rank = (q.get("rank") ?? "strict1").replace(/[^a-z0-9]+/gi, "");
+      const titles = readSafe(path.join(wikiDir, "titles.json"));
+      const table = readSafe(path.join(wikiDir, `succ-r${rank}.json`));
+      if (!titles || !table) { res.writeHead(404); res.end("no successor table for this wiki/rank — run analyze first"); return; }
+      res.writeHead(200, { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-cache" });
+      res.end(`{"titles":${titles},"table":${table}}`);
       return;
     }
     if (url.pathname === "/api/export") {
@@ -547,7 +471,7 @@ server.listen(PORT, () => {
   console.log(`Link Lab → http://localhost:${PORT}`);
   console.log(`  article view  → http://localhost:${PORT}/       (scrollytelling · split / full-width)`);
   console.log(`  lab dashboard → http://localhost:${PORT}/lab`);
-  console.log(`  mesh field    → http://localhost:${PORT}/mesh    (the constellation, full-page)`);
+  console.log(`  walk field    → http://localhost:${PORT}/mesh    (the drainage map, full-page)`);
   console.log(`  wikis configured: ${wikis.length}, with data: ${available.length} (${available.map((w) => w.id).join(", ") || "none"})`);
 });
 

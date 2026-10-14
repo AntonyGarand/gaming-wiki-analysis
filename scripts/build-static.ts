@@ -51,13 +51,14 @@ fs.copyFileSync(path.join(ROOT, "scripts", "article.html"), path.join(DIST, "ind
 fs.copyFileSync(path.join(ROOT, "scripts", "walkfield.js"), path.join(DIST, "walkfield.js"));
 fs.writeFileSync(path.join(DIST, ".nojekyll"), "");
 
-// mesh field page — full-page live mesh. works with no server: random starts
-// come from titles.json and chains are walked client-side over succ-r*.json
+// walk field page — the drainage map as its own page. works with no server:
+// it reads the same successor tables the article ships and builds the graph
+// client-side (live lab server mode uses /api/walktable instead)
 const meshDir = path.join(DIST, "mesh");
 fs.mkdirSync(meshDir, { recursive: true });
-const meshHtml = fs.readFileSync(path.join(ROOT, "scripts", "meshfield.html"), "utf8")
+const meshHtml = fs.readFileSync(path.join(ROOT, "scripts", "walkfield.html"), "utf8")
   .replace("__WIKI_OPTIONS__", JSON.stringify(available.map((w) => ({ id: w.id, name: w.name, description: w.description }))));
 fs.writeFileSync(path.join(meshDir, "index.html"), meshHtml);
-fs.copyFileSync(path.join(ROOT, "scripts", "meshfield.js"), path.join(meshDir, "meshfield.js"));
-console.log(`mesh: dist/mesh/index.html (${available.length} wikis, chains walked client-side)`);
+fs.copyFileSync(path.join(ROOT, "scripts", "walkfield.js"), path.join(meshDir, "walkfield.js"));
+console.log(`walk field: dist/mesh/index.html (${available.length} wikis, graph built client-side)`);
 console.log(`\nstatic build complete → ${DIST} (${available.length} wikis, ${(bytes / 1e6).toFixed(1)} MB of data)`);
