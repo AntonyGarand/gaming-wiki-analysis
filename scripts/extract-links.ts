@@ -178,15 +178,22 @@ async function parseLinks(wikitext: string, fallback = false): Promise<ParsedLin
   masked += text.slice(last);
   if (candidates.length === 0) return [];
   const out: ParsedLink[] = [];
-  let depth = 0, i = 0, rank = 0;
+  let depth = 0, italic = false, i = 0, rank = 0;
   while (i < masked.length) {
     const c = masked[i];
+    if (c === "'") {
+      // apostrophe runs track render state: '' toggles italics, ''' is bold
+      // (ignored), ''''' toggles both — so italics wrap whole hatnotes, not
+      // just the characters immediately beside a link
+      let run = 1;
+      while (masked[i + run] === "'") run++;
+      if (run === 2 || run === 5) italic = !italic;
+      i += run;
+      continue;
+    }
     if (c === "\u0000") {
       const j = masked.indexOf("\u0000", i + 1);
       const idx = Number(masked.slice(i + 1, j));
-      let k = i - 1, apostrophes = 0;
-      while (k >= 0 && masked[k] === "'") { apostrophes++; k--; }
-      const italic = apostrophes > 0 && apostrophes % 3 === 2;
       out.push({ rank: ++rank, target: candidates[idx].target, paren: depth > 0, italic });
       i = j + 1;
     } else {
