@@ -257,10 +257,14 @@
     for (const c of [base, live]) { c.style.cssText = "position:absolute;inset:0;width:100%;height:100%;display:block;"; container.appendChild(c); }
     container.style.touchAction = "none";
     const bctx = base.getContext("2d"), lctx = live.getContext("2d"), cctx = cacheC.getContext("2d");
-    let W = 0, H = 0, dpr = Math.min(2, window.devicePixelRatio || 1);
+    let W = 0, H = 0, dpr = 1;
+    // pixel budget: retina sharpness on a panel, fewer pixels to push on a fullscreen canvas
+    const pickDpr = () => Math.max(1, Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(3.2e6 / Math.max(1, W * H))));
     let g = null, L = null, colorOf = null;
     const view = { k: 1, tx: 0, ty: 0 };
     let cacheView = null, anim = null, lastView = null;
+    let baseStale = false, lastInteract = 0;   // interaction in progress: redraw from the cached bitmap
+    const SETTLE_MS = 140;
     let walkers = [], hover = -1, hoverChain = null, visible = true, running = !opts.reduced;
     let lastT = 0, baseDirty = true, grid = null, gridCell = 18;
     const mouse = { x: -1e9, y: -1e9 };
@@ -269,7 +273,8 @@
     function resize() {
       const r = container.getBoundingClientRect();
       W = Math.max(1, r.width); H = Math.max(1, r.height);
-      for (const c of [base, live, cacheC]) { c.width = W * dpr; c.height = H * dpr; }
+      dpr = pickDpr();
+      for (const c of [base, live, cacheC]) { c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); }
       if (g) { L = layoutWalkGraph(g, W, H, opts.layout); buildGrid(); respawnAll(); }
       view.k = 1; view.tx = 0; view.ty = 0; anim = null;
       baseDirty = true;
@@ -316,15 +321,16 @@
       v.tx = Math.min(maxX, Math.max(minX, v.tx)); v.ty = Math.min(maxY, Math.max(minY, v.ty));
       return v;
     }
+    function touch() { baseStale = true; lastInteract = performance.now(); kickOnce(); }
     function zoomAt(factor, sx, sy, animate) {
       const from = anim ? anim.to : { ...view };
       const k2 = Math.min(MAX_K, Math.max(MIN_K, from.k * factor));
       const to = clampView({ k: k2, tx: sx - (sx - from.tx) * (k2 / from.k), ty: sy - (sy - from.ty) * (k2 / from.k) });
-      if (animate === false || opts.reduced) { Object.assign(view, to); anim = null; baseDirty = true; }
+      if (animate === false || opts.reduced) { Object.assign(view, to); anim = null; touch(); }
       else anim = { from: { ...view }, to, t0: performance.now(), dur: 260 };
       kickOnce(); if (opts.onView) opts.onView(view);
     }
-    function panBy(dx, dy) { clampView(view); view.tx += dx; view.ty += dy; clampView(view); anim = null; baseDirty = true; kickOnce(); }
+    function panBy(dx, dy) { clampView(view); view.tx += dx; view.ty += dy; clampView(view); anim = null; touch(); }
     function resetView(animate) {
       const to = { k: 1, tx: 0, ty: 0 };
       if (animate === false || opts.reduced) { Object.assign(view, to); anim = null; baseDirty = true; }
@@ -365,7 +371,8 @@
       const { x, y } = L;
       const k = view.k;
       // visible world rect (with margin) — skip everything else when zoomed in
-      const vx0 = -view.tx / k - 40, vy0 = -view.ty / k - 40, vx1 = (W - view.tx) / k + 40, vy1 = (H - view.ty) / k + 40;
+      const mx = (W / k) * 0.6, my = (H / k) * 0.6; // over-draw 60% around the viewport so cached pans don't show gaps
+      const vx0 = -view.tx / k - mx, vy0 = -view.ty / k - my, vx1 = (W - view.tx) / k + mx, vy1 = (H - view.ty) / k + my;
       const vis = (i) => x[i] >= vx0 && x[i] <= vx1 && y[i] >= vy0 && y[i] <= vy1;
       const buckets = new Map();
       for (let i = 0; i < g.N; i++) {
@@ -450,7 +457,9 @@
 
     function frame(now) {
       const animating = stepAnim(now);
-      if (animating) drawBaseFromCache(); else if (baseDirty) drawBase();
+      const interacting = baseStale && now - lastInteract < SETTLE_MS;
+      if (animating || interacting) drawBaseFromCache();
+      else if (baseDirty || baseStale) { drawBase(); baseStale = false; }
       const dt = Math.min(0.05, (now - lastT) / 1000 || 0.016); lastT = now;
       lctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       // trails are screen-space residue: they only make sense while the view holds still.
@@ -467,6 +476,7 @@
       if (running && !animating) {
         const sp = opts.speed / Math.sqrt(view.k);
         lctx.lineCap = "round";
+        const batches = new Map(); // one stroke per colour × alpha level, instead of one per walker
         for (const w of walkers) {
           if (w.dying) { w.alpha -= dt * 2.2; if (w.alpha <= 0) spawn(w); continue; }
           w.alpha = Math.min(1, w.alpha + dt * 2);
@@ -485,10 +495,14 @@
             continue;
           }
           const nx = L.x[w.node] + (L.x[w.next] - L.x[w.node]) * w.t, ny = L.y[w.node] + (L.y[w.next] - L.y[w.node]) * w.t;
-          lctx.strokeStyle = w.col; lctx.globalAlpha = 0.85 * w.alpha; lctx.lineWidth = 1.4 / Math.sqrt(view.k);
-          lctx.beginPath(); lctx.moveTo(w.px, w.py); lctx.lineTo(nx, ny); lctx.stroke();
+          const lvl = Math.min(3, (w.alpha * 4) | 0);
+          const key = w.col + lvl;
+          let p = batches.get(key); if (!p) { p = { col: w.col, a: (lvl + 1) / 4, path: new Path2D() }; batches.set(key, p); }
+          p.path.moveTo(w.px, w.py); p.path.lineTo(nx, ny);
           w.px = nx; w.py = ny;
         }
+        lctx.lineWidth = 1.4 / Math.sqrt(view.k);
+        for (const p of batches.values()) { lctx.strokeStyle = p.col; lctx.globalAlpha = 0.85 * p.a; lctx.stroke(p.path); }
       }
       if (hoverChain) {
         const ch = hoverChain.chain;
@@ -520,7 +534,7 @@
         }
       }
       lctx.globalAlpha = 1;
-      if (animating) kickOnce();
+      if (animating || baseStale) kickOnce();
     }
     let raf = 0;
     function tick(now) {
@@ -569,12 +583,12 @@
         const k2 = Math.min(MAX_K, Math.max(MIN_K, pinch.k * (d / Math.max(1, pinch.d))));
         const sx = pinch.mx - r.left, sy = pinch.my - r.top;
         view.k = k2; view.tx = sx - (sx - pinch.tx) * (k2 / pinch.k) + (mx - sx); view.ty = sy - (sy - pinch.ty) * (k2 / pinch.k) + (my - sy);
-        clampView(view); baseDirty = true; kickOnce(); return;
+        clampView(view); touch(); return;
       }
       mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
       if (drag) {
         view.tx = drag.tx + (mouse.x - drag.x); view.ty = drag.ty + (mouse.y - drag.y);
-        clampView(view); baseDirty = true; kickOnce(); return;
+        clampView(view); touch(); return;
       }
       if (e.pointerType !== "touch") updateHover();
     });
