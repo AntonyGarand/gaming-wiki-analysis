@@ -471,7 +471,7 @@ server.listen(PORT, () => {
   console.log(`Link Lab → http://localhost:${PORT}`);
   console.log(`  article view  → http://localhost:${PORT}/       (scrollytelling · split / full-width)`);
   console.log(`  lab dashboard → http://localhost:${PORT}/lab`);
-  console.log(`  walk field    → http://localhost:${PORT}/mesh    (the drainage map, full-page)`);
+  console.log(`  drainage map  → http://localhost:${PORT}/mesh    (the wiki drainage map, full-page)`);
   console.log(`  wikis configured: ${wikis.length}, with data: ${available.length} (${available.map((w) => w.id).join(", ") || "none"})`);
 });
 

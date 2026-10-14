@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Walk Field — the whole wiki as a drainage map</title>
+<title>Wiki drainage map — where every article drains</title>
 <meta name="description" content="Every article on the wiki laid out around the loop it drains into — hover to trace a walk, click to open the article. The page is the field.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,34 +44,30 @@
   .stage:fullscreen { background: var(--ground-0); }
   .stage .field { position: absolute; inset: 0; }
 
-  /* top chrome — floats over the field, never pushes it around */
+  /* top chrome — one slim control strip across the top, brand below it.
+     floats over the field, never pushes it around */
   .bar {
     position: absolute; top: 0; left: 0; right: 0; z-index: 10;
-    display: flex; flex-wrap: wrap; align-items: flex-start; gap: 14px 28px;
-    padding: 18px 22px 34px; pointer-events: none;
+    padding: 14px 22px 34px; pointer-events: none;
     background: linear-gradient(to bottom, color-mix(in oklab, var(--ground-0) 72%, transparent), transparent);
   }
-  .brand { max-width: 460px; }
-  .brand .kicker {
-    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.32em;
-    color: var(--ink-2); text-transform: uppercase; margin-bottom: 10px;
+  .topbar {
+    display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px 14px;
+    pointer-events: none;
   }
-  .brand .kicker .dot { color: var(--cy); }
+  .topbar > * { pointer-events: auto; }
+  .brand { margin-top: 14px; }
   .brand h1 {
-    font-family: var(--font-display); font-size: clamp(34px, 4.4vw, 62px);
+    font-family: var(--font-display); font-size: clamp(30px, 3.6vw, 52px);
     line-height: 0.95; letter-spacing: -0.015em;
     font-variation-settings: "opsz" 144, "wght" 620;
   }
   .brand h1 .it {
     font-style: italic; font-variation-settings: "opsz" 144, "wght" 420; color: var(--cy);
   }
-  .brand .sub { margin-top: 10px; font-size: 13px; line-height: 1.55; color: var(--ink-2); max-width: 42ch; text-wrap: pretty; }
-  .brand .sub b { color: var(--ink); font-weight: 500; }
 
-  .controls { margin-left: auto; display: flex; flex-direction: column; gap: 9px; align-items: flex-end; pointer-events: auto; }
-  .ctl-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
   .ctl { display: flex; flex-direction: column; gap: 4px; }
-  .ctl .k { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--ink-3); text-transform: uppercase; text-align: right; }
+  .ctl .k { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--ink-3); text-transform: uppercase; }
   .chipgroup {
     display: flex; border: 1px solid var(--hairline);
     background: color-mix(in oklab, var(--ground-0) 72%, transparent);
@@ -86,7 +82,7 @@
   .chipgroup button:hover { color: var(--ink); }
   .chipgroup button.on { background: var(--ink); color: var(--ground-0); font-weight: 700; }
   .chipgroup button:disabled { opacity: 0.35; cursor: not-allowed; }
-  .ctl-note { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-3); text-align: right; max-width: 52ch; }
+  .ctl-note { align-self: center; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-3); max-width: 52ch; }
 
   .find {
     display: flex; align-items: center; gap: 8px;
@@ -103,7 +99,7 @@
   .find input::placeholder { color: var(--ink-3); }
   .find:focus-within { border-color: var(--cy); }
 
-  .pagelinks { display: flex; gap: 18px; align-items: center; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .pagelinks { margin-left: auto; display: flex; gap: 18px; align-items: center; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; }
   .pagelinks a { color: var(--ink-3); text-decoration: none; transition: color 0.3s var(--ease-expo); }
   .pagelinks a:hover { color: var(--cy); text-decoration: underline; text-underline-offset: 3px; }
 
@@ -137,15 +133,11 @@
   }
 
   @media (max-width: 1080px) {
-    .bar { gap: 10px 18px; }
-    .controls { margin-left: 0; align-items: flex-start; }
-    .ctl-row { justify-content: flex-start; }
-    .ctl .k { text-align: left; }
-    .ctl-note { text-align: left; }
+    .topbar { gap: 8px 10px; }
     .legend { max-width: calc(100vw - 44px - 170px); }
   }
   @media (max-width: 640px) {
-    .brand .sub, .ctl-note { display: none; }
+    .ctl-note { display: none; }
     .bar { padding-bottom: 26px; }
     .legend { max-width: calc(100vw - 44px); bottom: 64px; }
   }
@@ -159,28 +151,21 @@
 <div class="stage" id="stage">
   <div class="field" id="fieldMount"></div>
   <header class="bar">
-    <div class="brand">
-      <div class="kicker">FIRST-LINK NETWORK ANALYSIS <span class="dot">●</span> THE WHOLE WIKI</div>
-      <h1>Walk<span class="it">Field</span></h1>
-      <p class="sub">
-        The whole wiki as a <b>drainage map</b> — every article laid out around the loop it
-        drains into. The page is the field: hover a dot to trace its walk, click to open the article.
-      </p>
-    </div>
-    <div class="controls">
-      <div class="ctl-row">
-        <div class="ctl"><div class="k">wiki</div><div class="chipgroup" id="wikiSwitch"></div></div>
-        <div class="ctl"><div class="k">rank</div><div class="chipgroup" id="ranks"></div></div>
-      </div>
-      <div class="ctl-note">parenthesised, italicised, disambiguation and date links never count, at any rank</div>
+    <nav class="topbar" aria-label="field controls">
+      <div class="ctl"><div class="k">wiki</div><div class="chipgroup" id="wikiSwitch"></div></div>
+      <div class="ctl"><div class="k">rank</div><div class="chipgroup" id="ranks"></div></div>
       <div class="find">
         <span>🔍</span>
         <input id="findInput" placeholder="find an article and fly to it ↵" autocomplete="off" aria-label="find an article">
       </div>
+      <div class="ctl-note">parenthesised, italicised, disambiguation and date links never count, at any rank</div>
       <div class="pagelinks">
         <a href="/" id="artLink">article</a>
         <a href="/lab" id="labLink">lab</a>
       </div>
+    </nav>
+    <div class="brand">
+      <h1>Wiki<span class="it">drainage map</span></h1>
     </div>
   </header>
 
@@ -409,7 +394,8 @@ async function loadField() {
   idleLegend =
     `<b>${g.N.toLocaleString()}</b> articles · <b>${g.loops.length.toLocaleString()}</b> loops<br>` +
     g.loops.slice(0, 6).map((l) => `<span><span class="sw" style="background:${loopColor(l.id)}"></span>${esc(loopName(l.nodes.map((k) => g.titles[k])))} · ${(100 * l.basin / g.N).toFixed(1)}%</span>`).join("<br>") +
-    `<br><span><span class="sw" style="background:${WALK_COLORS.dead}"></span>dead ends · ${(100 * g.dead / g.N).toFixed(1)}%</span>`;
+    `<br><span><span class="sw" style="background:${WALK_COLORS.dead}"></span>dead ends · ${(100 * g.dead / g.N).toFixed(1)}%</span>` +
+    `<br><span style="color:var(--ink-3)">▸ hover a dot to trace its walk · click to open the article</span>`;
   legendEl.innerHTML = idleLegend;
 }
 

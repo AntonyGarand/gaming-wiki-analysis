@@ -41,7 +41,7 @@ computes everything else client-side: loops, basins, the drainage-map layout, ch
 `scripts/walkfield.js` is the engine behind the hero and the map. The exact file contract is in
 [`docs/data-pipeline-brief.md`](docs/data-pipeline-brief.md).
 
-The walk field page (`scripts/walkfield.html`) ships in the same build at `dist/mesh/` — the
+The wiki drainage map (`scripts/walkfield.html`) ships in the same build at `dist/mesh/` — the
 article's drainage map as its own full page. It is static too: it reads the same successor tables
 and builds the graph client-side, so it renders identically on GitHub Pages. Served by the lab
 server at `/mesh` it uses the live output via `/api/walktable` instead.
@@ -130,12 +130,30 @@ Optional fields on a wiki entry:
 
 ## Polite scraping
 
-- Default **1 request/second** rate limit (configurable via `RATE_LIMIT_MS`)
+- **Hard-capped at 1 request/second** — every request is serialized through one
+  throttle chain (modeled on the parsed-osrs wiki-scraper's `WikiRequestService`);
+  `RATE_LIMIT_MS` can only slow it down, never speed it up
 - Identifies itself with a descriptive User-Agent
-- Pauses on 429/5xx responses with exponential backoff
+- Pauses on 429/5xx responses with Retry-After-aware exponential backoff
 - Only fetches mainspace content pages (no images, no user pages), plus the
   handful of template pages needed by fallback pages (batched, 50/request)
 - All data stored locally; nothing re-fetched unless missing
+
+## Baseline scraper & seeding (osrs, rs3)
+
+The HTTP layer is modeled on the parsed-osrs
+[wiki-scraper](../osrs-cloud-wiki-scraper/wiki-scraper) — its dumps of the
+OSRS and RS3 wikis (wikitext, revisions, redirects) can seed this project's
+corpora with **zero** API requests:
+
+```bash
+npx tsx scripts/import-from-scraper.ts --wiki=osrs
+npx tsx scripts/import-from-scraper.ts --wiki=rs3   # run after the background pipeline finishes
+```
+
+The merge is idempotent: pages missing here are inserted, newer baseline
+revisions update the row, and redirects are union-merged; the next
+`npm run extract` picks up changed revisions incrementally.
 
 ## Adding a new wiki
 
