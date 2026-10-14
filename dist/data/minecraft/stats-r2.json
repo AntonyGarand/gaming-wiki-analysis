@@ -3,57 +3,83 @@
  "rank": "2",
  "nodes": 14078,
  "converge": {
-  "articles": 6648,
-  "pct": 47.22,
-  "deadEnd": 7430,
-  "deadEndPct": 52.78,
-  "noLinks": 3970,
-  "tooFewLinks": 1137,
-  "unresolvable": 1804
+  "articles": 7218,
+  "pct": 51.27,
+  "deadEnd": 6860,
+  "deadEndPct": 48.73,
+  "noLinks": 5088,
+  "tooFewLinks": 1377,
+  "unresolvable": 17
  },
  "hopStats": {
-  "mean": 3.92,
+  "mean": 3.99,
   "median": 4,
   "p90": 7,
   "max": 20
  },
  "histogram": {
-  "0": 203,
-  "1": 830,
-  "2": 1094,
-  "3": 1190,
-  "4": 1040,
-  "5": 736,
-  "6": 651,
-  "7": 330,
-  "8": 242,
-  "9": 140,
-  "10": 74,
-  "11": 42,
-  "12": 25,
-  "13": 19,
-  "14": 14,
-  "15": 7,
-  "16": 3,
+  "0": 207,
+  "1": 868,
+  "2": 1159,
+  "3": 1277,
+  "4": 1175,
+  "5": 819,
+  "6": 697,
+  "7": 353,
+  "8": 270,
+  "9": 150,
+  "10": 85,
+  "11": 77,
+  "12": 27,
+  "13": 21,
+  "14": 13,
+  "15": 8,
+  "16": 4,
   "17": 2,
   "18": 1,
   "19": 3,
   "20": 2
  },
- "components": 97,
- "cycleCount": 96,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 5105,
+   "1": 1377,
+   "2": 969,
+   "3": 719,
+   "4": 493,
+   "5": 449,
+   "6": 340,
+   "7": 287,
+   "8": 305,
+   "9": 270,
+   "10": 3764
+  },
+  "atLeast": {
+   "1": 63.7,
+   "2": 54,
+   "3": 47.1,
+   "5": 38.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 26.79,
+  "top3Pct": 36.31,
+  "top10Pct": 43.93,
+  "cycleCount": 98,
+  "entropyBits": 3.1
+ },
+ "components": 99,
+ "cycleCount": 98,
  "largestCycle": {
   "members": [
    "Player",
    "Mob",
    "Mob AI",
    "NBT format",
-   "UUID",
-   "Java Edition 20w12a",
-   "Respawn Anchor"
+   "UUID"
   ],
-  "size": 7,
-  "basin": 3339
+  "size": 5,
+  "basin": 3771
  },
  "topAttractors": [
   {
@@ -62,28 +88,26 @@
     "Mob",
     "Mob AI",
     "NBT format",
-    "UUID",
-    "Java Edition 20w12a",
-    "Respawn Anchor"
+    "UUID"
    ],
-   "basin": 3339,
-   "pct": 23.72
-  },
-  {
-   "cycle": [
-    "Mojang Studios",
-    "Xbox (division)"
-   ],
-   "basin": 668,
-   "pct": 4.74
+   "basin": 3771,
+   "pct": 26.79
   },
   {
    "cycle": [
     "Fire",
     "Fire patch"
    ],
-   "basin": 648,
-   "pct": 4.6
+   "basin": 679,
+   "pct": 4.82
+  },
+  {
+   "cycle": [
+    "Mojang Studios",
+    "Xbox (division)"
+   ],
+   "basin": 662,
+   "pct": 4.7
   },
   {
    "cycle": [
@@ -91,24 +115,24 @@
     "The Copper Age",
     "Java Edition 1.21.9"
    ],
-   "basin": 280,
-   "pct": 1.99
+   "basin": 287,
+   "pct": 2.04
   },
   {
    "cycle": [
     "Snow",
     "Snowfall"
    ],
-   "basin": 256,
-   "pct": 1.82
+   "basin": 274,
+   "pct": 1.95
   },
   {
    "cycle": [
     "Skin",
     "Character Creator"
    ],
-   "basin": 145,
-   "pct": 1.03
+   "basin": 148,
+   "pct": 1.05
   },
   {
    "cycle": [
@@ -128,51 +152,51 @@
   },
   {
    "cycle": [
-    "MC Championship",
-    "Noxcrew"
+    "Wool",
+    "Sheep"
    ],
-   "basin": 77,
-   "pct": 0.55
+   "basin": 85,
+   "pct": 0.6
   },
   {
    "cycle": [
     "Dimension definition",
     "Data pack"
    ],
-   "basin": 76,
-   "pct": 0.54
-  },
-  {
-   "cycle": [
-    "Wool",
-    "Sheep"
-   ],
-   "basin": 71,
-   "pct": 0.5
-  },
-  {
-   "cycle": [
-    "Badlands",
-    "Red Sand"
-   ],
-   "basin": 70,
-   "pct": 0.5
-  },
-  {
-   "cycle": [
-    "Smelting",
-    "Blast Furnace"
-   ],
-   "basin": 65,
-   "pct": 0.46
+   "basin": 77,
+   "pct": 0.55
   },
   {
    "cycle": [
     "Desert",
     "Sand"
    ],
-   "basin": 63,
-   "pct": 0.45
+   "basin": 77,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "MC Championship",
+    "Noxcrew"
+   ],
+   "basin": 76,
+   "pct": 0.54
+  },
+  {
+   "cycle": [
+    "Badlands",
+    "Red Sand"
+   ],
+   "basin": 74,
+   "pct": 0.53
+  },
+  {
+   "cycle": [
+    "Smelting",
+    "Blast Furnace"
+   ],
+   "basin": 70,
+   "pct": 0.5
   },
   {
    "cycle": [
@@ -182,16 +206,8 @@
     "Village & Pillage",
     "Java Edition 18w43a"
    ],
-   "basin": 63,
-   "pct": 0.45
-  },
-  {
-   "cycle": [
-    "Minecraft Live 2022",
-    "Java Edition 1.20"
-   ],
-   "basin": 50,
-   "pct": 0.36
+   "basin": 65,
+   "pct": 0.46
   },
   {
    "cycle": [
@@ -199,46 +215,48 @@
     "Enchanting Table",
     "Experience"
    ],
-   "basin": 48,
-   "pct": 0.34
+   "basin": 51,
+   "pct": 0.36
   },
   {
    "cycle": [
-    "Jukebox",
-    "Music Disc"
+    "Minecraft Live 2022",
+    "Java Edition 1.20"
    ],
-   "basin": 46,
-   "pct": 0.33
+   "basin": 49,
+   "pct": 0.35
   },
   {
    "cycle": [
     "Generated loot",
     "Loot table"
    ],
-   "basin": 44,
-   "pct": 0.31
+   "basin": 45,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Jukebox",
+    "Music Disc"
+   ],
+   "basin": 45,
+   "pct": 0.32
   },
   {
    "cycle": [
     "Sulfur",
     "Sulfur Caves"
    ],
-   "basin": 24,
-   "pct": 0.17
+   "basin": 26,
+   "pct": 0.18
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Feature",
-   "chains": 88,
-   "pct": 0.63,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Adventure",
-   "chains": 24,
-   "pct": 0.17,
-   "reason": "redlink target"
+   "title": "NetEase",
+   "chains": 27,
+   "pct": 0.19,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Java Edition mob render history/Camel Husk Jockey",
@@ -247,13 +265,13 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Village/Structure (old)/Blueprints",
-   "chains": 12,
+   "title": "Summer",
+   "chains": 13,
    "pct": 0.09,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
-   "title": "Summer",
+   "title": "Minecraft: The Manga Volume 13",
    "chains": 12,
    "pct": 0.09,
    "reason": "only 1 eligible links"
@@ -262,7 +280,7 @@
    "title": "Java Edition 1.19.2",
    "chains": 11,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Ash Kapoor",
@@ -271,34 +289,16 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Audiobook narrators",
-   "chains": 8,
-   "pct": 0.06,
-   "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Java Edition protocol/Packets",
-   "chains": 8,
-   "pct": 0.06,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Oreville Studios",
-   "chains": 7,
-   "pct": 0.05,
-   "reason": "redlink target"
-  },
-  {
    "title": "Info update",
    "chains": 6,
    "pct": 0.04,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Java Edition 1.9.2",
    "chains": 6,
    "pct": 0.04,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Battle & Beasts Skin Pack",
@@ -307,261 +307,285 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Minecraft: Official Magazine (2017)",
+   "title": "Texture atlas",
    "chains": 6,
    "pct": 0.04,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Hat Films",
    "chains": 6,
    "pct": 0.04,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Oreville Studios",
+   "chains": 6,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Java Edition 1.9.4",
+   "chains": 5,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Legacy Minecraft authentication",
+   "chains": 5,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Audiobook narrators",
+   "chains": 5,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Player",
-   "inDegree": 112
+   "firstLinks": 114
   },
   {
    "title": "Overworld",
-   "inDegree": 84
+   "firstLinks": 85
+  },
+  {
+   "title": "Mob",
+   "firstLinks": 67
   },
   {
    "title": "Mojang Studios",
-   "inDegree": 63
-  },
-  {
-   "title": "Mob",
-   "inDegree": 63
+   "firstLinks": 64
   },
   {
    "title": "Block",
-   "inDegree": 61
+   "firstLinks": 62
   },
   {
    "title": "Java Edition 24w14potato",
-   "inDegree": 59
+   "firstLinks": 59
   },
   {
    "title": "Polished Blackstone Bricks",
-   "inDegree": 57
+   "firstLinks": 57
   },
   {
    "title": "Java Edition 1.9",
-   "inDegree": 55
+   "firstLinks": 56
   },
   {
    "title": "Java Edition 1.8",
-   "inDegree": 54
+   "firstLinks": 54
   },
   {
    "title": "Item",
-   "inDegree": 45
+   "firstLinks": 46
   },
   {
    "title": "Biome",
-   "inDegree": 45
+   "firstLinks": 44
   },
   {
    "title": "Java Edition 1.13",
-   "inDegree": 44
+   "firstLinks": 44
   },
   {
    "title": "Entity",
-   "inDegree": 43
+   "firstLinks": 43
   },
   {
    "title": "Minecraft Launcher",
-   "inDegree": 42
+   "firstLinks": 41
   },
   {
    "title": "The Nether",
-   "inDegree": 40
+   "firstLinks": 39
   },
   {
    "title": "Commands",
-   "inDegree": 38
+   "firstLinks": 37
   },
   {
    "title": "Water",
-   "inDegree": 36
+   "firstLinks": 36
+  },
+  {
+   "title": "Cobblestone",
+   "firstLinks": 35
   },
   {
    "title": "Java Edition 1.14",
-   "inDegree": 35
+   "firstLinks": 35
   },
   {
    "title": "Caves & Cliffs",
-   "inDegree": 35
+   "firstLinks": 35
   },
   {
    "title": "Music Disc",
-   "inDegree": 32
+   "firstLinks": 32
   },
   {
    "title": "Data pack",
-   "inDegree": 31
-  },
-  {
-   "title": "Pickaxe",
-   "inDegree": 30
-  },
-  {
-   "title": "Crafting",
-   "inDegree": 28
+   "firstLinks": 31
   },
   {
    "title": "Mod Power",
-   "inDegree": 28
+   "firstLinks": 31
+  },
+  {
+   "title": "Pickaxe",
+   "firstLinks": 30
   },
   {
    "title": "Villager",
-   "inDegree": 27
-  },
-  {
-   "title": "Game drop",
-   "inDegree": 26
-  },
-  {
-   "title": "Java Edition 1.17",
-   "inDegree": 24
-  },
-  {
-   "title": "Java Edition 25w14craftmine",
-   "inDegree": 24
-  },
-  {
-   "title": "Settings",
-   "inDegree": 23
-  },
-  {
-   "title": "Inventory",
-   "inDegree": 22
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Mob",
-   "betweenness": 18215
-  },
-  {
-   "title": "Mob AI",
-   "betweenness": 14953
-  },
-  {
-   "title": "NBT format",
-   "betweenness": 11740
-  },
-  {
-   "title": "Player",
-   "betweenness": 9654
-  },
-  {
-   "title": "UUID",
-   "betweenness": 8499
-  },
-  {
-   "title": "Biome",
-   "betweenness": 8155
-  },
-  {
-   "title": "Overworld",
-   "betweenness": 6224
-  },
-  {
-   "title": "Java Edition 20w12a",
-   "betweenness": 5167
-  },
-  {
-   "title": "Item",
-   "betweenness": 3801
+   "firstLinks": 29
   },
   {
    "title": "Crafting",
-   "betweenness": 2640
+   "firstLinks": 28
   },
   {
-   "title": "Water",
-   "betweenness": 2511
+   "title": "Spawn Egg",
+   "firstLinks": 26
+  },
+  {
+   "title": "Game drop",
+   "firstLinks": 26
+  },
+  {
+   "title": "Chest",
+   "firstLinks": 25
+  },
+  {
+   "title": "Java Edition 1.17",
+   "firstLinks": 24
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Player",
+   "chains": 3771
+  },
+  {
+   "title": "Mob AI",
+   "chains": 3771
+  },
+  {
+   "title": "NBT format",
+   "chains": 3771
+  },
+  {
+   "title": "Mob",
+   "chains": 3771
+  },
+  {
+   "title": "UUID",
+   "chains": 3771
+  },
+  {
+   "title": "Biome",
+   "chains": 1288
+  },
+  {
+   "title": "Overworld",
+   "chains": 854
+  },
+  {
+   "title": "Fire",
+   "chains": 679
+  },
+  {
+   "title": "Fire patch",
+   "chains": 679
+  },
+  {
+   "title": "Mojang Studios",
+   "chains": 662
+  },
+  {
+   "title": "Xbox (division)",
+   "chains": 662
+  },
+  {
+   "title": "Item",
+   "chains": 605
   },
   {
    "title": "Tool",
-   "betweenness": 2184
+   "chains": 461
   },
   {
-   "title": "Brewing",
-   "betweenness": 1917
+   "title": "Entity",
+   "chains": 454
   },
   {
-   "title": "Respawn Anchor",
-   "betweenness": 1849
+   "title": "Crafting",
+   "chains": 367
   },
   {
-   "title": "Effect",
-   "betweenness": 1793
+   "title": "Water",
+   "chains": 290
   },
   {
-   "title": "Splash Potion",
-   "betweenness": 1760
+   "title": "Game drop",
+   "chains": 287
   },
   {
-   "title": "Potion",
-   "betweenness": 1710
+   "title": "The Copper Age",
+   "chains": 287
+  },
+  {
+   "title": "Java Edition 1.21.9",
+   "chains": 287
+  },
+  {
+   "title": "Snow",
+   "chains": 274
+  },
+  {
+   "title": "Snowfall",
+   "chains": 274
+  },
+  {
+   "title": "King",
+   "chains": 267
+  },
+  {
+   "title": "Markus Persson",
+   "chains": 265
+  },
+  {
+   "title": "Block",
+   "chains": 255
   },
   {
    "title": "Projectile",
-   "betweenness": 1687
+   "chains": 243
   },
   {
-   "title": "Food",
-   "betweenness": 1452
+   "title": "World",
+   "chains": 238
   },
   {
-   "title": "World generation",
-   "betweenness": 1408
+   "title": "Java Edition pre-Classic",
+   "chains": 234
   },
   {
-   "title": "Village",
-   "betweenness": 1296
+   "title": "Splash Potion",
+   "chains": 222
   },
   {
-   "title": "Villager",
-   "betweenness": 1070
+   "title": "Brewing",
+   "chains": 214
   },
   {
-   "title": "MINECON",
-   "betweenness": 1002
-  },
-  {
-   "title": "Creative",
-   "betweenness": 1001
-  },
-  {
-   "title": "Altitude",
-   "betweenness": 1001
-  },
-  {
-   "title": "Clouds",
-   "betweenness": 996
-  },
-  {
-   "title": "Deep Ocean",
-   "betweenness": 972
-  },
-  {
-   "title": "Coordinates",
-   "betweenness": 966
-  },
-  {
-   "title": "Java Edition Classic",
-   "betweenness": 960
-  },
-  {
-   "title": "World boundary",
-   "betweenness": 960
+   "title": "Xbox Game Studios",
+   "chains": 205
   }
  ]
 }

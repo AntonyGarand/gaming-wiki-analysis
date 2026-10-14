@@ -1,73 +1,108 @@
 {
  "wiki": "rsc",
  "rank": "3",
- "nodes": 4331,
+ "nodes": 4225,
  "converge": {
-  "articles": 1995,
-  "pct": 46.06,
-  "deadEnd": 2336,
-  "deadEndPct": 53.94,
-  "noLinks": 479,
-  "tooFewLinks": 373,
-  "unresolvable": 5
+  "articles": 2747,
+  "pct": 65.02,
+  "deadEnd": 1478,
+  "deadEndPct": 34.98,
+  "noLinks": 453,
+  "tooFewLinks": 366,
+  "unresolvable": 2
  },
  "hopStats": {
-  "mean": 4.52,
-  "median": 3,
-  "p90": 10,
-  "max": 14
+  "mean": 6.67,
+  "median": 6,
+  "p90": 13,
+  "max": 21
  },
  "histogram": {
-  "0": 191,
-  "1": 278,
-  "2": 267,
-  "3": 266,
-  "4": 191,
-  "5": 108,
-  "6": 87,
-  "7": 129,
-  "8": 120,
-  "9": 100,
-  "10": 100,
-  "11": 90,
-  "12": 48,
-  "13": 18,
-  "14": 2
+  "0": 197,
+  "1": 282,
+  "2": 270,
+  "3": 231,
+  "4": 205,
+  "5": 131,
+  "6": 107,
+  "7": 151,
+  "8": 176,
+  "9": 198,
+  "10": 193,
+  "11": 130,
+  "12": 113,
+  "13": 99,
+  "14": 33,
+  "15": 29,
+  "16": 59,
+  "17": 46,
+  "18": 49,
+  "19": 30,
+  "20": 15,
+  "21": 3
  },
- "components": 91,
- "cycleCount": 90,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 455,
+   "1": 109,
+   "2": 257,
+   "3": 354,
+   "4": 401,
+   "5": 388,
+   "6": 386,
+   "7": 310,
+   "8": 252,
+   "9": 230,
+   "10": 1083
+  },
+  "atLeast": {
+   "1": 89.2,
+   "2": 86.7,
+   "3": 80.6,
+   "5": 62.7
+  }
+ },
+ "concentration": {
+  "top1Pct": 23.17,
+  "top3Pct": 41.44,
+  "top10Pct": 55.27,
+  "cycleCount": 91,
+  "entropyBits": 3.6
+ },
+ "components": 92,
+ "cycleCount": 91,
  "largestCycle": {
   "members": [
-   "Scorpion catcher",
-   "Seer"
+   "Attack",
+   "WeaponAim"
   ],
   "size": 2,
-  "basin": 572
+  "basin": 979
  },
  "topAttractors": [
-  {
-   "cycle": [
-    "Scorpion catcher",
-    "Seer"
-   ],
-   "basin": 572,
-   "pct": 13.21
-  },
   {
    "cycle": [
     "Attack",
     "WeaponAim"
    ],
-   "basin": 270,
-   "pct": 6.23
+   "basin": 979,
+   "pct": 23.17
+  },
+  {
+   "cycle": [
+    "Scorpion catcher",
+    "Seer"
+   ],
+   "basin": 586,
+   "pct": 13.87
   },
   {
    "cycle": [
     "Bars",
     "Anvil"
    ],
-   "basin": 190,
-   "pct": 4.39
+   "basin": 186,
+   "pct": 4.4
   },
   {
    "cycle": [
@@ -80,15 +115,15 @@
     "Shantay Pass Shop"
    ],
    "basin": 133,
-   "pct": 3.07
+   "pct": 3.15
   },
   {
    "cycle": [
     "West Ardougne",
     "Plague City"
    ],
-   "basin": 132,
-   "pct": 3.05
+   "basin": 131,
+   "pct": 3.1
   },
   {
    "cycle": [
@@ -97,16 +132,17 @@
     "Feldip Hills",
     "Gu'tanoth"
    ],
-   "basin": 111,
-   "pct": 2.56
+   "basin": 120,
+   "pct": 2.84
   },
   {
    "cycle": [
-    "Shields",
-    "2-handed Swords"
+    "Fishing",
+    "Fishing spot",
+    "Lobster Pot"
    ],
-   "basin": 53,
-   "pct": 1.22
+   "basin": 98,
+   "pct": 2.32
   },
   {
    "cycle": [
@@ -114,15 +150,7 @@
     "Ardounge wall gateway"
    ],
    "basin": 53,
-   "pct": 1.22
-  },
-  {
-   "cycle": [
-    "Grand tree",
-    "Bark sample"
-   ],
-   "basin": 31,
-   "pct": 0.72
+   "pct": 1.25
   },
   {
    "cycle": [
@@ -131,40 +159,23 @@
     "Giant crystal"
    ],
    "basin": 25,
-   "pct": 0.58
-  },
-  {
-   "cycle": [
-    "Tribal Totem",
-    "Tribal totem"
-   ],
-   "basin": 22,
-   "pct": 0.51
-  },
-  {
-   "cycle": [
-    "Spirit Tree",
-    "Tree Gnome Village (location)"
-   ],
-   "basin": 18,
-   "pct": 0.42
+   "pct": 0.59
   },
   {
    "cycle": [
     "Potter's wheel",
     "Unfired pot"
    ],
-   "basin": 17,
-   "pct": 0.39
+   "basin": 24,
+   "pct": 0.57
   },
   {
    "cycle": [
-    "Machette",
-    "Tall Reeds",
-    "Kharazi Jungle"
+    "Shields",
+    "2-handed Swords"
    ],
-   "basin": 16,
-   "pct": 0.37
+   "basin": 18,
+   "pct": 0.43
   },
   {
    "cycle": [
@@ -173,7 +184,7 @@
     "Guard (Fight Arena)"
    ],
    "basin": 15,
-   "pct": 0.35
+   "pct": 0.36
   },
   {
    "cycle": [
@@ -181,7 +192,16 @@
     "Ball of wool"
    ],
    "basin": 14,
-   "pct": 0.32
+   "pct": 0.33
+  },
+  {
+   "cycle": [
+    "Machette",
+    "Tall Reeds",
+    "Kharazi Jungle"
+   ],
+   "basin": 14,
+   "pct": 0.33
   },
   {
    "cycle": [
@@ -189,7 +209,7 @@
     "Raw Herring"
    ],
    "basin": 13,
-   "pct": 0.3
+   "pct": 0.31
   },
   {
    "cycle": [
@@ -197,7 +217,15 @@
     "Log raft"
    ],
    "basin": 13,
-   "pct": 0.3
+   "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Spirit Tree",
+    "Tree Gnome Village (location)"
+   ],
+   "basin": 13,
+   "pct": 0.31
   },
   {
    "cycle": [
@@ -209,42 +237,38 @@
   },
   {
    "cycle": [
+    "Unicorn horn",
+    "Black Unicorn"
+   ],
+   "basin": 11,
+   "pct": 0.26
+  },
+  {
+   "cycle": [
     "Murder Mystery",
     "Murder Scene Pot"
    ],
    "basin": 11,
-   "pct": 0.25
+   "pct": 0.26
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "DeviousMUD",
-   "chains": 1379,
-   "pct": 31.84,
-   "reason": "redlink target"
-  },
-  {
    "title": "Jagex",
-   "chains": 38,
-   "pct": 0.88,
+   "chains": 604,
+   "pct": 14.3,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Mind-Rune",
    "chains": 10,
-   "pct": 0.23,
+   "pct": 0.24,
    "reason": "only 1 eligible links"
   },
   {
    "title": "Wizard Cromperty",
    "chains": 7,
-   "pct": 0.16,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Manual:WorldMap",
-   "chains": 6,
-   "pct": 0.14,
+   "pct": 0.17,
    "reason": "only 2 eligible links"
   },
   {
@@ -252,12 +276,6 @@
    "chains": 4,
    "pct": 0.09,
    "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Friends",
-   "chains": 3,
-   "pct": 0.07,
-   "reason": "only 3 eligible links"
   },
   {
    "title": "God letters:Issue 2 - The People Rejoice",
@@ -290,6 +308,12 @@
    "reason": "only 1 eligible links"
   },
   {
+   "title": "Post-closure years",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Prayer To Guthix",
    "chains": 3,
    "pct": 0.07,
@@ -299,258 +323,270 @@
    "title": "Cave entrance (Toban's island)",
    "chains": 3,
    "pct": 0.07,
-   "reason": "only 3 eligible links"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Gate (Mage Arena)",
    "chains": 3,
    "pct": 0.07,
    "reason": "only 2 eligible links"
+  },
+  {
+   "title": "White Bead",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Desert Wolf",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Quests",
-   "inDegree": 71
+   "firstLinks": 71
   },
   {
    "title": "Smithing",
-   "inDegree": 39
+   "firstLinks": 39
   },
   {
    "title": "The Grand Tree (location)",
-   "inDegree": 38
+   "firstLinks": 38
   },
   {
    "title": "Experience",
-   "inDegree": 35
-  },
-  {
-   "title": "Coins",
-   "inDegree": 35
-  },
-  {
-   "title": "Magic",
-   "inDegree": 34
+   "firstLinks": 37
   },
   {
    "title": "Hits",
-   "inDegree": 30
-  },
-  {
-   "title": "Weapon poison",
-   "inDegree": 30
-  },
-  {
-   "title": "Varrock",
-   "inDegree": 29
-  },
-  {
-   "title": "Legend's Quest",
-   "inDegree": 28
-  },
-  {
-   "title": "Mining",
-   "inDegree": 27
-  },
-  {
-   "title": "Cooking",
-   "inDegree": 26
-  },
-  {
-   "title": "East Ardougne",
-   "inDegree": 25
-  },
-  {
-   "title": "Wilderness",
-   "inDegree": 25
-  },
-  {
-   "title": "Attack",
-   "inDegree": 23
-  },
-  {
-   "title": "Examine",
-   "inDegree": 23
-  },
-  {
-   "title": "RuneScape Classic",
-   "inDegree": 23
-  },
-  {
-   "title": "Fletching",
-   "inDegree": 21
-  },
-  {
-   "title": "Thieving",
-   "inDegree": 21
-  },
-  {
-   "title": "Herblaw",
-   "inDegree": 19
-  },
-  {
-   "title": "Defense",
-   "inDegree": 17
-  },
-  {
-   "title": "Karamja",
-   "inDegree": 17
-  },
-  {
-   "title": "Falador",
-   "inDegree": 16
-  },
-  {
-   "title": "Ranged",
-   "inDegree": 16
-  },
-  {
-   "title": "Furnace",
-   "inDegree": 16
-  },
-  {
-   "title": "Gold bar",
-   "inDegree": 16
-  },
-  {
-   "title": "Underground pass",
-   "inDegree": 16
-  },
-  {
-   "title": "Tourist trap",
-   "inDegree": 16
-  },
-  {
-   "title": "Bank",
-   "inDegree": 15
-  },
-  {
-   "title": "Port Sarim",
-   "inDegree": 15
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Bank",
-   "betweenness": 5679
-  },
-  {
-   "title": "Combat",
-   "betweenness": 5316
-  },
-  {
-   "title": "Tutorial Island",
-   "betweenness": 5136
-  },
-  {
-   "title": "Skills",
-   "betweenness": 4704
-  },
-  {
-   "title": "Varrock",
-   "betweenness": 4598
-  },
-  {
-   "title": "Melee",
-   "betweenness": 4560
-  },
-  {
-   "title": "Varrock southeast mine",
-   "betweenness": 4190
+   "firstLinks": 31
   },
   {
    "title": "Magic",
-   "betweenness": 3940
-  },
-  {
-   "title": "Quests",
-   "betweenness": 3367
-  },
-  {
-   "title": "Legend's Quest",
-   "betweenness": 3330
-  },
-  {
-   "title": "Runes",
-   "betweenness": 2958
-  },
-  {
-   "title": "Barbarian Outpost",
-   "betweenness": 2805
-  },
-  {
-   "title": "Monster",
-   "betweenness": 2522
-  },
-  {
-   "title": "Kharid Scorpion",
-   "betweenness": 2248
-  },
-  {
-   "title": "Tree Gnome Stronghold",
-   "betweenness": 2109
+   "firstLinks": 31
   },
   {
    "title": "Coins",
-   "betweenness": 2024
+   "firstLinks": 31
   },
   {
-   "title": "Gnome",
-   "betweenness": 2020
+   "title": "Varrock",
+   "firstLinks": 29
   },
   {
-   "title": "Yew Tree",
-   "betweenness": 2016
+   "title": "Weapon poison",
+   "firstLinks": 29
   },
   {
-   "title": "Book (Shield of Arrav)",
-   "betweenness": 1937
+   "title": "Legend's Quest",
+   "firstLinks": 27
   },
   {
-   "title": "Yew Logs",
-   "betweenness": 1921
+   "title": "Cooking",
+   "firstLinks": 26
   },
   {
-   "title": "Character",
-   "betweenness": 1920
+   "title": "Mining",
+   "firstLinks": 26
   },
   {
-   "title": "Shield of Arrav",
-   "betweenness": 1918
+   "title": "East Ardougne",
+   "firstLinks": 25
   },
   {
-   "title": "Woodcutting",
-   "betweenness": 1856
+   "title": "Wilderness",
+   "firstLinks": 25
   },
   {
-   "title": "Varrock Palace",
-   "betweenness": 1824
+   "title": "Examine",
+   "firstLinks": 22
+  },
+  {
+   "title": "Fletching",
+   "firstLinks": 21
+  },
+  {
+   "title": "RuneScape Classic",
+   "firstLinks": 21
+  },
+  {
+   "title": "Attack",
+   "firstLinks": 20
+  },
+  {
+   "title": "Thieving",
+   "firstLinks": 20
+  },
+  {
+   "title": "Karamja",
+   "firstLinks": 19
+  },
+  {
+   "title": "Herblaw",
+   "firstLinks": 18
+  },
+  {
+   "title": "Defense",
+   "firstLinks": 17
+  },
+  {
+   "title": "Ranged",
+   "firstLinks": 17
+  },
+  {
+   "title": "Falador",
+   "firstLinks": 16
+  },
+  {
+   "title": "Furnace",
+   "firstLinks": 16
+  },
+  {
+   "title": "Underground pass",
+   "firstLinks": 16
+  },
+  {
+   "title": "Tourist trap",
+   "firstLinks": 16
+  },
+  {
+   "title": "Watchtower",
+   "firstLinks": 15
+  },
+  {
+   "title": "Bank",
+   "firstLinks": 14
+  },
+  {
+   "title": "Port Sarim",
+   "firstLinks": 14
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Attack",
+   "chains": 979
+  },
+  {
+   "title": "WeaponAim",
+   "chains": 979
+  },
+  {
+   "title": "Defense",
+   "chains": 915
+  },
+  {
+   "title": "Hits",
+   "chains": 887
+  },
+  {
+   "title": "Experience",
+   "chains": 688
+  },
+  {
+   "title": "Skills",
+   "chains": 642
+  },
+  {
+   "title": "Tutorial Island",
+   "chains": 612
+  },
+  {
+   "title": "Bank",
+   "chains": 606
+  },
+  {
+   "title": "Jagex",
+   "chains": 604
+  },
+  {
+   "title": "DeviousMUD",
+   "chains": 588
+  },
+  {
+   "title": "Scorpion catcher",
+   "chains": 586
+  },
+  {
+   "title": "Seer",
+   "chains": 586
+  },
+  {
+   "title": "Thormac the sorceror",
+   "chains": 579
+  },
+  {
+   "title": "RuneScape Classic",
+   "chains": 578
   },
   {
    "title": "Scorpion cage",
-   "betweenness": 1689
+   "chains": 578
   },
   {
-   "title": "Dragon slayer",
-   "betweenness": 1615
+   "title": "Kharid Scorpion",
+   "chains": 577
   },
   {
-   "title": "Champions' Guild",
-   "betweenness": 1568
+   "title": "Barbarian Outpost",
+   "chains": 576
   },
   {
-   "title": "Romeo & Juliet",
-   "betweenness": 1540
+   "title": "Legend's Quest",
+   "chains": 570
   },
   {
-   "title": "Quest Points",
-   "betweenness": 1515
+   "title": "Quests",
+   "chains": 498
+  },
+  {
+   "title": "Monster",
+   "chains": 492
+  },
+  {
+   "title": "Varrock southeast mine",
+   "chains": 287
+  },
+  {
+   "title": "Varrock",
+   "chains": 286
   },
   {
    "title": "Items",
-   "betweenness": 1510
+   "chains": 260
+  },
+  {
+   "title": "Coins",
+   "chains": 207
+  },
+  {
+   "title": "Anvil",
+   "chains": 186
+  },
+  {
+   "title": "Bars",
+   "chains": 186
+  },
+  {
+   "title": "Magic",
+   "chains": 179
+  },
+  {
+   "title": "Ores",
+   "chains": 176
+  },
+  {
+   "title": "Combat level",
+   "chains": 169
+  },
+  {
+   "title": "Mining",
+   "chains": 168
   }
  ]
 }

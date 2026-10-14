@@ -3,72 +3,100 @@
  "rank": "5",
  "nodes": 24073,
  "converge": {
-  "articles": 7230,
-  "pct": 30.03,
-  "deadEnd": 16843,
-  "deadEndPct": 69.97,
-  "noLinks": 878,
-  "tooFewLinks": 8788,
-  "unresolvable": 1197
+  "articles": 7476,
+  "pct": 31.06,
+  "deadEnd": 16597,
+  "deadEndPct": 68.94,
+  "noLinks": 1032,
+  "tooFewLinks": 9792,
+  "unresolvable": 16
  },
  "hopStats": {
-  "mean": 10.85,
+  "mean": 10.99,
   "median": 8,
   "p90": 26,
   "max": 40
  },
  "histogram": {
-  "0": 347,
-  "1": 538,
-  "2": 544,
-  "3": 530,
-  "4": 524,
-  "5": 463,
-  "6": 292,
-  "7": 262,
-  "8": 240,
-  "9": 273,
-  "10": 388,
-  "11": 293,
-  "12": 215,
-  "13": 132,
-  "14": 108,
-  "15": 135,
-  "16": 73,
-  "17": 67,
-  "18": 94,
-  "19": 94,
-  "20": 86,
-  "21": 77,
-  "22": 65,
-  "23": 249,
-  "24": 227,
-  "25": 155,
-  "26": 85,
-  "27": 157,
-  "28": 119,
-  "29": 98,
-  "30": 63,
-  "31": 73,
-  "32": 51,
-  "33": 28,
-  "34": 29,
-  "35": 23,
-  "36": 17,
+  "0": 332,
+  "1": 549,
+  "2": 559,
+  "3": 540,
+  "4": 535,
+  "5": 489,
+  "6": 337,
+  "7": 290,
+  "8": 248,
+  "9": 263,
+  "10": 386,
+  "11": 296,
+  "12": 227,
+  "13": 141,
+  "14": 105,
+  "15": 132,
+  "16": 70,
+  "17": 66,
+  "18": 98,
+  "19": 100,
+  "20": 95,
+  "21": 81,
+  "22": 68,
+  "23": 250,
+  "24": 230,
+  "25": 158,
+  "26": 84,
+  "27": 162,
+  "28": 123,
+  "29": 107,
+  "30": 88,
+  "31": 85,
+  "32": 57,
+  "33": 34,
+  "34": 32,
+  "35": 28,
+  "36": 16,
   "37": 4,
   "38": 6,
-  "39": 4,
+  "39": 3,
   "40": 2
  },
- "components": 175,
- "cycleCount": 174,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 1048,
+   "1": 1601,
+   "2": 3561,
+   "3": 2434,
+   "4": 2196,
+   "5": 1591,
+   "6": 1320,
+   "7": 1098,
+   "8": 956,
+   "9": 787,
+   "10": 7481
+  },
+  "atLeast": {
+   "1": 95.6,
+   "2": 89,
+   "3": 74.2,
+   "5": 55
+  }
+ },
+ "concentration": {
+  "top1Pct": 8.96,
+  "top3Pct": 18.83,
+  "top10Pct": 24.48,
+  "cycleCount": 155,
+  "entropyBits": 4.05
+ },
+ "components": 156,
+ "cycleCount": 155,
  "largestCycle": {
   "members": [
    "Eddie Pulaski",
    "Los Santos Police Department (3D Universe)"
   ],
   "size": 2,
-  "basin": 2139
+  "basin": 2156
  },
  "topAttractors": [
   {
@@ -76,48 +104,32 @@
     "Eddie Pulaski",
     "Los Santos Police Department (3D Universe)"
    ],
-   "basin": 2139,
-   "pct": 8.89
+   "basin": 2156,
+   "pct": 8.96
   },
   {
    "cycle": [
     "Verona Beach",
     "Los Santos Conference Center"
    ],
-   "basin": 1388,
-   "pct": 5.77
+   "basin": 1505,
+   "pct": 6.25
   },
   {
    "cycle": [
     "Italy",
     "Slovenia"
    ],
-   "basin": 868,
-   "pct": 3.61
+   "basin": 872,
+   "pct": 3.62
   },
   {
    "cycle": [
     "Forelli Crime Family",
     "Sonny Forelli"
    ],
-   "basin": 326,
-   "pct": 1.35
-  },
-  {
-   "cycle": [
-    "Rancho",
-    "Los Santos Vagos (HD Universe)"
-   ],
-   "basin": 215,
-   "pct": 0.89
-  },
-  {
-   "cycle": [
-    "Hepburn Heights",
-    "Saint Mark's"
-   ],
-   "basin": 207,
-   "pct": 0.86
+   "basin": 331,
+   "pct": 1.37
   },
   {
    "cycle": [
@@ -125,41 +137,48 @@
     "Elysian Fields Freeway",
     "Elysian Fields Freeway Bridge"
    ],
-   "basin": 196,
-   "pct": 0.81
+   "basin": 253,
+   "pct": 1.05
   },
   {
    "cycle": [
-    "Daemon",
-    "Bagger",
-    "Hexer"
+    "Rancho",
+    "Los Santos Vagos (HD Universe)"
    ],
-   "basin": 154,
-   "pct": 0.64
+   "basin": 216,
+   "pct": 0.9
+  },
+  {
+   "cycle": [
+    "Hepburn Heights",
+    "Saint Mark's"
+   ],
+   "basin": 211,
+   "pct": 0.88
   },
   {
    "cycle": [
     "Caligula's Palace",
     "Royal Casino"
    ],
-   "basin": 143,
-   "pct": 0.59
-  },
-  {
-   "cycle": [
-    "Johnny Klebitz",
-    "Billy Grey"
-   ],
-   "basin": 106,
-   "pct": 0.44
+   "basin": 144,
+   "pct": 0.6
   },
   {
    "cycle": [
     "Little Bighorn Avenue",
     "Integrity Way"
    ],
-   "basin": 106,
+   "basin": 105,
    "pct": 0.44
+  },
+  {
+   "cycle": [
+    "Johnny Klebitz",
+    "Billy Grey"
+   ],
+   "basin": 101,
+   "pct": 0.42
   },
   {
    "cycle": [
@@ -167,24 +186,49 @@
     "Tataviam Mountains",
     "Land Act Dam"
    ],
-   "basin": 98,
+   "basin": 99,
    "pct": 0.41
   },
   {
    "cycle": [
-    "DH-7 Iron Mule",
-    "Setup: Iron Mule"
+    "Daemon",
+    "Bagger",
+    "Hexer"
    ],
-   "basin": 69,
-   "pct": 0.29
+   "basin": 87,
+   "pct": 0.36
+  },
+  {
+   "cycle": [
+    "Madd Dogg's Crib",
+    "Madd Dogg's Rhymes"
+   ],
+   "basin": 72,
+   "pct": 0.3
   },
   {
    "cycle": [
     "Out of the Closet",
     "Tom Rivas"
    ],
-   "basin": 64,
-   "pct": 0.27
+   "basin": 71,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "DH-7 Iron Mule",
+    "Setup: Iron Mule"
+   ],
+   "basin": 70,
+   "pct": 0.29
+  },
+  {
+   "cycle": [
+    "Boomshine",
+    "Boomshine Blowout"
+   ],
+   "basin": 67,
+   "pct": 0.28
   },
   {
    "cycle": [
@@ -194,16 +238,18 @@
     "Mamba (2D Universe)",
     "Mandarin Mayhem - Phone 3: Mission 2"
    ],
-   "basin": 51,
-   "pct": 0.21
+   "basin": 53,
+   "pct": 0.22
   },
   {
    "cycle": [
-    "Boomshine",
-    "Boomshine Blowout"
+    "Brother Marcus",
+    "Vice Squad (2D Universe)",
+    "Brotherhood of Jah Army of Love",
+    "Samuel Deever"
    ],
-   "basin": 42,
-   "pct": 0.17
+   "basin": 52,
+   "pct": 0.22
   },
   {
    "cycle": [
@@ -218,361 +264,345 @@
     "Pegassi Residences South Tower",
     "Pegassi Residences North Tower"
    ],
-   "basin": 39,
+   "basin": 38,
    "pct": 0.16
-  },
-  {
-   "cycle": [
-    "Vinewood Hills",
-    "Pacific Bluffs"
-   ],
-   "basin": 37,
-   "pct": 0.15
-  },
-  {
-   "cycle": [
-    "Machine Gun",
-    "GT-A1"
-   ],
-   "basin": 35,
-   "pct": 0.15
   }
  ],
  "deadEndTerminals": [
   {
    "title": "LibertyCityStories.com",
-   "chains": 539,
-   "pct": 2.24,
+   "chains": 536,
+   "pct": 2.23,
    "reason": "no eligible links"
   },
   {
    "title": "PlayStation Portable",
-   "chains": 455,
-   "pct": 1.89,
-   "reason": "redlink target"
-  },
-  {
-   "title": "PlayStation 5",
-   "chains": 319,
-   "pct": 1.33,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Handguns",
-   "chains": 180,
-   "pct": 0.75,
-   "reason": "only 7 eligible links"
-  },
-  {
-   "title": "FAILE",
-   "chains": 168,
-   "pct": 0.7,
+   "chains": 376,
+   "pct": 1.56,
    "reason": "only 3 eligible links"
   },
   {
-   "title": "Secrets and Easter Eggs in GTA V",
-   "chains": 146,
-   "pct": 0.61,
-   "reason": "only 5 eligible links"
+   "title": "PlayStation 5",
+   "chains": 353,
+   "pct": 1.47,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Handguns",
+   "chains": 179,
+   "pct": 0.74,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "FAILE",
+   "chains": 166,
+   "pct": 0.69,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Fraser Ashley",
+   "chains": 159,
+   "pct": 0.66,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Xbox One",
+   "chains": 149,
+   "pct": 0.62,
+   "reason": "only 3 eligible links"
   },
   {
    "title": "Leonard County Sheriff",
    "chains": 138,
    "pct": 0.57,
-   "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Secrets and Easter Eggs in GTA III",
-   "chains": 124,
-   "pct": 0.52,
-   "reason": "no eligible links"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Campbell-John Dick",
    "chains": 111,
    "pct": 0.46,
-   "reason": "only 4 eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Mount Chiliad Tourist Trail",
-   "chains": 107,
+   "chains": 106,
    "pct": 0.44,
-   "reason": "only 8 eligible links"
+   "reason": "only 4 eligible links"
   },
   {
-   "title": "Fraser Ashley",
-   "chains": 97,
-   "pct": 0.4,
-   "reason": "redlink target"
+   "title": "Ukita",
+   "chains": 98,
+   "pct": 0.41,
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Leaper's Bridge",
-   "chains": 94,
-   "pct": 0.39,
-   "reason": "redlink target"
+   "chains": 89,
+   "pct": 0.37,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Secrets and Easter Eggs in GTA V",
+   "chains": 87,
+   "pct": 0.36,
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Castle Garden City Park",
-   "chains": 88,
-   "pct": 0.37,
-   "reason": "redlink target"
+   "chains": 85,
+   "pct": 0.35,
+   "reason": "only 4 eligible links"
   },
   {
-   "title": "Cochrane Heights Condominium",
-   "chains": 87,
-   "pct": 0.36,
-   "reason": "only 11 eligible links"
-  },
-  {
-   "title": "Xbox One",
-   "chains": 86,
-   "pct": 0.36,
-   "reason": "redlink target"
+   "title": "Odhner Avenue",
+   "chains": 81,
+   "pct": 0.34,
+   "reason": "only 3 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Money",
-   "inDegree": 133
+   "firstLinks": 136
   },
   {
    "title": "Los Santos (HD Universe)",
-   "inDegree": 133
+   "firstLinks": 132
   },
   {
    "title": "Algonquin",
-   "inDegree": 92
+   "firstLinks": 92
   },
   {
    "title": "Carl Johnson",
-   "inDegree": 77
+   "firstLinks": 78
   },
   {
    "title": "Niko Bellic",
-   "inDegree": 72
+   "firstLinks": 74
   },
   {
    "title": "Pedestrians",
-   "inDegree": 63
+   "firstLinks": 62
   },
   {
    "title": "Los Santos Customs",
-   "inDegree": 53
+   "firstLinks": 53
   },
   {
    "title": "The Hit List",
-   "inDegree": 51
+   "firstLinks": 51
   },
   {
    "title": "State of Alderney",
-   "inDegree": 47
+   "firstLinks": 47
   },
   {
    "title": "Los Santos (3D Universe)",
-   "inDegree": 44
-  },
-  {
-   "title": "United States of America",
-   "inDegree": 44
+   "firstLinks": 44
   },
   {
    "title": "Trevor Philips",
-   "inDegree": 44
+   "firstLinks": 44
   },
   {
    "title": "Grand Theft Auto VI/Leaks",
-   "inDegree": 44
-  },
-  {
-   "title": "San Fierro (3D Universe)",
-   "inDegree": 41
-  },
-  {
-   "title": "Broker",
-   "inDegree": 41
-  },
-  {
-   "title": "Blaine County",
-   "inDegree": 41
-  },
-  {
-   "title": "Staunton Island",
-   "inDegree": 39
-  },
-  {
-   "title": "Franklin Clinton",
-   "inDegree": 38
-  },
-  {
-   "title": "Grand Theft Auto VI/Screenshots",
-   "inDegree": 38
-  },
-  {
-   "title": "Portland",
-   "inDegree": 37
-  },
-  {
-   "title": "GTA Online Protagonist",
-   "inDegree": 37
-  },
-  {
-   "title": "Grand Theft Auto VI/Trailers",
-   "inDegree": 37
-  },
-  {
-   "title": "Dynasty 8",
-   "inDegree": 34
-  },
-  {
-   "title": "The Wedding List",
-   "inDegree": 33
-  },
-  {
-   "title": "Las Venturas (3D Universe)",
-   "inDegree": 32
-  },
-  {
-   "title": "Tommy Vercetti",
-   "inDegree": 31
-  },
-  {
-   "title": "Los Santos International Airport (HD Universe)",
-   "inDegree": 30
-  },
-  {
-   "title": "Luis Fernando Lopez",
-   "inDegree": 28
-  },
-  {
-   "title": "Southern San Andreas Super Autos",
-   "inDegree": 27
-  },
-  {
-   "title": "Adversary Modes",
-   "inDegree": 27
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Los Santos County Sheriff",
-   "betweenness": 16014
-  },
-  {
-   "title": "Blaine County",
-   "betweenness": 15732
-  },
-  {
-   "title": "Deputy Kirkman",
-   "betweenness": 15088
+   "firstLinks": 44
   },
   {
    "title": "United States of America",
-   "betweenness": 15021
+   "firstLinks": 43
   },
   {
-   "title": "Conglomerated National Television",
-   "betweenness": 14828
-  },
-  {
-   "title": "Sheriff Cruiser",
-   "betweenness": 14220
-  },
-  {
-   "title": "CNT Building",
-   "betweenness": 14175
-  },
-  {
-   "title": "Vending Machines",
-   "betweenness": 13980
-  },
-  {
-   "title": "Rockford Hills",
-   "betweenness": 13948
+   "title": "Blaine County",
+   "firstLinks": 43
   },
   {
    "title": "San Fierro (3D Universe)",
-   "betweenness": 13575
+   "firstLinks": 42
   },
   {
-   "title": "Downtown Los Santos (HD Universe)",
-   "betweenness": 13482
+   "title": "Broker",
+   "firstLinks": 41
   },
   {
-   "title": "Universes",
-   "betweenness": 13376
+   "title": "Staunton Island",
+   "firstLinks": 39
   },
   {
-   "title": "Alhambra",
-   "betweenness": 13338
+   "title": "Franklin Clinton",
+   "firstLinks": 39
   },
   {
-   "title": "Sheriff SUV",
-   "betweenness": 13328
+   "title": "Portland",
+   "firstLinks": 38
   },
   {
-   "title": "Tierra Robada",
-   "betweenness": 12978
+   "title": "Grand Theft Auto VI/Trailers",
+   "firstLinks": 37
   },
   {
-   "title": "East Los Santos (HD Universe)",
-   "betweenness": 12940
+   "title": "Grand Theft Auto VI/Screenshots",
+   "firstLinks": 37
   },
   {
-   "title": "Money",
-   "betweenness": 12890
+   "title": "Las Venturas (3D Universe)",
+   "firstLinks": 34
   },
   {
-   "title": "Grand Theft Auto VI/Leaks",
-   "betweenness": 12828
+   "title": "Dynasty 8",
+   "firstLinks": 34
   },
   {
-   "title": "Helena Wankstein",
-   "betweenness": 12654
+   "title": "The Wedding List",
+   "firstLinks": 33
   },
   {
-   "title": "Hamlet",
-   "betweenness": 12428
+   "title": "Tommy Vercetti",
+   "firstLinks": 30
   },
   {
-   "title": "Palomino Highlands",
-   "betweenness": 12369
+   "title": "Los Santos International Airport (HD Universe)",
+   "firstLinks": 30
   },
   {
-   "title": "Tierra Robada Safehouse",
-   "betweenness": 12064
+   "title": "Luis Fernando Lopez",
+   "firstLinks": 29
   },
   {
-   "title": "Flint Range",
-   "betweenness": 11968
+   "title": "GTA Online Protagonist",
+   "firstLinks": 29
   },
   {
-   "title": "Los Santos (HD Universe)",
-   "betweenness": 11914
+   "title": "Southern San Andreas Super Autos",
+   "firstLinks": 27
   },
   {
-   "title": "Aaron Garbut",
-   "betweenness": 11781
+   "title": "Rockstar Games Social Club",
+   "firstLinks": 26
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Eddie Pulaski",
+   "chains": 2156
+  },
+  {
+   "title": "Los Santos Police Department (3D Universe)",
+   "chains": 2156
+  },
+  {
+   "title": "Jimmy Hernandez",
+   "chains": 1980
+  },
+  {
+   "title": "Community Resources Against Street Hoodlums",
+   "chains": 1965
+  },
+  {
+   "title": "Carl Johnson",
+   "chains": 1958
+  },
+  {
+   "title": "Yay Ka-Boom-Boom",
+   "chains": 1733
+  },
+  {
+   "title": "Area 69 (3D Universe)",
+   "chains": 1727
   },
   {
    "title": "69",
-   "betweenness": 11746
+   "chains": 1700
   },
   {
-   "title": "RS Haul",
-   "betweenness": 11296
+   "title": "Universes",
+   "chains": 1694
   },
   {
-   "title": "El Quebrados Safehouse",
-   "betweenness": 11148
+   "title": "United States of America",
+   "chains": 1691
+  },
+  {
+   "title": "Verona Beach",
+   "chains": 1505
+  },
+  {
+   "title": "Los Santos Conference Center",
+   "chains": 1505
+  },
+  {
+   "title": "Commerce",
+   "chains": 1499
+  },
+  {
+   "title": "Idlewood",
+   "chains": 1464
+  },
+  {
+   "title": "Learning to Fly",
+   "chains": 1461
+  },
+  {
+   "title": "Shamal (3D Universe)",
+   "chains": 1441
+  },
+  {
+   "title": "Los Santos International Airport (3D Universe)",
+   "chains": 1440
+  },
+  {
+   "title": "Los Santos (3D Universe)",
+   "chains": 1406
+  },
+  {
+   "title": "Money",
+   "chains": 1295
+  },
+  {
+   "title": "3D Universe",
+   "chains": 1247
+  },
+  {
+   "title": "Dan Houser",
+   "chains": 1153
   },
   {
    "title": "Rob Nelson",
-   "betweenness": 10720
+   "chains": 1148
+  },
+  {
+   "title": "Aaron Garbut",
+   "chains": 1147
+  },
+  {
+   "title": "Grand Theft Auto VI/Leaks",
+   "chains": 1145
+  },
+  {
+   "title": "Hamlet",
+   "chains": 1032
+  },
+  {
+   "title": "Sheriff SUV",
+   "chains": 1028
+  },
+  {
+   "title": "Sheriff Cruiser",
+   "chains": 1024
+  },
+  {
+   "title": "Deputy Kirkman",
+   "chains": 1019
+  },
+  {
+   "title": "Los Santos County Sheriff",
+   "chains": 1018
   },
   {
    "title": "100% Completion in GTA San Andreas",
-   "betweenness": 10538
+   "chains": 960
   }
  ]
 }

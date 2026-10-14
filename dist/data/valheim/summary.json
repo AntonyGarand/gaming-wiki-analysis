@@ -1,95 +1,112 @@
 {
  "wiki": "valheim",
- "generatedAt": "2026-10-12T17:02:16.203Z",
+ "generatedAt": "2026-10-14T04:05:34.840Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 85.12,
-   "deadEndPct": 14.88,
+   "convergePct": 98.83,
+   "deadEndPct": 1.17,
    "components": 19,
    "cycleCount": 18,
-   "meanHops": 2.93,
+   "meanHops": 2.95,
    "medianHops": 3,
-   "maxHops": 11,
+   "maxHops": 10,
    "topAttractor": [
-    "Creatures"
+    "Creatures",
+    "Forsaken power",
+    "Sacrificial Stones",
+    "Valkyrie"
    ],
-   "topAttractorPct": 78.19
+   "topAttractorPct": 92.21,
+   "top3Pct": 94.31,
+   "eligiblePct": 99.1
   },
   {
    "rank": "2",
-   "convergePct": 62.54,
-   "deadEndPct": 37.46,
-   "components": 36,
-   "cycleCount": 35,
-   "meanHops": 3.08,
-   "medianHops": 3,
-   "maxHops": 8,
+   "convergePct": 89.64,
+   "deadEndPct": 10.36,
+   "components": 33,
+   "cycleCount": 32,
+   "meanHops": 5.72,
+   "medianHops": 4,
+   "maxHops": 18,
    "topAttractor": [
-    "Ashlands",
-    "Lava"
+    "Creatures",
+    "Global Keys",
+    "Spawning mechanics"
    ],
-   "topAttractorPct": 17.13
+   "topAttractorPct": 33.41,
+   "top3Pct": 64.25,
+   "eligiblePct": 91.8
   },
   {
    "rank": "3",
-   "convergePct": 65.58,
-   "deadEndPct": 34.42,
-   "components": 41,
-   "cycleCount": 40,
-   "meanHops": 3.92,
+   "convergePct": 69.31,
+   "deadEndPct": 30.69,
+   "components": 30,
+   "cycleCount": 29,
+   "meanHops": 4.46,
    "medianHops": 4,
-   "maxHops": 11,
+   "maxHops": 15,
    "topAttractor": [
-    "Greydwarf",
-    "Greyling"
+    "Moder",
+    "Drake"
    ],
-   "topAttractorPct": 11.84
+   "topAttractorPct": 18.3,
+   "top3Pct": 34.97,
+   "eligiblePct": 83
   },
   {
    "rank": "5",
-   "convergePct": 19.94,
-   "deadEndPct": 80.06,
-   "components": 15,
-   "cycleCount": 14,
-   "meanHops": 4.39,
+   "convergePct": 13.16,
+   "deadEndPct": 86.84,
+   "components": 11,
+   "cycleCount": 10,
+   "meanHops": 4.38,
    "medianHops": 3,
-   "maxHops": 15,
+   "maxHops": 14,
    "topAttractor": [
-    "Dvergr Mage",
-    "Dvergr Rogue"
+    "Drake",
+    "Dragon Egg"
    ],
-   "topAttractorPct": 6.46
+   "topAttractorPct": 5.84,
+   "top3Pct": 10.9,
+   "eligiblePct": 62.5
   },
   {
    "rank": "last",
-   "convergePct": 0.93,
-   "deadEndPct": 99.07,
-   "components": 5,
-   "cycleCount": 4,
-   "meanHops": 0.33,
-   "medianHops": 0,
-   "maxHops": 1,
+   "convergePct": 98.68,
+   "deadEndPct": 1.32,
+   "components": 31,
+   "cycleCount": 30,
+   "meanHops": 4.25,
+   "medianHops": 3,
+   "maxHops": 16,
    "topAttractor": [
-    "Tables",
-    "Chairs"
+    "Forge of Potential",
+    "Rag Armor",
+    "Wooden Protection Idol"
    ],
-   "topAttractorPct": 0.31
+   "topAttractorPct": 28.5,
+   "top3Pct": 66.2,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 77.18,
-   "deadEndPct": 22.82,
-   "components": 27,
-   "cycleCount": 26,
-   "meanHops": 4.46,
+   "convergePct": 98.91,
+   "deadEndPct": 1.09,
+   "components": 25,
+   "cycleCount": 24,
+   "meanHops": 4.62,
    "medianHops": 4,
-   "maxHops": 16,
+   "maxHops": 20,
    "topAttractor": [
     "Mistlands",
-    "Infested Mine"
+    "Magic"
    ],
-   "topAttractorPct": 20.25
+   "topAttractorPct": 30.69,
+   "top3Pct": 68.3,
+   "eligiblePct": 100
   }
  ]
 }

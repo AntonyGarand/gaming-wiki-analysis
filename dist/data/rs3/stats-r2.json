@@ -3,50 +3,78 @@
  "rank": "2",
  "nodes": 79761,
  "converge": {
-  "articles": 67853,
-  "pct": 85.07,
-  "deadEnd": 11908,
-  "deadEndPct": 14.93,
-  "noLinks": 2191,
-  "tooFewLinks": 6386,
-  "unresolvable": 36
+  "articles": 68055,
+  "pct": 85.32,
+  "deadEnd": 11706,
+  "deadEndPct": 14.68,
+  "noLinks": 2214,
+  "tooFewLinks": 6358,
+  "unresolvable": 3
  },
  "hopStats": {
-  "mean": 6.49,
+  "mean": 6.5,
   "median": 5,
   "p90": 14,
   "max": 25
  },
  "histogram": {
-  "0": 1992,
-  "1": 6846,
-  "2": 8529,
-  "3": 7364,
-  "4": 6589,
-  "5": 5291,
-  "6": 5245,
-  "7": 4728,
-  "8": 3114,
-  "9": 2176,
-  "10": 2042,
-  "11": 2681,
-  "12": 2183,
-  "13": 1618,
-  "14": 862,
-  "15": 547,
-  "16": 939,
-  "17": 992,
-  "18": 631,
-  "19": 808,
-  "20": 1143,
-  "21": 756,
-  "22": 418,
+  "0": 1989,
+  "1": 6847,
+  "2": 8563,
+  "3": 7331,
+  "4": 6615,
+  "5": 5305,
+  "6": 5248,
+  "7": 4720,
+  "8": 3104,
+  "9": 2164,
+  "10": 2048,
+  "11": 2742,
+  "12": 2239,
+  "13": 1668,
+  "14": 878,
+  "15": 551,
+  "16": 942,
+  "17": 995,
+  "18": 633,
+  "19": 797,
+  "20": 1145,
+  "21": 755,
+  "22": 417,
   "23": 194,
   "24": 137,
   "25": 28
  },
- "components": 974,
- "cycleCount": 973,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 2217,
+   "1": 6358,
+   "2": 10238,
+   "3": 10053,
+   "4": 9430,
+   "5": 7603,
+   "6": 5676,
+   "7": 4245,
+   "8": 3578,
+   "9": 2896,
+   "10": 17467
+  },
+  "atLeast": {
+   "1": 97.2,
+   "2": 89.2,
+   "3": 76.4,
+   "5": 52
+  }
+ },
+ "concentration": {
+  "top1Pct": 23.38,
+  "top3Pct": 50.28,
+  "top10Pct": 65.48,
+  "cycleCount": 970,
+  "entropyBits": 4.44
+ },
+ "components": 971,
+ "cycleCount": 970,
  "largestCycle": {
   "members": [
    "Gielinor",
@@ -55,7 +83,7 @@
    "Jas"
   ],
   "size": 4,
-  "basin": 18674
+  "basin": 18647
  },
  "topAttractors": [
   {
@@ -65,16 +93,16 @@
     "Elder Gods",
     "Jas"
    ],
-   "basin": 18674,
-   "pct": 23.41
+   "basin": 18647,
+   "pct": 23.38
   },
   {
    "cycle": [
     "Paul Gower",
     "Ian Gower"
    ],
-   "basin": 16014,
-   "pct": 20.08
+   "basin": 16221,
+   "pct": 20.34
   },
   {
    "cycle": [
@@ -82,32 +110,32 @@
     "Hit chance",
     "Player versus monster"
    ],
-   "basin": 5288,
-   "pct": 6.63
+   "basin": 5234,
+   "pct": 6.56
   },
   {
    "cycle": [
     "Items",
     "Bank"
    ],
-   "basin": 3457,
-   "pct": 4.33
+   "basin": 3474,
+   "pct": 4.36
   },
   {
    "cycle": [
     "River Elid",
     "Elidinis"
    ],
-   "basin": 2856,
-   "pct": 3.58
+   "basin": 2866,
+   "pct": 3.59
   },
   {
    "cycle": [
     "Ores",
     "Rocks"
    ],
-   "basin": 1774,
-   "pct": 2.22
+   "basin": 1779,
+   "pct": 2.23
   },
   {
    "cycle": [
@@ -115,7 +143,7 @@
     "There's No Place Like Home...",
     "2026 Construction update"
    ],
-   "basin": 1100,
+   "basin": 1103,
    "pct": 1.38
   },
   {
@@ -123,7 +151,7 @@
     "Invention",
     "Materials"
    ],
-   "basin": 1078,
+   "basin": 1080,
    "pct": 1.35
   },
   {
@@ -134,7 +162,7 @@
     "Lunar Diplomacy",
     "Fremennik"
    ],
-   "basin": 939,
+   "basin": 943,
    "pct": 1.18
   },
   {
@@ -142,8 +170,8 @@
     "Farming",
     "Seeds"
    ],
-   "basin": 879,
-   "pct": 1.1
+   "basin": 883,
+   "pct": 1.11
   },
   {
    "cycle": [
@@ -167,8 +195,16 @@
     "Havenhythe",
     "2026 Hunter update"
    ],
-   "basin": 588,
-   "pct": 0.74
+   "basin": 607,
+   "pct": 0.76
+  },
+  {
+   "cycle": [
+    "Ranged",
+    "Bows"
+   ],
+   "basin": 581,
+   "pct": 0.73
   },
   {
    "cycle": [
@@ -181,14 +217,6 @@
   },
   {
    "cycle": [
-    "Ranged",
-    "Bows"
-   ],
-   "basin": 573,
-   "pct": 0.72
-  },
-  {
-   "cycle": [
     "Mazcab",
     "Desert goebie camp",
     "Acca Gielinor",
@@ -196,7 +224,7 @@
     "Kanatah",
     "Airut"
    ],
-   "basin": 471,
+   "basin": 472,
    "pct": 0.59
   },
   {
@@ -205,7 +233,7 @@
     "Mattocks",
     "Artefacts"
    ],
-   "basin": 461,
+   "basin": 462,
    "pct": 0.58
   },
   {
@@ -236,13 +264,13 @@
  "deadEndTerminals": [
   {
    "title": "Hail to the Duke, Baby",
-   "chains": 884,
+   "chains": 887,
    "pct": 1.11,
-   "reason": "only 3 eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Video",
-   "chains": 795,
+   "chains": 796,
    "pct": 1,
    "reason": "only 1 eligible links"
   },
@@ -253,14 +281,8 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "RuneFest 2019",
-   "chains": 164,
-   "pct": 0.21,
-   "reason": "redlink target"
-  },
-  {
    "title": "Capes",
-   "chains": 153,
+   "chains": 154,
    "pct": 0.19,
    "reason": "only 1 eligible links"
   },
@@ -272,7 +294,7 @@
   },
   {
    "title": "Squeal of Fortune/Promotions",
-   "chains": 66,
+   "chains": 67,
    "pct": 0.08,
    "reason": "no eligible links"
   },
@@ -292,7 +314,7 @@
    "title": "Treasure Hunter Key",
    "chains": 29,
    "pct": 0.04,
-   "reason": "only 6 eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "James Hannigan",
@@ -323,251 +345,257 @@
    "chains": 17,
    "pct": 0.02,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Museum map",
+   "chains": 14,
+   "pct": 0.02,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Video",
-   "inDegree": 789
+   "firstLinks": 790
   },
   {
    "title": "Daemonheim",
-   "inDegree": 550
+   "firstLinks": 551
   },
   {
    "title": "Fancy dress box",
-   "inDegree": 545
+   "firstLinks": 546
   },
   {
    "title": "Treasure Hunter",
-   "inDegree": 445
+   "firstLinks": 445
   },
   {
    "title": "Player-owned house",
-   "inDegree": 423
+   "firstLinks": 423
   },
   {
    "title": "Player character",
-   "inDegree": 398
+   "firstLinks": 398
   },
   {
    "title": "Dungeoneering",
-   "inDegree": 387
+   "firstLinks": 387
   },
   {
    "title": "Furniture workbench",
-   "inDegree": 365
+   "firstLinks": 365
   },
   {
    "title": "Augmentor",
-   "inDegree": 346
+   "firstLinks": 348
   },
   {
    "title": "Construction",
-   "inDegree": 312
+   "firstLinks": 312
   },
   {
    "title": "Smithing",
-   "inDegree": 311
+   "firstLinks": 312
   },
   {
    "title": "Magic",
-   "inDegree": 306
+   "firstLinks": 303
   },
   {
    "title": "Cosmetic override",
-   "inDegree": 298
+   "firstLinks": 298
   },
   {
    "title": "Defence",
-   "inDegree": 296
+   "firstLinks": 296
   },
   {
    "title": "Minigames",
-   "inDegree": 261
+   "firstLinks": 261
   },
   {
    "title": "Quests",
-   "inDegree": 253
+   "firstLinks": 254
   },
   {
    "title": "RuneCoins",
-   "inDegree": 241
+   "firstLinks": 241
   },
   {
    "title": "Experience",
-   "inDegree": 234
+   "firstLinks": 234
   },
   {
    "title": "Invention",
-   "inDegree": 234
+   "firstLinks": 234
   },
   {
    "title": "Solomon's General Store",
-   "inDegree": 218
+   "firstLinks": 218
   },
   {
    "title": "Varrock",
-   "inDegree": 205
+   "firstLinks": 205
   },
   {
    "title": "Forge",
-   "inDegree": 199
+   "firstLinks": 199
   },
   {
    "title": "Player-owned port",
-   "inDegree": 197
+   "firstLinks": 197
   },
   {
    "title": "Gielinor",
-   "inDegree": 196
+   "firstLinks": 196
   },
   {
    "title": "Distractions and Diversions",
-   "inDegree": 191
+   "firstLinks": 191
   },
   {
    "title": "Bonus experience",
-   "inDegree": 188
+   "firstLinks": 188
   },
   {
    "title": "Ranged",
-   "inDegree": 187
+   "firstLinks": 187
   },
   {
    "title": "Crafting",
-   "inDegree": 186
+   "firstLinks": 186
   },
   {
    "title": "Yak coin",
-   "inDegree": 185
+   "firstLinks": 185
   },
   {
    "title": "Attack",
-   "inDegree": 177
+   "firstLinks": 177
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
-   "title": "Quests",
-   "betweenness": 89856
-  },
-  {
-   "title": "Interface",
-   "betweenness": 81326
-  },
-  {
-   "title": "Orb of oculus",
-   "betweenness": 69726
-  },
-  {
-   "title": "Port Sarim",
-   "betweenness": 65312
-  },
-  {
-   "title": "Rimmington",
-   "betweenness": 61824
-  },
-  {
-   "title": "Bond",
-   "betweenness": 61772
-  },
-  {
-   "title": "Charter ship",
-   "betweenness": 60336
-  },
-  {
-   "title": "RuneScape Mobile",
-   "betweenness": 58525
-  },
-  {
-   "title": "Crafting",
-   "betweenness": 56608
-  },
-  {
-   "title": "Coins",
-   "betweenness": 56584
-  },
-  {
-   "title": "Non-player character",
-   "betweenness": 55494
-  },
-  {
-   "title": "Crafting Guild",
-   "betweenness": 53955
-  },
-  {
-   "title": "Shop",
-   "betweenness": 51560
-  },
-  {
-   "title": "Asgarnia",
-   "betweenness": 49283
-  },
-  {
-   "title": "Membership subscription",
-   "betweenness": 46407
+   "title": "Gods",
+   "chains": 18647
   },
   {
    "title": "Gielinor",
-   "betweenness": 45442
-  },
-  {
-   "title": "Wilderness",
-   "betweenness": 37494
-  },
-  {
-   "title": "Experience",
-   "betweenness": 33975
-  },
-  {
-   "title": "Fort Forinthry",
-   "betweenness": 33193
-  },
-  {
-   "title": "Jagex",
-   "betweenness": 31936
-  },
-  {
-   "title": "Skills",
-   "betweenness": 31220
-  },
-  {
-   "title": "Gods",
-   "betweenness": 30248
+   "chains": 18647
   },
   {
    "title": "Elder Gods",
-   "betweenness": 27290
+   "chains": 18647
   },
   {
-   "title": "Magic",
-   "betweenness": 26848
+   "title": "Jas",
+   "chains": 18647
   },
   {
-   "title": "Spells",
-   "betweenness": 23548
+   "title": "Paul Gower",
+   "chains": 16221
   },
   {
-   "title": "Solomon's General Store",
-   "betweenness": 23010
+   "title": "Ian Gower",
+   "chains": 16221
   },
   {
-   "title": "Genie",
-   "betweenness": 20727
+   "title": "Jagex",
+   "chains": 16176
   },
   {
-   "title": "Ancient Magicks",
-   "betweenness": 20454
+   "title": "Membership subscription",
+   "chains": 15677
+  },
+  {
+   "title": "Bond",
+   "chains": 15651
+  },
+  {
+   "title": "RuneScape Mobile",
+   "chains": 11711
+  },
+  {
+   "title": "Orb of oculus",
+   "chains": 11654
+  },
+  {
+   "title": "Interface",
+   "chains": 11651
+  },
+  {
+   "title": "Quests",
+   "chains": 11261
+  },
+  {
+   "title": "Non-player character",
+   "chains": 6170
+  },
+  {
+   "title": "Combat",
+   "chains": 5234
+  },
+  {
+   "title": "Player versus monster",
+   "chains": 5234
+  },
+  {
+   "title": "Hit chance",
+   "chains": 5234
+  },
+  {
+   "title": "Shop",
+   "chains": 5157
+  },
+  {
+   "title": "Coins",
+   "chains": 5145
+  },
+  {
+   "title": "Charter ship",
+   "chains": 5029
+  },
+  {
+   "title": "Port Sarim",
+   "chains": 5025
+  },
+  {
+   "title": "Rimmington",
+   "chains": 4417
+  },
+  {
+   "title": "Second Age",
+   "chains": 4059
+  },
+  {
+   "title": "The Void",
+   "chains": 3798
+  },
+  {
+   "title": "Experience",
+   "chains": 3795
   },
   {
    "title": "Zaros",
-   "betweenness": 19265
+   "chains": 3787
   },
   {
-   "title": "Guthix",
-   "betweenness": 18830
+   "title": "Crafting Guild",
+   "chains": 3597
+  },
+  {
+   "title": "Crafting",
+   "chains": 3538
+  },
+  {
+   "title": "Items",
+   "chains": 3474
+  },
+  {
+   "title": "Bank",
+   "chains": 3474
   }
  ]
 }

@@ -12,48 +12,81 @@
   "unresolvable": 1
  },
  "hopStats": {
-  "mean": 10.92,
-  "median": 12,
-  "p90": 20,
-  "max": 25
+  "mean": 10.27,
+  "median": 9,
+  "p90": 24,
+  "max": 30
  },
  "histogram": {
-  "0": 11,
-  "1": 58,
-  "2": 36,
-  "3": 39,
-  "4": 34,
-  "5": 20,
-  "6": 12,
-  "7": 18,
-  "8": 26,
-  "9": 20,
-  "10": 29,
-  "11": 44,
-  "12": 32,
-  "13": 49,
-  "14": 51,
-  "15": 39,
-  "16": 31,
-  "17": 39,
-  "18": 30,
-  "19": 16,
-  "20": 22,
-  "21": 10,
-  "22": 23,
-  "23": 8,
-  "24": 5,
-  "25": 3
+  "0": 16,
+  "1": 65,
+  "2": 32,
+  "3": 43,
+  "4": 49,
+  "5": 33,
+  "6": 25,
+  "7": 31,
+  "8": 51,
+  "9": 26,
+  "10": 40,
+  "11": 37,
+  "12": 33,
+  "13": 23,
+  "14": 35,
+  "15": 24,
+  "16": 12,
+  "17": 5,
+  "18": 4,
+  "19": 6,
+  "20": 3,
+  "21": 12,
+  "22": 9,
+  "23": 10,
+  "24": 27,
+  "25": 24,
+  "26": 15,
+  "27": 5,
+  "28": 8,
+  "29": 1,
+  "30": 1
  },
- "components": 7,
- "cycleCount": 6,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 5,
+   "1": 32,
+   "2": 34,
+   "3": 48,
+   "4": 80,
+   "5": 65,
+   "6": 52,
+   "7": 47,
+   "8": 38,
+   "9": 47,
+   "10": 262
+  },
+  "atLeast": {
+   "1": 99.3,
+   "2": 94.8,
+   "3": 90,
+   "5": 72
+  }
+ },
+ "concentration": {
+  "top1Pct": 66.2,
+  "top3Pct": 96.2,
+  "top10Pct": 99.3,
+  "cycleCount": 8,
+  "entropyBits": 1.33
+ },
+ "components": 9,
+ "cycleCount": 8,
  "largestCycle": {
   "members": [
    "Seabases",
    "Hull Integrity"
   ],
   "size": 2,
-  "basin": 619
+  "basin": 470
  },
  "topAttractors": [
   {
@@ -61,31 +94,40 @@
     "Seabases",
     "Hull Integrity"
    ],
-   "basin": 619,
-   "pct": 87.18
+   "basin": 470,
+   "pct": 66.2
   },
   {
    "cycle": [
+    "Console Commands",
     "Achievements"
    ],
-   "basin": 51,
-   "pct": 7.18
+   "basin": 179,
+   "pct": 25.21
   },
   {
    "cycle": [
     "Rabbit Ray Egg",
     "Rabbit Ray"
    ],
-   "basin": 21,
-   "pct": 2.96
+   "basin": 34,
+   "pct": 4.79
   },
   {
    "cycle": [
     "Warper",
     "Architects"
    ],
-   "basin": 7,
-   "pct": 0.99
+   "basin": 6,
+   "pct": 0.85
+  },
+  {
+   "cycle": [
+    "Titanium",
+    "Limestone Outcrop"
+   ],
+   "basin": 6,
+   "pct": 0.85
   },
   {
    "cycle": [
@@ -94,6 +136,14 @@
    ],
    "basin": 5,
    "pct": 0.7
+  },
+  {
+   "cycle": [
+    "Jellyshroom",
+    "Jellyshroom Spore"
+   ],
+   "basin": 3,
+   "pct": 0.42
   },
   {
    "cycle": [
@@ -137,248 +187,259 @@
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Seabases",
-   "inDegree": 26
+   "firstLinks": 27
   },
   {
    "title": "Achievements",
-   "inDegree": 23
-  },
-  {
-   "title": "Habitat Builder",
-   "inDegree": 17
+   "firstLinks": 22
   },
   {
    "title": "Cyclops",
-   "inDegree": 16
+   "firstLinks": 18
   },
   {
-   "title": "Flora",
-   "inDegree": 15
+   "title": "Habitat Builder",
+   "firstLinks": 17
   },
   {
    "title": "Food & Water",
-   "inDegree": 14
+   "firstLinks": 15
   },
   {
-   "title": "Alien Containment",
-   "inDegree": 14
+   "title": "Flora",
+   "firstLinks": 15
   },
   {
    "title": "Aurora",
-   "inDegree": 14
+   "firstLinks": 14
   },
   {
    "title": "Ryley Robinson",
-   "inDegree": 13
-  },
-  {
-   "title": "Seamoth",
-   "inDegree": 11
+   "firstLinks": 13
   },
   {
    "title": "Prawn Suit",
-   "inDegree": 11
-  },
-  {
-   "title": "Survival Knife",
-   "inDegree": 8
-  },
-  {
-   "title": "Fauna",
-   "inDegree": 8
-  },
-  {
-   "title": "Fabricator",
-   "inDegree": 7
-  },
-  {
-   "title": "Bioluminescence",
-   "inDegree": 7
-  },
-  {
-   "title": "Primary Containment Facility",
-   "inDegree": 7
-  },
-  {
-   "title": "Vehicles",
-   "inDegree": 6
-  },
-  {
-   "title": "Quartz",
-   "inDegree": 6
-  },
-  {
-   "title": "PDA",
-   "inDegree": 6
-  },
-  {
-   "title": "Floating Island",
-   "inDegree": 6
-  },
-  {
-   "title": "Energy",
-   "inDegree": 6
-  },
-  {
-   "title": "Raw Materials",
-   "inDegree": 6
-  },
-  {
-   "title": "Bioreactor",
-   "inDegree": 6
-  },
-  {
-   "title": "Vehicle Upgrade Console",
-   "inDegree": 6
-  },
-  {
-   "title": "Coral",
-   "inDegree": 6
-  },
-  {
-   "title": "Inactive Lava Zone",
-   "inDegree": 6
-  },
-  {
-   "title": "Kelp Forest",
-   "inDegree": 5
-  },
-  {
-   "title": "Grassy Plateaus",
-   "inDegree": 5
-  },
-  {
-   "title": "Bulb Zone",
-   "inDegree": 5
-  },
-  {
-   "title": "Sea Dragon Leviathan",
-   "inDegree": 5
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Ryley Robinson",
-   "betweenness": 2600
-  },
-  {
-   "title": "Alien Thermal Plant",
-   "betweenness": 2541
-  },
-  {
-   "title": "Kharaa Bacterium",
-   "betweenness": 2436
-  },
-  {
-   "title": "Inactive Lava Zone",
-   "betweenness": 2382
-  },
-  {
-   "title": "Energy",
-   "betweenness": 2380
-  },
-  {
-   "title": "Lifepod 5",
-   "betweenness": 2299
-  },
-  {
-   "title": "Ion Power Cell",
-   "betweenness": 2160
-  },
-  {
-   "title": "Deep Grand Reef",
-   "betweenness": 1995
-  },
-  {
-   "title": "Alien Data Terminal",
-   "betweenness": 1960
-  },
-  {
-   "title": "Flashlight",
-   "betweenness": 1600
-  },
-  {
-   "title": "Kelp Forest",
-   "betweenness": 1456
-  },
-  {
-   "title": "Lead",
-   "betweenness": 1440
-  },
-  {
-   "title": "Metal Salvage",
-   "betweenness": 1394
-  },
-  {
-   "title": "Battery",
-   "betweenness": 1372
-  },
-  {
-   "title": "Raw Materials",
-   "betweenness": 1350
-  },
-  {
-   "title": "Crabsquid",
-   "betweenness": 1203
+   "firstLinks": 12
   },
   {
    "title": "Alien Containment",
-   "betweenness": 1200
+   "firstLinks": 11
   },
   {
-   "title": "Seeds",
-   "betweenness": 1178
+   "title": "Seamoth",
+   "firstLinks": 9
   },
   {
-   "title": "Quartz",
-   "betweenness": 936
+   "title": "Survival Knife",
+   "firstLinks": 9
   },
   {
-   "title": "Prawn Suit",
-   "betweenness": 920
+   "title": "Fauna",
+   "firstLinks": 9
   },
   {
-   "title": "Vehicle Upgrade Console",
-   "betweenness": 900
+   "title": "Fabricator",
+   "firstLinks": 7
   },
   {
-   "title": "Large Resource Deposits",
-   "betweenness": 896
+   "title": "Vehicles",
+   "firstLinks": 7
+  },
+  {
+   "title": "PDA",
+   "firstLinks": 7
   },
   {
    "title": "Bioluminescence",
-   "betweenness": 870
+   "firstLinks": 7
   },
   {
-   "title": "Prawn Suit Torpedo Arm",
-   "betweenness": 847
+   "title": "Inactive Lava Zone",
+   "firstLinks": 7
   },
   {
-   "title": "Power Cell",
-   "betweenness": 837
+   "title": "Primary Containment Facility",
+   "firstLinks": 7
   },
   {
-   "title": "Subnautica",
-   "betweenness": 826
+   "title": "Quartz",
+   "firstLinks": 6
+  },
+  {
+   "title": "Energy",
+   "firstLinks": 6
+  },
+  {
+   "title": "Raw Materials",
+   "firstLinks": 6
+  },
+  {
+   "title": "Bioreactor",
+   "firstLinks": 6
+  },
+  {
+   "title": "Vehicle Upgrade Console",
+   "firstLinks": 6
+  },
+  {
+   "title": "Planet 4546B",
+   "firstLinks": 6
+  },
+  {
+   "title": "Ion Cube",
+   "firstLinks": 6
+  },
+  {
+   "title": "Grassy Plateaus",
+   "firstLinks": 5
+  },
+  {
+   "title": "Bulb Zone",
+   "firstLinks": 5
+  },
+  {
+   "title": "Floating Island",
+   "firstLinks": 5
+  },
+  {
+   "title": "Sea Dragon Leviathan",
+   "firstLinks": 5
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Seabases",
+   "chains": 470
+  },
+  {
+   "title": "Hull Integrity",
+   "chains": 470
   },
   {
    "title": "Thermoblade",
-   "betweenness": 816
+   "chains": 361
   },
   {
-   "title": "Power Cell Charger",
-   "betweenness": 752
+   "title": "Crabsquid",
+   "chains": 354
   },
   {
-   "title": "Blueprints",
-   "betweenness": 728
+   "title": "Flashlight",
+   "chains": 353
+  },
+  {
+   "title": "Deep Grand Reef",
+   "chains": 352
+  },
+  {
+   "title": "Inactive Lava Zone",
+   "chains": 350
+  },
+  {
+   "title": "Alien Thermal Plant",
+   "chains": 223
+  },
+  {
+   "title": "Alien Data Terminal",
+   "chains": 218
+  },
+  {
+   "title": "Ion Power Cell",
+   "chains": 213
+  },
+  {
+   "title": "Energy",
+   "chains": 211
+  },
+  {
+   "title": "Ion Cube",
+   "chains": 182
+  },
+  {
+   "title": "Achievements",
+   "chains": 179
+  },
+  {
+   "title": "Console Commands",
+   "chains": 179
+  },
+  {
+   "title": "Large Resource Deposits",
+   "chains": 171
+  },
+  {
+   "title": "Quartz",
+   "chains": 163
+  },
+  {
+   "title": "Databank/Unobtainable",
+   "chains": 141
+  },
+  {
+   "title": "Databank",
+   "chains": 140
+  },
+  {
+   "title": "PDA",
+   "chains": 138
+  },
+  {
+   "title": "Underwater Islands",
+   "chains": 131
+  },
+  {
+   "title": "Garryfish",
+   "chains": 130
+  },
+  {
+   "title": "Holefish",
+   "chains": 128
+  },
+  {
+   "title": "Ryley Robinson",
+   "chains": 128
   },
   {
    "title": "Scanner",
-   "betweenness": 630
+   "chains": 126
+  },
+  {
+   "title": "Blueprints",
+   "chains": 125
+  },
+  {
+   "title": "Power Cell Charger",
+   "chains": 115
+  },
+  {
+   "title": "Power Cell",
+   "chains": 114
+  },
+  {
+   "title": "Prawn Suit",
+   "chains": 113
+  },
+  {
+   "title": "Planet 4546B",
+   "chains": 102
+  },
+  {
+   "title": "Battery",
+   "chains": 85
   }
- ]
+ ],
+ "randomSeeds": {
+  "seeds": 5,
+  "convergePct": {
+   "mean": 99.3,
+   "sd": 0
+  },
+  "topAttractorPct": {
+   "mean": 66.34,
+   "sd": 0.28
+  }
+ }
 }

@@ -1,50 +1,72 @@
 {
  "wiki": "factorio",
  "rank": "strict1",
- "nodes": 5353,
+ "nodes": 1169,
  "converge": {
-  "articles": 2701,
-  "pct": 50.46,
-  "deadEnd": 2652,
-  "deadEndPct": 49.54,
-  "noLinks": 1589,
+  "articles": 680,
+  "pct": 58.17,
+  "deadEnd": 489,
+  "deadEndPct": 41.83,
+  "noLinks": 480,
   "tooFewLinks": 0,
-  "unresolvable": 371
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 2.81,
-  "median": 2,
+  "mean": 3.05,
+  "median": 3,
   "p90": 6,
-  "max": 16
+  "max": 10
  },
  "histogram": {
-  "0": 278,
-  "1": 727,
-  "2": 510,
-  "3": 477,
-  "4": 233,
-  "5": 164,
-  "6": 112,
-  "7": 52,
-  "8": 26,
-  "9": 10,
-  "10": 17,
-  "11": 31,
-  "12": 34,
-  "13": 18,
-  "14": 6,
-  "15": 3,
-  "16": 3
+  "0": 47,
+  "1": 163,
+  "2": 98,
+  "3": 99,
+  "4": 96,
+  "5": 76,
+  "6": 70,
+  "7": 20,
+  "8": 7,
+  "9": 2,
+  "10": 2
  },
- "components": 143,
- "cycleCount": 142,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 481,
+   "1": 36,
+   "2": 61,
+   "3": 65,
+   "4": 68,
+   "5": 83,
+   "6": 56,
+   "7": 32,
+   "8": 38,
+   "9": 46,
+   "10": 203
+  },
+  "atLeast": {
+   "1": 58.9,
+   "2": 55.8,
+   "3": 50.6,
+   "5": 39.2
+  }
+ },
+ "concentration": {
+  "top1Pct": 23.61,
+  "top3Pct": 39.35,
+  "top10Pct": 50.64,
+  "cycleCount": 23,
+  "entropyBits": 3.09
+ },
+ "components": 24,
+ "cycleCount": 23,
  "largestCycle": {
   "members": [
    "Player",
    "Multiplayer"
   ],
   "size": 2,
-  "basin": 430
+  "basin": 276
  },
  "topAttractors": [
   {
@@ -52,502 +74,498 @@
     "Player",
     "Multiplayer"
    ],
-   "basin": 430,
-   "pct": 8.03
+   "basin": 276,
+   "pct": 23.61
   },
   {
    "cycle": [
     "Research",
     "Technologies"
    ],
-   "basin": 264,
-   "pct": 4.93
-  },
-  {
-   "cycle": [
-    "Science pack/ja",
-    "Lab/ja"
-   ],
-   "basin": 148,
-   "pct": 2.76
-  },
-  {
-   "cycle": [
-    "Lab/ru",
-    "Research/ru"
-   ],
-   "basin": 112,
-   "pct": 2.09
-  },
-  {
-   "cycle": [
-    "Player/uk",
-    "Multiplayer/uk"
-   ],
-   "basin": 92,
-   "pct": 1.72
+   "basin": 134,
+   "pct": 11.46
   },
   {
    "cycle": [
     "Fluid system",
     "Water"
    ],
-   "basin": 73,
-   "pct": 1.36
+   "basin": 50,
+   "pct": 4.28
   },
   {
    "cycle": [
     "Heavy armor",
     "Light armor"
    ],
-   "basin": 67,
-   "pct": 1.25
+   "basin": 34,
+   "pct": 2.91
   },
   {
    "cycle": [
-    "Electric system/de",
-    "Power production/de",
-    "Time/de",
-    "Module/de"
+    "Railway",
+    "Rail"
    ],
-   "basin": 66,
-   "pct": 1.23
+   "basin": 21,
+   "pct": 1.8
   },
   {
    "cycle": [
-    "Research/uk",
-    "Technologies/uk"
+    "Fulgora",
+    "Planet discovery Fulgora (research)"
    ],
-   "basin": 62,
-   "pct": 1.16
+   "basin": 21,
+   "pct": 1.8
   },
   {
    "cycle": [
-    "Fuel/ru"
+    "Circuit network",
+    "Red wire"
    ],
-   "basin": 57,
-   "pct": 1.06
-  },
-  {
-   "cycle": [
-    "Map structure/zh",
-    "Map generator/zh"
-   ],
-   "basin": 49,
-   "pct": 0.92
-  },
-  {
-   "cycle": [
-    "Fluid system/ru",
-    "Storage tank/ru",
-    "Pump/ru",
-    "Offshore pump/ru",
-    "Boiler/ru",
-    "Water/ru"
-   ],
-   "basin": 40,
-   "pct": 0.75
-  },
-  {
-   "cycle": [
-    "Electric system/ru",
-    "Solar panel/ru",
-    "Accumulator/ru"
-   ],
-   "basin": 39,
-   "pct": 0.73
-  },
-  {
-   "cycle": [
-    "Enemies/de",
-    "Map generator/de"
-   ],
-   "basin": 39,
-   "pct": 0.73
+   "basin": 15,
+   "pct": 1.28
   },
   {
    "cycle": [
     "Iron plate",
     "Iron ore"
    ],
-   "basin": 37,
-   "pct": 0.69
+   "basin": 14,
+   "pct": 1.2
   },
   {
    "cycle": [
-    "News"
+    "Logistic robot",
+    "Logistic network"
    ],
-   "basin": 32,
-   "pct": 0.6
+   "basin": 14,
+   "pct": 1.2
   },
   {
    "cycle": [
-    "Inserter",
-    "Inserters"
+    "News",
+    "News/2023"
    ],
-   "basin": 29,
-   "pct": 0.54
+   "basin": 13,
+   "pct": 1.11
   },
   {
    "cycle": [
-    "Multiplayer/de",
-    "Game modes and options/de"
+    "Firearm magazine",
+    "Piercing rounds magazine"
    ],
-   "basin": 29,
-   "pct": 0.54
-  },
-  {
-   "cycle": [
-    "Inserters/de",
-    "Inserter capacity bonus (research)/de"
-   ],
-   "basin": 29,
-   "pct": 0.54
+   "basin": 13,
+   "pct": 1.11
   },
   {
    "cycle": [
     "Factorio HTTP API usage guidelines",
     "Download API"
    ],
-   "basin": 28,
-   "pct": 0.52
+   "basin": 12,
+   "pct": 1.03
+  },
+  {
+   "cycle": [
+    "Aquilo",
+    "Planet discovery Aquilo (research)"
+   ],
+   "basin": 11,
+   "pct": 0.94
+  },
+  {
+   "cycle": [
+    "Inserters",
+    "Inserter capacity bonus (research)"
+   ],
+   "basin": 9,
+   "pct": 0.77
+  },
+  {
+   "cycle": [
+    "Tree",
+    "Wood"
+   ],
+   "basin": 9,
+   "pct": 0.77
+  },
+  {
+   "cycle": [
+    "Uranium processing",
+    "Uranium ore",
+    "Centrifuge"
+   ],
+   "basin": 7,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Copper plate",
+    "Copper ore"
+   ],
+   "basin": 6,
+   "pct": 0.51
+  },
+  {
+   "cycle": [
+    "Cliff explosives",
+    "Cliff"
+   ],
+   "basin": 4,
+   "pct": 0.34
+  },
+  {
+   "cycle": [
+    "Offshore pump",
+    "Pipe"
+   ],
+   "basin": 4,
+   "pct": 0.34
+  },
+  {
+   "cycle": [
+    "Railgun",
+    "Railgun ammo"
+   ],
+   "basin": 4,
+   "pct": 0.34
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Time/zh",
-   "chains": 77,
-   "pct": 1.44,
+   "title": "Data types",
+   "chains": 6,
+   "pct": 0.51,
    "reason": "no eligible links"
   },
   {
-   "title": "Materials and recipes/fr",
-   "chains": 42,
-   "pct": 0.78,
+   "title": "Version history/2.0.0",
+   "chains": 2,
+   "pct": 0.17,
    "reason": "no eligible links"
   },
   {
-   "title": "Materials and recipes/uk",
-   "chains": 38,
-   "pct": 0.71,
+   "title": "Types/uint8",
+   "chains": 2,
+   "pct": 0.17,
    "reason": "no eligible links"
   },
   {
-   "title": "Lab/fr",
-   "chains": 33,
-   "pct": 0.62,
+   "title": "Types/ItemCountType",
+   "chains": 2,
+   "pct": 0.17,
    "reason": "no eligible links"
   },
   {
-   "title": "Materials and recipes/nl",
-   "chains": 25,
-   "pct": 0.47,
+   "title": "Materials and recipes",
+   "chains": 1,
+   "pct": 0.09,
    "reason": "no eligible links"
   },
   {
-   "title": "Railway (research)/de",
-   "chains": 19,
-   "pct": 0.35,
+   "title": "Prototype/Item",
+   "chains": 1,
+   "pct": 0.09,
    "reason": "no eligible links"
   },
   {
-   "title": "Energy shield/zh",
-   "chains": 17,
-   "pct": 0.32,
+   "title": "Prototype/Technology",
+   "chains": 1,
+   "pct": 0.09,
    "reason": "no eligible links"
   },
   {
-   "title": "Offshore pump/ja",
-   "chains": 17,
-   "pct": 0.32,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Player/pt-br",
-   "chains": 15,
-   "pct": 0.28,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Electric system/pt-br",
-   "chains": 15,
-   "pct": 0.28,
+   "title": "Prototype definitions",
+   "chains": 1,
+   "pct": 0.09,
    "reason": "no eligible links"
   },
   {
-   "title": "Gleba/ja",
-   "chains": 15,
-   "pct": 0.28,
-   "reason": "redlink target"
+   "title": "Prototype/Entity",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
   },
   {
-   "title": "Enemies/pl",
-   "chains": 14,
-   "pct": 0.26,
-   "reason": "redlink target"
+   "title": "Types/string",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
   },
   {
-   "title": "Belt transport system/nl",
-   "chains": 13,
-   "pct": 0.24,
-   "reason": "redlink target"
+   "title": "Types/float",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
   },
   {
-   "title": "Construction robot/pl",
-   "chains": 13,
-   "pct": 0.24,
-   "reason": "redlink target"
+   "title": "Types/double",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
   },
   {
-   "title": "Light armor/pl",
-   "chains": 12,
-   "pct": 0.22,
+   "title": "Prototype/EntityWithHealth",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Types/EntityPrototypeFlags",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Assembling machine",
+   "chains": 1,
+   "pct": 0.09,
    "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
-  {
-   "title": "Research/ja",
-   "inDegree": 71
-  },
-  {
-   "title": "Time",
-   "inDegree": 62
-  },
-  {
-   "title": "Research/ru",
-   "inDegree": 52
-  },
+ "topFirstLinkTargets": [
   {
    "title": "Research",
-   "inDegree": 44
-  },
-  {
-   "title": "News",
-   "inDegree": 32
-  },
-  {
-   "title": "Enemies/de",
-   "inDegree": 26
-  },
-  {
-   "title": "Enemies/zh",
-   "inDegree": 24
+   "firstLinks": 41
   },
   {
    "title": "Space Age",
-   "inDegree": 23
-  },
-  {
-   "title": "Modular armor/ru",
-   "inDegree": 19
+   "firstLinks": 20
   },
   {
    "title": "Fluid system",
-   "inDegree": 19
-  },
-  {
-   "title": "Iron plate",
-   "inDegree": 17
+   "firstLinks": 17
   },
   {
    "title": "Enemies",
-   "inDegree": 17
-  },
-  {
-   "title": "Player",
-   "inDegree": 17
-  },
-  {
-   "title": "Fluid system/de",
-   "inDegree": 17
-  },
-  {
-   "title": "Materials and recipes/fr",
-   "inDegree": 16
+   "firstLinks": 16
   },
   {
    "title": "Map generator",
-   "inDegree": 16
-  },
-  {
-   "title": "Research/uk",
-   "inDegree": 16
-  },
-  {
-   "title": "Gleba",
-   "inDegree": 15
-  },
-  {
-   "title": "Circuit network",
-   "inDegree": 14
-  },
-  {
-   "title": "Belt transport system/zh",
-   "inDegree": 14
-  },
-  {
-   "title": "Research/de",
-   "inDegree": 14
-  },
-  {
-   "title": "Fluid system/ru",
-   "inDegree": 14
-  },
-  {
-   "title": "Electric system/de",
-   "inDegree": 14
-  },
-  {
-   "title": "Enemies/ja",
-   "inDegree": 14
-  },
-  {
-   "title": "Belt transport system",
-   "inDegree": 13
-  },
-  {
-   "title": "Damage/zh",
-   "inDegree": 12
-  },
-  {
-   "title": "Electric system",
-   "inDegree": 12
-  },
-  {
-   "title": "Electric system/zh",
-   "inDegree": 12
-  },
-  {
-   "title": "Player/ja",
-   "inDegree": 12
-  },
-  {
-   "title": "Map structure/zh",
-   "inDegree": 12
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Player/ja",
-   "betweenness": 1070
-  },
-  {
-   "title": "Space Age",
-   "betweenness": 1055
-  },
-  {
-   "title": "Application directory",
-   "betweenness": 1008
-  },
-  {
-   "title": "Multiplayer/ja",
-   "betweenness": 981
-  },
-  {
-   "title": "Scenario system",
-   "betweenness": 889
-  },
-  {
-   "title": "Recycler",
-   "betweenness": 856
-  },
-  {
-   "title": "Achievements",
-   "betweenness": 768
-  },
-  {
-   "title": "Space platform",
-   "betweenness": 672
-  },
-  {
-   "title": "Space platform hub",
-   "betweenness": 456
-  },
-  {
-   "title": "Enemies/ja",
-   "betweenness": 429
+   "firstLinks": 16
   },
   {
    "title": "Player",
-   "betweenness": 425
+   "firstLinks": 16
   },
   {
-   "title": "Research/ja",
-   "betweenness": 345
+   "title": "Gleba",
+   "firstLinks": 16
   },
   {
-   "title": "Construction robot/ja",
-   "betweenness": 297
+   "title": "News",
+   "firstLinks": 12
   },
   {
-   "title": "Enemies",
-   "betweenness": 294
-  },
-  {
-   "title": "Roboport/ja",
-   "betweenness": 264
-  },
-  {
-   "title": "Research",
-   "betweenness": 260
-  },
-  {
-   "title": "Logistic network/ja",
-   "betweenness": 260
-  },
-  {
-   "title": "Technologies/ja",
-   "betweenness": 236
+   "title": "Circuit network",
+   "firstLinks": 11
   },
   {
    "title": "Fuel",
-   "betweenness": 228
+   "firstLinks": 10
   },
   {
-   "title": "Time",
-   "betweenness": 222
+   "title": "Modular armor",
+   "firstLinks": 10
   },
   {
-   "title": "Damage",
-   "betweenness": 210
+   "title": "Quality",
+   "firstLinks": 10
   },
   {
-   "title": "Belt transport system/ja",
-   "betweenness": 209
+   "title": "Productivity",
+   "firstLinks": 10
   },
   {
-   "title": "Oil processing",
-   "betweenness": 174
+   "title": "Crafting",
+   "firstLinks": 9
+  },
+  {
+   "title": "Logistic network",
+   "firstLinks": 9
+  },
+  {
+   "title": "Belt transport system",
+   "firstLinks": 9
+  },
+  {
+   "title": "Factorio HTTP API usage guidelines",
+   "firstLinks": 9
+  },
+  {
+   "title": "Fulgora",
+   "firstLinks": 9
   },
   {
    "title": "Electric system",
-   "betweenness": 165
+   "firstLinks": 8
   },
   {
-   "title": "Fuel/ja",
-   "betweenness": 162
+   "title": "Space platform",
+   "firstLinks": 8
   },
   {
    "title": "Science pack",
-   "betweenness": 159
+   "firstLinks": 7
   },
   {
    "title": "Lab",
-   "betweenness": 158
+   "firstLinks": 6
   },
   {
-   "title": "Module",
-   "betweenness": 156
+   "title": "Transport belt",
+   "firstLinks": 6
   },
   {
-   "title": "Fluid system/ru",
-   "betweenness": 154
+   "title": "Locomotive",
+   "firstLinks": 6
   },
   {
-   "title": "Science pack/ja",
-   "betweenness": 145
+   "title": "Tank",
+   "firstLinks": 6
+  },
+  {
+   "title": "Vulcanus",
+   "firstLinks": 6
+  },
+  {
+   "title": "Iron plate",
+   "firstLinks": 5
+  },
+  {
+   "title": "Damage",
+   "firstLinks": 5
+  },
+  {
+   "title": "Rail",
+   "firstLinks": 5
+  },
+  {
+   "title": "Equipment modules",
+   "firstLinks": 5
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Multiplayer",
+   "chains": 276
+  },
+  {
+   "title": "Player",
+   "chains": 276
+  },
+  {
+   "title": "Research",
+   "chains": 134
+  },
+  {
+   "title": "Technologies",
+   "chains": 134
+  },
+  {
+   "title": "Space platform hub",
+   "chains": 101
+  },
+  {
+   "title": "Space platform",
+   "chains": 97
+  },
+  {
+   "title": "Damage",
+   "chains": 88
+  },
+  {
+   "title": "Recycler",
+   "chains": 87
+  },
+  {
+   "title": "Space Age",
+   "chains": 85
+  },
+  {
+   "title": "Enemies",
+   "chains": 82
+  },
+  {
+   "title": "Lab",
+   "chains": 55
+  },
+  {
+   "title": "Water",
+   "chains": 50
+  },
+  {
+   "title": "Fluid system",
+   "chains": 50
+  },
+  {
+   "title": "Heavy armor",
+   "chains": 34
+  },
+  {
+   "title": "Light armor",
+   "chains": 34
+  },
+  {
+   "title": "Oil processing (research)",
+   "chains": 34
+  },
+  {
+   "title": "Science pack",
+   "chains": 33
+  },
+  {
+   "title": "Belt transport system",
+   "chains": 33
+  },
+  {
+   "title": "Oil processing",
+   "chains": 33
+  },
+  {
+   "title": "Fuel",
+   "chains": 32
+  },
+  {
+   "title": "Modular armor",
+   "chains": 31
+  },
+  {
+   "title": "Gleba",
+   "chains": 31
+  },
+  {
+   "title": "Crude oil",
+   "chains": 22
+  },
+  {
+   "title": "Rail",
+   "chains": 21
+  },
+  {
+   "title": "Railway",
+   "chains": 21
+  },
+  {
+   "title": "Fulgora",
+   "chains": 21
+  },
+  {
+   "title": "Planet discovery Fulgora (research)",
+   "chains": 21
+  },
+  {
+   "title": "Transport belt",
+   "chains": 20
+  },
+  {
+   "title": "Map generator",
+   "chains": 20
+  },
+  {
+   "title": "Construction robot",
+   "chains": 19
   }
  ]
 }

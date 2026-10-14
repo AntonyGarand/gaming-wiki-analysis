@@ -3,32 +3,62 @@
  "rank": "strict1",
  "nodes": 710,
  "converge": {
-  "articles": 528,
-  "pct": 74.37,
-  "deadEnd": 182,
-  "deadEndPct": 25.63,
+  "articles": 705,
+  "pct": 99.3,
+  "deadEnd": 5,
+  "deadEndPct": 0.7,
   "noLinks": 4,
   "tooFewLinks": 0,
-  "unresolvable": 3
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 2.41,
-  "median": 2,
-  "p90": 3,
-  "max": 7
+  "mean": 2.81,
+  "median": 3,
+  "p90": 5,
+  "max": 9
  },
  "histogram": {
-  "0": 16,
-  "1": 86,
-  "2": 199,
-  "3": 176,
-  "4": 20,
-  "5": 5,
-  "6": 25,
-  "7": 1
+  "0": 18,
+  "1": 100,
+  "2": 223,
+  "3": 238,
+  "4": 47,
+  "5": 13,
+  "6": 26,
+  "7": 10,
+  "8": 26,
+  "9": 4
  },
- "components": 9,
- "cycleCount": 8,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 5,
+   "1": 32,
+   "2": 34,
+   "3": 48,
+   "4": 80,
+   "5": 65,
+   "6": 52,
+   "7": 47,
+   "8": 38,
+   "9": 47,
+   "10": 262
+  },
+  "atLeast": {
+   "1": 99.3,
+   "2": 94.8,
+   "3": 90,
+   "5": 72
+  }
+ },
+ "concentration": {
+  "top1Pct": 40.42,
+  "top3Pct": 82.96,
+  "top10Pct": 99.3,
+  "cycleCount": 9,
+  "entropyBits": 2.17
+ },
+ "components": 10,
+ "cycleCount": 9,
  "largestCycle": {
   "members": [
    "Planet 4546B",
@@ -45,6 +75,14 @@
    ],
    "basin": 287,
    "pct": 40.42
+  },
+  {
+   "cycle": [
+    "Alterra Corporation",
+    "Aurora"
+   ],
+   "basin": 177,
+   "pct": 24.93
   },
   {
    "cycle": [
@@ -105,12 +143,6 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Alterra Corporation",
-   "chains": 176,
-   "pct": 24.79,
-   "reason": "redlink target"
-  },
-  {
    "title": "Key Bindings",
    "chains": 1,
    "pct": 0.14,
@@ -121,12 +153,6 @@
    "chains": 1,
    "pct": 0.14,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Mongolian Independent States",
-   "chains": 1,
-   "pct": 0.14,
-   "reason": "redlink target"
   },
   {
    "title": "The Crater/Map",
@@ -148,248 +174,248 @@
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Seabases",
-   "inDegree": 58
+   "firstLinks": 58
   },
   {
    "title": "Flora",
-   "inDegree": 53
+   "firstLinks": 53
   },
   {
    "title": "Fauna",
-   "inDegree": 41
+   "firstLinks": 41
   },
   {
    "title": "Food & Water",
-   "inDegree": 33
+   "firstLinks": 33
   },
   {
    "title": "Raw Materials",
-   "inDegree": 28
+   "firstLinks": 28
   },
   {
    "title": "Biomes",
-   "inDegree": 25
+   "firstLinks": 25
   },
   {
    "title": "Wrecks",
-   "inDegree": 25
+   "firstLinks": 25
   },
   {
    "title": "Resources",
-   "inDegree": 24
+   "firstLinks": 24
   },
   {
    "title": "Achievements",
-   "inDegree": 18
+   "firstLinks": 18
   },
   {
    "title": "Equipment",
-   "inDegree": 17
+   "firstLinks": 17
   },
   {
    "title": "Upgrade Modules",
-   "inDegree": 17
+   "firstLinks": 17
   },
   {
    "title": "Tools",
-   "inDegree": 13
+   "firstLinks": 13
   },
   {
    "title": "Architects",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Primary Containment Facility",
-   "inDegree": 12
-  },
-  {
-   "title": "Placeable Items",
-   "inDegree": 11
+   "firstLinks": 12
   },
   {
    "title": "Aurora",
-   "inDegree": 11
+   "firstLinks": 12
+  },
+  {
+   "title": "Placeable Items",
+   "firstLinks": 11
   },
   {
    "title": "Destroyed Lifepods",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Planet 4546B",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Ryley Robinson",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Leviathans",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Cyclops",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Habitat Builder",
-   "inDegree": 8
+   "firstLinks": 8
   },
   {
    "title": "Coral",
-   "inDegree": 8
+   "firstLinks": 8
   },
   {
    "title": "Prawn Suit",
-   "inDegree": 7
+   "firstLinks": 7
   },
   {
    "title": "Architect Bases",
-   "inDegree": 7
+   "firstLinks": 7
   },
   {
    "title": "Alien Arch Caches",
-   "inDegree": 7
+   "firstLinks": 7
   },
   {
    "title": "Deployables",
-   "inDegree": 6
+   "firstLinks": 6
   },
   {
    "title": "Quarantine Enforcement Platform",
-   "inDegree": 6
+   "firstLinks": 6
   },
   {
    "title": "Disease Research Facility",
-   "inDegree": 6
+   "firstLinks": 6
   },
   {
    "title": "Fabricator",
-   "inDegree": 5
+   "firstLinks": 5
   }
  ],
- "topBetweenness": [
-  {
-   "title": "Seabases",
-   "betweenness": 264
-  },
-  {
-   "title": "Cyclops",
-   "betweenness": 234
-  },
+ "topThroughTraffic": [
   {
    "title": "Planet 4546B",
-   "betweenness": 225
-  },
-  {
-   "title": "Mobile Vehicle Bay",
-   "betweenness": 200
-  },
-  {
-   "title": "Flora",
-   "betweenness": 184
-  },
-  {
-   "title": "Deployables",
-   "betweenness": 184
-  },
-  {
-   "title": "Resources",
-   "betweenness": 180
-  },
-  {
-   "title": "Fabricator",
-   "betweenness": 156
-  },
-  {
-   "title": "Wrecks",
-   "betweenness": 156
-  },
-  {
-   "title": "Habitat Builder",
-   "betweenness": 140
-  },
-  {
-   "title": "Fragments",
-   "betweenness": 135
-  },
-  {
-   "title": "Upgrade Modules",
-   "betweenness": 133
-  },
-  {
-   "title": "Tools",
-   "betweenness": 126
-  },
-  {
-   "title": "Raw Materials",
-   "betweenness": 123
-  },
-  {
-   "title": "Biomes",
-   "betweenness": 112
-  },
-  {
-   "title": "Scanner",
-   "betweenness": 112
-  },
-  {
-   "title": "Fauna",
-   "betweenness": 110
-  },
-  {
-   "title": "Food & Water",
-   "betweenness": 99
-  },
-  {
-   "title": "Game Modes",
-   "betweenness": 70
-  },
-  {
-   "title": "Ryley Robinson",
-   "betweenness": 66
-  },
-  {
-   "title": "Equipment",
-   "betweenness": 60
+   "chains": 287
   },
   {
    "title": "Architects",
-   "betweenness": 60
+   "chains": 287
   },
   {
-   "title": "Architect Bases",
-   "betweenness": 58
-  },
-  {
-   "title": "Prawn Suit",
-   "betweenness": 49
-  },
-  {
-   "title": "Lost River",
-   "betweenness": 39
-  },
-  {
-   "title": "Primary Containment Facility",
-   "betweenness": 39
-  },
-  {
-   "title": "Placeable Items",
-   "betweenness": 36
-  },
-  {
-   "title": "Seamoth",
-   "betweenness": 28
-  },
-  {
-   "title": "Coral",
-   "betweenness": 24
+   "title": "Alterra Corporation",
+   "chains": 177
   },
   {
    "title": "Aurora",
-   "betweenness": 24
+   "chains": 177
+  },
+  {
+   "title": "Habitat Builder",
+   "chains": 141
+  },
+  {
+   "title": "Seabases",
+   "chains": 133
+  },
+  {
+   "title": "Titanium",
+   "chains": 125
+  },
+  {
+   "title": "Raw Materials",
+   "chains": 125
+  },
+  {
+   "title": "Flora",
+   "chains": 93
+  },
+  {
+   "title": "Resources",
+   "chains": 91
+  },
+  {
+   "title": "Lifepod 5",
+   "chains": 70
+  },
+  {
+   "title": "Ryley Robinson",
+   "chains": 70
+  },
+  {
+   "title": "Biomes",
+   "chains": 57
+  },
+  {
+   "title": "Fauna",
+   "chains": 56
+  },
+  {
+   "title": "Fabricator",
+   "chains": 53
+  },
+  {
+   "title": "Deployables",
+   "chains": 47
+  },
+  {
+   "title": "Tools",
+   "chains": 43
+  },
+  {
+   "title": "Mobile Vehicle Bay",
+   "chains": 41
+  },
+  {
+   "title": "Cyclops",
+   "chains": 40
+  },
+  {
+   "title": "Game Modes",
+   "chains": 36
+  },
+  {
+   "title": "Food & Water",
+   "chains": 34
+  },
+  {
+   "title": "Architect Bases",
+   "chains": 30
+  },
+  {
+   "title": "Scanner",
+   "chains": 29
+  },
+  {
+   "title": "Fragments",
+   "chains": 28
+  },
+  {
+   "title": "Wrecks",
+   "chains": 27
+  },
+  {
+   "title": "Achievements",
+   "chains": 23
+  },
+  {
+   "title": "Console Commands",
+   "chains": 23
+  },
+  {
+   "title": "Equipment",
+   "chains": 21
+  },
+  {
+   "title": "Upgrade Modules",
+   "chains": 20
+  },
+  {
+   "title": "Leviathans",
+   "chains": 16
   }
  ]
 }

@@ -1,32 +1,60 @@
 {
  "wiki": "vampiresurvivors",
  "rank": "2",
- "nodes": 2469,
+ "nodes": 2323,
  "converge": {
-  "articles": 1387,
-  "pct": 56.18,
-  "deadEnd": 1082,
-  "deadEndPct": 43.82,
-  "noLinks": 232,
-  "tooFewLinks": 581,
-  "unresolvable": 2
+  "articles": 1125,
+  "pct": 48.43,
+  "deadEnd": 1198,
+  "deadEndPct": 51.57,
+  "noLinks": 81,
+  "tooFewLinks": 580,
+  "unresolvable": 6
  },
  "hopStats": {
-  "mean": 3.03,
+  "mean": 3.09,
   "median": 3,
   "p90": 5,
   "max": 8
  },
  "histogram": {
-  "0": 14,
-  "1": 266,
-  "2": 409,
-  "3": 234,
-  "4": 91,
-  "5": 248,
-  "6": 69,
-  "7": 54,
-  "8": 2
+  "0": 13,
+  "1": 207,
+  "2": 277,
+  "3": 217,
+  "4": 92,
+  "5": 254,
+  "6": 34,
+  "7": 30,
+  "8": 1
+ },
+ "eligibleLinks": {
+  "histogram": {
+   "0": 87,
+   "1": 580,
+   "2": 367,
+   "3": 243,
+   "4": 150,
+   "5": 171,
+   "6": 138,
+   "7": 109,
+   "8": 90,
+   "9": 87,
+   "10": 301
+  },
+  "atLeast": {
+   "1": 96.3,
+   "2": 71.3,
+   "3": 55.5,
+   "5": 38.6
+  }
+ },
+ "concentration": {
+  "top1Pct": 46.36,
+  "top3Pct": 48.17,
+  "top10Pct": 48.43,
+  "cycleCount": 6,
+  "entropyBits": 0.31
  },
  "components": 7,
  "cycleCount": 6,
@@ -37,7 +65,7 @@
    "Level up"
   ],
   "size": 3,
-  "basin": 968
+  "basin": 1077
  },
  "topAttractors": [
   {
@@ -46,25 +74,16 @@
     "Enemies",
     "Level up"
    ],
-   "basin": 968,
-   "pct": 39.21
-  },
-  {
-   "cycle": [
-    "Stages",
-    "Adventures",
-    "Boss Rash"
-   ],
-   "basin": 376,
-   "pct": 15.23
+   "basin": 1077,
+   "pct": 46.36
   },
   {
    "cycle": [
     "Tides of the Foscari",
     "Abyss Foscari"
    ],
-   "basin": 30,
-   "pct": 1.22
+   "basin": 33,
+   "pct": 1.42
   },
   {
    "cycle": [
@@ -72,7 +91,7 @@
     "Thorns"
    ],
    "basin": 9,
-   "pct": 0.36
+   "pct": 0.39
   },
   {
    "cycle": [
@@ -80,7 +99,7 @@
     "Critical Hit"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
@@ -88,344 +107,352 @@
     "Rotting Ghoul"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Roadmap",
+    "Ode to Castlevania Guestbook"
+   ],
+   "basin": 2,
+   "pct": 0.09
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Castlevania Series",
-   "chains": 59,
-   "pct": 2.39,
+   "title": "A Garlic Paradise",
+   "chains": 415,
+   "pct": 17.86,
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Ode to Castlevania (album)",
-   "chains": 50,
-   "pct": 2.03,
-   "reason": "no eligible links"
+   "title": "Castlevania Series",
+   "chains": 59,
+   "pct": 2.54,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Options",
-   "chains": 41,
-   "pct": 1.66,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Vampire Survivors: Emerald Diorama is free and out now",
-   "chains": 14,
-   "pct": 0.57,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Vampire Survivors: Legacy of the Bloodmoon is coming this summer!",
-   "chains": 12,
-   "pct": 0.49,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "A Garlic Paradise",
-   "chains": 7,
-   "pct": 0.28,
-   "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Updates/Vampire Survivors: Ante Chamber out now, for free!",
-   "chains": 7,
-   "pct": 0.28,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Content Patch 1.9.0: Space 54",
-   "chains": 6,
-   "pct": 0.24,
+   "chains": 42,
+   "pct": 1.81,
    "reason": "no eligible links"
   },
   {
    "title": "To End an Ice Age",
    "chains": 6,
-   "pct": 0.24,
+   "pct": 0.26,
    "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Updates/What a horrible night to have a Patch 0.2.13",
-   "chains": 5,
-   "pct": 0.2,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Patch 1.10: Laborratory",
-   "chains": 5,
-   "pct": 0.2,
-   "reason": "no eligible links"
   },
   {
    "title": "World of Light and Dark",
    "chains": 4,
-   "pct": 0.16,
+   "pct": 0.17,
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Updates/v0.2.0 now available",
+   "title": "Vampire Survivors 3",
    "chains": 4,
-   "pct": 0.16,
-   "reason": "no eligible links"
+   "pct": 0.17,
+   "reason": "only 1 eligible links"
   },
   {
-   "title": "Updates/Patch 0.3.2",
-   "chains": 4,
-   "pct": 0.16,
-   "reason": "no eligible links"
+   "title": "Spell Walkthroughs",
+   "chains": 3,
+   "pct": 0.13,
+   "reason": "only 1 eligible links"
   },
   {
-   "title": "Updates/Patch 0.5.1",
-   "chains": 4,
-   "pct": 0.16,
-   "reason": "no eligible links"
+   "title": "Vampire Survivors Wiki",
+   "chains": 2,
+   "pct": 0.09,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Kappa",
+   "chains": 2,
+   "pct": 0.09,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Pressure",
+   "chains": 2,
+   "pct": 0.09,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Nosebleed Interactive",
+   "chains": 2,
+   "pct": 0.09,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Blood Hex",
+   "chains": 2,
+   "pct": 0.09,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Pasqualina Belpaese",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Gennaro Belpaese",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Medusa Head",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
-  {
-   "title": "Weapons",
-   "inDegree": 160
-  },
+ "topFirstLinkTargets": [
   {
    "title": "Evolution",
-   "inDegree": 150
+   "firstLinks": 177
+  },
+  {
+   "title": "Weapons",
+   "firstLinks": 162
   },
   {
    "title": "Characters",
-   "inDegree": 114
+   "firstLinks": 115
   },
   {
    "title": "Ode to Castlevania (stage)",
-   "inDegree": 83
+   "firstLinks": 84
+  },
+  {
+   "title": "Spells",
+   "firstLinks": 67
   },
   {
    "title": "Castlevania Series",
-   "inDegree": 55
-  },
-  {
-   "title": "Spells",
-   "inDegree": 54
+   "firstLinks": 55
   },
   {
    "title": "Ode to Castlevania (album)",
-   "inDegree": 48
+   "firstLinks": 48
   },
   {
    "title": "Stages",
-   "inDegree": 46
+   "firstLinks": 46
   },
   {
    "title": "Dairy Plant",
-   "inDegree": 35
+   "firstLinks": 36
   },
   {
    "title": "Knockback",
-   "inDegree": 31
-  },
-  {
-   "title": "Ode to Castlevania",
-   "inDegree": 29
+   "firstLinks": 31
   },
   {
    "title": "Emerald Diorama (stage)",
-   "inDegree": 29
+   "firstLinks": 30
   },
   {
    "title": "Inlaid Library",
-   "inDegree": 28
+   "firstLinks": 29
   },
   {
    "title": "Gallo Tower",
-   "inDegree": 28
+   "firstLinks": 29
   },
   {
    "title": "Neo Galuga",
-   "inDegree": 28
-  },
-  {
-   "title": "Cappella Magna",
-   "inDegree": 24
-  },
-  {
-   "title": "Red Moon Manor",
-   "inDegree": 24
-  },
-  {
-   "title": "Operation Guns",
-   "inDegree": 21
-  },
-  {
-   "title": "Light source",
-   "inDegree": 20
-  },
-  {
-   "title": "Westwoods",
-   "inDegree": 20
-  },
-  {
-   "title": "Polus Replica",
-   "inDegree": 18
-  },
-  {
-   "title": "Mad Forest",
-   "inDegree": 17
-  },
-  {
-   "title": "Ante Chamber (stage)",
-   "inDegree": 17
-  },
-  {
-   "title": "Emergency Meeting",
-   "inDegree": 16
-  },
-  {
-   "title": "The Lycaeum",
-   "inDegree": 16
-  },
-  {
-   "title": "Moongolow",
-   "inDegree": 15
-  },
-  {
-   "title": "Astral Stair",
-   "inDegree": 13
-  },
-  {
-   "title": "Enemies",
-   "inDegree": 12
-  },
-  {
-   "title": "Boss Rash",
-   "inDegree": 12
-  },
-  {
-   "title": "Level up",
-   "inDegree": 11
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Weapons",
-   "betweenness": 1827
-  },
-  {
-   "title": "Characters",
-   "betweenness": 1380
-  },
-  {
-   "title": "Enemies",
-   "betweenness": 994
-  },
-  {
-   "title": "Evolution",
-   "betweenness": 936
-  },
-  {
-   "title": "Passive items",
-   "betweenness": 935
-  },
-  {
-   "title": "PowerUps",
-   "betweenness": 764
-  },
-  {
-   "title": "Stages",
-   "betweenness": 722
-  },
-  {
-   "title": "Inlaid Library",
-   "betweenness": 630
-  },
-  {
-   "title": "Mad Forest",
-   "betweenness": 588
-  },
-  {
-   "title": "Dairy Plant",
-   "betweenness": 588
-  },
-  {
-   "title": "Spells",
-   "betweenness": 576
-  },
-  {
-   "title": "Cheat Codes",
-   "betweenness": 485
-  },
-  {
-   "title": "Bat Country",
-   "betweenness": 456
-  },
-  {
-   "title": "Toastie",
-   "betweenness": 392
-  },
-  {
-   "title": "Gallo Tower",
-   "betweenness": 378
+   "firstLinks": 29
   },
   {
    "title": "Ode to Castlevania",
-   "betweenness": 375
-  },
-  {
-   "title": "Adventures",
-   "betweenness": 370
-  },
-  {
-   "title": "Ode to Castlevania (stage)",
-   "betweenness": 352
-  },
-  {
-   "title": "Room 1665",
-   "betweenness": 245
+   "firstLinks": 29
   },
   {
    "title": "Cappella Magna",
-   "betweenness": 200
+   "firstLinks": 25
   },
   {
    "title": "Red Moon Manor",
-   "betweenness": 200
+   "firstLinks": 25
   },
   {
-   "title": "Emergency Meeting",
-   "betweenness": 123
-  },
-  {
-   "title": "Moongolow",
-   "betweenness": 117
-  },
-  {
-   "title": "Collection",
-   "betweenness": 108
-  },
-  {
-   "title": "Legacy of the Moonspell",
-   "betweenness": 100
-  },
-  {
-   "title": "Pickups",
-   "betweenness": 93
-  },
-  {
-   "title": "Knockback",
-   "betweenness": 93
-  },
-  {
-   "title": "Emerald Diorama (stage)",
-   "betweenness": 93
+   "title": "Westwoods",
+   "firstLinks": 22
   },
   {
    "title": "Light source",
-   "betweenness": 88
+   "firstLinks": 21
   },
   {
    "title": "Operation Guns",
-   "betweenness": 87
+   "firstLinks": 21
+  },
+  {
+   "title": "Polus Replica",
+   "firstLinks": 18
+  },
+  {
+   "title": "Mad Forest",
+   "firstLinks": 17
+  },
+  {
+   "title": "Ante Chamber (stage)",
+   "firstLinks": 17
+  },
+  {
+   "title": "The Lycaeum",
+   "firstLinks": 17
+  },
+  {
+   "title": "Emergency Meeting",
+   "firstLinks": 16
+  },
+  {
+   "title": "Moongolow",
+   "firstLinks": 15
+  },
+  {
+   "title": "Enemies",
+   "firstLinks": 13
+  },
+  {
+   "title": "Astral Stair",
+   "firstLinks": 13
+  },
+  {
+   "title": "Level up",
+   "firstLinks": 12
+  },
+  {
+   "title": "The Bone Zone",
+   "firstLinks": 12
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Weapons",
+   "chains": 1077
+  },
+  {
+   "title": "Enemies",
+   "chains": 1077
+  },
+  {
+   "title": "Level up",
+   "chains": 1077
+  },
+  {
+   "title": "Characters",
+   "chains": 510
+  },
+  {
+   "title": "A Garlic Paradise",
+   "chains": 415
+  },
+  {
+   "title": "Adventures",
+   "chains": 408
+  },
+  {
+   "title": "Stages",
+   "chains": 400
+  },
+  {
+   "title": "PowerUps",
+   "chains": 225
+  },
+  {
+   "title": "Passive items",
+   "chains": 219
+  },
+  {
+   "title": "Evolution",
+   "chains": 184
+  },
+  {
+   "title": "Ode to Castlevania",
+   "chains": 176
+  },
+  {
+   "title": "Bat Country",
+   "chains": 160
+  },
+  {
+   "title": "Mad Forest",
+   "chains": 155
+  },
+  {
+   "title": "Ode to Castlevania (stage)",
+   "chains": 139
+  },
+  {
+   "title": "Inlaid Library",
+   "chains": 134
+  },
+  {
+   "title": "Toastie",
+   "chains": 114
+  },
+  {
+   "title": "Cheat Codes",
+   "chains": 113
+  },
+  {
+   "title": "Spells",
+   "chains": 112
+  },
+  {
+   "title": "Dairy Plant",
+   "chains": 105
+  },
+  {
+   "title": "Gallo Tower",
+   "chains": 60
+  },
+  {
+   "title": "Castlevania Series",
+   "chains": 59
+  },
+  {
+   "title": "Ode to Castlevania (album)",
+   "chains": 50
+  },
+  {
+   "title": "Emergency Meeting",
+   "chains": 42
+  },
+  {
+   "title": "Options",
+   "chains": 42
+  },
+  {
+   "title": "Moongolow",
+   "chains": 41
+  },
+  {
+   "title": "Glimmers",
+   "chains": 41
+  },
+  {
+   "title": "Room 1665",
+   "chains": 38
+  },
+  {
+   "title": "Emerald Diorama",
+   "chains": 38
+  },
+  {
+   "title": "Pickups",
+   "chains": 34
+  },
+  {
+   "title": "Tides of the Foscari",
+   "chains": 33
   }
  ]
 }

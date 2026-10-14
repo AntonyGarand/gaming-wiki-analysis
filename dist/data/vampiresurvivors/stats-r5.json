@@ -1,54 +1,88 @@
 {
  "wiki": "vampiresurvivors",
  "rank": "5",
- "nodes": 2469,
+ "nodes": 2323,
  "converge": {
-  "articles": 676,
-  "pct": 27.38,
-  "deadEnd": 1793,
-  "deadEndPct": 72.62,
-  "noLinks": 232,
-  "tooFewLinks": 1336,
-  "unresolvable": 3
+  "articles": 745,
+  "pct": 32.07,
+  "deadEnd": 1578,
+  "deadEndPct": 67.93,
+  "noLinks": 81,
+  "tooFewLinks": 1340,
+  "unresolvable": 6
  },
  "hopStats": {
-  "mean": 4.59,
-  "median": 4,
-  "p90": 9,
-  "max": 11
+  "mean": 5.77,
+  "median": 5,
+  "p90": 12,
+  "max": 15
  },
  "histogram": {
   "0": 14,
-  "1": 75,
-  "2": 93,
-  "3": 83,
-  "4": 99,
-  "5": 123,
-  "6": 25,
-  "7": 43,
-  "8": 21,
-  "9": 43,
-  "10": 53,
-  "11": 4
+  "1": 97,
+  "2": 63,
+  "3": 76,
+  "4": 101,
+  "5": 74,
+  "6": 36,
+  "7": 29,
+  "8": 47,
+  "9": 102,
+  "10": 19,
+  "11": 10,
+  "12": 6,
+  "13": 14,
+  "14": 52,
+  "15": 5
  },
- "components": 8,
- "cycleCount": 7,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 87,
+   "1": 580,
+   "2": 367,
+   "3": 243,
+   "4": 150,
+   "5": 171,
+   "6": 138,
+   "7": 109,
+   "8": 90,
+   "9": 87,
+   "10": 301
+  },
+  "atLeast": {
+   "1": 96.3,
+   "2": 71.3,
+   "3": 55.5,
+   "5": 38.6
+  }
+ },
+ "concentration": {
+  "top1Pct": 20.15,
+  "top3Pct": 31.68,
+  "top10Pct": 32.07,
+  "cycleCount": 6,
+  "entropyBits": 1.1
+ },
+ "components": 7,
+ "cycleCount": 6,
  "largestCycle": {
   "members": [
-   "Mad Forest",
-   "Boon Marrabbio"
+   "Light source",
+   "Greatest Jubilee",
+   "Luck"
   ],
-  "size": 2,
-  "basin": 382
+  "size": 3,
+  "basin": 468
  },
  "topAttractors": [
   {
    "cycle": [
-    "Mad Forest",
-    "Boon Marrabbio"
+    "Light source",
+    "Greatest Jubilee",
+    "Luck"
    ],
-   "basin": 382,
-   "pct": 15.47
+   "basin": 468,
+   "pct": 20.15
   },
   {
    "cycle": [
@@ -56,15 +90,8 @@
     "Mazerella",
     "Spells"
    ],
-   "basin": 213,
-   "pct": 8.63
-  },
-  {
-   "cycle": [
-    "Passive items"
-   ],
-   "basin": 66,
-   "pct": 2.67
+   "basin": 262,
+   "pct": 11.28
   },
   {
    "cycle": [
@@ -72,7 +99,7 @@
     "Ice Cream"
    ],
    "basin": 6,
-   "pct": 0.24
+   "pct": 0.26
   },
   {
    "cycle": [
@@ -80,7 +107,7 @@
     "Slaying Kazoos"
    ],
    "basin": 5,
-   "pct": 0.2
+   "pct": 0.22
   },
   {
    "cycle": [
@@ -88,7 +115,7 @@
     "Hidden Cave"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
@@ -96,344 +123,344 @@
     "Nature"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Antonio Belpaese",
-   "chains": 61,
-   "pct": 2.47,
-   "reason": "only 2 eligible links"
-  },
-  {
    "title": "Relics",
    "chains": 20,
-   "pct": 0.81,
-   "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Poncle",
-   "chains": 14,
-   "pct": 0.57,
+   "pct": 0.86,
    "reason": "only 3 eligible links"
   },
   {
    "title": "Glimmers",
    "chains": 13,
-   "pct": 0.53,
+   "pct": 0.56,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Sammy the Caterpillar",
-   "chains": 10,
-   "pct": 0.41,
+   "chains": 11,
+   "pct": 0.47,
    "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Flight",
-   "chains": 9,
-   "pct": 0.36,
-   "reason": "no eligible links"
   },
   {
    "title": "Health Drain",
    "chains": 9,
-   "pct": 0.36,
+   "pct": 0.39,
    "reason": "only 3 eligible links"
   },
   {
-   "title": "Blood Hex",
-   "chains": 6,
-   "pct": 0.24,
-   "reason": "only 1 eligible links"
+   "title": "Flight",
+   "chains": 8,
+   "pct": 0.34,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Tides of the Foscari (adventure)",
+   "chains": 8,
+   "pct": 0.34,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Antonio Belpaese",
+   "chains": 7,
+   "pct": 0.3,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Poncle",
+   "chains": 7,
+   "pct": 0.3,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Retaliate",
    "chains": 6,
-   "pct": 0.24,
+   "pct": 0.26,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Invulnerability Time",
    "chains": 6,
-   "pct": 0.24,
+   "pct": 0.26,
    "reason": "only 4 eligible links"
   },
   {
    "title": "Emergency Meeting (adventure)",
    "chains": 6,
-   "pct": 0.24,
+   "pct": 0.26,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Updates/Vampire Survivors: Legacy of the Bloodmoon is coming this summer!",
+   "title": "Legacy of the Moonspell (adventure)",
    "chains": 6,
-   "pct": 0.24,
-   "reason": "no eligible links"
+   "pct": 0.26,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Doppelganger",
    "chains": 5,
-   "pct": 0.2,
+   "pct": 0.22,
    "reason": "only 3 eligible links"
   },
   {
-   "title": "Legacy of the Moonspell (adventure)",
-   "chains": 5,
-   "pct": 0.2,
-   "reason": "only 2 eligible links"
+   "title": "Adept",
+   "chains": 4,
+   "pct": 0.17,
+   "reason": "only 4 eligible links"
   },
   {
-   "title": "Tides of the Foscari (adventure)",
-   "chains": 5,
-   "pct": 0.2,
+   "title": "Last Breath",
+   "chains": 4,
+   "pct": 0.17,
    "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Weapons",
-   "inDegree": 96
+   "firstLinks": 86
   },
   {
    "title": "Limit Break",
-   "inDegree": 47
+   "firstLinks": 51
   },
   {
    "title": "Spells",
-   "inDegree": 40
+   "firstLinks": 40
   },
   {
    "title": "Light source",
-   "inDegree": 34
-  },
-  {
-   "title": "Enemies",
-   "inDegree": 28
-  },
-  {
-   "title": "Knockback",
-   "inDegree": 28
-  },
-  {
-   "title": "Stages",
-   "inDegree": 27
-  },
-  {
-   "title": "Area",
-   "inDegree": 25
+   "firstLinks": 33
   },
   {
    "title": "Amount",
-   "inDegree": 23
-  },
-  {
-   "title": "Freeze",
-   "inDegree": 20
-  },
-  {
-   "title": "Passive items",
-   "inDegree": 18
-  },
-  {
-   "title": "Speed",
-   "inDegree": 16
-  },
-  {
-   "title": "Level up",
-   "inDegree": 15
-  },
-  {
-   "title": "Arcanas",
-   "inDegree": 13
-  },
-  {
-   "title": "Dairy Plant",
-   "inDegree": 11
-  },
-  {
-   "title": "Glimmers",
-   "inDegree": 11
-  },
-  {
-   "title": "Cooldown",
-   "inDegree": 10
-  },
-  {
-   "title": "Luck",
-   "inDegree": 10
-  },
-  {
-   "title": "Emerald Diorama",
-   "inDegree": 10
-  },
-  {
-   "title": "Evolution",
-   "inDegree": 9
-  },
-  {
-   "title": "Relics",
-   "inDegree": 9
-  },
-  {
-   "title": "PowerUps",
-   "inDegree": 8
-  },
-  {
-   "title": "Health Drain",
-   "inDegree": 8
-  },
-  {
-   "title": "Duration",
-   "inDegree": 7
-  },
-  {
-   "title": "Treasure Chest",
-   "inDegree": 7
-  },
-  {
-   "title": "Forbidden Scrolls of Morbane",
-   "inDegree": 7
-  },
-  {
-   "title": "Showstopper",
-   "inDegree": 7
-  },
-  {
-   "title": "Pickups",
-   "inDegree": 6
-  },
-  {
-   "title": "Greed",
-   "inDegree": 6
-  },
-  {
-   "title": "Flight",
-   "inDegree": 6
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Weapons",
-   "betweenness": 1350
-  },
-  {
-   "title": "Level up",
-   "betweenness": 1156
-  },
-  {
-   "title": "Floor Chicken",
-   "betweenness": 870
-  },
-  {
-   "title": "Stages",
-   "betweenness": 752
-  },
-  {
-   "title": "Arcanas",
-   "betweenness": 621
-  },
-  {
-   "title": "Light source",
-   "betweenness": 574
-  },
-  {
-   "title": "Reroll",
-   "betweenness": 560
-  },
-  {
-   "title": "Achievements",
-   "betweenness": 518
-  },
-  {
-   "title": "Greatest Jubilee",
-   "betweenness": 498
-  },
-  {
-   "title": "Expansions",
-   "betweenness": 450
-  },
-  {
-   "title": "Mad Forest",
-   "betweenness": 380
-  },
-  {
-   "title": "Spells",
-   "betweenness": 333
+   "firstLinks": 28
   },
   {
    "title": "Enemies",
-   "betweenness": 316
+   "firstLinks": 27
   },
   {
-   "title": "Luck",
-   "betweenness": 312
-  },
-  {
-   "title": "Area",
-   "betweenness": 270
-  },
-  {
-   "title": "Dairy Plant",
-   "betweenness": 252
-  },
-  {
-   "title": "Ars Gouda",
-   "betweenness": 243
-  },
-  {
-   "title": "Freeze",
-   "betweenness": 189
-  },
-  {
-   "title": "Speed",
-   "betweenness": 170
-  },
-  {
-   "title": "Limit Break",
-   "betweenness": 153
+   "title": "Stages",
+   "firstLinks": 26
   },
   {
    "title": "Knockback",
-   "betweenness": 150
+   "firstLinks": 26
   },
   {
-   "title": "Evolution",
-   "betweenness": 124
+   "title": "Area",
+   "firstLinks": 24
   },
   {
-   "title": "Treasure Chest",
-   "betweenness": 105
+   "title": "Freeze",
+   "firstLinks": 22
   },
   {
-   "title": "Version history",
-   "betweenness": 104
+   "title": "Passive items",
+   "firstLinks": 20
   },
   {
-   "title": "Infinite Corridor",
-   "betweenness": 96
+   "title": "Speed",
+   "firstLinks": 19
   },
   {
-   "title": "PowerUps",
-   "betweenness": 91
+   "title": "Level up",
+   "firstLinks": 14
   },
   {
-   "title": "Gold Coin (currency)",
-   "betweenness": 84
+   "title": "Arcanas",
+   "firstLinks": 14
   },
   {
-   "title": "Greed",
-   "betweenness": 75
+   "title": "Luck",
+   "firstLinks": 12
   },
   {
-   "title": "Duration",
-   "betweenness": 70
+   "title": "Glimmers",
+   "firstLinks": 11
+  },
+  {
+   "title": "Cooldown",
+   "firstLinks": 10
+  },
+  {
+   "title": "Dairy Plant",
+   "firstLinks": 10
   },
   {
    "title": "Emerald Diorama",
-   "betweenness": 64
+   "firstLinks": 10
+  },
+  {
+   "title": "Evolution",
+   "firstLinks": 9
+  },
+  {
+   "title": "Relics",
+   "firstLinks": 8
+  },
+  {
+   "title": "Health Drain",
+   "firstLinks": 8
+  },
+  {
+   "title": "Duration",
+   "firstLinks": 7
+  },
+  {
+   "title": "Forbidden Scrolls of Morbane",
+   "firstLinks": 7
+  },
+  {
+   "title": "Showstopper",
+   "firstLinks": 7
+  },
+  {
+   "title": "PowerUps",
+   "firstLinks": 6
+  },
+  {
+   "title": "Greed",
+   "firstLinks": 6
+  },
+  {
+   "title": "Treasure Chest",
+   "firstLinks": 6
+  },
+  {
+   "title": "Coffin",
+   "firstLinks": 6
+  },
+  {
+   "title": "Ode to Castlevania (stage)",
+   "firstLinks": 6
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Luck",
+   "chains": 468
+  },
+  {
+   "title": "Light source",
+   "chains": 468
+  },
+  {
+   "title": "Greatest Jubilee",
+   "chains": 468
+  },
+  {
+   "title": "Survarot",
+   "chains": 383
+  },
+  {
+   "title": "Passive items",
+   "chains": 381
+  },
+  {
+   "title": "Boon Marrabbio",
+   "chains": 307
+  },
+  {
+   "title": "Mad Forest",
+   "chains": 306
+  },
+  {
+   "title": "Stages",
+   "chains": 303
+  },
+  {
+   "title": "Dairy Plant",
+   "chains": 262
+  },
+  {
+   "title": "Spells",
+   "chains": 262
+  },
+  {
+   "title": "Mazerella",
+   "chains": 262
+  },
+  {
+   "title": "Floor Chicken",
+   "chains": 202
+  },
+  {
+   "title": "Level up",
+   "chains": 201
+  },
+  {
+   "title": "Weapons",
+   "chains": 181
+  },
+  {
+   "title": "Infinite Corridor",
+   "chains": 91
+  },
+  {
+   "title": "Evolution",
+   "chains": 90
+  },
+  {
+   "title": "Expansions",
+   "chains": 81
+  },
+  {
+   "title": "Achievements",
+   "chains": 79
+  },
+  {
+   "title": "Ars Gouda",
+   "chains": 78
+  },
+  {
+   "title": "Enemies",
+   "chains": 77
+  },
+  {
+   "title": "Reroll",
+   "chains": 73
+  },
+  {
+   "title": "Arcanas",
+   "chains": 72
+  },
+  {
+   "title": "Version history",
+   "chains": 58
+  },
+  {
+   "title": "Limit Break",
+   "chains": 55
+  },
+  {
+   "title": "Greed",
+   "chains": 38
+  },
+  {
+   "title": "Amount",
+   "chains": 32
+  },
+  {
+   "title": "Area",
+   "chains": 29
+  },
+  {
+   "title": "Knockback",
+   "chains": 29
+  },
+  {
+   "title": "Treasure Chest",
+   "chains": 23
+  },
+  {
+   "title": "Freeze",
+   "chains": 23
   }
  ]
 }

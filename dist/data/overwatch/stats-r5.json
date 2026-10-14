@@ -3,49 +3,77 @@
  "rank": "5",
  "nodes": 2808,
  "converge": {
-  "articles": 275,
-  "pct": 9.79,
-  "deadEnd": 2533,
-  "deadEndPct": 90.21,
-  "noLinks": 420,
-  "tooFewLinks": 1104,
-  "unresolvable": 69
+  "articles": 276,
+  "pct": 9.83,
+  "deadEnd": 2532,
+  "deadEndPct": 90.17,
+  "noLinks": 418,
+  "tooFewLinks": 1122,
+  "unresolvable": 30
  },
  "hopStats": {
-  "mean": 1.71,
-  "median": 1,
-  "p90": 3,
+  "mean": 1.89,
+  "median": 2,
+  "p90": 4,
   "max": 8
  },
  "histogram": {
-  "0": 35,
-  "1": 108,
-  "2": 76,
-  "3": 35,
-  "4": 13,
-  "5": 2,
-  "6": 1,
+  "0": 36,
+  "1": 100,
+  "2": 71,
+  "3": 33,
+  "4": 17,
+  "5": 9,
+  "6": 5,
   "7": 3,
   "8": 2
  },
- "components": 19,
- "cycleCount": 18,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 448,
+   "1": 370,
+   "2": 334,
+   "3": 250,
+   "4": 168,
+   "5": 124,
+   "6": 143,
+   "7": 81,
+   "8": 79,
+   "9": 59,
+   "10": 752
+  },
+  "atLeast": {
+   "1": 84,
+   "2": 70.9,
+   "3": 59,
+   "5": 44.1
+  }
+ },
+ "concentration": {
+  "top1Pct": 2.67,
+  "top3Pct": 4.91,
+  "top10Pct": 8.58,
+  "cycleCount": 17,
+  "entropyBits": 3.49
+ },
+ "components": 18,
+ "cycleCount": 17,
  "largestCycle": {
   "members": [
    "Omnic Crisis",
-   "Omnium"
+   "God program"
   ],
   "size": 2,
-  "basin": 95
+  "basin": 75
  },
  "topAttractors": [
   {
    "cycle": [
     "Omnic Crisis",
-    "Omnium"
+    "God program"
    ],
-   "basin": 95,
-   "pct": 3.38
+   "basin": 75,
+   "pct": 2.67
   },
   {
    "cycle": [
@@ -53,16 +81,32 @@
     "Vendetta",
     "Season/2026"
    ],
-   "basin": 35,
-   "pct": 1.25
+   "basin": 39,
+   "pct": 1.39
   },
   {
    "cycle": [
     "Game Modes",
     "Control"
    ],
-   "basin": 23,
-   "pct": 0.82
+   "basin": 24,
+   "pct": 0.85
+  },
+  {
+   "cycle": [
+    "Competitive Points",
+    "Competitive Progression"
+   ],
+   "basin": 21,
+   "pct": 0.75
+  },
+  {
+   "cycle": [
+    "Hashimoto clan",
+    "Tokyo"
+   ],
+   "basin": 18,
+   "pct": 0.64
   },
   {
    "cycle": [
@@ -77,16 +121,16 @@
     "Thames District",
     "London"
    ],
-   "basin": 15,
-   "pct": 0.53
+   "basin": 16,
+   "pct": 0.57
   },
   {
    "cycle": [
-    "Competitive Points",
-    "Competitive Progression"
+    "Anran",
+    "Wuxing University"
    ],
-   "basin": 12,
-   "pct": 0.43
+   "basin": 13,
+   "pct": 0.46
   },
   {
    "cycle": [
@@ -98,15 +142,8 @@
   },
   {
    "cycle": [
-    "Hashimoto clan",
-    "Tokyo"
-   ],
-   "basin": 9,
-   "pct": 0.32
-  },
-  {
-   "cycle": [
-    "Shop"
+    "Aurora",
+    "Grant"
    ],
    "basin": 9,
    "pct": 0.32
@@ -129,30 +166,6 @@
   },
   {
    "cycle": [
-    "Artificial intelligence",
-    "Aurora"
-   ],
-   "basin": 7,
-   "pct": 0.25
-  },
-  {
-   "cycle": [
-    "Ana"
-   ],
-   "basin": 7,
-   "pct": 0.25
-  },
-  {
-   "cycle": [
-    "Mondatta",
-    "R-7000 Ravager",
-    "Phreaks"
-   ],
-   "basin": 6,
-   "pct": 0.21
-  },
-  {
-   "cycle": [
     "Paris",
     "France"
    ],
@@ -169,6 +182,15 @@
   },
   {
    "cycle": [
+    "Mondatta",
+    "R-7000 Ravager",
+    "Phreaks"
+   ],
+   "basin": 3,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
     "Dayo",
     "Bisi"
    ],
@@ -177,35 +199,48 @@
   },
   {
    "cycle": [
-    "Estádio das Rãs"
+    "Biotic rifle",
+    "Nanobiotics"
    ],
-   "basin": 1,
-   "pct": 0.04
+   "basin": 2,
+   "pct": 0.07
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Wreckers",
-   "chains": 652,
-   "pct": 23.22,
-   "reason": "only 2 eligible links"
+   "title": "Rocket bot",
+   "chains": 629,
+   "pct": 22.4,
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Player Titles",
-   "chains": 58,
-   "pct": 2.07,
+   "chains": 57,
+   "pct": 2.03,
    "reason": "only 3 eligible links"
   },
   {
+   "title": "Wreckers",
+   "chains": 30,
+   "pct": 1.07,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Thailand",
+   "chains": 29,
+   "pct": 1.03,
+   "reason": "only 4 eligible links"
+  },
+  {
    "title": "Cape Town",
-   "chains": 21,
-   "pct": 0.75,
+   "chains": 17,
+   "pct": 0.61,
    "reason": "only 3 eligible links"
   },
   {
    "title": "Ryan Dennis",
-   "chains": 16,
-   "pct": 0.57,
+   "chains": 15,
+   "pct": 0.53,
    "reason": "no eligible links"
   },
   {
@@ -221,27 +256,27 @@
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Metal Mary",
-   "chains": 9,
-   "pct": 0.32,
-   "reason": "only 2 eligible links"
-  },
-  {
    "title": "Anya Al-Shahrani",
-   "chains": 9,
-   "pct": 0.32,
+   "chains": 12,
+   "pct": 0.43,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Xibalbá",
-   "chains": 8,
-   "pct": 0.28,
+   "chains": 9,
+   "pct": 0.32,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Basilio Díaz",
    "chains": 8,
    "pct": 0.28,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Marco (Deadlock Rebels)",
+   "chains": 7,
+   "pct": 0.25,
    "reason": "only 4 eligible links"
   },
   {
@@ -261,263 +296,251 @@
    "chains": 6,
    "pct": 0.21,
    "reason": "only 4 eligible links"
-  },
-  {
-   "title": "Mochi's Pottery Workshop",
-   "chains": 6,
-   "pct": 0.21,
-   "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Deadlock Gorge",
-   "chains": 5,
-   "pct": 0.18,
-   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Perks",
-   "inDegree": 46
+   "firstLinks": 48
   },
   {
    "title": "Overwatch (group)",
-   "inDegree": 29
+   "firstLinks": 29
   },
   {
    "title": "Stadium",
-   "inDegree": 28
+   "firstLinks": 29
   },
   {
    "title": "Omnic",
-   "inDegree": 25
-  },
-  {
-   "title": "Omnic Crisis",
-   "inDegree": 19
+   "firstLinks": 24
   },
   {
    "title": "Doomfist",
-   "inDegree": 17
+   "firstLinks": 18
   },
   {
    "title": "Vendetta",
-   "inDegree": 17
+   "firstLinks": 17
   },
   {
-   "title": "Season",
-   "inDegree": 14
-  },
-  {
-   "title": "Talon",
-   "inDegree": 13
-  },
-  {
-   "title": "Null Sector",
-   "inDegree": 13
-  },
-  {
-   "title": "Winston",
-   "inDegree": 12
+   "title": "Omnic Crisis",
+   "firstLinks": 16
   },
   {
    "title": "Cassidy",
-   "inDegree": 12
+   "firstLinks": 15
   },
   {
-   "title": "Genji",
-   "inDegree": 12
+   "title": "Talon",
+   "firstLinks": 14
   },
   {
-   "title": "Skins",
-   "inDegree": 11
-  },
-  {
-   "title": "Tracer",
-   "inDegree": 10
-  },
-  {
-   "title": "Torbjörn",
-   "inDegree": 10
-  },
-  {
-   "title": "Reinhardt",
-   "inDegree": 10
-  },
-  {
-   "title": "Maps",
-   "inDegree": 10
+   "title": "Season",
+   "firstLinks": 14
   },
   {
    "title": "Soldier: 76",
-   "inDegree": 9
-  },
-  {
-   "title": "Omnium",
-   "inDegree": 9
-  },
-  {
-   "title": "Echo",
-   "inDegree": 9
-  },
-  {
-   "title": "Baptiste",
-   "inDegree": 9
-  },
-  {
-   "title": "Symmetra",
-   "inDegree": 8
-  },
-  {
-   "title": "Reaper",
-   "inDegree": 8
-  },
-  {
-   "title": "Vishkar Corporation",
-   "inDegree": 8
-  },
-  {
-   "title": "Lúcio",
-   "inDegree": 8
-  },
-  {
-   "title": "Player Icons",
-   "inDegree": 8
-  },
-  {
-   "title": "Efi Oladele",
-   "inDegree": 8
-  },
-  {
-   "title": "Zarya",
-   "inDegree": 7
-  },
-  {
-   "title": "Numbani",
-   "inDegree": 7
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Perks",
-   "betweenness": 5508
-  },
-  {
-   "title": "Roles",
-   "betweenness": 4960
-  },
-  {
-   "title": "While you wait",
-   "betweenness": 4347
-  },
-  {
-   "title": "Practice Range",
-   "betweenness": 3732
-  },
-  {
-   "title": "Hit points",
-   "betweenness": 3125
-  },
-  {
-   "title": "D.Mon",
-   "betweenness": 2544
-  },
-  {
-   "title": "Beast",
-   "betweenness": 1911
-  },
-  {
-   "title": "Anubis",
-   "betweenness": 1776
-  },
-  {
-   "title": "Cairo",
-   "betweenness": 1680
-  },
-  {
-   "title": "Petras",
-   "betweenness": 1638
-  },
-  {
-   "title": "Null Sector",
-   "betweenness": 1620
-  },
-  {
-   "title": "United Kingdom",
-   "betweenness": 1560
-  },
-  {
-   "title": "Widowmaker",
-   "betweenness": 1530
-  },
-  {
-   "title": "Shambali",
-   "betweenness": 1529
-  },
-  {
-   "title": "MEKA Base",
-   "betweenness": 1276
-  },
-  {
-   "title": "Maps",
-   "betweenness": 966
-  },
-  {
-   "title": "Matchmaking",
-   "betweenness": 910
-  },
-  {
-   "title": "Omnic",
-   "betweenness": 901
-  },
-  {
-   "title": "Competitive Play",
-   "betweenness": 876
-  },
-  {
-   "title": "Overwatch (group)",
-   "betweenness": 867
-  },
-  {
-   "title": "Lúcio",
-   "betweenness": 830
-  },
-  {
-   "title": "Lúcioball",
-   "betweenness": 814
-  },
-  {
-   "title": "Junkers",
-   "betweenness": 650
-  },
-  {
-   "title": "Mystery Heroes",
-   "betweenness": 465
-  },
-  {
-   "title": "Arcade",
-   "betweenness": 432
-  },
-  {
-   "title": "Stadium",
-   "betweenness": 420
-  },
-  {
-   "title": "Doomfist",
-   "betweenness": 370
-  },
-  {
-   "title": "Zarya",
-   "betweenness": 210
+   "firstLinks": 13
   },
   {
    "title": "Genji",
-   "betweenness": 190
+   "firstLinks": 13
   },
   {
-   "title": "Numbani",
-   "betweenness": 176
+   "title": "Null Sector",
+   "firstLinks": 13
+  },
+  {
+   "title": "Skins",
+   "firstLinks": 11
+  },
+  {
+   "title": "Winston",
+   "firstLinks": 10
+  },
+  {
+   "title": "Torbjörn",
+   "firstLinks": 10
+  },
+  {
+   "title": "Reinhardt",
+   "firstLinks": 10
+  },
+  {
+   "title": "Maps",
+   "firstLinks": 10
+  },
+  {
+   "title": "Lúcio",
+   "firstLinks": 10
+  },
+  {
+   "title": "Tracer",
+   "firstLinks": 9
+  },
+  {
+   "title": "Echo",
+   "firstLinks": 9
+  },
+  {
+   "title": "Baptiste",
+   "firstLinks": 9
+  },
+  {
+   "title": "Kiriko",
+   "firstLinks": 9
+  },
+  {
+   "title": "Symmetra",
+   "firstLinks": 8
+  },
+  {
+   "title": "Omnium",
+   "firstLinks": 8
+  },
+  {
+   "title": "Player Icons",
+   "firstLinks": 8
+  },
+  {
+   "title": "Efi Oladele",
+   "firstLinks": 8
+  },
+  {
+   "title": "Reaper",
+   "firstLinks": 7
+  },
+  {
+   "title": "Mercy",
+   "firstLinks": 7
+  },
+  {
+   "title": "Vishkar Corporation",
+   "firstLinks": 7
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Rocket bot",
+   "chains": 629
+  },
+  {
+   "title": "Training bot",
+   "chains": 628
+  },
+  {
+   "title": "While you wait",
+   "chains": 627
+  },
+  {
+   "title": "Roles",
+   "chains": 626
+  },
+  {
+   "title": "Perks",
+   "chains": 619
+  },
+  {
+   "title": "Widowmaker",
+   "chains": 152
+  },
+  {
+   "title": "Shambali",
+   "chains": 141
+  },
+  {
+   "title": "Null Sector",
+   "chains": 134
+  },
+  {
+   "title": "United Kingdom",
+   "chains": 119
+  },
+  {
+   "title": "Petras",
+   "chains": 116
+  },
+  {
+   "title": "Cairo",
+   "chains": 111
+  },
+  {
+   "title": "Anubis",
+   "chains": 110
+  },
+  {
+   "title": "Omnic Crisis",
+   "chains": 75
+  },
+  {
+   "title": "God program",
+   "chains": 75
+  },
+  {
+   "title": "Lúcio",
+   "chains": 59
+  },
+  {
+   "title": "Player Titles",
+   "chains": 57
+  },
+  {
+   "title": "Overwatch (group)",
+   "chains": 53
+  },
+  {
+   "title": "Omnic",
+   "chains": 50
+  },
+  {
+   "title": "Battle Pass",
+   "chains": 50
+  },
+  {
+   "title": "Lúcioball",
+   "chains": 48
+  },
+  {
+   "title": "Competitive Play",
+   "chains": 47
+  },
+  {
+   "title": "Matchmaking",
+   "chains": 44
+  },
+  {
+   "title": "Maps",
+   "chains": 43
+  },
+  {
+   "title": "Talon",
+   "chains": 39
+  },
+  {
+   "title": "Doomfist",
+   "chains": 39
+  },
+  {
+   "title": "Vendetta",
+   "chains": 39
+  },
+  {
+   "title": "Season/2026",
+   "chains": 39
+  },
+  {
+   "title": "Wreckers",
+   "chains": 30
+  },
+  {
+   "title": "Stadium",
+   "chains": 30
+  },
+  {
+   "title": "Junkers",
+   "chains": 29
   }
  ]
 }

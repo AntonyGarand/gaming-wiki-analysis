@@ -3,164 +3,165 @@
  "rank": "3",
  "nodes": 35312,
  "converge": {
-  "articles": 15009,
-  "pct": 42.5,
-  "deadEnd": 20303,
-  "deadEndPct": 57.5,
-  "noLinks": 2196,
-  "tooFewLinks": 7792,
-  "unresolvable": 992
+  "articles": 15646,
+  "pct": 44.31,
+  "deadEnd": 19666,
+  "deadEndPct": 55.69,
+  "noLinks": 2241,
+  "tooFewLinks": 8639,
+  "unresolvable": 20
  },
  "hopStats": {
-  "mean": 3.12,
-  "median": 1,
-  "p90": 10,
-  "max": 21
+  "mean": 3.61,
+  "median": 2,
+  "p90": 12,
+  "max": 32
  },
  "histogram": {
-  "0": 2198,
-  "1": 5474,
-  "2": 2277,
-  "3": 1534,
-  "4": 672,
-  "5": 485,
-  "6": 361,
-  "7": 248,
-  "8": 136,
-  "9": 122,
-  "10": 134,
-  "11": 118,
-  "12": 76,
-  "13": 152,
-  "14": 409,
-  "15": 361,
-  "16": 98,
-  "17": 63,
-  "18": 45,
-  "19": 39,
-  "20": 5,
-  "21": 2
+  "0": 2149,
+  "1": 5192,
+  "2": 2471,
+  "3": 1593,
+  "4": 1044,
+  "5": 731,
+  "6": 205,
+  "7": 186,
+  "8": 144,
+  "9": 126,
+  "10": 47,
+  "11": 152,
+  "12": 371,
+  "13": 373,
+  "14": 114,
+  "15": 108,
+  "16": 74,
+  "17": 71,
+  "18": 12,
+  "19": 16,
+  "20": 35,
+  "21": 49,
+  "22": 29,
+  "23": 61,
+  "24": 58,
+  "25": 89,
+  "26": 46,
+  "27": 42,
+  "28": 22,
+  "29": 20,
+  "30": 9,
+  "31": 6,
+  "32": 1
  },
- "components": 1118,
- "cycleCount": 1117,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 2261,
+   "1": 1263,
+   "2": 7376,
+   "3": 8973,
+   "4": 4316,
+   "5": 2378,
+   "6": 1351,
+   "7": 842,
+   "8": 601,
+   "9": 503,
+   "10": 5448
+  },
+  "atLeast": {
+   "1": 93.6,
+   "2": 90,
+   "3": 69.1,
+   "5": 31.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 15.79,
+  "top3Pct": 26.46,
+  "top10Pct": 29.11,
+  "cycleCount": 1072,
+  "entropyBits": 5.47
+ },
+ "components": 1073,
+ "cycleCount": 1072,
  "largestCycle": {
   "members": [
-   "V-Bucks",
-   "Battle Pass"
+   "Battle Pass",
+   "V-Bucks"
   ],
   "size": 2,
-  "basin": 4597
+  "basin": 5577
  },
  "topAttractors": [
   {
    "cycle": [
-    "V-Bucks",
-    "Battle Pass"
+    "Battle Pass",
+    "V-Bucks"
    ],
-   "basin": 4597,
-   "pct": 13.02
+   "basin": 5577,
+   "pct": 15.79
   },
   {
    "cycle": [
-    "Elimination",
-    "Self-Revive Device"
+    "Solo",
+    "Rebooting"
    ],
-   "basin": 2421,
-   "pct": 6.86
+   "basin": 2809,
+   "pct": 7.95
   },
   {
    "cycle": [
     "Fortnite",
     "Update v42.00"
    ],
-   "basin": 1000,
-   "pct": 2.83
+   "basin": 958,
+   "pct": 2.71
   },
   {
    "cycle": [
     "Fortnite Festival",
     "Jam Tracks"
    ],
-   "basin": 275,
-   "pct": 0.78
+   "basin": 265,
+   "pct": 0.75
   },
   {
    "cycle": [
     "Oninoshima",
     "Spirit Siblings"
    ],
-   "basin": 240,
-   "pct": 0.68
-  },
-  {
-   "cycle": [
-    "Rocket Racing"
-   ],
-   "basin": 170,
-   "pct": 0.48
+   "basin": 248,
+   "pct": 0.7
   },
   {
    "cycle": [
     "Wild Card",
     "Cuff Case"
    ],
-   "basin": 115,
+   "basin": 118,
    "pct": 0.33
   },
   {
    "cycle": [
-    "Mythic Storm King"
+    "Mythic Storm King",
+    "Mythic Schematic Cache"
    ],
-   "basin": 114,
-   "pct": 0.32
+   "basin": 116,
+   "pct": 0.33
   },
   {
    "cycle": [
     "Inferno Skeleton Balvin Bundle",
     "Inferno Skeleton Balvin"
    ],
-   "basin": 104,
-   "pct": 0.29
-  },
-  {
-   "cycle": [
-    "Dark Voyager (Reality Redacted)"
-   ],
-   "basin": 99,
-   "pct": 0.28
-  },
-  {
-   "cycle": [
-    "Reaper Sniper Rifle",
-    "Peek2X Reaper Sniper Rifle"
-   ],
-   "basin": 54,
-   "pct": 0.15
-  },
-  {
-   "cycle": [
-    "Fishing",
-    "Fish",
-    "Mythic Goldfish",
-    "Flopper"
-   ],
-   "basin": 49,
-   "pct": 0.14
+   "basin": 105,
+   "pct": 0.3
   },
   {
    "cycle": [
     "Kit's Shockwave Launcher",
     "Shockwave Launcher"
    ],
-   "basin": 48,
-   "pct": 0.14
-  },
-  {
-   "cycle": [
-    "Characters (Battle Royale)"
-   ],
-   "basin": 42,
-   "pct": 0.12
+   "basin": 45,
+   "pct": 0.13
   },
   {
    "cycle": [
@@ -177,6 +178,22 @@
    ],
    "basin": 37,
    "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Update v15.30",
+    "Kit's Cantina"
+   ],
+   "basin": 31,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Reaper Sniper Rifle",
+    "Peek2X Reaper Sniper Rifle"
+   ],
+   "basin": 29,
+   "pct": 0.08
   },
   {
    "cycle": [
@@ -209,343 +226,367 @@
    ],
    "basin": 24,
    "pct": 0.07
+  },
+  {
+   "cycle": [
+    "KINGDOM HEARTS Bundle",
+    "Sora"
+   ],
+   "basin": 24,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Goku & Beerus Bundle",
+    "Son Goku"
+   ],
+   "basin": 23,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Modular Monarch Pistol",
+    "Doctor Doom's Monarch Pistol"
+   ],
+   "basin": 22,
+   "pct": 0.06
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "XP",
-   "chains": 600,
-   "pct": 1.7,
-   "reason": "redlink target"
-  },
-  {
    "title": "Soaring 50s",
-   "chains": 379,
-   "pct": 1.07,
-   "reason": "only 4 eligible links"
-  },
-  {
-   "title": "Full List of Items",
-   "chains": 325,
-   "pct": 0.92,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Venture XP",
-   "chains": 213,
-   "pct": 0.6,
-   "reason": "only 1 eligible links"
+   "chains": 390,
+   "pct": 1.1,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Limited Time Offers",
-   "chains": 187,
-   "pct": 0.53,
-   "reason": "only 4 eligible links"
+   "chains": 238,
+   "pct": 0.67,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Stellar Burst",
+   "chains": 225,
+   "pct": 0.64,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Venture XP",
+   "chains": 218,
+   "pct": 0.62,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Danger Dux Bundle",
-   "chains": 177,
-   "pct": 0.5,
-   "reason": "only 5 eligible links"
+   "chains": 165,
+   "pct": 0.47,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Update v42.30",
-   "chains": 109,
-   "pct": 0.31,
+   "chains": 114,
+   "pct": 0.32,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Settings",
+   "chains": 107,
+   "pct": 0.3,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "She-Hulk's Fists",
+   "chains": 103,
+   "pct": 0.29,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "All Eyez On Me",
    "chains": 89,
    "pct": 0.25,
-   "reason": "only 5 eligible links"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Black Beatles",
    "chains": 85,
    "pct": 0.24,
-   "reason": "only 5 eligible links"
-  },
-  {
-   "title": "Settings",
-   "chains": 80,
-   "pct": 0.23,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Greasy Grove",
+   "title": "Event Pass",
    "chains": 78,
    "pct": 0.22,
-   "reason": "only 2 eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "I Want It That Way",
    "chains": 77,
    "pct": 0.22,
-   "reason": "only 5 eligible links"
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Greasy Grove",
+   "chains": 76,
+   "pct": 0.22,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Summer Road Trip Bundle",
-   "chains": 64,
-   "pct": 0.18,
-   "reason": "only 5 eligible links"
+   "chains": 66,
+   "pct": 0.19,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "LUNCH",
    "chains": 58,
    "pct": 0.16,
-   "reason": "only 5 eligible links"
-  },
-  {
-   "title": "Industry Baby",
-   "chains": 51,
-   "pct": 0.14,
-   "reason": "only 5 eligible links"
+   "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Battle Pass",
-   "inDegree": 2503
+   "firstLinks": 2525
   },
   {
    "title": "Music Pass",
-   "inDegree": 400
+   "firstLinks": 401
   },
   {
    "title": "XP",
-   "inDegree": 322
+   "firstLinks": 331
   },
   {
    "title": "Outfits",
-   "inDegree": 224
+   "firstLinks": 218
   },
   {
    "title": "Fortnite Crew",
-   "inDegree": 215
+   "firstLinks": 215
   },
   {
    "title": "Fortnite: Battle Royale",
-   "inDegree": 149
+   "firstLinks": 145
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "firstLinks": 142
   },
   {
    "title": "Oninoshima",
-   "inDegree": 138
-  },
-  {
-   "title": "Fortnite: Save the World",
-   "inDegree": 133
+   "firstLinks": 139
   },
   {
    "title": "Athena",
-   "inDegree": 120
-  },
-  {
-   "title": "Quests",
-   "inDegree": 114
+   "firstLinks": 120
   },
   {
    "title": "Helios",
-   "inDegree": 113
-  },
-  {
-   "title": "Asteria",
-   "inDegree": 112
-  },
-  {
-   "title": "Twine Peaks",
-   "inDegree": 106
-  },
-  {
-   "title": "Victory Royale",
-   "inDegree": 98
-  },
-  {
-   "title": "Ventures",
-   "inDegree": 96
-  },
-  {
-   "title": "Golden Coast",
-   "inDegree": 80
-  },
-  {
-   "title": "Canny Valley",
-   "inDegree": 78
-  },
-  {
-   "title": "Unnamed Locations",
-   "inDegree": 78
-  },
-  {
-   "title": "Event Pass",
-   "inDegree": 72
-  },
-  {
-   "title": "Back Blings",
-   "inDegree": 68
-  },
-  {
-   "title": "Counterpart Outfits",
-   "inDegree": 63
-  },
-  {
-   "title": "Update v42.30",
-   "inDegree": 63
-  },
-  {
-   "title": "Shattered Coast",
-   "inDegree": 58
-  },
-  {
-   "title": "Plankerton",
-   "inDegree": 57
-  },
-  {
-   "title": "Fortnite",
-   "inDegree": 57
-  },
-  {
-   "title": "Industry Baby",
-   "inDegree": 50
-  },
-  {
-   "title": "Recruits",
-   "inDegree": 47
-  },
-  {
-   "title": "Black Beatles",
-   "inDegree": 43
-  },
-  {
-   "title": "Hero Back Blings",
-   "inDegree": 40
-  },
-  {
-   "title": "Fortnite Festival",
-   "inDegree": 39
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Fortnite: Save the World",
-   "betweenness": 14300
-  },
-  {
-   "title": "Husk Monsters",
-   "betweenness": 13284
-  },
-  {
-   "title": "Plankerton",
-   "betweenness": 12770
-  },
-  {
-   "title": "Storm Chest",
-   "betweenness": 12188
-  },
-  {
-   "title": "Stonewood",
-   "betweenness": 11988
-  },
-  {
-   "title": "Copper Ore",
-   "betweenness": 10664
-  },
-  {
-   "title": "Crafting (Save the World)",
-   "betweenness": 9646
-  },
-  {
-   "title": "Fortnite: Battle Royale",
-   "betweenness": 9604
-  },
-  {
-   "title": "Materials (Save the World)",
-   "betweenness": 8286
-  },
-  {
-   "title": "Solo",
-   "betweenness": 7221
-  },
-  {
-   "title": "Traps (Battle Royale)",
-   "betweenness": 6955
-  },
-  {
-   "title": "Rebooting",
-   "betweenness": 4824
-  },
-  {
-   "title": "Battle Pass",
-   "betweenness": 4585
+   "firstLinks": 113
   },
   {
    "title": "Quests",
-   "betweenness": 4326
+   "firstLinks": 112
   },
   {
-   "title": "Elimination",
-   "betweenness": 2419
+   "title": "Asteria",
+   "firstLinks": 112
   },
   {
-   "title": "Heroes",
-   "betweenness": 1904
+   "title": "Twine Peaks",
+   "firstLinks": 107
   },
   {
    "title": "Victory Royale",
-   "betweenness": 1788
+   "firstLinks": 99
   },
   {
-   "title": "Constructors",
-   "betweenness": 1680
+   "title": "Ventures",
+   "firstLinks": 96
   },
   {
-   "title": "Music Pass",
-   "betweenness": 1596
+   "title": "Unnamed Locations",
+   "firstLinks": 79
   },
   {
-   "title": "Fortnite: Ballistic",
-   "betweenness": 1540
+   "title": "Golden Coast",
+   "firstLinks": 79
   },
   {
-   "title": "Fortnite Crew",
-   "betweenness": 1522
-  },
-  {
-   "title": "Umbrella",
-   "betweenness": 1500
-  },
-  {
-   "title": "Building",
-   "betweenness": 1495
+   "title": "Canny Valley",
+   "firstLinks": 78
   },
   {
    "title": "Back Blings",
-   "betweenness": 1470
+   "firstLinks": 72
   },
   {
-   "title": "Update v40.20",
-   "betweenness": 1458
+   "title": "Event Pass",
+   "firstLinks": 72
   },
   {
-   "title": "Scanning",
-   "betweenness": 1375
+   "title": "Update v42.30",
+   "firstLinks": 67
+  },
+  {
+   "title": "Counterpart Outfits",
+   "firstLinks": 65
+  },
+  {
+   "title": "Shattered Coast",
+   "firstLinks": 59
+  },
+  {
+   "title": "Plankerton",
+   "firstLinks": 58
+  },
+  {
+   "title": "Fortnite",
+   "firstLinks": 55
+  },
+  {
+   "title": "Industry Baby",
+   "firstLinks": 50
+  },
+  {
+   "title": "Recruits",
+   "firstLinks": 47
+  },
+  {
+   "title": "Black Beatles",
+   "firstLinks": 43
+  },
+  {
+   "title": "Fortnite Festival",
+   "firstLinks": 40
+  },
+  {
+   "title": "Characters (Battle Royale)",
+   "firstLinks": 37
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "V-Bucks",
+   "chains": 5577
+  },
+  {
+   "title": "Battle Pass",
+   "chains": 5577
+  },
+  {
+   "title": "Solo",
+   "chains": 2809
+  },
+  {
+   "title": "Rebooting",
+   "chains": 2809
+  },
+  {
+   "title": "Fortnite: Battle Royale",
+   "chains": 2794
+  },
+  {
+   "title": "Traps (Battle Royale)",
+   "chains": 2039
+  },
+  {
+   "title": "Materials (Save the World)",
+   "chains": 2029
+  },
+  {
+   "title": "Crafting (Save the World)",
+   "chains": 2026
+  },
+  {
+   "title": "Copper Ore",
+   "chains": 1979
+  },
+  {
+   "title": "Stonewood",
+   "chains": 1978
+  },
+  {
+   "title": "Plankerton",
+   "chains": 1923
+  },
+  {
+   "title": "Storm Chest",
+   "chains": 1750
+  },
+  {
+   "title": "Husk Monsters",
+   "chains": 1749
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "chains": 1742
+  },
+  {
+   "title": "Fortnite Crew",
+   "chains": 1398
+  },
+  {
+   "title": "Music Pass",
+   "chains": 1169
+  },
+  {
+   "title": "Fortnite",
+   "chains": 958
+  },
+  {
+   "title": "Update v42.00",
+   "chains": 958
+  },
+  {
+   "title": "Building",
+   "chains": 647
+  },
+  {
+   "title": "XP",
+   "chains": 634
+  },
+  {
+   "title": "Constructors",
+   "chains": 628
+  },
+  {
+   "title": "Heroes",
+   "chains": 617
   },
   {
    "title": "Outfits",
-   "betweenness": 1368
+   "chains": 596
   },
   {
    "title": "Superchargers",
-   "betweenness": 1312
+   "chains": 529
   },
   {
-   "title": "Message Feed",
-   "betweenness": 1275
+   "title": "Update v40.20",
+   "chains": 524
   },
   {
-   "title": "The Omniverse",
-   "betweenness": 1274
+   "title": "Fortnite: Ballistic",
+   "chains": 516
+  },
+  {
+   "title": "Full List of Items",
+   "chains": 487
+  },
+  {
+   "title": "Spy Games",
+   "chains": 457
+  },
+  {
+   "title": "Shotguns",
+   "chains": 432
+  },
+  {
+   "title": "Soaring 50s",
+   "chains": 390
   }
  ]
 }

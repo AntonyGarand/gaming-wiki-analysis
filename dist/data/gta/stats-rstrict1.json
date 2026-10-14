@@ -3,47 +3,75 @@
  "rank": "strict1",
  "nodes": 24073,
  "converge": {
-  "articles": 22130,
-  "pct": 91.93,
-  "deadEnd": 1943,
-  "deadEndPct": 8.07,
-  "noLinks": 878,
+  "articles": 22302,
+  "pct": 92.64,
+  "deadEnd": 1771,
+  "deadEndPct": 7.36,
+  "noLinks": 1032,
   "tooFewLinks": 0,
-  "unresolvable": 308
+  "unresolvable": 16
  },
  "hopStats": {
-  "mean": 3.47,
+  "mean": 3.48,
   "median": 3,
   "p90": 6,
   "max": 15
  },
  "histogram": {
-  "0": 787,
-  "1": 2272,
-  "2": 4698,
-  "3": 5543,
-  "4": 4068,
-  "5": 1893,
-  "6": 836,
-  "7": 577,
-  "8": 461,
-  "9": 485,
-  "10": 193,
-  "11": 131,
-  "12": 137,
-  "13": 30,
+  "0": 786,
+  "1": 2263,
+  "2": 4745,
+  "3": 5563,
+  "4": 4117,
+  "5": 1915,
+  "6": 853,
+  "7": 579,
+  "8": 463,
+  "9": 489,
+  "10": 207,
+  "11": 132,
+  "12": 139,
+  "13": 32,
   "14": 15,
   "15": 4
  },
- "components": 410,
- "cycleCount": 409,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 1048,
+   "1": 1601,
+   "2": 3561,
+   "3": 2434,
+   "4": 2196,
+   "5": 1591,
+   "6": 1320,
+   "7": 1098,
+   "8": 956,
+   "9": 787,
+   "10": 7481
+  },
+  "atLeast": {
+   "1": 95.6,
+   "2": 89,
+   "3": 74.2,
+   "5": 55
+  }
+ },
+ "concentration": {
+  "top1Pct": 27.83,
+  "top3Pct": 56.76,
+  "top10Pct": 74.9,
+  "cycleCount": 390,
+  "entropyBits": 4.06
+ },
+ "components": 391,
+ "cycleCount": 390,
  "largestCycle": {
   "members": [
    "Protagonist",
    "GTA Online Protagonist"
   ],
   "size": 2,
-  "basin": 6643
+  "basin": 6700
  },
  "topAttractors": [
   {
@@ -51,56 +79,64 @@
     "Protagonist",
     "GTA Online Protagonist"
    ],
-   "basin": 6643,
-   "pct": 27.6
+   "basin": 6700,
+   "pct": 27.83
   },
   {
    "cycle": [
     "United States of America",
     "Canada"
    ],
-   "basin": 4945,
-   "pct": 20.54
+   "basin": 4998,
+   "pct": 20.76
   },
   {
    "cycle": [
     "Los Santos County",
     "Blaine County"
    ],
-   "basin": 1968,
-   "pct": 8.18
-  },
-  {
-   "cycle": [
-    "United Kingdom",
-    "Scotland"
-   ],
-   "basin": 1332,
-   "pct": 5.53
+   "basin": 1965,
+   "pct": 8.16
   },
   {
    "cycle": [
     "PlayStation 2",
     "PlayStation 3"
    ],
-   "basin": 1316,
-   "pct": 5.47
+   "basin": 1351,
+   "pct": 5.61
+  },
+  {
+   "cycle": [
+    "United Kingdom",
+    "Scotland"
+   ],
+   "basin": 1328,
+   "pct": 5.52
   },
   {
    "cycle": [
     "Los Santos (3D Universe)",
     "Red County (3D Universe)"
    ],
-   "basin": 505,
-   "pct": 2.1
+   "basin": 508,
+   "pct": 2.11
   },
   {
    "cycle": [
     "Save Points",
     "Jesus Saves"
    ],
-   "basin": 341,
-   "pct": 1.42
+   "basin": 347,
+   "pct": 1.44
+  },
+  {
+   "cycle": [
+    "Derek the Dodo",
+    "Club Soda Kenny"
+   ],
+   "basin": 298,
+   "pct": 1.24
   },
   {
    "cycle": [
@@ -109,14 +145,6 @@
    ],
    "basin": 297,
    "pct": 1.23
-  },
-  {
-   "cycle": [
-    "Derek the Dodo",
-    "Club Soda Kenny"
-   ],
-   "basin": 281,
-   "pct": 1.17
   },
   {
    "cycle": [
@@ -131,8 +159,8 @@
     "Interstate 404",
     "Admiral Causeway"
    ],
-   "basin": 210,
-   "pct": 0.87
+   "basin": 212,
+   "pct": 0.88
   },
   {
    "cycle": [
@@ -147,7 +175,7 @@
     "Whetstone",
     "Whetstone-Flint County Creek"
    ],
-   "basin": 182,
+   "basin": 183,
    "pct": 0.76
   },
   {
@@ -155,7 +183,7 @@
     "Eyefind",
     "Mail.eyefind.info"
    ],
-   "basin": 169,
+   "basin": 168,
    "pct": 0.7
   },
   {
@@ -163,7 +191,7 @@
     "BAWSAQ",
     "BAWSAQ Building"
    ],
-   "basin": 158,
+   "basin": 159,
    "pct": 0.66
   },
   {
@@ -203,27 +231,27 @@
     "Save Points in GTA San Andreas",
     "The Johnson House"
    ],
-   "basin": 85,
-   "pct": 0.35
+   "basin": 86,
+   "pct": 0.36
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Netflix",
-   "chains": 435,
-   "pct": 1.81,
+   "chains": 437,
+   "pct": 1.82,
    "reason": "no eligible links"
   },
   {
    "title": "Game Boy Color",
    "chains": 38,
    "pct": 0.16,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "GTA VI Website",
-   "chains": 27,
-   "pct": 0.11,
+   "chains": 31,
+   "pct": 0.13,
    "reason": "no eligible links"
   },
   {
@@ -233,16 +261,16 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Vice Broadcasting Service",
-   "chains": 15,
-   "pct": 0.06,
-   "reason": "redlink target"
+   "title": "Numbered Highways in GTA V",
+   "chains": 19,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Grand Theft Auto VI/Artwork",
+   "title": "Vice Broadcasting Service",
    "chains": 14,
    "pct": 0.06,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "Peep That Shit",
@@ -263,22 +291,10 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Golf",
-   "chains": 8,
-   "pct": 0.03,
-   "reason": "redlink target"
-  },
-  {
    "title": "Paul Farley",
    "chains": 7,
    "pct": 0.03,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Police Stations",
-   "chains": 7,
-   "pct": 0.03,
-   "reason": "redlink target"
   },
   {
    "title": "David Jones",
@@ -296,252 +312,264 @@
    "title": "Ice-T",
    "chains": 6,
    "pct": 0.02,
-   "reason": "redlink target"
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Ballad of Gay Tony/Trailers",
+   "chains": 5,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Physics Engine",
+   "chains": 5,
+   "pct": 0.02,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Pedestrians",
-   "inDegree": 973
+   "firstLinks": 973
   },
   {
    "title": "Pedestrians in GTA IV",
-   "inDegree": 656
+   "firstLinks": 656
   },
   {
    "title": "Carl Johnson",
-   "inDegree": 232
+   "firstLinks": 234
   },
   {
    "title": "Los Santos (HD Universe)",
-   "inDegree": 198
+   "firstLinks": 198
   },
   {
    "title": "Liberty Tree (HD Universe)",
-   "inDegree": 168
+   "firstLinks": 168
   },
   {
    "title": "Grand Theft Auto VI/Leaks",
-   "inDegree": 164
+   "firstLinks": 165
   },
   {
    "title": "Races in GTA Online",
-   "inDegree": 155
+   "firstLinks": 155
   },
   {
    "title": "Algonquin",
-   "inDegree": 154
-  },
-  {
-   "title": "Vapid",
-   "inDegree": 136
-  },
-  {
-   "title": "Weazel News",
-   "inDegree": 135
+   "firstLinks": 154
   },
   {
    "title": "Niko Bellic",
-   "inDegree": 129
+   "firstLinks": 141
+  },
+  {
+   "title": "Vapid",
+   "firstLinks": 136
+  },
+  {
+   "title": "Weazel News",
+   "firstLinks": 135
   },
   {
    "title": "List of Street Names",
-   "inDegree": 128
+   "firstLinks": 128
   },
   {
    "title": "Franklin Clinton",
-   "inDegree": 125
+   "firstLinks": 125
+  },
+  {
+   "title": "United States of America",
+   "firstLinks": 121
   },
   {
    "title": "Los Santos (3D Universe)",
-   "inDegree": 120
-  },
-  {
-   "title": "United States of America",
-   "inDegree": 120
+   "firstLinks": 120
   },
   {
    "title": "Tommy Vercetti",
-   "inDegree": 111
-  },
-  {
-   "title": "Adversary Modes",
-   "inDegree": 110
+   "firstLinks": 111
   },
   {
    "title": "Toni Cipriani",
-   "inDegree": 109
+   "firstLinks": 110
+  },
+  {
+   "title": "Adversary Modes",
+   "firstLinks": 110
   },
   {
    "title": "Protagonist",
-   "inDegree": 104
+   "firstLinks": 104
   },
   {
    "title": "Salvage Yard Robberies",
-   "inDegree": 101
+   "firstLinks": 101
   },
   {
    "title": "Missions in GTA",
-   "inDegree": 100
+   "firstLinks": 100
   },
   {
    "title": "Declasse",
-   "inDegree": 99
+   "firstLinks": 99
   },
   {
    "title": "Hove Beach",
-   "inDegree": 93
+   "firstLinks": 93
   },
   {
    "title": "United Kingdom",
-   "inDegree": 92
+   "firstLinks": 92
   },
   {
    "title": "Protagonists in GTA (1997 game)",
-   "inDegree": 87
+   "firstLinks": 87
   },
   {
    "title": "Lucky Wheel",
-   "inDegree": 86
+   "firstLinks": 86
   },
   {
    "title": "Liberty City Police Department (HD Universe)",
-   "inDegree": 84
+   "firstLinks": 84
   },
   {
    "title": "Alderney City",
-   "inDegree": 79
+   "firstLinks": 80
+  },
+  {
+   "title": "Trevor Philips",
+   "firstLinks": 79
   },
   {
    "title": "Grand Theft Auto VI/Trailers",
-   "inDegree": 79
-  },
-  {
-   "title": "Websites in GTA IV",
-   "inDegree": 78
+   "firstLinks": 79
   }
  ],
- "topBetweenness": [
-  {
-   "title": "Universes",
-   "betweenness": 7572
-  },
-  {
-   "title": "Top-Down Perspective",
-   "betweenness": 6415
-  },
+ "topThroughTraffic": [
   {
    "title": "Protagonist",
-   "betweenness": 5830
+   "chains": 6700
   },
   {
-   "title": "Switch Scenes",
-   "betweenness": 5152
+   "title": "GTA Online Protagonist",
+   "chains": 6700
+  },
+  {
+   "title": "Canada",
+   "chains": 4998
   },
   {
    "title": "United States of America",
-   "betweenness": 4916
+   "chains": 4998
   },
   {
-   "title": "3D Universe",
-   "betweenness": 4816
-  },
-  {
-   "title": "List of Street Names",
-   "betweenness": 4592
-  },
-  {
-   "title": "Cutscenes",
-   "betweenness": 3918
-  },
-  {
-   "title": "Pedestrians",
-   "betweenness": 3330
-  },
-  {
-   "title": "Algonquin",
-   "betweenness": 3126
-  },
-  {
-   "title": "Missions",
-   "betweenness": 3080
-  },
-  {
-   "title": "Los Santos (HD Universe)",
-   "betweenness": 2860
-  },
-  {
-   "title": "Pedestrians in GTA IV",
-   "betweenness": 2636
-  },
-  {
-   "title": "Characters",
-   "betweenness": 2294
-  },
-  {
-   "title": "State of Liberty (HD Universe)",
-   "betweenness": 2210
-  },
-  {
-   "title": "Broker",
-   "betweenness": 2060
-  },
-  {
-   "title": "Police Patrol",
-   "betweenness": 1980
-  },
-  {
-   "title": "Money",
-   "betweenness": 1788
+   "title": "Blaine County",
+   "chains": 1965
   },
   {
    "title": "Los Santos County",
-   "betweenness": 1691
+   "chains": 1965
   },
   {
-   "title": "Statistics",
-   "betweenness": 1675
+   "title": "Missions",
+   "chains": 1548
   },
   {
-   "title": "Europe",
-   "betweenness": 1594
+   "title": "Los Santos (HD Universe)",
+   "chains": 1421
   },
   {
-   "title": "Declasse",
-   "betweenness": 1590
+   "title": "PlayStation 3",
+   "chains": 1351
   },
   {
-   "title": "Mafia",
-   "betweenness": 1582
-  },
-  {
-   "title": "Gang Leaders",
-   "betweenness": 1536
-  },
-  {
-   "title": "State of Alderney",
-   "betweenness": 1448
-  },
-  {
-   "title": "Police Scanner",
-   "betweenness": 1395
-  },
-  {
-   "title": "Pause Menu",
-   "betweenness": 1392
+   "title": "PlayStation 2",
+   "chains": 1351
   },
   {
    "title": "United Kingdom",
-   "betweenness": 1304
+   "chains": 1328
   },
   {
-   "title": "Radio Stations in GTA San Andreas",
-   "betweenness": 1210
+   "title": "Scotland",
+   "chains": 1328
   },
   {
-   "title": "Respect",
-   "betweenness": 1047
+   "title": "Cutscenes",
+   "chains": 1313
+  },
+  {
+   "title": "Switch Scenes",
+   "chains": 1295
+  },
+  {
+   "title": "Top-Down Perspective",
+   "chains": 1290
+  },
+  {
+   "title": "Universes",
+   "chains": 1269
+  },
+  {
+   "title": "Characters",
+   "chains": 1149
+  },
+  {
+   "title": "State of Liberty (HD Universe)",
+   "chains": 1116
+  },
+  {
+   "title": "Pedestrians",
+   "chains": 1111
+  },
+  {
+   "title": "Algonquin",
+   "chains": 1051
+  },
+  {
+   "title": "Declasse",
+   "chains": 796
+  },
+  {
+   "title": "Europe",
+   "chains": 791
+  },
+  {
+   "title": "State of Alderney",
+   "chains": 730
+  },
+  {
+   "title": "3D Universe",
+   "chains": 698
+  },
+  {
+   "title": "Police Patrol",
+   "chains": 661
+  },
+  {
+   "title": "Pedestrians in GTA IV",
+   "chains": 660
+  },
+  {
+   "title": "List of Street Names",
+   "chains": 583
+  },
+  {
+   "title": "Races in GTA Online",
+   "chains": 528
+  },
+  {
+   "title": "Broker",
+   "chains": 521
+  },
+  {
+   "title": "Los Santos (3D Universe)",
+   "chains": 508
   }
  ]
 }

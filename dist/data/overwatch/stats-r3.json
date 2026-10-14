@@ -3,61 +3,102 @@
  "rank": "3",
  "nodes": 2808,
  "converge": {
-  "articles": 817,
-  "pct": 29.1,
-  "deadEnd": 1991,
-  "deadEndPct": 70.9,
-  "noLinks": 420,
-  "tooFewLinks": 683,
-  "unresolvable": 80
+  "articles": 1447,
+  "pct": 51.53,
+  "deadEnd": 1361,
+  "deadEndPct": 48.47,
+  "noLinks": 418,
+  "tooFewLinks": 704,
+  "unresolvable": 30
  },
  "hopStats": {
-  "mean": 3.32,
-  "median": 3,
+  "mean": 2.82,
+  "median": 2,
   "p90": 6,
   "max": 10
  },
  "histogram": {
-  "0": 60,
-  "1": 106,
-  "2": 147,
-  "3": 163,
-  "4": 157,
-  "5": 39,
-  "6": 64,
-  "7": 46,
-  "8": 25,
-  "9": 8,
+  "0": 62,
+  "1": 217,
+  "2": 519,
+  "3": 267,
+  "4": 169,
+  "5": 62,
+  "6": 66,
+  "7": 52,
+  "8": 22,
+  "9": 9,
   "10": 2
  },
- "components": 29,
- "cycleCount": 28,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 448,
+   "1": 370,
+   "2": 334,
+   "3": 250,
+   "4": 168,
+   "5": 124,
+   "6": 143,
+   "7": 81,
+   "8": 79,
+   "9": 59,
+   "10": 752
+  },
+  "atLeast": {
+   "1": 84,
+   "2": 70.9,
+   "3": 59,
+   "5": 44.1
+  }
+ },
+ "concentration": {
+  "top1Pct": 25.32,
+  "top3Pct": 43.48,
+  "top10Pct": 49.36,
+  "cycleCount": 27,
+  "entropyBits": 2.38
+ },
+ "components": 28,
+ "cycleCount": 27,
  "largestCycle": {
   "members": [
-   "Anubis",
-   "Egypt"
+   "Heroes",
+   "Spawn Room",
+   "Deathmatch",
+   "Respawn",
+   "Anran"
   ],
-  "size": 2,
-  "basin": 386
+  "size": 5,
+  "basin": 711
  },
  "topAttractors": [
   {
    "cycle": [
-    "Anubis",
-    "Egypt"
+    "Heroes",
+    "Spawn Room",
+    "Deathmatch",
+    "Respawn",
+    "Anran"
    ],
-   "basin": 386,
-   "pct": 13.75
+   "basin": 711,
+   "pct": 25.32
   },
   {
    "cycle": [
-    "Competitive Play",
-    "Game Modes",
-    "Arcade",
-    "Maps"
+    "Omnic Crisis",
+    "Omnica Corporation"
    ],
-   "basin": 184,
-   "pct": 6.55
+   "basin": 322,
+   "pct": 11.47
+  },
+  {
+   "cycle": [
+    "Arcade",
+    "Maps",
+    "Competitive Play"
+   ],
+   "basin": 188,
+   "pct": 6.7
   },
   {
    "cycle": [
@@ -69,7 +110,8 @@
   },
   {
    "cycle": [
-    "Detroit"
+    "Health pack",
+    "Healing"
    ],
    "basin": 33,
    "pct": 1.18
@@ -79,24 +121,24 @@
     "Cláudio Martins",
     "Hector Martins"
    ],
-   "basin": 32,
-   "pct": 1.14
-  },
-  {
-   "cycle": [
-    "Health pack",
-    "Healing"
-   ],
-   "basin": 28,
-   "pct": 1
+   "basin": 31,
+   "pct": 1.1
   },
   {
    "cycle": [
     "Eichenwalde",
     "Black Forest"
    ],
-   "basin": 17,
-   "pct": 0.61
+   "basin": 18,
+   "pct": 0.64
+  },
+  {
+   "cycle": [
+    "Egypt",
+    "Anubis"
+   ],
+   "basin": 16,
+   "pct": 0.57
   },
   {
    "cycle": [
@@ -111,8 +153,8 @@
     "Mech",
     "Scrapyard"
    ],
-   "basin": 10,
-   "pct": 0.36
+   "basin": 9,
+   "pct": 0.32
   },
   {
    "cycle": [
@@ -138,13 +180,6 @@
    ],
    "basin": 6,
    "pct": 0.21
-  },
-  {
-   "cycle": [
-    "Status effect"
-   ],
-   "basin": 5,
-   "pct": 0.18
   },
   {
    "cycle": [
@@ -182,14 +217,6 @@
   },
   {
    "cycle": [
-    "Chronal accelerator",
-    "Translocator"
-   ],
-   "basin": 3,
-   "pct": 0.11
-  },
-  {
-   "cycle": [
     "Olaf Stout",
     "Baleog Fierce"
    ],
@@ -203,15 +230,17 @@
    ],
    "basin": 3,
    "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Leonora Botruvio",
+    "Galleria D'Arte Omnica"
+   ],
+   "basin": 3,
+   "pct": 0.11
   }
  ],
  "deadEndTerminals": [
-  {
-   "title": "Deathmatch",
-   "chains": 601,
-   "pct": 21.4,
-   "reason": "redlink target"
-  },
   {
    "title": "Durovidro",
    "chains": 13,
@@ -220,8 +249,8 @@
   },
   {
    "title": "Jeff Chamberlain",
-   "chains": 12,
-   "pct": 0.43,
+   "chains": 11,
+   "pct": 0.39,
    "reason": "only 1 eligible links"
   },
   {
@@ -243,13 +272,13 @@
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Interstellar Journey Space Station",
-   "chains": 6,
-   "pct": 0.21,
+   "title": "Caterina Pastore",
+   "chains": 7,
+   "pct": 0.25,
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Caterina Pastore",
+   "title": "Interstellar Journey Space Station",
    "chains": 6,
    "pct": 0.21,
    "reason": "only 1 eligible links"
@@ -261,10 +290,10 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Cherrelle Skeete",
+   "title": "Lee",
    "chains": 5,
    "pct": 0.18,
-   "reason": "only 1 eligible links"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Crispin Freeman",
@@ -273,16 +302,16 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Lee",
+   "title": "Anya Al-Shahrani",
    "chains": 4,
    "pct": 0.14,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Anya Al-Shahrani",
+   "title": "Cherrelle Skeete",
    "chains": 4,
    "pct": 0.14,
-   "reason": "only 2 eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Jennifer Hale",
@@ -295,251 +324,257 @@
    "chains": 4,
    "pct": 0.14,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Charlet Chung",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Heroes",
-   "inDegree": 60
+   "firstLinks": 59
   },
   {
    "title": "Omnic Crisis",
-   "inDegree": 50
+   "firstLinks": 53
   },
   {
    "title": "Overwatch (group)",
-   "inDegree": 45
+   "firstLinks": 47
   },
   {
    "title": "Season/2022-2026",
-   "inDegree": 40
+   "firstLinks": 40
   },
   {
    "title": "Omnic",
-   "inDegree": 36
-  },
-  {
-   "title": "Talon",
-   "inDegree": 20
+   "firstLinks": 33
   },
   {
    "title": "Watchpoint: Gibraltar",
-   "inDegree": 20
-  },
-  {
-   "title": "Soldier: 76",
-   "inDegree": 19
-  },
-  {
-   "title": "Season",
-   "inDegree": 18
-  },
-  {
-   "title": "King's Row",
-   "inDegree": 16
-  },
-  {
-   "title": "Ana",
-   "inDegree": 16
-  },
-  {
-   "title": "Sprays",
-   "inDegree": 15
-  },
-  {
-   "title": "Spawn Room",
-   "inDegree": 14
-  },
-  {
-   "title": "Maps",
-   "inDegree": 13
-  },
-  {
-   "title": "Cassidy",
-   "inDegree": 13
-  },
-  {
-   "title": "Doomfist",
-   "inDegree": 12
-  },
-  {
-   "title": "Winston",
-   "inDegree": 11
-  },
-  {
-   "title": "Torbjörn",
-   "inDegree": 11
-  },
-  {
-   "title": "Reinhardt",
-   "inDegree": 11
-  },
-  {
-   "title": "Health pack",
-   "inDegree": 11
-  },
-  {
-   "title": "Baptiste",
-   "inDegree": 11
-  },
-  {
-   "title": "Reaper",
-   "inDegree": 10
-  },
-  {
-   "title": "Vishkar Corporation",
-   "inDegree": 10
-  },
-  {
-   "title": "Roadhog",
-   "inDegree": 10
-  },
-  {
-   "title": "D.Va",
-   "inDegree": 10
-  },
-  {
-   "title": "Cosmetics",
-   "inDegree": 10
-  },
-  {
-   "title": "Brigitte",
-   "inDegree": 10
-  },
-  {
-   "title": "Null Sector",
-   "inDegree": 10
-  },
-  {
-   "title": "Vendetta",
-   "inDegree": 10
-  },
-  {
-   "title": "Season/2026",
-   "inDegree": 10
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Heroes",
-   "betweenness": 1162
-  },
-  {
-   "title": "Omnic Crisis",
-   "betweenness": 740
-  },
-  {
-   "title": "Spawn Room",
-   "betweenness": 599
-  },
-  {
-   "title": "Omnic",
-   "betweenness": 582
-  },
-  {
-   "title": "The Awakening",
-   "betweenness": 495
-  },
-  {
-   "title": "Overwatch (group)",
-   "betweenness": 426
-  },
-  {
-   "title": "Aurora",
-   "betweenness": 404
-  },
-  {
-   "title": "Anubis",
-   "betweenness": 380
-  },
-  {
-   "title": "Competitive Play",
-   "betweenness": 365
-  },
-  {
-   "title": "Game Modes",
-   "betweenness": 321
-  },
-  {
-   "title": "Omnica Corporation",
-   "betweenness": 309
-  },
-  {
-   "title": "Maps",
-   "betweenness": 233
+   "firstLinks": 20
   },
   {
    "title": "Talon",
-   "betweenness": 192
-  },
-  {
-   "title": "Vendetta",
-   "betweenness": 177
-  },
-  {
-   "title": "Arcade",
-   "betweenness": 173
-  },
-  {
-   "title": "King's Row",
-   "betweenness": 168
-  },
-  {
-   "title": "Season/2022-2026",
-   "betweenness": 160
-  },
-  {
-   "title": "East China Sea",
-   "betweenness": 133
-  },
-  {
-   "title": "Japan",
-   "betweenness": 120
-  },
-  {
-   "title": "Season",
-   "betweenness": 120
-  },
-  {
-   "title": "Overwatch 2",
-   "betweenness": 112
-  },
-  {
-   "title": "Tokyo",
-   "betweenness": 110
+   "firstLinks": 19
   },
   {
    "title": "Soldier: 76",
-   "betweenness": 108
+   "firstLinks": 19
   },
   {
-   "title": "Cybernetics",
-   "betweenness": 108
+   "title": "Season",
+   "firstLinks": 18
   },
   {
-   "title": "Soldier Enhancement Program",
-   "betweenness": 105
+   "title": "Ana",
+   "firstLinks": 17
   },
   {
-   "title": "Pinion International",
-   "betweenness": 100
+   "title": "King's Row",
+   "firstLinks": 16
   },
   {
-   "title": "Unranked",
-   "betweenness": 92
+   "title": "Sprays",
+   "firstLinks": 15
   },
   {
-   "title": "Hanaoka",
-   "betweenness": 92
+   "title": "Reinhardt",
+   "firstLinks": 13
   },
   {
-   "title": "Overwatch",
-   "betweenness": 90
+   "title": "Maps",
+   "firstLinks": 13
   },
   {
-   "title": "Sojourn",
-   "betweenness": 90
+   "title": "Null Sector",
+   "firstLinks": 13
+  },
+  {
+   "title": "Doomfist",
+   "firstLinks": 13
+  },
+  {
+   "title": "Spawn Room",
+   "firstLinks": 13
+  },
+  {
+   "title": "Cassidy",
+   "firstLinks": 12
+  },
+  {
+   "title": "Baptiste",
+   "firstLinks": 12
+  },
+  {
+   "title": "Reaper",
+   "firstLinks": 11
+  },
+  {
+   "title": "Winston",
+   "firstLinks": 11
+  },
+  {
+   "title": "Health pack",
+   "firstLinks": 11
+  },
+  {
+   "title": "D.Va",
+   "firstLinks": 11
+  },
+  {
+   "title": "Vishkar Corporation",
+   "firstLinks": 10
+  },
+  {
+   "title": "Roadhog",
+   "firstLinks": 10
+  },
+  {
+   "title": "Cosmetics",
+   "firstLinks": 10
+  },
+  {
+   "title": "Vendetta",
+   "firstLinks": 10
+  },
+  {
+   "title": "Season/2026",
+   "firstLinks": 10
+  },
+  {
+   "title": "Tracer",
+   "firstLinks": 9
+  },
+  {
+   "title": "Torbjörn",
+   "firstLinks": 9
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Heroes",
+   "chains": 711
+  },
+  {
+   "title": "Respawn",
+   "chains": 711
+  },
+  {
+   "title": "Deathmatch",
+   "chains": 711
+  },
+  {
+   "title": "Spawn Room",
+   "chains": 711
+  },
+  {
+   "title": "Anran",
+   "chains": 711
+  },
+  {
+   "title": "Omnic Crisis",
+   "chains": 322
+  },
+  {
+   "title": "Omnica Corporation",
+   "chains": 322
+  },
+  {
+   "title": "Maps",
+   "chains": 188
+  },
+  {
+   "title": "Competitive Play",
+   "chains": 188
+  },
+  {
+   "title": "Arcade",
+   "chains": 188
+  },
+  {
+   "title": "Overwatch (group)",
+   "chains": 152
+  },
+  {
+   "title": "Soldier: 76",
+   "chains": 137
+  },
+  {
+   "title": "Mina Liao",
+   "chains": 108
+  },
+  {
+   "title": "Aurora",
+   "chains": 102
+  },
+  {
+   "title": "The Awakening",
+   "chains": 100
+  },
+  {
+   "title": "Omnic",
+   "chains": 98
+  },
+  {
+   "title": "Vendetta",
+   "chains": 61
+  },
+  {
+   "title": "Game Modes",
+   "chains": 48
+  },
+  {
+   "title": "Talon",
+   "chains": 48
+  },
+  {
+   "title": "Battle Pass",
+   "chains": 48
+  },
+  {
+   "title": "Overwatch Coins",
+   "chains": 48
+  },
+  {
+   "title": "Season/2022-2026",
+   "chains": 47
+  },
+  {
+   "title": "Detroit",
+   "chains": 41
+  },
+  {
+   "title": "Omnium",
+   "chains": 39
+  },
+  {
+   "title": "Health pack",
+   "chains": 33
+  },
+  {
+   "title": "Healing",
+   "chains": 33
+  },
+  {
+   "title": "Cláudio Martins",
+   "chains": 31
+  },
+  {
+   "title": "Hector Martins",
+   "chains": 31
+  },
+  {
+   "title": "King's Row",
+   "chains": 28
+  },
+  {
+   "title": "Custom Game",
+   "chains": 26
   }
  ]
 }

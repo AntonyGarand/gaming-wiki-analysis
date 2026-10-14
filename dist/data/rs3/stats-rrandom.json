@@ -3,109 +3,116 @@
  "rank": "random",
  "nodes": 79761,
  "converge": {
-  "articles": 73785,
-  "pct": 92.51,
-  "deadEnd": 5976,
-  "deadEndPct": 7.49,
-  "noLinks": 2191,
+  "articles": 76773,
+  "pct": 96.25,
+  "deadEnd": 2988,
+  "deadEndPct": 3.75,
+  "noLinks": 2214,
   "tooFewLinks": 0,
-  "unresolvable": 58
+  "unresolvable": 3
  },
  "hopStats": {
-  "mean": 13.77,
-  "median": 8,
-  "p90": 44,
-  "max": 77
+  "mean": 11.02,
+  "median": 7,
+  "p90": 28,
+  "max": 56
  },
  "histogram": {
-  "0": 2377,
-  "1": 6638,
-  "2": 4133,
-  "3": 4178,
-  "4": 6979,
-  "5": 4452,
-  "6": 4136,
-  "7": 3962,
-  "8": 3458,
-  "9": 2948,
-  "10": 2656,
-  "11": 2045,
-  "12": 1636,
-  "13": 2192,
-  "14": 1725,
-  "15": 2065,
-  "16": 1638,
-  "17": 1354,
-  "18": 1087,
-  "19": 571,
-  "20": 501,
-  "21": 473,
-  "22": 270,
-  "23": 171,
-  "24": 188,
-  "25": 97,
-  "26": 208,
-  "27": 109,
-  "28": 131,
-  "29": 109,
-  "30": 174,
-  "31": 135,
-  "32": 75,
-  "33": 290,
-  "34": 220,
-  "35": 249,
-  "36": 292,
-  "37": 278,
-  "38": 107,
-  "39": 318,
-  "40": 211,
-  "41": 398,
-  "42": 412,
-  "43": 414,
-  "44": 389,
-  "45": 587,
-  "46": 490,
-  "47": 334,
-  "48": 420,
-  "49": 407,
-  "50": 350,
-  "51": 295,
-  "52": 271,
-  "53": 214,
-  "54": 420,
-  "55": 443,
-  "56": 438,
-  "57": 323,
-  "58": 389,
-  "59": 149,
-  "60": 940,
-  "61": 183,
-  "62": 164,
-  "63": 130,
-  "64": 84,
-  "65": 86,
-  "66": 48,
-  "67": 60,
-  "68": 34,
-  "69": 17,
-  "70": 21,
-  "71": 3,
-  "72": 6,
-  "73": 3,
-  "74": 10,
-  "75": 15,
-  "76": 1,
-  "77": 1
+  "0": 2361,
+  "1": 6479,
+  "2": 5754,
+  "3": 4806,
+  "4": 6717,
+  "5": 4680,
+  "6": 4207,
+  "7": 3642,
+  "8": 3467,
+  "9": 3057,
+  "10": 3125,
+  "11": 2744,
+  "12": 2297,
+  "13": 2641,
+  "14": 1554,
+  "15": 1599,
+  "16": 1144,
+  "17": 918,
+  "18": 1395,
+  "19": 1248,
+  "20": 1081,
+  "21": 922,
+  "22": 842,
+  "23": 685,
+  "24": 401,
+  "25": 491,
+  "26": 314,
+  "27": 298,
+  "28": 494,
+  "29": 484,
+  "30": 412,
+  "31": 364,
+  "32": 229,
+  "33": 191,
+  "34": 308,
+  "35": 211,
+  "36": 430,
+  "37": 370,
+  "38": 215,
+  "39": 1947,
+  "40": 491,
+  "41": 633,
+  "42": 267,
+  "43": 243,
+  "44": 192,
+  "45": 86,
+  "46": 65,
+  "47": 162,
+  "48": 14,
+  "49": 57,
+  "50": 3,
+  "51": 6,
+  "52": 3,
+  "53": 10,
+  "54": 15,
+  "55": 1,
+  "56": 1
  },
- "components": 1172,
- "cycleCount": 1171,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 2217,
+   "1": 6358,
+   "2": 10238,
+   "3": 10053,
+   "4": 9430,
+   "5": 7603,
+   "6": 5676,
+   "7": 4245,
+   "8": 3578,
+   "9": 2896,
+   "10": 17467
+  },
+  "atLeast": {
+   "1": 97.2,
+   "2": 89.2,
+   "3": 76.4,
+   "5": 52
+  }
+ },
+ "concentration": {
+  "top1Pct": 18.21,
+  "top3Pct": 38.74,
+  "top10Pct": 64.39,
+  "cycleCount": 1136,
+  "entropyBits": 5.17
+ },
+ "components": 1137,
+ "cycleCount": 1136,
  "largestCycle": {
   "members": [
    "Daemonheim",
    "Hilda"
   ],
   "size": 2,
-  "basin": 15638
+  "basin": 14528
  },
  "topAttractors": [
   {
@@ -113,8 +120,8 @@
     "Daemonheim",
     "Hilda"
    ],
-   "basin": 15638,
-   "pct": 19.61
+   "basin": 14528,
+   "pct": 18.21
   },
   {
    "cycle": [
@@ -123,24 +130,27 @@
     "Laura",
     "Jack"
    ],
-   "basin": 7411,
-   "pct": 9.29
+   "basin": 8793,
+   "pct": 11.02
   },
   {
    "cycle": [
-    "Shadow spells",
-    "Earth spells"
+    "Construction",
+    "Porcelain cup (gold)",
+    "Pot of tea",
+    "Hot kettle",
+    "Full kettle"
    ],
-   "basin": 5302,
+   "basin": 7577,
+   "pct": 9.5
+  },
+  {
+   "cycle": [
+    "Grand Exchange",
+    "Falling rocks"
+   ],
+   "basin": 5308,
    "pct": 6.65
-  },
-  {
-   "cycle": [
-    "Oddments",
-    "Oddments (Treasure Hunter promotion)"
-   ],
-   "basin": 4495,
-   "pct": 5.64
   },
   {
    "cycle": [
@@ -149,27 +159,82 @@
     "Solomon's General Store",
     "RuneCoins"
    ],
-   "basin": 3406,
-   "pct": 4.27
+   "basin": 3370,
+   "pct": 4.23
   },
   {
    "cycle": [
-    "Skills",
-    "Money making guide",
-    "Grand Exchange",
-    "Clan Citadel",
-    "Clan cloak"
+    "Earth spells",
+    "Shadow spells"
    ],
-   "basin": 3365,
-   "pct": 4.22
+   "basin": 2827,
+   "pct": 3.54
   },
   {
    "cycle": [
     "Runecrafting",
     "Catalytic runes"
    ],
-   "basin": 3314,
-   "pct": 4.15
+   "basin": 2693,
+   "pct": 3.38
+  },
+  {
+   "cycle": [
+    "Divination",
+    "Incandescent energy",
+    "Energy rift"
+   ],
+   "basin": 2208,
+   "pct": 2.77
+  },
+  {
+   "cycle": [
+    "NPC Contact",
+    "Bert"
+   ],
+   "basin": 2033,
+   "pct": 2.55
+  },
+  {
+   "cycle": [
+    "Jagex",
+    "Haveli Investments"
+   ],
+   "basin": 2018,
+   "pct": 2.53
+  },
+  {
+   "cycle": [
+    "Oddments",
+    "Oddments (Treasure Hunter promotion)"
+   ],
+   "basin": 1697,
+   "pct": 2.13
+  },
+  {
+   "cycle": [
+    "Obi'Sooth",
+    "Ring of Solomon"
+   ],
+   "basin": 1562,
+   "pct": 1.96
+  },
+  {
+   "cycle": [
+    "Globetrotter outfit",
+    "Globetrotter (achievement)"
+   ],
+   "basin": 1487,
+   "pct": 1.86
+  },
+  {
+   "cycle": [
+    "Oo'glog",
+    "Spa",
+    "Warforge Dig Site"
+   ],
+   "basin": 1369,
+   "pct": 1.72
   },
   {
    "cycle": [
@@ -178,32 +243,16 @@
     "Build mode",
     "House Controls"
    ],
-   "basin": 2913,
-   "pct": 3.65
+   "basin": 1288,
+   "pct": 1.61
   },
   {
    "cycle": [
-    "Buffs and debuffs"
+    "Collections",
+    "Museum - Saradominist II"
    ],
-   "basin": 2910,
-   "pct": 3.65
-  },
-  {
-   "cycle": [
-    "Spa",
-    "Warforge Dig Site",
-    "Oo'glog"
-   ],
-   "basin": 2373,
-   "pct": 2.98
-  },
-  {
-   "cycle": [
-    "NPC Contact",
-    "Bert"
-   ],
-   "basin": 1161,
-   "pct": 1.46
+   "basin": 975,
+   "pct": 1.22
   },
   {
    "cycle": [
@@ -211,108 +260,47 @@
     "Tool belt",
     "Quest kit (basic)"
    ],
-   "basin": 1003,
-   "pct": 1.26
+   "basin": 953,
+   "pct": 1.19
   },
   {
    "cycle": [
-    "Dragon battleaxe"
+    "Mining",
+    "Golden mining suit",
+    "Magic golem outfit"
    ],
-   "basin": 968,
-   "pct": 1.21
+   "basin": 887,
+   "pct": 1.11
   },
   {
    "cycle": [
-    "Settings"
+    "De-lore-ing device",
+    "Worthless old boots"
    ],
-   "basin": 924,
-   "pct": 1.16
-  },
-  {
-   "cycle": [
-    "Obi'Sooth",
-    "Ring of Solomon"
-   ],
-   "basin": 880,
-   "pct": 1.1
-  },
-  {
-   "cycle": [
-    "Worthless old boots",
-    "De-lore-ing device"
-   ],
-   "basin": 789,
-   "pct": 0.99
-  },
-  {
-   "cycle": [
-    "Collections",
-    "Museum - Saradominist II"
-   ],
-   "basin": 701,
-   "pct": 0.88
-  },
-  {
-   "cycle": [
-    "Evolution of Combat",
-    "Bolt spells"
-   ],
-   "basin": 696,
-   "pct": 0.87
+   "basin": 654,
+   "pct": 0.82
   },
   {
    "cycle": [
     "Bandos",
     "Goblin book"
    ],
-   "basin": 685,
-   "pct": 0.86
-  },
-  {
-   "cycle": [
-    "Hit chance",
-    "Affinity"
-   ],
-   "basin": 607,
-   "pct": 0.76
+   "basin": 648,
+   "pct": 0.81
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Macarthur Fortune Holding",
-   "chains": 1670,
-   "pct": 2.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "RuneScape Germany",
-   "chains": 847,
-   "pct": 1.06,
-   "reason": "redlink target"
-  },
-  {
    "title": "List of SoundCloud exclusive music",
-   "chains": 472,
-   "pct": 0.59,
+   "chains": 438,
+   "pct": 0.55,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Hidden updates",
-   "chains": 303,
-   "pct": 0.38,
-   "reason": "redlink target"
   },
   {
    "title": "Treasure Trails/Guide/Anagrams",
    "chains": 52,
    "pct": 0.07,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Bestiary",
-   "chains": 47,
-   "pct": 0.06,
-   "reason": "redlink target"
   },
   {
    "title": "Mod Arantza",
@@ -327,22 +315,16 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Alcrabholic",
-   "chains": 22,
-   "pct": 0.03,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Lighten Up",
    "chains": 19,
    "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "RuneFest 2017",
-   "chains": 18,
+   "title": "Alcrabholic",
+   "chains": 19,
    "pct": 0.02,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "Mod Cam",
@@ -364,254 +346,295 @@
   },
   {
    "title": "Doru spear",
-   "chains": 13,
+   "chains": 14,
    "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bauble",
+   "chains": 8,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Huge spiky rune salvage",
+   "chains": 7,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "James Hannigan",
+   "chains": 7,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "That's Not a Knife...",
+   "chains": 6,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Necronium crossbow (unstrung)",
+   "chains": 6,
+   "pct": 0.01,
    "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Cosmetic override",
-   "inDegree": 2025
+   "firstLinks": 2023
   },
   {
    "title": "Scenery",
-   "inDegree": 864
+   "firstLinks": 870
   },
   {
    "title": "Buffs and debuffs",
-   "inDegree": 837
+   "firstLinks": 836
   },
   {
    "title": "Achievements",
-   "inDegree": 816
+   "firstLinks": 818
   },
   {
    "title": "Smithing",
-   "inDegree": 796
+   "firstLinks": 798
   },
   {
    "title": "Player-owned house",
-   "inDegree": 645
-  },
-  {
-   "title": "Jagex Store",
-   "inDegree": 551
+   "firstLinks": 649
   },
   {
    "title": "Dungeoneering",
-   "inDegree": 551
+   "firstLinks": 552
+  },
+  {
+   "title": "Jagex Store",
+   "firstLinks": 551
   },
   {
    "title": "Livestream",
-   "inDegree": 468
+   "firstLinks": 467
   },
   {
    "title": "Video",
-   "inDegree": 443
+   "firstLinks": 443
   },
   {
    "title": "Experience",
-   "inDegree": 426
+   "firstLinks": 429
   },
   {
    "title": "Treasure Hunter",
-   "inDegree": 413
+   "firstLinks": 414
   },
   {
    "title": "Jagex",
-   "inDegree": 383
+   "firstLinks": 385
   },
   {
    "title": "Daemonheim",
-   "inDegree": 356
+   "firstLinks": 352
   },
   {
    "title": "Crafting",
-   "inDegree": 316
+   "firstLinks": 340
   },
   {
    "title": "Patch Notes",
-   "inDegree": 284
+   "firstLinks": 284
   },
   {
    "title": "Defence",
-   "inDegree": 248
+   "firstLinks": 245
   },
   {
    "title": "Construction",
-   "inDegree": 244
+   "firstLinks": 238
   },
   {
    "title": "Invention",
-   "inDegree": 226
+   "firstLinks": 227
   },
   {
    "title": "Magic",
-   "inDegree": 224
+   "firstLinks": 226
   },
   {
    "title": "Items",
-   "inDegree": 223
+   "firstLinks": 222
   },
   {
    "title": "Quests",
-   "inDegree": 222
+   "firstLinks": 221
   },
   {
    "title": "Music",
-   "inDegree": 214
+   "firstLinks": 214
+  },
+  {
+   "title": "Farming",
+   "firstLinks": 200
   },
   {
    "title": "Solomon's General Store",
-   "inDegree": 199
-  },
-  {
-   "title": "Farming",
-   "inDegree": 197
+   "firstLinks": 199
   },
   {
    "title": "Titles",
-   "inDegree": 196
+   "firstLinks": 196
   },
   {
    "title": "Ranged",
-   "inDegree": 189
-  },
-  {
-   "title": "Appearance",
-   "inDegree": 181
+   "firstLinks": 187
   },
   {
    "title": "Augmentor",
-   "inDegree": 180
+   "firstLinks": 182
+  },
+  {
+   "title": "Appearance",
+   "firstLinks": 181
   },
   {
    "title": "Free-to-play",
-   "inDegree": 172
+   "firstLinks": 174
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
-   "title": "Quests",
-   "betweenness": 355443
+   "title": "Hilda",
+   "chains": 14528
   },
   {
-   "title": "A Clockwork Syringe",
-   "betweenness": 344992
+   "title": "Daemonheim",
+   "chains": 14528
   },
   {
-   "title": "World map",
-   "betweenness": 341462
+   "title": "Carn",
+   "chains": 11727
   },
   {
-   "title": "Delivery note",
-   "betweenness": 334242
+   "title": "Taverley incident",
+   "chains": 11724
   },
   {
-   "title": "Estate agent",
-   "betweenness": 323490
+   "title": "Sir Owen",
+   "chains": 11723
   },
   {
-   "title": "Gielinorian Housing Agency",
-   "betweenness": 312736
+   "title": "Sixth Age",
+   "chains": 11718
   },
   {
-   "title": "Rimmington",
-   "betweenness": 311892
+   "title": "Imcando dwarf",
+   "chains": 10427
   },
   {
-   "title": "Combat",
-   "betweenness": 303291
+   "title": "Saradomin",
+   "chains": 10425
   },
   {
-   "title": "Classic Modes",
-   "betweenness": 293878
+   "title": "Wise Old Man",
+   "chains": 10224
   },
   {
-   "title": "Auto-retaliate",
-   "betweenness": 282675
-  },
-  {
-   "title": "Aggressiveness",
-   "betweenness": 271632
-  },
-  {
-   "title": "Ravenous ghoul",
-   "betweenness": 260360
-  },
-  {
-   "title": "Ghouls (Slayer assignment)",
-   "betweenness": 249062
-  },
-  {
-   "title": "Slayer assignment",
-   "betweenness": 247338
-  },
-  {
-   "title": "Slayer mask",
-   "betweenness": 237060
+   "title": "Bank",
+   "chains": 9941
   },
   {
    "title": "Lumbridge",
-   "betweenness": 226368
+   "chains": 9014
   },
   {
-   "title": "Shattered Worlds Reward Shop",
-   "betweenness": 225473
+   "title": "Meeting History",
+   "chains": 8793
   },
   {
-   "title": "Anvil",
-   "betweenness": 224735
+   "title": "Laura",
+   "chains": 8793
   },
   {
-   "title": "Abyssal Knight Quartermaster",
-   "betweenness": 213678
+   "title": "Jack",
+   "chains": 8793
   },
   {
-   "title": "Shattered anima",
-   "betweenness": 201926
+   "title": "Charcoal (Meeting History)",
+   "chains": 8793
   },
   {
-   "title": "Manor Farm",
-   "betweenness": 193776
+   "title": "Gielinor",
+   "chains": 8701
   },
   {
-   "title": "Tool leprechaun",
-   "betweenness": 182460
+   "title": "Black Santa hat",
+   "chains": 8434
   },
   {
-   "title": "Rock (ore)",
-   "betweenness": 170310
+   "title": "Festive cracker",
+   "chains": 8433
   },
   {
-   "title": "Herb patch (Trollheim)",
-   "betweenness": 158197
+   "title": "Santa hat",
+   "chains": 8417
   },
   {
-   "title": "Trollheim Teleport",
-   "betweenness": 146136
+   "title": "Nex",
+   "chains": 8340
   },
   {
-   "title": "Farming",
-   "betweenness": 140022
+   "title": "Ripper demon (species)",
+   "chains": 7686
   },
   {
-   "title": "Calquat patch",
-   "betweenness": 137482
+   "title": "Assassination of Elspeth",
+   "chains": 7685
   },
   {
-   "title": "Calquat sapling",
-   "betweenness": 134940
+   "title": "Third Age",
+   "chains": 7683
   },
   {
-   "title": "Teleport spells",
-   "betweenness": 134178
+   "title": "Construction",
+   "chains": 7577
   },
   {
-   "title": "Legends' Guild",
-   "betweenness": 133768
+   "title": "Pot of tea",
+   "chains": 7577
+  },
+  {
+   "title": "Hot kettle",
+   "chains": 7577
+  },
+  {
+   "title": "Full kettle",
+   "chains": 7577
+  },
+  {
+   "title": "Porcelain cup (gold)",
+   "chains": 7577
+  },
+  {
+   "title": "Slayer Tower",
+   "chains": 7064
+  },
+  {
+   "title": "Slayer",
+   "chains": 7042
   }
- ]
+ ],
+ "randomSeeds": {
+  "seeds": 5,
+  "convergePct": {
+   "mean": 96.25,
+   "sd": 0
+  },
+  "topAttractorPct": {
+   "mean": 18.6,
+   "sd": 2.16
+  }
+ }
 }

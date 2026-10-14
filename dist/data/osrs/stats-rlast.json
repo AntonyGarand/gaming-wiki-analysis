@@ -3,79 +3,107 @@
  "rank": "last",
  "nodes": 36164,
  "converge": {
-  "articles": 34835,
-  "pct": 96.33,
-  "deadEnd": 1329,
-  "deadEndPct": 3.67,
-  "noLinks": 542,
+  "articles": 35558,
+  "pct": 98.32,
+  "deadEnd": 606,
+  "deadEndPct": 1.68,
+  "noLinks": 539,
   "tooFewLinks": 0,
-  "unresolvable": 123
+  "unresolvable": 2
  },
  "hopStats": {
-  "mean": 12.89,
-  "median": 11,
+  "mean": 13.02,
+  "median": 12,
   "p90": 27,
   "max": 47
  },
  "histogram": {
-  "0": 1620,
-  "1": 2377,
-  "2": 1793,
-  "3": 1954,
-  "4": 1679,
-  "5": 1366,
-  "6": 1307,
-  "7": 1213,
-  "8": 1269,
-  "9": 1114,
-  "10": 1313,
-  "11": 1263,
-  "12": 1063,
-  "13": 916,
-  "14": 970,
-  "15": 1038,
-  "16": 935,
-  "17": 801,
-  "18": 860,
-  "19": 806,
-  "20": 1029,
-  "21": 616,
-  "22": 541,
-  "23": 463,
-  "24": 471,
-  "25": 751,
-  "26": 1348,
-  "27": 693,
-  "28": 721,
-  "29": 417,
-  "30": 234,
-  "31": 154,
-  "32": 143,
-  "33": 195,
-  "34": 297,
-  "35": 262,
-  "36": 145,
-  "37": 131,
-  "38": 156,
-  "39": 118,
-  "40": 88,
-  "41": 93,
-  "42": 54,
-  "43": 29,
-  "44": 19,
-  "45": 4,
-  "46": 5,
+  "0": 1589,
+  "1": 2323,
+  "2": 1797,
+  "3": 2055,
+  "4": 1775,
+  "5": 1538,
+  "6": 1323,
+  "7": 1018,
+  "8": 1137,
+  "9": 1043,
+  "10": 1003,
+  "11": 1103,
+  "12": 1371,
+  "13": 1096,
+  "14": 1156,
+  "15": 1134,
+  "16": 981,
+  "17": 842,
+  "18": 1003,
+  "19": 885,
+  "20": 972,
+  "21": 604,
+  "22": 539,
+  "23": 484,
+  "24": 529,
+  "25": 784,
+  "26": 1379,
+  "27": 788,
+  "28": 778,
+  "29": 441,
+  "30": 268,
+  "31": 166,
+  "32": 147,
+  "33": 204,
+  "34": 299,
+  "35": 284,
+  "36": 158,
+  "37": 114,
+  "38": 122,
+  "39": 64,
+  "40": 66,
+  "41": 74,
+  "42": 70,
+  "43": 32,
+  "44": 16,
+  "45": 2,
+  "46": 1,
   "47": 1
  },
- "components": 819,
- "cycleCount": 818,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 541,
+   "1": 1323,
+   "2": 2986,
+   "3": 4695,
+   "4": 3503,
+   "5": 3373,
+   "6": 2722,
+   "7": 2275,
+   "8": 1843,
+   "9": 1604,
+   "10": 11299
+  },
+  "atLeast": {
+   "1": 98.5,
+   "2": 94.8,
+   "3": 86.6,
+   "5": 63.9
+  }
+ },
+ "concentration": {
+  "top1Pct": 21.91,
+  "top3Pct": 53.25,
+  "top10Pct": 74.46,
+  "cycleCount": 785,
+  "entropyBits": 4.65
+ },
+ "components": 786,
+ "cycleCount": 785,
  "largestCycle": {
   "members": [
    "Mod Ash",
    "My Arm"
   ],
   "size": 2,
-  "basin": 8159
+  "basin": 7924
  },
  "topAttractors": [
   {
@@ -83,80 +111,40 @@
     "Mod Ash",
     "My Arm"
    ],
-   "basin": 8159,
-   "pct": 22.56
+   "basin": 7924,
+   "pct": 21.91
   },
   {
    "cycle": [
     "Chat Interface",
     "Agility dispenser"
    ],
-   "basin": 6181,
-   "pct": 17.09
+   "basin": 6682,
+   "pct": 18.48
   },
   {
    "cycle": [
     "Tombs of Amascut",
     "Theatre of Blood"
    ],
-   "basin": 4924,
-   "pct": 13.62
+   "basin": 4650,
+   "pct": 12.86
   },
   {
    "cycle": [
     "March 2025 Sailing Alpha",
     "Portmaster's watch"
    ],
-   "basin": 3746,
-   "pct": 10.36
+   "basin": 4178,
+   "pct": 11.55
   },
   {
    "cycle": [
     "Fourth wall",
     "Real life"
    ],
-   "basin": 1356,
-   "pct": 3.75
-  },
-  {
-   "cycle": [
-    "Mudskipper Point",
-    "Skippy"
-   ],
-   "basin": 525,
-   "pct": 1.45
-  },
-  {
-   "cycle": [
-    "Ranged melee",
-    "Ranged magic"
-   ],
-   "basin": 320,
-   "pct": 0.88
-  },
-  {
-   "cycle": [
-    "Sea Shanty 2",
-    "Sea Shanty Xmas"
-   ],
-   "basin": 292,
-   "pct": 0.81
-  },
-  {
-   "cycle": [
-    "Botting",
-    "Real world trading"
-   ],
-   "basin": 286,
-   "pct": 0.79
-  },
-  {
-   "cycle": [
-    "Bones",
-    "Peach"
-   ],
-   "basin": 273,
-   "pct": 0.75
+   "basin": 1071,
+   "pct": 2.96
   },
   {
    "cycle": [
@@ -164,8 +152,48 @@
     "Undead Zealot",
     "Single-way combat"
    ],
-   "basin": 268,
-   "pct": 0.74
+   "basin": 640,
+   "pct": 1.77
+  },
+  {
+   "cycle": [
+    "Falador Party Room",
+    "Falador"
+   ],
+   "basin": 607,
+   "pct": 1.68
+  },
+  {
+   "cycle": [
+    "Mudskipper Point",
+    "Skippy"
+   ],
+   "basin": 469,
+   "pct": 1.3
+  },
+  {
+   "cycle": [
+    "Botting",
+    "Real world trading"
+   ],
+   "basin": 365,
+   "pct": 1.01
+  },
+  {
+   "cycle": [
+    "Sea Shanty 2",
+    "Sea Shanty Xmas"
+   ],
+   "basin": 342,
+   "pct": 0.95
+  },
+  {
+   "cycle": [
+    "Bones",
+    "Peach"
+   ],
+   "basin": 245,
+   "pct": 0.68
   },
   {
    "cycle": [
@@ -182,47 +210,55 @@
     "Recipe for Disaster",
     "Culinaromancer"
    ],
-   "basin": 218,
-   "pct": 0.6
-  },
-  {
-   "cycle": [
-    "Safespot",
-    "Temple of Ikov (dungeon)"
-   ],
-   "basin": 189,
-   "pct": 0.52
-  },
-  {
-   "cycle": [
-    "Steam Trading Cards",
-    "Steam Profile Backgrounds"
-   ],
-   "basin": 183,
-   "pct": 0.51
-  },
-  {
-   "cycle": [
-    "Castle Wars",
-    "Greenman's ale"
-   ],
-   "basin": 175,
-   "pct": 0.48
+   "basin": 232,
+   "pct": 0.64
   },
   {
    "cycle": [
     "Dr Fenkenstrain",
     "Ring of Charos"
    ],
-   "basin": 171,
-   "pct": 0.47
+   "basin": 213,
+   "pct": 0.59
+  },
+  {
+   "cycle": [
+    "Safespot",
+    "Temple of Ikov (dungeon)"
+   ],
+   "basin": 209,
+   "pct": 0.58
+  },
+  {
+   "cycle": [
+    "Steam Trading Cards",
+    "Steam Profile Backgrounds"
+   ],
+   "basin": 179,
+   "pct": 0.49
+  },
+  {
+   "cycle": [
+    "Castle Wars",
+    "Greenman's ale"
+   ],
+   "basin": 176,
+   "pct": 0.49
+  },
+  {
+   "cycle": [
+    "A Porcine of Interest",
+    "Katana"
+   ],
+   "basin": 167,
+   "pct": 0.46
   },
   {
    "cycle": [
     "Royal Trouble",
     "Empty box"
    ],
-   "basin": 162,
+   "basin": 164,
    "pct": 0.45
   },
   {
@@ -232,59 +268,9 @@
    ],
    "basin": 159,
    "pct": 0.44
-  },
-  {
-   "cycle": [
-    "Drop trick",
-    "Drop"
-   ],
-   "basin": 156,
-   "pct": 0.43
   }
  ],
  "deadEndTerminals": [
-  {
-   "title": "Dwarf multicannon",
-   "chains": 204,
-   "pct": 0.56,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Bank note",
-   "chains": 138,
-   "pct": 0.38,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Ultimate Ironman Guide",
-   "chains": 59,
-   "pct": 0.16,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Standard spellbook",
-   "chains": 43,
-   "pct": 0.12,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Wise Old Man",
-   "chains": 34,
-   "pct": 0.09,
-   "reason": "redlink target"
-  },
-  {
-   "title": "List of spells",
-   "chains": 32,
-   "pct": 0.09,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Fancy Clothes Store",
-   "chains": 19,
-   "pct": 0.05,
-   "reason": "redlink target"
-  },
   {
    "title": "Shield slot table",
    "chains": 19,
@@ -298,285 +284,327 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Bob (cat)",
-   "chains": 10,
-   "pct": 0.03,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Shayzien Agility Course",
-   "chains": 10,
-   "pct": 0.03,
-   "reason": "redlink target"
-  },
-  {
    "title": "Cape slot table",
    "chains": 9,
    "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "Vannaka",
+   "title": "Chair",
    "chains": 8,
    "pct": 0.02,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
-   "title": "Red dragon",
-   "chains": 8,
-   "pct": 0.02,
-   "reason": "redlink target"
+   "title": "Feet slot table",
+   "chains": 5,
+   "pct": 0.01,
+   "reason": "no eligible links"
   },
   {
-   "title": "Sliske",
-   "chains": 8,
-   "pct": 0.02,
-   "reason": "redlink target"
+   "title": "Head slot table",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hands slot table",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ring slot table",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ball of cotton",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Slang dictionary",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "List of sound IDs",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Port Wizard Paulie",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Welcome Screen/Message of the week/2026",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bestiary/Free-to-play",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Player spoof",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Treasure Trails",
-   "inDegree": 804
+   "firstLinks": 804
   },
   {
    "title": "Examine",
-   "inDegree": 342
+   "firstLinks": 343
   },
   {
    "title": "Grand Exchange",
-   "inDegree": 284
+   "firstLinks": 284
   },
   {
    "title": "Experience",
-   "inDegree": 260
+   "firstLinks": 261
   },
   {
    "title": "Player-owned house",
-   "inDegree": 249
+   "firstLinks": 250
   },
   {
    "title": "Saw",
-   "inDegree": 233
+   "firstLinks": 233
   },
   {
    "title": "Quests",
-   "inDegree": 194
+   "firstLinks": 194
   },
   {
    "title": "Player killing",
-   "inDegree": 174
+   "firstLinks": 175
   },
   {
    "title": "Coins",
-   "inDegree": 171
+   "firstLinks": 172
   },
   {
    "title": "Smithing",
-   "inDegree": 170
+   "firstLinks": 168
   },
   {
    "title": "Hitpoints",
-   "inDegree": 148
-  },
-  {
-   "title": "God Wars Dungeon",
-   "inDegree": 142
+   "firstLinks": 151
   },
   {
    "title": "Collection log",
-   "inDegree": 142
+   "firstLinks": 145
+  },
+  {
+   "title": "God Wars Dungeon",
+   "firstLinks": 143
   },
   {
    "title": "Crew Management",
-   "inDegree": 142
+   "firstLinks": 142
   },
   {
    "title": "Gielinor",
-   "inDegree": 125
+   "firstLinks": 127
   },
   {
    "title": "Sailing",
-   "inDegree": 125
+   "firstLinks": 127
   },
   {
    "title": "Thieving",
-   "inDegree": 122
+   "firstLinks": 122
   },
   {
    "title": "Prifddinas",
-   "inDegree": 107
+   "firstLinks": 108
   },
   {
    "title": "Defence",
-   "inDegree": 102
+   "firstLinks": 103
   },
   {
    "title": "March 2025 Sailing Alpha",
-   "inDegree": 101
+   "firstLinks": 101
   },
   {
    "title": "June 2025 Sailing Beta",
-   "inDegree": 99
-  },
-  {
-   "title": "Tombs of Amascut",
-   "inDegree": 93
+   "firstLinks": 99
   },
   {
    "title": "Desert Treasure II - The Fallen Empire",
-   "inDegree": 93
+   "firstLinks": 93
+  },
+  {
+   "title": "Slayer task",
+   "firstLinks": 92
   },
   {
    "title": "Jagex",
-   "inDegree": 89
+   "firstLinks": 89
   },
   {
    "title": "Crafting",
-   "inDegree": 88
+   "firstLinks": 87
+  },
+  {
+   "title": "Tombs of Amascut",
+   "firstLinks": 87
   },
   {
    "title": "Building mode",
-   "inDegree": 84
+   "firstLinks": 85
   },
   {
    "title": "Song of the Elves",
-   "inDegree": 84
-  },
-  {
-   "title": "Slayer task",
-   "inDegree": 82
-  },
-  {
-   "title": "Magic",
-   "inDegree": 81
+   "firstLinks": 84
   },
   {
    "title": "Construction",
-   "inDegree": 80
+   "firstLinks": 83
+  },
+  {
+   "title": "Prayer",
+   "firstLinks": 83
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
-   "title": "Construction",
-   "betweenness": 122584
+   "title": "My Arm",
+   "chains": 7924
   },
   {
-   "title": "Player-owned house",
-   "betweenness": 121475
+   "title": "Mod Ash",
+   "chains": 7924
   },
   {
-   "title": "Construction/Level up table",
-   "betweenness": 117033
+   "title": "Chat Interface",
+   "chains": 6682
   },
   {
-   "title": "Portal (Player-owned house)",
-   "betweenness": 116736
+   "title": "Agility dispenser",
+   "chains": 6682
   },
   {
-   "title": "Teleport to house (tablet)",
-   "betweenness": 111964
+   "title": "Customer Support",
+   "chains": 6482
   },
   {
-   "title": "Fire of Eternal Light",
-   "betweenness": 111580
+   "title": "God letters",
+   "chains": 6481
   },
   {
-   "title": "Lumbridge Swamp Caves",
-   "betweenness": 106077
+   "title": "Lumbridge Eagles",
+   "chains": 6440
   },
   {
-   "title": "Chasm of Tears",
-   "betweenness": 100566
-  },
-  {
-   "title": "Poison karambwan",
-   "betweenness": 95013
-  },
-  {
-   "title": "Karamja",
-   "betweenness": 89936
-  },
-  {
-   "title": "Jungle Troubles",
-   "betweenness": 84330
-  },
-  {
-   "title": "The Shaikahan",
-   "betweenness": 80164
-  },
-  {
-   "title": "Ardougne Zoo",
-   "betweenness": 74581
-  },
-  {
-   "title": "Scorpion",
-   "betweenness": 68856
-  },
-  {
-   "title": "Scorpion (Varlamore)",
-   "betweenness": 63129
-  },
-  {
-   "title": "Fortis Colosseum",
-   "betweenness": 58110
-  },
-  {
-   "title": "Treasure Trails",
-   "betweenness": 54782
-  },
-  {
-   "title": "Sunfire splinters",
-   "betweenness": 52335
-  },
-  {
-   "title": "Minimus",
-   "betweenness": 46536
-  },
-  {
-   "title": "Slayer task",
-   "betweenness": 46440
-  },
-  {
-   "title": "Teoki",
-   "betweenness": 40740
-  },
-  {
-   "title": "Krystilia",
-   "betweenness": 40705
-  },
-  {
-   "title": "Draynor Village",
-   "betweenness": 35828
+   "title": "Lumbridge",
+   "chains": 6439
   },
   {
    "title": "Misthalin",
-   "betweenness": 35166
+   "chains": 6361
+  },
+  {
+   "title": "Krystilia",
+   "chains": 6318
+  },
+  {
+   "title": "Slayer task",
+   "chains": 6314
+  },
+  {
+   "title": "Zul-Areth",
+   "chains": 5899
+  },
+  {
+   "title": "Mod Ghost",
+   "chains": 5898
+  },
+  {
+   "title": "Great Kourend",
+   "chains": 5897
+  },
+  {
+   "title": "Talkasti",
+   "chains": 5780
   },
   {
    "title": "Tempestus",
-   "betweenness": 34932
+   "chains": 5779
   },
   {
-   "title": "Sailing",
-   "betweenness": 33166
+   "title": "Teoki",
+   "chains": 5777
   },
   {
-   "title": "Veronica",
-   "betweenness": 33084
+   "title": "Minimus",
+   "chains": 5774
   },
   {
-   "title": "2025 Christmas event/Gallery",
-   "betweenness": 32592
+   "title": "Sunfire splinters",
+   "chains": 5772
   },
   {
-   "title": "Experience",
-   "betweenness": 32320
+   "title": "Fortis Colosseum",
+   "chains": 5768
   },
   {
-   "title": "Game tick",
-   "betweenness": 31733
+   "title": "Scorpion (Varlamore)",
+   "chains": 5692
+  },
+  {
+   "title": "Scorpion",
+   "chains": 5691
+  },
+  {
+   "title": "Ardougne Zoo",
+   "chains": 5690
+  },
+  {
+   "title": "The Shaikahan",
+   "chains": 5679
+  },
+  {
+   "title": "Jungle Troubles",
+   "chains": 5627
+  },
+  {
+   "title": "Karamja",
+   "chains": 5626
+  },
+  {
+   "title": "Poison karambwan",
+   "chains": 5594
+  },
+  {
+   "title": "Chasm of Tears",
+   "chains": 5592
+  },
+  {
+   "title": "Lumbridge Swamp Caves",
+   "chains": 5588
+  },
+  {
+   "title": "Fire of Eternal Light",
+   "chains": 5584
   }
  ]
 }

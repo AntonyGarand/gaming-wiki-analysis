@@ -3,72 +3,84 @@
  "rank": "3",
  "nodes": 6135,
  "converge": {
-  "articles": 580,
-  "pct": 9.45,
-  "deadEnd": 5555,
-  "deadEndPct": 90.55,
-  "noLinks": 1,
-  "tooFewLinks": 1742,
-  "unresolvable": 2006
+  "articles": 420,
+  "pct": 6.85,
+  "deadEnd": 5715,
+  "deadEndPct": 93.15,
+  "noLinks": 14,
+  "tooFewLinks": 3732,
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 1.96,
-  "median": 2,
-  "p90": 4,
-  "max": 6
+  "mean": 2.29,
+  "median": 3,
+  "p90": 5,
+  "max": 7
  },
  "histogram": {
-  "0": 101,
-  "1": 140,
-  "2": 148,
-  "3": 106,
-  "4": 47,
-  "5": 36,
-  "6": 2
+  "0": 98,
+  "1": 69,
+  "2": 26,
+  "3": 118,
+  "4": 67,
+  "5": 33,
+  "6": 8,
+  "7": 1
  },
- "components": 51,
- "cycleCount": 50,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 15,
+   "1": 2874,
+   "2": 858,
+   "3": 286,
+   "4": 270,
+   "5": 182,
+   "6": 132,
+   "7": 143,
+   "8": 136,
+   "9": 138,
+   "10": 1101
+  },
+  "atLeast": {
+   "1": 99.8,
+   "2": 52.9,
+   "3": 38.9,
+   "5": 29.9
+  }
+ },
+ "concentration": {
+  "top1Pct": 2.74,
+  "top3Pct": 4.37,
+  "top10Pct": 5.3,
+  "cycleCount": 49,
+  "entropyBits": 3.6
+ },
+ "components": 50,
+ "cycleCount": 49,
  "largestCycle": {
   "members": [
-   "Hideout",
-   "Crafting"
+   "Colt M4A1 5.56x45 assault rifle",
+   "The Punisher - Part 5"
   ],
   "size": 2,
-  "basin": 264
+  "basin": 168
  },
  "topAttractors": [
   {
    "cycle": [
-    "Hideout",
-    "Crafting"
+    "Colt M4A1 5.56x45 assault rifle",
+    "The Punisher - Part 5"
    ],
-   "basin": 264,
-   "pct": 4.3
+   "basin": 168,
+   "pct": 2.74
   },
   {
    "cycle": [
     "The Huntsman Path - Relentless",
     "Tagilla"
    ],
-   "basin": 104,
-   "pct": 1.7
-  },
-  {
-   "cycle": [
-    "The Labyrinth",
-    "Labrys access keycard",
-    "The Labyrinth (story chapter)"
-   ],
-   "basin": 40,
-   "pct": 0.65
-  },
-  {
-   "cycle": [
-    "The Punisher - Part 5",
-    "Colt M4A1 5.56x45 assault rifle"
-   ],
-   "basin": 16,
-   "pct": 0.26
+   "basin": 86,
+   "pct": 1.4
   },
   {
    "cycle": [
@@ -85,6 +97,14 @@
    ],
    "basin": 11,
    "pct": 0.18
+  },
+  {
+   "cycle": [
+    "AI-2 medkit",
+    "Medcase"
+   ],
+   "basin": 10,
+   "pct": 0.16
   },
   {
    "cycle": [
@@ -197,343 +217,351 @@
    ],
    "basin": 3,
    "pct": 0.05
+  },
+  {
+   "cycle": [
+    "Paracord",
+    "Red Rebel ice pick"
+   ],
+   "basin": 3,
+   "pct": 0.05
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Barter trades",
-   "chains": 704,
-   "pct": 11.48,
-   "reason": "redlink target"
+   "chains": 961,
+   "pct": 15.66,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Medbag",
+   "chains": 275,
+   "pct": 4.48,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Experience",
-   "chains": 275,
-   "pct": 4.48,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Weapons",
-   "chains": 150,
-   "pct": 2.44,
+   "chains": 183,
+   "pct": 2.98,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Drawer",
-   "chains": 124,
-   "pct": 2.02,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Bosses",
-   "chains": 109,
-   "pct": 1.78,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Tarkov",
-   "chains": 99,
-   "pct": 1.61,
-   "reason": "redlink target"
+   "chains": 123,
+   "pct": 2,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Provisions",
-   "chains": 98,
-   "pct": 1.6,
-   "reason": "redlink target"
+   "chains": 59,
+   "pct": 0.96,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Dead Scav",
    "chains": 56,
    "pct": 0.91,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Weapon camouflages",
+   "chains": 51,
+   "pct": 0.83,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Tarkov",
+   "chains": 47,
+   "pct": 0.77,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Medical",
+   "chains": 44,
+   "pct": 0.72,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Loot",
-   "chains": 30,
-   "pct": 0.49,
-   "reason": "redlink target"
+   "chains": 18,
+   "pct": 0.29,
+   "reason": "only 1 eligible links"
   },
   {
-   "title": "Medbag",
-   "chains": 20,
-   "pct": 0.33,
-   "reason": "redlink target"
+   "title": "Dogtag case",
+   "chains": 11,
+   "pct": 0.18,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Toolbox",
+   "chains": 9,
+   "pct": 0.15,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "BNTI Zhuk body armor (EMR)",
    "chains": 8,
    "pct": 0.13,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Dogtag case",
-   "chains": 8,
-   "pct": 0.13,
-   "reason": "redlink target"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Wooden crate",
    "chains": 8,
    "pct": 0.13,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Note by Item 1156",
    "chains": 8,
    "pct": 0.13,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Weapon mods",
-   "chains": 6,
-   "pct": 0.1,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Experience",
-   "inDegree": 155
+   "firstLinks": 154
   },
   {
    "title": "Drawer",
-   "inDegree": 115
-  },
-  {
-   "title": "Found in raid",
-   "inDegree": 98
+   "firstLinks": 115
   },
   {
    "title": "Weapons",
-   "inDegree": 96
-  },
-  {
-   "title": "Ragman",
-   "inDegree": 81
-  },
-  {
-   "title": "Hideout",
-   "inDegree": 64
-  },
-  {
-   "title": "Ref",
-   "inDegree": 59
-  },
-  {
-   "title": "Customs",
-   "inDegree": 53
-  },
-  {
-   "title": "Jacket",
-   "inDegree": 51
-  },
-  {
-   "title": "Arena BattlePass",
-   "inDegree": 49
-  },
-  {
-   "title": "Lighthouse",
-   "inDegree": 48
-  },
-  {
-   "title": "Shoreline",
-   "inDegree": 46
-  },
-  {
-   "title": "Woods",
-   "inDegree": 43
-  },
-  {
-   "title": "Dead Scav",
-   "inDegree": 42
-  },
-  {
-   "title": "BEAR",
-   "inDegree": 41
-  },
-  {
-   "title": "Collector",
-   "inDegree": 40
-  },
-  {
-   "title": "Streets of Tarkov",
-   "inDegree": 38
-  },
-  {
-   "title": "Sports bag",
-   "inDegree": 30
-  },
-  {
-   "title": "GP coin",
-   "inDegree": 30
-  },
-  {
-   "title": "Reserve",
-   "inDegree": 29
-  },
-  {
-   "title": "Arena",
-   "inDegree": 27
-  },
-  {
-   "title": "Easter eggs and References",
-   "inDegree": 27
-  },
-  {
-   "title": "Interchange",
-   "inDegree": 24
-  },
-  {
-   "title": "Scavs",
-   "inDegree": 17
-  },
-  {
-   "title": "The Lab",
-   "inDegree": 17
-  },
-  {
-   "title": "Factory",
-   "inDegree": 16
-  },
-  {
-   "title": "MS2000 Marker",
-   "inDegree": 16
-  },
-  {
-   "title": "Ground Zero",
-   "inDegree": 15
-  },
-  {
-   "title": "The Labyrinth",
-   "inDegree": 15
-  },
-  {
-   "title": "Prestige",
-   "inDegree": 14
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Tour",
-   "betweenness": 1136
-  },
-  {
-   "title": "Therapist",
-   "betweenness": 619
-  },
-  {
-   "title": "Customs",
-   "betweenness": 513
+   "firstLinks": 98
   },
   {
    "title": "Found in raid",
-   "betweenness": 352
+   "firstLinks": 97
   },
   {
-   "title": "Ref",
-   "betweenness": 345
-  },
-  {
-   "title": "Lighthouse",
-   "betweenness": 306
-  },
-  {
-   "title": "Easy Money - Part 1",
-   "betweenness": 284
-  },
-  {
-   "title": "Reserve",
-   "betweenness": 276
-  },
-  {
-   "title": "Streets of Tarkov",
-   "betweenness": 270
+   "title": "Ragman",
+   "firstLinks": 81
   },
   {
    "title": "Hideout",
-   "betweenness": 262
+   "firstLinks": 62
   },
   {
-   "title": "Scavs",
-   "betweenness": 249
+   "title": "Ref",
+   "firstLinks": 60
   },
   {
-   "title": "Transits",
-   "betweenness": 222
+   "title": "Customs",
+   "firstLinks": 54
   },
   {
-   "title": "Woods",
-   "betweenness": 207
+   "title": "Jacket",
+   "firstLinks": 51
   },
   {
-   "title": "GP coin",
-   "betweenness": 198
-  },
-  {
-   "title": "Interchange",
-   "betweenness": 196
+   "title": "Lighthouse",
+   "firstLinks": 49
   },
   {
    "title": "Arena BattlePass",
-   "betweenness": 196
-  },
-  {
-   "title": "BEAR",
-   "betweenness": 186
-  },
-  {
-   "title": "Reshala",
-   "betweenness": 174
-  },
-  {
-   "title": "The Huntsman Path - Crooked Cop",
-   "betweenness": 170
+   "firstLinks": 49
   },
   {
    "title": "Shoreline",
-   "betweenness": 165
+   "firstLinks": 48
   },
   {
-   "title": "Tactical clothing",
-   "betweenness": 156
+   "title": "Woods",
+   "firstLinks": 43
   },
   {
-   "title": "Kollontay",
-   "betweenness": 148
+   "title": "Dead Scav",
+   "firstLinks": 42
+  },
+  {
+   "title": "BEAR",
+   "firstLinks": 41
+  },
+  {
+   "title": "Collector",
+   "firstLinks": 40
+  },
+  {
+   "title": "Streets of Tarkov",
+   "firstLinks": 38
+  },
+  {
+   "title": "Sports bag",
+   "firstLinks": 30
+  },
+  {
+   "title": "GP coin",
+   "firstLinks": 30
+  },
+  {
+   "title": "Reserve",
+   "firstLinks": 29
   },
   {
    "title": "Easter eggs and References",
-   "betweenness": 120
+   "firstLinks": 27
   },
   {
-   "title": "Icebreaker",
-   "betweenness": 120
+   "title": "Arena",
+   "firstLinks": 26
   },
   {
-   "title": "Map of Tarkov",
-   "betweenness": 105
+   "title": "Interchange",
+   "firstLinks": 25
+  },
+  {
+   "title": "The Lab",
+   "firstLinks": 17
+  },
+  {
+   "title": "Scavs",
+   "firstLinks": 16
+  },
+  {
+   "title": "Factory",
+   "firstLinks": 16
   },
   {
    "title": "MS2000 Marker",
-   "betweenness": 102
+   "firstLinks": 16
   },
   {
-   "title": "The Huntsman Path - Relentless",
-   "betweenness": 100
+   "title": "Ground Zero",
+   "firstLinks": 15
   },
   {
-   "title": "TerraGroup",
-   "betweenness": 97
+   "title": "Prestige",
+   "firstLinks": 14
   },
   {
-   "title": "Character skills",
-   "betweenness": 92
+   "title": "The Labyrinth",
+   "firstLinks": 14
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Barter trades",
+   "chains": 961
+  },
+  {
+   "title": "Therapist",
+   "chains": 791
+  },
+  {
+   "title": "Tour",
+   "chains": 740
+  },
+  {
+   "title": "Medbag",
+   "chains": 275
+  },
+  {
+   "title": "SJ6 TGLabs combat stimulant injector",
+   "chains": 267
+  },
+  {
+   "title": "Get a Foothold",
+   "chains": 266
+  },
+  {
+   "title": "Crafting",
+   "chains": 265
+  },
+  {
+   "title": "Hideout",
+   "chains": 264
+  },
+  {
+   "title": "Customs",
+   "chains": 263
+  },
+  {
+   "title": "Experience",
+   "chains": 183
+  },
+  {
+   "title": "Found in raid",
+   "chains": 179
+  },
+  {
+   "title": "The Punisher - Part 5",
+   "chains": 168
+  },
+  {
+   "title": "Colt M4A1 5.56x45 assault rifle",
+   "chains": 168
+  },
+  {
+   "title": "ADAR 2-15 5.56x45 carbine",
+   "chains": 153
+  },
+  {
+   "title": "Weapons",
+   "chains": 152
+  },
+  {
+   "title": "Drawer",
+   "chains": 123
+  },
+  {
+   "title": "Lighthouse",
+   "chains": 105
+  },
+  {
+   "title": "Streets of Tarkov",
+   "chains": 92
+  },
+  {
+   "title": "Bosses",
+   "chains": 90
+  },
+  {
+   "title": "Map of Tarkov",
+   "chains": 87
+  },
+  {
+   "title": "Trading",
+   "chains": 87
   },
   {
    "title": "Quests",
-   "betweenness": 90
+   "chains": 86
+  },
+  {
+   "title": "Tagilla",
+   "chains": 86
+  },
+  {
+   "title": "The Huntsman Path - Relentless",
+   "chains": 86
+  },
+  {
+   "title": "Ragman",
+   "chains": 82
+  },
+  {
+   "title": "Interchange",
+   "chains": 80
+  },
+  {
+   "title": "Easy Money - Part 1",
+   "chains": 73
+  },
+  {
+   "title": "Reshala",
+   "chains": 72
+  },
+  {
+   "title": "Woods",
+   "chains": 71
+  },
+  {
+   "title": "Ref",
+   "chains": 71
   }
  ]
 }

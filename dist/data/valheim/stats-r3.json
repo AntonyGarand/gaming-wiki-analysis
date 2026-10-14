@@ -3,88 +3,121 @@
  "rank": "3",
  "nodes": 1284,
  "converge": {
-  "articles": 842,
-  "pct": 65.58,
-  "deadEnd": 442,
-  "deadEndPct": 34.42,
-  "noLinks": 10,
-  "tooFewLinks": 106,
-  "unresolvable": 108
+  "articles": 890,
+  "pct": 69.31,
+  "deadEnd": 394,
+  "deadEndPct": 30.69,
+  "noLinks": 12,
+  "tooFewLinks": 206,
+  "unresolvable": 0
  },
  "hopStats": {
-  "mean": 3.92,
+  "mean": 4.46,
   "median": 4,
   "p90": 8,
-  "max": 11
+  "max": 15
  },
  "histogram": {
-  "0": 68,
-  "1": 131,
-  "2": 123,
-  "3": 78,
-  "4": 101,
-  "5": 106,
-  "6": 75,
-  "7": 57,
-  "8": 48,
-  "9": 31,
-  "10": 18,
-  "11": 6
+  "0": 58,
+  "1": 86,
+  "2": 116,
+  "3": 85,
+  "4": 105,
+  "5": 134,
+  "6": 131,
+  "7": 62,
+  "8": 47,
+  "9": 26,
+  "10": 11,
+  "11": 7,
+  "12": 5,
+  "13": 12,
+  "14": 4,
+  "15": 1
  },
- "components": 41,
- "cycleCount": 40,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 12,
+   "1": 93,
+   "2": 113,
+   "3": 146,
+   "4": 118,
+   "5": 139,
+   "6": 136,
+   "7": 100,
+   "8": 76,
+   "9": 64,
+   "10": 287
+  },
+  "atLeast": {
+   "1": 99.1,
+   "2": 91.8,
+   "3": 83,
+   "5": 62.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 18.3,
+  "top3Pct": 34.97,
+  "top10Pct": 60.36,
+  "cycleCount": 29,
+  "entropyBits": 3.62
+ },
+ "components": 30,
+ "cycleCount": 29,
  "largestCycle": {
   "members": [
-   "Greydwarf",
-   "Greyling"
+   "Moder",
+   "Drake"
   ],
   "size": 2,
-  "basin": 152
+  "basin": 235
  },
  "topAttractors": [
-  {
-   "cycle": [
-    "Greydwarf",
-    "Greyling"
-   ],
-   "basin": 152,
-   "pct": 11.84
-  },
   {
    "cycle": [
     "Moder",
     "Drake"
    ],
-   "basin": 150,
-   "pct": 11.68
+   "basin": 235,
+   "pct": 18.3
   },
   {
    "cycle": [
     "Draugr",
     "Draugr Village"
    ],
+   "basin": 113,
+   "pct": 8.8
+  },
+  {
+   "cycle": [
+    "Greydwarf",
+    "Greyling"
+   ],
    "basin": 101,
    "pct": 7.87
   },
   {
    "cycle": [
+    "Forge",
+    "Crafting"
+   ],
+   "basin": 58,
+   "pct": 4.52
+  },
+  {
+   "cycle": [
+    "Blocking",
+    "Shields"
+   ],
+   "basin": 57,
+   "pct": 4.44
+  },
+  {
+   "cycle": [
     "Taming",
     "Lox"
-   ],
-   "basin": 77,
-   "pct": 6
-  },
-  {
-   "cycle": [
-    "Damage"
-   ],
-   "basin": 66,
-   "pct": 5.14
-  },
-  {
-   "cycle": [
-    "Birch",
-    "Bronze Axe"
    ],
    "basin": 54,
    "pct": 4.21
@@ -99,11 +132,27 @@
   },
   {
    "cycle": [
+    "Birch",
+    "Bronze Axe"
+   ],
+   "basin": 47,
+   "pct": 3.66
+  },
+  {
+   "cycle": [
     "Fish",
     "Fishing"
    ],
-   "basin": 38,
-   "pct": 2.96
+   "basin": 36,
+   "pct": 2.8
+  },
+  {
+   "cycle": [
+    "Comfort",
+    "Yule Tree"
+   ],
+   "basin": 20,
+   "pct": 1.56
   },
   {
    "cycle": [
@@ -123,6 +172,14 @@
   },
   {
    "cycle": [
+    "Fuling",
+    "Fuling Village"
+   ],
+   "basin": 18,
+   "pct": 1.4
+  },
+  {
+   "cycle": [
     "Bronze Armor",
     "Troll Set"
    ],
@@ -131,50 +188,19 @@
   },
   {
    "cycle": [
-    "Fuling Village",
-    "Fuling"
+    "Jotun Invasion",
+    "Malicious Ice"
    ],
-   "basin": 15,
-   "pct": 1.17
-  },
-  {
-   "cycle": [
-    "Blocking",
-    "Shields"
-   ],
-   "basin": 9,
-   "pct": 0.7
-  },
-  {
-   "cycle": [
-    "Comfort",
-    "Yule Tree"
-   ],
-   "basin": 8,
-   "pct": 0.62
-  },
-  {
-   "cycle": [
-    "Volture"
-   ],
-   "basin": 7,
-   "pct": 0.55
+   "basin": 5,
+   "pct": 0.39
   },
   {
    "cycle": [
     "Oden",
     "Hugin"
    ],
-   "basin": 5,
-   "pct": 0.39
-  },
-  {
-   "cycle": [
-    "Jotun Invasion",
-    "Malicious Ice"
-   ],
-   "basin": 5,
-   "pct": 0.39
+   "basin": 4,
+   "pct": 0.31
   },
   {
    "cycle": [
@@ -199,44 +225,40 @@
    ],
    "basin": 4,
    "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Abyssal Barnacle",
+    "Leviathan"
+   ],
+   "basin": 3,
+   "pct": 0.23
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Longship",
-   "chains": 70,
-   "pct": 5.45,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Stone",
-   "chains": 30,
-   "pct": 2.34,
-   "reason": "redlink target"
+   "chains": 84,
+   "pct": 6.54,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Queen Bee",
    "chains": 23,
    "pct": 1.79,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Spinning Wheel",
    "chains": 15,
    "pct": 1.17,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Smelter",
-   "chains": 12,
-   "pct": 0.93,
-   "reason": "redlink target"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Log Structures",
    "chains": 8,
    "pct": 0.62,
-   "reason": "redlink target"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Fists",
@@ -245,297 +267,309 @@
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Factions",
-   "chains": 7,
-   "pct": 0.55,
-   "reason": "only 2 eligible links"
+   "title": "Controls",
+   "chains": 6,
+   "pct": 0.47,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Gull",
    "chains": 5,
    "pct": 0.39,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Bombs",
-   "chains": 5,
-   "pct": 0.39,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Portal Stone",
-   "chains": 5,
-   "pct": 0.39,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Charred Warrior",
    "chains": 5,
    "pct": 0.39,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Materials",
-   "chains": 4,
-   "pct": 0.31,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Greydwarf Eye",
-   "chains": 4,
-   "pct": 0.31,
-   "reason": "redlink target"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Seafarer's Herbs",
    "chains": 4,
    "pct": 0.31,
-   "reason": "redlink target"
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Sneaking (skill)",
+   "chains": 3,
+   "pct": 0.23,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Status effects",
+   "chains": 3,
+   "pct": 0.23,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Bare Fists",
+   "chains": 3,
+   "pct": 0.23,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Tick",
+   "chains": 3,
+   "pct": 0.23,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Summoned Twitcher",
+   "chains": 3,
+   "pct": 0.23,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Freeze Gland",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Damage",
-   "inDegree": 47
+   "firstLinks": 46
   },
   {
    "title": "Hammer",
-   "inDegree": 31
+   "firstLinks": 31
   },
   {
    "title": "Cauldron",
-   "inDegree": 27
+   "firstLinks": 27
   },
   {
    "title": "Mistlands",
-   "inDegree": 24
-  },
-  {
-   "title": "Workbench",
-   "inDegree": 23
+   "firstLinks": 24
   },
   {
    "title": "Forge of Potential",
-   "inDegree": 23
+   "firstLinks": 23
+  },
+  {
+   "title": "Workbench",
+   "firstLinks": 22
   },
   {
    "title": "Mead Ketill",
-   "inDegree": 22
+   "firstLinks": 22
   },
   {
    "title": "Food Preparation Table",
-   "inDegree": 18
+   "firstLinks": 18
   },
   {
    "title": "Biomes",
-   "inDegree": 16
+   "firstLinks": 16
   },
   {
    "title": "Stamina",
-   "inDegree": 16
+   "firstLinks": 15
   },
   {
    "title": "Black Forest",
-   "inDegree": 14
-  },
-  {
-   "title": "Ashlands",
-   "inDegree": 14
+   "firstLinks": 14
   },
   {
    "title": "Swamp",
-   "inDegree": 13
+   "firstLinks": 13
+  },
+  {
+   "title": "Ashlands",
+   "firstLinks": 13
   },
   {
    "title": "Loot chest",
-   "inDegree": 13
+   "firstLinks": 13
   },
   {
    "title": "Adrenaline",
-   "inDegree": 13
+   "firstLinks": 13
+  },
+  {
+   "title": "Frost Foundry",
+   "firstLinks": 12
   },
   {
    "title": "Health",
-   "inDegree": 11
+   "firstLinks": 11
   },
   {
    "title": "Poison",
-   "inDegree": 10
+   "firstLinks": 10
   },
   {
    "title": "Wood",
-   "inDegree": 9
-  },
-  {
-   "title": "Dvergr (race)",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Meadows",
-   "inDegree": 8
+   "firstLinks": 9
+  },
+  {
+   "title": "Dvergr (race)",
+   "firstLinks": 9
   },
   {
    "title": "Artisan Table",
-   "inDegree": 8
+   "firstLinks": 8
   },
   {
    "title": "Iron Cooking Station",
-   "inDegree": 8
-  },
-  {
-   "title": "Creatures",
-   "inDegree": 7
-  },
-  {
-   "title": "Stone",
-   "inDegree": 7
-  },
-  {
-   "title": "Abandoned House",
-   "inDegree": 7
-  },
-  {
-   "title": "Mountain",
-   "inDegree": 7
-  },
-  {
-   "title": "Birch",
-   "inDegree": 7
-  },
-  {
-   "title": "Frost Caves",
-   "inDegree": 7
+   "firstLinks": 8
   },
   {
    "title": "Black Forge",
-   "inDegree": 7
-  },
-  {
-   "title": "Bait",
-   "inDegree": 7
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Workbench",
-   "betweenness": 548
-  },
-  {
-   "title": "Hearth",
-   "betweenness": 528
-  },
-  {
-   "title": "Player base",
-   "betweenness": 432
-  },
-  {
-   "title": "Fire (effect)",
-   "betweenness": 417
-  },
-  {
-   "title": "Mead Ketill",
-   "betweenness": 390
-  },
-  {
-   "title": "Hammer",
-   "betweenness": 336
-  },
-  {
-   "title": "Creature spawner",
-   "betweenness": 290
-  },
-  {
-   "title": "Building",
-   "betweenness": 285
-  },
-  {
-   "title": "Freezing",
-   "betweenness": 280
-  },
-  {
-   "title": "Creatures",
-   "betweenness": 265
-  },
-  {
-   "title": "Biomes",
-   "betweenness": 258
-  },
-  {
-   "title": "Forge",
-   "betweenness": 258
-  },
-  {
-   "title": "Crafting",
-   "betweenness": 220
-  },
-  {
-   "title": "Stamina",
-   "betweenness": 217
-  },
-  {
-   "title": "Cover",
-   "betweenness": 217
-  },
-  {
-   "title": "Global Keys",
-   "betweenness": 216
-  },
-  {
-   "title": "Black Forest",
-   "betweenness": 192
-  },
-  {
-   "title": "Tasty Mead",
-   "betweenness": 192
-  },
-  {
-   "title": "Swamp",
-   "betweenness": 186
-  },
-  {
-   "title": "Cauldron",
-   "betweenness": 180
-  },
-  {
-   "title": "Thistle",
-   "betweenness": 175
-  },
-  {
-   "title": "Bonemass",
-   "betweenness": 174
-  },
-  {
-   "title": "Bed",
-   "betweenness": 168
-  },
-  {
-   "title": "Greydwarf",
-   "betweenness": 150
-  },
-  {
-   "title": "Poison",
-   "betweenness": 147
+   "firstLinks": 8
   },
   {
    "title": "Abandoned House",
-   "betweenness": 144
+   "firstLinks": 7
+  },
+  {
+   "title": "Mountain",
+   "firstLinks": 7
+  },
+  {
+   "title": "Birch",
+   "firstLinks": 7
+  },
+  {
+   "title": "Frost Caves",
+   "firstLinks": 7
+  },
+  {
+   "title": "Bait",
+   "firstLinks": 7
+  },
+  {
+   "title": "Blocking",
+   "firstLinks": 7
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Drake",
+   "chains": 235
   },
   {
    "title": "Moder",
-   "betweenness": 141
+   "chains": 235
   },
   {
-   "title": "Poison Resistance Mead",
-   "betweenness": 132
+   "title": "Freezing",
+   "chains": 172
+  },
+  {
+   "title": "Fire (effect)",
+   "chains": 171
+  },
+  {
+   "title": "Hearth",
+   "chains": 164
+  },
+  {
+   "title": "Draugr",
+   "chains": 113
+  },
+  {
+   "title": "Draugr Village",
+   "chains": 113
+  },
+  {
+   "title": "Mead Ketill",
+   "chains": 112
+  },
+  {
+   "title": "Swamp",
+   "chains": 106
+  },
+  {
+   "title": "Greydwarf",
+   "chains": 101
+  },
+  {
+   "title": "Greyling",
+   "chains": 101
+  },
+  {
+   "title": "Creature spawner",
+   "chains": 95
+  },
+  {
+   "title": "Player base",
+   "chains": 94
+  },
+  {
+   "title": "Workbench",
+   "chains": 87
+  },
+  {
+   "title": "Longship",
+   "chains": 84
+  },
+  {
+   "title": "Bonemass",
+   "chains": 71
+  },
+  {
+   "title": "Drakkar",
+   "chains": 70
   },
   {
    "title": "Ashlands",
-   "betweenness": 122
+   "chains": 69
   },
   {
-   "title": "Wood",
-   "betweenness": 112
+   "title": "Accessories",
+   "chains": 69
+  },
+  {
+   "title": "Armor",
+   "chains": 68
+  },
+  {
+   "title": "Damage",
+   "chains": 66
+  },
+  {
+   "title": "Dragon Egg",
+   "chains": 61
+  },
+  {
+   "title": "Forge",
+   "chains": 58
+  },
+  {
+   "title": "Crafting",
+   "chains": 58
+  },
+  {
+   "title": "Portal Stone",
+   "chains": 58
+  },
+  {
+   "title": "Shields",
+   "chains": 57
+  },
+  {
+   "title": "Blocking",
+   "chains": 57
+  },
+  {
+   "title": "Lox",
+   "chains": 54
+  },
+  {
+   "title": "Taming",
+   "chains": 54
+  },
+  {
+   "title": "Sap",
+   "chains": 54
   }
  ]
 }

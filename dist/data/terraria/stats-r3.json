@@ -1,58 +1,88 @@
 {
  "wiki": "terraria",
  "rank": "3",
- "nodes": 5213,
+ "nodes": 4337,
  "converge": {
-  "articles": 2792,
-  "pct": 53.56,
-  "deadEnd": 2421,
-  "deadEndPct": 46.44,
-  "noLinks": 505,
-  "tooFewLinks": 534,
-  "unresolvable": 481
+  "articles": 3413,
+  "pct": 78.69,
+  "deadEnd": 924,
+  "deadEndPct": 21.31,
+  "noLinks": 234,
+  "tooFewLinks": 427,
+  "unresolvable": 22
  },
  "hopStats": {
-  "mean": 8.85,
-  "median": 7,
+  "mean": 9.02,
+  "median": 8,
   "p90": 18,
-  "max": 24
+  "max": 26
  },
  "histogram": {
-  "0": 126,
-  "1": 194,
-  "2": 322,
-  "3": 193,
-  "4": 167,
-  "5": 166,
-  "6": 134,
-  "7": 133,
-  "8": 81,
-  "9": 97,
-  "10": 84,
-  "11": 76,
-  "12": 138,
-  "13": 85,
-  "14": 43,
-  "15": 47,
-  "16": 198,
-  "17": 133,
-  "18": 109,
-  "19": 98,
-  "20": 71,
-  "21": 46,
-  "22": 29,
-  "23": 18,
-  "24": 4
+  "0": 118,
+  "1": 223,
+  "2": 329,
+  "3": 223,
+  "4": 223,
+  "5": 146,
+  "6": 155,
+  "7": 179,
+  "8": 170,
+  "9": 209,
+  "10": 158,
+  "11": 141,
+  "12": 154,
+  "13": 96,
+  "14": 55,
+  "15": 45,
+  "16": 194,
+  "17": 141,
+  "18": 124,
+  "19": 108,
+  "20": 84,
+  "21": 58,
+  "22": 38,
+  "23": 29,
+  "24": 9,
+  "25": 3,
+  "26": 1
  },
- "components": 62,
- "cycleCount": 61,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 256,
+   "1": 155,
+   "2": 272,
+   "3": 274,
+   "4": 289,
+   "5": 261,
+   "6": 241,
+   "7": 237,
+   "8": 217,
+   "9": 204,
+   "10": 1931
+  },
+  "atLeast": {
+   "1": 94.1,
+   "2": 90.5,
+   "3": 84.3,
+   "5": 71.3
+  }
+ },
+ "concentration": {
+  "top1Pct": 55.85,
+  "top3Pct": 67.97,
+  "top10Pct": 73.99,
+  "cycleCount": 57,
+  "entropyBits": 1.96
+ },
+ "components": 58,
+ "cycleCount": 57,
  "largestCycle": {
   "members": [
    "The Underworld",
    "Lava"
   ],
   "size": 2,
-  "basin": 1837
+  "basin": 2422
  },
  "topAttractors": [
   {
@@ -60,25 +90,33 @@
     "The Underworld",
     "Lava"
    ],
-   "basin": 1837,
-   "pct": 35.24
+   "basin": 2422,
+   "pct": 55.85
   },
   {
    "cycle": [
     "Drills",
     "Tool speed"
    ],
-   "basin": 295,
-   "pct": 5.66
+   "basin": 281,
+   "pct": 6.48
   },
   {
    "cycle": [
     "Axes",
     "Cactus",
-    "Chainsaws"
+    "Trees"
    ],
-   "basin": 244,
-   "pct": 4.68
+   "basin": 245,
+   "pct": 5.65
+  },
+  {
+   "cycle": [
+    "Ocean",
+    "Water"
+   ],
+   "basin": 68,
+   "pct": 1.57
   },
   {
    "cycle": [
@@ -86,49 +124,40 @@
     "Mana Crystal",
     "Fallen Star"
    ],
-   "basin": 55,
-   "pct": 1.06
+   "basin": 54,
+   "pct": 1.25
   },
   {
    "cycle": [
-    "Ocean",
-    "Water"
+    "Seasonal events",
+    "Goodie Bag"
    ],
-   "basin": 52,
-   "pct": 1
-  },
-  {
-   "cycle": [
-    "Ores",
-    "Furnace",
-    "Bars"
-   ],
-   "basin": 50,
-   "pct": 0.96
-  },
-  {
-   "cycle": [
-    "Copper Shortsword",
-    "Copper Broadsword"
-   ],
-   "basin": 25,
-   "pct": 0.48
+   "basin": 53,
+   "pct": 1.22
   },
   {
    "cycle": [
     "Honey Block",
     "Honey"
    ],
+   "basin": 26,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Copper Shortsword",
+    "Copper Broadsword"
+   ],
    "basin": 24,
-   "pct": 0.46
+   "pct": 0.55
   },
   {
    "cycle": [
     "Queen Bee",
     "Witch Doctor"
    ],
-   "basin": 17,
-   "pct": 0.33
+   "basin": 19,
+   "pct": 0.44
   },
   {
    "cycle": [
@@ -136,23 +165,39 @@
     "Candy Corn Rifle"
    ],
    "basin": 17,
-   "pct": 0.33
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Bars",
+    "Furnace"
+   ],
+   "basin": 15,
+   "pct": 0.35
+  },
+  {
+   "cycle": [
+    "Candles",
+    "Flat-surface items"
+   ],
+   "basin": 14,
+   "pct": 0.32
   },
   {
    "cycle": [
     "Golf",
     "Golf Cup"
    ],
-   "basin": 12,
-   "pct": 0.23
+   "basin": 13,
+   "pct": 0.3
   },
   {
    "cycle": [
-    "Potion Sickness",
-    "Philosopher's Stone"
+    "Wind",
+    "Weather Radio"
    ],
-   "basin": 10,
-   "pct": 0.19
+   "basin": 12,
+   "pct": 0.28
   },
   {
    "cycle": [
@@ -160,7 +205,7 @@
     "Eternia Crystal"
    ],
    "basin": 10,
-   "pct": 0.19
+   "pct": 0.23
   },
   {
    "cycle": [
@@ -168,15 +213,31 @@
     "Repeaters"
    ],
    "basin": 10,
-   "pct": 0.19
+   "pct": 0.23
   },
   {
    "cycle": [
-    "Wind",
-    "Weather Radio"
+    "Terraria Collector's Edition",
+    "Carrot"
+   ],
+   "basin": 8,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Potion Sickness",
+    "Philosopher's Stone"
    ],
    "basin": 7,
-   "pct": 0.13
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Boomerangs",
+    "Light Disc"
+   ],
+   "basin": 7,
+   "pct": 0.16
   },
   {
    "cycle": [
@@ -185,376 +246,344 @@
     "Poison Barb"
    ],
    "basin": 7,
-   "pct": 0.13
-  },
-  {
-   "cycle": [
-    "Cloud",
-    "Rain Cloud"
-   ],
-   "basin": 6,
-   "pct": 0.12
-  },
-  {
-   "cycle": [
-    "Boomerangs",
-    "Light Disc"
-   ],
-   "basin": 5,
-   "pct": 0.1
-  },
-  {
-   "cycle": [
-    "Fast Clock",
-    "Slow"
-   ],
-   "basin": 5,
-   "pct": 0.1
-  },
-  {
-   "cycle": [
-    "Furnace/vi",
-    "Bars/vi"
-   ],
-   "basin": 5,
-   "pct": 0.1
+   "pct": 0.16
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "1.3.0.7",
-   "chains": 463,
-   "pct": 8.88,
-   "reason": "redlink target"
-  },
-  {
    "title": "Game mechanics",
-   "chains": 134,
-   "pct": 2.57,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Seasonal events",
-   "chains": 53,
-   "pct": 1.02,
+   "chains": 156,
+   "pct": 3.6,
    "reason": "no eligible links"
   },
   {
    "title": "Mechanisms",
-   "chains": 19,
-   "pct": 0.36,
+   "chains": 23,
+   "pct": 0.53,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Wands",
-   "chains": 16,
-   "pct": 0.31,
+   "chains": 18,
+   "pct": 0.42,
    "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Goblin Peon/cs",
-   "chains": 13,
-   "pct": 0.25,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Buffs/id",
-   "chains": 10,
-   "pct": 0.19,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Mobile version history",
-   "chains": 9,
-   "pct": 0.17,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Enemies/cs",
-   "chains": 8,
-   "pct": 0.15,
-   "reason": "redlink target"
-  },
-  {
-   "title": "NPCs/id",
-   "chains": 8,
-   "pct": 0.15,
-   "reason": "redlink target"
   },
   {
    "title": "Wooden Sword",
    "chains": 7,
-   "pct": 0.13,
+   "pct": 0.16,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Console version",
-   "chains": 6,
-   "pct": 0.12,
-   "reason": "redlink target"
+   "title": "Mobile version history",
+   "chains": 7,
+   "pct": 0.16,
+   "reason": "only 1 eligible links"
   },
   {
-   "title": "Pianos",
-   "chains": 6,
-   "pct": 0.12,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Empress of Light/ja",
+   "title": "Platinum Bar",
    "chains": 5,
-   "pct": 0.1,
-   "reason": "redlink target"
+   "pct": 0.12,
+   "reason": "only 2 eligible links"
   },
   {
-   "title": "Lava/vi",
+   "title": "Crafted walls",
    "chains": 4,
-   "pct": 0.08,
+   "pct": 0.09,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Glass",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Immunity accessories",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Chinese New Year",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Workshop Hub",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Silver Brick Wall",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "NPC flag/bg",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Slime Block",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Demon Horns",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Enemies",
-   "inDegree": 147
+   "firstLinks": 142
   },
   {
    "title": "Blocks",
-   "inDegree": 66
+   "firstLinks": 63
   },
   {
    "title": "Buffs",
-   "inDegree": 59
+   "firstLinks": 60
   },
   {
    "title": "Background walls",
-   "inDegree": 49
+   "firstLinks": 48
   },
   {
    "title": "Fishing",
-   "inDegree": 45
+   "firstLinks": 45
   },
   {
    "title": "NPCs",
-   "inDegree": 43
+   "firstLinks": 44
   },
   {
    "title": "Accessories",
-   "inDegree": 41
+   "firstLinks": 40
   },
   {
    "title": "Cavern",
-   "inDegree": 37
+   "firstLinks": 38
   },
   {
    "title": "Slimes",
-   "inDegree": 34
+   "firstLinks": 31
   },
   {
    "title": "Well Fed",
-   "inDegree": 30
+   "firstLinks": 30
   },
   {
    "title": "Defense",
-   "inDegree": 29
-  },
-  {
-   "title": "Layers",
-   "inDegree": 28
+   "firstLinks": 29
   },
   {
    "title": "The Crimson",
-   "inDegree": 27
+   "firstLinks": 28
   },
   {
-   "title": "Underground Jungle",
-   "inDegree": 26
-  },
-  {
-   "title": "Events",
-   "inDegree": 25
+   "title": "Layers",
+   "firstLinks": 26
   },
   {
    "title": "Minion-summoning weapons",
-   "inDegree": 25
-  },
-  {
-   "title": "The Corruption",
-   "inDegree": 24
-  },
-  {
-   "title": "House",
-   "inDegree": 24
-  },
-  {
-   "title": "Bosses",
-   "inDegree": 24
-  },
-  {
-   "title": "Chests",
-   "inDegree": 23
-  },
-  {
-   "title": "Inventory",
-   "inDegree": 23
+   "firstLinks": 25
   },
   {
    "title": "Shimmer",
-   "inDegree": 22
-  },
-  {
-   "title": "Armor",
-   "inDegree": 21
-  },
-  {
-   "title": "Halloween",
-   "inDegree": 21
-  },
-  {
-   "title": "Swords",
-   "inDegree": 20
-  },
-  {
-   "title": "Pets",
-   "inDegree": 20
-  },
-  {
-   "title": "Traveling Merchant",
-   "inDegree": 19
-  },
-  {
-   "title": "Underground",
-   "inDegree": 19
-  },
-  {
-   "title": "Dungeon",
-   "inDegree": 19
-  },
-  {
-   "title": "The Underworld",
-   "inDegree": 18
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Layers",
-   "betweenness": 9922
-  },
-  {
-   "title": "World size",
-   "betweenness": 9030
-  },
-  {
-   "title": "Enemies",
-   "betweenness": 8928
-  },
-  {
-   "title": "Underground Jungle",
-   "betweenness": 8687
-  },
-  {
-   "title": "Jungle",
-   "betweenness": 8631
-  },
-  {
-   "title": "Fall damage",
-   "betweenness": 8520
-  },
-  {
-   "title": "Invincibility frame",
-   "betweenness": 7980
-  },
-  {
-   "title": "Mud Block",
-   "betweenness": 7728
-  },
-  {
-   "title": "Plants",
-   "betweenness": 7464
-  },
-  {
-   "title": "The Constant",
-   "betweenness": 7449
-  },
-  {
-   "title": "Spider Nest",
-   "betweenness": 6984
-  },
-  {
-   "title": "Seeds",
-   "betweenness": 6225
-  },
-  {
-   "title": "Herbs",
-   "betweenness": 5000
-  },
-  {
-   "title": "Damage",
-   "betweenness": 4488
-  },
-  {
-   "title": "Accessories",
-   "betweenness": 4302
-  },
-  {
-   "title": "Weapons",
-   "betweenness": 3834
-  },
-  {
-   "title": "Critters",
-   "betweenness": 3158
-  },
-  {
-   "title": "Snow biome",
-   "betweenness": 2613
-  },
-  {
-   "title": "Snow Block",
-   "betweenness": 2436
-  },
-  {
-   "title": "Rain",
-   "betweenness": 2380
+   "firstLinks": 25
   },
   {
    "title": "House",
-   "betweenness": 2295
+   "firstLinks": 24
   },
   {
-   "title": "Background walls",
-   "betweenness": 2010
+   "title": "Water",
+   "firstLinks": 24
   },
   {
-   "title": "World",
-   "betweenness": 1953
+   "title": "The Corruption",
+   "firstLinks": 23
   },
   {
-   "title": "The Underworld",
-   "betweenness": 1810
+   "title": "Underground Jungle",
+   "firstLinks": 23
   },
   {
-   "title": "Objects",
-   "betweenness": 1792
+   "title": "Bosses",
+   "firstLinks": 23
   },
   {
-   "title": "Tools",
-   "betweenness": 1425
+   "title": "Armor",
+   "firstLinks": 22
   },
   {
-   "title": "Biomes",
-   "betweenness": 1166
+   "title": "Chests",
+   "firstLinks": 21
   },
   {
-   "title": "Goblin Tinkerer",
-   "betweenness": 1088
+   "title": "Events",
+   "firstLinks": 21
   },
   {
-   "title": "Rocket Boots",
-   "betweenness": 1054
+   "title": "Underground",
+   "firstLinks": 20
+  },
+  {
+   "title": "Halloween",
+   "firstLinks": 20
   },
   {
    "title": "Inventory",
-   "betweenness": 1041
+   "firstLinks": 20
+  },
+  {
+   "title": "Pets",
+   "firstLinks": 20
+  },
+  {
+   "title": "Dungeon",
+   "firstLinks": 19
+  },
+  {
+   "title": "Swords",
+   "firstLinks": 19
+  },
+  {
+   "title": "Traveling Merchant",
+   "firstLinks": 18
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "The Underworld",
+   "chains": 2422
+  },
+  {
+   "title": "Lava",
+   "chains": 2422
+  },
+  {
+   "title": "Critters",
+   "chains": 1687
+  },
+  {
+   "title": "Weapons",
+   "chains": 1387
+  },
+  {
+   "title": "Herbs",
+   "chains": 1350
+  },
+  {
+   "title": "Seeds",
+   "chains": 1344
+  },
+  {
+   "title": "Plants",
+   "chains": 1343
+  },
+  {
+   "title": "Underground Jungle",
+   "chains": 1337
+  },
+  {
+   "title": "Mud Block",
+   "chains": 1051
+  },
+  {
+   "title": "Jungle",
+   "chains": 1045
+  },
+  {
+   "title": "World size",
+   "chains": 980
+  },
+  {
+   "title": "Layers",
+   "chains": 979
+  },
+  {
+   "title": "Spider Nest",
+   "chains": 659
+  },
+  {
+   "title": "The Constant",
+   "chains": 649
+  },
+  {
+   "title": "Invincibility frame",
+   "chains": 646
+  },
+  {
+   "title": "Fall damage",
+   "chains": 644
+  },
+  {
+   "title": "Enemies",
+   "chains": 636
+  },
+  {
+   "title": "Dungeon",
+   "chains": 508
+  },
+  {
+   "title": "Switch",
+   "chains": 471
+  },
+  {
+   "title": "1.3.0.7",
+   "chains": 470
+  },
+  {
+   "title": "Desktop version history",
+   "chains": 469
+  },
+  {
+   "title": "Storage items",
+   "chains": 356
+  },
+  {
+   "title": "Inventory",
+   "chains": 352
+  },
+  {
+   "title": "Damage",
+   "chains": 331
+  },
+  {
+   "title": "Accessories",
+   "chains": 299
+  },
+  {
+   "title": "Tool speed",
+   "chains": 281
+  },
+  {
+   "title": "Drills",
+   "chains": 281
+  },
+  {
+   "title": "Blocks",
+   "chains": 269
+  },
+  {
+   "title": "DPS Meter",
+   "chains": 260
+  },
+  {
+   "title": "Settings",
+   "chains": 259
   }
  ]
 }

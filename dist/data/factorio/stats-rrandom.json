@@ -1,51 +1,74 @@
 {
  "wiki": "factorio",
  "rank": "random",
- "nodes": 5353,
+ "nodes": 1169,
  "converge": {
-  "articles": 2424,
-  "pct": 45.28,
-  "deadEnd": 2929,
-  "deadEndPct": 54.72,
-  "noLinks": 1589,
+  "articles": 677,
+  "pct": 57.91,
+  "deadEnd": 492,
+  "deadEndPct": 42.09,
+  "noLinks": 480,
   "tooFewLinks": 0,
-  "unresolvable": 436
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 3.84,
-  "median": 3,
-  "p90": 9,
-  "max": 17
+  "mean": 4.26,
+  "median": 4,
+  "p90": 8,
+  "max": 12
  },
  "histogram": {
-  "0": 288,
-  "1": 408,
-  "2": 377,
-  "3": 282,
-  "4": 210,
-  "5": 181,
-  "6": 176,
-  "7": 150,
-  "8": 97,
-  "9": 88,
-  "10": 69,
-  "11": 33,
-  "12": 37,
-  "13": 16,
-  "14": 9,
-  "15": 1,
-  "16": 1,
-  "17": 1
+  "0": 68,
+  "1": 98,
+  "2": 73,
+  "3": 58,
+  "4": 63,
+  "5": 64,
+  "6": 51,
+  "7": 119,
+  "8": 37,
+  "9": 22,
+  "10": 6,
+  "11": 12,
+  "12": 6
  },
- "components": 141,
- "cycleCount": 140,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 481,
+   "1": 36,
+   "2": 61,
+   "3": 65,
+   "4": 68,
+   "5": 83,
+   "6": 56,
+   "7": 32,
+   "8": 38,
+   "9": 46,
+   "10": 203
+  },
+  "atLeast": {
+   "1": 58.9,
+   "2": 55.8,
+   "3": 50.6,
+   "5": 39.2
+  }
+ },
+ "concentration": {
+  "top1Pct": 12.23,
+  "top3Pct": 31.14,
+  "top10Pct": 49.02,
+  "cycleCount": 31,
+  "entropyBits": 3.65
+ },
+ "components": 32,
+ "cycleCount": 31,
  "largestCycle": {
   "members": [
    "Steel plate",
    "Iron plate"
   ],
   "size": 2,
-  "basin": 309
+  "basin": 143
  },
  "topAttractors": [
   {
@@ -53,133 +76,43 @@
     "Steel plate",
     "Iron plate"
    ],
-   "basin": 309,
-   "pct": 5.77
-  },
-  {
-   "cycle": [
-    "Lab/ru",
-    "Science pack/ru",
-    "Research/ru"
-   ],
-   "basin": 176,
-   "pct": 3.29
-  },
-  {
-   "cycle": [
-    "Inserter",
-    "Electric system",
-    "Boiler"
-   ],
-   "basin": 171,
-   "pct": 3.19
-  },
-  {
-   "cycle": [
-    "Assembling machine 1",
-    "Assembling machine 2"
-   ],
-   "basin": 144,
-   "pct": 2.69
-  },
-  {
-   "cycle": [
-    "Slowdown capsule",
-    "Defender capsule"
-   ],
-   "basin": 106,
-   "pct": 1.98
-  },
-  {
-   "cycle": [
-    "Enemies/ja"
-   ],
-   "basin": 84,
-   "pct": 1.57
-  },
-  {
-   "cycle": [
-    "Time/de",
-    "Module/de",
-    "Electric furnace/de",
-    "Electric system/de",
-    "Accumulator/de"
-   ],
-   "basin": 81,
-   "pct": 1.51
-  },
-  {
-   "cycle": [
-    "Hazard concrete/ja",
-    "Refined concrete/ja"
-   ],
-   "basin": 75,
-   "pct": 1.4
-  },
-  {
-   "cycle": [
-    "Map structure/de",
-    "Radar/de"
-   ],
-   "basin": 74,
-   "pct": 1.38
-  },
-  {
-   "cycle": [
-    "Rail signal",
-    "Rail chain signal"
-   ],
-   "basin": 60,
-   "pct": 1.12
-  },
-  {
-   "cycle": [
-    "Artillery turret/uk",
-    "Artillery targeting remote/uk"
-   ],
-   "basin": 59,
-   "pct": 1.1
-  },
-  {
-   "cycle": [
-    "Piercing rounds magazine/ja",
-    "Uranium rounds magazine/ja"
-   ],
-   "basin": 50,
-   "pct": 0.93
+   "basin": 143,
+   "pct": 12.23
   },
   {
    "cycle": [
     "Spoilage",
     "Nutrients"
    ],
-   "basin": 45,
-   "pct": 0.84
+   "basin": 133,
+   "pct": 11.38
   },
   {
    "cycle": [
-    "Uranium-238/ja",
-    "Kovarex enrichment process/ja",
-    "Uranium processing/ja"
+    "Inserter",
+    "Fast inserter",
+    "Electric system",
+    "Boiler"
    ],
-   "basin": 38,
-   "pct": 0.71
+   "basin": 88,
+   "pct": 7.53
   },
   {
    "cycle": [
-    "Multiplayer/de",
-    "Game modes and options/de"
+    "Assembling machine 3",
+    "Assembling machine 1",
+    "Assembling machine 2"
    ],
-   "basin": 37,
-   "pct": 0.69
+   "basin": 78,
+   "pct": 6.67
   },
   {
    "cycle": [
-    "Gleba",
-    "Stromatolite"
+    "Personal laser defense",
+    "Laser shooting speed (research)"
    ],
-   "basin": 32,
-   "pct": 0.6
+   "basin": 41,
+   "pct": 3.51
   },
   {
    "cycle": [
@@ -187,369 +120,470 @@
     "Decider combinator",
     "Arithmetic combinator"
    ],
-   "basin": 30,
-   "pct": 0.56
+   "basin": 28,
+   "pct": 2.4
   },
   {
    "cycle": [
-    "Logistic robot/pl",
-    "Worker robot cargo size (research)/pl"
+    "Slowdown capsule",
+    "Defender capsule"
    ],
    "basin": 27,
-   "pct": 0.5
+   "pct": 2.31
   },
   {
    "cycle": [
-    "Petroleum gas/uk",
-    "Solid fuel/uk"
+    "Factorio HTTP API usage guidelines",
+    "Mod details API"
    ],
-   "basin": 24,
-   "pct": 0.45
+   "basin": 12,
+   "pct": 1.03
   },
   {
    "cycle": [
-    "Application directory/zh",
-    "Scenario system/zh"
+    "Uranium ore",
+    "Uranium-238"
    ],
-   "basin": 24,
-   "pct": 0.45
+   "basin": 12,
+   "pct": 1.03
+  },
+  {
+   "cycle": [
+    "Spoilage mechanics",
+    "Biochamber"
+   ],
+   "basin": 11,
+   "pct": 0.94
+  },
+  {
+   "cycle": [
+    "Power armor",
+    "Power armor MK2"
+   ],
+   "basin": 11,
+   "pct": 0.94
+  },
+  {
+   "cycle": [
+    "News",
+    "News/2017"
+   ],
+   "basin": 11,
+   "pct": 0.94
+  },
+  {
+   "cycle": [
+    "Jellynut",
+    "Jellynut seed"
+   ],
+   "basin": 10,
+   "pct": 0.86
+  },
+  {
+   "cycle": [
+    "Equipment modules",
+    "Modular armor"
+   ],
+   "basin": 8,
+   "pct": 0.68
+  },
+  {
+   "cycle": [
+    "Application directory",
+    "Log file"
+   ],
+   "basin": 8,
+   "pct": 0.68
+  },
+  {
+   "cycle": [
+    "Artillery wagon",
+    "Artillery shell",
+    "Artillery targeting remote",
+    "Artillery turret"
+   ],
+   "basin": 7,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Flamethrower turret",
+    "Flamethrower"
+   ],
+   "basin": 7,
+   "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Pistol",
+    "Submachine gun"
+   ],
+   "basin": 5,
+   "pct": 0.43
+  },
+  {
+   "cycle": [
+    "Piercing rounds magazine",
+    "Uranium rounds magazine"
+   ],
+   "basin": 4,
+   "pct": 0.34
+  },
+  {
+   "cycle": [
+    "Small electric pole",
+    "Medium electric pole"
+   ],
+   "basin": 4,
+   "pct": 0.34
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Research/ja",
-   "chains": 103,
-   "pct": 1.92,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Time/zh",
-   "chains": 95,
-   "pct": 1.77,
+   "title": "Data types",
+   "chains": 6,
+   "pct": 0.51,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Circuit network/pl",
-   "chains": 38,
-   "pct": 0.71,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Inserters/fr",
-   "chains": 36,
-   "pct": 0.67,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Bulk inserter/uk",
-   "chains": 29,
-   "pct": 0.54,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Materials and recipes/fr",
-   "chains": 28,
-   "pct": 0.52,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Energy shield/zh",
-   "chains": 27,
-   "pct": 0.5,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Water/ru",
-   "chains": 25,
-   "pct": 0.47,
-   "reason": "redlink target"
   },
   {
    "title": "Version history/0.8.0",
-   "chains": 22,
-   "pct": 0.41,
+   "chains": 3,
+   "pct": 0.26,
    "reason": "no eligible links"
   },
   {
-   "title": "Research/uk",
-   "chains": 20,
-   "pct": 0.37,
-   "reason": "redlink target"
+   "title": "Materials and recipes",
+   "chains": 2,
+   "pct": 0.17,
+   "reason": "no eligible links"
   },
   {
    "title": "Version history/2.0.0",
-   "chains": 18,
-   "pct": 0.34,
+   "chains": 2,
+   "pct": 0.17,
    "reason": "no eligible links"
   },
   {
-   "title": "Train stop/pl",
-   "chains": 18,
-   "pct": 0.34,
-   "reason": "redlink target"
+   "title": "Types/uint8",
+   "chains": 2,
+   "pct": 0.17,
+   "reason": "no eligible links"
   },
   {
-   "title": "Enemies/fr",
-   "chains": 17,
-   "pct": 0.32,
-   "reason": "redlink target"
+   "title": "Types/ItemCountType",
+   "chains": 2,
+   "pct": 0.17,
+   "reason": "no eligible links"
   },
   {
-   "title": "Railway/ja",
-   "chains": 17,
-   "pct": 0.32,
-   "reason": "redlink target"
+   "title": "Prototype/Item",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
   },
   {
-   "title": "Railway/fr",
-   "chains": 16,
-   "pct": 0.3,
-   "reason": "redlink target"
+   "title": "Prototype/Technology",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Prototype definitions",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Prototype/Entity",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Types/string",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Types/float",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Types/double",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Prototype/EntityWithHealth",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Types/EntityPrototypeFlags",
+   "chains": 1,
+   "pct": 0.09,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
-  {
-   "title": "Technologies/ru",
-   "inDegree": 90
-  },
+ "topFirstLinkTargets": [
   {
    "title": "Research",
-   "inDegree": 56
-  },
-  {
-   "title": "Research/ja",
-   "inDegree": 52
-  },
-  {
-   "title": "Technologies/ja",
-   "inDegree": 41
-  },
-  {
-   "title": "Enemies/de",
-   "inDegree": 31
-  },
-  {
-   "title": "Time",
-   "inDegree": 24
-  },
-  {
-   "title": "Technologies/uk",
-   "inDegree": 22
-  },
-  {
-   "title": "Research/ru",
-   "inDegree": 19
-  },
-  {
-   "title": "Damage/zh",
-   "inDegree": 19
-  },
-  {
-   "title": "Enemies/zh",
-   "inDegree": 19
+   "firstLinks": 55
   },
   {
    "title": "Enemies",
-   "inDegree": 17
-  },
-  {
-   "title": "Research/de",
-   "inDegree": 17
-  },
-  {
-   "title": "Research/uk",
-   "inDegree": 17
-  },
-  {
-   "title": "Version history",
-   "inDegree": 16
-  },
-  {
-   "title": "Map structure/zh",
-   "inDegree": 15
-  },
-  {
-   "title": "Application directory",
-   "inDegree": 14
-  },
-  {
-   "title": "Fluid system/de",
-   "inDegree": 14
-  },
-  {
-   "title": "Technologies",
-   "inDegree": 13
-  },
-  {
-   "title": "Electric system",
-   "inDegree": 13
-  },
-  {
-   "title": "Module/ru",
-   "inDegree": 13
-  },
-  {
-   "title": "Electric system/de",
-   "inDegree": 13
-  },
-  {
-   "title": "Enemies/uk",
-   "inDegree": 13
+   "firstLinks": 16
   },
   {
    "title": "Circuit network",
-   "inDegree": 12
-  },
-  {
-   "title": "Belt transport system",
-   "inDegree": 12
-  },
-  {
-   "title": "Enemies/ja",
-   "inDegree": 12
-  },
-  {
-   "title": "Space Age",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Fulgora",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Space platform",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Gleba",
-   "inDegree": 12
-  },
-  {
-   "title": "Materials and recipes/fr",
-   "inDegree": 11
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Module",
-   "betweenness": 1004
-  },
-  {
-   "title": "Productivity",
-   "betweenness": 789
-  },
-  {
-   "title": "Pollution",
-   "betweenness": 696
-  },
-  {
-   "title": "Productivity module",
-   "betweenness": 610
-  },
-  {
-   "title": "Steel plate productivity (research)",
-   "betweenness": 528
-  },
-  {
-   "title": "Map generator",
-   "betweenness": 441
-  },
-  {
-   "title": "Technologies",
-   "betweenness": 438
-  },
-  {
-   "title": "Research",
-   "betweenness": 427
-  },
-  {
-   "title": "Enemies",
-   "betweenness": 408
-  },
-  {
-   "title": "Distractor capsule",
-   "betweenness": 400
+   "firstLinks": 12
   },
   {
    "title": "Space Age",
-   "betweenness": 400
+   "firstLinks": 11
   },
   {
-   "title": "Space platform",
-   "betweenness": 378
+   "title": "Module",
+   "firstLinks": 10
   },
   {
-   "title": "Nauvis",
-   "betweenness": 378
+   "title": "Belt transport system",
+   "firstLinks": 10
   },
   {
-   "title": "Lab research speed (research)",
-   "betweenness": 372
+   "title": "News",
+   "firstLinks": 10
   },
   {
-   "title": "Time",
-   "betweenness": 370
+   "title": "Technologies",
+   "firstLinks": 10
   },
   {
-   "title": "Follower robot count (research)",
-   "betweenness": 370
+   "title": "Electric system",
+   "firstLinks": 10
   },
   {
-   "title": "Oil processing/ru",
-   "betweenness": 370
+   "title": "Factorio HTTP API usage guidelines",
+   "firstLinks": 9
+  },
+  {
+   "title": "Vulcanus",
+   "firstLinks": 9
+  },
+  {
+   "title": "Asteroids",
+   "firstLinks": 7
+  },
+  {
+   "title": "Assembling machine 3",
+   "firstLinks": 6
+  },
+  {
+   "title": "Construction robot",
+   "firstLinks": 6
+  },
+  {
+   "title": "Map generator",
+   "firstLinks": 6
+  },
+  {
+   "title": "Biochamber",
+   "firstLinks": 6
+  },
+  {
+   "title": "Productivity",
+   "firstLinks": 6
+  },
+  {
+   "title": "Boiler",
+   "firstLinks": 5
   },
   {
    "title": "Car",
-   "betweenness": 360
+   "firstLinks": 5
   },
   {
-   "title": "Biolab",
-   "betweenness": 352
+   "title": "Console",
+   "firstLinks": 5
   },
   {
-   "title": "Water",
-   "betweenness": 351
+   "title": "Player",
+   "firstLinks": 5
   },
   {
-   "title": "Pipe/ru",
-   "betweenness": 351
+   "title": "Flamethrower turret",
+   "firstLinks": 5
   },
   {
-   "title": "Technologies/ru",
-   "betweenness": 348
+   "title": "Quality",
+   "firstLinks": 5
   },
   {
-   "title": "Rocket",
-   "betweenness": 344
+   "title": "Aquilo",
+   "firstLinks": 5
   },
   {
-   "title": "Transport belts/Physics",
-   "betweenness": 336
-  },
-  {
-   "title": "Hazard concrete",
-   "betweenness": 330
-  },
-  {
-   "title": "Agricultural science pack",
-   "betweenness": 329
+   "title": "Pollution",
+   "firstLinks": 4
   },
   {
    "title": "Inserters",
-   "betweenness": 325
+   "firstLinks": 4
+  },
+  {
+   "title": "Logistic network",
+   "firstLinks": 4
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Steel plate",
+   "chains": 143
+  },
+  {
+   "title": "Iron plate",
+   "chains": 143
+  },
+  {
+   "title": "Nutrients",
+   "chains": 133
+  },
+  {
+   "title": "Spoilage",
+   "chains": 133
+  },
+  {
+   "title": "Agricultural tower",
+   "chains": 126
+  },
+  {
+   "title": "Yumako tree",
+   "chains": 123
+  },
+  {
+   "title": "Steel plate productivity (research)",
+   "chains": 115
+  },
+  {
+   "title": "Productivity",
+   "chains": 114
+  },
+  {
+   "title": "Module",
+   "chains": 104
+  },
+  {
+   "title": "Pollution",
+   "chains": 102
+  },
+  {
+   "title": "Inserter",
+   "chains": 88
+  },
+  {
+   "title": "Fast inserter",
+   "chains": 88
+  },
+  {
+   "title": "Boiler",
+   "chains": 88
+  },
+  {
+   "title": "Electric system",
+   "chains": 88
+  },
+  {
+   "title": "Assembling machine 1",
+   "chains": 78
+  },
+  {
+   "title": "Assembling machine 2",
+   "chains": 78
+  },
+  {
+   "title": "Assembling machine 3",
+   "chains": 78
   },
   {
    "title": "Lab",
-   "betweenness": 325
+   "chains": 61
+  },
+  {
+   "title": "Lab research speed (research)",
+   "chains": 59
+  },
+  {
+   "title": "Science pack",
+   "chains": 59
+  },
+  {
+   "title": "Research",
+   "chains": 58
+  },
+  {
+   "title": "Space Age",
+   "chains": 58
   },
   {
    "title": "Atomic bomb",
-   "betweenness": 322
+   "chains": 50
   },
   {
-   "title": "Refined concrete",
-   "betweenness": 322
+   "title": "Rocket",
+   "chains": 47
+  },
+  {
+   "title": "Map generator",
+   "chains": 47
+  },
+  {
+   "title": "Space platform",
+   "chains": 46
+  },
+  {
+   "title": "Enemies",
+   "chains": 41
+  },
+  {
+   "title": "Personal laser defense",
+   "chains": 41
+  },
+  {
+   "title": "Laser shooting speed (research)",
+   "chains": 41
+  },
+  {
+   "title": "Tank",
+   "chains": 39
   }
- ]
+ ],
+ "randomSeeds": {
+  "seeds": 5,
+  "convergePct": {
+   "mean": 57.91,
+   "sd": 0
+  },
+  "topAttractorPct": {
+   "mean": 12.23,
+   "sd": 0
+  }
+ }
 }

@@ -3,67 +3,92 @@
  "rank": "last",
  "nodes": 79761,
  "converge": {
-  "articles": 48943,
-  "pct": 61.36,
-  "deadEnd": 30818,
-  "deadEndPct": 38.64,
-  "noLinks": 2191,
+  "articles": 68418,
+  "pct": 85.78,
+  "deadEnd": 11343,
+  "deadEndPct": 14.22,
+  "noLinks": 2214,
   "tooFewLinks": 0,
-  "unresolvable": 157
+  "unresolvable": 3
  },
  "hopStats": {
-  "mean": 7.09,
-  "median": 5,
-  "p90": 17,
-  "max": 42
+  "mean": 8.47,
+  "median": 7,
+  "p90": 19,
+  "max": 39
  },
  "histogram": {
-  "0": 3163,
-  "1": 5979,
-  "2": 6169,
-  "3": 4148,
-  "4": 3190,
-  "5": 3561,
-  "6": 2849,
-  "7": 2978,
-  "8": 1642,
-  "9": 1349,
-  "10": 1870,
-  "11": 1210,
-  "12": 1118,
-  "13": 1241,
-  "14": 1314,
-  "15": 1221,
-  "16": 991,
-  "17": 1080,
-  "18": 783,
-  "19": 478,
-  "20": 599,
-  "21": 376,
-  "22": 222,
-  "23": 123,
-  "24": 76,
-  "25": 64,
-  "26": 99,
-  "27": 109,
-  "28": 36,
-  "29": 42,
-  "30": 237,
-  "31": 218,
-  "32": 126,
-  "33": 84,
-  "34": 47,
-  "35": 38,
-  "36": 34,
-  "37": 18,
-  "38": 29,
-  "39": 9,
-  "40": 11,
-  "41": 11,
-  "42": 1
+  "0": 3172,
+  "1": 5913,
+  "2": 5963,
+  "3": 5947,
+  "4": 4423,
+  "5": 4574,
+  "6": 3765,
+  "7": 3877,
+  "8": 2796,
+  "9": 2197,
+  "10": 2833,
+  "11": 2556,
+  "12": 2681,
+  "13": 1954,
+  "14": 1868,
+  "15": 1644,
+  "16": 1387,
+  "17": 1881,
+  "18": 1484,
+  "19": 1346,
+  "20": 1233,
+  "21": 970,
+  "22": 1090,
+  "23": 586,
+  "24": 979,
+  "25": 478,
+  "26": 335,
+  "27": 230,
+  "28": 101,
+  "29": 64,
+  "30": 31,
+  "31": 18,
+  "32": 21,
+  "33": 12,
+  "34": 3,
+  "35": 2,
+  "36": 1,
+  "37": 1,
+  "38": 1,
+  "39": 1
  },
- "components": 1553,
- "cycleCount": 1552,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 2217,
+   "1": 6358,
+   "2": 10238,
+   "3": 10053,
+   "4": 9430,
+   "5": 7603,
+   "6": 5676,
+   "7": 4245,
+   "8": 3578,
+   "9": 2896,
+   "10": 17467
+  },
+  "atLeast": {
+   "1": 97.2,
+   "2": 89.2,
+   "3": 76.4,
+   "5": 52
+  }
+ },
+ "concentration": {
+  "top1Pct": 26.52,
+  "top3Pct": 37.95,
+  "top10Pct": 58.83,
+  "cycleCount": 1547,
+  "entropyBits": 5.1
+ },
+ "components": 1548,
+ "cycleCount": 1547,
  "largestCycle": {
   "members": [
    "Grand Exchange",
@@ -84,7 +109,7 @@
    "Raffle barker"
   ],
   "size": 16,
-  "basin": 11769
+  "basin": 21155
  },
  "topAttractors": [
   {
@@ -106,32 +131,32 @@
     "Circus barker",
     "Raffle barker"
    ],
-   "basin": 11769,
-   "pct": 14.76
+   "basin": 21155,
+   "pct": 26.52
   },
   {
    "cycle": [
-    "Completionist cape",
-    "Quest Cape (achievement)",
-    "Quests achievements",
-    "Dimension of Disaster",
-    "2016 Halloween event",
-    "The Arc",
-    "Impressing the Locals",
-    "Player-owned port/Random events",
-    "Player-owned ports enhancer",
-    "Completionist cape (t)"
+    "Zamorak, Lord of Chaos",
+    "Demon Slayer"
    ],
-   "basin": 3310,
-   "pct": 4.15
+   "basin": 5176,
+   "pct": 6.49
+  },
+  {
+   "cycle": [
+    "Necromancy cape",
+    "Hooded necromancy cape"
+   ],
+   "basin": 3937,
+   "pct": 4.94
   },
   {
    "cycle": [
     "Orlando Smith's hat",
     "Adam Antite"
    ],
-   "basin": 3246,
-   "pct": 4.07
+   "basin": 3828,
+   "pct": 4.8
   },
   {
    "cycle": [
@@ -139,25 +164,25 @@
     "Pride event",
     "Mod North"
    ],
-   "basin": 3119,
-   "pct": 3.91
+   "basin": 3711,
+   "pct": 4.65
   },
   {
    "cycle": [
     "Priest in Peril",
     "Lycurgus"
    ],
-   "basin": 2500,
-   "pct": 3.13
+   "basin": 2431,
+   "pct": 3.05
   },
   {
    "cycle": [
-    "Game Guide",
-    "Gaalsien",
-    "Enchanted bolts"
+    "Runecrafting",
+    "Omni-talisman",
+    "Soul altar"
    ],
-   "basin": 2122,
-   "pct": 2.66
+   "basin": 1837,
+   "pct": 2.3
   },
   {
    "cycle": [
@@ -166,23 +191,31 @@
     "Escape",
     "Lectern (Anachronia)"
    ],
-   "basin": 1993,
-   "pct": 2.5
+   "basin": 1717,
+   "pct": 2.15
   },
   {
    "cycle": [
     "Treasure Hunter",
     "Wicked hood teleport token"
    ],
-   "basin": 1566,
-   "pct": 1.96
+   "basin": 1587,
+   "pct": 1.99
+  },
+  {
+   "cycle": [
+    "Cold Front",
+    "Queen of Snow"
+   ],
+   "basin": 1548,
+   "pct": 1.94
   },
   {
    "cycle": [
     "Combat pure",
     "Skill pure/10 HP"
    ],
-   "basin": 1466,
+   "basin": 1470,
    "pct": 1.84
   },
   {
@@ -198,7 +231,7 @@
     "Upcoming updates",
     "Updates"
    ],
-   "basin": 1014,
+   "basin": 1015,
    "pct": 1.27
   },
   {
@@ -207,129 +240,76 @@
     "God Wars Dungeon",
     "Pernix armour"
    ],
-   "basin": 799,
-   "pct": 1
-  },
-  {
-   "cycle": [
-    "Jagex Moderator",
-    "Throne of Fame"
-   ],
-   "basin": 704,
-   "pct": 0.88
-  },
-  {
-   "cycle": [
-    "List of quests and miniquests by timeline",
-    "List of miniquests by timeline"
-   ],
-   "basin": 451,
-   "pct": 0.57
-  },
-  {
-   "cycle": [
-    "Christmas Village",
-    "Golden Easter egg",
-    "Pile of Easter eggs"
-   ],
-   "basin": 338,
-   "pct": 0.42
-  },
-  {
-   "cycle": [
-    "Ghostly outfit",
-    "Priest's chocolate",
-    "Sweet tooth (status)"
-   ],
-   "basin": 336,
-   "pct": 0.42
-  },
-  {
-   "cycle": [
-    "The Fremennik Trials",
-    "One Small Favour"
-   ],
-   "basin": 334,
-   "pct": 0.42
-  },
-  {
-   "cycle": [
-    "New Varrock",
-    "Mimic kill token"
-   ],
-   "basin": 323,
-   "pct": 0.4
+   "basin": 1002,
+   "pct": 1.26
   },
   {
    "cycle": [
     "Blooming Burrow",
     "Carrot sword in the stone"
    ],
-   "basin": 320,
-   "pct": 0.4
+   "basin": 867,
+   "pct": 1.09
   },
   {
    "cycle": [
-    "Festering journal",
-    "Unspeakable horror"
+    "Large crate (timeworn components)",
+    "Small crate (timeworn components)"
    ],
-   "basin": 302,
-   "pct": 0.38
+   "basin": 722,
+   "pct": 0.91
+  },
+  {
+   "cycle": [
+    "Jagex Moderator",
+    "Throne of Fame"
+   ],
+   "basin": 630,
+   "pct": 0.79
+  },
+  {
+   "cycle": [
+    "Game Guide",
+    "Gaalsien",
+    "Enchanted bolts"
+   ],
+   "basin": 630,
+   "pct": 0.79
+  },
+  {
+   "cycle": [
+    "Provoke",
+    "Natural Instinct"
+   ],
+   "basin": 474,
+   "pct": 0.59
+  },
+  {
+   "cycle": [
+    "List of quests and miniquests by timeline",
+    "List of miniquests by timeline"
+   ],
+   "basin": 469,
+   "pct": 0.59
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Calculators",
-   "chains": 10003,
-   "pct": 12.54,
-   "reason": "redlink target"
-  },
-  {
    "title": "Construction/Level up table",
-   "chains": 4617,
-   "pct": 5.79,
+   "chains": 5869,
+   "pct": 7.36,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Necromancy",
-   "chains": 3699,
-   "pct": 4.64,
-   "reason": "redlink target"
   },
   {
    "title": "Support updates",
-   "chains": 1459,
-   "pct": 1.83,
+   "chains": 1383,
+   "pct": 1.73,
    "reason": "no eligible links"
   },
   {
-   "title": "Minigames",
-   "chains": 1427,
-   "pct": 1.79,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Treasure Trails",
-   "chains": 724,
-   "pct": 0.91,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Invention",
-   "chains": 712,
-   "pct": 0.89,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Wizards' Tower",
-   "chains": 697,
-   "pct": 0.87,
-   "reason": "redlink target"
-  },
-  {
    "title": "Clan Admin Messages",
-   "chains": 572,
-   "pct": 0.72,
+   "chains": 579,
+   "pct": 0.73,
    "reason": "no eligible links"
   },
   {
@@ -339,279 +319,315 @@
    "reason": "no eligible links"
   },
   {
-   "title": "RuneScape Wiki (Jagex)",
-   "chains": 474,
-   "pct": 0.59,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Fort Forinthry",
-   "chains": 444,
-   "pct": 0.56,
-   "reason": "redlink target"
-  },
-  {
    "title": "James Hannigan",
    "chains": 339,
    "pct": 0.43,
    "reason": "no eligible links"
   },
   {
-   "title": "Mod Surma",
-   "chains": 290,
-   "pct": 0.36,
-   "reason": "redlink target"
+   "title": "Repressed",
+   "chains": 61,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Orb of oculus",
-   "chains": 278,
-   "pct": 0.35,
-   "reason": "redlink target"
+   "title": "Minimum XP for each total level",
+   "chains": 45,
+   "pct": 0.06,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Cub worldbearer",
+   "chains": 24,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Points of No Return",
+   "chains": 22,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Weave Come a Long Way",
+   "chains": 18,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mod Rook",
+   "chains": 16,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mod Dagget",
+   "chains": 13,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Treasure Hunter/Promotions",
+   "chains": 12,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Treasure Trails/Guide/Anagrams",
+   "chains": 8,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Necronium crossbow (unstrung)",
+   "chains": 7,
+   "pct": 0.01,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Player-owned house",
-   "inDegree": 1099
+   "firstLinks": 1098
   },
   {
    "title": "Buffs and debuffs",
-   "inDegree": 805
+   "firstLinks": 805
   },
   {
    "title": "Video",
-   "inDegree": 680
+   "firstLinks": 682
   },
   {
    "title": "Smithing",
-   "inDegree": 593
+   "firstLinks": 585
   },
   {
    "title": "Experience",
-   "inDegree": 569
+   "firstLinks": 570
   },
   {
    "title": "Jagex Store",
-   "inDegree": 550
+   "firstLinks": 550
   },
   {
    "title": "Jagex",
-   "inDegree": 461
+   "firstLinks": 463
   },
   {
    "title": "Chimes (player-owned port)",
-   "inDegree": 460
+   "firstLinks": 460
   },
   {
    "title": "Treasure Trails",
-   "inDegree": 441
+   "firstLinks": 444
   },
   {
    "title": "Livestream",
-   "inDegree": 399
+   "firstLinks": 400
   },
   {
    "title": "Grand Exchange",
-   "inDegree": 385
+   "firstLinks": 387
   },
   {
    "title": "Treasure Hunter",
-   "inDegree": 338
+   "firstLinks": 339
   },
   {
    "title": "Crafting",
-   "inDegree": 330
-  },
-  {
-   "title": "Daemonheim",
-   "inDegree": 321
+   "firstLinks": 330
   },
   {
    "title": "2026 Construction update",
-   "inDegree": 312
+   "firstLinks": 324
+  },
+  {
+   "title": "Daemonheim",
+   "firstLinks": 321
   },
   {
    "title": "Life points",
-   "inDegree": 263
+   "firstLinks": 262
   },
   {
    "title": "Solomon's General Store",
-   "inDegree": 260
-  },
-  {
-   "title": "Invention",
-   "inDegree": 247
+   "firstLinks": 260
   },
   {
    "title": "Quests",
-   "inDegree": 244
+   "firstLinks": 245
+  },
+  {
+   "title": "Invention",
+   "firstLinks": 245
   },
   {
    "title": "Examine",
-   "inDegree": 226
+   "firstLinks": 226
   },
   {
    "title": "Achievements",
-   "inDegree": 222
+   "firstLinks": 223
   },
   {
    "title": "Wilderness",
-   "inDegree": 214
+   "firstLinks": 214
   },
   {
    "title": "Free-to-play",
-   "inDegree": 202
+   "firstLinks": 203
   },
   {
    "title": "Evolution of Combat",
-   "inDegree": 197
+   "firstLinks": 200
   },
   {
    "title": "Diango",
-   "inDegree": 194
+   "firstLinks": 194
   },
   {
    "title": "Defence",
-   "inDegree": 184
+   "firstLinks": 190
   },
   {
    "title": "Agility",
-   "inDegree": 183
+   "firstLinks": 185
   },
   {
    "title": "Members",
-   "inDegree": 169
+   "firstLinks": 169
   },
   {
    "title": "Ranged",
-   "inDegree": 168
+   "firstLinks": 168
   },
   {
    "title": "Necromancy",
-   "inDegree": 168
+   "firstLinks": 168
   }
  ],
- "topBetweenness": [
-  {
-   "title": "RuneMetrics/Adventurer's Log",
-   "betweenness": 142405
-  },
-  {
-   "title": "Infernal orb",
-   "betweenness": 130684
-  },
-  {
-   "title": "Grand Exchange",
-   "betweenness": 123001
-  },
-  {
-   "title": "JMod clone",
-   "betweenness": 119123
-  },
-  {
-   "title": "Grand Exchange/History",
-   "betweenness": 111248
-  },
-  {
-   "title": "The Drop",
-   "betweenness": 108026
-  },
+ "topThroughTraffic": [
   {
    "title": "Abyssal whip",
-   "betweenness": 99735
-  },
-  {
-   "title": "Mod Chris L",
-   "betweenness": 96305
-  },
-  {
-   "title": "Divination",
-   "betweenness": 88376
-  },
-  {
-   "title": "Carnillean Rising",
-   "betweenness": 88286
-  },
-  {
-   "title": "Guthixian Cache",
-   "betweenness": 76959
-  },
-  {
-   "title": "Invaders Must Die II",
-   "betweenness": 65206
-  },
-  {
-   "title": "Backpack",
-   "betweenness": 60336
-  },
-  {
-   "title": "Zombie head (NPC)",
-   "betweenness": 57845
-  },
-  {
-   "title": "Bloodsplatter Isle",
-   "betweenness": 55462
-  },
-  {
-   "title": "Distractions and Diversions",
-   "betweenness": 54749
-  },
-  {
-   "title": "The Adventurous",
-   "betweenness": 53067
-  },
-  {
-   "title": "Mos Le'Harmless",
-   "betweenness": 51820
-  },
-  {
-   "title": "Trouble Brewing",
-   "betweenness": 49552
+   "chains": 21155
   },
   {
    "title": "Balthazar Beauregard's Big Top Bonanza",
-   "betweenness": 47380
+   "chains": 21155
   },
   {
-   "title": "Trouble Brewing (music track)",
-   "betweenness": 46962
+   "title": "Distractions and Diversions",
+   "chains": 21155
   },
   {
-   "title": "War's Retreat",
-   "betweenness": 44967
+   "title": "Circus barker",
+   "chains": 21155
   },
   {
-   "title": "Distillery Hilarity",
-   "betweenness": 44370
+   "title": "Grand Exchange",
+   "chains": 21155
   },
   {
-   "title": "Reaper points",
-   "betweenness": 43852
+   "title": "Grand Exchange/History",
+   "chains": 21155
   },
   {
-   "title": "Wythien",
-   "betweenness": 43586
+   "title": "Carnillean Rising",
+   "chains": 21155
   },
   {
-   "title": "Master farmer outfit",
-   "betweenness": 43384
+   "title": "Invaders Must Die II",
+   "chains": 21155
   },
   {
-   "title": "Crystal chest (Prifddinas)",
-   "betweenness": 42444
+   "title": "Divination",
+   "chains": 21155
   },
   {
-   "title": "Azibo",
-   "betweenness": 42174
+   "title": "Infernal orb",
+   "chains": 21155
   },
   {
-   "title": "Mages' book",
-   "betweenness": 41984
+   "title": "JMod clone",
+   "chains": 21155
   },
   {
-   "title": "Music playlist",
-   "betweenness": 41776
+   "title": "Raffle barker",
+   "chains": 21155
+  },
+  {
+   "title": "Guthixian Cache",
+   "chains": 21155
+  },
+  {
+   "title": "The Drop",
+   "chains": 21155
+  },
+  {
+   "title": "RuneMetrics/Adventurer's Log",
+   "chains": 21155
+  },
+  {
+   "title": "Mod Chris L",
+   "chains": 21155
+  },
+  {
+   "title": "Calculators",
+   "chains": 8339
+  },
+  {
+   "title": "Construction/Level up table",
+   "chains": 5869
+  },
+  {
+   "title": "Construction",
+   "chains": 5868
+  },
+  {
+   "title": "Demon Slayer",
+   "chains": 5176
+  },
+  {
+   "title": "Zamorak, Lord of Chaos",
+   "chains": 5176
+  },
+  {
+   "title": "The Barrows: Rise of the Six",
+   "chains": 5082
+  },
+  {
+   "title": "In Aid of the Myreque",
+   "chains": 5066
+  },
+  {
+   "title": "While Guthix Sleeps",
+   "chains": 5045
+  },
+  {
+   "title": "Classic Modes",
+   "chains": 5020
+  },
+  {
+   "title": "Items",
+   "chains": 4865
+  },
+  {
+   "title": "Prayer",
+   "chains": 4070
+  },
+  {
+   "title": "Back to my Roots",
+   "chains": 4053
+  },
+  {
+   "title": "Eagles' Peak (location)",
+   "chains": 4043
+  },
+  {
+   "title": "15 Year Anniversary Celebrations",
+   "chains": 4038
   }
  ]
 }

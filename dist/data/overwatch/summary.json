@@ -1,97 +1,118 @@
 {
  "wiki": "overwatch",
- "generatedAt": "2026-10-12T13:52:37.995Z",
+ "generatedAt": "2026-10-14T04:05:21.064Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 82.02,
-   "deadEndPct": 17.98,
-   "components": 34,
-   "cycleCount": 33,
-   "meanHops": 3.73,
+   "convergePct": 83.51,
+   "deadEndPct": 16.49,
+   "components": 32,
+   "cycleCount": 31,
+   "meanHops": 3.57,
    "medianHops": 4,
-   "maxHops": 9,
+   "maxHops": 8,
    "topAttractor": [
     "Game Modes",
     "Competitive Play",
     "Playlist"
    ],
-   "topAttractorPct": 43.98
+   "topAttractorPct": 44.94,
+   "top3Pct": 74.68,
+   "eligiblePct": 84
   },
   {
    "rank": "2",
-   "convergePct": 45.94,
-   "deadEndPct": 54.06,
+   "convergePct": 43.41,
+   "deadEndPct": 56.59,
    "components": 30,
    "cycleCount": 29,
-   "meanHops": 5.55,
+   "meanHops": 5.37,
    "medianHops": 5,
-   "maxHops": 14,
+   "maxHops": 18,
    "topAttractor": [
     "Unranked",
     "Game Modes"
    ],
-   "topAttractorPct": 22.04
+   "topAttractorPct": 33.73,
+   "top3Pct": 37.93,
+   "eligiblePct": 70.9
   },
   {
    "rank": "3",
-   "convergePct": 29.1,
-   "deadEndPct": 70.9,
-   "components": 29,
-   "cycleCount": 28,
-   "meanHops": 3.32,
-   "medianHops": 3,
+   "convergePct": 51.53,
+   "deadEndPct": 48.47,
+   "components": 28,
+   "cycleCount": 27,
+   "meanHops": 2.82,
+   "medianHops": 2,
    "maxHops": 10,
    "topAttractor": [
-    "Anubis",
-    "Egypt"
+    "Heroes",
+    "Spawn Room",
+    "Deathmatch",
+    "Respawn",
+    "Anran"
    ],
-   "topAttractorPct": 13.75
+   "topAttractorPct": 25.32,
+   "top3Pct": 43.48,
+   "eligiblePct": 59
   },
   {
    "rank": "5",
-   "convergePct": 9.79,
-   "deadEndPct": 90.21,
-   "components": 19,
-   "cycleCount": 18,
-   "meanHops": 1.71,
-   "medianHops": 1,
+   "convergePct": 9.83,
+   "deadEndPct": 90.17,
+   "components": 18,
+   "cycleCount": 17,
+   "meanHops": 1.89,
+   "medianHops": 2,
    "maxHops": 8,
    "topAttractor": [
     "Omnic Crisis",
-    "Omnium"
+    "God program"
    ],
-   "topAttractorPct": 3.38
+   "topAttractorPct": 2.67,
+   "top3Pct": 4.91,
+   "eligiblePct": 44.1
   },
   {
    "rank": "last",
-   "convergePct": 62.11,
-   "deadEndPct": 37.89,
+   "convergePct": 78.42,
+   "deadEndPct": 21.58,
    "components": 56,
    "cycleCount": 55,
-   "meanHops": 3.87,
-   "medianHops": 3,
-   "maxHops": 16,
+   "meanHops": 5.74,
+   "medianHops": 5,
+   "maxHops": 22,
    "topAttractor": [
     "Season",
     "Competitive Drives",
     "Competitive Points"
    ],
-   "topAttractorPct": 19.27
+   "topAttractorPct": 33.97,
+   "top3Pct": 50.89,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 78.6,
-   "deadEndPct": 21.4,
-   "components": 55,
-   "cycleCount": 54,
-   "meanHops": 4.41,
-   "medianHops": 4,
+   "convergePct": 83.48,
+   "deadEndPct": 16.52,
+   "components": 57,
+   "cycleCount": 56,
+   "meanHops": 3.6,
+   "medianHops": 3,
    "maxHops": 14,
    "topAttractor": [
-    "Torbjörn"
+    "Perks",
+    "Ability",
+    "Status effect",
+    "Movement speed",
+    "Lúcio",
+    "Genji",
+    "Brigitte"
    ],
-   "topAttractorPct": 16.88
+   "topAttractorPct": 24.93,
+   "top3Pct": 46.47,
+   "eligiblePct": 100
   }
  ]
 }

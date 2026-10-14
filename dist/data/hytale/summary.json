@@ -1,75 +1,86 @@
 {
  "wiki": "hytale",
- "generatedAt": "2026-10-12T13:45:43.031Z",
+ "generatedAt": "2026-10-14T04:05:40.578Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 46.8,
-   "deadEndPct": 53.2,
-   "components": 16,
-   "cycleCount": 15,
-   "meanHops": 3.08,
-   "medianHops": 3,
-   "maxHops": 7,
+   "convergePct": 94.75,
+   "deadEndPct": 5.25,
+   "components": 15,
+   "cycleCount": 14,
+   "meanHops": 4.37,
+   "medianHops": 5,
+   "maxHops": 11,
    "topAttractor": [
-    "Hypixel Inc.",
-    "Hypixel Network"
+    "Adventure Mode",
+    "Gamemode"
    ],
-   "topAttractorPct": 19.25
+   "topAttractorPct": 45.78,
+   "top3Pct": 74.99,
+   "eligiblePct": 98.6
   },
   {
    "rank": "2",
-   "convergePct": 79.97,
-   "deadEndPct": 20.03,
+   "convergePct": 91.24,
+   "deadEndPct": 8.76,
    "components": 22,
    "cycleCount": 21,
-   "meanHops": 3.76,
+   "meanHops": 4.03,
    "medianHops": 4,
    "maxHops": 10,
    "topAttractor": [
-    "Hypixel Network"
+    "Hypixel Network",
+    "Simon Collins-Laflamme",
+    "Hypixel Studios",
+    "Hypixel Inc."
    ],
-   "topAttractorPct": 65.52
+   "topAttractorPct": 76.41,
+   "top3Pct": 87.88,
+   "eligiblePct": 93
   },
   {
    "rank": "3",
-   "convergePct": 46.73,
-   "deadEndPct": 53.27,
-   "components": 29,
-   "cycleCount": 28,
-   "meanHops": 3.09,
+   "convergePct": 41.64,
+   "deadEndPct": 58.36,
+   "components": 25,
+   "cycleCount": 24,
+   "meanHops": 2.95,
    "medianHops": 3,
-   "maxHops": 10,
+   "maxHops": 8,
    "topAttractor": [
     "Orbis",
     "Faction",
     "Whisperfrost Frontiers"
    ],
-   "topAttractorPct": 40.42
+   "topAttractorPct": 36.59,
+   "top3Pct": 38.22,
+   "eligiblePct": 61.2
   },
   {
    "rank": "5",
-   "convergePct": 8.92,
-   "deadEndPct": 91.08,
-   "components": 14,
-   "cycleCount": 13,
-   "meanHops": 2.63,
-   "medianHops": 2,
-   "maxHops": 10,
+   "convergePct": 9.58,
+   "deadEndPct": 90.42,
+   "components": 15,
+   "cycleCount": 14,
+   "meanHops": 3.97,
+   "medianHops": 3,
+   "maxHops": 13,
    "topAttractor": [
     "Whisperfrost Frontiers",
     "Faction",
     "Hidey Hole"
    ],
-   "topAttractorPct": 3.09
+   "topAttractorPct": 3.4,
+   "top3Pct": 7.96,
+   "eligiblePct": 27.1
   },
   {
    "rank": "last",
-   "convergePct": 84.5,
-   "deadEndPct": 15.5,
-   "components": 77,
-   "cycleCount": 76,
-   "meanHops": 5.91,
+   "convergePct": 97.6,
+   "deadEndPct": 2.4,
+   "components": 74,
+   "cycleCount": 73,
+   "meanHops": 5.8,
    "medianHops": 4,
    "maxHops": 17,
    "topAttractor": [
@@ -77,24 +88,28 @@
     "The Heart of Orbis",
     "Adventure Mode"
    ],
-   "topAttractorPct": 37.04
+   "topAttractorPct": 39.82,
+   "top3Pct": 82.61,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 63.81,
-   "deadEndPct": 36.19,
-   "components": 39,
-   "cycleCount": 38,
-   "meanHops": 3.67,
+   "convergePct": 97.53,
+   "deadEndPct": 2.47,
+   "components": 41,
+   "cycleCount": 40,
+   "meanHops": 4.24,
    "medianHops": 3,
-   "maxHops": 12,
+   "maxHops": 16,
    "topAttractor": [
     "Bench",
     "Inventory",
     "Candle",
     "Furniture Workbench"
    ],
-   "topAttractorPct": 43.55
+   "topAttractorPct": 57.83,
+   "top3Pct": 78.26,
+   "eligiblePct": 100
   }
  ]
 }

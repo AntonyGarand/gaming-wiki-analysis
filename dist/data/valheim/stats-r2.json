@@ -3,80 +3,121 @@
  "rank": "2",
  "nodes": 1284,
  "converge": {
-  "articles": 803,
-  "pct": 62.54,
-  "deadEnd": 481,
-  "deadEndPct": 37.46,
-  "noLinks": 10,
-  "tooFewLinks": 37,
-  "unresolvable": 69
+  "articles": 1151,
+  "pct": 89.64,
+  "deadEnd": 133,
+  "deadEndPct": 10.36,
+  "noLinks": 12,
+  "tooFewLinks": 93,
+  "unresolvable": 0
  },
  "hopStats": {
-  "mean": 3.08,
-  "median": 3,
-  "p90": 6,
-  "max": 8
+  "mean": 5.72,
+  "median": 4,
+  "p90": 13,
+  "max": 18
  },
  "histogram": {
-  "0": 68,
-  "1": 140,
-  "2": 135,
-  "3": 131,
-  "4": 149,
-  "5": 88,
-  "6": 38,
-  "7": 26,
-  "8": 28
+  "0": 67,
+  "1": 126,
+  "2": 125,
+  "3": 111,
+  "4": 154,
+  "5": 137,
+  "6": 56,
+  "7": 49,
+  "8": 40,
+  "9": 47,
+  "10": 31,
+  "11": 48,
+  "12": 27,
+  "13": 24,
+  "14": 33,
+  "15": 26,
+  "16": 30,
+  "17": 17,
+  "18": 3
  },
- "components": 36,
- "cycleCount": 35,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 12,
+   "1": 93,
+   "2": 113,
+   "3": 146,
+   "4": 118,
+   "5": 139,
+   "6": 136,
+   "7": 100,
+   "8": 76,
+   "9": 64,
+   "10": 287
+  },
+  "atLeast": {
+   "1": 99.1,
+   "2": 91.8,
+   "3": 83,
+   "5": 62.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 33.41,
+  "top3Pct": 64.25,
+  "top10Pct": 85.36,
+  "cycleCount": 32,
+  "entropyBits": 2.77
+ },
+ "components": 33,
+ "cycleCount": 32,
  "largestCycle": {
   "members": [
-   "Ashlands",
-   "Lava"
+   "Creatures",
+   "Global Keys",
+   "Spawning mechanics"
   ],
-  "size": 2,
-  "basin": 220
+  "size": 3,
+  "basin": 429
  },
  "topAttractors": [
+  {
+   "cycle": [
+    "Creatures",
+    "Global Keys",
+    "Spawning mechanics"
+   ],
+   "basin": 429,
+   "pct": 33.41
+  },
   {
    "cycle": [
     "Ashlands",
     "Lava"
    ],
-   "basin": 220,
-   "pct": 17.13
+   "basin": 224,
+   "pct": 17.45
   },
   {
    "cycle": [
     "Beech",
     "Stone Axe"
    ],
-   "basin": 151,
-   "pct": 11.76
+   "basin": 172,
+   "pct": 13.4
   },
   {
    "cycle": [
     "Swamp",
     "Ancient Tree"
    ],
-   "basin": 131,
-   "pct": 10.2
-  },
-  {
-   "cycle": [
-    "Damage"
-   ],
-   "basin": 107,
-   "pct": 8.33
+   "basin": 134,
+   "pct": 10.44
   },
   {
    "cycle": [
     "Wooden Battle Idol",
     "Wooden Protection Idol"
    ],
-   "basin": 65,
-   "pct": 5.06
+   "basin": 67,
+   "pct": 5.22
   },
   {
    "cycle": [
@@ -186,15 +227,16 @@
   },
   {
    "cycle": [
-    "Frost (effect)"
+    "Silver Shield",
+    "Serpent Scale Shield"
    ],
    "basin": 2,
    "pct": 0.16
   },
   {
    "cycle": [
-    "Silver Shield",
-    "Serpent Scale Shield"
+    "Guck",
+    "Gucksack"
    ],
    "basin": 2,
    "pct": 0.16
@@ -202,34 +244,16 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Controls",
-   "chains": 262,
-   "pct": 20.4,
-   "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Crafting",
-   "chains": 34,
-   "pct": 2.65,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Health",
-   "chains": 33,
-   "pct": 2.57,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Wood",
-   "chains": 13,
-   "pct": 1.01,
-   "reason": "redlink target"
-  },
-  {
    "title": "Swords",
    "chains": 10,
    "pct": 0.78,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Controls",
+   "chains": 6,
+   "pct": 0.47,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Stacks and Piles",
@@ -238,303 +262,321 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Developer console",
-   "chains": 4,
-   "pct": 0.31,
-   "reason": "redlink target"
-  },
-  {
    "title": "Pickaxes",
    "chains": 3,
    "pct": 0.23,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Knives",
    "chains": 3,
    "pct": 0.23,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Polearms",
    "chains": 3,
    "pct": 0.23,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Spears",
    "chains": 3,
    "pct": 0.23,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Greydwarf Eye",
-   "chains": 2,
-   "pct": 0.16,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Seasonal events",
    "chains": 2,
    "pct": 0.16,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
-   "title": "Unstable Lava Rock",
+   "title": "Bombs",
    "chains": 2,
    "pct": 0.16,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Valheim Wiki",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Longship",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Raft",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Valheim",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Gull",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Queen Bee",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Mistlands",
-   "inDegree": 50
+   "firstLinks": 50
   },
   {
    "title": "Food",
-   "inDegree": 36
+   "firstLinks": 36
   },
   {
    "title": "Ashlands",
-   "inDegree": 35
+   "firstLinks": 35
   },
   {
    "title": "Deep North",
-   "inDegree": 32
+   "firstLinks": 32
   },
   {
    "title": "Hildir's Chests",
-   "inDegree": 27
+   "firstLinks": 27
   },
   {
    "title": "Swamp",
-   "inDegree": 26
+   "firstLinks": 26
   },
   {
    "title": "Mountain",
-   "inDegree": 25
+   "firstLinks": 25
+  },
+  {
+   "title": "Black Forest",
+   "firstLinks": 24
   },
   {
    "title": "Damage",
-   "inDegree": 25
-  },
-  {
-   "title": "Black Forest",
-   "inDegree": 24
+   "firstLinks": 23
   },
   {
    "title": "Meadows",
-   "inDegree": 21
+   "firstLinks": 22
   },
   {
    "title": "Armor",
-   "inDegree": 21
+   "firstLinks": 21
   },
   {
    "title": "Plains",
-   "inDegree": 20
+   "firstLinks": 20
+  },
+  {
+   "title": "Workbench",
+   "firstLinks": 20
   },
   {
    "title": "Fermenter",
-   "inDegree": 20
+   "firstLinks": 20
   },
   {
    "title": "Forge of Potential",
-   "inDegree": 20
-  },
-  {
-   "title": "Workbench",
-   "inDegree": 19
+   "firstLinks": 20
   },
   {
    "title": "Cauldron",
-   "inDegree": 19
+   "firstLinks": 19
   },
   {
    "title": "Trinkets",
-   "inDegree": 13
+   "firstLinks": 13
   },
   {
    "title": "Thunderblood Essence",
-   "inDegree": 13
+   "firstLinks": 13
   },
   {
    "title": "Frostfire Essence",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Creatures",
-   "inDegree": 10
+   "firstLinks": 10
   },
   {
    "title": "Feast",
-   "inDegree": 10
+   "firstLinks": 10
   },
   {
    "title": "Mörkhalla",
-   "inDegree": 10
-  },
-  {
-   "title": "Smelter",
-   "inDegree": 8
-  },
-  {
-   "title": "Ocean",
-   "inDegree": 8
+   "firstLinks": 10
   },
   {
    "title": "Wood",
-   "inDegree": 7
+   "firstLinks": 9
   },
   {
    "title": "Hammer",
-   "inDegree": 7
-  },
-  {
-   "title": "Campfire",
-   "inDegree": 7
-  },
-  {
-   "title": "Forge",
-   "inDegree": 7
-  },
-  {
-   "title": "Runestone",
-   "inDegree": 7
-  },
-  {
-   "title": "Cultivator",
-   "inDegree": 7
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Cover",
-   "betweenness": 1053
-  },
-  {
-   "title": "Artisan Table",
-   "betweenness": 968
-  },
-  {
-   "title": "Blast Furnace",
-   "betweenness": 938
-  },
-  {
-   "title": "Workbench",
-   "betweenness": 930
-  },
-  {
-   "title": "Moder",
-   "betweenness": 852
-  },
-  {
-   "title": "Runestone",
-   "betweenness": 760
-  },
-  {
-   "title": "Sacrificial Stones",
-   "betweenness": 616
-  },
-  {
-   "title": "Creatures",
-   "betweenness": 510
-  },
-  {
-   "title": "Forsaken Altars",
-   "betweenness": 492
-  },
-  {
-   "title": "Campfire",
-   "betweenness": 440
-  },
-  {
-   "title": "Mistlands",
-   "betweenness": 416
-  },
-  {
-   "title": "Stamina",
-   "betweenness": 360
-  },
-  {
-   "title": "Yggdrasil Shoot",
-   "betweenness": 315
-  },
-  {
-   "title": "Rested",
-   "betweenness": 304
-  },
-  {
-   "title": "Black Forest",
-   "betweenness": 275
-  },
-  {
-   "title": "Forsaken power",
-   "betweenness": 259
-  },
-  {
-   "title": "Cauldron",
-   "betweenness": 252
-  },
-  {
-   "title": "Deep North",
-   "betweenness": 250
-  },
-  {
-   "title": "Food",
-   "betweenness": 234
-  },
-  {
-   "title": "Resting",
-   "betweenness": 231
-  },
-  {
-   "title": "Blueberries",
-   "betweenness": 224
-  },
-  {
-   "title": "Hammer",
-   "betweenness": 220
-  },
-  {
-   "title": "Ashlands",
-   "betweenness": 216
-  },
-  {
-   "title": "Black Metal Axe",
-   "betweenness": 212
-  },
-  {
-   "title": "Fermenter",
-   "betweenness": 200
-  },
-  {
-   "title": "Loot chest",
-   "betweenness": 196
-  },
-  {
-   "title": "Maypole",
-   "betweenness": 195
+   "firstLinks": 9
   },
   {
    "title": "Smelter",
-   "betweenness": 192
+   "firstLinks": 8
   },
   {
-   "title": "World seed",
-   "betweenness": 186
+   "title": "Forge",
+   "firstLinks": 8
   },
   {
-   "title": "Farming (skill)",
-   "betweenness": 183
+   "title": "Ocean",
+   "firstLinks": 8
+  },
+  {
+   "title": "Stamina",
+   "firstLinks": 8
+  },
+  {
+   "title": "Campfire",
+   "firstLinks": 7
+  },
+  {
+   "title": "Runestone",
+   "firstLinks": 7
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Creatures",
+   "chains": 429
+  },
+  {
+   "title": "Spawning mechanics",
+   "chains": 429
+  },
+  {
+   "title": "Global Keys",
+   "chains": 429
+  },
+  {
+   "title": "Forsaken Altars",
+   "chains": 323
+  },
+  {
+   "title": "Sacrificial Stones",
+   "chains": 313
+  },
+  {
+   "title": "Runestone",
+   "chains": 311
+  },
+  {
+   "title": "Moder",
+   "chains": 301
+  },
+  {
+   "title": "Blast Furnace",
+   "chains": 293
+  },
+  {
+   "title": "Artisan Table",
+   "chains": 280
+  },
+  {
+   "title": "Cover",
+   "chains": 276
+  },
+  {
+   "title": "Workbench",
+   "chains": 252
+  },
+  {
+   "title": "Ashlands",
+   "chains": 224
+  },
+  {
+   "title": "Lava",
+   "chains": 224
+  },
+  {
+   "title": "Stone Axe",
+   "chains": 172
+  },
+  {
+   "title": "Beech",
+   "chains": 172
+  },
+  {
+   "title": "Campfire",
+   "chains": 138
+  },
+  {
+   "title": "Swamp",
+   "chains": 134
+  },
+  {
+   "title": "Ancient Tree",
+   "chains": 134
+  },
+  {
+   "title": "Deep North",
+   "chains": 129
+  },
+  {
+   "title": "Black Metal Axe",
+   "chains": 108
+  },
+  {
+   "title": "Yggdrasil Shoot",
+   "chains": 107
+  },
+  {
+   "title": "Mistlands",
+   "chains": 106
+  },
+  {
+   "title": "Mead Ketill",
+   "chains": 105
+  },
+  {
+   "title": "Mead",
+   "chains": 104
+  },
+  {
+   "title": "Status effects",
+   "chains": 97
+  },
+  {
+   "title": "Damage",
+   "chains": 96
+  },
+  {
+   "title": "Resting",
+   "chains": 79
+  },
+  {
+   "title": "Rested",
+   "chains": 78
+  },
+  {
+   "title": "Stamina",
+   "chains": 74
+  },
+  {
+   "title": "Hammer",
+   "chains": 69
   }
  ]
 }

@@ -1,48 +1,76 @@
 {
  "wiki": "terraria",
  "rank": "strict1",
- "nodes": 5213,
+ "nodes": 4337,
  "converge": {
-  "articles": 3711,
-  "pct": 71.19,
-  "deadEnd": 1502,
-  "deadEndPct": 28.81,
-  "noLinks": 505,
+  "articles": 3805,
+  "pct": 87.73,
+  "deadEnd": 532,
+  "deadEndPct": 12.27,
+  "noLinks": 234,
   "tooFewLinks": 0,
-  "unresolvable": 468
+  "unresolvable": 22
  },
  "hopStats": {
-  "mean": 3.98,
+  "mean": 3.94,
   "median": 3,
-  "p90": 8,
+  "p90": 7,
   "max": 14
  },
  "histogram": {
-  "0": 30,
-  "1": 88,
-  "2": 848,
-  "3": 1238,
-  "4": 492,
-  "5": 230,
-  "6": 267,
-  "7": 107,
-  "8": 166,
-  "9": 106,
-  "10": 47,
-  "11": 65,
-  "12": 23,
+  "0": 22,
+  "1": 78,
+  "2": 836,
+  "3": 1287,
+  "4": 581,
+  "5": 242,
+  "6": 293,
+  "7": 110,
+  "8": 147,
+  "9": 89,
+  "10": 21,
+  "11": 67,
+  "12": 28,
   "13": 3,
   "14": 1
  },
- "components": 19,
- "cycleCount": 18,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 256,
+   "1": 155,
+   "2": 272,
+   "3": 274,
+   "4": 289,
+   "5": 261,
+   "6": 241,
+   "7": 237,
+   "8": 217,
+   "9": 204,
+   "10": 1931
+  },
+  "atLeast": {
+   "1": 94.1,
+   "2": 90.5,
+   "3": 84.3,
+   "5": 71.3
+  }
+ },
+ "concentration": {
+  "top1Pct": 85.47,
+  "top3Pct": 86.53,
+  "top10Pct": 87.69,
+  "cycleCount": 11,
+  "entropyBits": 0.25
+ },
+ "components": 12,
+ "cycleCount": 11,
  "largestCycle": {
   "members": [
    "Items",
    "World"
   ],
   "size": 2,
-  "basin": 3598
+  "basin": 3707
  },
  "topAttractors": [
   {
@@ -50,15 +78,8 @@
     "Items",
     "World"
    ],
-   "basin": 3598,
-   "pct": 69.02
-  },
-  {
-   "cycle": [
-    "Movement Accessories"
-   ],
-   "basin": 31,
-   "pct": 0.59
+   "basin": 3707,
+   "pct": 85.47
   },
   {
    "cycle": [
@@ -66,459 +87,416 @@
     "Wire"
    ],
    "basin": 28,
-   "pct": 0.54
+   "pct": 0.65
   },
   {
    "cycle": [
     "Liquids",
     "Water"
    ],
-   "basin": 11,
-   "pct": 0.21
+   "basin": 18,
+   "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Grab bags",
+    "Crates"
+   ],
+   "basin": 17,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Halloween",
+    "Seasonal events"
+   ],
+   "basin": 12,
+   "pct": 0.28
   },
   {
    "cycle": [
     "Day and night cycle",
     "Moon phase"
    ],
-   "basin": 6,
-   "pct": 0.12
+   "basin": 7,
+   "pct": 0.16
   },
   {
    "cycle": [
-    "Pickaxes/no"
-   ],
-   "basin": 6,
-   "pct": 0.12
-  },
-  {
-   "cycle": [
-    "Iron Axe/nl",
-    "Copper Axe/nl"
-   ],
-   "basin": 5,
-   "pct": 0.1
-  },
-  {
-   "cycle": [
-    "NPCs/th",
-    "Guide/th"
+    "Mobile version history/yue",
+    "Desktop version history/yue"
    ],
    "basin": 4,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
-    "Throwing weapons/nl",
-    "Explosives (class)/nl",
-    "Weapons/nl"
+    "Copper Pickaxe/lt",
+    "Iron Pickaxe/lt"
    ],
    "basin": 4,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
-    "Windy Day/ja"
-   ],
-   "basin": 4,
-   "pct": 0.08
-  },
-  {
-   "cycle": [
-    "Tin Bar/vi",
-    "Copper Bar/vi"
+    "NPCs/bg",
+    "House/bg"
    ],
    "basin": 3,
-   "pct": 0.06
+   "pct": 0.07
   },
   {
    "cycle": [
     "King Slime/lt",
     "Bosses/lt"
    ],
-   "basin": 2,
-   "pct": 0.04
+   "basin": 3,
+   "pct": 0.07
   },
   {
    "cycle": [
-    "Bosses/it",
-    "King Slime/it"
+    "Cactus Pickaxe/sk",
+    "Copper Pickaxe/sk"
    ],
    "basin": 2,
-   "pct": 0.04
-  },
-  {
-   "cycle": [
-    "Woods/nl",
-    "Trees/nl"
-   ],
-   "basin": 2,
-   "pct": 0.04
-  },
-  {
-   "cycle": [
-    "Axes/nl"
-   ],
-   "basin": 2,
-   "pct": 0.04
-  },
-  {
-   "cycle": [
-    "Nurse/nl"
-   ],
-   "basin": 1,
-   "pct": 0.02
-  },
-  {
-   "cycle": [
-    "Dryad/nl"
-   ],
-   "basin": 1,
-   "pct": 0.02
-  },
-  {
-   "cycle": [
-    "Guide/nl"
-   ],
-   "basin": 1,
-   "pct": 0.02
+   "pct": 0.05
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Game mechanics",
-   "chains": 227,
-   "pct": 4.35,
+   "chains": 248,
+   "pct": 5.72,
    "reason": "no eligible links"
   },
   {
-   "title": "Ores/vi",
-   "chains": 24,
-   "pct": 0.46,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Enemies/it",
-   "chains": 22,
-   "pct": 0.42,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Ores/id",
-   "chains": 22,
-   "pct": 0.42,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Bars/vi",
-   "chains": 16,
-   "pct": 0.31,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Enemies/cs",
-   "chains": 13,
-   "pct": 0.25,
-   "reason": "redlink target"
-  },
-  {
-   "title": "NPCs/cs",
-   "chains": 12,
-   "pct": 0.23,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Seasonal events",
-   "chains": 12,
-   "pct": 0.23,
+   "title": "Crafted walls",
+   "chains": 3,
+   "pct": 0.07,
    "reason": "no eligible links"
   },
   {
-   "title": "Tools/nl",
-   "chains": 10,
-   "pct": 0.19,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Gems",
-   "chains": 8,
-   "pct": 0.15,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Pre-Hardmode/id",
-   "chains": 8,
-   "pct": 0.15,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Ammunition items/vi",
-   "chains": 7,
-   "pct": 0.13,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Hardmode/nl",
-   "chains": 7,
-   "pct": 0.13,
+   "title": "Recipes/Bone Welder/register",
+   "chains": 2,
+   "pct": 0.05,
    "reason": "no eligible links"
   },
   {
-   "title": "Health/id",
-   "chains": 7,
-   "pct": 0.13,
+   "title": "Recipes/Blend-O-Matic/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Server/yue",
+   "chains": 2,
+   "pct": 0.05,
    "reason": "redlink target"
   },
   {
-   "title": "Enemies/vi",
-   "chains": 6,
-   "pct": 0.12,
+   "title": "Recipes/Teapot/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Ancient Manipulator/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Furnace/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Titanium Pickaxe/lt",
+   "chains": 2,
+   "pct": 0.05,
    "reason": "redlink target"
+  },
+  {
+   "title": "Recipes/Decay Chamber/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Flesh Cloning Vat/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Loom/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Honey Dispenser/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Game platform",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Autohammer/register",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Hardmode",
-   "inDegree": 973
+   "firstLinks": 960
   },
   {
    "title": "Pre-Hardmode",
-   "inDegree": 535
+   "firstLinks": 533
   },
   {
    "title": "Background walls",
-   "inDegree": 163
+   "firstLinks": 163
   },
   {
    "title": "Furniture",
-   "inDegree": 151
+   "firstLinks": 152
   },
   {
    "title": "Vanity items",
-   "inDegree": 133
+   "firstLinks": 134
   },
   {
    "title": "Blocks",
-   "inDegree": 77
+   "firstLinks": 77
   },
   {
    "title": "Accessories",
-   "inDegree": 76
+   "firstLinks": 76
   },
   {
    "title": "Food",
-   "inDegree": 73
+   "firstLinks": 73
   },
   {
    "title": "Critters",
-   "inDegree": 61
-  },
-  {
-   "title": "Pets",
-   "inDegree": 54
-  },
-  {
-   "title": "NPCs",
-   "inDegree": 52
+   "firstLinks": 60
   },
   {
    "title": "Bricks",
-   "inDegree": 52
-  },
-  {
-   "title": "Consumables",
-   "inDegree": 48
-  },
-  {
-   "title": "Tools",
-   "inDegree": 42
-  },
-  {
-   "title": "Enemies",
-   "inDegree": 42
-  },
-  {
-   "title": "Secret world seeds",
-   "inDegree": 42
-  },
-  {
-   "title": "Re-Logic",
-   "inDegree": 39
-  },
-  {
-   "title": "Buff potions",
-   "inDegree": 39
-  },
-  {
-   "title": "Debuffs",
-   "inDegree": 33
-  },
-  {
-   "title": "Dyes",
-   "inDegree": 27
-  },
-  {
-   "title": "Crafting stations",
-   "inDegree": 26
-  },
-  {
-   "title": "Biomes",
-   "inDegree": 25
-  },
-  {
-   "title": "Ranged weapons",
-   "inDegree": 25
-  },
-  {
-   "title": "Mechanisms",
-   "inDegree": 23
-  },
-  {
-   "title": "Fishing catches",
-   "inDegree": 23
-  },
-  {
-   "title": "Desktop version history",
-   "inDegree": 22
-  },
-  {
-   "title": "Armor",
-   "inDegree": 21
-  },
-  {
-   "title": "Ores/id",
-   "inDegree": 21
-  },
-  {
-   "title": "Movement Accessories",
-   "inDegree": 19
-  },
-  {
-   "title": "Ores/vi",
-   "inDegree": 19
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Hardmode",
-   "betweenness": 4392
-  },
-  {
-   "title": "Pre-Hardmode",
-   "betweenness": 4120
-  },
-  {
-   "title": "World",
-   "betweenness": 2644
-  },
-  {
-   "title": "Enemies",
-   "betweenness": 2506
-  },
-  {
-   "title": "Damage",
-   "betweenness": 2454
-  },
-  {
-   "title": "Health",
-   "betweenness": 2095
-  },
-  {
-   "title": "Inventory",
-   "betweenness": 1888
-  },
-  {
-   "title": "Chests",
-   "betweenness": 1785
-  },
-  {
-   "title": "Furniture",
-   "betweenness": 1704
-  },
-  {
-   "title": "Life Fruit",
-   "betweenness": 1680
-  },
-  {
-   "title": "Weapons",
-   "betweenness": 1416
-  },
-  {
-   "title": "Buffs",
-   "betweenness": 1020
-  },
-  {
-   "title": "Ranged weapons",
-   "betweenness": 999
-  },
-  {
-   "title": "Items",
-   "betweenness": 952
-  },
-  {
-   "title": "Biomes",
-   "betweenness": 898
-  },
-  {
-   "title": "Ammunition items",
-   "betweenness": 840
-  },
-  {
-   "title": "Consumables",
-   "betweenness": 825
-  },
-  {
-   "title": "Background walls",
-   "betweenness": 668
-  },
-  {
-   "title": "Blocks",
-   "betweenness": 570
-  },
-  {
-   "title": "Tools",
-   "betweenness": 570
-  },
-  {
-   "title": "Biome backgrounds",
-   "betweenness": 507
-  },
-  {
-   "title": "Re-Logic",
-   "betweenness": 495
-  },
-  {
-   "title": "Food",
-   "betweenness": 450
-  },
-  {
-   "title": "1.2",
-   "betweenness": 424
-  },
-  {
-   "title": "Vanity items",
-   "betweenness": 411
-  },
-  {
-   "title": "Fishing",
-   "betweenness": 350
-  },
-  {
-   "title": "Weapons/id",
-   "betweenness": 344
+   "firstLinks": 52
   },
   {
    "title": "Pets",
-   "betweenness": 330
+   "firstLinks": 52
   },
   {
-   "title": "Fishing poles",
-   "betweenness": 318
+   "title": "Consumables",
+   "firstLinks": 47
+  },
+  {
+   "title": "Secret world seeds",
+   "firstLinks": 42
+  },
+  {
+   "title": "Tools",
+   "firstLinks": 40
+  },
+  {
+   "title": "NPCs",
+   "firstLinks": 39
+  },
+  {
+   "title": "Buff potions",
+   "firstLinks": 39
+  },
+  {
+   "title": "Re-Logic",
+   "firstLinks": 38
+  },
+  {
+   "title": "Enemies",
+   "firstLinks": 37
+  },
+  {
+   "title": "Debuffs",
+   "firstLinks": 32
+  },
+  {
+   "title": "Dyes",
+   "firstLinks": 27
+  },
+  {
+   "title": "Ranged weapons",
+   "firstLinks": 27
+  },
+  {
+   "title": "Crafting stations",
+   "firstLinks": 25
+  },
+  {
+   "title": "Biomes",
+   "firstLinks": 25
+  },
+  {
+   "title": "Mechanisms",
+   "firstLinks": 23
+  },
+  {
+   "title": "Fishing catches",
+   "firstLinks": 23
+  },
+  {
+   "title": "Armor",
+   "firstLinks": 21
+  },
+  {
+   "title": "Seeds",
+   "firstLinks": 19
+  },
+  {
+   "title": "Desktop version history",
+   "firstLinks": 18
+  },
+  {
+   "title": "Modifiers",
+   "firstLinks": 18
+  },
+  {
+   "title": "Informational Accessories",
+   "firstLinks": 17
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Items",
+   "chains": 3707
+  },
+  {
+   "title": "World",
+   "chains": 3707
+  },
+  {
+   "title": "Pre-Hardmode",
+   "chains": 2131
+  },
+  {
+   "title": "Hardmode",
+   "chains": 1484
+  },
+  {
+   "title": "Furniture",
+   "chains": 894
+  },
+  {
+   "title": "Chests",
+   "chains": 616
+  },
+  {
+   "title": "Inventory",
+   "chains": 503
+  },
+  {
+   "title": "Biomes",
+   "chains": 454
+  },
+  {
+   "title": "Life Fruit",
+   "chains": 365
+  },
+  {
+   "title": "Health",
+   "chains": 364
+  },
+  {
+   "title": "Damage",
+   "chains": 354
+  },
+  {
+   "title": "Enemies",
+   "chains": 315
+  },
+  {
+   "title": "Game mechanics",
+   "chains": 248
+  },
+  {
+   "title": "Accessories",
+   "chains": 244
+  },
+  {
+   "title": "Buffs",
+   "chains": 209
+  },
+  {
+   "title": "Blocks",
+   "chains": 198
+  },
+  {
+   "title": "Weapons",
+   "chains": 186
+  },
+  {
+   "title": "Biome backgrounds",
+   "chains": 170
+  },
+  {
+   "title": "Background walls",
+   "chains": 168
   },
   {
    "title": "Social slots",
-   "betweenness": 276
+   "chains": 144
+  },
+  {
+   "title": "Vanity items",
+   "chains": 143
+  },
+  {
+   "title": "Ranged weapons",
+   "chains": 117
+  },
+  {
+   "title": "1.2",
+   "chains": 98
+  },
+  {
+   "title": "Tools",
+   "chains": 96
+  },
+  {
+   "title": "Re-Logic",
+   "chains": 90
+  },
+  {
+   "title": "Ammunition items",
+   "chains": 89
+  },
+  {
+   "title": "Consumables",
+   "chains": 80
+  },
+  {
+   "title": "Food",
+   "chains": 79
+  },
+  {
+   "title": "NPCs",
+   "chains": 75
+  },
+  {
+   "title": "Plants",
+   "chains": 65
   }
  ]
 }

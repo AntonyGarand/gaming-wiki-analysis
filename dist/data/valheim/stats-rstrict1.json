@@ -3,57 +3,91 @@
  "rank": "strict1",
  "nodes": 1284,
  "converge": {
-  "articles": 1093,
-  "pct": 85.12,
-  "deadEnd": 191,
-  "deadEndPct": 14.88,
-  "noLinks": 10,
+  "articles": 1269,
+  "pct": 98.83,
+  "deadEnd": 15,
+  "deadEndPct": 1.17,
+  "noLinks": 12,
   "tooFewLinks": 0,
-  "unresolvable": 14
+  "unresolvable": 0
  },
  "hopStats": {
-  "mean": 2.93,
+  "mean": 2.95,
   "median": 3,
-  "p90": 5,
-  "max": 11
+  "p90": 4,
+  "max": 10
  },
  "histogram": {
-  "0": 34,
-  "1": 145,
-  "2": 198,
-  "3": 409,
-  "4": 193,
+  "0": 39,
+  "1": 143,
+  "2": 231,
+  "3": 447,
+  "4": 306,
   "5": 71,
-  "6": 18,
-  "7": 11,
-  "8": 8,
-  "9": 1,
-  "10": 4,
-  "11": 1
+  "6": 14,
+  "7": 10,
+  "8": 4,
+  "9": 3,
+  "10": 1
+ },
+ "eligibleLinks": {
+  "histogram": {
+   "0": 12,
+   "1": 93,
+   "2": 113,
+   "3": 146,
+   "4": 118,
+   "5": 139,
+   "6": 136,
+   "7": 100,
+   "8": 76,
+   "9": 64,
+   "10": 287
+  },
+  "atLeast": {
+   "1": 99.1,
+   "2": 91.8,
+   "3": 83,
+   "5": 62.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 92.21,
+  "top3Pct": 94.31,
+  "top10Pct": 97.2,
+  "cycleCount": 18,
+  "entropyBits": 0.61
  },
  "components": 19,
  "cycleCount": 18,
  "largestCycle": {
   "members": [
-   "Creatures"
+   "Creatures",
+   "Forsaken power",
+   "Sacrificial Stones",
+   "Valkyrie"
   ],
-  "size": 1,
-  "basin": 1004
+  "size": 4,
+  "basin": 1184
  },
  "topAttractors": [
   {
    "cycle": [
-    "Creatures"
+    "Creatures",
+    "Forsaken power",
+    "Sacrificial Stones",
+    "Valkyrie"
    ],
-   "basin": 1004,
-   "pct": 78.19
+   "basin": 1184,
+   "pct": 92.21
   },
   {
    "cycle": [
-    "Damage"
+    "Global Keys",
+    "Events"
    ],
-   "basin": 15,
-   "pct": 1.17
+   "basin": 14,
+   "pct": 1.09
   },
   {
    "cycle": [
@@ -87,14 +121,6 @@
    ],
    "basin": 7,
    "pct": 0.55
-  },
-  {
-   "cycle": [
-    "Events",
-    "Global Keys"
-   ],
-   "basin": 5,
-   "pct": 0.39
   },
   {
    "cycle": [
@@ -178,7 +204,16 @@
   },
   {
    "cycle": [
-    "Bombs"
+    "Bombs",
+    "Blob Bombs"
+   ],
+   "basin": 2,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Trinkets",
+    "Adrenaline"
    ],
    "basin": 2,
    "pct": 0.16
@@ -186,339 +221,321 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Weapons",
-   "chains": 149,
-   "pct": 11.6,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Developer console",
-   "chains": 9,
-   "pct": 0.7,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Grausten",
-   "chains": 7,
-   "pct": 0.55,
-   "reason": "redlink target"
-  },
-  {
    "title": "Valheim",
    "chains": 4,
    "pct": 0.31,
    "reason": "no eligible links"
   },
   {
-   "title": "Stone",
-   "chains": 2,
-   "pct": 0.16,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Trinkets",
-   "chains": 2,
-   "pct": 0.16,
-   "reason": "redlink target"
-  },
-  {
    "title": "Valheim Wiki",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Greydwarf Eye",
-   "chains": 1,
-   "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "Music",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
-   "title": "Bushes",
+   "title": "Valheim Wiki/sandbox",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
-   "title": "Sign",
+   "title": "Flour",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
-   "title": "Standing Wood Torch",
+   "title": "Door",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
-   "title": "Roundpole Fence",
+   "title": "Jute",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
-   "title": "Factions",
+   "title": "Nails",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
-   "title": "Trophies",
+   "title": "Berries",
    "chains": 1,
    "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bone",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Fang",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Light source",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Creatures",
-   "inDegree": 109
+   "firstLinks": 110
   },
   {
    "title": "Deep North",
-   "inDegree": 86
+   "firstLinks": 86
   },
   {
    "title": "Point of interest",
-   "inDegree": 48
+   "firstLinks": 48
   },
   {
    "title": "Ashlands",
-   "inDegree": 46
+   "firstLinks": 47
   },
   {
    "title": "Mistlands",
-   "inDegree": 38
+   "firstLinks": 38
   },
   {
    "title": "Hildir",
-   "inDegree": 35
+   "firstLinks": 35
   },
   {
    "title": "Status effects",
-   "inDegree": 33
+   "firstLinks": 33
   },
   {
    "title": "Black Forest",
-   "inDegree": 27
+   "firstLinks": 27
   },
   {
    "title": "Skills",
-   "inDegree": 24
+   "firstLinks": 24
   },
   {
    "title": "Swamp",
-   "inDegree": 20
+   "firstLinks": 20
   },
   {
    "title": "Plains",
-   "inDegree": 20
+   "firstLinks": 20
   },
   {
    "title": "The Bog Witch",
-   "inDegree": 20
+   "firstLinks": 20
   },
   {
    "title": "Player base",
-   "inDegree": 19
+   "firstLinks": 19
   },
   {
    "title": "Shields",
-   "inDegree": 18
+   "firstLinks": 18
   },
   {
    "title": "Forge of Potential",
-   "inDegree": 18
-  },
-  {
-   "title": "Mountain",
-   "inDegree": 17
-  },
-  {
-   "title": "Meadows",
-   "inDegree": 16
+   "firstLinks": 18
   },
   {
    "title": "Workbench",
-   "inDegree": 16
+   "firstLinks": 17
+  },
+  {
+   "title": "Mountain",
+   "firstLinks": 17
+  },
+  {
+   "title": "Meadows",
+   "firstLinks": 16
   },
   {
    "title": "Weapons",
-   "inDegree": 14
+   "firstLinks": 14
   },
   {
    "title": "Biomes",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Forge",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Clubs",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Axes",
-   "inDegree": 11
+   "firstLinks": 11
   },
   {
    "title": "Bows",
-   "inDegree": 10
+   "firstLinks": 10
   },
   {
    "title": "Crossbows",
-   "inDegree": 10
+   "firstLinks": 10
+  },
+  {
+   "title": "Materials",
+   "firstLinks": 9
   },
   {
    "title": "Hammer",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Armor",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Swords",
-   "inDegree": 9
-  },
-  {
-   "title": "Materials",
-   "inDegree": 8
+   "firstLinks": 9
   },
   {
    "title": "Wood",
-   "inDegree": 8
+   "firstLinks": 8
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
-   "title": "Biomes",
-   "betweenness": 493
-  },
-  {
-   "title": "Status effects",
-   "betweenness": 252
-  },
-  {
-   "title": "Deep North",
-   "betweenness": 228
-  },
-  {
-   "title": "Point of interest",
-   "betweenness": 202
+   "title": "Creatures",
+   "chains": 1184
   },
   {
    "title": "Forsaken power",
-   "betweenness": 192
-  },
-  {
-   "title": "Ashlands",
-   "betweenness": 136
+   "chains": 1184
   },
   {
    "title": "Sacrificial Stones",
-   "betweenness": 130
-  },
-  {
-   "title": "Comfort",
-   "betweenness": 114
-  },
-  {
-   "title": "Mistlands",
-   "betweenness": 112
-  },
-  {
-   "title": "Resting",
-   "betweenness": 105
-  },
-  {
-   "title": "Player base",
-   "betweenness": 101
-  },
-  {
-   "title": "Seasonal events",
-   "betweenness": 84
-  },
-  {
-   "title": "Skills",
-   "betweenness": 78
-  },
-  {
-   "title": "Meadows",
-   "betweenness": 74
-  },
-  {
-   "title": "Black Forest",
-   "betweenness": 66
+   "chains": 1184
   },
   {
    "title": "Valkyrie",
-   "betweenness": 66
+   "chains": 1184
   },
   {
-   "title": "Forge of Potential",
-   "betweenness": 63
+   "title": "Biomes",
+   "chains": 502
   },
   {
-   "title": "Workbench",
-   "betweenness": 54
+   "title": "Damage",
+   "chains": 164
   },
   {
-   "title": "Death",
-   "betweenness": 54
+   "title": "Weapons",
+   "chains": 149
   },
   {
-   "title": "Mountain",
-   "betweenness": 52
+   "title": "Deep North",
+   "chains": 115
   },
   {
-   "title": "Trees",
-   "betweenness": 52
+   "title": "Player base",
+   "chains": 105
   },
   {
-   "title": "Maypole",
-   "betweenness": 48
+   "title": "Point of interest",
+   "chains": 102
   },
   {
-   "title": "Forge",
-   "betweenness": 46
+   "title": "Ashlands",
+   "chains": 76
   },
   {
-   "title": "Version history",
-   "betweenness": 45
+   "title": "Status effects",
+   "chains": 64
   },
   {
-   "title": "Plains",
-   "betweenness": 44
+   "title": "Mistlands",
+   "chains": 57
   },
   {
    "title": "Health",
-   "betweenness": 44
+   "chains": 45
   },
   {
-   "title": "Materials",
-   "betweenness": 42
-  },
-  {
-   "title": "Beech",
-   "betweenness": 42
-  },
-  {
-   "title": "Swamp",
-   "betweenness": 40
+   "title": "Meadows",
+   "chains": 39
   },
   {
    "title": "Hildir",
-   "betweenness": 36
+   "chains": 37
+  },
+  {
+   "title": "Black Forest",
+   "chains": 34
+  },
+  {
+   "title": "Building",
+   "chains": 33
+  },
+  {
+   "title": "Workbench",
+   "chains": 30
+  },
+  {
+   "title": "Death",
+   "chains": 28
+  },
+  {
+   "title": "Mountain",
+   "chains": 27
+  },
+  {
+   "title": "Skills",
+   "chains": 27
+  },
+  {
+   "title": "Bows",
+   "chains": 27
+  },
+  {
+   "title": "Materials",
+   "chains": 24
+  },
+  {
+   "title": "Forge",
+   "chains": 24
+  },
+  {
+   "title": "Plains",
+   "chains": 23
+  },
+  {
+   "title": "Resting",
+   "chains": 22
+  },
+  {
+   "title": "The Bog Witch",
+   "chains": 22
+  },
+  {
+   "title": "Forge of Potential",
+   "chains": 22
+  },
+  {
+   "title": "Swamp",
+   "chains": 21
   }
  ]
 }

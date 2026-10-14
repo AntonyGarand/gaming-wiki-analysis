@@ -3,34 +3,62 @@
  "rank": "5",
  "nodes": 710,
  "converge": {
-  "articles": 202,
-  "pct": 28.45,
-  "deadEnd": 508,
-  "deadEndPct": 71.55,
+  "articles": 258,
+  "pct": 36.34,
+  "deadEnd": 452,
+  "deadEndPct": 63.66,
   "noLinks": 4,
   "tooFewLinks": 194,
-  "unresolvable": 4
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 3.36,
-  "median": 3,
-  "p90": 7,
+  "mean": 3.87,
+  "median": 4,
+  "p90": 8,
   "max": 12
  },
  "histogram": {
-  "0": 19,
-  "1": 44,
-  "2": 33,
-  "3": 29,
-  "4": 18,
-  "5": 24,
-  "6": 8,
-  "7": 10,
-  "8": 4,
-  "9": 2,
-  "10": 2,
+  "0": 21,
+  "1": 42,
+  "2": 32,
+  "3": 30,
+  "4": 34,
+  "5": 39,
+  "6": 15,
+  "7": 19,
+  "8": 10,
+  "9": 4,
+  "10": 3,
   "11": 6,
   "12": 3
+ },
+ "eligibleLinks": {
+  "histogram": {
+   "0": 5,
+   "1": 32,
+   "2": 34,
+   "3": 48,
+   "4": 80,
+   "5": 65,
+   "6": 52,
+   "7": 47,
+   "8": 38,
+   "9": 47,
+   "10": 262
+  },
+  "atLeast": {
+   "1": 99.3,
+   "2": 94.8,
+   "3": 90,
+   "5": 72
+  }
+ },
+ "concentration": {
+  "top1Pct": 19.58,
+  "top3Pct": 30.28,
+  "top10Pct": 36.34,
+  "cycleCount": 10,
+  "entropyBits": 2.1
  },
  "components": 11,
  "cycleCount": 10,
@@ -40,7 +68,7 @@
    "Habitat Builder"
   ],
   "size": 2,
-  "basin": 106
+  "basin": 139
  },
  "topAttractors": [
   {
@@ -48,32 +76,32 @@
     "Cyclops",
     "Habitat Builder"
    ],
-   "basin": 106,
-   "pct": 14.93
-  },
-  {
-   "cycle": [
-    "Crater Edge",
-    "Flora"
-   ],
-   "basin": 44,
-   "pct": 6.2
-  },
-  {
-   "cycle": [
-    "Floating Island",
-    "CTO Yu"
-   ],
-   "basin": 17,
-   "pct": 2.39
+   "basin": 139,
+   "pct": 19.58
   },
   {
    "cycle": [
     "Sea Emperor Leviathan",
     "Enzyme 42"
    ],
-   "basin": 12,
-   "pct": 1.69
+   "basin": 51,
+   "pct": 7.18
+  },
+  {
+   "cycle": [
+    "Flora",
+    "Crater Edge"
+   ],
+   "basin": 25,
+   "pct": 3.52
+  },
+  {
+   "cycle": [
+    "Floating Island",
+    "CTO Yu"
+   ],
+   "basin": 19,
+   "pct": 2.68
   },
   {
    "cycle": [
@@ -93,18 +121,20 @@
   },
   {
    "cycle": [
-    "Underwater Islands",
-    "Ancient Floater"
+    "Disinfected Water",
+    "Filtered Water",
+    "Large Filtered Water"
    ],
    "basin": 4,
    "pct": 0.56
   },
   {
    "cycle": [
-    "Achievements"
+    "Underwater Islands",
+    "Ancient Floater"
    ],
-   "basin": 3,
-   "pct": 0.42
+   "basin": 4,
+   "pct": 0.56
   },
   {
    "cycle": [
@@ -125,22 +155,22 @@
  ],
  "deadEndTerminals": [
   {
+   "title": "Hull Integrity",
+   "chains": 75,
+   "pct": 10.56,
+   "reason": "only 2 eligible links"
+  },
+  {
    "title": "Databank",
-   "chains": 94,
-   "pct": 13.24,
+   "chains": 60,
+   "pct": 8.45,
    "reason": "only 4 eligible links"
   },
   {
-   "title": "Bioluminescence",
-   "chains": 70,
-   "pct": 9.86,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Hull Integrity",
-   "chains": 49,
-   "pct": 6.9,
-   "reason": "only 2 eligible links"
+   "title": "Subnautica",
+   "chains": 34,
+   "pct": 4.79,
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Deployables",
@@ -161,12 +191,6 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Quarantine Enforcement Platform",
-   "chains": 8,
-   "pct": 1.13,
-   "reason": "redlink target"
-  },
-  {
    "title": "Hatch",
    "chains": 6,
    "pct": 0.85,
@@ -179,16 +203,16 @@
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Large Filtered Water",
+   "title": "Seamoth Depth Module MK3",
    "chains": 4,
    "pct": 0.56,
    "reason": "only 4 eligible links"
   },
   {
-   "title": "Seamoth Depth Module MK3",
-   "chains": 4,
-   "pct": 0.56,
-   "reason": "only 4 eligible links"
+   "title": "Achievements",
+   "chains": 3,
+   "pct": 0.42,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Acid Mushroom Spore",
@@ -206,258 +230,264 @@
    "title": "Console Commands",
    "chains": 3,
    "pct": 0.42,
-   "reason": "only 3 eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Depleted Reactor Rod",
    "chains": 3,
    "pct": 0.42,
    "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Orange Tablet",
+   "chains": 3,
+   "pct": 0.42,
+   "reason": "only 3 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Exterior Growbed",
-   "inDegree": 20
+   "firstLinks": 20
   },
   {
    "title": "Bioluminescence",
-   "inDegree": 15
+   "firstLinks": 15
   },
   {
    "title": "Food & Water",
-   "inDegree": 14
+   "firstLinks": 14
   },
   {
    "title": "Cyclops",
-   "inDegree": 14
+   "firstLinks": 14
   },
   {
    "title": "Ryley Robinson",
-   "inDegree": 10
-  },
-  {
-   "title": "PDA",
-   "inDegree": 9
-  },
-  {
-   "title": "Prawn Suit",
-   "inDegree": 8
-  },
-  {
-   "title": "Alien Containment",
-   "inDegree": 8
+   "firstLinks": 11
   },
   {
    "title": "Biomes",
-   "inDegree": 7
-  },
-  {
-   "title": "Survival Knife",
-   "inDegree": 7
-  },
-  {
-   "title": "Fauna",
-   "inDegree": 7
-  },
-  {
-   "title": "Flora",
-   "inDegree": 6
-  },
-  {
-   "title": "Blueprints",
-   "inDegree": 6
-  },
-  {
-   "title": "Habitat Builder",
-   "inDegree": 6
-  },
-  {
-   "title": "Wrecks",
-   "inDegree": 6
-  },
-  {
-   "title": "Kelp Forest",
-   "inDegree": 5
-  },
-  {
-   "title": "Energy",
-   "inDegree": 5
-  },
-  {
-   "title": "Sea Emperor Leviathan",
-   "inDegree": 5
-  },
-  {
-   "title": "Quarantine Enforcement Platform",
-   "inDegree": 5
-  },
-  {
-   "title": "Data Boxes",
-   "inDegree": 5
-  },
-  {
-   "title": "Aurora",
-   "inDegree": 5
-  },
-  {
-   "title": "Tools",
-   "inDegree": 4
-  },
-  {
-   "title": "Seaglide",
-   "inDegree": 4
-  },
-  {
-   "title": "Floating Island",
-   "inDegree": 4
-  },
-  {
-   "title": "Propulsion Cannon",
-   "inDegree": 4
-  },
-  {
-   "title": "Seabases",
-   "inDegree": 4
-  },
-  {
-   "title": "Hatch",
-   "inDegree": 4
-  },
-  {
-   "title": "Cyclops Depth Module MK1",
-   "inDegree": 4
-  },
-  {
-   "title": "Game Modes",
-   "inDegree": 4
-  },
-  {
-   "title": "Observatory",
-   "inDegree": 4
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Alien Containment",
-   "betweenness": 135
-  },
-  {
-   "title": "Large Room",
-   "betweenness": 132
-  },
-  {
-   "title": "Crashfish",
-   "betweenness": 117
-  },
-  {
-   "title": "Kelp Forest Caves",
-   "betweenness": 112
-  },
-  {
-   "title": "Safe Shallows",
-   "betweenness": 110
-  },
-  {
-   "title": "Moonpool",
-   "betweenness": 108
-  },
-  {
-   "title": "Mesmer",
-   "betweenness": 105
-  },
-  {
-   "title": "Aurora",
-   "betweenness": 100
-  },
-  {
-   "title": "Lifepod 5",
-   "betweenness": 96
-  },
-  {
-   "title": "Mesmer Egg",
-   "betweenness": 96
-  },
-  {
-   "title": "Radio",
-   "betweenness": 90
-  },
-  {
-   "title": "Ryley Robinson",
-   "betweenness": 90
-  },
-  {
-   "title": "Vehicle Upgrade Console",
-   "betweenness": 78
-  },
-  {
-   "title": "Fauna",
-   "betweenness": 76
-  },
-  {
-   "title": "Laser Cutter",
-   "betweenness": 72
-  },
-  {
-   "title": "Alterra Corporation",
-   "betweenness": 66
-  },
-  {
-   "title": "Blueprints",
-   "betweenness": 63
-  },
-  {
-   "title": "Easter Eggs",
-   "betweenness": 62
-  },
-  {
-   "title": "Cyclops",
-   "betweenness": 59
-  },
-  {
-   "title": "Dunes",
-   "betweenness": 55
-  },
-  {
-   "title": "Exterior Growbed",
-   "betweenness": 54
-  },
-  {
-   "title": "Lost River",
-   "betweenness": 50
-  },
-  {
-   "title": "Habitat Builder",
-   "betweenness": 45
-  },
-  {
-   "title": "Lava Geysers",
-   "betweenness": 44
-  },
-  {
-   "title": "Inactive Lava Zone",
-   "betweenness": 44
+   "firstLinks": 9
   },
   {
    "title": "PDA",
-   "betweenness": 43
+   "firstLinks": 9
   },
   {
-   "title": "Food & Water",
-   "betweenness": 42
+   "title": "Prawn Suit",
+   "firstLinks": 8
   },
   {
-   "title": "Game Modes",
-   "betweenness": 42
+   "title": "Alien Containment",
+   "firstLinks": 8
+  },
+  {
+   "title": "Survival Knife",
+   "firstLinks": 7
+  },
+  {
+   "title": "Fauna",
+   "firstLinks": 7
+  },
+  {
+   "title": "Flora",
+   "firstLinks": 6
+  },
+  {
+   "title": "Blueprints",
+   "firstLinks": 6
+  },
+  {
+   "title": "Habitat Builder",
+   "firstLinks": 6
+  },
+  {
+   "title": "Wrecks",
+   "firstLinks": 6
   },
   {
    "title": "Kelp Forest",
-   "betweenness": 39
+   "firstLinks": 5
   },
   {
-   "title": "Rockgrub",
-   "betweenness": 39
+   "title": "Energy",
+   "firstLinks": 5
+  },
+  {
+   "title": "Sea Emperor Leviathan",
+   "firstLinks": 5
+  },
+  {
+   "title": "Quarantine Enforcement Platform",
+   "firstLinks": 5
+  },
+  {
+   "title": "Data Boxes",
+   "firstLinks": 5
+  },
+  {
+   "title": "Aurora",
+   "firstLinks": 5
+  },
+  {
+   "title": "Tools",
+   "firstLinks": 4
+  },
+  {
+   "title": "Seaglide",
+   "firstLinks": 4
+  },
+  {
+   "title": "Floating Island",
+   "firstLinks": 4
+  },
+  {
+   "title": "Propulsion Cannon",
+   "firstLinks": 4
+  },
+  {
+   "title": "Seabases",
+   "firstLinks": 4
+  },
+  {
+   "title": "Hatch",
+   "firstLinks": 4
+  },
+  {
+   "title": "Cyclops Depth Module MK1",
+   "firstLinks": 4
+  },
+  {
+   "title": "Game Modes",
+   "firstLinks": 4
+  },
+  {
+   "title": "Observatory",
+   "firstLinks": 4
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Habitat Builder",
+   "chains": 139
+  },
+  {
+   "title": "Cyclops",
+   "chains": 139
+  },
+  {
+   "title": "Hull Integrity",
+   "chains": 75
+  },
+  {
+   "title": "Easter Eggs",
+   "chains": 65
+  },
+  {
+   "title": "Radio",
+   "chains": 64
+  },
+  {
+   "title": "Databank",
+   "chains": 60
+  },
+  {
+   "title": "Lifepod 5",
+   "chains": 58
+  },
+  {
+   "title": "Sea Emperor Leviathan",
+   "chains": 51
+  },
+  {
+   "title": "Enzyme 42",
+   "chains": 51
+  },
+  {
+   "title": "PDA",
+   "chains": 44
+  },
+  {
+   "title": "Observatory",
+   "chains": 44
+  },
+  {
+   "title": "Sea Dragon Leviathan",
+   "chains": 43
+  },
+  {
+   "title": "Biomes",
+   "chains": 40
+  },
+  {
+   "title": "Vehicle Upgrade Console",
+   "chains": 40
+  },
+  {
+   "title": "Fauna",
+   "chains": 39
+  },
+  {
+   "title": "Moonpool",
+   "chains": 37
+  },
+  {
+   "title": "Subnautica",
+   "chains": 34
+  },
+  {
+   "title": "Large Room",
+   "chains": 34
+  },
+  {
+   "title": "Ryley Robinson",
+   "chains": 33
+  },
+  {
+   "title": "Bioluminescence",
+   "chains": 32
+  },
+  {
+   "title": "Foundation",
+   "chains": 30
+  },
+  {
+   "title": "Exterior Growbed",
+   "chains": 28
+  },
+  {
+   "title": "Alien Containment",
+   "chains": 28
+  },
+  {
+   "title": "Flora",
+   "chains": 25
+  },
+  {
+   "title": "Planet 4546B",
+   "chains": 25
+  },
+  {
+   "title": "Crater Edge",
+   "chains": 25
+  },
+  {
+   "title": "Aurora",
+   "chains": 21
+  },
+  {
+   "title": "Deployables",
+   "chains": 20
+  },
+  {
+   "title": "Fabricator",
+   "chains": 19
+  },
+  {
+   "title": "Floating Island",
+   "chains": 19
   }
  ]
 }

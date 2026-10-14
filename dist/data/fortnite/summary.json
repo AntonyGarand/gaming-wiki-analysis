@@ -1,28 +1,30 @@
 {
  "wiki": "fortnite",
- "generatedAt": "2026-10-12T13:40:34.846Z",
+ "generatedAt": "2026-10-14T04:05:33.091Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 92.87,
-   "deadEndPct": 7.13,
-   "components": 16,
-   "cycleCount": 15,
-   "meanHops": 4.09,
+   "convergePct": 92.93,
+   "deadEndPct": 7.07,
+   "components": 8,
+   "cycleCount": 7,
+   "meanHops": 4.08,
    "medianHops": 4,
    "maxHops": 38,
    "topAttractor": [
     "Epic Games",
     "Tim Sweeney"
    ],
-   "topAttractorPct": 91.91
+   "topAttractorPct": 91.96,
+   "top3Pct": 92.89,
+   "eligiblePct": 93.6
   },
   {
    "rank": "2",
-   "convergePct": 88.36,
-   "deadEndPct": 11.64,
-   "components": 34,
-   "cycleCount": 33,
+   "convergePct": 88.77,
+   "deadEndPct": 11.23,
+   "components": 38,
+   "cycleCount": 37,
    "meanHops": 4.58,
    "medianHops": 5,
    "maxHops": 11,
@@ -30,74 +32,93 @@
     "Victory Royale",
     "Lobby Music"
    ],
-   "topAttractorPct": 81.37
+   "topAttractorPct": 81.41,
+   "top3Pct": 87.88,
+   "eligiblePct": 90
   },
   {
    "rank": "3",
-   "convergePct": 42.5,
-   "deadEndPct": 57.5,
-   "components": 1118,
-   "cycleCount": 1117,
-   "meanHops": 3.12,
-   "medianHops": 1,
-   "maxHops": 21,
+   "convergePct": 44.31,
+   "deadEndPct": 55.69,
+   "components": 1073,
+   "cycleCount": 1072,
+   "meanHops": 3.61,
+   "medianHops": 2,
+   "maxHops": 32,
    "topAttractor": [
-    "V-Bucks",
-    "Battle Pass"
+    "Battle Pass",
+    "V-Bucks"
    ],
-   "topAttractorPct": 13.02
+   "topAttractorPct": 15.79,
+   "top3Pct": 26.46,
+   "eligiblePct": 69.1
   },
   {
    "rank": "5",
-   "convergePct": 5.13,
-   "deadEndPct": 94.87,
-   "components": 181,
-   "cycleCount": 180,
-   "meanHops": 3.13,
-   "medianHops": 3,
-   "maxHops": 11,
+   "convergePct": 6,
+   "deadEndPct": 94,
+   "components": 128,
+   "cycleCount": 127,
+   "meanHops": 2.55,
+   "medianHops": 2,
+   "maxHops": 10,
    "topAttractor": [
+    "Back Blings",
     "Dead Pixels"
    ],
-   "topAttractorPct": 2.59
+   "topAttractorPct": 2.25,
+   "top3Pct": 3.2,
+   "eligiblePct": 31.5
   },
   {
    "rank": "last",
-   "convergePct": 15.61,
-   "deadEndPct": 84.39,
-   "components": 369,
-   "cycleCount": 368,
-   "meanHops": 2.03,
-   "medianHops": 2,
-   "maxHops": 15,
+   "convergePct": 92.69,
+   "deadEndPct": 7.31,
+   "components": 429,
+   "cycleCount": 428,
+   "meanHops": 8.81,
+   "medianHops": 3,
+   "maxHops": 38,
    "topAttractor": [
-    "Quests",
-    "High Stakes Challenges"
+    "Fortnite: Save the World",
+    "The Last Reality",
+    "Asteria",
+    "Jungle Biome",
+    "Oninoshima",
+    "Athena",
+    "Shifty Shafts",
+    "Fortnite: Battle Royale",
+    "Update v39.40",
+    "Phase Shift",
+    "Phase Scout Jess",
+    "Team Perks",
+    "Heroes",
+    "Ninjas",
+    "Weapon Perks",
+    "Lead Sled"
    ],
-   "topAttractorPct": 6.88
+   "topAttractorPct": 68.03,
+   "top3Pct": 79.3,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 80.57,
-   "deadEndPct": 19.43,
-   "components": 257,
-   "cycleCount": 256,
-   "meanHops": 3.16,
-   "medianHops": 2,
-   "maxHops": 16,
+   "convergePct": 92.28,
+   "deadEndPct": 7.72,
+   "components": 238,
+   "cycleCount": 237,
+   "meanHops": 5.82,
+   "medianHops": 7,
+   "maxHops": 20,
    "topAttractor": [
-    "Fortnite",
-    "Fortnite: Battle Royale",
-    "Vehicles",
-    "Trail Thrasher",
-    "Cars",
-    "Submachine Gun",
-    "Thrasher",
-    "Slasher (Schematic)",
-    "Fortnite: Save the World",
-    "May 2021 Fortnite Crew Pack"
+    "XP",
+    "Cosmetic Items",
+    "Gifting",
+    "Battle Pass"
    ],
-   "topAttractorPct": 49.92
+   "topAttractorPct": 64.81,
+   "top3Pct": 85.79,
+   "eligiblePct": 100
   }
  ]
 }

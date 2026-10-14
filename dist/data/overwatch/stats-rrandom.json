@@ -3,78 +3,109 @@
  "rank": "random",
  "nodes": 2808,
  "converge": {
-  "articles": 2207,
-  "pct": 78.6,
-  "deadEnd": 601,
-  "deadEndPct": 21.4,
-  "noLinks": 420,
+  "articles": 2344,
+  "pct": 83.48,
+  "deadEnd": 464,
+  "deadEndPct": 16.52,
+  "noLinks": 418,
   "tooFewLinks": 0,
-  "unresolvable": 96
+  "unresolvable": 30
  },
  "hopStats": {
-  "mean": 4.41,
-  "median": 4,
-  "p90": 9,
+  "mean": 3.6,
+  "median": 3,
+  "p90": 7,
   "max": 14
  },
  "histogram": {
-  "0": 111,
-  "1": 400,
-  "2": 329,
-  "3": 248,
-  "4": 201,
-  "5": 146,
-  "6": 169,
-  "7": 140,
-  "8": 139,
-  "9": 132,
-  "10": 90,
-  "11": 40,
-  "12": 44,
-  "13": 17,
+  "0": 123,
+  "1": 412,
+  "2": 422,
+  "3": 360,
+  "4": 303,
+  "5": 225,
+  "6": 179,
+  "7": 137,
+  "8": 59,
+  "9": 47,
+  "10": 27,
+  "11": 29,
+  "12": 15,
+  "13": 5,
   "14": 1
  },
- "components": 55,
- "cycleCount": 54,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 448,
+   "1": 370,
+   "2": 334,
+   "3": 250,
+   "4": 168,
+   "5": 124,
+   "6": 143,
+   "7": 81,
+   "8": 79,
+   "9": 59,
+   "10": 752
+  },
+  "atLeast": {
+   "1": 84,
+   "2": 70.9,
+   "3": 59,
+   "5": 44.1
+  }
+ },
+ "concentration": {
+  "top1Pct": 24.93,
+  "top3Pct": 46.47,
+  "top10Pct": 70.37,
+  "cycleCount": 56,
+  "entropyBits": 3.71
+ },
+ "components": 57,
+ "cycleCount": 56,
  "largestCycle": {
   "members": [
-   "Torbjörn"
+   "Perks",
+   "Ability",
+   "Status effect",
+   "Movement speed",
+   "Lúcio",
+   "Genji",
+   "Brigitte"
   ],
-  "size": 1,
-  "basin": 474
+  "size": 7,
+  "basin": 700
  },
  "topAttractors": [
   {
    "cycle": [
-    "Torbjörn"
+    "Perks",
+    "Ability",
+    "Status effect",
+    "Movement speed",
+    "Lúcio",
+    "Genji",
+    "Brigitte"
    ],
-   "basin": 474,
-   "pct": 16.88
-  },
-  {
-   "cycle": [
-    "Bastion",
-    "Soldier: 76",
-    "Reinhardt"
-   ],
-   "basin": 425,
-   "pct": 15.14
-  },
-  {
-   "cycle": [
-    "Ultimate ability",
-    "Hanzo"
-   ],
-   "basin": 291,
-   "pct": 10.36
+   "basin": 700,
+   "pct": 24.93
   },
   {
    "cycle": [
     "Roles",
     "Unranked"
    ],
-   "basin": 210,
-   "pct": 7.48
+   "basin": 342,
+   "pct": 12.18
+  },
+  {
+   "cycle": [
+    "Germany",
+    "Leon Honisch"
+   ],
+   "basin": 263,
+   "pct": 9.37
   },
   {
    "cycle": [
@@ -82,48 +113,72 @@
     "Battle Pass",
     "Overwatch Coins"
    ],
-   "basin": 137,
-   "pct": 4.88
-  },
-  {
-   "cycle": [
-    "Omnic Crisis",
-    "Battle of Eichenwalde",
-    "Bastion Siege Automaton E54"
-   ],
-   "basin": 120,
-   "pct": 4.27
+   "basin": 214,
+   "pct": 7.62
   },
   {
    "cycle": [
     "Blizzard Entertainment",
     "Jennifer O'Neal"
    ],
-   "basin": 110,
-   "pct": 3.92
+   "basin": 125,
+   "pct": 4.45
   },
   {
    "cycle": [
-    "Mei"
+    "Hanzo",
+    "Ultimate ability"
    ],
-   "basin": 57,
-   "pct": 2.03
+   "basin": 119,
+   "pct": 4.24
   },
   {
    "cycle": [
-    "Team 4",
-    "Chacko Sonny"
+    "Heroes",
+    "Freja"
    ],
-   "basin": 56,
-   "pct": 1.99
+   "basin": 73,
+   "pct": 2.6
+  },
+  {
+   "cycle": [
+    "Toronto",
+    "Story Missions"
+   ],
+   "basin": 53,
+   "pct": 1.89
+  },
+  {
+   "cycle": [
+    "Torbjörn",
+    "Crusaders"
+   ],
+   "basin": 46,
+   "pct": 1.64
+  },
+  {
+   "cycle": [
+    "Overwatch League",
+    "Shanghai Dragons"
+   ],
+   "basin": 41,
+   "pct": 1.46
   },
   {
    "cycle": [
     "Anubis",
     "Cairo"
    ],
-   "basin": 32,
-   "pct": 1.14
+   "basin": 37,
+   "pct": 1.32
+  },
+  {
+   "cycle": [
+    "Team 4",
+    "Chacko Sonny"
+   ],
+   "basin": 37,
+   "pct": 1.32
   },
   {
    "cycle": [
@@ -131,29 +186,29 @@
     "Vishkar Corporation",
     "Biolight"
    ],
-   "basin": 30,
-   "pct": 1.07
+   "basin": 25,
+   "pct": 0.89
   },
   {
    "cycle": [
-    "Overwatch League",
-    "Shanghai Dragons"
+    "Horizon Lunar Colony",
+    "Nguyen"
    ],
-   "basin": 30,
-   "pct": 1.07
+   "basin": 24,
+   "pct": 0.85
   },
   {
    "cycle": [
     "Mexico",
     "LumériCo"
    ],
-   "basin": 23,
-   "pct": 0.82
+   "basin": 24,
+   "pct": 0.85
   },
   {
    "cycle": [
-    "Horizon Lunar Colony",
-    "Nguyen"
+    "Asa Yamagami",
+    "Yamagami Blades"
    ],
    "basin": 22,
    "pct": 0.78
@@ -168,42 +223,27 @@
   },
   {
    "cycle": [
-    "Cláudio Martins",
-    "Portugal"
+    "Oasis",
+    "Youssef al-Jabiri"
    ],
-   "basin": 14,
-   "pct": 0.5
-  },
-  {
-   "cycle": [
-    "Midtown",
-    "Murkey's Ale House"
-   ],
-   "basin": 13,
-   "pct": 0.46
-  },
-  {
-   "cycle": [
-    "Junkertown",
-    "Wolf Wood's"
-   ],
-   "basin": 11,
-   "pct": 0.39
+   "basin": 15,
+   "pct": 0.53
   },
   {
    "cycle": [
     "Lucheng Interstellar",
     "Khiem Van Minh",
     "Project Red Promise",
-    "Jiayi Teo"
+    "Red Promise Colony"
    ],
    "basin": 11,
    "pct": 0.39
   },
   {
    "cycle": [
-    "Formula Lux",
-    "B. Nieto"
+    "Junkenstein's Revenge",
+    "Zomnic",
+    "Witch of the Wilds"
    ],
    "basin": 10,
    "pct": 0.36
@@ -211,82 +251,22 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Oasis",
-   "chains": 16,
-   "pct": 0.57,
-   "reason": "redlink target"
-  },
-  {
-   "title": "French Dubbing",
-   "chains": 12,
-   "pct": 0.43,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Chris Metzen",
-   "chains": 11,
-   "pct": 0.39,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Dezba",
-   "chains": 10,
-   "pct": 0.36,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Phreaks",
-   "chains": 6,
-   "pct": 0.21,
-   "reason": "redlink target"
-  },
-  {
-   "title": "D. Cuerva",
-   "chains": 6,
-   "pct": 0.21,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Germany",
-   "chains": 5,
-   "pct": 0.18,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Paraíso",
-   "chains": 4,
-   "pct": 0.14,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Canada",
+   "title": "Northern Gaming Red",
    "chains": 3,
    "pct": 0.11,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
-   "title": "Sweden",
+   "title": "October 19, 2016 Patch",
    "chains": 3,
    "pct": 0.11,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "May 8, 2018 Patch",
    "chains": 3,
    "pct": 0.11,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Kanezaka Mall",
-   "chains": 3,
-   "pct": 0.11,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Carson",
-   "chains": 3,
-   "pct": 0.11,
-   "reason": "redlink target"
   },
   {
    "title": "June 13, 2023 Patch",
@@ -299,251 +279,322 @@
    "chains": 2,
    "pct": 0.07,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Kilrogg-Vision 3D",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Patch Notes",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "1SHOT",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Team Liquid",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Bold Purpose Gaming",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Selfless Gaming",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "August 9, 2018 Patch",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "December 15, 2022 Patch",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Overwatch Wiki",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Atlantic Seaboard A.I. Summit",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Omnic Crisis",
-   "inDegree": 54
+   "firstLinks": 52
   },
   {
    "title": "Heroes",
-   "inDegree": 43
+   "firstLinks": 44
   },
   {
    "title": "Overwatch (group)",
-   "inDegree": 41
+   "firstLinks": 40
   },
   {
    "title": "Blizzard Entertainment",
-   "inDegree": 37
+   "firstLinks": 38
   },
   {
    "title": "Omnic",
-   "inDegree": 36
-  },
-  {
-   "title": "Stadium",
-   "inDegree": 29
+   "firstLinks": 37
   },
   {
    "title": "Soldier: 76",
-   "inDegree": 28
+   "firstLinks": 27
   },
   {
    "title": "Season",
-   "inDegree": 27
+   "firstLinks": 27
   },
   {
-   "title": "Reinhardt",
-   "inDegree": 22
+   "title": "Stadium",
+   "firstLinks": 25
   },
   {
    "title": "Ana",
-   "inDegree": 22
-  },
-  {
-   "title": "Numbani",
-   "inDegree": 21
-  },
-  {
-   "title": "New Queen Street",
-   "inDegree": 21
+   "firstLinks": 23
   },
   {
    "title": "Reaper",
-   "inDegree": 20
-  },
-  {
-   "title": "Mercy",
-   "inDegree": 20
-  },
-  {
-   "title": "Overwatch League",
-   "inDegree": 20
+   "firstLinks": 21
   },
   {
    "title": "Torbjörn",
-   "inDegree": 19
-  },
-  {
-   "title": "Experimental",
-   "inDegree": 19
-  },
-  {
-   "title": "King's Row",
-   "inDegree": 18
-  },
-  {
-   "title": "Roles",
-   "inDegree": 18
-  },
-  {
-   "title": "Horizon Lunar Colony",
-   "inDegree": 18
-  },
-  {
-   "title": "Talon",
-   "inDegree": 18
-  },
-  {
-   "title": "Overwatch 2",
-   "inDegree": 18
-  },
-  {
-   "title": "Cassidy",
-   "inDegree": 16
-  },
-  {
-   "title": "Team 4",
-   "inDegree": 16
-  },
-  {
-   "title": "Doomfist",
-   "inDegree": 16
-  },
-  {
-   "title": "Season/2026",
-   "inDegree": 16
-  },
-  {
-   "title": "Tracer",
-   "inDegree": 15
-  },
-  {
-   "title": "Maps",
-   "inDegree": 15
-  },
-  {
-   "title": "Genji",
-   "inDegree": 15
-  },
-  {
-   "title": "Samoa",
-   "inDegree": 15
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Perks",
-   "betweenness": 1776
-  },
-  {
-   "title": "Doomfist",
-   "betweenness": 1535
-  },
-  {
-   "title": "Ability",
-   "betweenness": 1341
-  },
-  {
-   "title": "Null Sector",
-   "betweenness": 1020
-  },
-  {
-   "title": "Status effect",
-   "betweenness": 902
-  },
-  {
-   "title": "Omnic",
-   "betweenness": 847
-  },
-  {
-   "title": "Tracer",
-   "betweenness": 832
-  },
-  {
-   "title": "Zarya",
-   "betweenness": 699
-  },
-  {
-   "title": "Overwatch (group)",
-   "betweenness": 655
-  },
-  {
-   "title": "Vendetta",
-   "betweenness": 609
+   "firstLinks": 21
   },
   {
    "title": "Reinhardt",
-   "betweenness": 576
+   "firstLinks": 21
   },
   {
-   "title": "Heroes",
-   "betweenness": 568
+   "title": "New Queen Street",
+   "firstLinks": 21
   },
   {
-   "title": "Genji",
-   "betweenness": 550
+   "title": "Mercy",
+   "firstLinks": 20
   },
   {
-   "title": "United Kingdom",
-   "betweenness": 540
+   "title": "Overwatch League",
+   "firstLinks": 20
+  },
+  {
+   "title": "Tracer",
+   "firstLinks": 19
+  },
+  {
+   "title": "Roles",
+   "firstLinks": 19
+  },
+  {
+   "title": "Experimental",
+   "firstLinks": 19
+  },
+  {
+   "title": "Maps",
+   "firstLinks": 18
+  },
+  {
+   "title": "Horizon Lunar Colony",
+   "firstLinks": 18
+  },
+  {
+   "title": "Numbani",
+   "firstLinks": 18
   },
   {
    "title": "King's Row",
-   "betweenness": 534
+   "firstLinks": 17
   },
   {
-   "title": "Melee",
-   "betweenness": 528
+   "title": "Cassidy",
+   "firstLinks": 17
   },
   {
-   "title": "Soldier: 76",
-   "betweenness": 509
+   "title": "Team 4",
+   "firstLinks": 17
   },
   {
-   "title": "Overwatch Anniversary",
-   "betweenness": 497
+   "title": "Overwatch 2",
+   "firstLinks": 17
   },
   {
-   "title": "Practice Range",
-   "betweenness": 496
+   "title": "Season/2026",
+   "firstLinks": 17
   },
   {
-   "title": "Overwatch",
-   "betweenness": 495
+   "title": "Talon",
+   "firstLinks": 16
   },
   {
-   "title": "Junkrat",
-   "betweenness": 488
+   "title": "Lúcio",
+   "firstLinks": 16
   },
   {
-   "title": "Brigitte",
-   "betweenness": 485
-  },
-  {
-   "title": "Deployables",
-   "betweenness": 453
-  },
-  {
-   "title": "Training",
-   "betweenness": 441
-  },
-  {
-   "title": "Starwatch: Galactic Rescue",
-   "betweenness": 432
-  },
-  {
-   "title": "Reaper",
-   "betweenness": 426
-  },
-  {
-   "title": "Athena",
-   "betweenness": 408
-  },
-  {
-   "title": "Zenyatta",
-   "betweenness": 390
-  },
-  {
-   "title": "Skins",
-   "betweenness": 384
+   "title": "Pharah",
+   "firstLinks": 15
   },
   {
    "title": "Winston",
-   "betweenness": 366
+   "firstLinks": 15
   }
- ]
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Lúcio",
+   "chains": 700
+  },
+  {
+   "title": "Ability",
+   "chains": 700
+  },
+  {
+   "title": "Genji",
+   "chains": 700
+  },
+  {
+   "title": "Brigitte",
+   "chains": 700
+  },
+  {
+   "title": "Status effect",
+   "chains": 700
+  },
+  {
+   "title": "Movement speed",
+   "chains": 700
+  },
+  {
+   "title": "Perks",
+   "chains": 700
+  },
+  {
+   "title": "Roles",
+   "chains": 342
+  },
+  {
+   "title": "Unranked",
+   "chains": 342
+  },
+  {
+   "title": "Germany",
+   "chains": 263
+  },
+  {
+   "title": "Leon Honisch",
+   "chains": 263
+  },
+  {
+   "title": "Omnic Crisis",
+   "chains": 258
+  },
+  {
+   "title": "Tracer",
+   "chains": 252
+  },
+  {
+   "title": "Season",
+   "chains": 214
+  },
+  {
+   "title": "Battle Pass",
+   "chains": 214
+  },
+  {
+   "title": "Overwatch Coins",
+   "chains": 214
+  },
+  {
+   "title": "Ana",
+   "chains": 202
+  },
+  {
+   "title": "Overwatch Museum",
+   "chains": 143
+  },
+  {
+   "title": "Atlas News",
+   "chains": 142
+  },
+  {
+   "title": "Overwatch (group)",
+   "chains": 140
+  },
+  {
+   "title": "Bastion",
+   "chains": 135
+  },
+  {
+   "title": "Junker Queen",
+   "chains": 127
+  },
+  {
+   "title": "Blizzard Entertainment",
+   "chains": 125
+  },
+  {
+   "title": "Jennifer O'Neal",
+   "chains": 125
+  },
+  {
+   "title": "Reinhardt",
+   "chains": 124
+  },
+  {
+   "title": "Zenyatta",
+   "chains": 123
+  },
+  {
+   "title": "Hanzo",
+   "chains": 119
+  },
+  {
+   "title": "Ultimate ability",
+   "chains": 119
+  },
+  {
+   "title": "Junkers",
+   "chains": 118
+  },
+  {
+   "title": "Cassidy",
+   "chains": 111
+  }
+ ],
+ "randomSeeds": {
+  "seeds": 5,
+  "convergePct": {
+   "mean": 83.48,
+   "sd": 0
+  },
+  "topAttractorPct": {
+   "mean": 25.94,
+   "sd": 2.04
+  }
+ }
 }

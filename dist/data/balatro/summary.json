@@ -1,11 +1,11 @@
 {
  "wiki": "balatro",
- "generatedAt": "2026-10-12T13:35:36.493Z",
+ "generatedAt": "2026-10-14T04:05:38.490Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 92.65,
-   "deadEndPct": 7.35,
+   "convergePct": 93.04,
+   "deadEndPct": 6.96,
    "components": 3,
    "cycleCount": 2,
    "meanHops": 2.48,
@@ -16,12 +16,14 @@
     "Tarot cards",
     "Consumables"
    ],
-   "topAttractorPct": 82.01
+   "topAttractorPct": 82.4,
+   "top3Pct": 93.04,
+   "eligiblePct": 93
   },
   {
    "rank": "2",
-   "convergePct": 80.85,
-   "deadEndPct": 19.15,
+   "convergePct": 81.04,
+   "deadEndPct": 18.96,
    "components": 4,
    "cycleCount": 3,
    "meanHops": 4.95,
@@ -31,15 +33,17 @@
     "The Shop",
     "Consumables"
    ],
-   "topAttractorPct": 78.72
+   "topAttractorPct": 78.92,
+   "top3Pct": 81.04,
+   "eligiblePct": 83
   },
   {
    "rank": "3",
-   "convergePct": 74.47,
-   "deadEndPct": 25.53,
+   "convergePct": 74.66,
+   "deadEndPct": 25.34,
    "components": 4,
    "cycleCount": 3,
-   "meanHops": 2.03,
+   "meanHops": 2.05,
    "medianHops": 2,
    "maxHops": 5,
    "topAttractor": [
@@ -51,15 +55,17 @@
     "Card modifiers",
     "Consumables"
    ],
-   "topAttractorPct": 69.05
+   "topAttractorPct": 69.25,
+   "top3Pct": 74.66,
+   "eligiblePct": 75.4
   },
   {
    "rank": "5",
-   "convergePct": 38.3,
-   "deadEndPct": 61.7,
-   "components": 2,
-   "cycleCount": 1,
-   "meanHops": 2.27,
+   "convergePct": 44.29,
+   "deadEndPct": 55.71,
+   "components": 3,
+   "cycleCount": 2,
+   "meanHops": 2.09,
    "medianHops": 2,
    "maxHops": 5,
    "topAttractor": [
@@ -67,38 +73,43 @@
     "Booster Packs",
     "Spectral cards"
    ],
-   "topAttractorPct": 38.3
+   "topAttractorPct": 38.3,
+   "top3Pct": 44.29,
+   "eligiblePct": 58
   },
   {
    "rank": "last",
-   "convergePct": 1.74,
-   "deadEndPct": 98.26,
-   "components": 3,
-   "cycleCount": 2,
-   "meanHops": 0.44,
-   "medianHops": 0,
-   "maxHops": 1,
+   "convergePct": 90.91,
+   "deadEndPct": 9.09,
+   "components": 4,
+   "cycleCount": 3,
+   "meanHops": 4.97,
+   "medianHops": 5,
+   "maxHops": 12,
    "topAttractor": [
-    "Guide: naneinf",
-    "Steel cards",
-    "Naneinf"
+    "LocalThunk",
+    "Playstack"
    ],
-   "topAttractorPct": 1.35
+   "topAttractorPct": 89.17,
+   "top3Pct": 90.91,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 92.65,
-   "deadEndPct": 7.35,
-   "components": 4,
-   "cycleCount": 3,
-   "meanHops": 3.1,
-   "medianHops": 3,
-   "maxHops": 7,
+   "convergePct": 93.04,
+   "deadEndPct": 6.96,
+   "components": 5,
+   "cycleCount": 4,
+   "meanHops": 2.71,
+   "medianHops": 2,
+   "maxHops": 6,
    "topAttractor": [
     "Stakes",
     "Blinds and Antes"
    ],
-   "topAttractorPct": 91.68
+   "topAttractorPct": 66.54,
+   "top3Pct": 92.65,
+   "eligiblePct": 100
   }
  ]
 }

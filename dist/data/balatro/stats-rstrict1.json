@@ -3,11 +3,11 @@
  "rank": "strict1",
  "nodes": 517,
  "converge": {
-  "articles": 479,
-  "pct": 92.65,
-  "deadEnd": 38,
-  "deadEndPct": 7.35,
-  "noLinks": 38,
+  "articles": 481,
+  "pct": 93.04,
+  "deadEnd": 36,
+  "deadEndPct": 6.96,
+  "noLinks": 36,
   "tooFewLinks": 0,
   "unresolvable": 0
  },
@@ -20,12 +20,40 @@
  "histogram": {
   "0": 5,
   "1": 166,
-  "2": 108,
-  "3": 65,
+  "2": 109,
+  "3": 66,
   "4": 67,
   "5": 64,
   "6": 3,
   "7": 1
+ },
+ "eligibleLinks": {
+  "histogram": {
+   "0": 36,
+   "1": 52,
+   "2": 39,
+   "3": 41,
+   "4": 49,
+   "5": 30,
+   "6": 31,
+   "7": 56,
+   "8": 30,
+   "9": 25,
+   "10": 128
+  },
+  "atLeast": {
+   "1": 93,
+   "2": 83,
+   "3": 75.4,
+   "5": 58
+  }
+ },
+ "concentration": {
+  "top1Pct": 82.4,
+  "top3Pct": 93.04,
+  "top10Pct": 93.04,
+  "cycleCount": 2,
+  "entropyBits": 0.51
  },
  "components": 3,
  "cycleCount": 2,
@@ -36,7 +64,7 @@
    "Consumables"
   ],
   "size": 3,
-  "basin": 424
+  "basin": 426
  },
  "topAttractors": [
   {
@@ -45,8 +73,8 @@
     "Tarot cards",
     "Consumables"
    ],
-   "basin": 424,
-   "pct": 82.01
+   "basin": 426,
+   "pct": 82.4
   },
   {
    "cycle": [
@@ -58,12 +86,6 @@
   }
  ],
  "deadEndTerminals": [
-  {
-   "title": "Playstack",
-   "chains": 1,
-   "pct": 0.19,
-   "reason": "no eligible links"
-  },
   {
    "title": "Languages",
    "chains": 1,
@@ -147,251 +169,257 @@
    "chains": 1,
    "pct": 0.19,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Update 0.9.0m-DEMO",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Jokers",
-   "inDegree": 155
+   "firstLinks": 155
   },
   {
    "title": "Card modifiers",
-   "inDegree": 37
+   "firstLinks": 37
   },
   {
    "title": "Vouchers",
-   "inDegree": 33
+   "firstLinks": 33
   },
   {
    "title": "Achievements",
-   "inDegree": 33
+   "firstLinks": 33
   },
   {
    "title": "Challenge Decks",
-   "inDegree": 20
+   "firstLinks": 20
   },
   {
    "title": "Decks",
-   "inDegree": 19
+   "firstLinks": 19
   },
   {
    "title": "Planet cards",
-   "inDegree": 16
+   "firstLinks": 16
   },
   {
    "title": "Blinds and Antes",
-   "inDegree": 16
+   "firstLinks": 16
   },
   {
    "title": "Stakes",
-   "inDegree": 11
+   "firstLinks": 11
   },
   {
    "title": "Booster Packs",
-   "inDegree": 10
+   "firstLinks": 11
   },
   {
    "title": "Joker",
-   "inDegree": 10
+   "firstLinks": 10
   },
   {
    "title": "Balatro",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Tags",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Poker hands",
-   "inDegree": 8
-  },
-  {
-   "title": "LocalThunk",
-   "inDegree": 6
-  },
-  {
-   "title": "Tarot cards",
-   "inDegree": 6
+   "firstLinks": 8
   },
   {
    "title": "The Shop",
-   "inDegree": 6
+   "firstLinks": 7
+  },
+  {
+   "title": "LocalThunk",
+   "firstLinks": 6
+  },
+  {
+   "title": "Tarot cards",
+   "firstLinks": 6
   },
   {
    "title": "Common Jokers",
-   "inDegree": 6
+   "firstLinks": 6
   },
   {
    "title": "Legendary Jokers",
-   "inDegree": 6
+   "firstLinks": 6
   },
   {
    "title": "Card Ranks",
-   "inDegree": 5
+   "firstLinks": 5
   },
   {
    "title": "Uncommon Jokers",
-   "inDegree": 5
+   "firstLinks": 5
   },
   {
    "title": "Consumables",
-   "inDegree": 4
+   "firstLinks": 4
   },
   {
    "title": "Friends of Jimbo",
-   "inDegree": 4
+   "firstLinks": 4
   },
   {
    "title": "Rare Jokers",
-   "inDegree": 4
+   "firstLinks": 4
   },
   {
    "title": "Jimbo",
-   "inDegree": 3
+   "firstLinks": 3
   },
   {
    "title": "Hand size",
-   "inDegree": 3
+   "firstLinks": 3
   },
   {
    "title": "Collection",
-   "inDegree": 2
+   "firstLinks": 2
   },
   {
    "title": "Hands",
-   "inDegree": 2
+   "firstLinks": 2
   },
   {
    "title": "Naneinf",
-   "inDegree": 2
+   "firstLinks": 2
   },
   {
    "title": "Interest",
-   "inDegree": 2
+   "firstLinks": 2
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
    "title": "Jokers",
-   "betweenness": 813
-  },
-  {
-   "title": "Balatro",
-   "betweenness": 504
+   "chains": 426
   },
   {
    "title": "Tarot cards",
-   "betweenness": 407
-  },
-  {
-   "title": "LocalThunk",
-   "betweenness": 402
-  },
-  {
-   "title": "Stakes",
-   "betweenness": 230
-  },
-  {
-   "title": "Achievements",
-   "betweenness": 204
-  },
-  {
-   "title": "Decks",
-   "betweenness": 200
-  },
-  {
-   "title": "The Shop",
-   "betweenness": 186
-  },
-  {
-   "title": "Vouchers",
-   "betweenness": 132
-  },
-  {
-   "title": "Challenge Decks",
-   "betweenness": 120
-  },
-  {
-   "title": "Card modifiers",
-   "betweenness": 90
-  },
-  {
-   "title": "Blinds and Antes",
-   "betweenness": 85
-  },
-  {
-   "title": "Poker hands",
-   "betweenness": 66
-  },
-  {
-   "title": "Mult",
-   "betweenness": 60
-  },
-  {
-   "title": "Card Ranks",
-   "betweenness": 53
-  },
-  {
-   "title": "Booster Packs",
-   "betweenness": 52
-  },
-  {
-   "title": "Planet cards",
-   "betweenness": 48
+   "chains": 426
   },
   {
    "title": "Consumables",
-   "betweenness": 46
+   "chains": 426
   },
   {
-   "title": "Tags",
-   "betweenness": 45
+   "title": "LocalThunk",
+   "chains": 135
   },
   {
-   "title": "Skip",
-   "betweenness": 40
+   "title": "Balatro",
+   "chains": 127
+  },
+  {
+   "title": "The Shop",
+   "chains": 65
+  },
+  {
+   "title": "Card Suits",
+   "chains": 55
+  },
+  {
+   "title": "Card Ranks",
+   "chains": 55
+  },
+  {
+   "title": "Stakes",
+   "chains": 47
+  },
+  {
+   "title": "Card modifiers",
+   "chains": 46
+  },
+  {
+   "title": "Decks",
+   "chains": 41
+  },
+  {
+   "title": "Achievements",
+   "chains": 35
+  },
+  {
+   "title": "Vouchers",
+   "chains": 34
+  },
+  {
+   "title": "Challenge Decks",
+   "chains": 21
+  },
+  {
+   "title": "Blinds and Antes",
+   "chains": 18
+  },
+  {
+   "title": "Planet cards",
+   "chains": 17
+  },
+  {
+   "title": "Booster Packs",
+   "chains": 15
+  },
+  {
+   "title": "Mult",
+   "chains": 13
+  },
+  {
+   "title": "Poker hands",
+   "chains": 12
   },
   {
    "title": "Joker",
-   "betweenness": 33
+   "chains": 12
   },
   {
    "title": "Jimbo",
-   "betweenness": 30
+   "chains": 11
   },
   {
-   "title": "Main menu",
-   "betweenness": 24
+   "title": "Skip",
+   "chains": 11
   },
   {
-   "title": "Hands",
-   "betweenness": 21
+   "title": "Tags",
+   "chains": 10
   },
   {
    "title": "Common Jokers",
-   "betweenness": 18
+   "chains": 7
   },
   {
    "title": "Legendary Jokers",
-   "betweenness": 18
+   "chains": 7
   },
   {
-   "title": "Hand size",
-   "betweenness": 15
+   "title": "Main menu",
+   "chains": 7
   },
   {
    "title": "Uncommon Jokers",
-   "betweenness": 15
+   "chains": 6
+  },
+  {
+   "title": "Friends of Jimbo",
+   "chains": 5
   },
   {
    "title": "Rare Jokers",
-   "betweenness": 12
+   "chains": 5
   },
   {
-   "title": "Collection",
-   "betweenness": 10
+   "title": "Hands",
+   "chains": 4
   }
  ]
 }

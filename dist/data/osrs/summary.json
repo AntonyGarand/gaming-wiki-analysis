@@ -1,14 +1,14 @@
 {
  "wiki": "osrs",
- "generatedAt": "2026-10-12T13:52:17.391Z",
+ "generatedAt": "2026-10-14T04:04:56.803Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 96.62,
-   "deadEndPct": 3.38,
-   "components": 188,
-   "cycleCount": 187,
-   "meanHops": 6.07,
+   "convergePct": 96.77,
+   "deadEndPct": 3.23,
+   "components": 170,
+   "cycleCount": 169,
+   "meanHops": 6.09,
    "medianHops": 5,
    "maxHops": 18,
    "topAttractor": [
@@ -16,82 +16,125 @@
     "Guthix",
     "Gods"
    ],
-   "topAttractorPct": 33.27
+   "topAttractorPct": 33.6,
+   "top3Pct": 81.72,
+   "eligiblePct": 98.5
   },
   {
    "rank": "2",
-   "convergePct": 92.83,
-   "deadEndPct": 7.17,
-   "components": 449,
-   "cycleCount": 448,
-   "meanHops": 4.45,
+   "convergePct": 92.89,
+   "deadEndPct": 7.11,
+   "components": 443,
+   "cycleCount": 442,
+   "meanHops": 5.4,
    "medianHops": 4,
-   "maxHops": 20,
+   "maxHops": 23,
    "topAttractor": [
-    "Gielinor",
-    "Zanaris"
+    "Second Age",
+    "Zaros"
    ],
-   "topAttractorPct": 17
+   "topAttractorPct": 18.26,
+   "top3Pct": 45.39,
+   "eligiblePct": 94.8
   },
   {
    "rank": "3",
-   "convergePct": 74.32,
-   "deadEndPct": 25.68,
-   "components": 571,
-   "cycleCount": 570,
-   "meanHops": 7.02,
+   "convergePct": 74.54,
+   "deadEndPct": 25.46,
+   "components": 564,
+   "cycleCount": 563,
+   "meanHops": 6.9,
    "medianHops": 6,
    "maxHops": 29,
    "topAttractor": [
     "Experience",
     "Book of Knowledge"
    ],
-   "topAttractorPct": 28.85
+   "topAttractorPct": 22.3,
+   "top3Pct": 46.36,
+   "eligiblePct": 86.6
   },
   {
    "rank": "5",
-   "convergePct": 46.62,
-   "deadEndPct": 53.38,
-   "components": 374,
-   "cycleCount": 373,
-   "meanHops": 10.27,
-   "medianHops": 9,
-   "maxHops": 41,
+   "convergePct": 46.94,
+   "deadEndPct": 53.06,
+   "components": 350,
+   "cycleCount": 349,
+   "meanHops": 8.09,
+   "medianHops": 7,
+   "maxHops": 27,
    "topAttractor": [
-    "Port Khazard",
-    "Fishing Trawler"
+    "Boy",
+    "Witch's house (location)",
+    "Nora T. Hagg"
    ],
-   "topAttractorPct": 11.6
+   "topAttractorPct": 12.19,
+   "top3Pct": 27.83,
+   "eligiblePct": 63.9
   },
   {
    "rank": "last",
-   "convergePct": 96.33,
-   "deadEndPct": 3.67,
-   "components": 819,
-   "cycleCount": 818,
-   "meanHops": 12.89,
-   "medianHops": 11,
+   "convergePct": 98.32,
+   "deadEndPct": 1.68,
+   "components": 786,
+   "cycleCount": 785,
+   "meanHops": 13.02,
+   "medianHops": 12,
    "maxHops": 47,
    "topAttractor": [
     "Mod Ash",
     "My Arm"
    ],
-   "topAttractorPct": 22.56
+   "topAttractorPct": 21.91,
+   "top3Pct": 53.25,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 97.97,
-   "deadEndPct": 2.03,
-   "components": 462,
-   "cycleCount": 461,
-   "meanHops": 14.23,
-   "medianHops": 13,
-   "maxHops": 50,
+   "convergePct": 98.21,
+   "deadEndPct": 1.79,
+   "components": 450,
+   "cycleCount": 449,
+   "meanHops": 9.93,
+   "medianHops": 9,
+   "maxHops": 43,
    "topAttractor": [
-    "Slayer",
-    "Slayer/Experience table"
+    "Members",
+    "Mage Training Arena",
+    "Telekinetic Grab",
+    "Wyrmscraig",
+    "Sailing",
+    "Prying Times",
+    "Junior Jim",
+    "World switching",
+    "World",
+    "Shop",
+    "General store",
+    "Jennifer's General Supplies",
+    "Field ration",
+    "Pest Control",
+    "Void knight top",
+    "(l)",
+    "Perdu",
+    "(broken)",
+    "(mangled)",
+    "Wilderness",
+    "Yew tree",
+    "Game tick",
+    "Preserve",
+    "Nightmare Zone",
+    "King Black Dragon Lair",
+    "Lesser demon",
+    "Lesser demon (Melzar's Maze)",
+    "Melzar's notes",
+    "Crandor",
+    "Free-to-play",
+    "Brass key",
+    "Hill Giant"
    ],
-   "topAttractorPct": 48.92
+   "topAttractorPct": 50.87,
+   "top3Pct": 67.12,
+   "eligiblePct": 100
   }
  ]
 }

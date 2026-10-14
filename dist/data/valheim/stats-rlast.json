@@ -3,39 +3,215 @@
  "rank": "last",
  "nodes": 1284,
  "converge": {
-  "articles": 12,
-  "pct": 0.93,
-  "deadEnd": 1272,
-  "deadEndPct": 99.07,
-  "noLinks": 10,
+  "articles": 1267,
+  "pct": 98.68,
+  "deadEnd": 17,
+  "deadEndPct": 1.32,
+  "noLinks": 12,
   "tooFewLinks": 0,
-  "unresolvable": 920
+  "unresolvable": 0
  },
  "hopStats": {
-  "mean": 0.33,
-  "median": 0,
-  "p90": 1,
-  "max": 1
+  "mean": 4.25,
+  "median": 3,
+  "p90": 10,
+  "max": 16
  },
  "histogram": {
-  "0": 8,
-  "1": 4
+  "0": 72,
+  "1": 155,
+  "2": 262,
+  "3": 201,
+  "4": 125,
+  "5": 116,
+  "6": 77,
+  "7": 41,
+  "8": 46,
+  "9": 30,
+  "10": 39,
+  "11": 36,
+  "12": 39,
+  "13": 10,
+  "14": 16,
+  "15": 1,
+  "16": 1
  },
- "components": 5,
- "cycleCount": 4,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 12,
+   "1": 93,
+   "2": 113,
+   "3": 146,
+   "4": 118,
+   "5": 139,
+   "6": 136,
+   "7": 100,
+   "8": 76,
+   "9": 64,
+   "10": 287
+  },
+  "atLeast": {
+   "1": 99.1,
+   "2": 91.8,
+   "3": 83,
+   "5": 62.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 28.5,
+  "top3Pct": 66.2,
+  "top10Pct": 93.3,
+  "cycleCount": 30,
+  "entropyBits": 2.99
+ },
+ "components": 31,
+ "cycleCount": 30,
  "largestCycle": {
   "members": [
-   "Tables",
-   "Chairs"
+   "Forge of Potential",
+   "Rag Armor",
+   "Wooden Protection Idol"
   ],
-  "size": 2,
-  "basin": 4
+  "size": 3,
+  "basin": 366
  },
  "topAttractors": [
   {
    "cycle": [
-    "Tables",
-    "Chairs"
+    "Forge of Potential",
+    "Rag Armor",
+    "Wooden Protection Idol"
+   ],
+   "basin": 366,
+   "pct": 28.5
+  },
+  {
+   "cycle": [
+    "Biomes",
+    "World Edge",
+    "Developer console",
+    "Creatures",
+    "Creature level",
+    "Deer",
+    "Black Forest"
+   ],
+   "basin": 328,
+   "pct": 25.55
+  },
+  {
+   "cycle": [
+    "Comfort",
+    "Yule Tree",
+    "Seasonal events"
+   ],
+   "basin": 156,
+   "pct": 12.15
+  },
+  {
+   "cycle": [
+    "Chairs",
+    "Tables"
+   ],
+   "basin": 113,
+   "pct": 8.8
+  },
+  {
+   "cycle": [
+    "Player base",
+    "Campfire",
+    "Bonfire",
+    "Black Core",
+    "Fireworks",
+    "Workbench"
+   ],
+   "basin": 85,
+   "pct": 6.62
+  },
+  {
+   "cycle": [
+    "Taming",
+    "Egg"
+   ],
+   "basin": 85,
+   "pct": 6.62
+  },
+  {
+   "cycle": [
+    "Boar",
+    "Yellow Mushroom"
+   ],
+   "basin": 38,
+   "pct": 2.96
+  },
+  {
+   "cycle": [
+    "Jotun Puffs",
+    "Magecap"
+   ],
+   "basin": 11,
+   "pct": 0.86
+  },
+  {
+   "cycle": [
+    "Stone Structures",
+    "Black Marble Structures"
+   ],
+   "basin": 9,
+   "pct": 0.7
+  },
+  {
+   "cycle": [
+    "Medium Stamina Mead",
+    "Lingering Stamina Mead"
+   ],
+   "basin": 7,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "Vile",
+    "Bear"
+   ],
+   "basin": 7,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "The Queen",
+    "Majestic Carapace"
+   ],
+   "basin": 7,
+   "pct": 0.55
+  },
+  {
+   "cycle": [
+    "Sconce",
+    "Standing Wood Torch",
+    "Standing Iron Torch"
+   ],
+   "basin": 6,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Charred Twitcher",
+    "Summoned Twitcher"
+   ],
+   "basin": 6,
+   "pct": 0.47
+  },
+  {
+   "cycle": [
+    "Lingering Healing Mead",
+    "Major Healing Mead"
+   ],
+   "basin": 5,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
+    "Riding",
+    "Moose Saddle"
    ],
    "basin": 4,
    "pct": 0.31
@@ -45,361 +221,351 @@
     "Thatch Roofs",
     "Shingle Roofs"
    ],
-   "basin": 3,
-   "pct": 0.23
+   "basin": 4,
+   "pct": 0.31
   },
   {
    "cycle": [
-    "Krigen",
-    "Hexen"
+    "Fish",
+    "Fishing Rod"
    ],
    "basin": 3,
    "pct": 0.23
   },
   {
    "cycle": [
-    "Liquid Frost",
-    "Moulds"
+    "Black Metal Chest",
+    "Personal Chest"
    ],
-   "basin": 2,
-   "pct": 0.16
+   "basin": 3,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Pots",
+    "Scorched Tree"
+   ],
+   "basin": 3,
+   "pct": 0.23
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Rag Armor",
-   "chains": 69,
-   "pct": 5.37,
-   "reason": "redlink target"
+   "title": "Valheim",
+   "chains": 6,
+   "pct": 0.47,
+   "reason": "no eligible links"
   },
   {
-   "title": "Deep North",
-   "chains": 21,
-   "pct": 1.64,
-   "reason": "redlink target"
+   "title": "Valheim Wiki",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Damage",
-   "chains": 19,
-   "pct": 1.48,
-   "reason": "redlink target"
+   "title": "Music",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Stamina",
-   "chains": 18,
-   "pct": 1.4,
-   "reason": "redlink target"
+   "title": "Valheim Wiki/sandbox",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Coins",
-   "chains": 11,
-   "pct": 0.86,
-   "reason": "redlink target"
+   "title": "Flour",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Developer console",
-   "chains": 10,
-   "pct": 0.78,
-   "reason": "redlink target"
+   "title": "Door",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Galdr Table",
-   "chains": 10,
-   "pct": 0.78,
-   "reason": "redlink target"
+   "title": "Jute",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Cauldron",
-   "chains": 9,
-   "pct": 0.7,
-   "reason": "redlink target"
+   "title": "Nails",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Swamp",
-   "chains": 8,
-   "pct": 0.62,
-   "reason": "redlink target"
+   "title": "Berries",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Mistlands",
-   "chains": 7,
-   "pct": 0.55,
-   "reason": "redlink target"
+   "title": "Bone",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Ward",
-   "chains": 7,
-   "pct": 0.55,
-   "reason": "redlink target"
+   "title": "Fang",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   },
   {
-   "title": "Creatures",
-   "chains": 5,
-   "pct": 0.39,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Coal",
-   "chains": 5,
-   "pct": 0.39,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Plains",
-   "chains": 5,
-   "pct": 0.39,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Dvergr (race)",
-   "chains": 5,
-   "pct": 0.39,
-   "reason": "redlink target"
+   "title": "Light source",
+   "chains": 1,
+   "pct": 0.08,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Bloodgold Battle Idol",
-   "inDegree": 34
+   "firstLinks": 34
   },
   {
-   "title": "Forge of Potential",
-   "inDegree": 17
-  },
-  {
-   "title": "Deep North",
-   "inDegree": 16
+   "title": "Serving Tray",
+   "firstLinks": 30
   },
   {
    "title": "Damage",
-   "inDegree": 15
+   "firstLinks": 29
+  },
+  {
+   "title": "Version history",
+   "firstLinks": 25
+  },
+  {
+   "title": "Flametal Battle Idol",
+   "firstLinks": 25
+  },
+  {
+   "title": "Workbench",
+   "firstLinks": 21
+  },
+  {
+   "title": "Deep North",
+   "firstLinks": 20
   },
   {
    "title": "Cauldron",
-   "inDegree": 8
-  },
-  {
-   "title": "Developer console",
-   "inDegree": 8
-  },
-  {
-   "title": "Kall Fimbulbringer",
-   "inDegree": 7
-  },
-  {
-   "title": "Bloodgold Protection Idol",
-   "inDegree": 7
+   "firstLinks": 19
   },
   {
    "title": "Mistlands",
-   "inDegree": 6
-  },
-  {
-   "title": "Trader",
-   "inDegree": 5
-  },
-  {
-   "title": "Creatures",
-   "inDegree": 4
-  },
-  {
-   "title": "Coal",
-   "inDegree": 4
-  },
-  {
-   "title": "Plains",
-   "inDegree": 4
-  },
-  {
-   "title": "Loot chest",
-   "inDegree": 4
-  },
-  {
-   "title": "Dvergr (race)",
-   "inDegree": 4
-  },
-  {
-   "title": "Mörkhalla",
-   "inDegree": 4
-  },
-  {
-   "title": "Stone",
-   "inDegree": 3
-  },
-  {
-   "title": "Cultivator",
-   "inDegree": 3
-  },
-  {
-   "title": "Fuling",
-   "inDegree": 3
-  },
-  {
-   "title": "Stamina",
-   "inDegree": 3
-  },
-  {
-   "title": "Health",
-   "inDegree": 3
-  },
-  {
-   "title": "Eitr",
-   "inDegree": 3
-  },
-  {
-   "title": "Chairs",
-   "inDegree": 3
-  },
-  {
-   "title": "Ice",
-   "inDegree": 3
-  },
-  {
-   "title": "Frost Foundry",
-   "inDegree": 3
-  },
-  {
-   "title": "Winding Tunnels",
-   "inDegree": 3
-  },
-  {
-   "title": "Swamp",
-   "inDegree": 2
-  },
-  {
-   "title": "Hammer",
-   "inDegree": 2
-  },
-  {
-   "title": "Smelter",
-   "inDegree": 2
-  },
-  {
-   "title": "Greydwarf",
-   "inDegree": 2
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Bloodgold Battle Idol",
-   "betweenness": 70
+   "firstLinks": 18
   },
   {
    "title": "Forge of Potential",
-   "betweenness": 67
+   "firstLinks": 18
   },
   {
-   "title": "Winding Tunnels",
-   "betweenness": 32
+   "title": "Biomes",
+   "firstLinks": 16
   },
   {
-   "title": "Intricate Key",
-   "betweenness": 27
+   "title": "Ashlands",
+   "firstLinks": 16
   },
   {
-   "title": "Mörkhalla",
-   "betweenness": 26
+   "title": "Comfort",
+   "firstLinks": 14
   },
   {
-   "title": "Loot chest",
-   "betweenness": 20
+   "title": "Cultivator",
+   "firstLinks": 13
   },
   {
-   "title": "Grappling Hook",
-   "betweenness": 14
+   "title": "Developer console",
+   "firstLinks": 13
   },
   {
-   "title": "Bloodgold Protection Idol",
-   "betweenness": 14
+   "title": "Coal",
+   "firstLinks": 12
   },
   {
-   "title": "Kall Fimbulbringer",
-   "betweenness": 9
+   "title": "Skills",
+   "firstLinks": 12
   },
   {
-   "title": "Frost Foundry",
-   "betweenness": 8
+   "title": "Forge",
+   "firstLinks": 11
   },
   {
-   "title": "Ice",
-   "betweenness": 6
+   "title": "Black Forest",
+   "firstLinks": 10
   },
   {
-   "title": "Iron Protection Idol",
-   "betweenness": 6
+   "title": "Black Forge",
+   "firstLinks": 10
   },
   {
-   "title": "Timber Structures",
-   "betweenness": 6
+   "title": "Portal Stone",
+   "firstLinks": 10
   },
   {
-   "title": "Scalewood Structures",
-   "betweenness": 6
+   "title": "The Bog Witch",
+   "firstLinks": 10
+  },
+  {
+   "title": "Bronze Battle Idol",
+   "firstLinks": 10
+  },
+  {
+   "title": "Iron Battle Idol",
+   "firstLinks": 10
+  },
+  {
+   "title": "Plains",
+   "firstLinks": 9
   },
   {
    "title": "Trader",
-   "betweenness": 5
-  },
-  {
-   "title": "Elaking",
-   "betweenness": 5
-  },
-  {
-   "title": "Bloodgold",
-   "betweenness": 4
-  },
-  {
-   "title": "Timberwood",
-   "betweenness": 4
-  },
-  {
-   "title": "Memorial Site",
-   "betweenness": 4
+   "firstLinks": 9
   },
   {
    "title": "Black Metal Battle Idol",
-   "betweenness": 4
+   "firstLinks": 9
   },
   {
-   "title": "Timberwood Gate",
-   "betweenness": 4
+   "title": "Creatures",
+   "firstLinks": 8
   },
   {
-   "title": "Fallen Warrior",
-   "betweenness": 3
+   "title": "Wood",
+   "firstLinks": 8
   },
   {
-   "title": "Northern Vengeance",
-   "betweenness": 3
+   "title": "Adrenaline",
+   "firstLinks": 8
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Rag Armor",
+   "chains": 366
   },
   {
-   "title": "Shield of Roots",
-   "betweenness": 3
+   "title": "Forge of Potential",
+   "chains": 366
   },
   {
-   "title": "Boss strategies",
-   "betweenness": 2
+   "title": "Wooden Protection Idol",
+   "chains": 366
   },
   {
-   "title": "Strategies",
-   "betweenness": 2
+   "title": "Biomes",
+   "chains": 328
+  },
+  {
+   "title": "Creatures",
+   "chains": 328
+  },
+  {
+   "title": "Deer",
+   "chains": 328
+  },
+  {
+   "title": "Black Forest",
+   "chains": 328
+  },
+  {
+   "title": "World Edge",
+   "chains": 328
+  },
+  {
+   "title": "Creature level",
+   "chains": 328
+  },
+  {
+   "title": "Developer console",
+   "chains": 328
+  },
+  {
+   "title": "Comfort",
+   "chains": 156
+  },
+  {
+   "title": "Yule Tree",
+   "chains": 156
+  },
+  {
+   "title": "Seasonal events",
+   "chains": 156
+  },
+  {
+   "title": "The Bog Witch",
+   "chains": 134
+  },
+  {
+   "title": "Tables",
+   "chains": 113
   },
   {
    "title": "Chairs",
-   "betweenness": 2
+   "chains": 113
   },
   {
-   "title": "Moose",
-   "betweenness": 2
+   "title": "Swamp",
+   "chains": 109
   },
   {
-   "title": "Jotun Invasion",
-   "betweenness": 2
+   "title": "Hearth",
+   "chains": 96
   },
   {
-   "title": "Moose Saddle",
-   "betweenness": 2
+   "title": "Damage",
+   "chains": 95
+  },
+  {
+   "title": "Iron Protection Idol",
+   "chains": 92
+  },
+  {
+   "title": "Workbench",
+   "chains": 85
+  },
+  {
+   "title": "Campfire",
+   "chains": 85
+  },
+  {
+   "title": "Fireworks",
+   "chains": 85
+  },
+  {
+   "title": "Bonfire",
+   "chains": 85
+  },
+  {
+   "title": "Player base",
+   "chains": 85
+  },
+  {
+   "title": "Taming",
+   "chains": 85
+  },
+  {
+   "title": "Egg",
+   "chains": 85
+  },
+  {
+   "title": "Black Core",
+   "chains": 85
+  },
+  {
+   "title": "Root Set",
+   "chains": 84
+  },
+  {
+   "title": "Poison Resistance Mead",
+   "chains": 83
   }
  ]
 }

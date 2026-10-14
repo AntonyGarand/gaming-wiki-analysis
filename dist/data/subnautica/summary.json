@@ -1,95 +1,119 @@
 {
  "wiki": "subnautica",
- "generatedAt": "2026-10-12T17:00:03.150Z",
+ "generatedAt": "2026-10-14T04:05:42.323Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 74.37,
-   "deadEndPct": 25.63,
-   "components": 9,
-   "cycleCount": 8,
-   "meanHops": 2.41,
-   "medianHops": 2,
-   "maxHops": 7,
+   "convergePct": 99.3,
+   "deadEndPct": 0.7,
+   "components": 10,
+   "cycleCount": 9,
+   "meanHops": 2.81,
+   "medianHops": 3,
+   "maxHops": 9,
    "topAttractor": [
     "Planet 4546B",
     "Architects"
    ],
-   "topAttractorPct": 40.42
+   "topAttractorPct": 40.42,
+   "top3Pct": 82.96,
+   "eligiblePct": 99.3
   },
   {
    "rank": "2",
-   "convergePct": 55.49,
-   "deadEndPct": 44.51,
+   "convergePct": 93.38,
+   "deadEndPct": 6.62,
    "components": 8,
    "cycleCount": 7,
-   "meanHops": 3.53,
-   "medianHops": 3,
-   "maxHops": 10,
+   "meanHops": 4.41,
+   "medianHops": 4,
+   "maxHops": 12,
    "topAttractor": [
-    "Game Modes",
-    "Oxygen"
+    "Planet 4546B",
+    "Kharaa Bacterium"
    ],
-   "topAttractorPct": 27.61
+   "topAttractorPct": 44.79,
+   "top3Pct": 83.24,
+   "eligiblePct": 94.8
   },
   {
    "rank": "3",
-   "convergePct": 87.32,
-   "deadEndPct": 12.68,
-   "components": 13,
-   "cycleCount": 12,
-   "meanHops": 5.04,
+   "convergePct": 86.9,
+   "deadEndPct": 13.1,
+   "components": 12,
+   "cycleCount": 11,
+   "meanHops": 5.66,
    "medianHops": 5,
-   "maxHops": 12,
+   "maxHops": 21,
    "topAttractor": [
     "Mountains",
     "Bulb Zone"
    ],
-   "topAttractorPct": 44.93
+   "topAttractorPct": 52.25,
+   "top3Pct": 77.46,
+   "eligiblePct": 90
   },
   {
    "rank": "5",
-   "convergePct": 28.45,
-   "deadEndPct": 71.55,
+   "convergePct": 36.34,
+   "deadEndPct": 63.66,
    "components": 11,
    "cycleCount": 10,
-   "meanHops": 3.36,
-   "medianHops": 3,
+   "meanHops": 3.87,
+   "medianHops": 4,
    "maxHops": 12,
    "topAttractor": [
     "Cyclops",
     "Habitat Builder"
    ],
-   "topAttractorPct": 14.93
+   "topAttractorPct": 19.58,
+   "top3Pct": 30.28,
+   "eligiblePct": 72
   },
   {
    "rank": "last",
-   "convergePct": 29.72,
-   "deadEndPct": 70.28,
-   "components": 10,
-   "cycleCount": 9,
-   "meanHops": 2.69,
-   "medianHops": 2,
-   "maxHops": 5,
+   "convergePct": 99.3,
+   "deadEndPct": 0.7,
+   "components": 13,
+   "cycleCount": 12,
+   "meanHops": 5.45,
+   "medianHops": 4,
+   "maxHops": 19,
    "topAttractor": [
-    "Achievements"
+    "Cut Content",
+    "Tools",
+    "HUD",
+    "PDA",
+    "Databank",
+    "Blood Grass",
+    "Reefback Leviathan",
+    "Safe Shallows",
+    "Seaglide",
+    "Lifepod 5",
+    "Repair Tool",
+    "Modification Station",
+    "Fragments"
    ],
-   "topAttractorPct": 15.63
+   "topAttractorPct": 38.73,
+   "top3Pct": 90.85,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
    "convergePct": 99.3,
    "deadEndPct": 0.7,
-   "components": 7,
-   "cycleCount": 6,
-   "meanHops": 10.92,
-   "medianHops": 12,
-   "maxHops": 25,
+   "components": 9,
+   "cycleCount": 8,
+   "meanHops": 10.27,
+   "medianHops": 9,
+   "maxHops": 30,
    "topAttractor": [
     "Seabases",
     "Hull Integrity"
    ],
-   "topAttractorPct": 87.18
+   "topAttractorPct": 66.2,
+   "top3Pct": 96.2,
+   "eligiblePct": 100
   }
  ]
 }

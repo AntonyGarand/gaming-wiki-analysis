@@ -3,70 +3,112 @@
  "rank": "3",
  "nodes": 24073,
  "converge": {
-  "articles": 11979,
-  "pct": 49.76,
-  "deadEnd": 12094,
-  "deadEndPct": 50.24,
-  "noLinks": 878,
-  "tooFewLinks": 4392,
-  "unresolvable": 983
+  "articles": 12949,
+  "pct": 53.79,
+  "deadEnd": 11124,
+  "deadEndPct": 46.21,
+  "noLinks": 1032,
+  "tooFewLinks": 5162,
+  "unresolvable": 16
  },
  "hopStats": {
-  "mean": 4.27,
+  "mean": 4.73,
   "median": 4,
-  "p90": 8,
-  "max": 20
+  "p90": 10,
+  "max": 25
  },
  "histogram": {
-  "0": 633,
-  "1": 1952,
-  "2": 1785,
-  "3": 1353,
-  "4": 1557,
-  "5": 1148,
-  "6": 1018,
-  "7": 814,
-  "8": 597,
-  "9": 349,
-  "10": 166,
-  "11": 150,
-  "12": 116,
-  "13": 91,
-  "14": 63,
-  "15": 41,
-  "16": 41,
-  "17": 53,
-  "18": 41,
-  "19": 8,
-  "20": 3
+  "0": 629,
+  "1": 1998,
+  "2": 1830,
+  "3": 1369,
+  "4": 1555,
+  "5": 1154,
+  "6": 1100,
+  "7": 872,
+  "8": 617,
+  "9": 470,
+  "10": 247,
+  "11": 290,
+  "12": 230,
+  "13": 166,
+  "14": 101,
+  "15": 64,
+  "16": 59,
+  "17": 76,
+  "18": 54,
+  "19": 18,
+  "20": 17,
+  "21": 13,
+  "22": 12,
+  "23": 4,
+  "24": 3,
+  "25": 1
  },
- "components": 298,
- "cycleCount": 297,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 1048,
+   "1": 1601,
+   "2": 3561,
+   "3": 2434,
+   "4": 2196,
+   "5": 1591,
+   "6": 1320,
+   "7": 1098,
+   "8": 956,
+   "9": 787,
+   "10": 7481
+  },
+  "atLeast": {
+   "1": 95.6,
+   "2": 89,
+   "3": 74.2,
+   "5": 55
+  }
+ },
+ "concentration": {
+  "top1Pct": 6.45,
+  "top3Pct": 14.96,
+  "top10Pct": 29.36,
+  "cycleCount": 285,
+  "entropyBits": 5.68
+ },
+ "components": 286,
+ "cycleCount": 285,
  "largestCycle": {
   "members": [
-   "Frank Tenpenny",
-   "Los Santos Police Department (3D Universe)",
-   "Community Resources Against Street Hoodlums"
+   "Los Santos (3D Universe)",
+   "Los Santos Forum",
+   "8-Track"
   ],
   "size": 3,
-  "basin": 1266
+  "basin": 1553
  },
  "topAttractors": [
+  {
+   "cycle": [
+    "Los Santos (3D Universe)",
+    "Los Santos Forum",
+    "8-Track"
+   ],
+   "basin": 1553,
+   "pct": 6.45
+  },
   {
    "cycle": [
     "Frank Tenpenny",
     "Los Santos Police Department (3D Universe)",
     "Community Resources Against Street Hoodlums"
    ],
-   "basin": 1266,
-   "pct": 5.26
+   "basin": 1252,
+   "pct": 5.2
   },
   {
    "cycle": [
     "Interstate 97",
     "Interstate 397"
    ],
-   "basin": 797,
+   "basin": 796,
    "pct": 3.31
   },
   {
@@ -74,17 +116,8 @@
     "Finland",
     "Norway"
    ],
-   "basin": 792,
-   "pct": 3.29
-  },
-  {
-   "cycle": [
-    "8-Track",
-    "Los Santos (3D Universe)",
-    "Los Santos Forum"
-   ],
-   "basin": 589,
-   "pct": 2.45
+   "basin": 790,
+   "pct": 3.28
   },
   {
    "cycle": [
@@ -93,16 +126,16 @@
     "Rockford Hills",
     "Hawick"
    ],
-   "basin": 521,
-   "pct": 2.16
+   "basin": 565,
+   "pct": 2.35
   },
   {
    "cycle": [
     "Mikhail Faustin",
     "Dimitri Rascalov"
    ],
-   "basin": 502,
-   "pct": 2.09
+   "basin": 512,
+   "pct": 2.13
   },
   {
    "cycle": [
@@ -112,7 +145,7 @@
     "Uncle Fu",
     "Mandarin Mayhem"
    ],
-   "basin": 476,
+   "basin": 477,
    "pct": 1.98
   },
   {
@@ -120,8 +153,8 @@
     "Japan",
     "Grand Theft Auto Double Pack"
    ],
-   "basin": 447,
-   "pct": 1.86
+   "basin": 426,
+   "pct": 1.77
   },
   {
    "cycle": [
@@ -129,8 +162,33 @@
     "Sandy Shores",
     "Senora National Park"
    ],
-   "basin": 339,
-   "pct": 1.41
+   "basin": 356,
+   "pct": 1.48
+  },
+  {
+   "cycle": [
+    "Apple iOS",
+    "PlayStation Portable",
+    "Grand Theft Auto: Chinatown Wars"
+   ],
+   "basin": 341,
+   "pct": 1.42
+  },
+  {
+   "cycle": [
+    "Angel Pine",
+    "Shady Creeks"
+   ],
+   "basin": 281,
+   "pct": 1.17
+  },
+  {
+   "cycle": [
+    "Jane Hopper",
+    "Liberty City Ferry Strike"
+   ],
+   "basin": 260,
+   "pct": 1.08
   },
   {
    "cycle": [
@@ -142,49 +200,24 @@
     "Haitians",
     "Trojan Voodoo"
    ],
-   "basin": 327,
-   "pct": 1.36
-  },
-  {
-   "cycle": [
-    "Apple iOS",
-    "PlayStation Portable",
-    "Grand Theft Auto: Chinatown Wars"
-   ],
-   "basin": 323,
-   "pct": 1.34
-  },
-  {
-   "cycle": [
-    "Angel Pine",
-    "Shady Creeks"
-   ],
-   "basin": 272,
-   "pct": 1.13
-  },
-  {
-   "cycle": [
-    "Jane Hopper",
-    "Liberty City Ferry Strike"
-   ],
-   "basin": 253,
-   "pct": 1.05
-  },
-  {
-   "cycle": [
-    "Hepburn Heights",
-    "Harwood"
-   ],
-   "basin": 234,
-   "pct": 0.97
+   "basin": 238,
+   "pct": 0.99
   },
   {
    "cycle": [
     "East Los Santos (3D Universe)",
     "Las Colinas"
    ],
-   "basin": 222,
-   "pct": 0.92
+   "basin": 229,
+   "pct": 0.95
+  },
+  {
+   "cycle": [
+    "Hepburn Heights",
+    "Harwood"
+   ],
+   "basin": 207,
+   "pct": 0.86
   },
   {
    "cycle": [
@@ -202,8 +235,16 @@
     "Redsands East",
     "The Visage"
    ],
-   "basin": 193,
+   "basin": 192,
    "pct": 0.8
+  },
+  {
+   "cycle": [
+    "La Puerta",
+    "Los Santos International Airport (HD Universe)"
+   ],
+   "basin": 178,
+   "pct": 0.74
   },
   {
    "cycle": [
@@ -211,16 +252,8 @@
     "Palomino Creek",
     "Palomino Creek Safehouse"
    ],
-   "basin": 176,
-   "pct": 0.73
-  },
-  {
-   "cycle": [
-    "La Puerta",
-    "Los Santos International Airport (HD Universe)"
-   ],
-   "basin": 174,
-   "pct": 0.72
+   "basin": 177,
+   "pct": 0.74
   },
   {
    "cycle": [
@@ -234,51 +267,39 @@
  "deadEndTerminals": [
   {
    "title": "Percell Road",
-   "chains": 1708,
-   "pct": 7.1,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Sawed-Off Shotgun",
-   "chains": 866,
-   "pct": 3.6,
-   "reason": "only 4 eligible links"
-  },
-  {
-   "title": "Scott Hill",
-   "chains": 346,
-   "pct": 1.44,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Rockstar Lincoln",
-   "chains": 341,
-   "pct": 1.42,
-   "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Panoramic",
-   "chains": 153,
-   "pct": 0.64,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Rockstar New England",
-   "chains": 135,
-   "pct": 0.56,
+   "chains": 1870,
+   "pct": 7.77,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Pedestrians in GTA IV",
-   "chains": 130,
+   "title": "Rockstar Lincoln",
+   "chains": 353,
+   "pct": 1.47,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Scott Hill",
+   "chains": 340,
+   "pct": 1.41,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Rockstar New England",
+   "chains": 131,
    "pct": 0.54,
-   "reason": "only 3 eligible links"
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Pedestrians in GTA IV",
+   "chains": 129,
+   "pct": 0.54,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Valley Forge Avenue",
-   "chains": 91,
-   "pct": 0.38,
-   "reason": "redlink target"
+   "chains": 94,
+   "pct": 0.39,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Matt Van Orden",
@@ -287,22 +308,22 @@
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Nintendo Switch",
-   "chains": 79,
-   "pct": 0.33,
-   "reason": "no eligible links"
+   "title": "Star Junction",
+   "chains": 77,
+   "pct": 0.32,
+   "reason": "only 2 eligible links"
   },
   {
-   "title": "Star Junction",
-   "chains": 75,
-   "pct": 0.31,
-   "reason": "only 3 eligible links"
+   "title": "Nintendo Switch",
+   "chains": 76,
+   "pct": 0.32,
+   "reason": "no eligible links"
   },
   {
    "title": "Xbox Series X and Series S",
    "chains": 74,
    "pct": 0.31,
-   "reason": "only 2 eligible links"
+   "reason": "no eligible links"
   },
   {
    "title": "Phil Collins",
@@ -312,260 +333,272 @@
   },
   {
    "title": "TJ Barry",
-   "chains": 69,
+   "chains": 70,
    "pct": 0.29,
-   "reason": "redlink target"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Tony Smith",
    "chains": 58,
    "pct": 0.24,
-   "reason": "redlink target"
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "GTA VI Website",
+   "chains": 52,
+   "pct": 0.22,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Street Rage",
+   "chains": 51,
+   "pct": 0.21,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Los Santos (HD Universe)",
-   "inDegree": 409
+   "firstLinks": 407
   },
   {
    "title": "Pedestrians",
-   "inDegree": 190
-  },
-  {
-   "title": "Eyefind",
-   "inDegree": 138
+   "firstLinks": 188
   },
   {
    "title": "Carl Johnson",
-   "inDegree": 132
+   "firstLinks": 132
   },
   {
    "title": "Algonquin",
-   "inDegree": 130
+   "firstLinks": 130
   },
   {
    "title": "Pedestrians in GTA IV",
-   "inDegree": 129
+   "firstLinks": 128
   },
   {
    "title": "Protagonists in GTA (1997 game)",
-   "inDegree": 125
+   "firstLinks": 125
+  },
+  {
+   "title": "Eyefind",
+   "firstLinks": 111
   },
   {
    "title": "Los Santos (3D Universe)",
-   "inDegree": 103
+   "firstLinks": 106
   },
   {
    "title": "State of Alderney",
-   "inDegree": 94
+   "firstLinks": 96
   },
   {
    "title": "Grand Theft Auto VI/Trailers",
-   "inDegree": 88
+   "firstLinks": 88
   },
   {
    "title": "Money",
-   "inDegree": 85
+   "firstLinks": 84
   },
   {
    "title": "Anywhere City",
-   "inDegree": 82
+   "firstLinks": 82
   },
   {
    "title": "Franklin Clinton",
-   "inDegree": 79
+   "firstLinks": 79
   },
   {
    "title": "Blaine County",
-   "inDegree": 78
+   "firstLinks": 79
   },
   {
    "title": "Portland",
-   "inDegree": 74
+   "firstLinks": 75
   },
   {
    "title": "Las Venturas (3D Universe)",
-   "inDegree": 72
+   "firstLinks": 71
   },
   {
    "title": "Grand Theft Auto VI/Leaks",
-   "inDegree": 69
+   "firstLinks": 70
   },
   {
    "title": "Broker",
-   "inDegree": 67
-  },
-  {
-   "title": "Trevor Philips",
-   "inDegree": 66
-  },
-  {
-   "title": "Niko Bellic",
-   "inDegree": 65
+   "firstLinks": 66
   },
   {
    "title": "Rockstar Games Social Club",
-   "inDegree": 64
+   "firstLinks": 64
+  },
+  {
+   "title": "Trevor Philips",
+   "firstLinks": 64
   },
   {
    "title": "Xbox Series X and Series S",
-   "inDegree": 63
+   "firstLinks": 63
   },
   {
    "title": "Staunton Island",
-   "inDegree": 61
-  },
-  {
-   "title": "Tommy Vercetti",
-   "inDegree": 57
-  },
-  {
-   "title": "Protagonists in GTA London",
-   "inDegree": 57
-  },
-  {
-   "title": "Tony Smith",
-   "inDegree": 56
+   "firstLinks": 61
   },
   {
    "title": "San Fierro (3D Universe)",
-   "inDegree": 55
+   "firstLinks": 57
+  },
+  {
+   "title": "Niko Bellic",
+   "firstLinks": 57
+  },
+  {
+   "title": "Protagonists in GTA London",
+   "firstLinks": 57
+  },
+  {
+   "title": "Tommy Vercetti",
+   "firstLinks": 56
+  },
+  {
+   "title": "Tony Smith",
+   "firstLinks": 56
   },
   {
    "title": "United States of America",
-   "inDegree": 53
-  },
-  {
-   "title": "Lucia Caminos",
-   "inDegree": 52
+   "firstLinks": 53
   },
   {
    "title": "GTA Online: Smuggler's Run",
-   "inDegree": 51
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Los Santos (HD Universe)",
-   "betweenness": 6100
-  },
-  {
-   "title": "Los Santos Riots",
-   "betweenness": 4900
-  },
-  {
-   "title": "Eddie Pulaski",
-   "betweenness": 3696
-  },
-  {
-   "title": "Vice-Dale County",
-   "betweenness": 3060
-  },
-  {
-   "title": "Grand Theft Auto VI: Ultimate Edition",
-   "betweenness": 2827
-  },
-  {
-   "title": "Grand Theft Auto VI/Screenshots",
-   "betweenness": 2712
-  },
-  {
-   "title": "Watson Bay",
-   "betweenness": 2620
-  },
-  {
-   "title": "Franklin Clinton",
-   "betweenness": 2574
-  },
-  {
-   "title": "Protagonists in GTA (1997 game)",
-   "betweenness": 2538
-  },
-  {
-   "title": "Frank Tenpenny",
-   "betweenness": 2515
-  },
-  {
-   "title": "Hamlet",
-   "betweenness": 2493
-  },
-  {
-   "title": "Communication",
-   "betweenness": 2472
-  },
-  {
-   "title": "State of Alderney",
-   "betweenness": 2349
-  },
-  {
-   "title": "Leonard County",
-   "betweenness": 2310
-  },
-  {
-   "title": "Southern San Andreas Super Autos",
-   "betweenness": 2240
-  },
-  {
-   "title": "Bluegrass",
-   "betweenness": 2224
-  },
-  {
-   "title": "Kelly",
-   "betweenness": 2195
-  },
-  {
-   "title": "Blazer",
-   "betweenness": 2175
-  },
-  {
-   "title": "La Perle",
-   "betweenness": 2156
-  },
-  {
-   "title": "Toni Cipriani",
-   "betweenness": 2124
+   "firstLinks": 51
   },
   {
    "title": "Lucia Caminos",
-   "betweenness": 2060
+   "firstLinks": 51
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Percell Road",
+   "chains": 1870
+  },
+  {
+   "title": "West River",
+   "chains": 1868
+  },
+  {
+   "title": "Los Santos (3D Universe)",
+   "chains": 1553
+  },
+  {
+   "title": "Los Santos Forum",
+   "chains": 1553
+  },
+  {
+   "title": "8-Track",
+   "chains": 1553
+  },
+  {
+   "title": "Carl Johnson",
+   "chains": 1323
+  },
+  {
+   "title": "Frank Tenpenny",
+   "chains": 1252
+  },
+  {
+   "title": "Community Resources Against Street Hoodlums",
+   "chains": 1252
+  },
+  {
+   "title": "Los Santos Police Department (3D Universe)",
+   "chains": 1252
+  },
+  {
+   "title": "Eddie Pulaski",
+   "chains": 1219
+  },
+  {
+   "title": "Los Santos Riots",
+   "chains": 1212
+  },
+  {
+   "title": "Los Santos (HD Universe)",
+   "chains": 1207
+  },
+  {
+   "title": "Alderney City",
+   "chains": 1034
+  },
+  {
+   "title": "Sawed-Off Shotgun",
+   "chains": 962
+  },
+  {
+   "title": "Siege Mentality",
+   "chains": 960
+  },
+  {
+   "title": "Double Down",
+   "chains": 959
+  },
+  {
+   "title": "Franklin Clinton",
+   "chains": 956
+  },
+  {
+   "title": "State of Alderney",
+   "chains": 952
+  },
+  {
+   "title": "Interstate 97",
+   "chains": 796
+  },
+  {
+   "title": "Interstate 397",
+   "chains": 796
+  },
+  {
+   "title": "Finland",
+   "chains": 790
+  },
+  {
+   "title": "Norway",
+   "chains": 790
+  },
+  {
+   "title": "Russia",
+   "chains": 787
+  },
+  {
+   "title": "Algonquin",
+   "chains": 785
+  },
+  {
+   "title": "Vinewood Beach",
+   "chains": 770
+  },
+  {
+   "title": "Leonard County",
+   "chains": 769
+  },
+  {
+   "title": "Vice-Dale County",
+   "chains": 764
+  },
+  {
+   "title": "Communication",
+   "chains": 717
   },
   {
    "title": "United States of America",
-   "betweenness": 2058
+   "chains": 685
   },
   {
-   "title": "Leone Crime Family",
-   "betweenness": 2030
-  },
-  {
-   "title": "Unnamed GTA VI La Perle auto shop",
-   "betweenness": 2015
-  },
-  {
-   "title": "Staunton Island",
-   "betweenness": 1981
-  },
-  {
-   "title": "Leonida Keys",
-   "betweenness": 1980
-  },
-  {
-   "title": "Anywhere City",
-   "betweenness": 1976
-  },
-  {
-   "title": "Money",
-   "betweenness": 1956
-  },
-  {
-   "title": "Bluegrass Radio Mast",
-   "betweenness": 1953
-  },
-  {
-   "title": "Uncle Fu's Crime Syndicate",
-   "betweenness": 1840
+   "title": "Downtown Los Santos (HD Universe)",
+   "chains": 565
   }
  ]
 }

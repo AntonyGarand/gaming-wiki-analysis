@@ -3,43 +3,71 @@
  "rank": "strict1",
  "nodes": 36164,
  "converge": {
-  "articles": 34943,
-  "pct": 96.62,
-  "deadEnd": 1221,
-  "deadEndPct": 3.38,
-  "noLinks": 542,
+  "articles": 34995,
+  "pct": 96.77,
+  "deadEnd": 1169,
+  "deadEndPct": 3.23,
+  "noLinks": 539,
   "tooFewLinks": 0,
-  "unresolvable": 21
+  "unresolvable": 2
  },
  "hopStats": {
-  "mean": 6.07,
+  "mean": 6.09,
   "median": 5,
   "p90": 11,
   "max": 18
  },
  "histogram": {
-  "0": 361,
-  "1": 1836,
-  "2": 2806,
-  "3": 3893,
-  "4": 4418,
-  "5": 4689,
-  "6": 4074,
-  "7": 2872,
-  "8": 1566,
-  "9": 1379,
-  "10": 1824,
-  "11": 2193,
-  "12": 996,
-  "13": 987,
-  "14": 676,
-  "15": 267,
-  "16": 85,
+  "0": 344,
+  "1": 1799,
+  "2": 2780,
+  "3": 3888,
+  "4": 4425,
+  "5": 4697,
+  "6": 4111,
+  "7": 2918,
+  "8": 1588,
+  "9": 1381,
+  "10": 1822,
+  "11": 2198,
+  "12": 997,
+  "13": 995,
+  "14": 677,
+  "15": 268,
+  "16": 86,
   "17": 19,
   "18": 2
  },
- "components": 188,
- "cycleCount": 187,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 541,
+   "1": 1323,
+   "2": 2986,
+   "3": 4695,
+   "4": 3503,
+   "5": 3373,
+   "6": 2722,
+   "7": 2275,
+   "8": 1843,
+   "9": 1604,
+   "10": 11299
+  },
+  "atLeast": {
+   "1": 98.5,
+   "2": 94.8,
+   "3": 86.6,
+   "5": 63.9
+  }
+ },
+ "concentration": {
+  "top1Pct": 33.6,
+  "top3Pct": 81.72,
+  "top10Pct": 93.13,
+  "cycleCount": 169,
+  "entropyBits": 2.55
+ },
+ "components": 170,
+ "cycleCount": 169,
  "largestCycle": {
   "members": [
    "Gielinor",
@@ -47,7 +75,7 @@
    "Gods"
   ],
   "size": 3,
-  "basin": 12033
+  "basin": 12150
  },
  "topAttractors": [
   {
@@ -56,8 +84,8 @@
     "Guthix",
     "Gods"
    ],
-   "basin": 12033,
-   "pct": 33.27
+   "basin": 12150,
+   "pct": 33.6
   },
   {
    "cycle": [
@@ -65,23 +93,23 @@
     "Combat",
     "Bestiary"
    ],
-   "basin": 11540,
-   "pct": 31.91
+   "basin": 11562,
+   "pct": 31.97
   },
   {
    "cycle": [
     "Currencies",
     "Coins"
    ],
-   "basin": 5846,
-   "pct": 16.17
+   "basin": 5840,
+   "pct": 16.15
   },
   {
    "cycle": [
     "Items",
     "Inventory"
    ],
-   "basin": 1524,
+   "basin": 1522,
    "pct": 4.21
   },
   {
@@ -89,7 +117,7 @@
     "Hitpoints",
     "Death"
    ],
-   "basin": 824,
+   "basin": 826,
    "pct": 2.28
   },
   {
@@ -97,8 +125,8 @@
     "Jagex",
     "Andrew Gower"
    ],
-   "basin": 655,
-   "pct": 1.81
+   "basin": 660,
+   "pct": 1.83
   },
   {
    "cycle": [
@@ -121,8 +149,8 @@
     "Vampyre",
     "Vampyrium"
    ],
-   "basin": 270,
-   "pct": 0.75
+   "basin": 274,
+   "pct": 0.76
   },
   {
    "cycle": [
@@ -166,13 +194,6 @@
   },
   {
    "cycle": [
-    "Miniquests"
-   ],
-   "basin": 64,
-   "pct": 0.18
-  },
-  {
-   "cycle": [
     "Dorgesh-Kaan",
     "Cave goblin (Dorgesh-Kaan)"
    ],
@@ -211,13 +232,21 @@
    ],
    "basin": 28,
    "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Black Knight",
+    "Kinshra"
+   ],
+   "basin": 27,
+   "pct": 0.07
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Ring slot table",
-   "chains": 462,
-   "pct": 1.28,
+   "chains": 482,
+   "pct": 1.33,
    "reason": "no eligible links"
   },
   {
@@ -233,33 +262,27 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Neck slot table",
-   "chains": 29,
-   "pct": 0.08,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Hands slot table",
-   "chains": 24,
-   "pct": 0.07,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Cape slot table",
    "chains": 23,
    "pct": 0.06,
    "reason": "no eligible links"
   },
   {
-   "title": "Pride event",
-   "chains": 20,
-   "pct": 0.06,
-   "reason": "redlink target"
-  },
-  {
    "title": "Head slot table",
    "chains": 19,
    "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hands slot table",
+   "chains": 14,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Neck slot table",
+   "chains": 10,
+   "pct": 0.03,
    "reason": "no eligible links"
   },
   {
@@ -303,251 +326,257 @@
    "chains": 2,
    "pct": 0.01,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Slang dictionary",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Music",
-   "inDegree": 855
+   "firstLinks": 855
   },
   {
    "title": "Interface items",
-   "inDegree": 554
+   "firstLinks": 554
   },
   {
    "title": "Jingles",
-   "inDegree": 325
+   "firstLinks": 325
   },
   {
    "title": "Agility",
-   "inDegree": 311
+   "firstLinks": 311
   },
   {
    "title": "Treasure Trails/Guide/Cryptic clues",
-   "inDegree": 299
+   "firstLinks": 299
   },
   {
    "title": "Quest items",
-   "inDegree": 287
+   "firstLinks": 287
   },
   {
    "title": "Gielinor",
-   "inDegree": 217
+   "firstLinks": 217
   },
   {
    "title": "Quests",
-   "inDegree": 197
+   "firstLinks": 198
   },
   {
    "title": "Jagex",
-   "inDegree": 193
+   "firstLinks": 192
   },
   {
    "title": "Last Man Standing",
-   "inDegree": 175
+   "firstLinks": 175
   },
   {
    "title": "Treasure Trails/Guide/Coordinates",
-   "inDegree": 173
+   "firstLinks": 173
   },
   {
    "title": "Combat Achievements/Master",
-   "inDegree": 173
+   "firstLinks": 173
   },
   {
    "title": "Members",
-   "inDegree": 172
+   "firstLinks": 172
   },
   {
    "title": "Combat Achievements/Elite",
-   "inDegree": 167
+   "firstLinks": 167
   },
   {
    "title": "Scenery",
-   "inDegree": 160
+   "firstLinks": 160
   },
   {
    "title": "The Gauntlet",
-   "inDegree": 134
+   "firstLinks": 134
   },
   {
    "title": "Ledger table",
-   "inDegree": 134
+   "firstLinks": 134
   },
   {
    "title": "Treasure Trails/Guide/Emote clues",
-   "inDegree": 127
+   "firstLinks": 127
   },
   {
    "title": "Hotspot",
-   "inDegree": 125
+   "firstLinks": 125
   },
   {
    "title": "Grand Exchange Clerk",
-   "inDegree": 125
+   "firstLinks": 125
   },
   {
    "title": "Deadman Mode",
-   "inDegree": 125
+   "firstLinks": 125
   },
   {
    "title": "Defence",
-   "inDegree": 123
+   "firstLinks": 123
   },
   {
    "title": "Combat Achievements/Grandmaster",
-   "inDegree": 122
-  },
-  {
-   "title": "Food",
-   "inDegree": 119
+   "firstLinks": 122
   },
   {
    "title": "Varrock",
-   "inDegree": 118
+   "firstLinks": 119
   },
   {
    "title": "Herblore",
-   "inDegree": 117
+   "firstLinks": 117
+  },
+  {
+   "title": "Food",
+   "firstLinks": 116
   },
   {
    "title": "Farming",
-   "inDegree": 113
+   "firstLinks": 113
   },
   {
    "title": "March 2025 Sailing Alpha",
-   "inDegree": 111
+   "firstLinks": 111
   },
   {
    "title": "Items",
-   "inDegree": 108
+   "firstLinks": 108
   },
   {
    "title": "Unobtainable items",
-   "inDegree": 108
+   "firstLinks": 108
   }
  ],
- "topBetweenness": [
-  {
-   "title": "Player character",
-   "betweenness": 65480
-  },
-  {
-   "title": "Human",
-   "betweenness": 60858
-  },
-  {
-   "title": "List of races",
-   "betweenness": 53622
-  },
-  {
-   "title": "Abyssal demon",
-   "betweenness": 44760
-  },
-  {
-   "title": "Skills",
-   "betweenness": 40509
-  },
-  {
-   "title": "Strongest monster",
-   "betweenness": 35812
-  },
-  {
-   "title": "Boss",
-   "betweenness": 27732
-  },
+ "topThroughTraffic": [
   {
    "title": "Gielinor",
-   "betweenness": 23073
-  },
-  {
-   "title": "Members",
-   "betweenness": 22204
-  },
-  {
-   "title": "Monster",
-   "betweenness": 20443
-  },
-  {
-   "title": "Attack",
-   "betweenness": 18756
-  },
-  {
-   "title": "Melee",
-   "betweenness": 17980
-  },
-  {
-   "title": "World",
-   "betweenness": 16914
-  },
-  {
-   "title": "Minigames",
-   "betweenness": 16137
-  },
-  {
-   "title": "Experience",
-   "betweenness": 15490
-  },
-  {
-   "title": "Combat triangle",
-   "betweenness": 14223
-  },
-  {
-   "title": "Combat",
-   "betweenness": 12854
-  },
-  {
-   "title": "Kingdom",
-   "betweenness": 11814
+   "chains": 12150
   },
   {
    "title": "Guthix",
-   "betweenness": 11607
+   "chains": 12150
   },
   {
-   "title": "Quests",
-   "betweenness": 11502
+   "title": "Gods",
+   "chains": 12150
+  },
+  {
+   "title": "Combat",
+   "chains": 11562
+  },
+  {
+   "title": "Bestiary",
+   "chains": 11562
+  },
+  {
+   "title": "Monster",
+   "chains": 11562
+  },
+  {
+   "title": "Boss",
+   "chains": 9269
+  },
+  {
+   "title": "Strongest monster",
+   "chains": 8978
+  },
+  {
+   "title": "Abyssal demon",
+   "chains": 8977
+  },
+  {
+   "title": "List of races",
+   "chains": 8962
+  },
+  {
+   "title": "Human",
+   "chains": 8719
+  },
+  {
+   "title": "Player character",
+   "chains": 8207
+  },
+  {
+   "title": "Coins",
+   "chains": 5840
+  },
+  {
+   "title": "Currencies",
+   "chains": 5840
   },
   {
    "title": "Shop",
-   "betweenness": 11474
+   "chains": 5734
   },
   {
-   "title": "Magic",
-   "betweenness": 11292
+   "title": "World",
+   "chains": 5635
   },
   {
-   "title": "Locations",
-   "betweenness": 11224
+   "title": "Members",
+   "chains": 5549
   },
   {
-   "title": "Icon",
-   "betweenness": 9600
+   "title": "Skills",
+   "chains": 4506
   },
   {
-   "title": "Non-player character",
-   "betweenness": 9420
+   "title": "Kingdom",
+   "chains": 3949
   },
   {
    "title": "World map",
-   "betweenness": 9228
+   "chains": 3154
   },
   {
-   "title": "Character",
-   "betweenness": 8487
+   "title": "Locations",
+   "chains": 2885
+  },
+  {
+   "title": "Attack",
+   "chains": 2093
+  },
+  {
+   "title": "Icon",
+   "chains": 1999
+  },
+  {
+   "title": "Quests",
+   "chains": 1996
+  },
+  {
+   "title": "Melee",
+   "chains": 1807
   },
   {
    "title": "Capital",
-   "betweenness": 7032
+   "chains": 1765
   },
   {
-   "title": "Treasure Trails",
-   "betweenness": 6448
+   "title": "Experience",
+   "chains": 1551
   },
   {
-   "title": "Distractions and Diversions",
-   "betweenness": 6156
+   "title": "Items",
+   "chains": 1522
+  },
+  {
+   "title": "Inventory",
+   "chains": 1522
+  },
+  {
+   "title": "Minigames",
+   "chains": 1469
   }
  ]
 }

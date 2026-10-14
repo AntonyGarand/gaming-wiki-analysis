@@ -3,52 +3,79 @@
  "rank": "3",
  "nodes": 14078,
  "converge": {
-  "articles": 5666,
-  "pct": 40.25,
-  "deadEnd": 8412,
-  "deadEndPct": 59.75,
-  "noLinks": 3970,
-  "tooFewLinks": 2131,
-  "unresolvable": 1690
+  "articles": 6181,
+  "pct": 43.91,
+  "deadEnd": 7897,
+  "deadEndPct": 56.09,
+  "noLinks": 5088,
+  "tooFewLinks": 2346,
+  "unresolvable": 17
  },
  "hopStats": {
-  "mean": 6.43,
-  "median": 6,
+  "mean": 6.59,
+  "median": 7,
   "p90": 11,
-  "max": 20
+  "max": 19
  },
  "histogram": {
   "0": 148,
-  "1": 396,
-  "2": 430,
-  "3": 415,
-  "4": 514,
-  "5": 504,
-  "6": 460,
-  "7": 536,
-  "8": 640,
-  "9": 477,
-  "10": 381,
-  "11": 263,
-  "12": 159,
-  "13": 152,
-  "14": 90,
-  "15": 51,
-  "16": 29,
-  "17": 8,
-  "18": 8,
-  "19": 4,
-  "20": 1
+  "1": 375,
+  "2": 476,
+  "3": 457,
+  "4": 528,
+  "5": 540,
+  "6": 490,
+  "7": 573,
+  "8": 691,
+  "9": 547,
+  "10": 465,
+  "11": 314,
+  "12": 190,
+  "13": 166,
+  "14": 104,
+  "15": 64,
+  "16": 33,
+  "17": 7,
+  "18": 9,
+  "19": 4
  },
- "components": 75,
- "cycleCount": 74,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 5105,
+   "1": 1377,
+   "2": 969,
+   "3": 719,
+   "4": 493,
+   "5": 449,
+   "6": 340,
+   "7": 287,
+   "8": 305,
+   "9": 270,
+   "10": 3764
+  },
+  "atLeast": {
+   "1": 63.7,
+   "2": 54,
+   "3": 47.1,
+   "5": 38.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 21.32,
+  "top3Pct": 33,
+  "top10Pct": 39.47,
+  "cycleCount": 71,
+  "entropyBits": 2.84
+ },
+ "components": 72,
+ "cycleCount": 71,
  "largestCycle": {
   "members": [
    "Stronghold",
    "End portal"
   ],
   "size": 2,
-  "basin": 2819
+  "basin": 3001
  },
  "topAttractors": [
   {
@@ -56,8 +83,8 @@
     "Stronghold",
     "End portal"
    ],
-   "basin": 2819,
-   "pct": 20.02
+   "basin": 3001,
+   "pct": 21.32
   },
   {
    "cycle": [
@@ -65,8 +92,8 @@
     "Controls",
     "Difficulty"
    ],
-   "basin": 1146,
-   "pct": 8.14
+   "basin": 1403,
+   "pct": 9.97
   },
   {
    "cycle": [
@@ -75,32 +102,24 @@
     "Toasts",
     "Tutorial hints"
    ],
-   "basin": 199,
-   "pct": 1.41
+   "basin": 242,
+   "pct": 1.72
   },
   {
    "cycle": [
     "Dye",
     "Wool Slab"
    ],
-   "basin": 186,
-   "pct": 1.32
+   "basin": 193,
+   "pct": 1.37
   },
   {
    "cycle": [
     "Java Edition",
     "MINECON 2011"
    ],
-   "basin": 160,
-   "pct": 1.14
-  },
-  {
-   "cycle": [
-    "Java Edition Indev",
-    "Java Edition Classic"
-   ],
-   "basin": 138,
-   "pct": 0.98
+   "basin": 163,
+   "pct": 1.16
   },
   {
    "cycle": [
@@ -108,48 +127,48 @@
     "Creaking Heart",
     "Pale Oak"
    ],
-   "basin": 132,
-   "pct": 0.94
+   "basin": 155,
+   "pct": 1.1
+  },
+  {
+   "cycle": [
+    "Java Edition Indev",
+    "Java Edition Classic"
+   ],
+   "basin": 148,
+   "pct": 1.05
   },
   {
    "cycle": [
     "Bee",
     "Bee Nest"
    ],
-   "basin": 107,
-   "pct": 0.76
-  },
-  {
-   "cycle": [
-    "Chorus Fruit",
-    "Popped Chorus Fruit"
-   ],
-   "basin": 70,
-   "pct": 0.5
+   "basin": 109,
+   "pct": 0.77
   },
   {
    "cycle": [
     "Moon",
     "Sun"
    ],
-   "basin": 69,
-   "pct": 0.49
+   "basin": 72,
+   "pct": 0.51
+  },
+  {
+   "cycle": [
+    "Chorus Fruit",
+    "Popped Chorus Fruit"
+   ],
+   "basin": 71,
+   "pct": 0.5
   },
   {
    "cycle": [
     "Sand",
     "Beach"
    ],
-   "basin": 52,
-   "pct": 0.37
-  },
-  {
-   "cycle": [
-    "Saddle",
-    "Pig"
-   ],
-   "basin": 44,
-   "pct": 0.31
+   "basin": 59,
+   "pct": 0.42
   },
   {
    "cycle": [
@@ -172,6 +191,14 @@
     "Cinnabar",
     "Sulfur Caves"
    ],
+   "basin": 35,
+   "pct": 0.25
+  },
+  {
+   "cycle": [
+    "Farmland",
+    "Carrot"
+   ],
    "basin": 33,
    "pct": 0.23
   },
@@ -180,69 +207,64 @@
     "Golden Armor",
     "Chainmail Armor"
    ],
-   "basin": 27,
-   "pct": 0.19
+   "basin": 28,
+   "pct": 0.2
   },
   {
    "cycle": [
-    "Nico White",
-    "Mod Power"
+    "Saddle",
+    "Pig"
    ],
-   "basin": 27,
-   "pct": 0.19
-  },
-  {
-   "cycle": [
-    "Hoe"
-   ],
-   "basin": 24,
-   "pct": 0.17
+   "basin": 26,
+   "pct": 0.18
   },
   {
    "cycle": [
     "Lectern",
     "Written Book"
    ],
-   "basin": 24,
-   "pct": 0.17
+   "basin": 23,
+   "pct": 0.16
+  },
+  {
+   "cycle": [
+    "Horse",
+    "Taming"
+   ],
+   "basin": 23,
+   "pct": 0.16
   },
   {
    "cycle": [
     "Pillager",
     "Patrol"
    ],
-   "basin": 23,
-   "pct": 0.16
+   "basin": 21,
+   "pct": 0.15
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Feature",
-   "chains": 150,
-   "pct": 1.07,
-   "reason": "redlink target"
-  },
-  {
    "title": "Ulraf",
-   "chains": 39,
+   "chains": 40,
    "pct": 0.28,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "4J Studios",
    "chains": 36,
    "pct": 0.26,
-   "reason": "redlink target"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Debug hotkey",
-   "chains": 26,
+   "chains": 25,
    "pct": 0.18,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Brikk Animation",
-   "chains": 13,
+   "chains": 12,
    "pct": 0.09,
    "reason": "only 1 eligible links"
   },
@@ -250,25 +272,13 @@
    "title": "SkyBox Labs",
    "chains": 11,
    "pct": 0.08,
-   "reason": "redlink target"
-  },
-  {
-   "title": "MINECON Earth 2017",
-   "chains": 11,
-   "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Calculators",
    "chains": 10,
    "pct": 0.07,
-   "reason": "redlink target"
-  },
-  {
-   "title": "MINECON",
-   "chains": 8,
-   "pct": 0.06,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "Audiobook narrators",
@@ -277,279 +287,297 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Minecraft Wiki (website)",
-   "chains": 7,
-   "pct": 0.05,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Noxcrew",
-   "chains": 7,
-   "pct": 0.05,
-   "reason": "only 2 eligible links"
-  },
-  {
    "title": "Java Edition mob render history/Parched",
    "chains": 7,
    "pct": 0.05,
    "reason": "no eligible links"
   },
   {
-   "title": "Dinnerbone",
-   "chains": 6,
-   "pct": 0.04,
-   "reason": "redlink target"
-  },
-  {
    "title": "Java Edition 1.7.7",
    "chains": 5,
    "pct": 0.04,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Minecraft: Creeper Crunch",
+   "chains": 5,
+   "pct": 0.04,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Noxcrew",
+   "chains": 5,
+   "pct": 0.04,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "History of textures",
+   "chains": 5,
+   "pct": 0.04,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Quartz Stairs",
+   "chains": 4,
+   "pct": 0.03,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "PlayStation 3 Edition 1.84",
+   "chains": 4,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Java Edition 1.5.1 (pre-release)",
+   "chains": 4,
+   "pct": 0.03,
+   "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Pickaxe",
-   "inDegree": 116
+   "firstLinks": 116
   },
   {
    "title": "Player",
-   "inDegree": 72
+   "firstLinks": 76
   },
   {
    "title": "Block",
-   "inDegree": 50
-  },
-  {
-   "title": "Creative",
-   "inDegree": 47
+   "firstLinks": 49
   },
   {
    "title": "Java Edition 24w14potato",
-   "inDegree": 47
+   "firstLinks": 47
+  },
+  {
+   "title": "Creative",
+   "firstLinks": 46
   },
   {
    "title": "Data pack",
-   "inDegree": 43
+   "firstLinks": 43
   },
   {
    "title": "Mob",
-   "inDegree": 42
-  },
-  {
-   "title": "Tiers",
-   "inDegree": 36
+   "firstLinks": 41
   },
   {
    "title": "Villager",
-   "inDegree": 35
+   "firstLinks": 37
+  },
+  {
+   "title": "Tiers",
+   "firstLinks": 36
   },
   {
    "title": "The Nether",
-   "inDegree": 33
+   "firstLinks": 34
   },
   {
    "title": "Basalt",
-   "inDegree": 33
+   "firstLinks": 33
   },
   {
    "title": "Commands",
-   "inDegree": 31
-  },
-  {
-   "title": "Water",
-   "inDegree": 31
-  },
-  {
-   "title": "Armor",
-   "inDegree": 30
-  },
-  {
-   "title": "Mojang Studios",
-   "inDegree": 28
-  },
-  {
-   "title": "Entity",
-   "inDegree": 28
-  },
-  {
-   "title": "Overworld",
-   "inDegree": 28
-  },
-  {
-   "title": "Item",
-   "inDegree": 27
-  },
-  {
-   "title": "Tool",
-   "inDegree": 27
-  },
-  {
-   "title": "Minecraft Launcher",
-   "inDegree": 27
+   "firstLinks": 32
   },
   {
    "title": "Village",
-   "inDegree": 27
-  },
-  {
-   "title": "Jukebox",
-   "inDegree": 25
-  },
-  {
-   "title": "Damage",
-   "inDegree": 25
-  },
-  {
-   "title": "Settings",
-   "inDegree": 25
-  },
-  {
-   "title": "Experiments",
-   "inDegree": 25
-  },
-  {
-   "title": "Creeper",
-   "inDegree": 24
-  },
-  {
-   "title": "Splash",
-   "inDegree": 24
-  },
-  {
-   "title": "Trading",
-   "inDegree": 24
-  },
-  {
-   "title": "Biome",
-   "inDegree": 23
-  },
-  {
-   "title": "Axe",
-   "inDegree": 22
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Block",
-   "betweenness": 8424
-  },
-  {
-   "title": "Tool",
-   "betweenness": 6102
-  },
-  {
-   "title": "Ladder",
-   "betweenness": 5620
-  },
-  {
-   "title": "Item repair",
-   "betweenness": 5095
-  },
-  {
-   "title": "Crafting",
-   "betweenness": 4480
-  },
-  {
-   "title": "Mob",
-   "betweenness": 3745
-  },
-  {
-   "title": "Pickaxe",
-   "betweenness": 3416
-  },
-  {
-   "title": "Drops",
-   "betweenness": 3224
-  },
-  {
-   "title": "Ore",
-   "betweenness": 3045
-  },
-  {
-   "title": "Stronghold",
-   "betweenness": 2812
-  },
-  {
-   "title": "Overworld",
-   "betweenness": 2740
-  },
-  {
-   "title": "The Nether",
-   "betweenness": 2310
-  },
-  {
-   "title": "Item",
-   "betweenness": 2298
-  },
-  {
-   "title": "Player",
-   "betweenness": 2203
-  },
-  {
-   "title": "Terrain features",
-   "betweenness": 2094
-  },
-  {
-   "title": "Lapis Lazuli",
-   "betweenness": 2065
-  },
-  {
-   "title": "Food",
-   "betweenness": 1932
-  },
-  {
-   "title": "Blue Dye",
-   "betweenness": 1776
-  },
-  {
-   "title": "Amplified",
-   "betweenness": 1750
-  },
-  {
-   "title": "Enchantment",
-   "betweenness": 1696
+   "firstLinks": 31
   },
   {
    "title": "Water",
-   "betweenness": 1652
+   "firstLinks": 31
   },
   {
-   "title": "Trading",
-   "betweenness": 1625
-  },
-  {
-   "title": "Effect",
-   "betweenness": 1576
-  },
-  {
-   "title": "Bucket",
-   "betweenness": 1560
-  },
-  {
-   "title": "Milk Bucket",
-   "betweenness": 1488
+   "title": "Armor",
+   "firstLinks": 30
   },
   {
    "title": "Entity",
-   "betweenness": 1458
+   "firstLinks": 30
   },
   {
-   "title": "Cow",
-   "betweenness": 1408
+   "title": "Overworld",
+   "firstLinks": 30
   },
   {
-   "title": "Markus Persson",
-   "betweenness": 1341
+   "title": "Mojang Studios",
+   "firstLinks": 29
+  },
+  {
+   "title": "Dirt",
+   "firstLinks": 28
+  },
+  {
+   "title": "Item",
+   "firstLinks": 28
+  },
+  {
+   "title": "Minecraft Launcher",
+   "firstLinks": 28
+  },
+  {
+   "title": "Tool",
+   "firstLinks": 27
+  },
+  {
+   "title": "Experiments",
+   "firstLinks": 26
+  },
+  {
+   "title": "Creeper",
+   "firstLinks": 25
+  },
+  {
+   "title": "Jukebox",
+   "firstLinks": 25
+  },
+  {
+   "title": "Biome",
+   "firstLinks": 25
   },
   {
    "title": "Damage",
-   "betweenness": 1338
+   "firstLinks": 25
+  },
+  {
+   "title": "Settings",
+   "firstLinks": 25
+  },
+  {
+   "title": "Log",
+   "firstLinks": 24
+  },
+  {
+   "title": "Trading",
+   "firstLinks": 24
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Stronghold",
+   "chains": 3001
+  },
+  {
+   "title": "End portal",
+   "chains": 3001
+  },
+  {
+   "title": "Ladder",
+   "chains": 2995
+  },
+  {
+   "title": "Block",
+   "chains": 2993
+  },
+  {
+   "title": "Difficulty",
+   "chains": 1403
+  },
+  {
+   "title": "Controls",
+   "chains": 1403
+  },
+  {
+   "title": "Player",
+   "chains": 1403
+  },
+  {
+   "title": "Crafting",
+   "chains": 1283
+  },
+  {
+   "title": "Item repair",
+   "chains": 1170
+  },
+  {
+   "title": "Tool",
+   "chains": 1168
+  },
+  {
+   "title": "Drops",
+   "chains": 821
+  },
+  {
+   "title": "Mob",
+   "chains": 778
+  },
+  {
+   "title": "Overworld",
+   "chains": 710
+  },
+  {
+   "title": "Ore",
+   "chains": 456
+  },
+  {
+   "title": "Pickaxe",
+   "chains": 448
+  },
+  {
+   "title": "Item",
+   "chains": 398
+  },
+  {
+   "title": "Amplified",
+   "chains": 365
+  },
+  {
+   "title": "Terrain features",
+   "chains": 364
+  },
+  {
+   "title": "Wandering Trader",
+   "chains": 363
+  },
+  {
+   "title": "The Nether",
+   "chains": 344
   },
   {
    "title": "Emerald",
-   "betweenness": 1324
+   "chains": 342
+  },
+  {
+   "title": "Trading",
+   "chains": 334
+  },
+  {
+   "title": "Blue Dye",
+   "chains": 305
+  },
+  {
+   "title": "Lapis Lazuli",
+   "chains": 304
+  },
+  {
+   "title": "Food",
+   "chains": 287
+  },
+  {
+   "title": "Survival",
+   "chains": 242
+  },
+  {
+   "title": "Advancement",
+   "chains": 242
+  },
+  {
+   "title": "Tutorial hints",
+   "chains": 242
+  },
+  {
+   "title": "Toasts",
+   "chains": 242
+  },
+  {
+   "title": "Piston",
+   "chains": 232
   }
  ]
 }

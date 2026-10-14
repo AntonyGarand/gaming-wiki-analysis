@@ -3,35 +3,66 @@
  "rank": "5",
  "nodes": 4498,
  "converge": {
-  "articles": 401,
-  "pct": 8.92,
-  "deadEnd": 4097,
-  "deadEndPct": 91.08,
-  "noLinks": 67,
-  "tooFewLinks": 3201,
-  "unresolvable": 21
+  "articles": 431,
+  "pct": 9.58,
+  "deadEnd": 4067,
+  "deadEndPct": 90.42,
+  "noLinks": 63,
+  "tooFewLinks": 3218,
+  "unresolvable": 0
  },
  "hopStats": {
-  "mean": 2.63,
-  "median": 2,
-  "p90": 6,
-  "max": 10
+  "mean": 3.97,
+  "median": 3,
+  "p90": 10,
+  "max": 13
  },
  "histogram": {
-  "0": 27,
-  "1": 146,
-  "2": 73,
-  "3": 35,
-  "4": 32,
-  "5": 37,
-  "6": 28,
-  "7": 14,
-  "8": 4,
-  "9": 4,
-  "10": 1
+  "0": 29,
+  "1": 107,
+  "2": 69,
+  "3": 34,
+  "4": 31,
+  "5": 38,
+  "6": 29,
+  "7": 21,
+  "8": 13,
+  "9": 16,
+  "10": 6,
+  "11": 36,
+  "12": 1,
+  "13": 1
  },
- "components": 14,
- "cycleCount": 13,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 63,
+   "1": 251,
+   "2": 1430,
+   "3": 1046,
+   "4": 491,
+   "5": 316,
+   "6": 229,
+   "7": 130,
+   "8": 102,
+   "9": 107,
+   "10": 333
+  },
+  "atLeast": {
+   "1": 98.6,
+   "2": 93,
+   "3": 61.2,
+   "5": 27.1
+  }
+ },
+ "concentration": {
+  "top1Pct": 3.4,
+  "top3Pct": 7.96,
+  "top10Pct": 9.4,
+  "cycleCount": 14,
+  "entropyBits": 2.39
+ },
+ "components": 15,
+ "cycleCount": 14,
  "largestCycle": {
   "members": [
    "Whisperfrost Frontiers",
@@ -39,7 +70,7 @@
    "Hidey Hole"
   ],
   "size": 3,
-  "basin": 139
+  "basin": 153
  },
  "topAttractors": [
   {
@@ -48,40 +79,32 @@
     "Faction",
     "Hidey Hole"
    ],
-   "basin": 139,
-   "pct": 3.09
-  },
-  {
-   "cycle": [
-    "Kweebec",
-    "Emerald Wilds"
-   ],
-   "basin": 86,
-   "pct": 1.91
+   "basin": 153,
+   "pct": 3.4
   },
   {
    "cycle": [
     "Small Treasure Pile",
     "Large Treasure Pile"
    ],
-   "basin": 67,
-   "pct": 1.49
+   "basin": 127,
+   "pct": 2.82
   },
   {
    "cycle": [
-    "Tilled Dirt",
-    "Dirt"
+    "Kweebec",
+    "Emerald Wilds"
    ],
-   "basin": 39,
-   "pct": 0.87
+   "basin": 78,
+   "pct": 1.73
   },
   {
    "cycle": [
     "Bench",
     "Workbench"
    ],
-   "basin": 32,
-   "pct": 0.71
+   "basin": 31,
+   "pct": 0.69
   },
   {
    "cycle": [
@@ -133,8 +156,24 @@
   },
   {
    "cycle": [
+    "Ancient Gateway",
+    "Fragment Key"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
     "Thorium Ore",
     "Cracked Mud"
+   ],
+   "basin": 2,
+   "pct": 0.04
+  },
+  {
+   "cycle": [
+    "Rail",
+    "Rail Cart"
    ],
    "basin": 2,
    "pct": 0.04
@@ -151,27 +190,27 @@
  "deadEndTerminals": [
   {
    "title": "Under Construction Sign",
-   "chains": 150,
-   "pct": 3.33,
+   "chains": 141,
+   "pct": 3.13,
    "reason": "only 4 eligible links"
   },
   {
    "title": "Chest",
-   "chains": 106,
-   "pct": 2.36,
+   "chains": 108,
+   "pct": 2.4,
    "reason": "only 3 eligible links"
   },
   {
    "title": "Builder's Workbench",
-   "chains": 55,
-   "pct": 1.22,
+   "chains": 57,
+   "pct": 1.27,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Creative Mode",
-   "chains": 48,
-   "pct": 1.07,
-   "reason": "redlink target"
+   "title": "Stack",
+   "chains": 42,
+   "pct": 0.93,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Stone Planter",
@@ -180,27 +219,21 @@
    "reason": "only 4 eligible links"
   },
   {
-   "title": "Stack",
-   "chains": 39,
-   "pct": 0.87,
-   "reason": "only 1 eligible links"
-  },
-  {
    "title": "Badlands",
    "chains": 26,
    "pct": 0.58,
-   "reason": "redlink target"
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Projectiles",
    "chains": 19,
    "pct": 0.42,
-   "reason": "redlink target"
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Crude Shears",
-   "chains": 17,
-   "pct": 0.38,
+   "chains": 18,
+   "pct": 0.4,
    "reason": "only 3 eligible links"
   },
   {
@@ -208,6 +241,18 @@
    "chains": 16,
    "pct": 0.36,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Early Access",
+   "chains": 15,
+   "pct": 0.33,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Soil",
+   "chains": 14,
+   "pct": 0.31,
+   "reason": "only 3 eligible links"
   },
   {
    "title": "Gumboab Sapling",
@@ -228,261 +273,255 @@
    "reason": "only 3 eligible links"
   },
   {
-   "title": "Early Access",
-   "chains": 11,
-   "pct": 0.24,
+   "title": "Oak Sapling",
+   "chains": 10,
+   "pct": 0.22,
    "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Dark Temple Candle",
-   "chains": 9,
-   "pct": 0.2,
-   "reason": "only 4 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Plant Fiber",
-   "inDegree": 42
-  },
-  {
-   "title": "Emerald Wilds",
-   "inDegree": 40
+   "firstLinks": 40
   },
   {
    "title": "Prefab",
-   "inDegree": 40
+   "firstLinks": 39
+  },
+  {
+   "title": "Emerald Wilds",
+   "firstLinks": 38
+  },
+  {
+   "title": "Salvager's Workbench",
+   "firstLinks": 36
   },
   {
    "title": "Tilled Dirt",
-   "inDegree": 36
-  },
-  {
-   "title": "Salvager's Workbench",
-   "inDegree": 36
+   "firstLinks": 35
   },
   {
    "title": "Chest",
-   "inDegree": 31
+   "firstLinks": 31
   },
   {
    "title": "Creative Inventory",
-   "inDegree": 31
+   "firstLinks": 31
+  },
+  {
+   "title": "Whisperfrost Frontiers",
+   "firstLinks": 27
   },
   {
    "title": "Builder's Workbench",
-   "inDegree": 28
-  },
-  {
-   "title": "Whisperfrost Frontiers",
-   "inDegree": 27
+   "firstLinks": 27
   },
   {
    "title": "Howling Sands",
-   "inDegree": 22
+   "firstLinks": 23
   },
   {
    "title": "Devastated Lands",
-   "inDegree": 22
+   "firstLinks": 23
   },
   {
    "title": "Loot",
-   "inDegree": 21
+   "firstLinks": 21
   },
   {
    "title": "Bench",
-   "inDegree": 19
+   "firstLinks": 19
   },
   {
    "title": "Projectiles",
-   "inDegree": 18
+   "firstLinks": 18
   },
   {
    "title": "Crude Shears",
-   "inDegree": 16
+   "firstLinks": 17
   },
   {
    "title": "Farmer's Workbench",
-   "inDegree": 15
-  },
-  {
-   "title": "NPC",
-   "inDegree": 14
+   "firstLinks": 15
   },
   {
    "title": "Stick",
-   "inDegree": 14
+   "firstLinks": 14
+  },
+  {
+   "title": "NPC",
+   "firstLinks": 13
+  },
+  {
+   "title": "Chef's Stove",
+   "firstLinks": 10
+  },
+  {
+   "title": "Avatar",
+   "firstLinks": 9
+  },
+  {
+   "title": "Orbis",
+   "firstLinks": 9
   },
   {
    "title": "Tropical Jungle",
-   "inDegree": 10
-  },
-  {
-   "title": "Exploration Mode",
-   "inDegree": 10
-  },
-  {
-   "title": "Chef's Stove",
-   "inDegree": 10
-  },
-  {
-   "title": "Orbis",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Windrider Valley",
-   "inDegree": 9
+   "firstLinks": 9
+  },
+  {
+   "title": "Exploration Mode",
+   "firstLinks": 8
   },
   {
    "title": "Cotton",
-   "inDegree": 7
+   "firstLinks": 7
   },
   {
    "title": "Outlander Temple",
-   "inDegree": 7
-  },
-  {
-   "title": "Avatar",
-   "inDegree": 6
+   "firstLinks": 7
   },
   {
    "title": "Trork Camp",
-   "inDegree": 6
+   "firstLinks": 6
   },
   {
    "title": "Creative Mode",
-   "inDegree": 6
+   "firstLinks": 6
+  },
+  {
+   "title": "Furnace",
+   "firstLinks": 6
   },
   {
    "title": "Badlands",
-   "inDegree": 6
-  },
-  {
-   "title": "Hytale",
-   "inDegree": 5
+   "firstLinks": 6
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
-   "title": "Prefab",
-   "betweenness": 294
-  },
-  {
-   "title": "Devastated Lands",
-   "betweenness": 205
-  },
-  {
-   "title": "Devastated Ruins",
-   "betweenness": 196
-  },
-  {
-   "title": "Plant Fiber",
-   "betweenness": 192
+   "title": "Whisperfrost Frontiers",
+   "chains": 153
   },
   {
    "title": "Faction",
-   "betweenness": 192
-  },
-  {
-   "title": "Hytale",
-   "betweenness": 189
-  },
-  {
-   "title": "Salvager's Workbench",
-   "betweenness": 164
-  },
-  {
-   "title": "Outlander",
-   "betweenness": 156
-  },
-  {
-   "title": "Tree Sap",
-   "betweenness": 153
-  },
-  {
-   "title": "Challenge Gate",
-   "betweenness": 148
-  },
-  {
-   "title": "Orbis",
-   "betweenness": 147
-  },
-  {
-   "title": "Whisperfrost Frontiers",
-   "betweenness": 145
-  },
-  {
-   "title": "Void",
-   "betweenness": 140
-  },
-  {
-   "title": "Human",
-   "betweenness": 138
-  },
-  {
-   "title": "Dungeon",
-   "betweenness": 128
-  },
-  {
-   "title": "Copper Pickaxe",
-   "betweenness": 126
-  },
-  {
-   "title": "Shadoweave Scraps",
-   "betweenness": 120
-  },
-  {
-   "title": "Essence of Life",
-   "betweenness": 111
-  },
-  {
-   "title": "Farmer's Workbench",
-   "betweenness": 104
-  },
-  {
-   "title": "Howling Sands",
-   "betweenness": 99
-  },
-  {
-   "title": "Chef's Stove",
-   "betweenness": 88
-  },
-  {
-   "title": "Emerald Wilds",
-   "betweenness": 78
-  },
-  {
-   "title": "Crops",
-   "betweenness": 76
-  },
-  {
-   "title": "Outlander Village",
-   "betweenness": 75
+   "chains": 153
   },
   {
    "title": "Hidey Hole",
-   "betweenness": 74
+   "chains": 153
+  },
+  {
+   "title": "Under Construction Sign",
+   "chains": 141
+  },
+  {
+   "title": "Challenge Gate",
+   "chains": 140
+  },
+  {
+   "title": "Prefab",
+   "chains": 139
   },
   {
    "title": "Small Treasure Pile",
-   "betweenness": 65
+   "chains": 127
   },
   {
-   "title": "Avatar",
-   "betweenness": 64
+   "title": "Large Treasure Pile",
+   "chains": 127
   },
   {
-   "title": "Charred Woodlands",
-   "betweenness": 60
+   "title": "Dungeon",
+   "chains": 125
   },
   {
-   "title": "Petrified Wood",
-   "betweenness": 56
+   "title": "Hytale",
+   "chains": 124
   },
   {
-   "title": "Ghost Forest",
-   "betweenness": 48
+   "title": "Chest",
+   "chains": 108
+  },
+  {
+   "title": "Kweebec",
+   "chains": 78
+  },
+  {
+   "title": "Emerald Wilds",
+   "chains": 78
+  },
+  {
+   "title": "Hypixel Studios",
+   "chains": 77
+  },
+  {
+   "title": "Hypixel Inc.",
+   "chains": 75
+  },
+  {
+   "title": "Developers",
+   "chains": 73
+  },
+  {
+   "title": "Creative Mode",
+   "chains": 70
+  },
+  {
+   "title": "Exploration Mode",
+   "chains": 64
+  },
+  {
+   "title": "Builder's Workbench",
+   "chains": 57
+  },
+  {
+   "title": "NPC",
+   "chains": 56
+  },
+  {
+   "title": "Shadoweave Scraps",
+   "chains": 51
+  },
+  {
+   "title": "Outlander",
+   "chains": 50
+  },
+  {
+   "title": "Tree Sap",
+   "chains": 50
+  },
+  {
+   "title": "Plant Fiber",
+   "chains": 47
+  },
+  {
+   "title": "Copper Pickaxe",
+   "chains": 43
+  },
+  {
+   "title": "Salvager's Workbench",
+   "chains": 42
+  },
+  {
+   "title": "Stack",
+   "chains": 42
+  },
+  {
+   "title": "Devastated Ruins",
+   "chains": 42
+  },
+  {
+   "title": "Stone Planter",
+   "chains": 41
+  },
+  {
+   "title": "Creative Inventory",
+   "chains": 41
   }
  ]
 }

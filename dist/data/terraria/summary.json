@@ -1,111 +1,132 @@
 {
  "wiki": "terraria",
- "generatedAt": "2026-10-12T17:01:59.674Z",
+ "generatedAt": "2026-10-14T04:07:33.879Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 71.19,
-   "deadEndPct": 28.81,
-   "components": 19,
-   "cycleCount": 18,
-   "meanHops": 3.98,
+   "convergePct": 87.73,
+   "deadEndPct": 12.27,
+   "components": 12,
+   "cycleCount": 11,
+   "meanHops": 3.94,
    "medianHops": 3,
    "maxHops": 14,
    "topAttractor": [
     "Items",
     "World"
    ],
-   "topAttractorPct": 69.02
+   "topAttractorPct": 85.47,
+   "top3Pct": 86.53,
+   "eligiblePct": 94.1
   },
   {
    "rank": "2",
-   "convergePct": 63.5,
-   "deadEndPct": 36.5,
-   "components": 38,
-   "cycleCount": 37,
-   "meanHops": 5.42,
-   "medianHops": 4,
-   "maxHops": 15,
+   "convergePct": 78.33,
+   "deadEndPct": 21.67,
+   "components": 27,
+   "cycleCount": 26,
+   "meanHops": 3.65,
+   "medianHops": 3,
+   "maxHops": 11,
    "topAttractor": [
-    "Layers",
-    "Depth Meter"
+    "Ores",
+    "Furnace"
    ],
-   "topAttractorPct": 35.99
+   "topAttractorPct": 25.16,
+   "top3Pct": 62.12,
+   "eligiblePct": 90.5
   },
   {
    "rank": "3",
-   "convergePct": 53.56,
-   "deadEndPct": 46.44,
-   "components": 62,
-   "cycleCount": 61,
-   "meanHops": 8.85,
-   "medianHops": 7,
-   "maxHops": 24,
+   "convergePct": 78.69,
+   "deadEndPct": 21.31,
+   "components": 58,
+   "cycleCount": 57,
+   "meanHops": 9.02,
+   "medianHops": 8,
+   "maxHops": 26,
    "topAttractor": [
     "The Underworld",
     "Lava"
    ],
-   "topAttractorPct": 35.24
+   "topAttractorPct": 55.85,
+   "top3Pct": 67.97,
+   "eligiblePct": 84.3
   },
   {
    "rank": "5",
-   "convergePct": 12.32,
-   "deadEndPct": 87.68,
-   "components": 48,
-   "cycleCount": 47,
-   "meanHops": 1.89,
+   "convergePct": 16.69,
+   "deadEndPct": 83.31,
+   "components": 46,
+   "cycleCount": 45,
+   "meanHops": 2.07,
    "medianHops": 2,
-   "maxHops": 8,
+   "maxHops": 9,
    "topAttractor": [
     "Blocks",
     "Inventory",
     "Consumables",
     "Bosses"
    ],
-   "topAttractorPct": 4.3
+   "topAttractorPct": 6.5,
+   "top3Pct": 11.07,
+   "eligiblePct": 71.3
   },
   {
    "rank": "last",
-   "convergePct": 63.13,
-   "deadEndPct": 36.87,
-   "components": 181,
-   "cycleCount": 180,
-   "meanHops": 5.72,
-   "medianHops": 4,
-   "maxHops": 23,
+   "convergePct": 90.96,
+   "deadEndPct": 9.04,
+   "components": 176,
+   "cycleCount": 175,
+   "meanHops": 7.99,
+   "medianHops": 5,
+   "maxHops": 33,
    "topAttractor": [
-    "Bestiary",
     "Re-Logic",
-    "Steampunker"
+    "Steampunker",
+    "Bestiary"
    ],
-   "topAttractorPct": 32.57
+   "topAttractorPct": 53.06,
+   "top3Pct": 62.26,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 71.69,
-   "deadEndPct": 28.31,
-   "components": 45,
-   "cycleCount": 44,
-   "meanHops": 14.59,
-   "medianHops": 12,
-   "maxHops": 44,
+   "convergePct": 90.59,
+   "deadEndPct": 9.41,
+   "components": 39,
+   "cycleCount": 38,
+   "meanHops": 11.58,
+   "medianHops": 9,
+   "maxHops": 34,
    "topAttractor": [
-    "Cavern",
-    "Goblin Tinkerer",
-    "Dye Trader",
-    "Party",
-    "NPCs",
-    "Biomes",
-    "Living Wood Chest",
-    "Minecarts",
-    "Minecart Track",
     "Buffs",
     "Pets",
     "Pressure Plates",
     "Mechanisms",
-    "Wire"
+    "Wire",
+    "Cavern",
+    "Goblin Tinkerer",
+    "Shimmer",
+    "Teleporter",
+    "Graveyard",
+    "What a horrible night to have a curse",
+    "Jack 'O Lantern Mask",
+    "Dyes",
+    "Inventory",
+    "Classic Mode",
+    "World",
+    "Multiplayer",
+    "Debuffs",
+    "Snow biome",
+    "Ice Blocks",
+    "Torches",
+    "Slime Gun",
+    "Light sources"
    ],
-   "topAttractorPct": 63.51
+   "topAttractorPct": 78.72,
+   "top3Pct": 84.83,
+   "eligiblePct": 100
   }
  ]
 }

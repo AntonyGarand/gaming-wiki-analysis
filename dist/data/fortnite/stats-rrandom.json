@@ -3,97 +3,121 @@
  "rank": "random",
  "nodes": 35312,
  "converge": {
-  "articles": 28450,
-  "pct": 80.57,
-  "deadEnd": 6862,
-  "deadEndPct": 19.43,
-  "noLinks": 2196,
+  "articles": 32586,
+  "pct": 92.28,
+  "deadEnd": 2726,
+  "deadEndPct": 7.72,
+  "noLinks": 2241,
   "tooFewLinks": 0,
-  "unresolvable": 1080
+  "unresolvable": 20
  },
  "hopStats": {
-  "mean": 3.16,
-  "median": 2,
-  "p90": 7,
-  "max": 16
+  "mean": 5.82,
+  "median": 7,
+  "p90": 10,
+  "max": 20
  },
  "histogram": {
-  "0": 484,
-  "1": 10087,
-  "2": 5202,
-  "3": 2427,
-  "4": 1410,
-  "5": 3755,
-  "6": 1715,
-  "7": 1520,
-  "8": 616,
-  "9": 782,
-  "10": 237,
-  "11": 106,
-  "12": 49,
-  "13": 25,
-  "14": 23,
-  "15": 11,
-  "16": 1
+  "0": 482,
+  "1": 3365,
+  "2": 5101,
+  "3": 2101,
+  "4": 1139,
+  "5": 1117,
+  "6": 768,
+  "7": 9889,
+  "8": 3514,
+  "9": 1584,
+  "10": 809,
+  "11": 292,
+  "12": 1131,
+  "13": 428,
+  "14": 350,
+  "15": 291,
+  "16": 86,
+  "17": 74,
+  "18": 42,
+  "19": 20,
+  "20": 3
  },
- "components": 257,
- "cycleCount": 256,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 2261,
+   "1": 1263,
+   "2": 7376,
+   "3": 8973,
+   "4": 4316,
+   "5": 2378,
+   "6": 1351,
+   "7": 842,
+   "8": 601,
+   "9": 503,
+   "10": 5448
+  },
+  "atLeast": {
+   "1": 93.6,
+   "2": 90,
+   "3": 69.1,
+   "5": 31.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 64.81,
+  "top3Pct": 85.79,
+  "top10Pct": 88.81,
+  "cycleCount": 237,
+  "entropyBits": 1.72
+ },
+ "components": 238,
+ "cycleCount": 237,
  "largestCycle": {
   "members": [
-   "Fortnite",
-   "Fortnite: Battle Royale",
-   "Vehicles",
-   "Trail Thrasher",
-   "Cars",
-   "Submachine Gun",
-   "Thrasher",
-   "Slasher (Schematic)",
-   "Fortnite: Save the World",
-   "May 2021 Fortnite Crew Pack"
+   "XP",
+   "Cosmetic Items",
+   "Gifting",
+   "Battle Pass"
   ],
-  "size": 10,
-  "basin": 17629
+  "size": 4,
+  "basin": 22887
  },
  "topAttractors": [
   {
    "cycle": [
-    "Fortnite",
-    "Fortnite: Battle Royale",
-    "Vehicles",
-    "Trail Thrasher",
-    "Cars",
-    "Submachine Gun",
-    "Thrasher",
-    "Slasher (Schematic)",
-    "Fortnite: Save the World",
-    "May 2021 Fortnite Crew Pack"
-   ],
-   "basin": 17629,
-   "pct": 49.92
-  },
-  {
-   "cycle": [
     "XP",
-    "Music Pass"
+    "Cosmetic Items",
+    "Gifting",
+    "Battle Pass"
    ],
-   "basin": 6964,
-   "pct": 19.72
+   "basin": 22887,
+   "pct": 64.81
   },
   {
    "cycle": [
-    "Power B.A.S.E. Kyle"
+    "Fortnite: Battle Royale",
+    "Overdrive Grenade",
+    "Fortnite: Ballistic",
+    "Smoke Grenade",
+    "Utility Items"
    ],
-   "basin": 1734,
-   "pct": 4.91
+   "basin": 5229,
+   "pct": 14.81
   },
   {
    "cycle": [
-    "Named Locations",
-    "Logjam Lotus",
-    "Shifty Shafts"
+    "Fortnite: Save the World",
+    "Ventures",
+    "Outlanders"
    ],
-   "basin": 473,
-   "pct": 1.34
+   "basin": 2178,
+   "pct": 6.17
+  },
+  {
+   "cycle": [
+    "Catty Corner",
+    "Sentry Cameras"
+   ],
+   "basin": 575,
+   "pct": 1.63
   },
   {
    "cycle": [
@@ -105,34 +129,27 @@
   },
   {
    "cycle": [
-    "Fortnite: Reload"
+    "Update v11.20",
+    "Black Metal Weapons"
    ],
-   "basin": 150,
-   "pct": 0.42
+   "basin": 88,
+   "pct": 0.25
   },
   {
    "cycle": [
-    "Sentry Cameras",
-    "Catty Corner"
+    "Glider Redeploy",
+    "Soaring 50s"
    ],
-   "basin": 69,
+   "basin": 71,
    "pct": 0.2
   },
   {
    "cycle": [
-    "Update v6.30",
-    "Update v6.22"
+    "Tim Sweeney",
+    "Looking McFly"
    ],
-   "basin": 56,
-   "pct": 0.16
-  },
-  {
-   "cycle": [
-    "The Foundation's MK-Seven Assault Rifle",
-    "WIP Mythic Red Dot AR"
-   ],
-   "basin": 52,
-   "pct": 0.15
+   "basin": 51,
+   "pct": 0.14
   },
   {
    "cycle": [
@@ -144,74 +161,67 @@
   },
   {
    "cycle": [
+    "Research",
+    "Update v39.00"
+   ],
+   "basin": 40,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
     "Stressed Out",
     "Twenty One Pilots Jam Bundle"
    ],
-   "basin": 32,
-   "pct": 0.09
+   "basin": 39,
+   "pct": 0.11
+  },
+  {
+   "cycle": [
+    "The Ageless Champion's Shockwave Hammer",
+    "Shockwave Hammer"
+   ],
+   "basin": 38,
+   "pct": 0.11
   },
   {
    "cycle": [
     "Hero Back Blings",
     "Support Specialist Hawk"
    ],
-   "basin": 30,
-   "pct": 0.08
-  },
-  {
-   "cycle": [
-    "Item Shop History/February 14th 2023 - Part 2",
-    "Double Gold"
-   ],
-   "basin": 22,
-   "pct": 0.06
-  },
-  {
-   "cycle": [
-    "Port-A-Bunker",
-    "Wood-N-Bunker"
-   ],
-   "basin": 21,
-   "pct": 0.06
-  },
-  {
-   "cycle": [
-    "Jilly Teacup",
-    "Misfit Toys"
-   ],
-   "basin": 20,
-   "pct": 0.06
-  },
-  {
-   "cycle": [
-    "AMP-UP!",
-    "FROST-UP!"
-   ],
-   "basin": 19,
-   "pct": 0.05
+   "basin": 37,
+   "pct": 0.1
   },
   {
    "cycle": [
     "Mist Monsters",
     "Husk Monsters"
    ],
-   "basin": 16,
-   "pct": 0.05
+   "basin": 32,
+   "pct": 0.09
   },
   {
    "cycle": [
-    "B.A.S.E."
+    "Update v15.30",
+    "End Game Device"
    ],
-   "basin": 15,
-   "pct": 0.04
+   "basin": 31,
+   "pct": 0.09
   },
   {
    "cycle": [
-    "Tactical Shotgun/High Tier",
-    "Morphite Tactical Shotgun"
+    "Modular Zeus' Huntress DMR",
+    "Zeus' Huntress DMR"
    ],
-   "basin": 15,
-   "pct": 0.04
+   "basin": 31,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Slurp Rush",
+    "Stilt Town"
+   ],
+   "basin": 31,
+   "pct": 0.09
   },
   {
    "cycle": [
@@ -219,345 +229,372 @@
     "The Fortress",
     "Command Cavern"
    ],
-   "basin": 14,
-   "pct": 0.04
+   "basin": 29,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Joel",
+    "Karolina"
+   ],
+   "basin": 26,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "AMP-UP!",
+    "FROST-UP!"
+   ],
+   "basin": 22,
+   "pct": 0.06
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Item Shop Bundles",
-   "chains": 1526,
-   "pct": 4.32,
-   "reason": "redlink target"
-  },
-  {
-   "title": "V-Bucks",
-   "chains": 205,
-   "pct": 0.58,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Landmarks",
-   "chains": 194,
-   "pct": 0.55,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Power",
-   "chains": 187,
-   "pct": 0.53,
-   "reason": "redlink target"
-  },
-  {
-   "title": "RE-PERK!",
-   "chains": 126,
-   "pct": 0.36,
+   "title": "Devices (Creative)",
+   "chains": 167,
+   "pct": 0.47,
    "reason": "no eligible links"
   },
   {
-   "title": "Ventures",
-   "chains": 122,
-   "pct": 0.35,
-   "reason": "redlink target"
+   "title": "RE-PERK!",
+   "chains": 139,
+   "pct": 0.39,
+   "reason": "no eligible links"
   },
   {
-   "title": "Consumables",
-   "chains": 120,
-   "pct": 0.34,
-   "reason": "redlink target"
+   "title": "Prop Hunt",
+   "chains": 12,
+   "pct": 0.03,
+   "reason": "no eligible links"
   },
   {
-   "title": "Plunger Bow",
-   "chains": 68,
-   "pct": 0.19,
-   "reason": "redlink target"
+   "title": "Item Shop History/December 11th 2024",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Update v18.00",
-   "chains": 40,
-   "pct": 0.11,
-   "reason": "redlink target"
+   "title": "Music Pass/Season 12",
+   "chains": 8,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Infinity Blade",
-   "chains": 38,
-   "pct": 0.11,
-   "reason": "redlink target"
+   "title": "Survive the Storm",
+   "chains": 7,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Storm Shield",
-   "chains": 38,
-   "pct": 0.11,
-   "reason": "redlink target"
+   "title": "Firecracker Pistol Schematics",
+   "chains": 7,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Port-A-Fort",
-   "chains": 29,
-   "pct": 0.08,
-   "reason": "redlink target"
+   "title": "Item Shop History/February 25th 2019",
+   "chains": 6,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Update v31.30",
-   "chains": 28,
-   "pct": 0.08,
-   "reason": "redlink target"
+   "title": "Evacuate the Shelter",
+   "chains": 6,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Turn It Up Bundle",
-   "chains": 27,
-   "pct": 0.08,
-   "reason": "redlink target"
+   "title": "Semi-Auto Handcannon Pistol Schematics",
+   "chains": 6,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Full List of Items",
-   "chains": 23,
-   "pct": 0.07,
-   "reason": "redlink target"
+   "title": "Flowering Chaos Bundle",
+   "chains": 6,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/September 28th 2018",
+   "chains": 5,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Update v4.3",
+   "chains": 5,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/October 31st 2024",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/May 11th 2019",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Fortnite",
-   "inDegree": 7753
+   "firstLinks": 8131
   },
   {
    "title": "Battle Pass",
-   "inDegree": 1143
+   "firstLinks": 1109
   },
   {
    "title": "Outfits",
-   "inDegree": 928
+   "firstLinks": 971
   },
   {
    "title": "Fortnite: Battle Royale",
-   "inDegree": 779
+   "firstLinks": 799
   },
   {
    "title": "Back Blings",
-   "inDegree": 741
+   "firstLinks": 780
   },
   {
    "title": "Item Shop Bundles",
-   "inDegree": 735
+   "firstLinks": 761
   },
   {
    "title": "Emotes",
-   "inDegree": 704
+   "firstLinks": 728
   },
   {
    "title": "Fortnite: Save the World",
-   "inDegree": 429
+   "firstLinks": 458
   },
   {
    "title": "Sprays",
-   "inDegree": 426
+   "firstLinks": 436
   },
   {
    "title": "Wraps",
-   "inDegree": 413
+   "firstLinks": 434
   },
   {
    "title": "Quests",
-   "inDegree": 383
+   "firstLinks": 392
   },
   {
    "title": "Loading Screens",
-   "inDegree": 377
-  },
-  {
-   "title": "Jam Tracks",
-   "inDegree": 313
+   "firstLinks": 390
   },
   {
    "title": "Emoticons",
-   "inDegree": 307
-  },
-  {
-   "title": "Decals",
-   "inDegree": 307
-  },
-  {
-   "title": "Wheels",
-   "inDegree": 207
-  },
-  {
-   "title": "Prefabs",
-   "inDegree": 194
-  },
-  {
-   "title": "Kicks",
-   "inDegree": 186
-  },
-  {
-   "title": "Music Pass",
-   "inDegree": 156
-  },
-  {
-   "title": "Fortnite Crew",
-   "inDegree": 145
-  },
-  {
-   "title": "Athena",
-   "inDegree": 124
-  },
-  {
-   "title": "Landmarks",
-   "inDegree": 120
-  },
-  {
-   "title": "Devices (Creative)",
-   "inDegree": 116
-  },
-  {
-   "title": "XP",
-   "inDegree": 108
-  },
-  {
-   "title": "Named Locations",
-   "inDegree": 99
-  },
-  {
-   "title": "Contrails",
-   "inDegree": 92
-  },
-  {
-   "title": "Main Quests",
-   "inDegree": 88
-  },
-  {
-   "title": "Unnamed Locations",
-   "inDegree": 83
-  },
-  {
-   "title": "Lobby Music",
-   "inDegree": 81
-  },
-  {
-   "title": "Counterpart Outfits",
-   "inDegree": 79
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Fortnite: Battle Royale",
-   "betweenness": 137698
-  },
-  {
-   "title": "Fortnite",
-   "betweenness": 127507
-  },
-  {
-   "title": "Vehicles",
-   "betweenness": 121599
-  },
-  {
-   "title": "Trail Thrasher",
-   "betweenness": 104070
-  },
-  {
-   "title": "Cars",
-   "betweenness": 86461
-  },
-  {
-   "title": "Submachine Gun",
-   "betweenness": 68952
-  },
-  {
-   "title": "Thrasher",
-   "betweenness": 51333
-  },
-  {
-   "title": "Fortnite: Save the World",
-   "betweenness": 39745
-  },
-  {
-   "title": "Slasher (Schematic)",
-   "betweenness": 33714
-  },
-  {
-   "title": "May 2021 Fortnite Crew Pack",
-   "betweenness": 22136
-  },
-  {
-   "title": "Cosmetic Items",
-   "betweenness": 20028
-  },
-  {
-   "title": "Gifting",
-   "betweenness": 15024
-  },
-  {
-   "title": "Battle Pass",
-   "betweenness": 13232
-  },
-  {
-   "title": "Outfits",
-   "betweenness": 9900
-  },
-  {
-   "title": "Fortnite Festival",
-   "betweenness": 9493
+   "firstLinks": 314
   },
   {
    "title": "Jam Tracks",
-   "betweenness": 9086
-  },
-  {
-   "title": "Guitars",
-   "betweenness": 9070
-  },
-  {
-   "title": "Rocket Racing",
-   "betweenness": 8515
-  },
-  {
-   "title": "Adam's Song",
-   "betweenness": 8340
-  },
-  {
-   "title": "Community Terminology",
-   "betweenness": 8255
-  },
-  {
-   "title": "Update v28.01",
-   "betweenness": 7920
-  },
-  {
-   "title": "Emotes",
-   "betweenness": 7605
-  },
-  {
-   "title": "Victory Royale",
-   "betweenness": 6872
-  },
-  {
-   "title": "XP",
-   "betweenness": 6772
-  },
-  {
-   "title": "Founder's Umbrella",
-   "betweenness": 5157
+   "firstLinks": 314
   },
   {
    "title": "Decals",
-   "betweenness": 5124
+   "firstLinks": 308
+  },
+  {
+   "title": "Wheels",
+   "firstLinks": 207
+  },
+  {
+   "title": "Prefabs",
+   "firstLinks": 197
+  },
+  {
+   "title": "Kicks",
+   "firstLinks": 186
+  },
+  {
+   "title": "Music Pass",
+   "firstLinks": 158
+  },
+  {
+   "title": "Fortnite Crew",
+   "firstLinks": 148
+  },
+  {
+   "title": "Athena",
+   "firstLinks": 125
+  },
+  {
+   "title": "Landmarks",
+   "firstLinks": 121
+  },
+  {
+   "title": "Devices (Creative)",
+   "firstLinks": 117
+  },
+  {
+   "title": "XP",
+   "firstLinks": 108
+  },
+  {
+   "title": "Named Locations",
+   "firstLinks": 99
+  },
+  {
+   "title": "Contrails",
+   "firstLinks": 92
+  },
+  {
+   "title": "Lobby Music",
+   "firstLinks": 91
+  },
+  {
+   "title": "Counterpart Outfits",
+   "firstLinks": 91
+  },
+  {
+   "title": "Main Quests",
+   "firstLinks": 90
+  },
+  {
+   "title": "Unnamed Locations",
+   "firstLinks": 86
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Battle Pass",
+   "chains": 22887
+  },
+  {
+   "title": "XP",
+   "chains": 22887
+  },
+  {
+   "title": "Cosmetic Items",
+   "chains": 22887
+  },
+  {
+   "title": "Gifting",
+   "chains": 22887
+  },
+  {
+   "title": "Fortnite Festival",
+   "chains": 16473
+  },
+  {
+   "title": "Music Pass",
+   "chains": 16179
+  },
+  {
+   "title": "Stellar Burst",
+   "chains": 16004
+  },
+  {
+   "title": "Update v28.01",
+   "chains": 16003
+  },
+  {
+   "title": "Rocket Racing",
+   "chains": 15975
+  },
+  {
+   "title": "Fortnite",
+   "chains": 15309
+  },
+  {
+   "title": "Fortnite: Battle Royale",
+   "chains": 5229
+  },
+  {
+   "title": "Smoke Grenade",
+   "chains": 5229
+  },
+  {
+   "title": "Utility Items",
+   "chains": 5229
+  },
+  {
+   "title": "Fortnite: Ballistic",
+   "chains": 5229
+  },
+  {
+   "title": "Overdrive Grenade",
+   "chains": 5229
+  },
+  {
+   "title": "Unreal Editor for Fortnite",
+   "chains": 2425
+  },
+  {
+   "title": "Shotguns",
+   "chains": 2184
+  },
+  {
+   "title": "Outlanders",
+   "chains": 2178
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "chains": 2178
+  },
+  {
+   "title": "Ventures",
+   "chains": 2178
+  },
+  {
+   "title": "The Dub",
+   "chains": 2090
+  },
+  {
+   "title": "Community Terminology",
+   "chains": 2089
+  },
+  {
+   "title": "Outfits",
+   "chains": 2065
+  },
+  {
+   "title": "Characters (Save the World)",
+   "chains": 2021
+  },
+  {
+   "title": "Power B.A.S.E. Kyle",
+   "chains": 1996
+  },
+  {
+   "title": "Founder's Pack",
+   "chains": 1995
+  },
+  {
+   "title": "V-Bucks",
+   "chains": 1709
+  },
+  {
+   "title": "Limited Time Offers",
+   "chains": 1659
+  },
+  {
+   "title": "Item Shop Bundles",
+   "chains": 1467
   },
   {
    "title": "Quests",
-   "betweenness": 4930
-  },
-  {
-   "title": "Back Blings",
-   "betweenness": 4735
-  },
-  {
-   "title": "Wraps",
-   "betweenness": 4401
-  },
-  {
-   "title": "Marigold",
-   "betweenness": 4040
+   "chains": 1376
   }
- ]
+ ],
+ "randomSeeds": {
+  "seeds": 5,
+  "convergePct": {
+   "mean": 92.28,
+   "sd": 0
+  },
+  "topAttractorPct": {
+   "mean": 64.78,
+   "sd": 0.03
+  }
+ }
 }

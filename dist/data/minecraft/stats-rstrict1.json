@@ -3,46 +3,74 @@
  "rank": "strict1",
  "nodes": 14078,
  "converge": {
-  "articles": 8231,
-  "pct": 58.47,
-  "deadEnd": 5847,
-  "deadEndPct": 41.53,
-  "noLinks": 3970,
+  "articles": 8818,
+  "pct": 62.64,
+  "deadEnd": 5260,
+  "deadEndPct": 37.36,
+  "noLinks": 5088,
   "tooFewLinks": 0,
-  "unresolvable": 1528
+  "unresolvable": 17
  },
  "hopStats": {
-  "mean": 3.79,
+  "mean": 3.81,
   "median": 3,
   "p90": 7,
   "max": 14
  },
  "histogram": {
-  "0": 225,
-  "1": 1158,
-  "2": 1322,
-  "3": 1496,
-  "4": 1328,
-  "5": 868,
-  "6": 750,
-  "7": 406,
-  "8": 340,
-  "9": 216,
-  "10": 101,
-  "11": 15,
+  "0": 177,
+  "1": 1252,
+  "2": 1484,
+  "3": 1541,
+  "4": 1432,
+  "5": 966,
+  "6": 810,
+  "7": 459,
+  "8": 345,
+  "9": 223,
+  "10": 104,
+  "11": 19,
   "12": 2,
   "13": 2,
   "14": 2
  },
- "components": 137,
- "cycleCount": 136,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 5105,
+   "1": 1377,
+   "2": 969,
+   "3": 719,
+   "4": 493,
+   "5": 449,
+   "6": 340,
+   "7": 287,
+   "8": 305,
+   "9": 270,
+   "10": 3764
+  },
+  "atLeast": {
+   "1": 63.7,
+   "2": 54,
+   "3": 47.1,
+   "5": 38.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 35.84,
+  "top3Pct": 50.55,
+  "top10Pct": 55.88,
+  "cycleCount": 86,
+  "entropyBits": 2.65
+ },
+ "components": 87,
+ "cycleCount": 86,
  "largestCycle": {
   "members": [
    "Block",
    "Slab"
   ],
   "size": 2,
-  "basin": 4623
+  "basin": 5046
  },
  "topAttractors": [
   {
@@ -50,8 +78,8 @@
     "Block",
     "Slab"
    ],
-   "basin": 4623,
-   "pct": 32.84
+   "basin": 5046,
+   "pct": 35.84
   },
   {
    "cycle": [
@@ -60,47 +88,63 @@
     "Xbox (division)",
     "Microsoft"
    ],
-   "basin": 1184,
-   "pct": 8.41
+   "basin": 1185,
+   "pct": 8.42
   },
   {
    "cycle": [
     "Game drop",
     "Bats and Pots"
    ],
-   "basin": 872,
-   "pct": 6.19
+   "basin": 885,
+   "pct": 6.29
   },
   {
    "cycle": [
     "Achievement",
     "Advancement"
    ],
-   "basin": 176,
-   "pct": 1.25
+   "basin": 178,
+   "pct": 1.26
   },
   {
    "cycle": [
     "4J Studios",
     "Legacy Console Edition"
    ],
-   "basin": 112,
-   "pct": 0.8
+   "basin": 119,
+   "pct": 0.85
+  },
+  {
+   "cycle": [
+    "Feature",
+    "Forest Rock"
+   ],
+   "basin": 102,
+   "pct": 0.72
   },
   {
    "cycle": [
     "Java Edition 1.17",
     "Caves & Cliffs"
    ],
-   "basin": 98,
+   "basin": 99,
    "pct": 0.7
+  },
+  {
+   "cycle": [
+    "YouTube",
+    "LDShadowLady"
+   ],
+   "basin": 94,
+   "pct": 0.67
   },
   {
    "cycle": [
     "Village & Pillage",
     "Java Edition 1.14"
    ],
-   "basin": 85,
+   "basin": 84,
    "pct": 0.6
   },
   {
@@ -108,16 +152,24 @@
     "Options",
     "Options.txt"
    ],
-   "basin": 69,
-   "pct": 0.49
+   "basin": 75,
+   "pct": 0.53
+  },
+  {
+   "cycle": [
+    "Enchantment",
+    "Enchantment glint"
+   ],
+   "basin": 68,
+   "pct": 0.48
   },
   {
    "cycle": [
     "Terrain features",
     "World generation"
    ],
-   "basin": 66,
-   "pct": 0.47
+   "basin": 65,
+   "pct": 0.46
   },
   {
    "cycle": [
@@ -129,32 +181,24 @@
   },
   {
    "cycle": [
-    "Enchantment",
-    "Enchantment glint"
-   ],
-   "basin": 61,
-   "pct": 0.43
-  },
-  {
-   "cycle": [
-    "YouTube",
-    "LDShadowLady"
-   ],
-   "basin": 60,
-   "pct": 0.43
-  },
-  {
-   "cycle": [
     "Java Edition 1.8",
     "Bountiful Update"
    ],
-   "basin": 52,
-   "pct": 0.37
+   "basin": 59,
+   "pct": 0.42
   },
   {
    "cycle": [
     "Java Edition 1.19",
     "The Wild Update"
+   ],
+   "basin": 38,
+   "pct": 0.27
+  },
+  {
+   "cycle": [
+    "Minecraft: Woodsword Chronicles",
+    "Nick Eliopulos"
    ],
    "basin": 38,
    "pct": 0.27
@@ -169,74 +213,35 @@
   },
   {
    "cycle": [
-    "Minecraft: Woodsword Chronicles",
-    "Nick Eliopulos"
+    "Redstone Update",
+    "Java Edition 1.5"
    ],
    "basin": 34,
    "pct": 0.24
   },
   {
    "cycle": [
-    "Monster Spawner"
+    "Java Edition 1.7.2",
+    "The Update that Changed the World"
    ],
    "basin": 32,
    "pct": 0.23
   },
   {
    "cycle": [
-    "Redstone Update",
-    "Java Edition 1.5"
+    "Door",
+    "Wooden Door"
    ],
-   "basin": 31,
-   "pct": 0.22
-  },
-  {
-   "cycle": [
-    "Java Edition 1.7.2",
-    "The Update that Changed the World"
-   ],
-   "basin": 31,
-   "pct": 0.22
-  },
-  {
-   "cycle": [
-    "Metal",
-    "Netherite"
-   ],
-   "basin": 24,
-   "pct": 0.17
+   "basin": 30,
+   "pct": 0.21
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Feature",
-   "chains": 98,
-   "pct": 0.7,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Texture atlas",
-   "chains": 35,
-   "pct": 0.25,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Minecraft books",
-   "chains": 21,
-   "pct": 0.15,
-   "reason": "redlink target"
-  },
-  {
    "title": "Minecraft Education Hour of Code",
    "chains": 11,
    "pct": 0.08,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Java Edition protocol/Packets",
-   "chains": 11,
-   "pct": 0.08,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "Java Edition mob render history/Camel Husk",
@@ -245,15 +250,9 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Nico White",
-   "chains": 9,
-   "pct": 0.06,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Companion (Blast)",
-   "chains": 8,
-   "pct": 0.06,
+   "title": "Java Edition unused features",
+   "chains": 7,
+   "pct": 0.05,
    "reason": "no eligible links"
   },
   {
@@ -266,19 +265,7 @@
    "title": "Bedrock Edition 1.14.1",
    "chains": 6,
    "pct": 0.04,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Minecraft: The Crash",
-   "chains": 4,
-   "pct": 0.03,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Minecraft: The Haven Trials",
-   "chains": 4,
-   "pct": 0.03,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "Java Edition block render history/Acacia Button",
@@ -293,255 +280,297 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Minecraft Novels",
+   "title": "Pocket Edition v0.8.2 alpha",
    "chains": 3,
    "pct": 0.02,
-   "reason": "redlink target"
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bedrock Edition 1.14.30",
+   "chains": 3,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mobs of Minecraft",
+   "chains": 3,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Nintendo Switch Edition 1.0.7",
+   "chains": 3,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bedrock Editor 0.8.3",
+   "chains": 3,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Java Edition mob render history/Copper Golem",
+   "chains": 3,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Daniel Frisk",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Village/Structure (old)/Blueprints/Butcher shop",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Snapshot",
-   "inDegree": 510
+   "firstLinks": 510
   },
   {
    "title": "Minecraft Launcher",
-   "inDegree": 365
+   "firstLinks": 365
   },
   {
    "title": "Block",
-   "inDegree": 269
+   "firstLinks": 270
   },
   {
    "title": "Mojang Studios",
-   "inDegree": 239
+   "firstLinks": 240
   },
   {
    "title": "Mob",
-   "inDegree": 114
-  },
-  {
-   "title": "Skin pack",
-   "inDegree": 99
+   "firstLinks": 112
   },
   {
    "title": "Item",
-   "inDegree": 98
+   "firstLinks": 100
+  },
+  {
+   "title": "Skin pack",
+   "firstLinks": 99
   },
   {
    "title": "Java Edition Classic",
-   "inDegree": 89
+   "firstLinks": 89
   },
   {
    "title": "Marketplace",
-   "inDegree": 81
+   "firstLinks": 82
   },
   {
    "title": "Java Edition Alpha",
-   "inDegree": 68
+   "firstLinks": 68
   },
   {
    "title": "Jigsaw Block",
-   "inDegree": 68
+   "firstLinks": 68
   },
   {
    "title": "Daniel Rosenfeld",
-   "inDegree": 65
+   "firstLinks": 64
   },
   {
    "title": "Biome",
-   "inDegree": 62
+   "firstLinks": 61
   },
   {
    "title": "Feature",
-   "inDegree": 58
+   "firstLinks": 57
   },
   {
    "title": "Effect",
-   "inDegree": 56
+   "firstLinks": 56
   },
   {
    "title": "Java Edition Indev 0.31",
-   "inDegree": 56
+   "firstLinks": 56
   },
   {
    "title": "Cape",
-   "inDegree": 55
+   "firstLinks": 55
   },
   {
    "title": "Slab",
-   "inDegree": 54
+   "firstLinks": 54
   },
   {
    "title": "Enchantment",
-   "inDegree": 54
+   "firstLinks": 54
   },
   {
    "title": "Stairs",
-   "inDegree": 49
+   "firstLinks": 49
+  },
+  {
+   "title": "Food",
+   "firstLinks": 47
   },
   {
    "title": "Add-on",
-   "inDegree": 47
-  },
-  {
-   "title": "Food",
-   "inDegree": 46
+   "firstLinks": 46
   },
   {
    "title": "Player",
-   "inDegree": 43
+   "firstLinks": 45
   },
   {
    "title": "Entity",
-   "inDegree": 42
+   "firstLinks": 42
   },
   {
    "title": "YouTube",
-   "inDegree": 37
+   "firstLinks": 38
   },
   {
    "title": "Wall",
-   "inDegree": 35
+   "firstLinks": 35
   },
   {
    "title": "Structure",
-   "inDegree": 33
+   "firstLinks": 34
   },
   {
    "title": "Potion",
-   "inDegree": 32
+   "firstLinks": 32
   },
   {
    "title": "Minecraft Infdev",
-   "inDegree": 32
+   "firstLinks": 32
   },
   {
    "title": "Dye",
-   "inDegree": 31
+   "firstLinks": 31
   }
  ],
- "topBetweenness": [
-  {
-   "title": "Entity",
-   "betweenness": 6528
-  },
-  {
-   "title": "Player",
-   "betweenness": 5356
-  },
+ "topThroughTraffic": [
   {
    "title": "Block",
-   "betweenness": 4563
+   "chains": 5046
+  },
+  {
+   "title": "Slab",
+   "chains": 5046
   },
   {
    "title": "Hitbox",
-   "betweenness": 4360
+   "chains": 2287
   },
   {
-   "title": "Item",
-   "betweenness": 4053
+   "title": "Entity",
+   "chains": 2283
+  },
+  {
+   "title": "Player",
+   "chains": 1337
   },
   {
    "title": "Mojang Studios",
-   "betweenness": 3537
+   "chains": 1185
   },
   {
-   "title": "Inventory",
-   "betweenness": 3534
-  },
-  {
-   "title": "Armor",
-   "betweenness": 3250
+   "title": "Microsoft",
+   "chains": 1185
   },
   {
    "title": "Xbox Game Studios",
-   "betweenness": 2357
-  },
-  {
-   "title": "Mob",
-   "betweenness": 2292
-  },
-  {
-   "title": "Java Edition",
-   "betweenness": 1844
-  },
-  {
-   "title": "Marketplace",
-   "betweenness": 1645
-  },
-  {
-   "title": "Snapshot",
-   "betweenness": 1620
-  },
-  {
-   "title": "Structure",
-   "betweenness": 1610
-  },
-  {
-   "title": "Gameplay",
-   "betweenness": 1592
-  },
-  {
-   "title": "Minecraft Launcher",
-   "betweenness": 1576
-  },
-  {
-   "title": "Plant",
-   "betweenness": 1422
-  },
-  {
-   "title": "Biome",
-   "betweenness": 1358
-  },
-  {
-   "title": "Create New World",
-   "betweenness": 1332
+   "chains": 1185
   },
   {
    "title": "Xbox (division)",
-   "betweenness": 1189
+   "chains": 1185
   },
   {
-   "title": "Quick Play",
-   "betweenness": 1185
-  },
-  {
-   "title": "Version types",
-   "betweenness": 1152
-  },
-  {
-   "title": "Menu screen",
-   "betweenness": 1113
-  },
-  {
-   "title": "World",
-   "betweenness": 900
-  },
-  {
-   "title": "Tool",
-   "betweenness": 896
+   "title": "Bats and Pots",
+   "chains": 885
   },
   {
    "title": "Game drop",
-   "betweenness": 858
+   "chains": 885
+  },
+  {
+   "title": "Gameplay",
+   "chains": 870
+  },
+  {
+   "title": "Mob",
+   "chains": 678
+  },
+  {
+   "title": "Armor",
+   "chains": 630
+  },
+  {
+   "title": "Version types",
+   "chains": 576
+  },
+  {
+   "title": "Inventory",
+   "chains": 568
+  },
+  {
+   "title": "Item",
+   "chains": 557
+  },
+  {
+   "title": "Snapshot",
+   "chains": 540
+  },
+  {
+   "title": "World",
+   "chains": 490
+  },
+  {
+   "title": "Java Edition",
+   "chains": 465
+  },
+  {
+   "title": "Menu screen",
+   "chains": 446
+  },
+  {
+   "title": "Create New World",
+   "chains": 406
+  },
+  {
+   "title": "Quick Play",
+   "chains": 396
+  },
+  {
+   "title": "Minecraft Launcher",
+   "chains": 395
+  },
+  {
+   "title": "Structure",
+   "chains": 394
+  },
+  {
+   "title": "Marketplace",
+   "chains": 327
   },
   {
    "title": "Dimension",
-   "betweenness": 729
+   "chains": 264
   },
   {
-   "title": "Food",
-   "betweenness": 680
+   "title": "Plant",
+   "chains": 251
   },
   {
-   "title": "Skin pack",
-   "betweenness": 654
+   "title": "Biome",
+   "chains": 206
   },
   {
-   "title": "Java Edition Classic",
-   "betweenness": 650
+   "title": "Achievement",
+   "chains": 178
   }
  ]
 }

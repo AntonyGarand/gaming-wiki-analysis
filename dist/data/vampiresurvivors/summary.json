@@ -1,30 +1,32 @@
 {
  "wiki": "vampiresurvivors",
- "generatedAt": "2026-10-12T17:02:40.309Z",
+ "generatedAt": "2026-10-14T04:05:36.661Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 61.08,
-   "deadEndPct": 38.92,
-   "components": 7,
-   "cycleCount": 6,
-   "meanHops": 1.86,
+   "convergePct": 94.96,
+   "deadEndPct": 5.04,
+   "components": 11,
+   "cycleCount": 10,
+   "meanHops": 2.87,
    "medianHops": 2,
-   "maxHops": 6,
+   "maxHops": 7,
    "topAttractor": [
-    "Characters",
     "Stages",
-    "Enemies"
+    "Enemies",
+    "Characters"
    ],
-   "topAttractorPct": 58.93
+   "topAttractorPct": 88.42,
+   "top3Pct": 91.82,
+   "eligiblePct": 96.3
   },
   {
    "rank": "2",
-   "convergePct": 56.18,
-   "deadEndPct": 43.82,
+   "convergePct": 48.43,
+   "deadEndPct": 51.57,
    "components": 7,
    "cycleCount": 6,
-   "meanHops": 3.03,
+   "meanHops": 3.09,
    "medianHops": 3,
    "maxHops": 8,
    "topAttractor": [
@@ -32,71 +34,80 @@
     "Enemies",
     "Level up"
    ],
-   "topAttractorPct": 39.21
+   "topAttractorPct": 46.36,
+   "top3Pct": 48.17,
+   "eligiblePct": 71.3
   },
   {
    "rank": "3",
-   "convergePct": 40.42,
-   "deadEndPct": 59.58,
+   "convergePct": 51.87,
+   "deadEndPct": 48.13,
    "components": 11,
    "cycleCount": 10,
-   "meanHops": 3.19,
+   "meanHops": 3.6,
    "medianHops": 3,
-   "maxHops": 8,
+   "maxHops": 9,
    "topAttractor": [
     "Pickups",
     "Magnet",
     "PowerUps",
     "Gold Coin (currency)"
    ],
-   "topAttractorPct": 29.89
+   "topAttractorPct": 31.9,
+   "top3Pct": 51.18,
+   "eligiblePct": 55.5
   },
   {
    "rank": "5",
-   "convergePct": 27.38,
-   "deadEndPct": 72.62,
-   "components": 8,
-   "cycleCount": 7,
-   "meanHops": 4.59,
-   "medianHops": 4,
-   "maxHops": 11,
+   "convergePct": 32.07,
+   "deadEndPct": 67.93,
+   "components": 7,
+   "cycleCount": 6,
+   "meanHops": 5.77,
+   "medianHops": 5,
+   "maxHops": 15,
    "topAttractor": [
-    "Mad Forest",
-    "Boon Marrabbio"
+    "Light source",
+    "Greatest Jubilee",
+    "Luck"
    ],
-   "topAttractorPct": 15.47
+   "topAttractorPct": 20.15,
+   "top3Pct": 31.68,
+   "eligiblePct": 38.6
   },
   {
    "rank": "last",
-   "convergePct": 85.46,
-   "deadEndPct": 14.54,
-   "components": 26,
-   "cycleCount": 25,
-   "meanHops": 4.92,
+   "convergePct": 95.01,
+   "deadEndPct": 4.99,
+   "components": 29,
+   "cycleCount": 28,
+   "meanHops": 4.51,
    "medianHops": 4,
    "maxHops": 16,
    "topAttractor": [
     "Characters",
     "Gold Coin (currency)"
    ],
-   "topAttractorPct": 35.52
+   "topAttractorPct": 39.78,
+   "top3Pct": 81.58,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 60.92,
-   "deadEndPct": 39.08,
-   "components": 16,
-   "cycleCount": 15,
-   "meanHops": 3.84,
-   "medianHops": 3,
-   "maxHops": 12,
+   "convergePct": 75.38,
+   "deadEndPct": 24.62,
+   "components": 12,
+   "cycleCount": 11,
+   "meanHops": 4.01,
+   "medianHops": 4,
+   "maxHops": 10,
    "topAttractor": [
-    "Passive items",
-    "Candelabrador",
-    "Four Seasons",
-    "Area"
+    "Magnet",
+    "Pickups"
    ],
-   "topAttractorPct": 25.11
+   "topAttractorPct": 36.85,
+   "top3Pct": 67.07,
+   "eligiblePct": 100
   }
  ]
 }

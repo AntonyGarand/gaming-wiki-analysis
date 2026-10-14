@@ -1,51 +1,88 @@
 {
  "wiki": "vampiresurvivors",
  "rank": "strict1",
- "nodes": 2469,
+ "nodes": 2323,
  "converge": {
-  "articles": 1508,
-  "pct": 61.08,
-  "deadEnd": 961,
-  "deadEndPct": 38.92,
-  "noLinks": 232,
+  "articles": 2206,
+  "pct": 94.96,
+  "deadEnd": 117,
+  "deadEndPct": 5.04,
+  "noLinks": 81,
   "tooFewLinks": 0,
-  "unresolvable": 7
+  "unresolvable": 6
  },
  "hopStats": {
-  "mean": 1.86,
+  "mean": 2.87,
   "median": 2,
-  "p90": 3,
-  "max": 6
+  "p90": 6,
+  "max": 7
  },
  "histogram": {
-  "0": 13,
-  "1": 647,
-  "2": 459,
-  "3": 328,
-  "4": 57,
-  "5": 3,
-  "6": 1
+  "0": 21,
+  "1": 731,
+  "2": 470,
+  "3": 372,
+  "4": 60,
+  "5": 16,
+  "6": 534,
+  "7": 2
  },
- "components": 7,
- "cycleCount": 6,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 87,
+   "1": 580,
+   "2": 367,
+   "3": 243,
+   "4": 150,
+   "5": 171,
+   "6": 138,
+   "7": 109,
+   "8": 90,
+   "9": 87,
+   "10": 301
+  },
+  "atLeast": {
+   "1": 96.3,
+   "2": 71.3,
+   "3": 55.5,
+   "5": 38.6
+  }
+ },
+ "concentration": {
+  "top1Pct": 88.42,
+  "top3Pct": 91.82,
+  "top10Pct": 94.96,
+  "cycleCount": 10,
+  "entropyBits": 0.55
+ },
+ "components": 11,
+ "cycleCount": 10,
  "largestCycle": {
   "members": [
-   "Characters",
    "Stages",
-   "Enemies"
+   "Enemies",
+   "Characters"
   ],
   "size": 3,
-  "basin": 1455
+  "basin": 2054
  },
  "topAttractors": [
   {
    "cycle": [
-    "Characters",
     "Stages",
-    "Enemies"
+    "Enemies",
+    "Characters"
    ],
-   "basin": 1455,
-   "pct": 58.93
+   "basin": 2054,
+   "pct": 88.42
+  },
+  {
+   "cycle": [
+    "Ode to Castlevania (album)",
+    "Vampire Killer - Vampire Survivors"
+   ],
+   "basin": 54,
+   "pct": 2.32
   },
   {
    "cycle": [
@@ -53,7 +90,23 @@
     "The Beginning"
    ],
    "basin": 25,
-   "pct": 1.01
+   "pct": 1.08
+  },
+  {
+   "cycle": [
+    "Operation Guns (album)",
+    "Battle in the Jungle - VS version"
+   ],
+   "basin": 21,
+   "pct": 0.9
+  },
+  {
+   "cycle": [
+    "Tides of the Foscari (album)",
+    "Tides of the Foscari (track)"
+   ],
+   "basin": 14,
+   "pct": 0.6
   },
   {
    "cycle": [
@@ -61,7 +114,15 @@
     "Roaring Thunder"
    ],
    "basin": 12,
-   "pct": 0.49
+   "pct": 0.52
+  },
+  {
+   "cycle": [
+    "A Quick Warm-Up - VS version",
+    "Emerald Diorama (album)"
+   ],
+   "basin": 10,
+   "pct": 0.43
   },
   {
    "cycle": [
@@ -69,7 +130,7 @@
     "Legacy of the Moonspell (track)"
    ],
    "basin": 9,
-   "pct": 0.36
+   "pct": 0.39
   },
   {
    "cycle": [
@@ -77,7 +138,7 @@
     "Vampire Survivors 2"
    ],
    "basin": 5,
-   "pct": 0.2
+   "pct": 0.22
   },
   {
    "cycle": [
@@ -85,87 +146,27 @@
     "Updates"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Updates/Vampire Survivors: Legacy of the Bloodmoon is coming this summer!",
-   "chains": 549,
-   "pct": 22.24,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Ode to Castlevania (album)",
-   "chains": 54,
-   "pct": 2.19,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Adventures + Vampire Survivors: Emergency Meeting DLC on Steam Dec 18th",
-   "chains": 46,
-   "pct": 1.86,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Options",
    "chains": 29,
-   "pct": 1.17,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Operation Guns (album)",
-   "chains": 21,
-   "pct": 0.85,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Tides of the Foscari (album)",
-   "chains": 14,
-   "pct": 0.57,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Emerald Diorama (album)",
-   "chains": 10,
-   "pct": 0.41,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Patch 0.10.0",
-   "chains": 2,
-   "pct": 0.08,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Patch 1.10: Laborratory",
-   "chains": 2,
-   "pct": 0.08,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Development Roadmap Overview",
-   "chains": 2,
-   "pct": 0.08,
+   "pct": 1.25,
    "reason": "no eligible links"
   },
   {
    "title": "Flight",
    "chains": 2,
-   "pct": 0.08,
+   "pct": 0.09,
    "reason": "no eligible links"
   },
   {
    "title": "Beta",
    "chains": 2,
-   "pct": 0.08,
+   "pct": 0.09,
    "reason": "redlink target"
-  },
-  {
-   "title": "Updates/Vampire Survivors: Ante Chamber out now, for free!",
-   "chains": 2,
-   "pct": 0.08,
-   "reason": "no eligible links"
   },
   {
    "title": "Atlantean",
@@ -178,251 +179,311 @@
    "chains": 1,
    "pct": 0.04,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Morning Star",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Belnades' Spellbook",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Spectral Sword",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ebony Diabologue",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Wand",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ring",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Custos",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Chicken",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Spear",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ebony",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Videos",
-   "inDegree": 511
+   "firstLinks": 511
   },
   {
    "title": "Enemies",
-   "inDegree": 396
+   "firstLinks": 396
   },
   {
    "title": "Weapons",
-   "inDegree": 226
+   "firstLinks": 226
   },
   {
    "title": "Characters",
-   "inDegree": 162
+   "firstLinks": 162
   },
   {
    "title": "Evolution",
-   "inDegree": 139
+   "firstLinks": 141
   },
   {
    "title": "Secrets",
-   "inDegree": 83
+   "firstLinks": 83
   },
   {
    "title": "Castlevania Series",
-   "inDegree": 55
+   "firstLinks": 55
   },
   {
    "title": "Stages",
-   "inDegree": 53
+   "firstLinks": 54
   },
   {
    "title": "Relics",
-   "inDegree": 49
+   "firstLinks": 49
   },
   {
    "title": "Ode to Castlevania (album)",
-   "inDegree": 48
+   "firstLinks": 48
   },
   {
    "title": "Adventures",
-   "inDegree": 42
+   "firstLinks": 42
   },
   {
    "title": "Passive items",
-   "inDegree": 39
+   "firstLinks": 39
   },
   {
    "title": "Pickups",
-   "inDegree": 35
+   "firstLinks": 35
   },
   {
    "title": "Arcanas",
-   "inDegree": 35
+   "firstLinks": 35
   },
   {
    "title": "Player stats",
-   "inDegree": 30
+   "firstLinks": 30
   },
   {
    "title": "Lake Foscari",
-   "inDegree": 22
+   "firstLinks": 22
   },
   {
    "title": "Side A",
-   "inDegree": 22
+   "firstLinks": 22
   },
   {
    "title": "Operation Guns (album)",
-   "inDegree": 19
+   "firstLinks": 19
   },
   {
    "title": "Abyss Foscari",
-   "inDegree": 18
+   "firstLinks": 18
   },
   {
    "title": "Mt.Moonspell",
-   "inDegree": 16
+   "firstLinks": 16
   },
   {
    "title": "Poncle",
-   "inDegree": 13
+   "firstLinks": 13
   },
   {
    "title": "Options",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Daniele Zandara",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "The Directer",
-   "inDegree": 11
+   "firstLinks": 11
   },
   {
    "title": "Side B",
-   "inDegree": 11
+   "firstLinks": 11
   },
   {
    "title": "Tides of the Foscari (album)",
-   "inDegree": 11
+   "firstLinks": 11
   },
   {
    "title": "Side C",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Emerald Diorama (album)",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Legacy of the Moonspell (album)",
-   "inDegree": 7
+   "firstLinks": 7
   },
   {
    "title": "Ode to Castlevania",
-   "inDegree": 6
+   "firstLinks": 6
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
    "title": "Characters",
-   "betweenness": 2052
+   "chains": 2054
   },
   {
    "title": "Stages",
-   "betweenness": 1260
-  },
-  {
-   "title": "Weapons",
-   "betweenness": 1101
+   "chains": 2054
   },
   {
    "title": "Enemies",
-   "betweenness": 1047
-  },
-  {
-   "title": "Videos",
-   "betweenness": 1022
-  },
-  {
-   "title": "Evolution",
-   "betweenness": 556
-  },
-  {
-   "title": "Poncle",
-   "betweenness": 547
-  },
-  {
-   "title": "Player stats",
-   "betweenness": 384
-  },
-  {
-   "title": "Passive items",
-   "betweenness": 364
-  },
-  {
-   "title": "Secrets",
-   "betweenness": 258
-  },
-  {
-   "title": "Relics",
-   "betweenness": 255
-  },
-  {
-   "title": "Castlevania Series",
-   "betweenness": 224
-  },
-  {
-   "title": "Ode to Castlevania",
-   "betweenness": 186
-  },
-  {
-   "title": "Pickups",
-   "betweenness": 164
-  },
-  {
-   "title": "Arcanas",
-   "betweenness": 144
+   "chains": 2054
   },
   {
    "title": "Light source",
-   "betweenness": 135
+   "chains": 595
   },
   {
-   "title": "Gallo Tower",
-   "betweenness": 111
-  },
-  {
-   "title": "Lake Foscari",
-   "betweenness": 75
-  },
-  {
-   "title": "Mt.Moonspell",
-   "betweenness": 57
-  },
-  {
-   "title": "Abyss Foscari",
-   "betweenness": 54
-  },
-  {
-   "title": "Adventures",
-   "betweenness": 44
-  },
-  {
-   "title": "The Directer",
-   "betweenness": 33
-  },
-  {
-   "title": "Side B",
-   "betweenness": 26
-  },
-  {
-   "title": "Daniele Zandara",
-   "betweenness": 26
-  },
-  {
-   "title": "Side A",
-   "betweenness": 22
-  },
-  {
-   "title": "Moongolow",
-   "betweenness": 18
-  },
-  {
-   "title": "Glimmers",
-   "betweenness": 16
+   "title": "Pickups",
+   "chains": 591
   },
   {
    "title": "Experience Gem",
-   "betweenness": 15
+   "chains": 553
   },
   {
-   "title": "Golden Egg",
-   "betweenness": 15
+   "title": "Poncle",
+   "chains": 549
   },
   {
-   "title": "Showstopper",
-   "betweenness": 15
+   "title": "Videos",
+   "chains": 512
+  },
+  {
+   "title": "Weapons",
+   "chains": 370
+  },
+  {
+   "title": "Evolution",
+   "chains": 142
+  },
+  {
+   "title": "Player stats",
+   "chains": 129
+  },
+  {
+   "title": "Passive items",
+   "chains": 92
+  },
+  {
+   "title": "Secrets",
+   "chains": 87
+  },
+  {
+   "title": "Ode to Castlevania",
+   "chains": 63
+  },
+  {
+   "title": "Castlevania Series",
+   "chains": 57
+  },
+  {
+   "title": "Ode to Castlevania (album)",
+   "chains": 54
+  },
+  {
+   "title": "Vampire Killer - Vampire Survivors",
+   "chains": 54
+  },
+  {
+   "title": "Relics",
+   "chains": 52
+  },
+  {
+   "title": "Boss Rash",
+   "chains": 46
+  },
+  {
+   "title": "Adventures",
+   "chains": 45
+  },
+  {
+   "title": "Gallo Tower",
+   "chains": 38
+  },
+  {
+   "title": "Arcanas",
+   "chains": 37
+  },
+  {
+   "title": "Options",
+   "chains": 29
+  },
+  {
+   "title": "Lake Foscari",
+   "chains": 26
+  },
+  {
+   "title": "Side A",
+   "chains": 25
+  },
+  {
+   "title": "The Beginning",
+   "chains": 25
+  },
+  {
+   "title": "Operation Guns (album)",
+   "chains": 21
+  },
+  {
+   "title": "Battle in the Jungle - VS version",
+   "chains": 21
+  },
+  {
+   "title": "Mt.Moonspell",
+   "chains": 20
+  },
+  {
+   "title": "Abyss Foscari",
+   "chains": 19
   }
  ]
 }

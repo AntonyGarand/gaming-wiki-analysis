@@ -3,36 +3,82 @@
  "rank": "last",
  "nodes": 517,
  "converge": {
-  "articles": 9,
-  "pct": 1.74,
-  "deadEnd": 508,
-  "deadEndPct": 98.26,
-  "noLinks": 38,
+  "articles": 470,
+  "pct": 90.91,
+  "deadEnd": 47,
+  "deadEndPct": 9.09,
+  "noLinks": 36,
   "tooFewLinks": 0,
-  "unresolvable": 1
+  "unresolvable": 0
  },
  "hopStats": {
-  "mean": 0.44,
-  "median": 0,
-  "p90": 1,
-  "max": 1
+  "mean": 4.97,
+  "median": 5,
+  "p90": 8,
+  "max": 12
  },
  "histogram": {
-  "0": 5,
-  "1": 4
+  "0": 7,
+  "1": 29,
+  "2": 69,
+  "3": 51,
+  "4": 44,
+  "5": 48,
+  "6": 99,
+  "7": 41,
+  "8": 45,
+  "9": 19,
+  "10": 13,
+  "11": 4,
+  "12": 1
  },
- "components": 3,
- "cycleCount": 2,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 36,
+   "1": 52,
+   "2": 39,
+   "3": 41,
+   "4": 49,
+   "5": 30,
+   "6": 31,
+   "7": 56,
+   "8": 30,
+   "9": 25,
+   "10": 128
+  },
+  "atLeast": {
+   "1": 93,
+   "2": 83,
+   "3": 75.4,
+   "5": 58
+  }
+ },
+ "concentration": {
+  "top1Pct": 89.17,
+  "top3Pct": 90.91,
+  "top10Pct": 90.91,
+  "cycleCount": 3,
+  "entropyBits": 0.15
+ },
+ "components": 4,
+ "cycleCount": 3,
  "largestCycle": {
   "members": [
-   "Guide: naneinf",
-   "Steel cards",
-   "Naneinf"
+   "LocalThunk",
+   "Playstack"
   ],
-  "size": 3,
-  "basin": 7
+  "size": 2,
+  "basin": 461
  },
  "topAttractors": [
+  {
+   "cycle": [
+    "LocalThunk",
+    "Playstack"
+   ],
+   "basin": 461,
+   "pct": 89.17
+  },
   {
    "cycle": [
     "Guide: naneinf",
@@ -52,24 +98,6 @@
   }
  ],
  "deadEndTerminals": [
-  {
-   "title": "Playstack",
-   "chains": 428,
-   "pct": 82.79,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Decks",
-   "chains": 18,
-   "pct": 3.48,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Controls",
-   "chains": 15,
-   "pct": 2.9,
-   "reason": "no eligible links"
-  },
   {
    "title": "Cerulean Bell",
    "chains": 12,
@@ -141,251 +169,269 @@
    "chains": 1,
    "pct": 0.19,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Platinum",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "$400",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Update 0.9.0m-DEMO",
+   "chains": 1,
+   "pct": 0.19,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Blinds and Antes",
-   "inDegree": 51
+   "firstLinks": 52
   },
   {
    "title": "Jokers",
-   "inDegree": 45
+   "firstLinks": 45
   },
   {
    "title": "Vouchers",
-   "inDegree": 30
+   "firstLinks": 30
   },
   {
    "title": "Card modifiers",
-   "inDegree": 28
+   "firstLinks": 28
   },
   {
    "title": "LocalThunk",
-   "inDegree": 25
+   "firstLinks": 26
   },
   {
    "title": "Booster Packs",
-   "inDegree": 18
+   "firstLinks": 18
   },
   {
    "title": "Spectral cards",
-   "inDegree": 17
+   "firstLinks": 17
   },
   {
    "title": "Decks",
-   "inDegree": 16
+   "firstLinks": 16
   },
   {
    "title": "Stakes",
-   "inDegree": 15
+   "firstLinks": 16
   },
   {
    "title": "Challenge Decks",
-   "inDegree": 15
+   "firstLinks": 15
   },
   {
    "title": "Achievements",
-   "inDegree": 14
+   "firstLinks": 14
   },
   {
    "title": "Planet cards",
-   "inDegree": 13
+   "firstLinks": 13
   },
   {
    "title": "Negative",
-   "inDegree": 13
+   "firstLinks": 13
   },
   {
    "title": "Consumables",
-   "inDegree": 12
+   "firstLinks": 12
   },
   {
    "title": "Balatro",
-   "inDegree": 10
+   "firstLinks": 10
   },
   {
    "title": "Tarot cards",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "The Shop",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Poker hands",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Jimbo",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Negative Effects",
-   "inDegree": 8
+   "firstLinks": 8
   },
   {
    "title": "Legendary Jokers",
-   "inDegree": 6
+   "firstLinks": 6
   },
   {
    "title": "Collection",
-   "inDegree": 5
+   "firstLinks": 5
   },
   {
    "title": "Tags",
-   "inDegree": 5
+   "firstLinks": 5
+  },
+  {
+   "title": "Seed",
+   "firstLinks": 5
   },
   {
    "title": "Card Ranks",
-   "inDegree": 4
+   "firstLinks": 4
   },
   {
    "title": "Mult",
-   "inDegree": 4
-  },
-  {
-   "title": "Friends of Jimbo",
-   "inDegree": 4
+   "firstLinks": 4
   },
   {
    "title": "Eternal",
-   "inDegree": 4
+   "firstLinks": 4
   },
   {
    "title": "Naneinf",
-   "inDegree": 4
-  },
-  {
-   "title": "Seed",
-   "inDegree": 4
-  },
-  {
-   "title": "Hand size",
-   "inDegree": 3
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Booster Packs",
-   "betweenness": 850
-  },
-  {
-   "title": "Card modifiers",
-   "betweenness": 846
-  },
-  {
-   "title": "Blinds and Antes",
-   "betweenness": 762
-  },
-  {
-   "title": "Collection",
-   "betweenness": 736
-  },
-  {
-   "title": "Spectral cards",
-   "betweenness": 558
-  },
-  {
-   "title": "Consumables",
-   "betweenness": 455
-  },
-  {
-   "title": "LocalThunk",
-   "betweenness": 426
-  },
-  {
-   "title": "Vouchers",
-   "betweenness": 400
-  },
-  {
-   "title": "Jokers",
-   "betweenness": 330
-  },
-  {
-   "title": "Obsolete content",
-   "betweenness": 280
-  },
-  {
-   "title": "Tags",
-   "betweenness": 248
-  },
-  {
-   "title": "Tarot cards",
-   "betweenness": 174
-  },
-  {
-   "title": "Gameplay loop",
-   "betweenness": 171
-  },
-  {
-   "title": "Card Ranks",
-   "betweenness": 140
-  },
-  {
-   "title": "Negative",
-   "betweenness": 135
-  },
-  {
-   "title": "Playing Cards",
-   "betweenness": 128
-  },
-  {
-   "title": "Challenge Decks",
-   "betweenness": 108
-  },
-  {
-   "title": "Poker hands",
-   "betweenness": 90
-  },
-  {
-   "title": "Planet cards",
-   "betweenness": 84
-  },
-  {
-   "title": "Options",
-   "betweenness": 80
-  },
-  {
-   "title": "Stakes",
-   "betweenness": 68
-  },
-  {
-   "title": "The Shop",
-   "betweenness": 60
+   "firstLinks": 4
   },
   {
    "title": "Friends of Jimbo",
-   "betweenness": 55
+   "firstLinks": 3
   },
   {
-   "title": "Jimbo",
-   "betweenness": 45
+   "title": "Hand size",
+   "firstLinks": 3
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Playstack",
+   "chains": 461
   },
   {
-   "title": "Legendary Jokers",
-   "betweenness": 42
+   "title": "LocalThunk",
+   "chains": 461
+  },
+  {
+   "title": "Blinds and Antes",
+   "chains": 415
+  },
+  {
+   "title": "Card modifiers",
+   "chains": 297
+  },
+  {
+   "title": "Collection",
+   "chains": 199
+  },
+  {
+   "title": "Booster Packs",
+   "chains": 185
+  },
+  {
+   "title": "Spectral cards",
+   "chains": 93
+  },
+  {
+   "title": "Consumables",
+   "chains": 65
+  },
+  {
+   "title": "Tags",
+   "chains": 63
+  },
+  {
+   "title": "Obsolete content",
+   "chains": 57
+  },
+  {
+   "title": "Jokers",
+   "chains": 56
+  },
+  {
+   "title": "Challenge Decks",
+   "chains": 55
+  },
+  {
+   "title": "Vouchers",
+   "chains": 50
+  },
+  {
+   "title": "Stakes",
+   "chains": 36
+  },
+  {
+   "title": "Tarot cards",
+   "chains": 30
   },
   {
    "title": "Seed",
-   "betweenness": 36
+   "chains": 22
+  },
+  {
+   "title": "Card Ranks",
+   "chains": 21
+  },
+  {
+   "title": "Gameplay loop",
+   "chains": 19
+  },
+  {
+   "title": "Decks",
+   "chains": 18
   },
   {
    "title": "Achievements",
-   "betweenness": 34
+   "chains": 18
   },
   {
-   "title": "Mult",
-   "betweenness": 28
+   "title": "Playing Cards",
+   "chains": 17
   },
   {
-   "title": "Eternal",
-   "betweenness": 28
+   "title": "Negative",
+   "chains": 16
   },
   {
-   "title": "Rare Jokers",
-   "betweenness": 21
+   "title": "Planet cards",
+   "chains": 15
+  },
+  {
+   "title": "Controls",
+   "chains": 15
+  },
+  {
+   "title": "Balatro",
+   "chains": 14
+  },
+  {
+   "title": "Cerulean Bell",
+   "chains": 12
+  },
+  {
+   "title": "The Shop",
+   "chains": 11
+  },
+  {
+   "title": "Negative Effects",
+   "chains": 11
+  },
+  {
+   "title": "Poker hands",
+   "chains": 10
+  },
+  {
+   "title": "Jimbo",
+   "chains": 10
   }
  ]
 }

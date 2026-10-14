@@ -1,76 +1,138 @@
 {
  "wiki": "terraria",
  "rank": "last",
- "nodes": 5213,
+ "nodes": 4337,
  "converge": {
-  "articles": 3291,
-  "pct": 63.13,
-  "deadEnd": 1922,
-  "deadEndPct": 36.87,
-  "noLinks": 505,
+  "articles": 3945,
+  "pct": 90.96,
+  "deadEnd": 392,
+  "deadEndPct": 9.04,
+  "noLinks": 234,
   "tooFewLinks": 0,
-  "unresolvable": 511
+  "unresolvable": 22
  },
  "hopStats": {
-  "mean": 5.72,
-  "median": 4,
-  "p90": 13,
-  "max": 23
+  "mean": 7.99,
+  "median": 5,
+  "p90": 18,
+  "max": 33
  },
  "histogram": {
-  "0": 360,
-  "1": 339,
-  "2": 293,
-  "3": 339,
-  "4": 385,
-  "5": 240,
-  "6": 145,
-  "7": 187,
-  "8": 151,
-  "9": 100,
-  "10": 139,
-  "11": 116,
-  "12": 107,
-  "13": 88,
-  "14": 97,
-  "15": 63,
-  "16": 48,
-  "17": 54,
-  "18": 21,
-  "19": 7,
-  "20": 3,
-  "21": 6,
-  "22": 2,
-  "23": 1
+  "0": 356,
+  "1": 342,
+  "2": 336,
+  "3": 362,
+  "4": 363,
+  "5": 227,
+  "6": 156,
+  "7": 153,
+  "8": 127,
+  "9": 112,
+  "10": 117,
+  "11": 135,
+  "12": 134,
+  "13": 119,
+  "14": 151,
+  "15": 96,
+  "16": 130,
+  "17": 90,
+  "18": 56,
+  "19": 60,
+  "20": 40,
+  "21": 25,
+  "22": 58,
+  "23": 66,
+  "24": 41,
+  "25": 24,
+  "26": 15,
+  "27": 16,
+  "28": 7,
+  "29": 9,
+  "30": 5,
+  "31": 3,
+  "32": 11,
+  "33": 3
  },
- "components": 181,
- "cycleCount": 180,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 256,
+   "1": 155,
+   "2": 272,
+   "3": 274,
+   "4": 289,
+   "5": 261,
+   "6": 241,
+   "7": 237,
+   "8": 217,
+   "9": 204,
+   "10": 1931
+  },
+  "atLeast": {
+   "1": 94.1,
+   "2": 90.5,
+   "3": 84.3,
+   "5": 71.3
+  }
+ },
+ "concentration": {
+  "top1Pct": 53.06,
+  "top3Pct": 62.26,
+  "top10Pct": 72.28,
+  "cycleCount": 175,
+  "entropyBits": 3.39
+ },
+ "components": 176,
+ "cycleCount": 175,
  "largestCycle": {
   "members": [
-   "Bestiary",
    "Re-Logic",
-   "Steampunker"
+   "Steampunker",
+   "Bestiary"
   ],
   "size": 3,
-  "basin": 1698
+  "basin": 2301
  },
  "topAttractors": [
   {
    "cycle": [
-    "Bestiary",
     "Re-Logic",
-    "Steampunker"
+    "Steampunker",
+    "Bestiary"
    ],
-   "basin": 1698,
-   "pct": 32.57
+   "basin": 2301,
+   "pct": 53.06
   },
   {
    "cycle": [
     "Planter Boxes",
     "Seaweed"
    ],
-   "basin": 289,
-   "pct": 5.54
+   "basin": 258,
+   "pct": 5.95
+  },
+  {
+   "cycle": [
+    "Joja Cola",
+    "Stardrop"
+   ],
+   "basin": 141,
+   "pct": 3.25
+  },
+  {
+   "cycle": [
+    "Dyes",
+    "Paints"
+   ],
+   "basin": 88,
+   "pct": 2.03
+  },
+  {
+   "cycle": [
+    "Monoliths",
+    "Music Boxes"
+   ],
+   "basin": 87,
+   "pct": 2.01
   },
   {
    "cycle": [
@@ -80,40 +142,32 @@
     "Deactivated Probe",
     "Master Mode"
    ],
-   "basin": 208,
-   "pct": 3.99
-  },
-  {
-   "cycle": [
-    "Monoliths",
-    "Music Boxes"
-   ],
-   "basin": 85,
-   "pct": 1.63
+   "basin": 73,
+   "pct": 1.68
   },
   {
    "cycle": [
     "Balla Hat",
     "Gangsta Hat"
    ],
-   "basin": 67,
-   "pct": 1.29
-  },
-  {
-   "cycle": [
-    "Dyes",
-    "Paints"
-   ],
-   "basin": 66,
-   "pct": 1.27
+   "basin": 52,
+   "pct": 1.2
   },
   {
    "cycle": [
     "Present",
     "Goodie Bag"
    ],
-   "basin": 53,
-   "pct": 1.02
+   "basin": 48,
+   "pct": 1.11
+  },
+  {
+   "cycle": [
+    "Hallowed Bar",
+    "Pwnhammer"
+   ],
+   "basin": 45,
+   "pct": 1.04
   },
   {
    "cycle": [
@@ -121,30 +175,39 @@
     "Mannequin",
     "Armor"
    ],
-   "basin": 40,
-   "pct": 0.77
-  },
-  {
-   "cycle": [
-    "Server"
-   ],
-   "basin": 37,
-   "pct": 0.71
-  },
-  {
-   "cycle": [
-    "Goblin Army",
-    "Tattered Cloth"
-   ],
-   "basin": 34,
-   "pct": 0.65
+   "basin": 42,
+   "pct": 0.97
   },
   {
    "cycle": [
     "Ammo Reservation Potion",
     "Ammo Box"
    ],
-   "basin": 30,
+   "basin": 33,
+   "pct": 0.76
+  },
+  {
+   "cycle": [
+    "Slime (debuff)",
+    "Sparkle Slime Balloon"
+   ],
+   "basin": 32,
+   "pct": 0.74
+  },
+  {
+   "cycle": [
+    "Cobalt Bar",
+    "Palladium Bar"
+   ],
+   "basin": 29,
+   "pct": 0.67
+  },
+  {
+   "cycle": [
+    "Goblin Army",
+    "Tattered Cloth"
+   ],
+   "basin": 25,
    "pct": 0.58
   },
   {
@@ -152,24 +215,32 @@
     "Portable Kiln",
     "Mitey-Titey"
    ],
-   "basin": 28,
-   "pct": 0.54
+   "basin": 25,
+   "pct": 0.58
   },
   {
    "cycle": [
-    "Cobalt Bar",
-    "Palladium Bar"
+    "Gravitation Potion",
+    "Gravity Globe"
    ],
-   "basin": 26,
-   "pct": 0.5
+   "basin": 22,
+   "pct": 0.51
   },
   {
    "cycle": [
     "Truffle Worm",
     "Prismatic Lacewing"
    ],
-   "basin": 21,
-   "pct": 0.4
+   "basin": 20,
+   "pct": 0.46
+  },
+  {
+   "cycle": [
+    "Stardust armor",
+    "Nebula armor"
+   ],
+   "basin": 20,
+   "pct": 0.46
   },
   {
    "cycle": [
@@ -177,384 +248,352 @@
     "Dungeon Brick Walls"
    ],
    "basin": 19,
-   "pct": 0.36
+   "pct": 0.44
   },
   {
    "cycle": [
     "Sand Sharks",
     "Vampire"
    ],
-   "basin": 17,
-   "pct": 0.33
-  },
-  {
-   "cycle": [
-    "Stardust armor",
-    "Nebula armor"
-   ],
-   "basin": 16,
-   "pct": 0.31
-  },
-  {
-   "cycle": [
-    "Martian Madness",
-    "Lunar Events"
-   ],
-   "basin": 14,
-   "pct": 0.27
-  },
-  {
-   "cycle": [
-    "Sparkle Slime Balloon",
-    "Slime (debuff)"
-   ],
-   "basin": 14,
-   "pct": 0.27
-  },
-  {
-   "cycle": [
-    "Well Fed",
-    "Roasted Duck"
-   ],
-   "basin": 14,
-   "pct": 0.27
+   "basin": 18,
+   "pct": 0.42
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Mechanical bosses",
-   "chains": 377,
-   "pct": 7.23,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Coins",
-   "chains": 161,
-   "pct": 3.09,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Bars",
-   "chains": 38,
-   "pct": 0.73,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Console version history",
-   "chains": 32,
-   "pct": 0.61,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Recipes/Hardmode Anvil/register",
-   "chains": 25,
-   "pct": 0.48,
+   "chains": 46,
+   "pct": 1.06,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Vanity items",
-   "chains": 18,
-   "pct": 0.35,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Sound IDs",
-   "chains": 15,
-   "pct": 0.29,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "The Twins",
-   "chains": 13,
-   "pct": 0.25,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Tool speed",
-   "chains": 12,
-   "pct": 0.23,
-   "reason": "redlink target"
   },
   {
    "title": "Recipes/Campfire/register",
-   "chains": 11,
-   "pct": 0.21,
+   "chains": 14,
+   "pct": 0.32,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Blood Moon/cs",
-   "chains": 9,
-   "pct": 0.17,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Hardmode/id",
-   "chains": 8,
-   "pct": 0.15,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Seasonal events",
-   "chains": 7,
-   "pct": 0.13,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Woods",
-   "chains": 6,
-   "pct": 0.12,
-   "reason": "redlink target"
   },
   {
    "title": "Recipes/Crystal Ball/register",
+   "chains": 8,
+   "pct": 0.18,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Sky Mill/register",
    "chains": 6,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Loom/register",
+   "chains": 6,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Solidifier/register",
+   "chains": 6,
+   "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Honey Dispenser/register",
+   "chains": 5,
    "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Sawmill/register",
+   "chains": 5,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Meat Grinder/register",
+   "chains": 5,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Water/register",
+   "chains": 5,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Blend-O-Matic/register",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Flesh Cloning Vat/register",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Autohammer/register",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Decay Chamber/register",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Recipes/Ice Machine/register",
+   "chains": 4,
+   "pct": 0.09,
    "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Re-Logic",
-   "inDegree": 47
-  },
-  {
-   "title": "NPCs",
-   "inDegree": 37
-  },
-  {
-   "title": "Background walls",
-   "inDegree": 36
-  },
-  {
-   "title": "Hardmode",
-   "inDegree": 32
+   "firstLinks": 36
   },
   {
    "title": "Shimmer",
-   "inDegree": 32
+   "firstLinks": 35
   },
   {
-   "title": "1.2",
-   "inDegree": 28
-  },
-  {
-   "title": "Buffs",
-   "inDegree": 27
-  },
-  {
-   "title": "Enemies",
-   "inDegree": 27
-  },
-  {
-   "title": "Rarity",
-   "inDegree": 26
-  },
-  {
-   "title": "Knockback",
-   "inDegree": 26
-  },
-  {
-   "title": "Multiplayer",
-   "inDegree": 25
-  },
-  {
-   "title": "Debuffs",
-   "inDegree": 25
-  },
-  {
-   "title": "Events",
-   "inDegree": 25
-  },
-  {
-   "title": "Invincibility frame",
-   "inDegree": 25
-  },
-  {
-   "title": "Modifiers",
-   "inDegree": 23
-  },
-  {
-   "title": "Traveling Merchant",
-   "inDegree": 21
-  },
-  {
-   "title": "Achievements",
-   "inDegree": 21
-  },
-  {
-   "title": "Master Mode",
-   "inDegree": 19
-  },
-  {
-   "title": "Dyes",
-   "inDegree": 19
-  },
-  {
-   "title": "House",
-   "inDegree": 19
-  },
-  {
-   "title": "1.3.0.1",
-   "inDegree": 18
-  },
-  {
-   "title": "Informational Accessories",
-   "inDegree": 18
-  },
-  {
-   "title": "The Crimson",
-   "inDegree": 18
-  },
-  {
-   "title": "Crossover content",
-   "inDegree": 18
-  },
-  {
-   "title": "1.4.0.1",
-   "inDegree": 18
-  },
-  {
-   "title": "Lava",
-   "inDegree": 17
-  },
-  {
-   "title": "Mechanical bosses",
-   "inDegree": 17
-  },
-  {
-   "title": "Moon phase",
-   "inDegree": 17
-  },
-  {
-   "title": "Bestiary",
-   "inDegree": 17
-  },
-  {
-   "title": "Liquids",
-   "inDegree": 17
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "The Underworld",
-   "betweenness": 2541
-  },
-  {
-   "title": "Steampunker",
-   "betweenness": 2457
-  },
-  {
-   "title": "Royal Gel",
-   "betweenness": 2184
-  },
-  {
-   "title": "Ambient entities",
-   "betweenness": 2065
+   "title": "Background walls",
+   "firstLinks": 34
   },
   {
    "title": "NPCs",
-   "betweenness": 2040
+   "firstLinks": 31
   },
   {
-   "title": "Crossover content",
-   "betweenness": 2020
+   "title": "1.2",
+   "firstLinks": 29
   },
   {
-   "title": "Bats",
-   "betweenness": 1776
+   "title": "Dyes",
+   "firstLinks": 26
   },
   {
-   "title": "1.4.5.7",
-   "betweenness": 1620
+   "title": "Enemies",
+   "firstLinks": 26
   },
   {
-   "title": "Inventory",
-   "betweenness": 1575
+   "title": "Buffs",
+   "firstLinks": 25
   },
   {
-   "title": "Swords",
-   "betweenness": 1565
+   "title": "Invincibility frame",
+   "firstLinks": 25
   },
   {
-   "title": "Logic Gates",
-   "betweenness": 1521
+   "title": "Wings",
+   "firstLinks": 24
   },
   {
-   "title": "Cursor modes",
-   "betweenness": 1520
+   "title": "Debuffs",
+   "firstLinks": 24
+  },
+  {
+   "title": "Knockback",
+   "firstLinks": 24
+  },
+  {
+   "title": "Events",
+   "firstLinks": 24
+  },
+  {
+   "title": "Hardmode",
+   "firstLinks": 23
   },
   {
    "title": "Multiplayer",
-   "betweenness": 1507
+   "firstLinks": 23
   },
   {
-   "title": "Item Flask",
-   "betweenness": 1467
+   "title": "Modifiers",
+   "firstLinks": 21
   },
   {
-   "title": "Liquids",
-   "betweenness": 1430
+   "title": "Traveling Merchant",
+   "firstLinks": 20
   },
   {
-   "title": "Treasure Bag",
-   "betweenness": 1420
+   "title": "Achievements",
+   "firstLinks": 20
   },
   {
-   "title": "Ocean",
-   "betweenness": 1378
+   "title": "Crossover content",
+   "firstLinks": 20
   },
   {
-   "title": "Weapon Rack",
-   "betweenness": 1360
+   "title": "Tinkerer's Workshop",
+   "firstLinks": 19
   },
   {
-   "title": "Skeletron",
-   "betweenness": 1352
+   "title": "Lava",
+   "firstLinks": 18
   },
   {
-   "title": "Re-Logic",
-   "betweenness": 1329
+   "title": "House",
+   "firstLinks": 18
   },
   {
-   "title": "Item IDs",
-   "betweenness": 1302
-  },
-  {
-   "title": "Bestiary",
-   "betweenness": 1302
-  },
-  {
-   "title": "Obsidian",
-   "betweenness": 1284
+   "title": "Statues",
+   "firstLinks": 18
   },
   {
    "title": "Bosses",
-   "betweenness": 1260
+   "firstLinks": 18
   },
   {
-   "title": "The Horseman's Blade",
-   "betweenness": 1256
+   "title": "Item Flask",
+   "firstLinks": 18
+  },
+  {
+   "title": "Master Mode",
+   "firstLinks": 17
+  },
+  {
+   "title": "Moon phase",
+   "firstLinks": 17
+  },
+  {
+   "title": "1.4.0.1",
+   "firstLinks": 17
+  },
+  {
+   "title": "The Crimson",
+   "firstLinks": 16
+  },
+  {
+   "title": "Bestiary",
+   "firstLinks": 16
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Steampunker",
+   "chains": 2301
+  },
+  {
+   "title": "Re-Logic",
+   "chains": 2301
+  },
+  {
+   "title": "Bestiary",
+   "chains": 2301
+  },
+  {
+   "title": "Bosses",
+   "chains": 1204
+  },
+  {
+   "title": "NPC drops",
+   "chains": 675
   },
   {
    "title": "Items",
-   "betweenness": 1250
-  },
-  {
-   "title": "Cthulhu",
-   "betweenness": 1197
+   "chains": 674
   },
   {
    "title": "Map viewers",
-   "betweenness": 1170
+   "chains": 626
+  },
+  {
+   "title": "Item IDs",
+   "chains": 615
+  },
+  {
+   "title": "Weapon Rack",
+   "chains": 569
+  },
+  {
+   "title": "Moon Lord",
+   "chains": 565
+  },
+  {
+   "title": "Item Flask",
+   "chains": 563
+  },
+  {
+   "title": "Treasure Bag",
+   "chains": 540
+  },
+  {
+   "title": "The Horseman's Blade",
+   "chains": 538
+  },
+  {
+   "title": "Swords",
+   "chains": 537
+  },
+  {
+   "title": "Multiplayer",
+   "chains": 534
+  },
+  {
+   "title": "Bats",
+   "chains": 522
+  },
+  {
+   "title": "Ambient entities",
+   "chains": 521
+  },
+  {
+   "title": "Difficulty",
+   "chains": 456
+  },
+  {
+   "title": "Server",
+   "chains": 384
+  },
+  {
+   "title": "World size",
+   "chains": 380
+  },
+  {
+   "title": "The Hallow",
+   "chains": 356
+  },
+  {
+   "title": "Mechanical bosses",
+   "chains": 350
+  },
+  {
+   "title": "Coins",
+   "chains": 348
+  },
+  {
+   "title": "Evil biomes",
+   "chains": 343
+  },
+  {
+   "title": "Graveyard",
+   "chains": 341
+  },
+  {
+   "title": "Uzi",
+   "chains": 308
+  },
+  {
+   "title": "Angry Trapper",
+   "chains": 307
+  },
+  {
+   "title": "Clinger",
+   "chains": 305
   },
   {
    "title": "Candelabras",
-   "betweenness": 1112
+   "chains": 304
   },
   {
-   "title": "Title messages",
-   "betweenness": 1056
+   "title": "Death",
+   "chains": 271
   }
  ]
 }

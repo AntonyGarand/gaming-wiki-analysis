@@ -3,65 +3,99 @@
  "rank": "2",
  "nodes": 4498,
  "converge": {
-  "articles": 3597,
-  "pct": 79.97,
-  "deadEnd": 901,
-  "deadEndPct": 20.03,
-  "noLinks": 67,
-  "tooFewLinks": 204,
-  "unresolvable": 27
+  "articles": 4104,
+  "pct": 91.24,
+  "deadEnd": 394,
+  "deadEndPct": 8.76,
+  "noLinks": 63,
+  "tooFewLinks": 251,
+  "unresolvable": 0
  },
  "hopStats": {
-  "mean": 3.76,
+  "mean": 4.03,
   "median": 4,
-  "p90": 6,
+  "p90": 7,
   "max": 10
  },
  "histogram": {
-  "0": 43,
-  "1": 83,
-  "2": 523,
-  "3": 1123,
-  "4": 1088,
-  "5": 333,
-  "6": 117,
-  "7": 108,
-  "8": 53,
-  "9": 117,
-  "10": 9
+  "0": 46,
+  "1": 87,
+  "2": 527,
+  "3": 1065,
+  "4": 1085,
+  "5": 705,
+  "6": 150,
+  "7": 232,
+  "8": 77,
+  "9": 120,
+  "10": 10
+ },
+ "eligibleLinks": {
+  "histogram": {
+   "0": 63,
+   "1": 251,
+   "2": 1430,
+   "3": 1046,
+   "4": 491,
+   "5": 316,
+   "6": 229,
+   "7": 130,
+   "8": 102,
+   "9": 107,
+   "10": 333
+  },
+  "atLeast": {
+   "1": 98.6,
+   "2": 93,
+   "3": 61.2,
+   "5": 27.1
+  }
+ },
+ "concentration": {
+  "top1Pct": 76.41,
+  "top3Pct": 87.88,
+  "top10Pct": 90.37,
+  "cycleCount": 21,
+  "entropyBits": 1.01
  },
  "components": 22,
  "cycleCount": 21,
  "largestCycle": {
   "members": [
-   "Hypixel Network"
+   "Hypixel Network",
+   "Simon Collins-Laflamme",
+   "Hypixel Studios",
+   "Hypixel Inc."
   ],
-  "size": 1,
-  "basin": 2947
+  "size": 4,
+  "basin": 3437
  },
  "topAttractors": [
   {
    "cycle": [
-    "Hypixel Network"
+    "Hypixel Network",
+    "Simon Collins-Laflamme",
+    "Hypixel Studios",
+    "Hypixel Inc."
    ],
-   "basin": 2947,
-   "pct": 65.52
+   "basin": 3437,
+   "pct": 76.41
   },
   {
    "cycle": [
     "Zone",
     "Region"
    ],
-   "basin": 368,
-   "pct": 8.18
+   "basin": 381,
+   "pct": 8.47
   },
   {
    "cycle": [
     "Item",
     "Storage"
    ],
-   "basin": 136,
-   "pct": 3.02
+   "basin": 135,
+   "pct": 3
   },
   {
    "cycle": [
@@ -73,20 +107,20 @@
   },
   {
    "cycle": [
-    "Ancient Gateway",
-    "Fragment",
-    "Fragment Key"
+    "Tilled Dirt",
+    "Hoe"
    ],
    "basin": 18,
    "pct": 0.4
   },
   {
    "cycle": [
-    "Tilled Dirt",
-    "Hoe"
+    "Ancient Gateway",
+    "Fragment",
+    "Fragment Key"
    ],
-   "basin": 17,
-   "pct": 0.38
+   "basin": 18,
+   "pct": 0.4
   },
   {
    "cycle": [
@@ -114,17 +148,17 @@
   },
   {
    "cycle": [
-    "Light Leather",
-    "Tanning Rack",
-    "Light Hide"
+    "Release Patchline",
+    "Patchline"
    ],
-   "basin": 7,
-   "pct": 0.16
+   "basin": 11,
+   "pct": 0.24
   },
   {
    "cycle": [
-    "Release Patchline",
-    "Patchline"
+    "Light Leather",
+    "Tanning Rack",
+    "Light Hide"
    ],
    "basin": 7,
    "pct": 0.16
@@ -204,28 +238,10 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Creative Mode",
-   "chains": 373,
-   "pct": 8.29,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Update 6",
-   "chains": 144,
-   "pct": 3.2,
-   "reason": "redlink target"
-  },
-  {
    "title": "Pickaxe",
    "chains": 56,
    "pct": 1.24,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Oasis",
-   "chains": 8,
-   "pct": 0.18,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Asset Editor",
@@ -235,8 +251,8 @@
   },
   {
    "title": "Controls",
-   "chains": 4,
-   "pct": 0.09,
+   "chains": 5,
+   "pct": 0.11,
    "reason": "no eligible links"
   },
   {
@@ -252,12 +268,6 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Projectiles",
-   "chains": 2,
-   "pct": 0.04,
-   "reason": "redlink target"
-  },
-  {
    "title": "Animation",
    "chains": 2,
    "pct": 0.04,
@@ -267,13 +277,7 @@
    "title": "Hytale Blog",
    "chains": 2,
    "pct": 0.04,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Friends List",
-   "chains": 2,
-   "pct": 0.04,
-   "reason": "redlink target"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Server browser",
@@ -292,251 +296,281 @@
    "chains": 2,
    "pct": 0.04,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Axe",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Leather",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Dog",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "0.0.1-pre.1.1",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "0.0.2-pre.1.1",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
-  {
-   "title": "Exploration Mode",
-   "inDegree": 865
-  },
+ "topFirstLinkTargets": [
   {
    "title": "Builder's Workbench",
-   "inDegree": 814
+   "firstLinks": 803
+  },
+  {
+   "title": "Exploration Mode",
+   "firstLinks": 800
   },
   {
    "title": "Creative Inventory",
-   "inDegree": 315
+   "firstLinks": 361
   },
   {
    "title": "Hytale",
-   "inDegree": 205
+   "firstLinks": 204
   },
   {
    "title": "Tree",
-   "inDegree": 154
+   "firstLinks": 154
   },
   {
    "title": "NPC",
-   "inDegree": 125
+   "firstLinks": 126
   },
   {
    "title": "Prefab",
-   "inDegree": 117
+   "firstLinks": 119
   },
   {
    "title": "Furniture Workbench",
-   "inDegree": 112
+   "firstLinks": 112
   },
   {
    "title": "Emerald Wilds",
-   "inDegree": 69
+   "firstLinks": 70
   },
   {
    "title": "Howling Sands",
-   "inDegree": 51
-  },
-  {
-   "title": "Farmer's Workbench",
-   "inDegree": 38
+   "firstLinks": 53
   },
   {
    "title": "Whisperfrost Frontiers",
-   "inDegree": 37
+   "firstLinks": 38
+  },
+  {
+   "title": "Farmer's Workbench",
+   "firstLinks": 38
   },
   {
    "title": "Devastated Lands",
-   "inDegree": 37
-  },
-  {
-   "title": "The Guttering Hollows",
-   "inDegree": 35
+   "firstLinks": 37
   },
   {
    "title": "Goblin Tinkerer's Workbench",
-   "inDegree": 29
+   "firstLinks": 29
+  },
+  {
+   "title": "The Guttering Hollows",
+   "firstLinks": 26
   },
   {
    "title": "Tropical Jungle",
-   "inDegree": 24
+   "firstLinks": 24
   },
   {
    "title": "Food",
-   "inDegree": 23
+   "firstLinks": 23
   },
   {
    "title": "The Fens",
-   "inDegree": 20
+   "firstLinks": 20
   },
   {
    "title": "Blacksmith's Anvil",
-   "inDegree": 20
+   "firstLinks": 20
   },
   {
    "title": "Cave",
-   "inDegree": 18
+   "firstLinks": 18
   },
   {
    "title": "Cinder Wastes",
-   "inDegree": 18
-  },
-  {
-   "title": "Orbis",
-   "inDegree": 16
-  },
-  {
-   "title": "Chest",
-   "inDegree": 16
-  },
-  {
-   "title": "Health Regen",
-   "inDegree": 16
-  },
-  {
-   "title": "Shield",
-   "inDegree": 16
+   "firstLinks": 18
   },
   {
    "title": "Avatar",
-   "inDegree": 15
+   "firstLinks": 16
   },
   {
    "title": "Ocean",
-   "inDegree": 15
-  },
-  {
-   "title": "Arrow",
-   "inDegree": 15
-  },
-  {
-   "title": "Creative Mode",
-   "inDegree": 15
-  },
-  {
-   "title": "Kweebec Village",
-   "inDegree": 13
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Exploration Mode",
-   "betweenness": 3476
-  },
-  {
-   "title": "Hytale",
-   "betweenness": 2926
-  },
-  {
-   "title": "Builder's Workbench",
-   "betweenness": 2523
-  },
-  {
-   "title": "NPC",
-   "betweenness": 948
-  },
-  {
-   "title": "Furniture Workbench",
-   "betweenness": 928
-  },
-  {
-   "title": "Memories",
-   "betweenness": 903
-  },
-  {
-   "title": "Avatar",
-   "betweenness": 810
-  },
-  {
-   "title": "Monster",
-   "betweenness": 807
-  },
-  {
-   "title": "Bench",
-   "betweenness": 804
+   "firstLinks": 16
   },
   {
    "title": "Orbis",
-   "betweenness": 724
+   "firstLinks": 16
   },
   {
-   "title": "Gaia",
-   "betweenness": 684
+   "title": "Creative Mode",
+   "firstLinks": 16
   },
   {
-   "title": "Hostile",
-   "betweenness": 576
-  },
-  {
-   "title": "Lore",
-   "betweenness": 516
-  },
-  {
-   "title": "Emerald Wilds",
-   "betweenness": 495
-  },
-  {
-   "title": "Zone",
-   "betweenness": 358
-  },
-  {
-   "title": "Food",
-   "betweenness": 357
-  },
-  {
-   "title": "Creative Inventory",
-   "betweenness": 348
-  },
-  {
-   "title": "Official Q&As",
-   "betweenness": 346
-  },
-  {
-   "title": "Devastated Lands",
-   "betweenness": 345
-  },
-  {
-   "title": "Entity Effect",
-   "betweenness": 342
-  },
-  {
-   "title": "Tree",
-   "betweenness": 332
+   "title": "Chest",
+   "firstLinks": 16
   },
   {
    "title": "Health Regen",
-   "betweenness": 316
+   "firstLinks": 16
   },
   {
-   "title": "Grilled Fish",
-   "betweenness": 290
+   "title": "Shield",
+   "firstLinks": 16
   },
   {
-   "title": "Health",
-   "betweenness": 285
+   "title": "Arrow",
+   "firstLinks": 15
   },
   {
-   "title": "Weapon",
-   "betweenness": 225
+   "title": "Fishing Trap",
+   "firstLinks": 13
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Hypixel Network",
+   "chains": 3437
   },
   {
-   "title": "Inventory",
-   "betweenness": 220
+   "title": "Simon Collins-Laflamme",
+   "chains": 3437
   },
   {
-   "title": "Howling Sands",
-   "betweenness": 200
+   "title": "Hypixel Studios",
+   "chains": 3437
   },
   {
-   "title": "The Fens",
-   "betweenness": 148
+   "title": "Hypixel Inc.",
+   "chains": 3437
+  },
+  {
+   "title": "Hytale",
+   "chains": 3415
+  },
+  {
+   "title": "Exploration Mode",
+   "chains": 2233
+  },
+  {
+   "title": "Builder's Workbench",
+   "chains": 831
+  },
+  {
+   "title": "Creative Mode",
+   "chains": 573
+  },
+  {
+   "title": "Creative Inventory",
+   "chains": 402
+  },
+  {
+   "title": "Zone",
+   "chains": 381
+  },
+  {
+   "title": "Region",
+   "chains": 381
+  },
+  {
+   "title": "Orbis",
+   "chains": 357
+  },
+  {
+   "title": "Hostile",
+   "chains": 291
+  },
+  {
+   "title": "Monster",
+   "chains": 270
+  },
+  {
+   "title": "NPC",
+   "chains": 238
+  },
+  {
+   "title": "Official Q&As",
+   "chains": 176
+  },
+  {
+   "title": "Lore",
+   "chains": 175
+  },
+  {
+   "title": "Gaia",
+   "chains": 174
+  },
+  {
+   "title": "Emerald Wilds",
+   "chains": 167
+  },
+  {
+   "title": "Tree",
+   "chains": 167
+  },
+  {
+   "title": "Avatar",
+   "chains": 166
+  },
+  {
+   "title": "Block",
+   "chains": 149
+  },
+  {
+   "title": "Update 6",
+   "chains": 146
   },
   {
    "title": "Prefab",
-   "betweenness": 141
+   "chains": 144
+  },
+  {
+   "title": "Bench",
+   "chains": 137
   },
   {
    "title": "Item",
-   "betweenness": 134
+   "chains": 135
+  },
+  {
+   "title": "Storage",
+   "chains": 135
+  },
+  {
+   "title": "Memories",
+   "chains": 130
+  },
+  {
+   "title": "Devastated Lands",
+   "chains": 117
+  },
+  {
+   "title": "Furniture Workbench",
+   "chains": 117
   }
  ]
 }

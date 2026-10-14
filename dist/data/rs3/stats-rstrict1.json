@@ -3,42 +3,70 @@
  "rank": "strict1",
  "nodes": 79761,
  "converge": {
-  "articles": 77256,
-  "pct": 96.86,
-  "deadEnd": 2505,
-  "deadEndPct": 3.14,
-  "noLinks": 2191,
+  "articles": 77429,
+  "pct": 97.08,
+  "deadEnd": 2332,
+  "deadEndPct": 2.92,
+  "noLinks": 2214,
   "tooFewLinks": 0,
-  "unresolvable": 46
+  "unresolvable": 3
  },
  "hopStats": {
-  "mean": 3.99,
+  "mean": 4.01,
   "median": 3,
   "p90": 8,
   "max": 17
  },
  "histogram": {
-  "0": 596,
-  "1": 6236,
-  "2": 18995,
-  "3": 16116,
-  "4": 12609,
-  "5": 6921,
-  "6": 3179,
-  "7": 2710,
-  "8": 3228,
-  "9": 2630,
-  "10": 2119,
-  "11": 1257,
+  "0": 512,
+  "1": 6158,
+  "2": 19004,
+  "3": 16157,
+  "4": 12683,
+  "5": 6926,
+  "6": 3185,
+  "7": 2716,
+  "8": 3329,
+  "9": 2637,
+  "10": 2200,
+  "11": 1259,
   "12": 494,
-  "13": 140,
-  "14": 20,
+  "13": 142,
+  "14": 21,
   "15": 2,
   "16": 3,
   "17": 1
  },
- "components": 339,
- "cycleCount": 338,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 2217,
+   "1": 6358,
+   "2": 10238,
+   "3": 10053,
+   "4": 9430,
+   "5": 7603,
+   "6": 5676,
+   "7": 4245,
+   "8": 3578,
+   "9": 2896,
+   "10": 17467
+  },
+  "atLeast": {
+   "1": 97.2,
+   "2": 89.2,
+   "3": 76.4,
+   "5": 52
+  }
+ },
+ "concentration": {
+  "top1Pct": 18.12,
+  "top3Pct": 46.51,
+  "top10Pct": 91.21,
+  "cycleCount": 248,
+  "entropyBits": 3.54
+ },
+ "components": 249,
+ "cycleCount": 248,
  "largestCycle": {
   "members": [
    "Elder Gods",
@@ -46,7 +74,7 @@
    "Elder artefacts"
   ],
   "size": 3,
-  "basin": 14395
+  "basin": 14450
  },
  "topAttractors": [
   {
@@ -55,8 +83,8 @@
     "Gods",
     "Elder artefacts"
    ],
-   "basin": 14395,
-   "pct": 18.05
+   "basin": 14450,
+   "pct": 18.12
   },
   {
    "cycle": [
@@ -64,8 +92,8 @@
     "Skill training guides",
     "Experience"
    ],
-   "basin": 11442,
-   "pct": 14.35
+   "basin": 11453,
+   "pct": 14.36
   },
   {
    "cycle": [
@@ -75,23 +103,23 @@
     "Beneath Cursed Tides",
     "Quests"
    ],
-   "basin": 11072,
-   "pct": 13.88
+   "basin": 11197,
+   "pct": 14.04
   },
   {
    "cycle": [
     "Items",
     "Backpack"
    ],
-   "basin": 9244,
-   "pct": 11.59
+   "basin": 9238,
+   "pct": 11.58
   },
   {
    "cycle": [
     "Members",
     "Membership subscription"
    ],
-   "basin": 7332,
+   "basin": 7334,
    "pct": 9.19
   },
   {
@@ -99,8 +127,8 @@
     "Jagex",
     "Andrew Gower"
    ],
-   "basin": 5997,
-   "pct": 7.52
+   "basin": 6129,
+   "pct": 7.68
   },
   {
    "cycle": [
@@ -116,7 +144,7 @@
     "Coins",
     "Grand Exchange"
    ],
-   "basin": 4613,
+   "basin": 4609,
    "pct": 5.78
   },
   {
@@ -124,8 +152,8 @@
     "List of races",
     "Abyssal"
    ],
-   "basin": 2141,
-   "pct": 2.68
+   "basin": 2145,
+   "pct": 2.69
   },
   {
    "cycle": [
@@ -140,7 +168,7 @@
     "Construction",
     "Player-owned house"
    ],
-   "basin": 1044,
+   "basin": 1045,
    "pct": 1.31
   },
   {
@@ -157,7 +185,7 @@
     "White Knights",
     "Temple Knights"
    ],
-   "basin": 457,
+   "basin": 458,
    "pct": 0.57
   },
   {
@@ -165,7 +193,7 @@
     "Demon",
     "Infernus"
    ],
-   "basin": 277,
+   "basin": 280,
    "pct": 0.35
   },
   {
@@ -182,7 +210,7 @@
     "Dragon (race)",
     "Dragonfire"
    ],
-   "basin": 159,
+   "basin": 158,
    "pct": 0.2
   },
   {
@@ -220,34 +248,10 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Equipment tier",
-   "chains": 87,
-   "pct": 0.11,
-   "reason": "redlink target"
-  },
-  {
    "title": "Treasure Trails/Guide/Anagrams",
    "chains": 57,
    "pct": 0.07,
    "reason": "no eligible links"
-  },
-  {
-   "title": "2006 Halloween event",
-   "chains": 32,
-   "pct": 0.04,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Albums",
-   "chains": 19,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "One Piercing Note",
-   "chains": 17,
-   "pct": 0.02,
-   "reason": "redlink target"
   },
   {
    "title": "Prayer powder",
@@ -280,6 +284,12 @@
    "reason": "no eligible links"
   },
   {
+   "title": "Clan Citadel/Patterns",
+   "chains": 3,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
    "title": "Post-quest rewards",
    "chains": 3,
    "pct": 0,
@@ -304,255 +314,273 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Vestments of havoc boots",
-   "chains": 3,
+   "title": "RuneScape Wiki",
+   "chains": 2,
    "pct": 0,
-   "reason": "redlink target"
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Tracey West",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bauble",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "No Good to Me Alive",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Cosmetic override",
-   "inDegree": 3682
+   "firstLinks": 3682
   },
   {
    "title": "Scenery",
-   "inDegree": 3233
+   "firstLinks": 3233
   },
   {
    "title": "Achievements",
-   "inDegree": 2567
+   "firstLinks": 2567
   },
   {
    "title": "Items",
-   "inDegree": 1421
+   "firstLinks": 1421
   },
   {
    "title": "Music",
-   "inDegree": 1284
+   "firstLinks": 1284
   },
   {
    "title": "Player-owned port",
-   "inDegree": 1075
+   "firstLinks": 1075
   },
   {
    "title": "Buffs and debuffs",
-   "inDegree": 922
+   "firstLinks": 923
   },
   {
    "title": "Treasure Hunter",
-   "inDegree": 862
+   "firstLinks": 862
   },
   {
    "title": "Dungeoneering",
-   "inDegree": 780
+   "firstLinks": 780
   },
   {
    "title": "Titles",
-   "inDegree": 664
+   "firstLinks": 664
   },
   {
    "title": "Livestream",
-   "inDegree": 657
+   "firstLinks": 657
   },
   {
    "title": "Non-player character",
-   "inDegree": 631
+   "firstLinks": 632
   },
   {
    "title": "Jagex Store",
-   "inDegree": 555
+   "firstLinks": 555
   },
   {
    "title": "Jagex",
-   "inDegree": 512
+   "firstLinks": 512
   },
   {
    "title": "Video",
-   "inDegree": 500
+   "firstLinks": 500
   },
   {
    "title": "Construction",
-   "inDegree": 434
+   "firstLinks": 434
   },
   {
    "title": "Melee",
-   "inDegree": 391
+   "firstLinks": 397
   },
   {
    "title": "Daemonheim",
-   "inDegree": 385
+   "firstLinks": 385
   },
   {
    "title": "Quest items",
-   "inDegree": 377
+   "firstLinks": 377
   },
   {
    "title": "Attack",
-   "inDegree": 354
+   "firstLinks": 354
   },
   {
    "title": "Defence",
-   "inDegree": 354
+   "firstLinks": 354
   },
   {
    "title": "Magic",
-   "inDegree": 352
+   "firstLinks": 354
   },
   {
    "title": "Furniture",
-   "inDegree": 343
+   "firstLinks": 343
   },
   {
    "title": "Ranged",
-   "inDegree": 330
+   "firstLinks": 330
   },
   {
    "title": "Solomon's General Store",
-   "inDegree": 291
+   "firstLinks": 291
   },
   {
    "title": "Patch Notes",
-   "inDegree": 285
+   "firstLinks": 285
   },
   {
    "title": "Members",
-   "inDegree": 285
+   "firstLinks": 285
   },
   {
    "title": "Unlock tokens",
-   "inDegree": 277
+   "firstLinks": 277
   },
   {
    "title": "Behind the Scenes",
-   "inDegree": 270
+   "firstLinks": 270
   },
   {
    "title": "Quests",
-   "inDegree": 258
+   "firstLinks": 258
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
-   "title": "Character",
-   "betweenness": 41532
-  },
-  {
-   "title": "Locations",
-   "betweenness": 41445
-  },
-  {
-   "title": "Kingdom",
-   "betweenness": 41004
-  },
-  {
-   "title": "Interface",
-   "betweenness": 40314
-  },
-  {
-   "title": "Combat",
-   "betweenness": 39285
-  },
-  {
-   "title": "Life points",
-   "betweenness": 38848
-  },
-  {
-   "title": "Gielinor",
-   "betweenness": 37140
-  },
-  {
-   "title": "Minimap",
-   "betweenness": 34955
-  },
-  {
-   "title": "Death (mechanic)",
-   "betweenness": 34118
-  },
-  {
-   "title": "World map",
-   "betweenness": 33216
-  },
-  {
-   "title": "Tutorial Island",
-   "betweenness": 29517
+   "title": "Gods",
+   "chains": 14450
   },
   {
    "title": "Elder Gods",
-   "betweenness": 25497
+   "chains": 14450
   },
   {
-   "title": "Misthalin",
-   "betweenness": 21392
+   "title": "Elder artefacts",
+   "chains": 14450
+  },
+  {
+   "title": "Gielinor",
+   "chains": 12475
   },
   {
    "title": "Skills",
-   "betweenness": 21248
+   "chains": 11453
   },
   {
-   "title": "Sunken Tutorial Island",
-   "betweenness": 18475
-  },
-  {
-   "title": "Magic",
-   "betweenness": 17190
-  },
-  {
-   "title": "Gods",
-   "betweenness": 15872
-  },
-  {
-   "title": "Quests",
-   "betweenness": 14826
-  },
-  {
-   "title": "Achievements",
-   "betweenness": 14420
-  },
-  {
-   "title": "Non-player character",
-   "betweenness": 14322
-  },
-  {
-   "title": "Melee",
-   "betweenness": 13150
-  },
-  {
-   "title": "Group Ironman Mode",
-   "betweenness": 11576
-  },
-  {
-   "title": "Scenery",
-   "betweenness": 11388
-  },
-  {
-   "title": "Kharidian Desert",
-   "betweenness": 11144
-  },
-  {
-   "title": "Monster",
-   "betweenness": 11030
-  },
-  {
-   "title": "Asgarnia",
-   "betweenness": 10815
-  },
-  {
-   "title": "Kandarin",
-   "betweenness": 10633
+   "title": "Experience",
+   "chains": 11453
   },
   {
    "title": "Skill training guides",
-   "betweenness": 9812
+   "chains": 11453
+  },
+  {
+   "title": "Interface",
+   "chains": 11197
+  },
+  {
+   "title": "Sunken Tutorial Island",
+   "chains": 11197
+  },
+  {
+   "title": "Quests",
+   "chains": 11197
+  },
+  {
+   "title": "Beneath Cursed Tides",
+   "chains": 11197
+  },
+  {
+   "title": "Tutorial Island",
+   "chains": 11197
   },
   {
    "title": "Items",
-   "betweenness": 9181
+   "chains": 9238
   },
   {
-   "title": "Ironman Mode",
-   "betweenness": 8751
+   "title": "Backpack",
+   "chains": 9238
+  },
+  {
+   "title": "World map",
+   "chains": 8396
+  },
+  {
+   "title": "Locations",
+   "chains": 8381
+  },
+  {
+   "title": "Members",
+   "chains": 7334
+  },
+  {
+   "title": "Membership subscription",
+   "chains": 7334
+  },
+  {
+   "title": "Minimap",
+   "chains": 7104
+  },
+  {
+   "title": "Character",
+   "chains": 7035
+  },
+  {
+   "title": "Kingdom",
+   "chains": 6926
+  },
+  {
+   "title": "Jagex",
+   "chains": 6129
+  },
+  {
+   "title": "Andrew Gower",
+   "chains": 6129
+  },
+  {
+   "title": "Death (mechanic)",
+   "chains": 4986
+  },
+  {
+   "title": "Life points",
+   "chains": 4968
+  },
+  {
+   "title": "Titles",
+   "chains": 4648
+  },
+  {
+   "title": "Customisations",
+   "chains": 4648
+  },
+  {
+   "title": "Trading",
+   "chains": 4609
+  },
+  {
+   "title": "Coins",
+   "chains": 4609
+  },
+  {
+   "title": "Grand Exchange",
+   "chains": 4609
   }
  ]
 }

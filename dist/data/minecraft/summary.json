@@ -1,29 +1,31 @@
 {
  "wiki": "minecraft",
- "generatedAt": "2026-10-12T13:47:16.388Z",
+ "generatedAt": "2026-10-14T04:05:11.421Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 58.47,
-   "deadEndPct": 41.53,
-   "components": 137,
-   "cycleCount": 136,
-   "meanHops": 3.79,
+   "convergePct": 62.64,
+   "deadEndPct": 37.36,
+   "components": 87,
+   "cycleCount": 86,
+   "meanHops": 3.81,
    "medianHops": 3,
    "maxHops": 14,
    "topAttractor": [
     "Block",
     "Slab"
    ],
-   "topAttractorPct": 32.84
+   "topAttractorPct": 35.84,
+   "top3Pct": 50.55,
+   "eligiblePct": 63.7
   },
   {
    "rank": "2",
-   "convergePct": 47.22,
-   "deadEndPct": 52.78,
-   "components": 97,
-   "cycleCount": 96,
-   "meanHops": 3.92,
+   "convergePct": 51.27,
+   "deadEndPct": 48.73,
+   "components": 99,
+   "cycleCount": 98,
+   "meanHops": 3.99,
    "medianHops": 4,
    "maxHops": 20,
    "topAttractor": [
@@ -31,77 +33,89 @@
     "Mob",
     "Mob AI",
     "NBT format",
-    "UUID",
-    "Java Edition 20w12a",
-    "Respawn Anchor"
+    "UUID"
    ],
-   "topAttractorPct": 23.72
+   "topAttractorPct": 26.79,
+   "top3Pct": 36.31,
+   "eligiblePct": 54
   },
   {
    "rank": "3",
-   "convergePct": 40.25,
-   "deadEndPct": 59.75,
-   "components": 75,
-   "cycleCount": 74,
-   "meanHops": 6.43,
-   "medianHops": 6,
-   "maxHops": 20,
+   "convergePct": 43.91,
+   "deadEndPct": 56.09,
+   "components": 72,
+   "cycleCount": 71,
+   "meanHops": 6.59,
+   "medianHops": 7,
+   "maxHops": 19,
    "topAttractor": [
     "Stronghold",
     "End portal"
    ],
-   "topAttractorPct": 20.02
+   "topAttractorPct": 21.32,
+   "top3Pct": 33,
+   "eligiblePct": 47.1
   },
   {
    "rank": "5",
-   "convergePct": 28.91,
-   "deadEndPct": 71.09,
-   "components": 42,
-   "cycleCount": 41,
-   "meanHops": 12.36,
+   "convergePct": 31.94,
+   "deadEndPct": 68.06,
+   "components": 36,
+   "cycleCount": 35,
+   "meanHops": 12.72,
    "medianHops": 12,
    "maxHops": 33,
    "topAttractor": [
     "Item",
     "Inventory"
    ],
-   "topAttractorPct": 23.41
+   "topAttractorPct": 26.12,
+   "top3Pct": 29.28,
+   "eligiblePct": 38.5
   },
   {
    "rank": "last",
-   "convergePct": 1.22,
-   "deadEndPct": 98.78,
-   "components": 74,
-   "cycleCount": 73,
-   "meanHops": 0.74,
-   "medianHops": 0,
-   "maxHops": 5,
+   "convergePct": 56.75,
+   "deadEndPct": 43.25,
+   "components": 153,
+   "cycleCount": 152,
+   "meanHops": 7.44,
+   "medianHops": 6,
+   "maxHops": 28,
    "topAttractor": [
-    "Java Edition mob render history/Zombified Piglin",
-    "Java Edition mob render history/Zombie Villager"
+    "Minecraft.net",
+    "List of Minecraft.net articles"
    ],
-   "topAttractorPct": 0.17
+   "topAttractorPct": 26.57,
+   "top3Pct": 36.16,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 14,
-   "deadEndPct": 86,
-   "components": 106,
-   "cycleCount": 105,
-   "meanHops": 7.52,
-   "medianHops": 4,
-   "maxHops": 35,
+   "convergePct": 62.23,
+   "deadEndPct": 37.77,
+   "components": 81,
+   "cycleCount": 80,
+   "meanHops": 8.7,
+   "medianHops": 7,
+   "maxHops": 26,
    "topAttractor": [
-    "Entity",
-    "Spider Jockey",
-    "Skeleton",
-    "Villager",
-    "Zombie Villager",
-    "Mob spawning",
-    "Llama",
-    "Mob"
+    "Damage",
+    "Knockback (mechanic)",
+    "Axe",
+    "Stick",
+    "Fortune",
+    "Fishing",
+    "Particles",
+    "Rain",
+    "Biome",
+    "Nautilus",
+    "Nautilus Armor",
+    "Fire Protection"
    ],
-   "topAttractorPct": 6.85
+   "topAttractorPct": 26.36,
+   "top3Pct": 42.58,
+   "eligiblePct": 100
   }
  ]
 }

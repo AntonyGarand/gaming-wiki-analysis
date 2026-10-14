@@ -1,35 +1,64 @@
 {
  "wiki": "terraria",
  "rank": "5",
- "nodes": 5213,
+ "nodes": 4337,
  "converge": {
-  "articles": 642,
-  "pct": 12.32,
-  "deadEnd": 4571,
-  "deadEndPct": 87.68,
-  "noLinks": 505,
-  "tooFewLinks": 1134,
-  "unresolvable": 420
+  "articles": 724,
+  "pct": 16.69,
+  "deadEnd": 3613,
+  "deadEndPct": 83.31,
+  "noLinks": 234,
+  "tooFewLinks": 990,
+  "unresolvable": 22
  },
  "hopStats": {
-  "mean": 1.89,
+  "mean": 2.07,
   "median": 2,
   "p90": 4,
-  "max": 8
+  "max": 9
  },
  "histogram": {
-  "0": 95,
-  "1": 222,
-  "2": 167,
-  "3": 73,
-  "4": 23,
-  "5": 37,
-  "6": 16,
-  "7": 7,
-  "8": 2
+  "0": 94,
+  "1": 228,
+  "2": 193,
+  "3": 97,
+  "4": 49,
+  "5": 23,
+  "6": 11,
+  "7": 20,
+  "8": 6,
+  "9": 3
  },
- "components": 48,
- "cycleCount": 47,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 256,
+   "1": 155,
+   "2": 272,
+   "3": 274,
+   "4": 289,
+   "5": 261,
+   "6": 241,
+   "7": 237,
+   "8": 217,
+   "9": 204,
+   "10": 1931
+  },
+  "atLeast": {
+   "1": 94.1,
+   "2": 90.5,
+   "3": 84.3,
+   "5": 71.3
+  }
+ },
+ "concentration": {
+  "top1Pct": 6.5,
+  "top3Pct": 11.07,
+  "top10Pct": 14.13,
+  "cycleCount": 45,
+  "entropyBits": 3.37
+ },
+ "components": 46,
+ "cycleCount": 45,
  "largestCycle": {
   "members": [
    "Blocks",
@@ -38,7 +67,7 @@
    "Bosses"
   ],
   "size": 4,
-  "basin": 224
+  "basin": 282
  },
  "topAttractors": [
   {
@@ -48,38 +77,32 @@
     "Consumables",
     "Bosses"
    ],
-   "basin": 224,
-   "pct": 4.3
+   "basin": 282,
+   "pct": 6.5
   },
   {
    "cycle": [
-    "Journey Mode",
-    "Difficulty"
+    "Day and night cycle",
+    "Illegal Gun Parts"
    ],
-   "basin": 90,
-   "pct": 1.73
+   "basin": 140,
+   "pct": 3.23
   },
   {
    "cycle": [
     "Grasses",
     "Acorn"
    ],
-   "basin": 62,
-   "pct": 1.19
+   "basin": 58,
+   "pct": 1.34
   },
   {
    "cycle": [
-    "Re-Logic"
+    "Journey Mode",
+    "Difficulty"
    ],
-   "basin": 34,
-   "pct": 0.65
-  },
-  {
-   "cycle": [
-    "Server"
-   ],
-   "basin": 34,
-   "pct": 0.65
+   "basin": 50,
+   "pct": 1.15
   },
   {
    "cycle": [
@@ -87,57 +110,56 @@
     "Melee weapons",
     "Swords"
    ],
-   "basin": 23,
-   "pct": 0.44
-  },
-  {
-   "cycle": [
-    "Solar Tablet Fragment",
-    "Solar Eclipse",
-    "Solar Tablet",
-    "Lihzahrd Chest"
-   ],
-   "basin": 19,
-   "pct": 0.36
+   "basin": 22,
+   "pct": 0.51
   },
   {
    "cycle": [
     "Red Riding armor",
     "Huntress armor"
    ],
-   "basin": 16,
-   "pct": 0.31
+   "basin": 17,
+   "pct": 0.39
   },
   {
    "cycle": [
     "Skyware Chest",
     "Celestial Magnet"
    ],
-   "basin": 15,
-   "pct": 0.29
+   "basin": 16,
+   "pct": 0.37
   },
   {
    "cycle": [
-    "Shiny Black Slab",
-    "Mobile version"
+    "Mobile version",
+    "Shiny Black Slab"
    ],
-   "basin": 9,
-   "pct": 0.17
-  },
-  {
-   "cycle": [
-    "Sandstorm"
-   ],
-   "basin": 7,
-   "pct": 0.13
+   "basin": 10,
+   "pct": 0.23
   },
   {
    "cycle": [
     "Granite Block",
     "Granite Golem"
    ],
+   "basin": 10,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Wind",
+    "Detonating Bubble"
+   ],
+   "basin": 8,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Eater of Souls",
+    "Crimera"
+   ],
    "basin": 7,
-   "pct": 0.13
+   "pct": 0.16
   },
   {
    "cycle": [
@@ -145,15 +167,15 @@
     "Ocean Crate"
    ],
    "basin": 7,
-   "pct": 0.13
+   "pct": 0.16
   },
   {
    "cycle": [
-    "Eater of Souls",
-    "Crimera"
+    "Mana Crystal",
+    "Mole people"
    ],
    "basin": 6,
-   "pct": 0.12
+   "pct": 0.14
   },
   {
    "cycle": [
@@ -162,31 +184,23 @@
     "Secret world seeds"
    ],
    "basin": 5,
-   "pct": 0.1
+   "pct": 0.12
   },
   {
    "cycle": [
-    "Marble Chest",
-    "Granite Chest"
+    "Granite Chest",
+    "Marble Chest"
    ],
    "basin": 5,
-   "pct": 0.1
+   "pct": 0.12
   },
   {
    "cycle": [
-    "Worm Food",
-    "Bloody Spine"
+    "Shadow Scale",
+    "Tissue Sample"
    ],
    "basin": 4,
-   "pct": 0.08
-  },
-  {
-   "cycle": [
-    "Mana Crystal",
-    "Mole people"
-   ],
-   "basin": 4,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
@@ -194,7 +208,7 @@
     "Nebula Fragment Block"
    ],
    "basin": 4,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
@@ -202,344 +216,360 @@
     "Wrath Potion"
    ],
    "basin": 4,
-   "pct": 0.08
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Daybroken",
+    "Solar Eruption"
+   ],
+   "basin": 3,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Blue Graduation set",
+    "Maroon Graduation set"
+   ],
+   "basin": 3,
+   "pct": 0.07
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Poisoned",
-   "chains": 1927,
-   "pct": 36.97,
+   "chains": 1884,
+   "pct": 43.44,
    "reason": "only 4 eligible links"
   },
   {
    "title": "By Hand",
-   "chains": 163,
-   "pct": 3.13,
+   "chains": 148,
+   "pct": 3.41,
    "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Platinum Bow",
-   "chains": 73,
-   "pct": 1.4,
-   "reason": "only 2 eligible links"
   },
   {
    "title": "Game mechanics",
    "chains": 70,
-   "pct": 1.34,
+   "pct": 1.61,
    "reason": "no eligible links"
   },
   {
-   "title": "Desktop version history",
-   "chains": 16,
-   "pct": 0.31,
+   "title": "Platinum Bow",
+   "chains": 65,
+   "pct": 1.5,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Undead Viking",
+   "chains": 41,
+   "pct": 0.95,
    "reason": "only 4 eligible links"
   },
   {
    "title": "Pine Wood",
-   "chains": 12,
+   "chains": 14,
+   "pct": 0.32,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Keys",
+   "chains": 10,
    "pct": 0.23,
    "reason": "only 4 eligible links"
   },
   {
-   "title": "Seasonal events",
-   "chains": 11,
-   "pct": 0.21,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Keys",
+   "title": "Desktop version history",
    "chains": 9,
-   "pct": 0.17,
+   "pct": 0.21,
    "reason": "only 4 eligible links"
   },
   {
-   "title": "Arms Dealer/cs",
-   "chains": 7,
-   "pct": 0.13,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Flat-surface items",
-   "chains": 7,
-   "pct": 0.13,
+   "title": "Spectre Bar",
+   "chains": 8,
+   "pct": 0.18,
    "reason": "only 3 eligible links"
   },
   {
    "title": "Shroomite Bar",
-   "chains": 6,
-   "pct": 0.12,
+   "chains": 7,
+   "pct": 0.16,
    "reason": "only 3 eligible links"
   },
   {
    "title": "List of items that deal melee hits",
-   "chains": 6,
-   "pct": 0.12,
+   "chains": 7,
+   "pct": 0.16,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Soul of Sight",
+   "chains": 7,
+   "pct": 0.16,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Pirate Deckhand",
+   "chains": 6,
+   "pct": 0.14,
+   "reason": "only 3 eligible links"
   },
   {
    "title": "Solar furniture",
    "chains": 6,
-   "pct": 0.12,
+   "pct": 0.14,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Darkness",
    "chains": 6,
-   "pct": 0.12,
+   "pct": 0.14,
    "reason": "only 4 eligible links"
-  },
-  {
-   "title": "Pirate Deckhand",
-   "chains": 5,
-   "pct": 0.1,
-   "reason": "only 3 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Enemies",
-   "inDegree": 93
+   "firstLinks": 93
   },
   {
    "title": "Blocks",
-   "inDegree": 72
+   "firstLinks": 74
   },
   {
    "title": "Events",
-   "inDegree": 57
+   "firstLinks": 58
   },
   {
    "title": "Layers",
-   "inDegree": 47
+   "firstLinks": 49
   },
   {
    "title": "Debuffs",
-   "inDegree": 43
+   "firstLinks": 38
   },
   {
    "title": "Trees",
-   "inDegree": 38
+   "firstLinks": 37
   },
   {
    "title": "Hardmode",
-   "inDegree": 36
+   "firstLinks": 32
   },
   {
    "title": "NPCs",
-   "inDegree": 36
-  },
-  {
-   "title": "Day and night cycle",
-   "inDegree": 28
-  },
-  {
-   "title": "Dungeon",
-   "inDegree": 27
-  },
-  {
-   "title": "Defense",
-   "inDegree": 26
-  },
-  {
-   "title": "The Corruption",
-   "inDegree": 25
-  },
-  {
-   "title": "Grasses",
-   "inDegree": 25
-  },
-  {
-   "title": "Knockback",
-   "inDegree": 25
+   "firstLinks": 31
   },
   {
    "title": "Lunar Events",
-   "inDegree": 24
-  },
-  {
-   "title": "Biomes",
-   "inDegree": 22
-  },
-  {
-   "title": "Inventory",
-   "inDegree": 22
-  },
-  {
-   "title": "Background walls",
-   "inDegree": 21
-  },
-  {
-   "title": "The Crimson",
-   "inDegree": 21
-  },
-  {
-   "title": "Cavern",
-   "inDegree": 21
-  },
-  {
-   "title": "Shimmer",
-   "inDegree": 20
-  },
-  {
-   "title": "Whips",
-   "inDegree": 19
-  },
-  {
-   "title": "Blood Moon",
-   "inDegree": 19
-  },
-  {
-   "title": "Ammunition items",
-   "inDegree": 18
-  },
-  {
-   "title": "Invincibility frame",
-   "inDegree": 18
-  },
-  {
-   "title": "Chests",
-   "inDegree": 17
-  },
-  {
-   "title": "Underground",
-   "inDegree": 17
-  },
-  {
-   "title": "Lava",
-   "inDegree": 16
-  },
-  {
-   "title": "Critical hit",
-   "inDegree": 16
-  },
-  {
-   "title": "Pickaxes",
-   "inDegree": 15
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Chests",
-   "betweenness": 4896
-  },
-  {
-   "title": "Hardmode",
-   "betweenness": 4896
-  },
-  {
-   "title": "Wall of Flesh",
-   "betweenness": 3324
-  },
-  {
-   "title": "Layers",
-   "betweenness": 3045
-  },
-  {
-   "title": "Trees",
-   "betweenness": 2940
-  },
-  {
-   "title": "Furniture",
-   "betweenness": 2805
-  },
-  {
-   "title": "Explosives (class)",
-   "betweenness": 2646
-  },
-  {
-   "title": "Living Tree",
-   "betweenness": 2622
-  },
-  {
-   "title": "Living Wood Chest",
-   "betweenness": 2195
-  },
-  {
-   "title": "Debuffs",
-   "betweenness": 1917
-  },
-  {
-   "title": "Enemies",
-   "betweenness": 1468
-  },
-  {
-   "title": "Cavern",
-   "betweenness": 1364
-  },
-  {
-   "title": "Biomes",
-   "betweenness": 1269
-  },
-  {
-   "title": "Silt Block",
-   "betweenness": 1250
-  },
-  {
-   "title": "Ocean",
-   "betweenness": 1248
+   "firstLinks": 28
   },
   {
    "title": "Day and night cycle",
-   "betweenness": 1232
+   "firstLinks": 27
   },
   {
-   "title": "Sand Blocks",
-   "betweenness": 1206
+   "title": "Defense",
+   "firstLinks": 25
   },
   {
-   "title": "Biome backgrounds",
-   "betweenness": 1136
+   "title": "Dungeon",
+   "firstLinks": 25
   },
   {
-   "title": "Illegal Gun Parts",
-   "betweenness": 1085
+   "title": "Knockback",
+   "firstLinks": 25
   },
   {
-   "title": "Events",
-   "betweenness": 1040
+   "title": "The Corruption",
+   "firstLinks": 24
   },
   {
-   "title": "NPCs",
-   "betweenness": 1032
+   "title": "Shimmer",
+   "firstLinks": 23
   },
   {
-   "title": "Goblin Army",
-   "betweenness": 954
+   "title": "Background walls",
+   "firstLinks": 21
   },
   {
-   "title": "Arms Dealer",
-   "betweenness": 948
+   "title": "Grasses",
+   "firstLinks": 21
   },
   {
-   "title": "Angler",
-   "betweenness": 920
+   "title": "The Crimson",
+   "firstLinks": 21
+  },
+  {
+   "title": "Cavern",
+   "firstLinks": 21
+  },
+  {
+   "title": "Inventory",
+   "firstLinks": 21
+  },
+  {
+   "title": "Whips",
+   "firstLinks": 19
+  },
+  {
+   "title": "Blood Moon",
+   "firstLinks": 19
+  },
+  {
+   "title": "Biomes",
+   "firstLinks": 19
+  },
+  {
+   "title": "Chests",
+   "firstLinks": 18
+  },
+  {
+   "title": "Underground",
+   "firstLinks": 18
+  },
+  {
+   "title": "Invincibility frame",
+   "firstLinks": 18
+  },
+  {
+   "title": "Dyes",
+   "firstLinks": 17
   },
   {
    "title": "Lava",
-   "betweenness": 920
+   "firstLinks": 17
+  },
+  {
+   "title": "Master Mode",
+   "firstLinks": 15
+  },
+  {
+   "title": "Wings",
+   "firstLinks": 15
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Poisoned",
+   "chains": 1884
+  },
+  {
+   "title": "Debuffs",
+   "chains": 1875
+  },
+  {
+   "title": "Wall of Flesh",
+   "chains": 1616
+  },
+  {
+   "title": "Hardmode",
+   "chains": 1588
+  },
+  {
+   "title": "Chests",
+   "chains": 1161
+  },
+  {
+   "title": "Furniture",
+   "chains": 558
+  },
+  {
+   "title": "Living Wood Chest",
+   "chains": 484
+  },
+  {
+   "title": "Living Tree",
+   "chains": 482
+  },
+  {
+   "title": "Layers",
+   "chains": 480
+  },
+  {
+   "title": "Explosives (class)",
+   "chains": 434
+  },
+  {
+   "title": "Trees",
+   "chains": 410
+  },
+  {
+   "title": "Enemies",
+   "chains": 385
+  },
+  {
+   "title": "Consumables",
+   "chains": 282
+  },
+  {
+   "title": "Blocks",
+   "chains": 282
+  },
+  {
+   "title": "Inventory",
+   "chains": 282
+  },
+  {
+   "title": "Bosses",
+   "chains": 282
+  },
+  {
+   "title": "Ocean",
+   "chains": 175
   },
   {
    "title": "Guide",
-   "betweenness": 880
+   "chains": 174
   },
   {
-   "title": "Fishing",
-   "betweenness": 858
+   "title": "NPCs",
+   "chains": 171
+  },
+  {
+   "title": "By Hand",
+   "chains": 148
+  },
+  {
+   "title": "Recipes",
+   "chains": 146
+  },
+  {
+   "title": "Sand Blocks",
+   "chains": 142
+  },
+  {
+   "title": "Day and night cycle",
+   "chains": 140
+  },
+  {
+   "title": "Illegal Gun Parts",
+   "chains": 140
+  },
+  {
+   "title": "Biome backgrounds",
+   "chains": 136
+  },
+  {
+   "title": "Biomes",
+   "chains": 135
+  },
+  {
+   "title": "Silt Block",
+   "chains": 133
+  },
+  {
+   "title": "Cavern",
+   "chains": 132
   },
   {
    "title": "Spawn",
-   "betweenness": 856
+   "chains": 127
   },
   {
-   "title": "Bullets",
-   "betweenness": 840
-  },
-  {
-   "title": "Bug Net",
-   "betweenness": 720
+   "title": "Goblin Army",
+   "chains": 126
   }
  ]
 }

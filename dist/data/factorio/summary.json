@@ -1,76 +1,84 @@
 {
  "wiki": "factorio",
- "generatedAt": "2026-10-12T13:36:11.862Z",
+ "generatedAt": "2026-10-14T04:05:46.667Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 50.46,
-   "deadEndPct": 49.54,
-   "components": 143,
-   "cycleCount": 142,
-   "meanHops": 2.81,
-   "medianHops": 2,
-   "maxHops": 16,
+   "convergePct": 58.17,
+   "deadEndPct": 41.83,
+   "components": 24,
+   "cycleCount": 23,
+   "meanHops": 3.05,
+   "medianHops": 3,
+   "maxHops": 10,
    "topAttractor": [
     "Player",
     "Multiplayer"
    ],
-   "topAttractorPct": 8.03
+   "topAttractorPct": 23.61,
+   "top3Pct": 39.35,
+   "eligiblePct": 58.9
   },
   {
    "rank": "2",
-   "convergePct": 34.26,
-   "deadEndPct": 65.74,
-   "components": 125,
-   "cycleCount": 124,
-   "meanHops": 3.68,
-   "medianHops": 2,
-   "maxHops": 23,
+   "convergePct": 53.98,
+   "deadEndPct": 46.02,
+   "components": 24,
+   "cycleCount": 23,
+   "meanHops": 4.01,
+   "medianHops": 3,
+   "maxHops": 14,
    "topAttractor": [
-    "Lab",
-    "Technologies"
+    "Technologies",
+    "Lab"
    ],
-   "topAttractorPct": 7.47
+   "topAttractorPct": 19.76,
+   "top3Pct": 43.54,
+   "eligiblePct": 55.8
   },
   {
    "rank": "3",
-   "convergePct": 27.05,
-   "deadEndPct": 72.95,
-   "components": 97,
-   "cycleCount": 96,
-   "meanHops": 2.91,
+   "convergePct": 43.2,
+   "deadEndPct": 56.8,
+   "components": 25,
+   "cycleCount": 24,
+   "meanHops": 2.52,
    "medianHops": 2,
-   "maxHops": 18,
+   "maxHops": 9,
    "topAttractor": [
     "Science pack",
     "Technologies"
    ],
-   "topAttractorPct": 2.69
+   "topAttractorPct": 8.13,
+   "top3Pct": 19.93,
+   "eligiblePct": 50.6
   },
   {
    "rank": "5",
-   "convergePct": 8.44,
-   "deadEndPct": 91.56,
-   "components": 47,
-   "cycleCount": 46,
-   "meanHops": 3.6,
-   "medianHops": 3,
-   "maxHops": 12,
+   "convergePct": 31.31,
+   "deadEndPct": 68.69,
+   "components": 17,
+   "cycleCount": 16,
+   "meanHops": 9.29,
+   "medianHops": 8,
+   "maxHops": 23,
    "topAttractor": [
-    "Low density structure",
-    "Low density structure productivity (research)"
+    "Constant combinator",
+    "Selector combinator"
    ],
-   "topAttractorPct": 1.23
+   "topAttractorPct": 17.02,
+   "top3Pct": 24.21,
+   "eligiblePct": 39.2
   },
   {
    "rank": "last",
-   "convergePct": 42.13,
-   "deadEndPct": 57.87,
-   "components": 157,
-   "cycleCount": 156,
-   "meanHops": 2.97,
-   "medianHops": 2,
-   "maxHops": 15,
+   "convergePct": 56.72,
+   "deadEndPct": 43.28,
+   "components": 40,
+   "cycleCount": 39,
+   "meanHops": 2.79,
+   "medianHops": 3,
+   "maxHops": 10,
    "topAttractor": [
     "Space platform",
     "Oxide asteroid chunk",
@@ -78,22 +86,26 @@
     "Shattered planet",
     "Solar system edge"
    ],
-   "topAttractorPct": 6.05
+   "topAttractorPct": 20.7,
+   "top3Pct": 35.07,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 45.28,
-   "deadEndPct": 54.72,
-   "components": 141,
-   "cycleCount": 140,
-   "meanHops": 3.84,
-   "medianHops": 3,
-   "maxHops": 17,
+   "convergePct": 57.91,
+   "deadEndPct": 42.09,
+   "components": 32,
+   "cycleCount": 31,
+   "meanHops": 4.26,
+   "medianHops": 4,
+   "maxHops": 12,
    "topAttractor": [
     "Steel plate",
     "Iron plate"
    ],
-   "topAttractorPct": 5.77
+   "topAttractorPct": 12.23,
+   "top3Pct": 31.14,
+   "eligiblePct": 100
   }
  ]
 }

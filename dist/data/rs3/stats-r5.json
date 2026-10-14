@@ -3,52 +3,80 @@
  "rank": "5",
  "nodes": 79761,
  "converge": {
-  "articles": 21651,
-  "pct": 27.14,
-  "deadEnd": 58110,
-  "deadEndPct": 72.86,
-  "noLinks": 2191,
-  "tooFewLinks": 36076,
-  "unresolvable": 44
+  "articles": 19874,
+  "pct": 24.92,
+  "deadEnd": 59887,
+  "deadEndPct": 75.08,
+  "noLinks": 2214,
+  "tooFewLinks": 36079,
+  "unresolvable": 3
  },
  "hopStats": {
-  "mean": 6.42,
-  "median": 5,
+  "mean": 5.89,
+  "median": 4,
   "p90": 14,
   "max": 27
  },
  "histogram": {
-  "0": 1413,
-  "1": 3192,
-  "2": 1964,
-  "3": 2035,
-  "4": 1661,
-  "5": 1691,
-  "6": 1146,
-  "7": 928,
-  "8": 765,
-  "9": 637,
-  "10": 747,
-  "11": 737,
-  "12": 1079,
-  "13": 901,
-  "14": 800,
-  "15": 600,
-  "16": 369,
-  "17": 207,
-  "18": 108,
-  "19": 281,
-  "20": 141,
+  "0": 1398,
+  "1": 3187,
+  "2": 1951,
+  "3": 2052,
+  "4": 1599,
+  "5": 1731,
+  "6": 1086,
+  "7": 931,
+  "8": 725,
+  "9": 611,
+  "10": 679,
+  "11": 625,
+  "12": 567,
+  "13": 459,
+  "14": 572,
+  "15": 479,
+  "16": 310,
+  "17": 164,
+  "18": 92,
+  "19": 266,
+  "20": 140,
   "21": 130,
   "22": 52,
-  "23": 30,
-  "24": 17,
+  "23": 29,
+  "24": 19,
   "25": 14,
   "26": 5,
   "27": 1
  },
- "components": 682,
- "cycleCount": 681,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 2217,
+   "1": 6358,
+   "2": 10238,
+   "3": 10053,
+   "4": 9430,
+   "5": 7603,
+   "6": 5676,
+   "7": 4245,
+   "8": 3578,
+   "9": 2896,
+   "10": 17467
+  },
+  "atLeast": {
+   "1": 97.2,
+   "2": 89.2,
+   "3": 76.4,
+   "5": 52
+  }
+ },
+ "concentration": {
+  "top1Pct": 6.27,
+  "top3Pct": 10.89,
+  "top10Pct": 16.24,
+  "cycleCount": 666,
+  "entropyBits": 5.36
+ },
+ "components": 667,
+ "cycleCount": 666,
  "largestCycle": {
   "members": [
    "Melee",
@@ -56,7 +84,7 @@
    "Combat triangle"
   ],
   "size": 3,
-  "basin": 4736
+  "basin": 5002
  },
  "topAttractors": [
   {
@@ -65,8 +93,8 @@
     "Ranged",
     "Combat triangle"
    ],
-   "basin": 4736,
-   "pct": 5.94
+   "basin": 5002,
+   "pct": 6.27
   },
   {
    "cycle": [
@@ -76,30 +104,23 @@
     "Player-owned house",
     "Furniture workbench"
    ],
-   "basin": 2480,
+   "basin": 2484,
    "pct": 3.11
-  },
-  {
-   "cycle": [
-    "Settings"
-   ],
-   "basin": 2085,
-   "pct": 2.61
   },
   {
    "cycle": [
     "Weapon Special Attack",
     "Essence of Finality"
    ],
-   "basin": 1230,
-   "pct": 1.54
+   "basin": 1198,
+   "pct": 1.5
   },
   {
    "cycle": [
     "Stone of Jas",
     "Jas"
    ],
-   "basin": 945,
+   "basin": 939,
    "pct": 1.18
   },
   {
@@ -107,8 +128,8 @@
     "Metamorphic geode",
     "Necrite rock"
    ],
-   "basin": 847,
-   "pct": 1.06
+   "basin": 840,
+   "pct": 1.05
   },
   {
    "cycle": [
@@ -116,40 +137,32 @@
     "Guardsman DeShawn",
     "Guardsman Peale"
    ],
-   "basin": 698,
-   "pct": 0.88
+   "basin": 711,
+   "pct": 0.89
   },
   {
    "cycle": [
     "Teleport Block",
     "Deflect Magic"
    ],
-   "basin": 551,
-   "pct": 0.69
-  },
-  {
-   "cycle": [
-    "Resonance",
-    "Divert"
-   ],
-   "basin": 420,
-   "pct": 0.53
+   "basin": 543,
+   "pct": 0.68
   },
   {
    "cycle": [
     "Magic",
     "Stagger"
    ],
-   "basin": 416,
-   "pct": 0.52
+   "basin": 429,
+   "pct": 0.54
   },
   {
    "cycle": [
-    "Ali the Trader",
-    "Ali Morrisane"
+    "Resonance",
+    "Divert"
    ],
-   "basin": 383,
-   "pct": 0.48
+   "basin": 423,
+   "pct": 0.53
   },
   {
    "cycle": [
@@ -157,8 +170,16 @@
     "Range",
     "Seaweed"
    ],
-   "basin": 374,
-   "pct": 0.47
+   "basin": 382,
+   "pct": 0.48
+  },
+  {
+   "cycle": [
+    "Ali the Trader",
+    "Ali Morrisane"
+   ],
+   "basin": 382,
+   "pct": 0.48
   },
   {
    "cycle": [
@@ -167,7 +188,7 @@
     "Acting Guildmaster Reiniger",
     "Archaeology"
    ],
-   "basin": 312,
+   "basin": 313,
    "pct": 0.39
   },
   {
@@ -175,8 +196,8 @@
     "Inventor's workbench",
     "Invention Guild"
    ],
-   "basin": 248,
-   "pct": 0.31
+   "basin": 256,
+   "pct": 0.32
   },
   {
    "cycle": [
@@ -184,7 +205,7 @@
     "Grenwall spikes",
     "Raw pawya meat"
    ],
-   "basin": 232,
+   "basin": 231,
    "pct": 0.29
   },
   {
@@ -200,7 +221,7 @@
     "Miscellania",
     "Fremennik name"
    ],
-   "basin": 210,
+   "basin": 211,
    "pct": 0.26
   },
   {
@@ -213,71 +234,79 @@
   },
   {
    "cycle": [
-    "The Shadow Reef",
-    "Grouping System"
-   ],
-   "basin": 174,
-   "pct": 0.22
-  },
-  {
-   "cycle": [
     "Treasure Trails",
     "Clue scroll (medium)",
     "Ranger boots",
     "Mahogany treasure chest"
    ],
-   "basin": 173,
-   "pct": 0.22
+   "basin": 183,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "The Shadow Reef",
+    "Grouping System"
+   ],
+   "basin": 171,
+   "pct": 0.21
+  },
+  {
+   "cycle": [
+    "Obelisk",
+    "Small obelisk"
+   ],
+   "basin": 140,
+   "pct": 0.18
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Clue scroll (hard) - Snah? I feel all confused, like one of those cakes",
-   "chains": 6052,
-   "pct": 7.59,
+   "chains": 5992,
+   "pct": 7.51,
    "reason": "only 3 eligible links"
   },
   {
+   "title": "Game updates",
+   "chains": 2207,
+   "pct": 2.77,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Support updates",
-   "chains": 1653,
-   "pct": 2.07,
+   "chains": 1735,
+   "pct": 2.18,
    "reason": "no eligible links"
   },
   {
    "title": "Lore achievements",
-   "chains": 1447,
+   "chains": 1442,
    "pct": 1.81,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Sink (furniture)",
-   "chains": 627,
+   "chains": 628,
    "pct": 0.79,
    "reason": "only 4 eligible links"
   },
   {
    "title": "Yanille lodestone",
-   "chains": 378,
-   "pct": 0.47,
+   "chains": 386,
+   "pct": 0.48,
    "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Witch's experiment",
-   "chains": 309,
-   "pct": 0.39,
-   "reason": "only 4 eligible links"
-  },
-  {
-   "title": "Sclerite Cape",
-   "chains": 247,
-   "pct": 0.31,
-   "reason": "only 2 eligible links"
   },
   {
    "title": "2001 Halloween event",
    "chains": 244,
    "pct": 0.31,
-   "reason": "only 6 eligible links"
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Sclerite Cape",
+   "chains": 239,
+   "pct": 0.3,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Slayer Rewards",
@@ -287,7 +316,7 @@
   },
   {
    "title": "Boon of lustrous energy",
-   "chains": 183,
+   "chains": 184,
    "pct": 0.23,
    "reason": "only 4 eligible links"
   },
@@ -323,248 +352,248 @@
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Makeover Mage",
-   "inDegree": 550
+   "firstLinks": 551
   },
   {
    "title": "Anvil",
-   "inDegree": 460
+   "firstLinks": 461
   },
   {
    "title": "Player-owned house",
-   "inDegree": 427
+   "firstLinks": 426
   },
   {
    "title": "Experience",
-   "inDegree": 406
+   "firstLinks": 407
   },
   {
    "title": "Smithing",
-   "inDegree": 406
+   "firstLinks": 403
   },
   {
    "title": "Crafting",
-   "inDegree": 193
+   "firstLinks": 193
   },
   {
    "title": "Defence",
-   "inDegree": 182
+   "firstLinks": 184
   },
   {
    "title": "Spirit shards",
-   "inDegree": 163
+   "firstLinks": 163
   },
   {
    "title": "Construction",
-   "inDegree": 160
+   "firstLinks": 162
   },
   {
    "title": "Special moves",
-   "inDegree": 159
+   "firstLinks": 159
   },
   {
    "title": "Members",
-   "inDegree": 154
+   "firstLinks": 156
   },
   {
    "title": "Magic",
-   "inDegree": 151
+   "firstLinks": 152
   },
   {
    "title": "Yak coin",
-   "inDegree": 148
+   "firstLinks": 148
   },
   {
    "title": "Grand Exchange",
-   "inDegree": 143
+   "firstLinks": 144
   },
   {
    "title": "Life points",
-   "inDegree": 130
+   "firstLinks": 132
   },
   {
    "title": "Coins",
-   "inDegree": 127
-  },
-  {
-   "title": "Invention",
-   "inDegree": 125
+   "firstLinks": 128
   },
   {
    "title": "Cooking",
-   "inDegree": 124
+   "firstLinks": 125
   },
   {
-   "title": "Wilderness",
-   "inDegree": 124
+   "title": "Invention",
+   "firstLinks": 125
   },
   {
    "title": "Treasure Hunter",
-   "inDegree": 124
+   "firstLinks": 124
+  },
+  {
+   "title": "Wilderness",
+   "firstLinks": 123
   },
   {
    "title": "Farming",
-   "inDegree": 120
+   "firstLinks": 119
   },
   {
    "title": "Quests",
-   "inDegree": 118
+   "firstLinks": 119
   },
   {
    "title": "Ranged",
-   "inDegree": 117
+   "firstLinks": 117
   },
   {
    "title": "Costume room",
-   "inDegree": 117
+   "firstLinks": 117
   },
   {
    "title": "Prayer",
-   "inDegree": 114
+   "firstLinks": 115
   },
   {
    "title": "Varrock",
-   "inDegree": 106
+   "firstLinks": 105
   },
   {
    "title": "Slayer Masters",
-   "inDegree": 104
+   "firstLinks": 104
   },
   {
    "title": "Equipment level",
-   "inDegree": 102
+   "firstLinks": 102
   },
   {
    "title": "Weapon Special Attack",
-   "inDegree": 100
+   "firstLinks": 100
   },
   {
    "title": "Equipment degradation",
-   "inDegree": 98
+   "firstLinks": 98
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
-   "title": "Free-to-play",
-   "betweenness": 33300
+   "title": "Clue scroll (hard) - Snah? I feel all confused, like one of those cakes",
+   "chains": 5992
   },
   {
-   "title": "Yak Track",
-   "betweenness": 30420
-  },
-  {
-   "title": "Activity Tracker",
-   "betweenness": 27048
-  },
-  {
-   "title": "Skills",
-   "betweenness": 26754
-  },
-  {
-   "title": "Action bar",
-   "betweenness": 23586
-  },
-  {
-   "title": "Grand Exchange",
-   "betweenness": 22385
-  },
-  {
-   "title": "Quests",
-   "betweenness": 21600
-  },
-  {
-   "title": "Emotes",
-   "betweenness": 19760
-  },
-  {
-   "title": "Minimap",
-   "betweenness": 17649
-  },
-  {
-   "title": "Mahjarrat",
-   "betweenness": 14157
-  },
-  {
-   "title": "Gielinor",
-   "betweenness": 14105
-  },
-  {
-   "title": "Icthlarin",
-   "betweenness": 13566
-  },
-  {
-   "title": "Mah",
-   "betweenness": 13116
-  },
-  {
-   "title": "Experience",
-   "betweenness": 13090
-  },
-  {
-   "title": "Icthlarin's Little Helper",
-   "betweenness": 12735
-  },
-  {
-   "title": "Home Teleport",
-   "betweenness": 12636
-  },
-  {
-   "title": "Sophanem",
-   "betweenness": 12624
-  },
-  {
-   "title": "Burthorpe",
-   "betweenness": 12591
-  },
-  {
-   "title": "Kharidian Desert",
-   "betweenness": 12393
-  },
-  {
-   "title": "Challenge System",
-   "betweenness": 12340
-  },
-  {
-   "title": "The Blade",
-   "betweenness": 12102
+   "title": "Hans",
+   "chains": 5991
   },
   {
    "title": "Non-player character",
-   "betweenness": 12096
+   "chains": 5989
   },
   {
-   "title": "Muspah",
-   "betweenness": 12034
+   "title": "Minimap",
+   "chains": 5824
   },
   {
-   "title": "Animations",
-   "betweenness": 11682
+   "title": "Quests",
+   "chains": 5401
   },
   {
-   "title": "Logs",
-   "betweenness": 11655
+   "title": "Ranged",
+   "chains": 5002
   },
   {
-   "title": "Backpack",
-   "betweenness": 11608
+   "title": "Combat triangle",
+   "chains": 5002
   },
   {
-   "title": "King Vallance",
-   "betweenness": 11200
+   "title": "Melee",
+   "chains": 5002
   },
   {
-   "title": "Jungle Tree",
-   "betweenness": 11120
+   "title": "Emotes",
+   "chains": 3961
   },
   {
-   "title": "Energy",
-   "betweenness": 11000
+   "title": "Action bar",
+   "chains": 3939
   },
   {
-   "title": "Bladed muspah",
-   "betweenness": 10990
+   "title": "Skills",
+   "chains": 3829
+  },
+  {
+   "title": "Activity Tracker",
+   "chains": 3386
+  },
+  {
+   "title": "Yak Track",
+   "chains": 3385
+  },
+  {
+   "title": "Free-to-play",
+   "chains": 3335
+  },
+  {
+   "title": "Construction",
+   "chains": 2484
+  },
+  {
+   "title": "Crystal saw",
+   "chains": 2484
+  },
+  {
+   "title": "Player-owned house",
+   "chains": 2484
+  },
+  {
+   "title": "There's No Place Like Home...",
+   "chains": 2484
+  },
+  {
+   "title": "Furniture workbench",
+   "chains": 2484
+  },
+  {
+   "title": "Combat level",
+   "chains": 2428
+  },
+  {
+   "title": "Prayer",
+   "chains": 2290
+  },
+  {
+   "title": "Game updates",
+   "chains": 2207
+  },
+  {
+   "title": "Calendar (interface)",
+   "chains": 2195
+  },
+  {
+   "title": "Clock (interface)",
+   "chains": 2153
+  },
+  {
+   "title": "Settings",
+   "chains": 2119
+  },
+  {
+   "title": "Gods",
+   "chains": 2093
+  },
+  {
+   "title": "Classic Modes",
+   "chains": 2082
+  },
+  {
+   "title": "Icon",
+   "chains": 2066
+  },
+  {
+   "title": "Bank",
+   "chains": 2053
+  },
+  {
+   "title": "Grand Exchange",
+   "chains": 2036
   }
  ]
 }

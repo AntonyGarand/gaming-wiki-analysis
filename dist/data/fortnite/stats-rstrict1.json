@@ -3,30 +3,30 @@
  "rank": "strict1",
  "nodes": 35312,
  "converge": {
-  "articles": 32793,
-  "pct": 92.87,
-  "deadEnd": 2519,
-  "deadEndPct": 7.13,
-  "noLinks": 2196,
+  "articles": 32817,
+  "pct": 92.93,
+  "deadEnd": 2495,
+  "deadEndPct": 7.07,
+  "noLinks": 2241,
   "tooFewLinks": 0,
-  "unresolvable": 268
+  "unresolvable": 20
  },
  "hopStats": {
-  "mean": 4.09,
+  "mean": 4.08,
   "median": 4,
   "p90": 5,
   "max": 38
  },
  "histogram": {
-  "0": 22,
+  "0": 14,
   "1": 180,
-  "2": 3686,
-  "3": 2110,
-  "4": 16868,
-  "5": 7752,
-  "6": 2036,
+  "2": 3723,
+  "3": 2236,
+  "4": 16921,
+  "5": 7538,
+  "6": 2066,
   "7": 84,
-  "8": 6,
+  "8": 5,
   "9": 3,
   "10": 1,
   "11": 1,
@@ -35,7 +35,7 @@
   "14": 1,
   "15": 1,
   "16": 1,
-  "17": 3,
+  "17": 4,
   "18": 3,
   "19": 3,
   "20": 2,
@@ -58,15 +58,43 @@
   "37": 1,
   "38": 1
  },
- "components": 16,
- "cycleCount": 15,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 2261,
+   "1": 1263,
+   "2": 7376,
+   "3": 8973,
+   "4": 4316,
+   "5": 2378,
+   "6": 1351,
+   "7": 842,
+   "8": 601,
+   "9": 503,
+   "10": 5448
+  },
+  "atLeast": {
+   "1": 93.6,
+   "2": 90,
+   "3": 69.1,
+   "5": 31.5
+  }
+ },
+ "concentration": {
+  "top1Pct": 91.96,
+  "top3Pct": 92.89,
+  "top10Pct": 92.93,
+  "cycleCount": 7,
+  "entropyBits": 0.09
+ },
+ "components": 8,
+ "cycleCount": 7,
  "largestCycle": {
   "members": [
    "Epic Games",
    "Tim Sweeney"
   ],
   "size": 2,
-  "basin": 32457
+  "basin": 32474
  },
  "topAttractors": [
   {
@@ -74,24 +102,24 @@
     "Epic Games",
     "Tim Sweeney"
    ],
-   "basin": 32457,
-   "pct": 91.91
+   "basin": 32474,
+   "pct": 91.96
   },
   {
    "cycle": [
     "Heroes",
     "Outlanders"
    ],
-   "basin": 240,
-   "pct": 0.68
+   "basin": 258,
+   "pct": 0.73
   },
   {
    "cycle": [
     "Rocket Racing",
     "Psyonix"
    ],
-   "basin": 68,
-   "pct": 0.19
+   "basin": 71,
+   "pct": 0.2
   },
   {
    "cycle": [
@@ -100,20 +128,6 @@
    ],
    "basin": 6,
    "pct": 0.02
-  },
-  {
-   "cycle": [
-    "Windwalker Echo"
-   ],
-   "basin": 4,
-   "pct": 0.01
-  },
-  {
-   "cycle": [
-    "Project Fortress"
-   ],
-   "basin": 3,
-   "pct": 0.01
   },
   {
    "cycle": [
@@ -133,91 +147,31 @@
   },
   {
    "cycle": [
-    "Spears (Save the World)"
-   ],
-   "basin": 2,
-   "pct": 0.01
-  },
-  {
-   "cycle": [
     "Update v10.10",
     "Update v10.10 Bug Fixes"
    ],
    "basin": 2,
    "pct": 0.01
-  },
-  {
-   "cycle": [
-    "Heavy B.A.S.E. Kyle"
-   ],
-   "basin": 1,
-   "pct": 0
-  },
-  {
-   "cycle": [
-    "Social Tags"
-   ],
-   "basin": 1,
-   "pct": 0
-  },
-  {
-   "cycle": [
-    "Neon Rush"
-   ],
-   "basin": 1,
-   "pct": 0
-  },
-  {
-   "cycle": [
-    "Inferno Island"
-   ],
-   "basin": 1,
-   "pct": 0
-  },
-  {
-   "cycle": [
-    "Season Zero"
-   ],
-   "basin": 1,
-   "pct": 0
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Building",
-   "chains": 10,
-   "pct": 0.03,
-   "reason": "redlink target"
+   "title": "Devices (Creative)",
+   "chains": 210,
+   "pct": 0.59,
+   "reason": "no eligible links"
   },
   {
-   "title": "Storm Zone Modifiers",
-   "chains": 7,
-   "pct": 0.02,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Swords (Save the World)",
-   "chains": 6,
-   "pct": 0.02,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Fishing",
+   "title": "Firecracker Pistol Schematics",
    "chains": 5,
    "pct": 0.01,
-   "reason": "redlink target"
+   "reason": "no eligible links"
   },
   {
    "title": "Party Trooper",
    "chains": 5,
    "pct": 0.01,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Neon Weapons",
-   "chains": 4,
-   "pct": 0.01,
-   "reason": "redlink target"
   },
   {
    "title": "Semi-Auto Handcannon Pistol Schematics",
@@ -256,267 +210,285 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Perks (Battle Royale)",
-   "chains": 3,
-   "pct": 0.01,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Fishing Rod",
-   "chains": 2,
-   "pct": 0.01,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Firecracker Pistol Schematics",
+   "title": "Survive the Storm",
    "chains": 2,
    "pct": 0.01,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Auto Shotgun Schematics",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Semi-Auto Pistol Schematics",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Shield Mushroom/OG",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Fortnite Wiki",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Shroud of the Dragon",
+   "chains": 1,
+   "pct": 0,
+   "reason": "redlink target"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Fortnite",
-   "inDegree": 3531
+   "firstLinks": 3556
   },
   {
    "title": "Outfits",
-   "inDegree": 3366
+   "firstLinks": 3367
   },
   {
    "title": "Back Blings",
-   "inDegree": 2667
+   "firstLinks": 2667
   },
   {
    "title": "Emotes",
-   "inDegree": 1953
+   "firstLinks": 1953
   },
   {
    "title": "Item Shop Bundles",
-   "inDegree": 1857
+   "firstLinks": 1857
   },
   {
    "title": "Sprays",
-   "inDegree": 1222
+   "firstLinks": 1222
   },
   {
    "title": "Wraps",
-   "inDegree": 1209
+   "firstLinks": 1209
   },
   {
    "title": "Loading Screens",
-   "inDegree": 1138
+   "firstLinks": 1138
   },
   {
    "title": "Quests",
-   "inDegree": 927
+   "firstLinks": 930
   },
   {
    "title": "Decals",
-   "inDegree": 923
+   "firstLinks": 923
   },
   {
    "title": "Emoticons",
-   "inDegree": 876
+   "firstLinks": 876
   },
   {
    "title": "Jam Tracks",
-   "inDegree": 735
-  },
-  {
-   "title": "Landmarks",
-   "inDegree": 606
-  },
-  {
-   "title": "Fortnite: Save the World",
-   "inDegree": 600
+   "firstLinks": 736
   },
   {
    "title": "Fortnite: Battle Royale",
-   "inDegree": 593
+   "firstLinks": 673
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "firstLinks": 633
+  },
+  {
+   "title": "Landmarks",
+   "firstLinks": 606
   },
   {
    "title": "Wheels",
-   "inDegree": 454
+   "firstLinks": 454
   },
   {
    "title": "Named Locations",
-   "inDegree": 439
+   "firstLinks": 440
   },
   {
    "title": "Kicks",
-   "inDegree": 399
+   "firstLinks": 399
   },
   {
    "title": "Unnamed Locations",
-   "inDegree": 318
+   "firstLinks": 319
   },
   {
    "title": "Prefabs",
-   "inDegree": 318
+   "firstLinks": 319
   },
   {
    "title": "Contrails",
-   "inDegree": 267
+   "firstLinks": 267
   },
   {
    "title": "Main Quests",
-   "inDegree": 245
+   "firstLinks": 245
   },
   {
    "title": "Lobby Music",
-   "inDegree": 223
+   "firstLinks": 223
   },
   {
    "title": "Assault Weapons",
-   "inDegree": 211
+   "firstLinks": 211
   },
   {
    "title": "Utility Items",
-   "inDegree": 208
+   "firstLinks": 210
   },
   {
    "title": "Devices (Creative)",
-   "inDegree": 202
+   "firstLinks": 202
   },
   {
    "title": "Limited Time Offers",
-   "inDegree": 186
+   "firstLinks": 186
   },
   {
    "title": "Boosts",
-   "inDegree": 166
+   "firstLinks": 166
   },
   {
    "title": "Consumables",
-   "inDegree": 152
+   "firstLinks": 152
   },
   {
    "title": "Uncategorized Items",
-   "inDegree": 143
+   "firstLinks": 144
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
+  {
+   "title": "Epic Games",
+   "chains": 32474
+  },
+  {
+   "title": "Tim Sweeney",
+   "chains": 32474
+  },
   {
    "title": "Fortnite",
-   "betweenness": 64860
+   "chains": 32448
   },
   {
    "title": "Cosmetic Items",
-   "betweenness": 42192
-  },
-  {
-   "title": "Epic Games",
-   "betweenness": 32455
+   "chains": 14040
   },
   {
    "title": "Fortnite: Battle Royale",
-   "betweenness": 24288
-  },
-  {
-   "title": "Outfits",
-   "betweenness": 20885
+   "chains": 7998
   },
   {
    "title": "Community Terminology",
-   "betweenness": 16712
+   "chains": 4192
   },
   {
-   "title": "Item Shop Bundles",
-   "betweenness": 13480
-  },
-  {
-   "title": "Limited Time Offers",
-   "betweenness": 11604
-  },
-  {
-   "title": "Back Blings",
-   "betweenness": 11268
+   "title": "Outfits",
+   "chains": 4191
   },
   {
    "title": "V-Bucks",
-   "betweenness": 8724
+   "chains": 2926
+  },
+  {
+   "title": "Limited Time Offers",
+   "chains": 2919
+  },
+  {
+   "title": "Back Blings",
+   "chains": 2819
+  },
+  {
+   "title": "Item Shop Bundles",
+   "chains": 2714
   },
   {
    "title": "Emotes",
-   "betweenness": 8488
+   "chains": 2128
   },
   {
    "title": "Jam Tracks",
-   "betweenness": 6136
-  },
-  {
-   "title": "Sprays",
-   "betweenness": 4924
-  },
-  {
-   "title": "Wraps",
-   "betweenness": 4840
-  },
-  {
-   "title": "Loading Screens",
-   "betweenness": 4568
+   "chains": 1503
   },
   {
    "title": "Fortnite: Save the World",
-   "betweenness": 4071
+   "chains": 1425
   },
   {
-   "title": "Quests",
-   "betweenness": 3868
+   "title": "Sprays",
+   "chains": 1232
   },
   {
-   "title": "Weaponry (Battle Royale)",
-   "betweenness": 3812
+   "title": "Wraps",
+   "chains": 1211
   },
   {
-   "title": "Decals",
-   "betweenness": 3692
-  },
-  {
-   "title": "Emoticons",
-   "betweenness": 3512
+   "title": "Loading Screens",
+   "chains": 1143
   },
   {
    "title": "XP",
-   "betweenness": 2907
+   "chains": 976
+  },
+  {
+   "title": "Quests",
+   "chains": 973
+  },
+  {
+   "title": "Weaponry (Battle Royale)",
+   "chains": 954
+  },
+  {
+   "title": "Decals",
+   "chains": 924
+  },
+  {
+   "title": "Emoticons",
+   "chains": 879
   },
   {
    "title": "Landmarks",
-   "betweenness": 2484
-  },
-  {
-   "title": "Wheels",
-   "betweenness": 1816
-  },
-  {
-   "title": "Kicks",
-   "betweenness": 1596
+   "chains": 622
   },
   {
    "title": "Named Locations",
-   "betweenness": 1494
+   "chains": 500
+  },
+  {
+   "title": "Wheels",
+   "chains": 455
+  },
+  {
+   "title": "Kicks",
+   "chains": 400
+  },
+  {
+   "title": "Unreal Editor for Fortnite",
+   "chains": 337
   },
   {
    "title": "Unnamed Locations",
-   "betweenness": 1336
+   "chains": 335
   },
   {
    "title": "Prefabs",
-   "betweenness": 1272
-  },
-  {
-   "title": "Assault Weapons",
-   "betweenness": 1240
+   "chains": 320
   },
   {
    "title": "Contrails",
-   "betweenness": 1068
-  },
-  {
-   "title": "Devices (Creative)",
-   "betweenness": 1040
+   "chains": 268
   }
  ]
 }

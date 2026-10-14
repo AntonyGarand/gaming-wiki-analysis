@@ -3,38 +3,72 @@
  "rank": "last",
  "nodes": 2808,
  "converge": {
-  "articles": 1744,
-  "pct": 62.11,
-  "deadEnd": 1064,
-  "deadEndPct": 37.89,
-  "noLinks": 420,
+  "articles": 2202,
+  "pct": 78.42,
+  "deadEnd": 606,
+  "deadEndPct": 21.58,
+  "noLinks": 418,
   "tooFewLinks": 0,
-  "unresolvable": 105
+  "unresolvable": 30
  },
  "hopStats": {
-  "mean": 3.87,
-  "median": 3,
-  "p90": 8,
-  "max": 16
+  "mean": 5.74,
+  "median": 5,
+  "p90": 12,
+  "max": 22
  },
  "histogram": {
-  "0": 123,
-  "1": 346,
-  "2": 275,
-  "3": 248,
-  "4": 147,
-  "5": 114,
-  "6": 160,
-  "7": 126,
-  "8": 46,
-  "9": 55,
-  "10": 28,
-  "11": 14,
-  "12": 31,
-  "13": 7,
-  "14": 15,
-  "15": 4,
-  "16": 5
+  "0": 117,
+  "1": 274,
+  "2": 240,
+  "3": 231,
+  "4": 182,
+  "5": 115,
+  "6": 189,
+  "7": 187,
+  "8": 118,
+  "9": 124,
+  "10": 73,
+  "11": 104,
+  "12": 56,
+  "13": 50,
+  "14": 51,
+  "15": 50,
+  "16": 16,
+  "17": 8,
+  "18": 2,
+  "19": 8,
+  "20": 4,
+  "21": 2,
+  "22": 1
+ },
+ "eligibleLinks": {
+  "histogram": {
+   "0": 448,
+   "1": 370,
+   "2": 334,
+   "3": 250,
+   "4": 168,
+   "5": 124,
+   "6": 143,
+   "7": 81,
+   "8": 79,
+   "9": 59,
+   "10": 752
+  },
+  "atLeast": {
+   "1": 84,
+   "2": 70.9,
+   "3": 59,
+   "5": 44.1
+  }
+ },
+ "concentration": {
+  "top1Pct": 33.97,
+  "top3Pct": 50.89,
+  "top10Pct": 67.17,
+  "cycleCount": 55,
+  "entropyBits": 3.33
  },
  "components": 56,
  "cycleCount": 55,
@@ -45,7 +79,7 @@
    "Competitive Points"
   ],
   "size": 3,
-  "basin": 541
+  "basin": 954
  },
  "topAttractors": [
   {
@@ -54,66 +88,64 @@
     "Competitive Drives",
     "Competitive Points"
    ],
-   "basin": 541,
-   "pct": 19.27
-  },
-  {
-   "cycle": [
-    "Arnold Tsang",
-    "Moira",
-    "Reaper",
-    "Project Titan",
-    "Numbani",
-    "Season/2022-2026",
-    "Spirit Showdown",
-    "Push",
-    "Stadium",
-    "Aaron Keller",
-    "Jeff Kaplan",
-    "Reinhardt"
-   ],
-   "basin": 458,
-   "pct": 16.31
+   "basin": 954,
+   "pct": 33.97
   },
   {
    "cycle": [
     "David Kang",
     "Pachimari"
    ],
-   "basin": 116,
-   "pct": 4.13
+   "basin": 298,
+   "pct": 10.61
+  },
+  {
+   "cycle": [
+    "Soldier: 76",
+    "Chris Metzen"
+   ],
+   "basin": 177,
+   "pct": 6.3
+  },
+  {
+   "cycle": [
+    "Hero Missions",
+    "Story Missions"
+   ],
+   "basin": 82,
+   "pct": 2.92
   },
   {
    "cycle": [
     "Blizzard Entertainment",
     "Geoff Goodman"
    ],
-   "basin": 72,
-   "pct": 2.56
+   "basin": 82,
+   "pct": 2.92
   },
   {
    "cycle": [
     "Vendetta",
     "Haunted Masquerade"
    ],
-   "basin": 69,
-   "pct": 2.46
+   "basin": 79,
+   "pct": 2.81
   },
   {
    "cycle": [
     "Quartier Omnic",
     "Liberte"
    ],
-   "basin": 68,
-   "pct": 2.42
+   "basin": 69,
+   "pct": 2.46
   },
   {
    "cycle": [
     "Fola Oladele",
     "Yewande"
    ],
-   "basin": 54,
-   "pct": 1.92
+   "basin": 69,
+   "pct": 2.46
   },
   {
    "cycle": [
@@ -122,6 +154,15 @@
    ],
    "basin": 40,
    "pct": 1.42
+  },
+  {
+   "cycle": [
+    "Hashimoto clan",
+    "Toshiro Yamagami",
+    "Mizuki"
+   ],
+   "basin": 36,
+   "pct": 1.28
   },
   {
    "cycle": [
@@ -143,21 +184,21 @@
   },
   {
    "cycle": [
-    "Story Missions",
-    "Hero Missions"
-   ],
-   "basin": 24,
-   "pct": 0.85
-  },
-  {
-   "cycle": [
     "Volskaya Industries",
     "Iron Star",
     "Mech",
     "Triglav protector"
    ],
-   "basin": 23,
-   "pct": 0.82
+   "basin": 25,
+   "pct": 0.89
+  },
+  {
+   "cycle": [
+    "Null Sector",
+    "Italy"
+   ],
+   "basin": 24,
+   "pct": 0.85
   },
   {
    "cycle": [
@@ -196,8 +237,8 @@
     "Shambali Monastery",
     "Nepal"
    ],
-   "basin": 12,
-   "pct": 0.43
+   "basin": 10,
+   "pct": 0.36
   },
   {
    "cycle": [
@@ -206,89 +247,43 @@
    ],
    "basin": 10,
    "pct": 0.36
-  },
-  {
-   "cycle": [
-    "Casino",
-    "King"
-   ],
-   "basin": 8,
-   "pct": 0.28
-  },
-  {
-   "cycle": [
-    "Oriole Delgado",
-    "Hurricane Fernand"
-   ],
-   "basin": 8,
-   "pct": 0.28
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Route 66",
-   "chains": 232,
-   "pct": 8.26,
-   "reason": "redlink target"
-  },
-  {
    "title": "Kejun Wang",
-   "chains": 88,
-   "pct": 3.13,
+   "chains": 64,
+   "pct": 2.28,
    "reason": "no eligible links"
   },
   {
-   "title": "Winston",
-   "chains": 53,
-   "pct": 1.89,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Mina Liao",
-   "chains": 50,
-   "pct": 1.78,
-   "reason": "redlink target"
-  },
-  {
    "title": "October 9, 2018 Patch",
-   "chains": 37,
-   "pct": 1.32,
+   "chains": 38,
+   "pct": 1.35,
    "reason": "no eligible links"
   },
   {
    "title": "Alyssa Wong",
-   "chains": 24,
-   "pct": 0.85,
+   "chains": 26,
+   "pct": 0.93,
    "reason": "no eligible links"
   },
   {
-   "title": "Ashe",
-   "chains": 12,
-   "pct": 0.43,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Jiayi Teo",
-   "chains": 7,
-   "pct": 0.25,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Eichenwalde",
-   "chains": 6,
-   "pct": 0.21,
-   "reason": "redlink target"
-  },
-  {
-   "title": "December 6, 2022 Patch",
-   "chains": 5,
-   "pct": 0.18,
+   "title": "December 15, 2022 Patch",
+   "chains": 8,
+   "pct": 0.28,
    "reason": "no eligible links"
   },
   {
    "title": "October 11, 2016 Patch",
    "chains": 4,
    "pct": 0.14,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Northern Gaming Red",
+   "chains": 3,
+   "pct": 0.11,
    "reason": "no eligible links"
   },
   {
@@ -304,261 +299,291 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Charger",
-   "chains": 3,
-   "pct": 0.11,
-   "reason": "redlink target"
-  },
-  {
    "title": "May 8, 2018 Patch",
    "chains": 3,
    "pct": 0.11,
    "reason": "no eligible links"
+  },
+  {
+   "title": "April 26, 2022 Patch",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ramattra/Cosmetics",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "November 14, 2023 Patch",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bengal",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Patch Notes",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Team EnVyUs",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Stadium",
-   "inDegree": 45
+   "firstLinks": 42
   },
   {
    "title": "Blizzard Entertainment",
-   "inDegree": 38
+   "firstLinks": 38
   },
   {
    "title": "French Dubbing",
-   "inDegree": 38
+   "firstLinks": 38
   },
   {
    "title": "Season",
-   "inDegree": 33
+   "firstLinks": 33
   },
   {
    "title": "Winston",
-   "inDegree": 29
-  },
-  {
-   "title": "Health pack",
-   "inDegree": 26
+   "firstLinks": 30
   },
   {
    "title": "Omnic Crisis",
-   "inDegree": 25
+   "firstLinks": 27
+  },
+  {
+   "title": "Health pack",
+   "firstLinks": 26
   },
   {
    "title": "Maps",
-   "inDegree": 24
+   "firstLinks": 25
   },
   {
    "title": "Overwatch (group)",
-   "inDegree": 23
-  },
-  {
-   "title": "Soldier: 76",
-   "inDegree": 21
-  },
-  {
-   "title": "Torbjörn",
-   "inDegree": 20
-  },
-  {
-   "title": "Reinhardt",
-   "inDegree": 20
-  },
-  {
-   "title": "Omnic",
-   "inDegree": 20
+   "firstLinks": 23
   },
   {
    "title": "Overwatch 2",
-   "inDegree": 19
+   "firstLinks": 23
   },
   {
-   "title": "Experimental",
-   "inDegree": 19
+   "title": "Soldier: 76",
+   "firstLinks": 22
   },
   {
-   "title": "Overwatch League",
-   "inDegree": 17
-  },
-  {
-   "title": "Toronto",
-   "inDegree": 17
-  },
-  {
-   "title": "Season/2026",
-   "inDegree": 17
-  },
-  {
-   "title": "Ana",
-   "inDegree": 16
-  },
-  {
-   "title": "Brazilian Portuguese Dubbing",
-   "inDegree": 16
-  },
-  {
-   "title": "Reaper",
-   "inDegree": 15
-  },
-  {
-   "title": "Widowmaker",
-   "inDegree": 15
-  },
-  {
-   "title": "Roles",
-   "inDegree": 15
-  },
-  {
-   "title": "Genji",
-   "inDegree": 15
-  },
-  {
-   "title": "Moira",
-   "inDegree": 15
-  },
-  {
-   "title": "Vendetta",
-   "inDegree": 15
-  },
-  {
-   "title": "April Fools",
-   "inDegree": 15
-  },
-  {
-   "title": "Null Sector",
-   "inDegree": 14
-  },
-  {
-   "title": "Overwatch",
-   "inDegree": 13
-  },
-  {
-   "title": "Team 4",
-   "inDegree": 13
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Moira",
-   "betweenness": 3505
-  },
-  {
-   "title": "Arnold Tsang",
-   "betweenness": 3411
-  },
-  {
-   "title": "Reaper",
-   "betweenness": 3227
+   "title": "Torbjörn",
+   "firstLinks": 21
   },
   {
    "title": "Reinhardt",
-   "betweenness": 3005
+   "firstLinks": 20
   },
   {
-   "title": "Project Titan",
-   "betweenness": 2817
+   "title": "Omnic",
+   "firstLinks": 20
   },
   {
-   "title": "Numbani",
-   "betweenness": 2503
+   "title": "Experimental",
+   "firstLinks": 19
   },
   {
-   "title": "Season/2022-2026",
-   "betweenness": 2477
+   "title": "Toronto",
+   "firstLinks": 18
   },
   {
-   "title": "Stadium",
-   "betweenness": 2111
+   "title": "Overwatch League",
+   "firstLinks": 17
   },
   {
-   "title": "Spirit Showdown",
-   "betweenness": 2031
+   "title": "Reaper",
+   "firstLinks": 16
   },
   {
-   "title": "Aaron Keller",
-   "betweenness": 1773
+   "title": "Roles",
+   "firstLinks": 16
   },
   {
-   "title": "Jeff Kaplan",
-   "betweenness": 1651
+   "title": "Genji",
+   "firstLinks": 16
   },
   {
-   "title": "Push",
-   "betweenness": 1585
+   "title": "Ana",
+   "firstLinks": 16
   },
   {
-   "title": "Bastion",
-   "betweenness": 1365
+   "title": "Brazilian Portuguese Dubbing",
+   "firstLinks": 16
   },
   {
-   "title": "Venture",
-   "betweenness": 1323
-  },
-  {
-   "title": "Widowmaker",
-   "betweenness": 1288
-  },
-  {
-   "title": "Barrier",
-   "betweenness": 1272
-  },
-  {
-   "title": "Skins",
-   "betweenness": 1232
-  },
-  {
-   "title": "BlizzCon 2023",
-   "betweenness": 1188
-  },
-  {
-   "title": "Maps",
-   "betweenness": 1060
-  },
-  {
-   "title": "Shop",
-   "betweenness": 1000
-  },
-  {
-   "title": "Kanezaka Challenge",
-   "betweenness": 963
-  },
-  {
-   "title": "Battle Pass",
-   "betweenness": 912
+   "title": "Vendetta",
+   "firstLinks": 16
   },
   {
    "title": "Season/2026",
-   "betweenness": 882
+   "firstLinks": 16
+  },
+  {
+   "title": "April Fools",
+   "firstLinks": 16
+  },
+  {
+   "title": "Overwatch",
+   "firstLinks": 15
+  },
+  {
+   "title": "Moira",
+   "firstLinks": 15
+  },
+  {
+   "title": "Spawn Room",
+   "firstLinks": 15
+  },
+  {
+   "title": "Widowmaker",
+   "firstLinks": 14
+  },
+  {
+   "title": "Null Sector",
+   "firstLinks": 14
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Competitive Points",
+   "chains": 954
+  },
+  {
+   "title": "Season",
+   "chains": 954
   },
   {
    "title": "Competitive Drives",
-   "betweenness": 834
+   "chains": 954
   },
   {
-   "title": "Grand Central Terminal",
-   "betweenness": 804
+   "title": "Overwatch 2",
+   "chains": 759
   },
   {
-   "title": "New York Fire Department",
-   "betweenness": 748
+   "title": "Reaper",
+   "chains": 511
   },
   {
-   "title": "Ultimate ability",
-   "betweenness": 645
+   "title": "Moira",
+   "chains": 495
+  },
+  {
+   "title": "Arnold Tsang",
+   "chains": 462
+  },
+  {
+   "title": "Reinhardt",
+   "chains": 434
+  },
+  {
+   "title": "Pachimari",
+   "chains": 298
+  },
+  {
+   "title": "David Kang",
+   "chains": 298
+  },
+  {
+   "title": "Symmetra",
+   "chains": 295
+  },
+  {
+   "title": "Jeff Kaplan",
+   "chains": 288
+  },
+  {
+   "title": "Illari",
+   "chains": 254
+  },
+  {
+   "title": "Aaron Keller",
+   "chains": 224
+  },
+  {
+   "title": "Stadium",
+   "chains": 214
+  },
+  {
+   "title": "Status effect",
+   "chains": 210
+  },
+  {
+   "title": "Movement speed",
+   "chains": 208
+  },
+  {
+   "title": "Heroes",
+   "chains": 207
+  },
+  {
+   "title": "Chris Metzen",
+   "chains": 177
+  },
+  {
+   "title": "Soldier: 76",
+   "chains": 177
+  },
+  {
+   "title": "Miranda Moyer",
+   "chains": 150
+  },
+  {
+   "title": "Venture",
+   "chains": 149
+  },
+  {
+   "title": "Marc Guerra",
+   "chains": 138
+  },
+  {
+   "title": "Heavy pulse rifle",
+   "chains": 137
   },
   {
    "title": "Team 4",
-   "betweenness": 575
+   "chains": 136
   },
   {
-   "title": "Tracer",
-   "betweenness": 552
+   "title": "Push",
+   "chains": 134
+  },
+  {
+   "title": "Spirit Showdown",
+   "chains": 133
+  },
+  {
+   "title": "Season/2022-2026",
+   "chains": 132
+  },
+  {
+   "title": "Competitive Play",
+   "chains": 120
   },
   {
    "title": "Escort",
-   "betweenness": 550
+   "chains": 115
   }
  ]
 }

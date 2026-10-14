@@ -3,55 +3,81 @@
  "rank": "5",
  "nodes": 6135,
  "converge": {
-  "articles": 462,
-  "pct": 7.53,
-  "deadEnd": 5673,
-  "deadEndPct": 92.47,
-  "noLinks": 1,
-  "tooFewLinks": 3975,
-  "unresolvable": 330
+  "articles": 363,
+  "pct": 5.92,
+  "deadEnd": 5772,
+  "deadEndPct": 94.08,
+  "noLinks": 14,
+  "tooFewLinks": 4288,
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 1.89,
+  "mean": 1.72,
   "median": 2,
   "p90": 3,
-  "max": 5
+  "max": 4
  },
  "histogram": {
-  "0": 31,
-  "1": 109,
-  "2": 234,
-  "3": 57,
-  "4": 30,
-  "5": 1
+  "0": 29,
+  "1": 93,
+  "2": 204,
+  "3": 26,
+  "4": 11
  },
- "components": 16,
- "cycleCount": 15,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 15,
+   "1": 2874,
+   "2": 858,
+   "3": 286,
+   "4": 270,
+   "5": 182,
+   "6": 132,
+   "7": 143,
+   "8": 136,
+   "9": 138,
+   "10": 1101
+  },
+  "atLeast": {
+   "1": 99.8,
+   "2": 52.9,
+   "3": 38.9,
+   "5": 29.9
+  }
+ },
+ "concentration": {
+  "top1Pct": 4.78,
+  "top3Pct": 5.13,
+  "top10Pct": 5.77,
+  "cycleCount": 14,
+  "entropyBits": 1.38
+ },
+ "components": 15,
+ "cycleCount": 14,
  "largestCycle": {
   "members": [
-   "Shoreline",
-   "NSV Utyos 12.7x108 heavy machine gun"
+   "NSV Utyos 12.7x108 heavy machine gun",
+   "Shoreline"
   ],
   "size": 2,
-  "basin": 287
+  "basin": 293
  },
  "topAttractors": [
   {
    "cycle": [
-    "Shoreline",
-    "NSV Utyos 12.7x108 heavy machine gun"
+    "NSV Utyos 12.7x108 heavy machine gun",
+    "Shoreline"
    ],
-   "basin": 287,
-   "pct": 4.68
+   "basin": 293,
+   "pct": 4.78
   },
   {
    "cycle": [
-    "Transits",
-    "Factory",
-    "Changelog"
+    "Profit Retention",
+    "Crafting"
    ],
-   "basin": 116,
-   "pct": 1.89
+   "basin": 14,
+   "pct": 0.23
   },
   {
    "cycle": [
@@ -128,21 +154,6 @@
   },
   {
    "cycle": [
-    "Paracord",
-    "Red Rebel ice pick"
-   ],
-   "basin": 3,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Character skills"
-   ],
-   "basin": 2,
-   "pct": 0.03
-  },
-  {
-   "cycle": [
     "Grenade Launchers",
     "The Art of Explosion"
    ],
@@ -156,343 +167,351 @@
    ],
    "basin": 2,
    "pct": 0.03
+  },
+  {
+   "cycle": [
+    "Paracord",
+    "Red Rebel ice pick"
+   ],
+   "basin": 2,
+   "pct": 0.03
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Weapons",
-   "chains": 237,
-   "pct": 3.86,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Barter trades",
-   "chains": 157,
-   "pct": 2.56,
-   "reason": "only 3 eligible links"
+   "title": "AS VAL MOD.4 9x39 special assault rifle",
+   "chains": 241,
+   "pct": 3.93,
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Bars A-2607 95Kh18 knife",
    "chains": 142,
    "pct": 2.31,
-   "reason": "redlink target"
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Black Division",
+   "chains": 134,
+   "pct": 2.18,
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Experience",
-   "chains": 133,
-   "pct": 2.17,
-   "reason": "only 3 eligible links"
+   "chains": 134,
+   "pct": 2.18,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Barter trades",
+   "chains": 122,
+   "pct": 1.99,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Drawer",
-   "chains": 92,
-   "pct": 1.5,
-   "reason": "only 3 eligible links"
+   "chains": 122,
+   "pct": 1.99,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "USEC",
    "chains": 77,
    "pct": 1.26,
-   "reason": "redlink target"
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Sports bag",
    "chains": 64,
    "pct": 1.04,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Jacket",
-   "chains": 55,
-   "pct": 0.9,
-   "reason": "redlink target"
+   "reason": "only 3 eligible links"
   },
   {
    "title": "Dead Scav",
    "chains": 55,
    "pct": 0.9,
-   "reason": "only 3 eligible links"
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Jacket",
+   "chains": 43,
+   "pct": 0.7,
+   "reason": "only 4 eligible links"
   },
   {
    "title": "Ragman",
    "chains": 33,
    "pct": 0.54,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Weapon box (6x2)",
-   "chains": 21,
-   "pct": 0.34,
    "reason": "only 3 eligible links"
   },
   {
    "title": "Plastic suitcase",
    "chains": 21,
    "pct": 0.34,
-   "reason": "only 4 eligible links"
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Peacekeeper",
-   "chains": 20,
-   "pct": 0.33,
-   "reason": "redlink target"
+   "chains": 21,
+   "pct": 0.34,
+   "reason": "only 4 eligible links"
+  },
+  {
+   "title": "Weapon box (6x2)",
+   "chains": 19,
+   "pct": 0.31,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Prapor",
    "chains": 19,
    "pct": 0.31,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Therapist",
-   "chains": 16,
-   "pct": 0.26,
-   "reason": "redlink target"
+   "reason": "only 4 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Hideout",
-   "inDegree": 175
+   "firstLinks": 177
   },
   {
    "title": "Experience",
-   "inDegree": 110
+   "firstLinks": 110
   },
   {
    "title": "Found in raid",
-   "inDegree": 66
+   "firstLinks": 67
   },
   {
    "title": "Scavs",
-   "inDegree": 59
+   "firstLinks": 59
   },
   {
    "title": "Shoreline",
-   "inDegree": 58
+   "firstLinks": 58
   },
   {
    "title": "Sports bag",
-   "inDegree": 48
+   "firstLinks": 48
   },
   {
    "title": "Streets of Tarkov",
-   "inDegree": 43
-  },
-  {
-   "title": "Lighthouse",
-   "inDegree": 42
+   "firstLinks": 43
   },
   {
    "title": "Dead Scav",
-   "inDegree": 42
-  },
-  {
-   "title": "Customs",
-   "inDegree": 40
-  },
-  {
-   "title": "Ground cache",
-   "inDegree": 35
-  },
-  {
-   "title": "Woods",
-   "inDegree": 33
-  },
-  {
-   "title": "Drawer",
-   "inDegree": 32
-  },
-  {
-   "title": "Reserve",
-   "inDegree": 31
-  },
-  {
-   "title": "Arena BattlePass",
-   "inDegree": 31
-  },
-  {
-   "title": "Weapons",
-   "inDegree": 25
-  },
-  {
-   "title": "Jaeger",
-   "inDegree": 25
-  },
-  {
-   "title": "Interchange",
-   "inDegree": 23
-  },
-  {
-   "title": "Mechanic",
-   "inDegree": 23
-  },
-  {
-   "title": "GP coin",
-   "inDegree": 22
-  },
-  {
-   "title": "Factory",
-   "inDegree": 20
-  },
-  {
-   "title": "Plastic suitcase",
-   "inDegree": 20
-  },
-  {
-   "title": "Ragman",
-   "inDegree": 18
-  },
-  {
-   "title": "Jacket",
-   "inDegree": 18
-  },
-  {
-   "title": "Peacekeeper",
-   "inDegree": 17
-  },
-  {
-   "title": "Skier",
-   "inDegree": 16
-  },
-  {
-   "title": "Weapon box (6x2)",
-   "inDegree": 16
-  },
-  {
-   "title": "Buried barrel cache",
-   "inDegree": 16
-  },
-  {
-   "title": "Ground Zero",
-   "inDegree": 16
-  },
-  {
-   "title": "Prapor",
-   "inDegree": 15
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Hideout",
-   "betweenness": 388
-  },
-  {
-   "title": "Map of Tarkov",
-   "betweenness": 387
-  },
-  {
-   "title": "Found in raid",
-   "betweenness": 279
-  },
-  {
-   "title": "The Lab",
-   "betweenness": 278
-  },
-  {
-   "title": "Woods",
-   "betweenness": 256
-  },
-  {
-   "title": "Strength",
-   "betweenness": 196
-  },
-  {
-   "title": "Scavs",
-   "betweenness": 195
-  },
-  {
-   "title": "Transits",
-   "betweenness": 189
+   "firstLinks": 42
   },
   {
    "title": "Lighthouse",
-   "betweenness": 180
-  },
-  {
-   "title": "Ref",
-   "betweenness": 174
-  },
-  {
-   "title": "Shoreline",
-   "betweenness": 172
-  },
-  {
-   "title": "BEAR",
-   "betweenness": 144
-  },
-  {
-   "title": "Trading",
-   "betweenness": 140
-  },
-  {
-   "title": "Factory",
-   "betweenness": 133
-  },
-  {
-   "title": "Reserve",
-   "betweenness": 129
-  },
-  {
-   "title": "NSV Utyos 12.7x108 heavy machine gun",
-   "betweenness": 113
-  },
-  {
-   "title": "Skier",
-   "betweenness": 103
-  },
-  {
-   "title": "Streets of Tarkov",
-   "betweenness": 102
-  },
-  {
-   "title": "Arena BattlePass",
-   "betweenness": 96
-  },
-  {
-   "title": "AGS-30 30x29mm automatic grenade launcher",
-   "betweenness": 88
+   "firstLinks": 41
   },
   {
    "title": "Customs",
-   "betweenness": 86
-  },
-  {
-   "title": "BTR Driver",
-   "betweenness": 75
-  },
-  {
-   "title": "TerraGroup",
-   "betweenness": 74
-  },
-  {
-   "title": "GP coin",
-   "betweenness": 72
-  },
-  {
-   "title": "Interchange",
-   "betweenness": 70
+   "firstLinks": 40
   },
   {
    "title": "Ground cache",
-   "betweenness": 70
+   "firstLinks": 35
   },
   {
-   "title": "Profit Retention",
-   "betweenness": 70
+   "title": "Woods",
+   "firstLinks": 33
   },
   {
-   "title": "Crafting",
-   "betweenness": 66
+   "title": "Reserve",
+   "firstLinks": 32
   },
   {
-   "title": "Boreas",
-   "betweenness": 65
+   "title": "Drawer",
+   "firstLinks": 32
   },
   {
-   "title": "They Are Already Here",
-   "betweenness": 64
+   "title": "Arena BattlePass",
+   "firstLinks": 30
+  },
+  {
+   "title": "Weapons",
+   "firstLinks": 25
+  },
+  {
+   "title": "Jaeger",
+   "firstLinks": 24
+  },
+  {
+   "title": "Mechanic",
+   "firstLinks": 23
+  },
+  {
+   "title": "Interchange",
+   "firstLinks": 22
+  },
+  {
+   "title": "GP coin",
+   "firstLinks": 22
+  },
+  {
+   "title": "Factory",
+   "firstLinks": 20
+  },
+  {
+   "title": "Plastic suitcase",
+   "firstLinks": 20
+  },
+  {
+   "title": "Ragman",
+   "firstLinks": 18
+  },
+  {
+   "title": "Jacket",
+   "firstLinks": 18
+  },
+  {
+   "title": "Peacekeeper",
+   "firstLinks": 17
+  },
+  {
+   "title": "Skier",
+   "firstLinks": 16
+  },
+  {
+   "title": "Weapon box (6x2)",
+   "firstLinks": 16
+  },
+  {
+   "title": "Buried barrel cache",
+   "firstLinks": 16
+  },
+  {
+   "title": "Ground Zero",
+   "firstLinks": 16
+  },
+  {
+   "title": "Prapor",
+   "firstLinks": 15
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Shoreline",
+   "chains": 293
+  },
+  {
+   "title": "NSV Utyos 12.7x108 heavy machine gun",
+   "chains": 293
+  },
+  {
+   "title": "AS VAL MOD.4 9x39 special assault rifle",
+   "chains": 241
+  },
+  {
+   "title": "Weapons",
+   "chains": 239
+  },
+  {
+   "title": "Strength",
+   "chains": 200
+  },
+  {
+   "title": "Hideout",
+   "chains": 198
+  },
+  {
+   "title": "Bars A-2607 95Kh18 knife",
+   "chains": 142
+  },
+  {
+   "title": "Trading",
+   "chains": 141
+  },
+  {
+   "title": "The Lab",
+   "chains": 140
+  },
+  {
+   "title": "Experience",
+   "chains": 134
+  },
+  {
+   "title": "Black Division",
+   "chains": 134
+  },
+  {
+   "title": "Map of Tarkov",
+   "chains": 129
+  },
+  {
+   "title": "Changelog",
+   "chains": 127
+  },
+  {
+   "title": "Factory",
+   "chains": 126
+  },
+  {
+   "title": "Drawer",
+   "chains": 122
+  },
+  {
+   "title": "Barter trades",
+   "chains": 122
+  },
+  {
+   "title": "Transits",
+   "chains": 106
+  },
+  {
+   "title": "Found in raid",
+   "chains": 105
+  },
+  {
+   "title": "USEC",
+   "chains": 77
+  },
+  {
+   "title": "TerraGroup",
+   "chains": 75
+  },
+  {
+   "title": "BEAR",
+   "chains": 73
+  },
+  {
+   "title": "Skier",
+   "chains": 70
+  },
+  {
+   "title": "Scavs",
+   "chains": 66
+  },
+  {
+   "title": "Woods",
+   "chains": 64
+  },
+  {
+   "title": "Sports bag",
+   "chains": 64
+  },
+  {
+   "title": "Dead Scav",
+   "chains": 55
+  },
+  {
+   "title": "Ref",
+   "chains": 54
+  },
+  {
+   "title": "Euros",
+   "chains": 52
+  },
+  {
+   "title": "Streets of Tarkov",
+   "chains": 52
+  },
+  {
+   "title": "Mechanic",
+   "chains": 51
   }
  ]
 }

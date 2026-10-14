@@ -3,537 +3,584 @@
  "rank": "last",
  "nodes": 24073,
  "converge": {
-  "articles": 822,
-  "pct": 3.41,
-  "deadEnd": 23251,
-  "deadEndPct": 96.59,
-  "noLinks": 878,
+  "articles": 20872,
+  "pct": 86.7,
+  "deadEnd": 3201,
+  "deadEndPct": 13.3,
+  "noLinks": 1032,
   "tooFewLinks": 0,
-  "unresolvable": 11379
+  "unresolvable": 16
  },
  "hopStats": {
-  "mean": 0.7,
-  "median": 1,
-  "p90": 2,
-  "max": 4
+  "mean": 5.18,
+  "median": 4,
+  "p90": 11,
+  "max": 25
  },
  "histogram": {
-  "0": 401,
-  "1": 297,
-  "2": 94,
-  "3": 26,
-  "4": 4
+  "0": 1278,
+  "1": 2109,
+  "2": 2170,
+  "3": 3799,
+  "4": 1880,
+  "5": 1696,
+  "6": 1539,
+  "7": 1399,
+  "8": 1070,
+  "9": 764,
+  "10": 956,
+  "11": 613,
+  "12": 467,
+  "13": 303,
+  "14": 208,
+  "15": 175,
+  "16": 86,
+  "17": 75,
+  "18": 71,
+  "19": 64,
+  "20": 42,
+  "21": 37,
+  "22": 40,
+  "23": 28,
+  "24": 2,
+  "25": 1
  },
- "components": 202,
- "cycleCount": 201,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 1048,
+   "1": 1601,
+   "2": 3561,
+   "3": 2434,
+   "4": 2196,
+   "5": 1591,
+   "6": 1320,
+   "7": 1098,
+   "8": 956,
+   "9": 787,
+   "10": 7481
+  },
+  "atLeast": {
+   "1": 95.6,
+   "2": 89,
+   "3": 74.2,
+   "5": 55
+  }
+ },
+ "concentration": {
+  "top1Pct": 12.47,
+  "top3Pct": 29.52,
+  "top10Pct": 53.51,
+  "cycleCount": 626,
+  "entropyBits": 5.83
+ },
+ "components": 627,
+ "cycleCount": 626,
  "largestCycle": {
   "members": [
-   "2017 Stunt Race Week",
-   "Stunt - In the City"
+   "Dan Houser",
+   "Bank Manager (GTA III)"
   ],
   "size": 2,
-  "basin": 50
+  "basin": 3001
  },
  "topAttractors": [
   {
    "cycle": [
-    "2017 Stunt Race Week",
-    "Stunt - In the City"
+    "Dan Houser",
+    "Bank Manager (GTA III)"
    ],
-   "basin": 50,
-   "pct": 0.21
+   "basin": 3001,
+   "pct": 12.47
   },
   {
    "cycle": [
-    "Port Gellhorn",
-    "Unnamed GTA VI Port Gellhorn rail bridge"
+    "Rockstar Toronto",
+    "Kevin Hoare"
    ],
-   "basin": 21,
-   "pct": 0.09
+   "basin": 2295,
+   "pct": 9.53
+  },
+  {
+   "cycle": [
+    "QUB3D",
+    "Quube"
+   ],
+   "basin": 1811,
+   "pct": 7.52
+  },
+  {
+   "cycle": [
+    "Tequesta",
+    "Felicity"
+   ],
+   "basin": 1178,
+   "pct": 4.89
+  },
+  {
+   "cycle": [
+    "Rockstar Games Social Club",
+    "Sum Yung Gai"
+   ],
+   "basin": 1000,
+   "pct": 4.15
+  },
+  {
+   "cycle": [
+    "Vanilla Unicorn",
+    "Singleton's"
+   ],
+   "basin": 921,
+   "pct": 3.83
+  },
+  {
+   "cycle": [
+    "Slasher",
+    "Beast vs. Slasher"
+   ],
+   "basin": 812,
+   "pct": 3.37
+  },
+  {
+   "cycle": [
+    "Media Player",
+    "MOTOMAMI Los Santos"
+   ],
+   "basin": 762,
+   "pct": 3.17
+  },
+  {
+   "cycle": [
+    "Bedford Point Tower",
+    "Zirconium Building"
+   ],
+   "basin": 691,
+   "pct": 2.87
+  },
+  {
+   "cycle": [
+    "Heavy Sniper",
+    "Heavy Sniper Mk II"
+   ],
+   "basin": 410,
+   "pct": 1.7
+  },
+  {
+   "cycle": [
+    "Hostile Negotiation",
+    "Chase Point"
+   ],
+   "basin": 366,
+   "pct": 1.52
+  },
+  {
+   "cycle": [
+    "Grand Senora Desert",
+    "Snakes"
+   ],
+   "basin": 219,
+   "pct": 0.91
+  },
+  {
+   "cycle": [
+    "Facilities",
+    "Orbital Cannon",
+    "Orbital Obliteration"
+   ],
+   "basin": 196,
+   "pct": 0.81
+  },
+  {
+   "cycle": [
+    "Blaine County Radio",
+    "Integrity 2.0"
+   ],
+   "basin": 195,
+   "pct": 0.81
+  },
+  {
+   "cycle": [
+    "Third-Person View",
+    "First-Person View"
+   ],
+   "basin": 157,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Morgan",
+    "Mustang .357"
+   ],
+   "basin": 157,
+   "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Ellie",
+    "Dominator (1967)"
+   ],
+   "basin": 148,
+   "pct": 0.61
+  },
+  {
+   "cycle": [
+    "Antagonist",
+    "Tritagonist"
+   ],
+   "basin": 146,
+   "pct": 0.61
   },
   {
    "cycle": [
     "Citizens United Negating Technology",
     "CitizensUnitedNegatingTechnology.org"
    ],
-   "basin": 18,
-   "pct": 0.07
+   "basin": 140,
+   "pct": 0.58
   },
   {
    "cycle": [
-    "Transform Races",
-    "Special Vehicle Stunt Races"
+    "Archie Crisp (HD Universe)",
+    "Archie Crisp"
    ],
-   "basin": 17,
-   "pct": 0.07
-  },
-  {
-   "cycle": [
-    "Rockstar New England",
-    "Ian Lane Davis"
-   ],
-   "basin": 15,
-   "pct": 0.06
-  },
-  {
-   "cycle": [
-    "Lifeinvader/Ink Inc",
-    "Lifeinvader/Steve Welby"
-   ],
-   "basin": 15,
-   "pct": 0.06
-  },
-  {
-   "cycle": [
-    "ZKEE",
-    "Ron English"
-   ],
-   "basin": 14,
-   "pct": 0.06
-  },
-  {
-   "cycle": [
-    "Spinning Anus",
-    "Fort Zancudo Stealth Aircraft"
-   ],
-   "basin": 13,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Rasta Blasta",
-    "Bent Cop Blues"
-   ],
-   "basin": 13,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Shotguns",
-    "Rocket Launchers",
-    "Light Machine Guns",
-    "Submachine Guns",
-    "Sniper Rifles"
-   ],
-   "basin": 11,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Commercials in GTA Vice City Stories",
-    "Commercials in GTA Liberty City Stories"
-   ],
-   "basin": 11,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Médaillon",
-    "Azteca Gold!"
-   ],
-   "basin": 11,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Evergreen Mall",
-    "Cipher Mall"
-   ],
-   "basin": 11,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "EXsorbeo (3D Universe)",
-    "Tonsil Hockey"
-   ],
-   "basin": 10,
-   "pct": 0.04
-  },
-  {
-   "cycle": [
-    "Shorefront",
-    "Sinfrontera National Bank"
-   ],
-   "basin": 10,
-   "pct": 0.04
-  },
-  {
-   "cycle": [
-    "Apartments",
-    "Garages in GTA Online"
-   ],
-   "basin": 9,
-   "pct": 0.04
-  },
-  {
-   "cycle": [
-    "Chepalle",
-    "Pervelli Calendar"
-   ],
-   "basin": 9,
-   "pct": 0.04
-  },
-  {
-   "cycle": [
-    "Kayak",
-    "Jason's Safehouse"
-   ],
-   "basin": 9,
-   "pct": 0.04
-  },
-  {
-   "cycle": [
-    "Lifeinvader/Kyle Chavis",
-    "Lifeinvader/Rebecca Powell"
-   ],
-   "basin": 8,
-   "pct": 0.03
-  },
-  {
-   "cycle": [
-    "KGBH Headquarters",
-    "King 130.7 Headquarters"
-   ],
-   "basin": 8,
-   "pct": 0.03
+   "basin": 132,
+   "pct": 0.55
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Pedestrians",
-   "chains": 1104,
-   "pct": 4.59,
-   "reason": "redlink target"
+   "title": "GTA VI Website",
+   "chains": 1132,
+   "pct": 4.7,
+   "reason": "no eligible links"
   },
   {
-   "title": "Rotterdam Tower",
-   "chains": 651,
-   "pct": 2.7,
-   "reason": "redlink target"
+   "title": "Grand Theft Auto V/Title Update Notes",
+   "chains": 276,
+   "pct": 1.15,
+   "reason": "no eligible links"
   },
   {
-   "title": "Benny's Original Motor Works",
-   "chains": 263,
-   "pct": 1.09,
-   "reason": "redlink target"
+   "title": "Beach Patrol Headquarters",
+   "chains": 126,
+   "pct": 0.52,
+   "reason": "no eligible links"
   },
   {
-   "title": "Los Santos International Airport (HD Universe)",
-   "chains": 176,
-   "pct": 0.73,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Los Santos (HD Universe)",
-   "chains": 121,
-   "pct": 0.5,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Algonquin",
-   "chains": 107,
-   "pct": 0.44,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Grand Theft Auto VI/Screenshots",
-   "chains": 102,
-   "pct": 0.42,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Franklin Clinton",
-   "chains": 94,
-   "pct": 0.39,
-   "reason": "redlink target"
-  },
-  {
-   "title": "3D Universe",
-   "chains": 86,
-   "pct": 0.36,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Elegy Retro Custom",
-   "chains": 85,
-   "pct": 0.35,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Money",
-   "chains": 82,
-   "pct": 0.34,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Maze Bank",
-   "chains": 61,
-   "pct": 0.25,
-   "reason": "redlink target"
+   "title": "Grand Theft Auto V/GameInformer December 2012",
+   "chains": 91,
+   "pct": 0.38,
+   "reason": "no eligible links"
   },
   {
    "title": "Lifeinvader/Bawsaq",
-   "chains": 55,
+   "chains": 63,
+   "pct": 0.26,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Burt Reynolds",
+   "chains": 56,
    "pct": 0.23,
    "reason": "no eligible links"
   },
   {
-   "title": "Rockstar Games Social Club",
-   "chains": 52,
-   "pct": 0.22,
-   "reason": "redlink target"
+   "title": "Pedcols.dat/GTAVCS",
+   "chains": 49,
+   "pct": 0.2,
+   "reason": "no eligible links"
   },
   {
-   "title": "The Peep Hole",
-   "chains": 52,
-   "pct": 0.22,
-   "reason": "redlink target"
+   "title": "Game Boy Color",
+   "chains": 48,
+   "pct": 0.2,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Hit List",
+   "chains": 30,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lifeinvader/Alcoholla",
+   "chains": 30,
+   "pct": 0.12,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "GTASanAndreas.com",
+   "chains": 24,
+   "pct": 0.1,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Nintendo Switch",
+   "chains": 15,
+   "pct": 0.06,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Xbox Series X and Series S",
+   "chains": 14,
+   "pct": 0.06,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Soiree Outfit",
+   "chains": 12,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lifeinvader/Facade",
+   "chains": 12,
+   "pct": 0.05,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Pedestrians",
-   "inDegree": 1089
+   "firstLinks": 1166
   },
   {
    "title": "Pedestrians in GTA IV",
-   "inDegree": 644
-  },
-  {
-   "title": "Hao's Special Works",
-   "inDegree": 221
-  },
-  {
-   "title": "RC Time Trials",
-   "inDegree": 124
-  },
-  {
-   "title": "Los Santos (HD Universe)",
-   "inDegree": 100
-  },
-  {
-   "title": "Franklin Clinton",
-   "inDegree": 72
-  },
-  {
-   "title": "Grand Theft Auto VI/Leaks",
-   "inDegree": 72
-  },
-  {
-   "title": "Algonquin",
-   "inDegree": 71
+   "firstLinks": 667
   },
   {
    "title": "Money",
-   "inDegree": 68
-  },
-  {
-   "title": "Cash Cards",
-   "inDegree": 57
-  },
-  {
-   "title": "Grand Theft Auto VI/Trailers",
-   "inDegree": 45
-  },
-  {
-   "title": "HD Universe",
-   "inDegree": 38
-  },
-  {
-   "title": "3D Universe",
-   "inDegree": 33
-  },
-  {
-   "title": "The Peep Hole",
-   "inDegree": 32
-  },
-  {
-   "title": "Pause Menu",
-   "inDegree": 30
-  },
-  {
-   "title": "Liberty City Free Radio",
-   "inDegree": 28
-  },
-  {
-   "title": "United Kingdom",
-   "inDegree": 27
-  },
-  {
-   "title": "GTA Online: Los Santos Tuners",
-   "inDegree": 27
-  },
-  {
-   "title": "United States of America",
-   "inDegree": 26
-  },
-  {
-   "title": "Broker",
-   "inDegree": 26
-  },
-  {
-   "title": "Pedal and Metal Cycles",
-   "inDegree": 26
-  },
-  {
-   "title": "Trevor Philips",
-   "inDegree": 24
-  },
-  {
-   "title": "State of Alderney",
-   "inDegree": 23
-  },
-  {
-   "title": "GTA Online: Cunning Stunts",
-   "inDegree": 22
-  },
-  {
-   "title": "GTA Online: Agents of Sabotage",
-   "inDegree": 22
-  },
-  {
-   "title": "WKTT Talk Radio",
-   "inDegree": 21
-  },
-  {
-   "title": "Lucia Caminos",
-   "inDegree": 21
-  },
-  {
-   "title": "GTA Online: Bottom Dollar Bounties",
-   "inDegree": 21
-  },
-  {
-   "title": "Rockstar Lincoln",
-   "inDegree": 20
-  },
-  {
-   "title": "Rockstar Games Social Club",
-   "inDegree": 20
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Pedestrians in GTA IV",
-   "betweenness": 648
-  },
-  {
-   "title": "RC Time Trials",
-   "betweenness": 270
+   "firstLinks": 282
   },
   {
    "title": "Hao's Special Works",
-   "betweenness": 249
+   "firstLinks": 227
   },
   {
-   "title": "Races in GTA Online",
-   "betweenness": 158
+   "title": "Los Santos (HD Universe)",
+   "firstLinks": 180
   },
   {
-   "title": "Lifeinvader/Franklin Clinton",
-   "betweenness": 123
+   "title": "Rockstar Games Social Club",
+   "firstLinks": 168
   },
   {
-   "title": "Lifeinvader/Los Santos Customs",
-   "betweenness": 94
+   "title": "RC Time Trials",
+   "firstLinks": 126
   },
   {
-   "title": "United States of America",
-   "betweenness": 92
+   "title": "Carl Johnson",
+   "firstLinks": 115
+  },
+  {
+   "title": "Algonquin",
+   "firstLinks": 107
+  },
+  {
+   "title": "Franklin Clinton",
+   "firstLinks": 103
+  },
+  {
+   "title": "HD Universe",
+   "firstLinks": 99
+  },
+  {
+   "title": "Vinewood Walk of Fame (HD Universe)",
+   "firstLinks": 92
+  },
+  {
+   "title": "3D Universe",
+   "firstLinks": 84
   },
   {
    "title": "Grand Theft Auto VI/Leaks",
-   "betweenness": 82
+   "firstLinks": 80
   },
   {
-   "title": "Grand Theft Auto VI/Trailers",
-   "betweenness": 81
+   "title": "Los Santos (3D Universe)",
+   "firstLinks": 78
   },
   {
-   "title": "Capture",
-   "betweenness": 57
+   "title": "United States of America",
+   "firstLinks": 67
+  },
+  {
+   "title": "Wasted",
+   "firstLinks": 65
+  },
+  {
+   "title": "Niko Bellic",
+   "firstLinks": 61
   },
   {
    "title": "Cash Cards",
-   "betweenness": 57
+   "firstLinks": 59
   },
   {
-   "title": "Grand Theft Auto VI: Ultimate Edition",
-   "betweenness": 57
+   "title": "United Kingdom",
+   "firstLinks": 56
   },
   {
-   "title": "Lifeinvader/Sprunk",
-   "betweenness": 53
+   "title": "Eyefind",
+   "firstLinks": 56
   },
   {
-   "title": "Arcades",
-   "betweenness": 51
+   "title": "Grand Theft Auto VI/Trailers",
+   "firstLinks": 53
   },
   {
-   "title": "Red County (HD Universe)",
-   "betweenness": 49
+   "title": "Portland",
+   "firstLinks": 49
   },
   {
-   "title": "Lifeinvader/Demarcus Bradley",
-   "betweenness": 48
+   "title": "Trevor Philips",
+   "firstLinks": 49
   },
   {
-   "title": "2017 Stunt Race Week",
-   "betweenness": 47
+   "title": "Pedcols.dat/GTAVCS",
+   "firstLinks": 48
   },
   {
-   "title": "Lifeinvader/Lamar Davis",
-   "betweenness": 45
+   "title": "Body Armor",
+   "firstLinks": 47
   },
   {
-   "title": "ES9",
-   "betweenness": 44
+   "title": "Bill Binder",
+   "firstLinks": 45
   },
   {
-   "title": "Raid: Wargames",
-   "betweenness": 40
+   "title": "PlayStation 2",
+   "firstLinks": 44
   },
   {
-   "title": "Bohan",
-   "betweenness": 34
+   "title": "Pause Menu",
+   "firstLinks": 43
   },
   {
-   "title": "Cunning Stunts Bonuses I",
-   "betweenness": 33
+   "title": "Cutscenes",
+   "firstLinks": 41
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Dan Houser",
+   "chains": 3001
   },
   {
-   "title": "Grand Theft Auto V and Online: Expanded and Enhanced Edition",
-   "betweenness": 32
+   "title": "Bank Manager (GTA III)",
+   "chains": 3001
   },
   {
-   "title": "Garages",
-   "betweenness": 30
+   "title": "Rockstar Toronto",
+   "chains": 2295
   },
   {
-   "title": "Lifeinvader/Simeon Yetarian",
-   "betweenness": 30
+   "title": "Kevin Hoare",
+   "chains": 2295
   },
   {
-   "title": "Content Creator",
-   "betweenness": 25
+   "title": "Rockstar Vancouver",
+   "chains": 2255
   },
   {
-   "title": "Cerveza Heights",
-   "betweenness": 24
+   "title": "Stock Footage",
+   "chains": 2222
   },
   {
-   "title": "Stuart Ross",
-   "betweenness": 24
+   "title": "Universes",
+   "chains": 2137
   },
   {
-   "title": "Mamucium",
-   "betweenness": 24
+   "title": "QUB3D",
+   "chains": 1811
   },
   {
-   "title": "TW@ (HD Universe)",
-   "betweenness": 24
+   "title": "Quube",
+   "chains": 1811
+  },
+  {
+   "title": "Random Pickable Objects",
+   "chains": 1808
+  },
+  {
+   "title": "Pedestrians",
+   "chains": 1805
+  },
+  {
+   "title": "Franklin Clinton",
+   "chains": 1552
+  },
+  {
+   "title": "3D Universe",
+   "chains": 1538
+  },
+  {
+   "title": "PlayStation 3",
+   "chains": 1364
+  },
+  {
+   "title": "Felicity",
+   "chains": 1178
+  },
+  {
+   "title": "Tequesta",
+   "chains": 1178
+  },
+  {
+   "title": "GTA VI Website",
+   "chains": 1132
+  },
+  {
+   "title": "Grand Theft Auto VI/Screenshots",
+   "chains": 1101
+  },
+  {
+   "title": "Grand Theft Auto VI/Trailers",
+   "chains": 1080
+  },
+  {
+   "title": "Rockstar Games Social Club",
+   "chains": 1000
+  },
+  {
+   "title": "Sum Yung Gai",
+   "chains": 1000
+  },
+  {
+   "title": "Vanilla Unicorn",
+   "chains": 921
+  },
+  {
+   "title": "Singleton's",
+   "chains": 921
+  },
+  {
+   "title": "Slasher",
+   "chains": 812
+  },
+  {
+   "title": "Beast vs. Slasher",
+   "chains": 812
+  },
+  {
+   "title": "Los Santos (HD Universe)",
+   "chains": 807
+  },
+  {
+   "title": "Money",
+   "chains": 763
+  },
+  {
+   "title": "Media Player",
+   "chains": 762
+  },
+  {
+   "title": "MOTOMAMI Los Santos",
+   "chains": 762
+  },
+  {
+   "title": "Wasted",
+   "chains": 713
   }
  ]
 }

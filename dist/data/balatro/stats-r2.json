@@ -3,12 +3,12 @@
  "rank": "2",
  "nodes": 517,
  "converge": {
-  "articles": 418,
-  "pct": 80.85,
-  "deadEnd": 99,
-  "deadEndPct": 19.15,
-  "noLinks": 38,
-  "tooFewLinks": 51,
+  "articles": 419,
+  "pct": 81.04,
+  "deadEnd": 98,
+  "deadEndPct": 18.96,
+  "noLinks": 36,
+  "tooFewLinks": 52,
   "unresolvable": 0
  },
  "hopStats": {
@@ -21,15 +21,43 @@
   "0": 6,
   "1": 41,
   "2": 19,
-  "3": 26,
+  "3": 27,
   "4": 59,
   "5": 151,
   "6": 30,
-  "7": 5,
-  "8": 39,
+  "7": 4,
+  "8": 40,
   "9": 27,
   "10": 13,
   "11": 2
+ },
+ "eligibleLinks": {
+  "histogram": {
+   "0": 36,
+   "1": 52,
+   "2": 39,
+   "3": 41,
+   "4": 49,
+   "5": 30,
+   "6": 31,
+   "7": 56,
+   "8": 30,
+   "9": 25,
+   "10": 128
+  },
+  "atLeast": {
+   "1": 93,
+   "2": 83,
+   "3": 75.4,
+   "5": 58
+  }
+ },
+ "concentration": {
+  "top1Pct": 78.92,
+  "top3Pct": 81.04,
+  "top10Pct": 81.04,
+  "cycleCount": 3,
+  "entropyBits": 0.19
  },
  "components": 4,
  "cycleCount": 3,
@@ -39,7 +67,7 @@
    "Consumables"
   ],
   "size": 2,
-  "basin": 407
+  "basin": 408
  },
  "topAttractors": [
   {
@@ -47,8 +75,8 @@
     "The Shop",
     "Consumables"
    ],
-   "basin": 407,
-   "pct": 78.72
+   "basin": 408,
+   "pct": 78.92
   },
   {
    "cycle": [
@@ -72,7 +100,7 @@
    "title": "Playstack",
    "chains": 6,
    "pct": 1.16,
-   "reason": "no eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Uncommon Jokers",
@@ -160,248 +188,248 @@
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Decks",
-   "inDegree": 85
+   "firstLinks": 85
   },
   {
    "title": "Blinds and Antes",
-   "inDegree": 38
+   "firstLinks": 39
   },
   {
    "title": "Jokers",
-   "inDegree": 33
+   "firstLinks": 33
   },
   {
    "title": "The Shop",
-   "inDegree": 32
+   "firstLinks": 32
   },
   {
    "title": "Challenge Decks",
-   "inDegree": 27
+   "firstLinks": 27
   },
   {
    "title": "Card modifiers",
-   "inDegree": 22
+   "firstLinks": 22
   },
   {
    "title": "Planet cards",
-   "inDegree": 18
+   "firstLinks": 18
   },
   {
    "title": "Poker hands",
-   "inDegree": 13
+   "firstLinks": 13
   },
   {
    "title": "Tarot cards",
-   "inDegree": 11
+   "firstLinks": 11
   },
   {
    "title": "Spectral cards",
-   "inDegree": 11
+   "firstLinks": 11
   },
   {
    "title": "Tags",
-   "inDegree": 10
+   "firstLinks": 10
   },
   {
    "title": "Hand size",
-   "inDegree": 10
+   "firstLinks": 10
   },
   {
    "title": "Card Ranks",
-   "inDegree": 9
+   "firstLinks": 9
   },
   {
    "title": "Eternal",
-   "inDegree": 8
+   "firstLinks": 8
   },
   {
    "title": "Vouchers",
-   "inDegree": 7
+   "firstLinks": 7
   },
   {
    "title": "Consumables",
-   "inDegree": 6
-  },
-  {
-   "title": "Card Suits",
-   "inDegree": 6
-  },
-  {
-   "title": "Collection",
-   "inDegree": 5
-  },
-  {
-   "title": "Stakes",
-   "inDegree": 5
+   "firstLinks": 6
   },
   {
    "title": "Booster Packs",
-   "inDegree": 5
+   "firstLinks": 6
+  },
+  {
+   "title": "Card Suits",
+   "firstLinks": 6
+  },
+  {
+   "title": "Collection",
+   "firstLinks": 5
+  },
+  {
+   "title": "Stakes",
+   "firstLinks": 5
   },
   {
    "title": "Negative Effects",
-   "inDegree": 5
+   "firstLinks": 5
   },
   {
    "title": "Joker slot",
-   "inDegree": 5
+   "firstLinks": 5
   },
   {
    "title": "Chips",
-   "inDegree": 4
+   "firstLinks": 4
   },
   {
    "title": "LocalThunk",
-   "inDegree": 3
+   "firstLinks": 3
   },
   {
    "title": "Mult",
-   "inDegree": 3
+   "firstLinks": 3
   },
   {
    "title": "Negative",
-   "inDegree": 3
+   "firstLinks": 3
   },
   {
    "title": "Profile",
-   "inDegree": 3
+   "firstLinks": 3
   },
   {
    "title": "Consumable slot",
-   "inDegree": 3
+   "firstLinks": 3
   },
   {
    "title": "Balatro",
-   "inDegree": 2
+   "firstLinks": 2
   },
   {
    "title": "Playstack",
-   "inDegree": 2
+   "firstLinks": 2
   }
  ],
- "topBetweenness": [
+ "topThroughTraffic": [
   {
-   "title": "Planet cards",
-   "betweenness": 984
-  },
-  {
-   "title": "Decks",
-   "betweenness": 800
-  },
-  {
-   "title": "Tarot cards",
-   "betweenness": 726
-  },
-  {
-   "title": "Poker hands",
-   "betweenness": 692
-  },
-  {
-   "title": "Jokers",
-   "betweenness": 548
-  },
-  {
-   "title": "Blinds and Antes",
-   "betweenness": 496
-  },
-  {
-   "title": "Money",
-   "betweenness": 448
+   "title": "Consumables",
+   "chains": 408
   },
   {
    "title": "The Shop",
-   "betweenness": 399
+   "chains": 408
+  },
+  {
+   "title": "Tarot cards",
+   "chains": 365
+  },
+  {
+   "title": "Planet cards",
+   "chains": 329
+  },
+  {
+   "title": "Poker hands",
+   "chains": 174
+  },
+  {
+   "title": "Decks",
+   "chains": 161
+  },
+  {
+   "title": "Jokers",
+   "chains": 138
   },
   {
    "title": "Gameplay loop",
-   "betweenness": 396
+   "chains": 68
+  },
+  {
+   "title": "Money",
+   "chains": 66
+  },
+  {
+   "title": "Blinds and Antes",
+   "chains": 64
   },
   {
    "title": "Challenge Decks",
-   "betweenness": 295
-  },
-  {
-   "title": "Collection",
-   "betweenness": 162
-  },
-  {
-   "title": "Options",
-   "betweenness": 152
-  },
-  {
-   "title": "Main menu",
-   "betweenness": 140
-  },
-  {
-   "title": "Joker",
-   "betweenness": 138
-  },
-  {
-   "title": "Spectral cards",
-   "betweenness": 130
+   "chains": 60
   },
   {
    "title": "Card modifiers",
-   "betweenness": 115
+   "chains": 24
   },
   {
-   "title": "Tags",
-   "betweenness": 99
+   "title": "Joker",
+   "chains": 24
   },
   {
-   "title": "Card Ranks",
-   "betweenness": 75
-  },
-  {
-   "title": "Vouchers",
-   "betweenness": 63
+   "title": "Main menu",
+   "chains": 21
   },
   {
    "title": "Booster Packs",
-   "betweenness": 54
+   "chains": 20
   },
   {
-   "title": "Negative Effects",
-   "betweenness": 54
+   "title": "Options",
+   "chains": 20
+  },
+  {
+   "title": "Collection",
+   "chains": 19
+  },
+  {
+   "title": "Card Ranks",
+   "chains": 16
+  },
+  {
+   "title": "Spectral cards",
+   "chains": 14
   },
   {
    "title": "Hand size",
-   "betweenness": 52
+   "chains": 14
+  },
+  {
+   "title": "Tags",
+   "chains": 12
+  },
+  {
+   "title": "Mult",
+   "chains": 9
+  },
+  {
+   "title": "Chips",
+   "chains": 9
   },
   {
    "title": "Eternal",
-   "betweenness": 48
+   "chains": 9
   },
   {
-   "title": "Card Suits",
-   "betweenness": 36
+   "title": "Vouchers",
+   "chains": 8
   },
   {
    "title": "Stakes",
-   "betweenness": 30
+   "chains": 7
   },
   {
-   "title": "Joker slot",
-   "betweenness": 30
+   "title": "Card Suits",
+   "chains": 7
   },
   {
-   "title": "Profile",
-   "betweenness": 24
-  },
-  {
-   "title": "Legendary Jokers",
-   "betweenness": 22
+   "title": "Negative Effects",
+   "chains": 7
   },
   {
    "title": "Consumable slot",
-   "betweenness": 18
+   "chains": 7
   },
   {
-   "title": "Bugs",
-   "betweenness": 15
+   "title": "Playstack",
+   "chains": 6
   }
  ]
 }

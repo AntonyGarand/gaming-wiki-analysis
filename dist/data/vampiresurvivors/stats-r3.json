@@ -1,32 +1,61 @@
 {
  "wiki": "vampiresurvivors",
  "rank": "3",
- "nodes": 2469,
+ "nodes": 2323,
  "converge": {
-  "articles": 998,
-  "pct": 40.42,
-  "deadEnd": 1471,
-  "deadEndPct": 59.58,
-  "noLinks": 232,
-  "tooFewLinks": 943,
-  "unresolvable": 2
+  "articles": 1205,
+  "pct": 51.87,
+  "deadEnd": 1118,
+  "deadEndPct": 48.13,
+  "noLinks": 81,
+  "tooFewLinks": 947,
+  "unresolvable": 6
  },
  "hopStats": {
-  "mean": 3.19,
+  "mean": 3.6,
   "median": 3,
-  "p90": 6,
-  "max": 8
+  "p90": 7,
+  "max": 9
  },
  "histogram": {
   "0": 22,
-  "1": 149,
-  "2": 239,
-  "3": 146,
-  "4": 254,
-  "5": 61,
-  "6": 88,
-  "7": 38,
-  "8": 1
+  "1": 177,
+  "2": 250,
+  "3": 155,
+  "4": 243,
+  "5": 73,
+  "6": 163,
+  "7": 98,
+  "8": 22,
+  "9": 2
+ },
+ "eligibleLinks": {
+  "histogram": {
+   "0": 87,
+   "1": 580,
+   "2": 367,
+   "3": 243,
+   "4": 150,
+   "5": 171,
+   "6": 138,
+   "7": 109,
+   "8": 90,
+   "9": 87,
+   "10": 301
+  },
+  "atLeast": {
+   "1": 96.3,
+   "2": 71.3,
+   "3": 55.5,
+   "5": 38.6
+  }
+ },
+ "concentration": {
+  "top1Pct": 31.9,
+  "top3Pct": 51.18,
+  "top10Pct": 51.87,
+  "cycleCount": 10,
+  "entropyBits": 1.12
  },
  "components": 11,
  "cycleCount": 10,
@@ -38,7 +67,7 @@
    "Gold Coin (currency)"
   ],
   "size": 4,
-  "basin": 738
+  "basin": 741
  },
  "topAttractors": [
   {
@@ -48,16 +77,16 @@
     "PowerUps",
     "Gold Coin (currency)"
    ],
-   "basin": 738,
-   "pct": 29.89
+   "basin": 741,
+   "pct": 31.9
   },
   {
    "cycle": [
     "Weapons",
     "Passive items"
    ],
-   "basin": 237,
-   "pct": 9.6
+   "basin": 441,
+   "pct": 18.98
   },
   {
    "cycle": [
@@ -65,7 +94,7 @@
     "Rough Awakening"
    ],
    "basin": 7,
-   "pct": 0.28
+   "pct": 0.3
   },
   {
    "cycle": [
@@ -73,7 +102,7 @@
     "Main menu"
    ],
    "basin": 3,
-   "pct": 0.12
+   "pct": 0.13
   },
   {
    "cycle": [
@@ -81,7 +110,7 @@
     "Suspect Security"
    ],
    "basin": 3,
-   "pct": 0.12
+   "pct": 0.13
   },
   {
    "cycle": [
@@ -89,15 +118,15 @@
     "Minotaur Rush"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
-    "Stage Killer",
-    "Sir Ambrojoe"
+    "Unlock Guides",
+    "Roadmap"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
@@ -105,7 +134,7 @@
     "Slogra"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
@@ -113,7 +142,7 @@
     "Shrine Valley"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   },
   {
    "cycle": [
@@ -121,344 +150,344 @@
     "Crazy Escape"
    ],
    "basin": 2,
-   "pct": 0.08
+   "pct": 0.09
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Updates/Patch 0.6.1",
-   "chains": 165,
-   "pct": 6.68,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Glimmers",
    "chains": 26,
-   "pct": 1.05,
+   "pct": 1.12,
    "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Updates/Vampire Survivors: Ante Chamber out now, for free!",
-   "chains": 11,
-   "pct": 0.45,
-   "reason": "no eligible links"
   },
   {
    "title": "Tides of the Foscari (adventure)",
    "chains": 8,
-   "pct": 0.32,
+   "pct": 0.34,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Retaliate",
    "chains": 6,
-   "pct": 0.24,
+   "pct": 0.26,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Cute Molisano",
    "chains": 5,
-   "pct": 0.2,
+   "pct": 0.22,
    "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Updates/Patch 0.7.2",
-   "chains": 5,
-   "pct": 0.2,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Updates/Patch 0.4.2",
-   "chains": 4,
-   "pct": 0.16,
-   "reason": "no eligible links"
   },
   {
    "title": "Critical Hit",
    "chains": 4,
-   "pct": 0.16,
+   "pct": 0.17,
    "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Updates/Patch 1.10: Laborratory",
-   "chains": 4,
-   "pct": 0.16,
-   "reason": "no eligible links"
   },
   {
    "title": "Metal Alien",
    "chains": 4,
-   "pct": 0.16,
+   "pct": 0.17,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Poncle",
+   "chains": 4,
+   "pct": 0.17,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Last Breath",
    "chains": 4,
-   "pct": 0.16,
+   "pct": 0.17,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Updates/35th Anniversary Patch",
+   "title": "It's Her Nature",
+   "chains": 4,
+   "pct": 0.17,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "World of Light and Dark",
    "chains": 3,
-   "pct": 0.12,
+   "pct": 0.13,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Madd-Onna",
+   "chains": 3,
+   "pct": 0.13,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Big Bot Gordea",
+   "chains": 3,
+   "pct": 0.13,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Hidden weapons",
+   "chains": 3,
+   "pct": 0.13,
    "reason": "no eligible links"
   },
   {
-   "title": "Updates/Patch 0.10.0",
+   "title": "Legacy of the Moonspell (album)",
    "chains": 3,
-   "pct": 0.12,
-   "reason": "no eligible links"
+   "pct": 0.13,
+   "reason": "only 1 eligible links"
   },
   {
-   "title": "Updates/Patch 0.11.0",
+   "title": "Vampire Survivors 3",
    "chains": 3,
-   "pct": 0.12,
-   "reason": "no eligible links"
+   "pct": 0.13,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
-   "title": "Evolution",
-   "inDegree": 120
+   "title": "Weapons",
+   "firstLinks": 112
   },
   {
    "title": "Stages",
-   "inDegree": 100
+   "firstLinks": 102
   },
   {
-   "title": "Weapons",
-   "inDegree": 94
+   "title": "Evolution",
+   "firstLinks": 101
   },
   {
    "title": "Ode to Castlevania",
-   "inDegree": 94
+   "firstLinks": 94
   },
   {
    "title": "Spells",
-   "inDegree": 70
+   "firstLinks": 71
   },
   {
    "title": "Enemies",
-   "inDegree": 32
+   "firstLinks": 33
   },
   {
    "title": "Ode to Castlevania (stage)",
-   "inDegree": 31
-  },
-  {
-   "title": "Light source",
-   "inDegree": 29
-  },
-  {
-   "title": "Boss Rash",
-   "inDegree": 29
-  },
-  {
-   "title": "Limit Break",
-   "inDegree": 26
-  },
-  {
-   "title": "Glimmers",
-   "inDegree": 25
+   "firstLinks": 31
   },
   {
    "title": "Passive items",
-   "inDegree": 21
-  },
-  {
-   "title": "Emerald Diorama",
-   "inDegree": 17
-  },
-  {
-   "title": "Knockback",
-   "inDegree": 16
-  },
-  {
-   "title": "PowerUps",
-   "inDegree": 14
-  },
-  {
-   "title": "Amount",
-   "inDegree": 13
-  },
-  {
-   "title": "Pickups",
-   "inDegree": 13
-  },
-  {
-   "title": "Characters",
-   "inDegree": 12
-  },
-  {
-   "title": "Level up",
-   "inDegree": 12
-  },
-  {
-   "title": "Relics",
-   "inDegree": 12
-  },
-  {
-   "title": "Area",
-   "inDegree": 11
-  },
-  {
-   "title": "Gallo Tower",
-   "inDegree": 11
-  },
-  {
-   "title": "The Bone Zone",
-   "inDegree": 10
-  },
-  {
-   "title": "Overhealing",
-   "inDegree": 10
-  },
-  {
-   "title": "Luck",
-   "inDegree": 9
-  },
-  {
-   "title": "Emerald Diorama (stage)",
-   "inDegree": 9
-  },
-  {
-   "title": "Mad Forest",
-   "inDegree": 8
-  },
-  {
-   "title": "Freeze",
-   "inDegree": 8
-  },
-  {
-   "title": "Coffin",
-   "inDegree": 8
-  },
-  {
-   "title": "Carlo Cart",
-   "inDegree": 8
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Stages",
-   "betweenness": 2412
-  },
-  {
-   "title": "Gold Coin (currency)",
-   "betweenness": 1937
-  },
-  {
-   "title": "Relics",
-   "betweenness": 1600
-  },
-  {
-   "title": "Pickups",
-   "betweenness": 1503
-  },
-  {
-   "title": "Secrets",
-   "betweenness": 906
-  },
-  {
-   "title": "Evolution",
-   "betweenness": 882
-  },
-  {
-   "title": "Magnet",
-   "betweenness": 769
-  },
-  {
-   "title": "Ode to Castlevania (stage)",
-   "betweenness": 665
-  },
-  {
-   "title": "Spells",
-   "betweenness": 604
-  },
-  {
-   "title": "Ode to Castlevania",
-   "betweenness": 600
-  },
-  {
-   "title": "Characters",
-   "betweenness": 511
-  },
-  {
-   "title": "Forbidden Scrolls of Morbane",
-   "betweenness": 511
-  },
-  {
-   "title": "Mad Forest",
-   "betweenness": 480
-  },
-  {
-   "title": "Boon Marrabbio (enemy)",
-   "betweenness": 324
-  },
-  {
-   "title": "PowerUps",
-   "betweenness": 207
-  },
-  {
-   "title": "Weapons",
-   "betweenness": 187
-  },
-  {
-   "title": "Gallo Tower",
-   "betweenness": 184
-  },
-  {
-   "title": "Limit Break",
-   "betweenness": 182
+   "firstLinks": 30
   },
   {
    "title": "Boss Rash",
-   "betweenness": 180
-  },
-  {
-   "title": "Boon Marrabbio",
-   "betweenness": 163
+   "firstLinks": 30
   },
   {
    "title": "Light source",
-   "betweenness": 136
+   "firstLinks": 29
   },
   {
-   "title": "Greed",
-   "betweenness": 136
+   "title": "Limit Break",
+   "firstLinks": 28
+  },
+  {
+   "title": "Glimmers",
+   "firstLinks": 25
+  },
+  {
+   "title": "Emerald Diorama",
+   "firstLinks": 17
+  },
+  {
+   "title": "Knockback",
+   "firstLinks": 16
   },
   {
    "title": "Amount",
-   "betweenness": 120
+   "firstLinks": 15
   },
   {
-   "title": "Laborratory",
-   "betweenness": 112
+   "title": "Pickups",
+   "firstLinks": 14
   },
   {
-   "title": "Moongolow",
-   "betweenness": 110
+   "title": "Relics",
+   "firstLinks": 14
   },
   {
-   "title": "Enemies",
-   "betweenness": 96
+   "title": "Characters",
+   "firstLinks": 13
   },
   {
-   "title": "Area",
-   "betweenness": 88
+   "title": "PowerUps",
+   "firstLinks": 13
   },
   {
-   "title": "Inlaid Library",
-   "betweenness": 88
-  },
-  {
-   "title": "Arcanas",
-   "betweenness": 85
+   "title": "Level up",
+   "firstLinks": 12
   },
   {
    "title": "The Bone Zone",
-   "betweenness": 80
+   "firstLinks": 12
+  },
+  {
+   "title": "Area",
+   "firstLinks": 11
+  },
+  {
+   "title": "Luck",
+   "firstLinks": 11
+  },
+  {
+   "title": "Gallo Tower",
+   "firstLinks": 11
+  },
+  {
+   "title": "Freeze",
+   "firstLinks": 10
+  },
+  {
+   "title": "Overhealing",
+   "firstLinks": 10
+  },
+  {
+   "title": "Mad Forest",
+   "firstLinks": 9
+  },
+  {
+   "title": "Emerald Diorama (stage)",
+   "firstLinks": 9
+  },
+  {
+   "title": "Gold Coin (currency)",
+   "firstLinks": 8
+  },
+  {
+   "title": "Arcanas",
+   "firstLinks": 8
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "PowerUps",
+   "chains": 741
+  },
+  {
+   "title": "Magnet",
+   "chains": 741
+  },
+  {
+   "title": "Pickups",
+   "chains": 741
+  },
+  {
+   "title": "Gold Coin (currency)",
+   "chains": 741
+  },
+  {
+   "title": "Stages",
+   "chains": 600
+  },
+  {
+   "title": "Weapons",
+   "chains": 441
+  },
+  {
+   "title": "Passive items",
+   "chains": 441
+  },
+  {
+   "title": "Relics",
+   "chains": 306
+  },
+  {
+   "title": "Yellow Sign",
+   "chains": 181
+  },
+  {
+   "title": "Boon Marrabbio",
+   "chains": 168
+  },
+  {
+   "title": "Boon Marrabbio (enemy)",
+   "chains": 167
+  },
+  {
+   "title": "Mad Forest",
+   "chains": 165
+  },
+  {
+   "title": "Secrets",
+   "chains": 155
+  },
+  {
+   "title": "Spells",
+   "chains": 154
+  },
+  {
+   "title": "Ode to Castlevania (stage)",
+   "chains": 134
+  },
+  {
+   "title": "Evolution",
+   "chains": 131
+  },
+  {
+   "title": "Ode to Castlevania",
+   "chains": 101
+  },
+  {
+   "title": "Forbidden Scrolls of Morbane",
+   "chains": 78
+  },
+  {
+   "title": "Characters",
+   "chains": 73
+  },
+  {
+   "title": "Enemies",
+   "chains": 50
+  },
+  {
+   "title": "Boss Rash",
+   "chains": 38
+  },
+  {
+   "title": "Light source",
+   "chains": 34
+  },
+  {
+   "title": "Limit Break",
+   "chains": 30
+  },
+  {
+   "title": "Gallo Tower",
+   "chains": 26
+  },
+  {
+   "title": "Glimmers",
+   "chains": 26
+  },
+  {
+   "title": "Moongolow",
+   "chains": 24
+  },
+  {
+   "title": "Arcanas",
+   "chains": 22
+  },
+  {
+   "title": "Level up",
+   "chains": 21
+  },
+  {
+   "title": "Garlic",
+   "chains": 20
+  },
+  {
+   "title": "Player stats",
+   "chains": 19
   }
  ]
 }

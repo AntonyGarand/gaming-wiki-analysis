@@ -3,131 +3,180 @@
  "rank": "random",
  "nodes": 36164,
  "converge": {
-  "articles": 35431,
-  "pct": 97.97,
-  "deadEnd": 733,
-  "deadEndPct": 2.03,
-  "noLinks": 542,
+  "articles": 35518,
+  "pct": 98.21,
+  "deadEnd": 646,
+  "deadEndPct": 1.79,
+  "noLinks": 539,
   "tooFewLinks": 0,
-  "unresolvable": 51
+  "unresolvable": 2
  },
  "hopStats": {
-  "mean": 14.23,
-  "median": 13,
-  "p90": 29,
-  "max": 50
+  "mean": 9.93,
+  "median": 9,
+  "p90": 20,
+  "max": 43
  },
  "histogram": {
-  "0": 965,
-  "1": 2011,
-  "2": 1513,
-  "3": 1312,
-  "4": 1254,
-  "5": 1412,
-  "6": 987,
-  "7": 979,
-  "8": 1327,
-  "9": 1366,
-  "10": 1418,
-  "11": 1621,
-  "12": 1499,
-  "13": 1279,
-  "14": 1467,
-  "15": 1129,
-  "16": 1168,
-  "17": 971,
-  "18": 1112,
-  "19": 980,
-  "20": 655,
-  "21": 699,
-  "22": 907,
-  "23": 785,
-  "24": 583,
-  "25": 650,
-  "26": 487,
-  "27": 668,
-  "28": 507,
-  "29": 558,
-  "30": 440,
-  "31": 337,
-  "32": 362,
-  "33": 359,
-  "34": 276,
-  "35": 137,
-  "36": 106,
-  "37": 94,
-  "38": 52,
-  "39": 52,
-  "40": 371,
-  "41": 76,
-  "42": 119,
-  "43": 113,
-  "44": 103,
-  "45": 92,
-  "46": 39,
-  "47": 17,
-  "48": 13,
-  "49": 2,
-  "50": 2
+  "0": 985,
+  "1": 2546,
+  "2": 2509,
+  "3": 2294,
+  "4": 1899,
+  "5": 1886,
+  "6": 1761,
+  "7": 1571,
+  "8": 1587,
+  "9": 1991,
+  "10": 1945,
+  "11": 1905,
+  "12": 1443,
+  "13": 1291,
+  "14": 1302,
+  "15": 1303,
+  "16": 1090,
+  "17": 727,
+  "18": 879,
+  "19": 638,
+  "20": 419,
+  "21": 425,
+  "22": 438,
+  "23": 674,
+  "24": 373,
+  "25": 321,
+  "26": 235,
+  "27": 306,
+  "28": 199,
+  "29": 107,
+  "30": 57,
+  "31": 35,
+  "32": 37,
+  "33": 34,
+  "34": 26,
+  "35": 36,
+  "36": 31,
+  "37": 41,
+  "38": 97,
+  "39": 44,
+  "40": 21,
+  "41": 5,
+  "42": 4,
+  "43": 1
  },
- "components": 462,
- "cycleCount": 461,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 541,
+   "1": 1323,
+   "2": 2986,
+   "3": 4695,
+   "4": 3503,
+   "5": 3373,
+   "6": 2722,
+   "7": 2275,
+   "8": 1843,
+   "9": 1604,
+   "10": 11299
+  },
+  "atLeast": {
+   "1": 98.5,
+   "2": 94.8,
+   "3": 86.6,
+   "5": 63.9
+  }
+ },
+ "concentration": {
+  "top1Pct": 50.87,
+  "top3Pct": 67.12,
+  "top10Pct": 83.08,
+  "cycleCount": 449,
+  "entropyBits": 3.43
+ },
+ "components": 450,
+ "cycleCount": 449,
  "largestCycle": {
   "members": [
-   "Slayer",
-   "Slayer/Experience table"
+   "Members",
+   "Mage Training Arena",
+   "Telekinetic Grab",
+   "Wyrmscraig",
+   "Sailing",
+   "Prying Times",
+   "Junior Jim",
+   "World switching",
+   "World",
+   "Shop",
+   "General store",
+   "Jennifer's General Supplies",
+   "Field ration",
+   "Pest Control",
+   "Void knight top",
+   "(l)",
+   "Perdu",
+   "(broken)",
+   "(mangled)",
+   "Wilderness",
+   "Yew tree",
+   "Game tick",
+   "Preserve",
+   "Nightmare Zone",
+   "King Black Dragon Lair",
+   "Lesser demon",
+   "Lesser demon (Melzar's Maze)",
+   "Melzar's notes",
+   "Crandor",
+   "Free-to-play",
+   "Brass key",
+   "Hill Giant"
   ],
-  "size": 2,
-  "basin": 17690
+  "size": 32,
+  "basin": 18396
  },
  "topAttractors": [
   {
    "cycle": [
-    "Slayer",
-    "Slayer/Experience table"
+    "Members",
+    "Mage Training Arena",
+    "Telekinetic Grab",
+    "Wyrmscraig",
+    "Sailing",
+    "Prying Times",
+    "Junior Jim",
+    "World switching",
+    "World",
+    "Shop",
+    "General store",
+    "Jennifer's General Supplies",
+    "Field ration",
+    "Pest Control",
+    "Void knight top",
+    "(l)",
+    "Perdu",
+    "(broken)",
+    "(mangled)",
+    "Wilderness",
+    "Yew tree",
+    "Game tick",
+    "Preserve",
+    "Nightmare Zone",
+    "King Black Dragon Lair",
+    "Lesser demon",
+    "Lesser demon (Melzar's Maze)",
+    "Melzar's notes",
+    "Crandor",
+    "Free-to-play",
+    "Brass key",
+    "Hill Giant"
    ],
-   "basin": 17690,
-   "pct": 48.92
+   "basin": 18396,
+   "pct": 50.87
   },
   {
    "cycle": [
-    "Runes",
-    "Magic shops"
+    "Smellytoes",
+    "Creakyknees"
    ],
-   "basin": 4990,
-   "pct": 13.8
-  },
-  {
-   "cycle": [
-    "Defence"
-   ],
-   "basin": 2351,
-   "pct": 6.5
-  },
-  {
-   "cycle": [
-    "Veos",
-    "Copper's crimson collar"
-   ],
-   "basin": 886,
-   "pct": 2.45
-  },
-  {
-   "cycle": [
-    "Strength"
-   ],
-   "basin": 868,
-   "pct": 2.4
-  },
-  {
-   "cycle": [
-    "Ice troll",
-    "Trollweiss Dungeon",
-    "Brambickle",
-    "Ice gate"
-   ],
-   "basin": 853,
-   "pct": 2.36
+   "basin": 3107,
+   "pct": 8.59
   },
   {
    "cycle": [
@@ -137,7 +186,32 @@
     "Hunters' loot sack (expert)",
     "Guild hunter outfit"
    ],
-   "basin": 777,
+   "basin": 2772,
+   "pct": 7.67
+  },
+  {
+   "cycle": [
+    "Slayer",
+    "Slayer/Experience table"
+   ],
+   "basin": 2621,
+   "pct": 7.25
+  },
+  {
+   "cycle": [
+    "Loot key",
+    "Ferox Enclave",
+    "Loot Chest"
+   ],
+   "basin": 999,
+   "pct": 2.76
+  },
+  {
+   "cycle": [
+    "Construction",
+    "Massive storage unit"
+   ],
+   "basin": 779,
    "pct": 2.15
   },
   {
@@ -145,30 +219,31 @@
     "Jagex Moderator",
     "Rotten strawberry"
    ],
-   "basin": 639,
-   "pct": 1.77
+   "basin": 670,
+   "pct": 1.85
   },
   {
    "cycle": [
-    "Castle Wars",
-    "Bandages"
+    "Serpentine helm",
+    "Tanzanite mutagen"
    ],
-   "basin": 291,
-   "pct": 0.8
-  },
-  {
-   "cycle": [
-    "Agility"
-   ],
-   "basin": 284,
-   "pct": 0.79
+   "basin": 252,
+   "pct": 0.7
   },
   {
    "cycle": [
     "Temple of the Eye (location)",
     "Justiciar Aliya"
    ],
-   "basin": 224,
+   "basin": 227,
+   "pct": 0.63
+  },
+  {
+   "cycle": [
+    "Ali the Snake Charmer",
+    "Money Pot"
+   ],
+   "basin": 223,
    "pct": 0.62
   },
   {
@@ -176,8 +251,8 @@
     "Warriors' Guild",
     "Jimmy (Warriors' Guild)"
    ],
-   "basin": 223,
-   "pct": 0.62
+   "basin": 221,
+   "pct": 0.61
   },
   {
    "cycle": [
@@ -189,11 +264,11 @@
   },
   {
    "cycle": [
-    "Dragon pickaxe",
-    "Dragon pickaxe (upgraded)"
+    "Items",
+    "Bank note"
    ],
-   "basin": 213,
-   "pct": 0.59
+   "basin": 192,
+   "pct": 0.53
   },
   {
    "cycle": [
@@ -201,15 +276,18 @@
     "Soft clay pack",
     "Belona"
    ],
-   "basin": 170,
-   "pct": 0.47
+   "basin": 168,
+   "pct": 0.46
   },
   {
    "cycle": [
-    "Aris"
+    "Barrel of naphtha",
+    "Barrel",
+    "Coal Tar",
+    "Barrel bomb"
    ],
-   "basin": 146,
-   "pct": 0.4
+   "basin": 147,
+   "pct": 0.41
   },
   {
    "cycle": [
@@ -221,20 +299,15 @@
   },
   {
    "cycle": [
-    "Barrel of naphtha",
-    "Barrel",
-    "Coal Tar",
-    "Barrel bomb"
+    "Draynor Village",
+    "Fun weapons",
+    "Cursed goblin hammer",
+    "Goblin lieutenant",
+    "High Priest (2013 Goblin Invasion)",
+    "Disk of Returning",
+    "Diango's Toy Store"
    ],
-   "basin": 139,
-   "pct": 0.38
-  },
-  {
-   "cycle": [
-    "Vial of water",
-    "Water-filled vial pack"
-   ],
-   "basin": 104,
+   "basin": 105,
    "pct": 0.29
   },
   {
@@ -244,6 +317,22 @@
    ],
    "basin": 102,
    "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Barrows equipment",
+    "Item set"
+   ],
+   "basin": 102,
+   "pct": 0.28
+  },
+  {
+   "cycle": [
+    "Barbarian Assault",
+    "Red egg"
+   ],
+   "basin": 95,
+   "pct": 0.26
   }
  ],
  "deadEndTerminals": [
@@ -258,12 +347,6 @@
    "chains": 22,
    "pct": 0.06,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Rosewood tree (Farming)",
-   "chains": 16,
-   "pct": 0.04,
-   "reason": "redlink target"
   },
   {
    "title": "Legs slot table",
@@ -302,285 +385,302 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Hex edit detected",
-   "chains": 5,
-   "pct": 0.01,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Magic cape",
-   "chains": 4,
-   "pct": 0.01,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Ironwood tree (Farming)",
-   "chains": 4,
-   "pct": 0.01,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Gnome Child (Realm of Memories)",
-   "chains": 4,
-   "pct": 0.01,
-   "reason": "redlink target"
-  },
-  {
    "title": "Body slot table",
    "chains": 3,
    "pct": 0.01,
    "reason": "no eligible links"
   },
   {
-   "title": "Barbarianism",
-   "chains": 3,
+   "title": "Ammunition slot table",
+   "chains": 2,
    "pct": 0.01,
-   "reason": "redlink target"
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Slang dictionary",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bestiary/Free-to-play",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "2001",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "2002",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "2003",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Construction",
-   "inDegree": 309
+   "firstLinks": 310
   },
   {
    "title": "Quests",
-   "inDegree": 266
+   "firstLinks": 266
   },
   {
    "title": "Player-owned house",
-   "inDegree": 256
+   "firstLinks": 258
   },
   {
    "title": "Treasure Trails/Guide/Cryptic clues",
-   "inDegree": 236
+   "firstLinks": 236
   },
   {
    "title": "Treasure Trails",
-   "inDegree": 201
+   "firstLinks": 202
   },
   {
    "title": "Examine",
-   "inDegree": 188
+   "firstLinks": 188
+  },
+  {
+   "title": "Experience",
+   "firstLinks": 165
   },
   {
    "title": "Treasure Trails/Guide/Coordinates",
-   "inDegree": 162
-  },
-  {
-   "title": "Experience",
-   "inDegree": 160
-  },
-  {
-   "title": "Agility",
-   "inDegree": 137
+   "firstLinks": 162
   },
   {
    "title": "Thieving",
-   "inDegree": 137
+   "firstLinks": 138
+  },
+  {
+   "title": "Agility",
+   "firstLinks": 137
   },
   {
    "title": "Magic",
-   "inDegree": 134
+   "firstLinks": 133
   },
   {
    "title": "Defence",
-   "inDegree": 129
+   "firstLinks": 129
   },
   {
    "title": "Cargo hold",
-   "inDegree": 128
-  },
-  {
-   "title": "Grand Exchange",
-   "inDegree": 121
-  },
-  {
-   "title": "Combat Achievements/Elite",
-   "inDegree": 121
+   "firstLinks": 128
   },
   {
    "title": "Gielinor",
-   "inDegree": 119
+   "firstLinks": 122
+  },
+  {
+   "title": "Grand Exchange",
+   "firstLinks": 122
+  },
+  {
+   "title": "Combat Achievements/Elite",
+   "firstLinks": 121
   },
   {
    "title": "Combat Achievements/Master",
-   "inDegree": 118
+   "firstLinks": 118
   },
   {
    "title": "Last Man Standing",
-   "inDegree": 110
+   "firstLinks": 110
   },
   {
    "title": "Varrock",
-   "inDegree": 107
+   "firstLinks": 107
   },
   {
    "title": "God Wars Dungeon",
-   "inDegree": 107
+   "firstLinks": 107
   },
   {
    "title": "Music",
-   "inDegree": 101
-  },
-  {
-   "title": "Hitpoints",
-   "inDegree": 98
-  },
-  {
-   "title": "Sailing",
-   "inDegree": 97
+   "firstLinks": 101
   },
   {
    "title": "Smithing",
-   "inDegree": 96
+   "firstLinks": 98
   },
   {
-   "title": "Coins",
-   "inDegree": 95
-  },
-  {
-   "title": "Prayer",
-   "inDegree": 93
-  },
-  {
-   "title": "March 2025 Sailing Alpha",
-   "inDegree": 93
-  },
-  {
-   "title": "Jagex",
-   "inDegree": 90
-  },
-  {
-   "title": "Ranged",
-   "inDegree": 86
-  },
-  {
-   "title": "Minigames",
-   "inDegree": 83
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Members",
-   "betweenness": 115340
-  },
-  {
-   "title": "Quests",
-   "betweenness": 111353
-  },
-  {
-   "title": "Mage Training Arena",
-   "betweenness": 104004
-  },
-  {
-   "title": "Telekinetic Grab",
-   "betweenness": 92616
-  },
-  {
-   "title": "Wyrmscraig",
-   "betweenness": 81263
+   "title": "Hitpoints",
+   "firstLinks": 98
   },
   {
    "title": "Sailing",
-   "betweenness": 77886
+   "firstLinks": 96
   },
   {
-   "title": "Current Affairs",
-   "betweenness": 64910
+   "title": "Coins",
+   "firstLinks": 94
   },
   {
-   "title": "Multicombat area",
-   "betweenness": 63924
+   "title": "March 2025 Sailing Alpha",
+   "firstLinks": 93
   },
   {
-   "title": "Magic",
-   "betweenness": 62437
+   "title": "Prayer",
+   "firstLinks": 92
   },
   {
-   "title": "Collection log",
-   "betweenness": 62340
-  },
-  {
-   "title": "Mor Ul Rek",
-   "betweenness": 62289
-  },
-  {
-   "title": "TzHaar-Mej-Roh",
-   "betweenness": 60008
-  },
-  {
-   "title": "Troll",
-   "betweenness": 59262
-  },
-  {
-   "title": "Hammer",
-   "betweenness": 58656
-  },
-  {
-   "title": "The Collector",
-   "betweenness": 58212
-  },
-  {
-   "title": "Tokkul",
-   "betweenness": 57900
-  },
-  {
-   "title": "Last Man Standing",
-   "betweenness": 57392
-  },
-  {
-   "title": "Making Friends with My Arm",
-   "betweenness": 56764
-  },
-  {
-   "title": "Rock (Troll)",
-   "betweenness": 56480
-  },
-  {
-   "title": "Protect from Melee",
-   "betweenness": 56259
-  },
-  {
-   "title": "Minigames",
-   "betweenness": 55488
-  },
-  {
-   "title": "Varrock Museum",
-   "betweenness": 55458
-  },
-  {
-   "title": "Prayer points",
-   "betweenness": 55116
-  },
-  {
-   "title": "My Arm",
-   "betweenness": 54978
-  },
-  {
-   "title": "Varrock Palace",
-   "betweenness": 53484
-  },
-  {
-   "title": "Experience",
-   "betweenness": 53388
-  },
-  {
-   "title": "Weapons",
-   "betweenness": 52802
-  },
-  {
-   "title": "Obelisk of Water",
-   "betweenness": 51932
-  },
-  {
-   "title": "Ranged/Level up table",
-   "betweenness": 49712
+   "title": "Jagex",
+   "firstLinks": 91
   },
   {
    "title": "Ranged",
-   "betweenness": 48594
+   "firstLinks": 84
+  },
+  {
+   "title": "Minigames",
+   "firstLinks": 83
   }
- ]
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Members",
+   "chains": 18396
+  },
+  {
+   "title": "General store",
+   "chains": 18396
+  },
+  {
+   "title": "Void knight top",
+   "chains": 18396
+  },
+  {
+   "title": "Free-to-play",
+   "chains": 18396
+  },
+  {
+   "title": "Pest Control",
+   "chains": 18396
+  },
+  {
+   "title": "Crandor",
+   "chains": 18396
+  },
+  {
+   "title": "Lesser demon",
+   "chains": 18396
+  },
+  {
+   "title": "Wilderness",
+   "chains": 18396
+  },
+  {
+   "title": "Brass key",
+   "chains": 18396
+  },
+  {
+   "title": "Mage Training Arena",
+   "chains": 18396
+  },
+  {
+   "title": "Telekinetic Grab",
+   "chains": 18396
+  },
+  {
+   "title": "Yew tree",
+   "chains": 18396
+  },
+  {
+   "title": "Shop",
+   "chains": 18396
+  },
+  {
+   "title": "King Black Dragon Lair",
+   "chains": 18396
+  },
+  {
+   "title": "Hill Giant",
+   "chains": 18396
+  },
+  {
+   "title": "World switching",
+   "chains": 18396
+  },
+  {
+   "title": "World",
+   "chains": 18396
+  },
+  {
+   "title": "Perdu",
+   "chains": 18396
+  },
+  {
+   "title": "Game tick",
+   "chains": 18396
+  },
+  {
+   "title": "Field ration",
+   "chains": 18396
+  },
+  {
+   "title": "Nightmare Zone",
+   "chains": 18396
+  },
+  {
+   "title": "Melzar's notes",
+   "chains": 18396
+  },
+  {
+   "title": "Preserve",
+   "chains": 18396
+  },
+  {
+   "title": "Jennifer's General Supplies",
+   "chains": 18396
+  },
+  {
+   "title": "(broken)",
+   "chains": 18396
+  },
+  {
+   "title": "(l)",
+   "chains": 18396
+  },
+  {
+   "title": "Lesser demon (Melzar's Maze)",
+   "chains": 18396
+  },
+  {
+   "title": "Sailing",
+   "chains": 18396
+  },
+  {
+   "title": "Prying Times",
+   "chains": 18396
+  },
+  {
+   "title": "Junior Jim",
+   "chains": 18396
+  }
+ ],
+ "randomSeeds": {
+  "seeds": 5,
+  "convergePct": {
+   "mean": 98.21,
+   "sd": 0
+  },
+  "topAttractorPct": {
+   "mean": 51.7,
+   "sd": 5.7
+  }
+ }
 }

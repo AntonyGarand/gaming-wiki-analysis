@@ -3,42 +3,70 @@
  "rank": "last",
  "nodes": 4498,
  "converge": {
-  "articles": 3801,
-  "pct": 84.5,
-  "deadEnd": 697,
-  "deadEndPct": 15.5,
-  "noLinks": 67,
+  "articles": 4390,
+  "pct": 97.6,
+  "deadEnd": 108,
+  "deadEndPct": 2.4,
+  "noLinks": 63,
   "tooFewLinks": 0,
-  "unresolvable": 72
+  "unresolvable": 0
  },
  "hopStats": {
-  "mean": 5.91,
+  "mean": 5.8,
   "median": 4,
   "p90": 12,
   "max": 17
  },
  "histogram": {
-  "0": 150,
+  "0": 149,
   "1": 183,
-  "2": 995,
-  "3": 411,
-  "4": 306,
-  "5": 234,
-  "6": 114,
-  "7": 146,
-  "8": 29,
-  "9": 22,
-  "10": 33,
-  "11": 16,
-  "12": 1108,
-  "13": 34,
-  "14": 11,
-  "15": 6,
-  "16": 1,
-  "17": 2
+  "2": 1099,
+  "3": 464,
+  "4": 414,
+  "5": 364,
+  "6": 194,
+  "7": 174,
+  "8": 50,
+  "9": 48,
+  "10": 49,
+  "11": 23,
+  "12": 1115,
+  "13": 35,
+  "14": 14,
+  "15": 9,
+  "16": 3,
+  "17": 3
  },
- "components": 77,
- "cycleCount": 76,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 63,
+   "1": 251,
+   "2": 1430,
+   "3": 1046,
+   "4": 491,
+   "5": 316,
+   "6": 229,
+   "7": 130,
+   "8": 102,
+   "9": 107,
+   "10": 333
+  },
+  "atLeast": {
+   "1": 98.6,
+   "2": 93,
+   "3": 61.2,
+   "5": 27.1
+  }
+ },
+ "concentration": {
+  "top1Pct": 39.82,
+  "top3Pct": 82.61,
+  "top10Pct": 90.91,
+  "cycleCount": 73,
+  "entropyBits": 2.41
+ },
+ "components": 74,
+ "cycleCount": 73,
  "largestCycle": {
   "members": [
    "Exploration Mode",
@@ -46,7 +74,7 @@
    "Adventure Mode"
   ],
   "size": 3,
-  "basin": 1666
+  "basin": 1791
  },
  "topAttractors": [
   {
@@ -55,24 +83,57 @@
     "The Heart of Orbis",
     "Adventure Mode"
    ],
-   "basin": 1666,
-   "pct": 37.04
+   "basin": 1791,
+   "pct": 39.82
   },
   {
    "cycle": [
     "Marble",
     "Marble Brick"
    ],
-   "basin": 1631,
-   "pct": 36.26
+   "basin": 1736,
+   "pct": 38.59
+  },
+  {
+   "cycle": [
+    "Developer and Staff History",
+    "Hypixel Inc. Team"
+   ],
+   "basin": 189,
+   "pct": 4.2
   },
   {
    "cycle": [
     "Egg",
     "Bird's Nest"
    ],
-   "basin": 106,
-   "pct": 2.36
+   "basin": 149,
+   "pct": 3.31
+  },
+  {
+   "cycle": [
+    "Prey",
+    "Predator"
+   ],
+   "basin": 81,
+   "pct": 1.8
+  },
+  {
+   "cycle": [
+    "Veilbound Key",
+    "Veilbound Coffer"
+   ],
+   "basin": 38,
+   "pct": 0.84
+  },
+  {
+   "cycle": [
+    "Poop",
+    "Workbench",
+    "Rock"
+   ],
+   "basin": 31,
+   "pct": 0.69
   },
   {
    "cycle": [
@@ -92,12 +153,11 @@
   },
   {
    "cycle": [
-    "Poop",
-    "Workbench",
-    "Rock"
+    "Update 5",
+    "0.5.0-pre.9.2"
    ],
-   "basin": 22,
-   "pct": 0.49
+   "basin": 23,
+   "pct": 0.51
   },
   {
    "cycle": [
@@ -120,24 +180,16 @@
     "Update 7",
     "0.7.0-pre.5"
    ],
-   "basin": 18,
-   "pct": 0.4
+   "basin": 19,
+   "pct": 0.42
   },
   {
    "cycle": [
-    "Update 5",
-    "0.5.0-pre.9.2"
+    "Chair",
+    "Stool"
    ],
-   "basin": 17,
-   "pct": 0.38
-  },
-  {
-   "cycle": [
-    "Predator",
-    "Prey"
-   ],
-   "basin": 15,
-   "pct": 0.33
+   "basin": 14,
+   "pct": 0.31
   },
   {
    "cycle": [
@@ -165,387 +217,364 @@
   },
   {
    "cycle": [
-    "Furniture"
-   ],
-   "basin": 11,
-   "pct": 0.24
-  },
-  {
-   "cycle": [
     "Tilled Dirt",
     "Dry Mud"
    ],
-   "basin": 9,
-   "pct": 0.2
+   "basin": 10,
+   "pct": 0.22
   },
   {
    "cycle": [
-    "Forgotten Temple Gateway",
-    "Launch Platform"
+    "Edge of the Echo",
+    "The Crossroads"
    ],
-   "basin": 8,
-   "pct": 0.18
+   "basin": 10,
+   "pct": 0.22
   },
   {
    "cycle": [
     "Hypixel Network",
     "Survival Games"
    ],
-   "basin": 7,
-   "pct": 0.16
-  },
-  {
-   "cycle": [
-    "Oak Sapling",
-    "Oak Tree"
-   ],
-   "basin": 7,
-   "pct": 0.16
-  },
-  {
-   "cycle": [
-    "Boar",
-    "Pumpkin"
-   ],
-   "basin": 6,
-   "pct": 0.13
+   "basin": 8,
+   "pct": 0.18
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Hytale",
-   "chains": 150,
-   "pct": 3.33,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Whisperfrost Frontiers",
-   "chains": 62,
-   "pct": 1.38,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Devastated Lands",
-   "chains": 45,
-   "pct": 1,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Emerald Wilds",
-   "chains": 43,
-   "pct": 0.96,
-   "reason": "redlink target"
-  },
-  {
-   "title": "The Guttering Hollows",
-   "chains": 33,
-   "pct": 0.73,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Orbis",
-   "chains": 28,
-   "pct": 0.62,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Tool",
-   "chains": 27,
-   "pct": 0.6,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Howling Sands",
-   "chains": 25,
-   "pct": 0.56,
-   "reason": "redlink target"
-  },
-  {
    "title": "Guild",
-   "chains": 24,
-   "pct": 0.53,
+   "chains": 38,
+   "pct": 0.84,
    "reason": "no eligible links"
   },
   {
-   "title": "Hypixel Studios",
-   "chains": 19,
-   "pct": 0.42,
-   "reason": "redlink target"
+   "title": "Animation",
+   "chains": 4,
+   "pct": 0.09,
+   "reason": "no eligible links"
   },
   {
-   "title": "Kweebec",
-   "chains": 14,
-   "pct": 0.31,
-   "reason": "redlink target"
+   "title": "Chunk format/BlockChunk format",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "no eligible links"
   },
   {
-   "title": "Zone",
-   "chains": 14,
-   "pct": 0.31,
-   "reason": "redlink target"
+   "title": "Launcher 2026.01.10",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "no eligible links"
   },
   {
-   "title": "Goblin",
-   "chains": 11,
-   "pct": 0.24,
-   "reason": "redlink target"
+   "title": "Launcher 2026.01.16",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "no eligible links"
   },
   {
-   "title": "Why Purple?",
-   "chains": 10,
-   "pct": 0.22,
-   "reason": "redlink target"
+   "title": "Launcher 2026.02.26",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "no eligible links"
   },
   {
-   "title": "Slothian",
-   "chains": 10,
-   "pct": 0.22,
-   "reason": "redlink target"
+   "title": "Cat",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Wood Case",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Behaviors",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Walking Sticks",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Banjo",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Unknown playable races",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Stairs",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Flecs",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Legacy Engine",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Creative Inventory",
-   "inDegree": 1087
+   "firstLinks": 1092
   },
   {
    "title": "Builder's Workbench",
-   "inDegree": 880
+   "firstLinks": 880
   },
   {
    "title": "Salvager's Workbench",
-   "inDegree": 184
+   "firstLinks": 187
   },
   {
    "title": "Furniture Workbench",
-   "inDegree": 94
+   "firstLinks": 94
   },
   {
    "title": "Bench",
-   "inDegree": 92
+   "firstLinks": 92
   },
   {
    "title": "Farmer's Workbench",
-   "inDegree": 89
+   "firstLinks": 89
   },
   {
    "title": "Plant Fiber",
-   "inDegree": 84
+   "firstLinks": 86
   },
   {
    "title": "NPC",
-   "inDegree": 47
+   "firstLinks": 47
   },
   {
    "title": "Hytale",
-   "inDegree": 45
+   "firstLinks": 46
   },
   {
    "title": "Crude Shears",
-   "inDegree": 40
+   "firstLinks": 40
   },
   {
    "title": "Emerald Wilds",
-   "inDegree": 38
+   "firstLinks": 38
   },
   {
    "title": "Devastated Lands",
-   "inDegree": 35
+   "firstLinks": 37
   },
   {
    "title": "The Guttering Hollows",
-   "inDegree": 31
+   "firstLinks": 32
   },
   {
    "title": "Whisperfrost Frontiers",
-   "inDegree": 30
+   "firstLinks": 30
   },
   {
    "title": "Prefab",
-   "inDegree": 28
+   "firstLinks": 28
   },
   {
    "title": "Goblin Tinkerer's Workbench",
-   "inDegree": 26
+   "firstLinks": 26
   },
   {
    "title": "Furnace",
-   "inDegree": 24
+   "firstLinks": 24
   },
   {
    "title": "Memories",
-   "inDegree": 24
-  },
-  {
-   "title": "Howling Sands",
-   "inDegree": 23
-  },
-  {
-   "title": "Alchemist's Workbench",
-   "inDegree": 23
+   "firstLinks": 24
   },
   {
    "title": "Ocean",
-   "inDegree": 21
+   "firstLinks": 23
   },
   {
-   "title": "Stick",
-   "inDegree": 19
+   "title": "Howling Sands",
+   "firstLinks": 23
   },
   {
-   "title": "Update 6",
-   "inDegree": 18
-  },
-  {
-   "title": "Scrap Drill",
-   "inDegree": 18
+   "title": "Alchemist's Workbench",
+   "firstLinks": 23
   },
   {
    "title": "Weapon",
-   "inDegree": 17
+   "firstLinks": 19
   },
   {
-   "title": "Fishing Trap",
-   "inDegree": 17
-  },
-  {
-   "title": "Map",
-   "inDegree": 16
-  },
-  {
-   "title": "Rootling Merchant",
-   "inDegree": 16
-  },
-  {
-   "title": "Chef's Stove",
-   "inDegree": 16
-  },
-  {
-   "title": "Trork Camp",
-   "inDegree": 15
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Creative Inventory",
-   "betweenness": 13596
-  },
-  {
-   "title": "Machinima Tool",
-   "betweenness": 12518
+   "title": "Stick",
+   "firstLinks": 19
   },
   {
    "title": "Creative Mode",
-   "betweenness": 11790
-  },
-  {
-   "title": "Developers",
-   "betweenness": 10638
-  },
-  {
-   "title": "Fishing",
-   "betweenness": 9464
+   "firstLinks": 19
   },
   {
    "title": "Fishing Trap",
-   "betweenness": 8400
+   "firstLinks": 19
   },
   {
-   "title": "Bluegill",
-   "betweenness": 7206
+   "title": "Update 6",
+   "firstLinks": 18
   },
   {
-   "title": "Raw Fish",
-   "betweenness": 6020
+   "title": "Scrap Drill",
+   "firstLinks": 18
   },
   {
-   "title": "Campfire",
-   "betweenness": 4832
-  },
-  {
-   "title": "Fuel",
-   "betweenness": 3627
-  },
-  {
-   "title": "Furnace",
-   "betweenness": 3252
-  },
-  {
-   "title": "Builder's Workbench",
-   "betweenness": 2823
-  },
-  {
-   "title": "Exploration Mode",
-   "betweenness": 2304
-  },
-  {
-   "title": "The Heart of Orbis",
-   "betweenness": 2174
-  },
-  {
-   "title": "Marble",
-   "betweenness": 1629
-  },
-  {
-   "title": "Memories",
-   "betweenness": 1530
-  },
-  {
-   "title": "Salvager's Workbench",
-   "betweenness": 1084
-  },
-  {
-   "title": "Bench",
-   "betweenness": 894
-  },
-  {
-   "title": "Stick",
-   "betweenness": 873
-  },
-  {
-   "title": "Farmer's Workbench",
-   "betweenness": 856
-  },
-  {
-   "title": "Essence of Life",
-   "betweenness": 763
+   "title": "Map",
+   "firstLinks": 16
   },
   {
    "title": "Rootling Merchant",
-   "betweenness": 762
+   "firstLinks": 16
   },
   {
-   "title": "Chest",
-   "betweenness": 750
+   "title": "Chef's Stove",
+   "firstLinks": 16
+  }
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Adventure Mode",
+   "chains": 1791
   },
   {
-   "title": "Kweebec Village",
-   "betweenness": 675
+   "title": "Exploration Mode",
+   "chains": 1791
   },
   {
-   "title": "Hatchet",
-   "betweenness": 632
+   "title": "The Heart of Orbis",
+   "chains": 1791
+  },
+  {
+   "title": "Marble",
+   "chains": 1736
+  },
+  {
+   "title": "Marble Brick",
+   "chains": 1736
+  },
+  {
+   "title": "Furnace",
+   "chains": 1732
+  },
+  {
+   "title": "Fuel",
+   "chains": 1308
+  },
+  {
+   "title": "Campfire",
+   "chains": 1307
+  },
+  {
+   "title": "Raw Fish",
+   "chains": 1260
+  },
+  {
+   "title": "Bluegill",
+   "chains": 1257
+  },
+  {
+   "title": "Fishing Trap",
+   "chains": 1256
+  },
+  {
+   "title": "Fishing",
+   "chains": 1206
+  },
+  {
+   "title": "Developers",
+   "chains": 1205
+  },
+  {
+   "title": "Creative Mode",
+   "chains": 1201
+  },
+  {
+   "title": "Machinima Tool",
+   "chains": 1155
+  },
+  {
+   "title": "Creative Inventory",
+   "chains": 1149
+  },
+  {
+   "title": "Builder's Workbench",
+   "chains": 945
+  },
+  {
+   "title": "Memories",
+   "chains": 585
+  },
+  {
+   "title": "Stick",
+   "chains": 298
+  },
+  {
+   "title": "Salvager's Workbench",
+   "chains": 278
   },
   {
    "title": "Weapon",
-   "betweenness": 573
+   "chains": 198
   },
   {
-   "title": "Furniture Workbench",
-   "betweenness": 552
+   "title": "High-roll Chest",
+   "chains": 192
   },
   {
-   "title": "Small Kweebec Chest",
-   "betweenness": 544
+   "title": "Developer and Staff History",
+   "chains": 189
   },
   {
-   "title": "Adventure Mode",
-   "betweenness": 514
+   "title": "Hypixel Inc. Team",
+   "chains": 189
   },
   {
-   "title": "Prefab",
-   "betweenness": 504
+   "title": "Hytale",
+   "chains": 187
+  },
+  {
+   "title": "Hatchet",
+   "chains": 159
+  },
+  {
+   "title": "Chest",
+   "chains": 151
+  },
+  {
+   "title": "Bench",
+   "chains": 150
+  },
+  {
+   "title": "Egg",
+   "chains": 149
+  },
+  {
+   "title": "Bird's Nest",
+   "chains": 149
   }
  ]
 }

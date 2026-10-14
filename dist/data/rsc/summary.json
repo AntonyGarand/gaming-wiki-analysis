@@ -1,126 +1,137 @@
 {
  "wiki": "rsc",
- "generatedAt": "2026-10-12T16:59:49.519Z",
+ "generatedAt": "2026-10-14T04:07:31.744Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 84.21,
-   "deadEndPct": 15.79,
-   "components": 35,
-   "cycleCount": 34,
-   "meanHops": 4.61,
+   "convergePct": 89.09,
+   "deadEndPct": 10.91,
+   "components": 15,
+   "cycleCount": 14,
+   "meanHops": 5.4,
    "medianHops": 5,
-   "maxHops": 13,
+   "maxHops": 15,
    "topAttractor": [
     "Andrew Gower",
     "Jagex"
    ],
-   "topAttractorPct": 44.47
+   "topAttractorPct": 62.72,
+   "top3Pct": 87.41,
+   "eligiblePct": 89.2
   },
   {
    "rank": "2",
-   "convergePct": 73.05,
-   "deadEndPct": 26.95,
-   "components": 63,
-   "cycleCount": 62,
-   "meanHops": 5.97,
-   "medianHops": 6,
+   "convergePct": 86.34,
+   "deadEndPct": 13.66,
+   "components": 68,
+   "cycleCount": 67,
+   "meanHops": 4.9,
+   "medianHops": 4,
    "maxHops": 19,
    "topAttractor": [
-    "Plate Mail Bodies",
-    "Chain Mail Bodies"
+    "Kandarin",
+    "Ardougne",
+    "East Ardougne"
    ],
-   "topAttractorPct": 34.01
+   "topAttractorPct": 26.3,
+   "top3Pct": 51.5,
+   "eligiblePct": 86.7
   },
   {
    "rank": "3",
-   "convergePct": 46.06,
-   "deadEndPct": 53.94,
-   "components": 91,
-   "cycleCount": 90,
-   "meanHops": 4.52,
-   "medianHops": 3,
-   "maxHops": 14,
+   "convergePct": 65.02,
+   "deadEndPct": 34.98,
+   "components": 92,
+   "cycleCount": 91,
+   "meanHops": 6.67,
+   "medianHops": 6,
+   "maxHops": 21,
    "topAttractor": [
-    "Scorpion catcher",
-    "Seer"
+    "Attack",
+    "WeaponAim"
    ],
-   "topAttractorPct": 13.21
+   "topAttractorPct": 23.17,
+   "top3Pct": 41.44,
+   "eligiblePct": 80.6
   },
   {
    "rank": "5",
-   "convergePct": 21.54,
-   "deadEndPct": 78.46,
-   "components": 63,
-   "cycleCount": 62,
-   "meanHops": 5.73,
-   "medianHops": 4,
-   "maxHops": 20,
+   "convergePct": 15.48,
+   "deadEndPct": 84.52,
+   "components": 59,
+   "cycleCount": 58,
+   "meanHops": 2.34,
+   "medianHops": 2,
+   "maxHops": 10,
    "topAttractor": [
-    "Bunny ears",
-    "Thessalia"
+    "Bars",
+    "Draynor Village",
+    "Certificates"
    ],
-   "topAttractorPct": 9.7
+   "topAttractorPct": 2.89,
+   "top3Pct": 5.61,
+   "eligiblePct": 62.7
   },
   {
    "rank": "last",
-   "convergePct": 85.5,
-   "deadEndPct": 14.5,
-   "components": 145,
-   "cycleCount": 144,
-   "meanHops": 8.5,
-   "medianHops": 5,
-   "maxHops": 37,
+   "convergePct": 88.9,
+   "deadEndPct": 11.1,
+   "components": 141,
+   "cycleCount": 140,
+   "meanHops": 9.2,
+   "medianHops": 6,
+   "maxHops": 40,
    "topAttractor": [
     "Melee training",
     "Bestiary",
     "King Black Dragon",
     "Defense"
    ],
-   "topAttractorPct": 29.16
+   "topAttractorPct": 29.87,
+   "top3Pct": 55.62,
+   "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 88.27,
-   "deadEndPct": 11.73,
-   "components": 88,
-   "cycleCount": 87,
-   "meanHops": 5.2,
+   "convergePct": 88.97,
+   "deadEndPct": 11.03,
+   "components": 85,
+   "cycleCount": 84,
+   "meanHops": 6.75,
    "medianHops": 4,
-   "maxHops": 22,
+   "maxHops": 33,
    "topAttractor": [
+    "Combat",
+    "Aggressiveness",
+    "Combat level",
     "Ranged",
     "Poison (effect)",
     "Glitch",
     "Rune Plate Mail top",
     "Plate Mail Tops",
     "Thrander",
-    "Anvil",
-    "Scenery",
-    "Wall scenery",
+    "Bank",
+    "Falador",
+    "Bluedye",
+    "Aggie",
+    "Yellowdye",
     "Items",
     "Examine",
     "Options",
     "Sound effects",
     "Strange looking wall",
-    "Ned",
-    "Crandor",
-    "Port Sarim",
-    "The Rusty Anchor",
-    "Pirate's treasure",
-    "Magic",
-    "Mage Arena",
+    "Lumbridge Lady",
+    "Teleportation",
     "Web",
     "Machette",
     "Legend's Quest",
     "Tai Bwo Wannai",
     "Fishing spot",
-    "RuneScape Classic",
-    "Combat",
-    "Hits",
-    "Combat level"
+    "RuneScape Classic"
    ],
-   "topAttractorPct": 39.16
+   "topAttractorPct": 50.93,
+   "top3Pct": 60.62,
+   "eligiblePct": 100
   }
  ]
 }

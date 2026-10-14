@@ -3,543 +3,586 @@
  "rank": "random",
  "nodes": 6135,
  "converge": {
-  "articles": 1397,
-  "pct": 22.77,
-  "deadEnd": 4738,
-  "deadEndPct": 77.23,
-  "noLinks": 1,
+  "articles": 6119,
+  "pct": 99.74,
+  "deadEnd": 16,
+  "deadEndPct": 0.26,
+  "noLinks": 14,
   "tooFewLinks": 0,
-  "unresolvable": 2485
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 4.46,
-  "median": 4,
-  "p90": 8,
-  "max": 13
+  "mean": 5.17,
+  "median": 5,
+  "p90": 9,
+  "max": 16
  },
  "histogram": {
-  "0": 82,
-  "1": 157,
-  "2": 133,
-  "3": 285,
-  "4": 198,
-  "5": 44,
-  "6": 36,
-  "7": 147,
-  "8": 201,
-  "9": 83,
-  "10": 11,
-  "11": 12,
-  "12": 6,
-  "13": 2
+  "0": 129,
+  "1": 467,
+  "2": 343,
+  "3": 323,
+  "4": 703,
+  "5": 2559,
+  "6": 202,
+  "7": 91,
+  "8": 245,
+  "9": 669,
+  "10": 280,
+  "11": 70,
+  "12": 22,
+  "13": 4,
+  "14": 5,
+  "15": 3,
+  "16": 4
  },
- "components": 42,
- "cycleCount": 41,
+ "eligibleLinks": {
+  "histogram": {
+   "0": 15,
+   "1": 2874,
+   "2": 858,
+   "3": 286,
+   "4": 270,
+   "5": 182,
+   "6": 132,
+   "7": 143,
+   "8": 136,
+   "9": 138,
+   "10": 1101
+  },
+  "atLeast": {
+   "1": 99.8,
+   "2": 52.9,
+   "3": 38.9,
+   "5": 29.9
+  }
+ },
+ "concentration": {
+  "top1Pct": 44.63,
+  "top3Pct": 89.13,
+  "top10Pct": 97,
+  "cycleCount": 64,
+  "entropyBits": 2.05
+ },
+ "components": 65,
+ "cycleCount": 64,
  "largestCycle": {
   "members": [
-   "Map of Tarkov",
-   "Shoreline"
+   "Norvinsk region",
+   "Tarkov"
   ],
   "size": 2,
-  "basin": 890
+  "basin": 2738
  },
  "topAttractors": [
   {
    "cycle": [
+    "Norvinsk region",
+    "Tarkov"
+   ],
+   "basin": 2738,
+   "pct": 44.63
+  },
+  {
+   "cycle": [
     "Map of Tarkov",
-    "Shoreline"
+    "Lighthouse"
    ],
-   "basin": 890,
-   "pct": 14.51
+   "basin": 2337,
+   "pct": 38.09
   },
   {
    "cycle": [
-    "Character skills"
+    "Armor plates",
+    "Chest rigs"
    ],
-   "basin": 325,
-   "pct": 5.3
+   "basin": 393,
+   "pct": 6.41
   },
   {
    "cycle": [
-    "Sports bag",
-    "Duffle bag"
+    "USEC",
+    "TerraGroup"
    ],
-   "basin": 40,
-   "pct": 0.65
+   "basin": 241,
+   "pct": 3.93
   },
   {
    "cycle": [
-    "Provisions",
-    "Metabolism"
+    "Face cover",
+    "Fox mask"
    ],
-   "basin": 16,
-   "pct": 0.26
+   "basin": 103,
+   "pct": 1.68
+  },
+  {
+   "cycle": [
+    "Keys & Intel",
+    "The Labyrinth",
+    "Labrys access keycard"
+   ],
+   "basin": 72,
+   "pct": 1.17
   },
   {
    "cycle": [
     "MS2000 Marker",
     "Tigr Safari"
    ],
-   "basin": 15,
-   "pct": 0.24
+   "basin": 22,
+   "pct": 0.36
   },
   {
    "cycle": [
-    "Gunsmith Master - Part 8",
-    "Colt M1911A1 .45 ACP pistol"
+    "Earpieces",
+    "Peltor ComTac V headset (OD Green)"
+   ],
+   "basin": 20,
+   "pct": 0.33
+  },
+  {
+   "cycle": [
+    "HK MP7A2 4.6x30 submachine gun",
+    "HK MP7A1 4.6x30 submachine gun"
+   ],
+   "basin": 14,
+   "pct": 0.23
+  },
+  {
+   "cycle": [
+    "Accidental Witness",
+    "Zmeisky 3 apartment key"
+   ],
+   "basin": 11,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "The Unheard",
+    "Burnt document"
+   ],
+   "basin": 9,
+   "pct": 0.15
+  },
+  {
+   "cycle": [
+    "Gunsmith Master - Part 10",
+    "AR-10 Odin Works ATLAS-7 7.62x51 muzzle brake"
    ],
    "basin": 7,
    "pct": 0.11
   },
   {
    "cycle": [
-    "Cultist knife",
-    "Night Sweep"
+    "Kalashnikov AK-104 7.62x39 assault rifle",
+    "Kalashnikov AK-103 7.62x39 assault rifle"
    ],
    "basin": 7,
    "pct": 0.11
   },
   {
    "cycle": [
-    "Gunsmith Master - Part 11",
-    "AR-15 Magpul PRS GEN3 stock"
+    "Kalashnikov AKS-74 5.45x39 assault rifle",
+    "Kalashnikov AKS-74N 5.45x39 assault rifle"
    ],
    "basin": 6,
    "pct": 0.1
   },
   {
    "cycle": [
-    "Revolvers",
-    "MTs-255-12 12ga shotgun"
+    "SIG P226R 9x19 pistol",
+    "Gunsmith - P226R"
    ],
-   "basin": 5,
-   "pct": 0.08
-  },
-  {
-   "cycle": [
-    "AKS-74U Zenit B-11 handguard",
-    "Gunsmith - AKS-74U"
-   ],
-   "basin": 5,
-   "pct": 0.08
-  },
-  {
-   "cycle": [
-    "Kalashnikov AK-105 5.45x39 assault rifle",
-    "Kalashnikov AK-104 7.62x39 assault rifle"
-   ],
-   "basin": 5,
-   "pct": 0.08
-  },
-  {
-   "cycle": [
-    "Norvinsk region",
-    "Factions",
-    "Tarkov"
-   ],
-   "basin": 4,
-   "pct": 0.07
-  },
-  {
-   "cycle": [
-    "Documents",
-    "Military documents 1"
-   ],
-   "basin": 4,
-   "pct": 0.07
-  },
-  {
-   "cycle": [
-    "Magnum Research Desert Eagle L5 .50 AE pistol",
-    "Magnum Research Desert Eagle L5 .357 pistol"
-   ],
-   "basin": 4,
-   "pct": 0.07
-  },
-  {
-   "cycle": [
-    "Kalashnikov AKS-74UN 5.45x39 assault rifle",
-    "Kalashnikov AKS-74UB 5.45x39 assault rifle"
-   ],
-   "basin": 3,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Malboro Cigarettes",
-    "Strike Cigarettes"
-   ],
-   "basin": 3,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Chemical - Part 2",
-    "Sealed letter with a TG logo"
-   ],
-   "basin": 3,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Health Resort west wing room 306 key",
-    "Health Care Privacy - Part 2"
-   ],
-   "basin": 3,
-   "pct": 0.05
-  },
-  {
-   "cycle": [
-    "Reshala",
-    "The Huntsman Path - Justice"
-   ],
-   "basin": 3,
-   "pct": 0.05
+   "basin": 6,
+   "pct": 0.1
   },
   {
    "cycle": [
     "Tagilla",
     "The Huntsman Path - Factory Chief"
    ],
-   "basin": 3,
-   "pct": 0.05
+   "basin": 6,
+   "pct": 0.1
+  },
+  {
+   "cycle": [
+    "Gunsmith - AKS-74N",
+    "AK-12 5.45x39 30-round magazine"
+   ],
+   "basin": 5,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Gunsmith - AKS-74U",
+    "Kalashnikov AKS-74U 5.45x39 assault rifle"
+   ],
+   "basin": 5,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "Stark SE-5 Express Forward foregrip",
+    "Gunsmith Master - Part 11"
+   ],
+   "basin": 5,
+   "pct": 0.08
+  },
+  {
+   "cycle": [
+    "The Punisher - Part 2",
+    "RPK-16 5.45x39 light machine gun"
+   ],
+   "basin": 4,
+   "pct": 0.07
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Weapon mods",
-   "chains": 767,
-   "pct": 12.5,
+   "title": "Debug Console",
+   "chains": 2,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Escape from Tarkov Wiki",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "redlink target"
   },
   {
-   "title": "Weapons",
-   "chains": 232,
-   "pct": 3.78,
-   "reason": "redlink target"
+   "title": "Escape from Tarkov Wiki/Section 4",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Ballistics",
-   "chains": 209,
-   "pct": 3.41,
-   "reason": "redlink target"
+   "title": "Flash drive with fake info",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "BNTI Kirasa-N body armor",
-   "chains": 168,
-   "pct": 2.74,
-   "reason": "redlink target"
+   "title": "Single-axis Fiber Optic Gyroscope 2",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Helmet mods",
-   "chains": 150,
-   "pct": 2.44,
-   "reason": "redlink target"
+   "title": "Chemical container 3",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "TerraGroup",
-   "chains": 108,
-   "pct": 1.76,
-   "reason": "redlink target"
+   "title": "Motor Controller 2",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Face cover",
-   "chains": 89,
-   "pct": 1.45,
-   "reason": "redlink target"
+   "title": "Motor Controller 3",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Experience",
-   "chains": 79,
-   "pct": 1.29,
-   "reason": "redlink target"
+   "title": "USEC operative's audio tape labeled \"Day 35\"",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Technical supply crate",
-   "chains": 42,
-   "pct": 0.68,
-   "reason": "redlink target"
+   "title": "USEC commander's audio tape labeled \"For the USEC\"",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Backpacks",
-   "chains": 24,
-   "pct": 0.39,
-   "reason": "redlink target"
+   "title": "BEAR commander's audio tape labeled \"For the BEARs\"",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Armbands",
-   "chains": 23,
-   "pct": 0.37,
-   "reason": "redlink target"
+   "title": "Note from USEC's corpse",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Weapon box (6x2)",
-   "chains": 19,
-   "pct": 0.31,
-   "reason": "redlink target"
+   "title": "Blue Fire witness note",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "The Lab",
-   "chains": 18,
-   "pct": 0.29,
-   "reason": "redlink target"
+   "title": "Escape route map from the TerraGroup office area",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   },
   {
-   "title": "Jack of All Trades",
-   "chains": 14,
-   "pct": 0.23,
-   "reason": "redlink target"
-  },
-  {
-   "title": "Plastic suitcase",
-   "chains": 13,
-   "pct": 0.21,
-   "reason": "redlink target"
+   "title": "Tarkov News Issue 142",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
- "topInDegree": [
+ "topFirstLinkTargets": [
   {
    "title": "Weapon mods",
-   "inDegree": 755
+   "firstLinks": 2020
+  },
+  {
+   "title": "Arena BattlePass",
+   "firstLinks": 159
   },
   {
    "title": "Hideout",
-   "inDegree": 126
+   "firstLinks": 150
   },
   {
    "title": "Weapons",
-   "inDegree": 102
+   "firstLinks": 139
   },
   {
    "title": "Face cover",
-   "inDegree": 86
+   "firstLinks": 100
   },
   {
    "title": "Headwear",
-   "inDegree": 75
-  },
-  {
-   "title": "Arena BattlePass",
-   "inDegree": 74
+   "firstLinks": 99
   },
   {
    "title": "Quests",
-   "inDegree": 70
-  },
-  {
-   "title": "Experience",
-   "inDegree": 65
-  },
-  {
-   "title": "Tactical clothing",
-   "inDegree": 65
-  },
-  {
-   "title": "Weapon camouflages",
-   "inDegree": 56
-  },
-  {
-   "title": "Loot",
-   "inDegree": 54
+   "firstLinks": 84
   },
   {
    "title": "Helmet mods",
-   "inDegree": 52
-  },
-  {
-   "title": "Keys & Intel",
-   "inDegree": 42
-  },
-  {
-   "title": "Ragman",
-   "inDegree": 40
-  },
-  {
-   "title": "Posters",
-   "inDegree": 40
-  },
-  {
-   "title": "Chest rigs",
-   "inDegree": 38
-  },
-  {
-   "title": "Found in raid",
-   "inDegree": 38
-  },
-  {
-   "title": "USEC",
-   "inDegree": 37
-  },
-  {
-   "title": "Sports bag",
-   "inDegree": 37
-  },
-  {
-   "title": "BEAR",
-   "inDegree": 36
-  },
-  {
-   "title": "Scavs",
-   "inDegree": 36
-  },
-  {
-   "title": "Jacket",
-   "inDegree": 34
-  },
-  {
-   "title": "Shoreline",
-   "inDegree": 29
-  },
-  {
-   "title": "Character skills",
-   "inDegree": 28
-  },
-  {
-   "title": "Reserve",
-   "inDegree": 28
-  },
-  {
-   "title": "Ground cache",
-   "inDegree": 26
-  },
-  {
-   "title": "Easter eggs and References",
-   "inDegree": 25
-  },
-  {
-   "title": "Armor vests",
-   "inDegree": 23
-  },
-  {
-   "title": "Backpacks",
-   "inDegree": 22
-  },
-  {
-   "title": "Customs",
-   "inDegree": 22
-  }
- ],
- "topBetweenness": [
-  {
-   "title": "Trading",
-   "betweenness": 2802
-  },
-  {
-   "title": "Physical Bitcoin",
-   "betweenness": 2365
-  },
-  {
-   "title": "Dorm room 314 marked key",
-   "betweenness": 1904
-  },
-  {
-   "title": "Looting",
-   "betweenness": 1582
-  },
-  {
-   "title": "Lightkeeper",
-   "betweenness": 1452
-  },
-  {
-   "title": "Lighthouse",
-   "betweenness": 1018
+   "firstLinks": 76
   },
   {
    "title": "Loot",
-   "betweenness": 984
+   "firstLinks": 70
   },
   {
-   "title": "Map of Tarkov",
-   "betweenness": 855
-  },
-  {
-   "title": "Mechanic",
-   "betweenness": 784
-  },
-  {
-   "title": "Quests",
-   "betweenness": 728
-  },
-  {
-   "title": "Hideout",
-   "betweenness": 588
-  },
-  {
-   "title": "Jacket",
-   "betweenness": 540
-  },
-  {
-   "title": "Prestige",
-   "betweenness": 486
-  },
-  {
-   "title": "Arena BattlePass",
-   "betweenness": 364
-  },
-  {
-   "title": "Achievements",
-   "betweenness": 328
-  },
-  {
-   "title": "Ragman",
-   "betweenness": 301
-  },
-  {
-   "title": "Hideout Management",
-   "betweenness": 295
+   "title": "Chest rigs",
+   "firstLinks": 70
   },
   {
    "title": "Tactical clothing",
-   "betweenness": 264
+   "firstLinks": 68
   },
   {
-   "title": "Drawer",
-   "betweenness": 232
+   "title": "The Ticket",
+   "firstLinks": 61
   },
   {
-   "title": "Woods",
-   "betweenness": 216
+   "title": "Experience",
+   "firstLinks": 59
   },
   {
-   "title": "Dead Scav",
-   "betweenness": 192
+   "title": "Weapon camouflages",
+   "firstLinks": 56
   },
   {
-   "title": "Therapist",
-   "betweenness": 168
-  },
-  {
-   "title": "Kaban",
-   "betweenness": 166
+   "title": "BEAR",
+   "firstLinks": 55
   },
   {
    "title": "Easter eggs and References",
-   "betweenness": 160
+   "firstLinks": 55
   },
   {
-   "title": "USEC cottage first safe key",
-   "betweenness": 160
+   "title": "Ragman",
+   "firstLinks": 54
+  },
+  {
+   "title": "USEC",
+   "firstLinks": 53
   },
   {
    "title": "Keys & Intel",
-   "betweenness": 156
+   "firstLinks": 52
   },
   {
-   "title": "Changelog",
-   "betweenness": 153
+   "title": "Backpacks",
+   "firstLinks": 46
   },
   {
-   "title": "Ammunition",
-   "betweenness": 140
+   "title": "Scavs",
+   "firstLinks": 44
+  },
+  {
+   "title": "Jacket",
+   "firstLinks": 44
   },
   {
    "title": "Found in raid",
-   "betweenness": 129
+   "firstLinks": 44
   },
   {
-   "title": "Safe",
-   "betweenness": 121
+   "title": "Looting",
+   "firstLinks": 41
+  },
+  {
+   "title": "Posters",
+   "firstLinks": 39
+  },
+  {
+   "title": "Sports bag",
+   "firstLinks": 38
+  },
+  {
+   "title": "Armor plates",
+   "firstLinks": 38
+  },
+  {
+   "title": "Armbands",
+   "firstLinks": 36
+  },
+  {
+   "title": "Customs",
+   "firstLinks": 33
+  },
+  {
+   "title": "Shoreline",
+   "firstLinks": 33
   }
- ]
+ ],
+ "topThroughTraffic": [
+  {
+   "title": "Norvinsk region",
+   "chains": 2738
+  },
+  {
+   "title": "Tarkov",
+   "chains": 2738
+  },
+  {
+   "title": "Ammunition",
+   "chains": 2735
+  },
+  {
+   "title": "9x39mm",
+   "chains": 2434
+  },
+  {
+   "title": "Weapons",
+   "chains": 2413
+  },
+  {
+   "title": "Map of Tarkov",
+   "chains": 2337
+  },
+  {
+   "title": "Lighthouse",
+   "chains": 2337
+  },
+  {
+   "title": "Weapon mods",
+   "chains": 2058
+  },
+  {
+   "title": "Arena",
+   "chains": 1179
+  },
+  {
+   "title": "Ref",
+   "chains": 1056
+  },
+  {
+   "title": "Ref dirt",
+   "chains": 1031
+  },
+  {
+   "title": "Decisions, Decisions",
+   "chains": 1030
+  },
+  {
+   "title": "Secure containers",
+   "chains": 1029
+  },
+  {
+   "title": "Trading",
+   "chains": 1023
+  },
+  {
+   "title": "Looting",
+   "chains": 480
+  },
+  {
+   "title": "Chest rigs",
+   "chains": 393
+  },
+  {
+   "title": "Armor plates",
+   "chains": 393
+  },
+  {
+   "title": "Interchange",
+   "chains": 364
+  },
+  {
+   "title": "Graphics card",
+   "chains": 341
+  },
+  {
+   "title": "Hideout",
+   "chains": 339
+  },
+  {
+   "title": "Woods",
+   "chains": 316
+  },
+  {
+   "title": "BTR Driver",
+   "chains": 285
+  },
+  {
+   "title": "Boreas",
+   "chains": 283
+  },
+  {
+   "title": "PRTCTR Lightweight ballistic plate",
+   "chains": 278
+  },
+  {
+   "title": "Ballistics",
+   "chains": 277
+  },
+  {
+   "title": "Helmet mods",
+   "chains": 276
+  },
+  {
+   "title": "BNTI Kirasa-N body armor",
+   "chains": 275
+  },
+  {
+   "title": "Reshala",
+   "chains": 274
+  },
+  {
+   "title": "Achievements",
+   "chains": 269
+  },
+  {
+   "title": "Prestige",
+   "chains": 247
+  }
+ ],
+ "randomSeeds": {
+  "seeds": 5,
+  "convergePct": {
+   "mean": 99.74,
+   "sd": 0
+  },
+  "topAttractorPct": {
+   "mean": 44.63,
+   "sd": 0
+  }
+ }
 }
