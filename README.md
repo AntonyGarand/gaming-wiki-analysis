@@ -71,10 +71,10 @@ Add more by editing `wikis.json` — any MediaWiki instance works.
 ## The rules (same as Wikipedia)
 
 Following the chain consists of:
-1. Clicking the **first non-parenthesized, non-italicized** link in the article body — links landing on disambiguation pages ("X may refer to…") or date pages ("28 April") are also skipped
-2. Ignoring infobox links, external links, and red links
-3. Skipping namespace pages (File:, Category:, etc.)
-4. Stopping when a **loop** occurs, or a page with **no links**, or an unresolvable target
+1. Clicking the **first non-parenthesized, non-italicized** link in the article body — links landing on disambiguation pages ("X may refer to…") or date pages ("28 April") are also skipped, and self-links don't count (MediaWiki renders them as bold text)
+2. Ignoring infobox links, external links, and red links (a red link is skipped, not followed — the walk takes the next eligible link)
+3. Skipping namespace pages (File:, Category:, …) and interwiki/language links (`fr:`, `pt-br:`, …)
+4. Stopping when a **loop** occurs, or a page with no clickable links
 
 ## What you get
 
@@ -84,8 +84,8 @@ For each wiki and each link rank (1st, 2nd, 3rd, 5th, last, random — all stric
 - **Attractor cycles** — the wiki's "philosophy" equivalents, with basin sizes
 - **Distance histogram** — bell curve of hops-to-loop
 - **Roads into the top attractor** — which entry edges carry the most traffic
-- **Degree centrality** — most linked-at articles
-- **Betweenness centrality** — bridges of the network
+- **First-link targets** — most linked-at articles by chosen link
+- **Through traffic** — how many chains pass through each article
 - **Decay curve** — how collective agreement degrades at higher link ranks
 - **Interactive constellation** — force-directed graph of the network
 
@@ -103,6 +103,17 @@ output/
 │   └── *.csv                # exportable datasets
 dist/                        # static site: index.html + walkfield.js + data/
 ```
+
+## Per-wiki tuning (wikis.json)
+
+Optional fields on a wiki entry:
+
+- `excludeTitle` — regex (JS literal style `"/re/flags"` or bare) dropping matching
+  titles from the corpus entirely: not counted, not valid targets. Used for
+  Factorio's translation subpages (`Time/zh`) and Vampire Survivors' `Updates/` posts.
+- `linkTemplates` — extra templates whose first positional parameter renders as a
+  link (e.g. Minecraft's `BlockLink`/`ItemLink` family, Terraria's `item`/`npc`),
+  added to the default Weird Gloop set (`plink`, `scp`, `gep`, …).
 
 ## Polite scraping
 
