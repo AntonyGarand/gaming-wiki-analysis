@@ -84,7 +84,9 @@ Following the chain consists of:
 4. Stopping when a **loop** occurs, or a page with no clickable links
 
 Pages whose entire body is generated (transcluded guide tables, template-built
-listings) fall back to *everything that renders*. For those pages only, the
+listings) — or whose only strict links are ones the walk can never take
+(dates, disambiguation pages, self-links) — fall back to *everything that
+renders*. For those pages only, the
 pipeline also fetches the templates they invoke and inlines the self-contained
 **prose** ones — templates whose links are written out in their body, with no
 `{{{parameters}}}`, no navbox/infobox chrome — so a page whose lead paragraphs
