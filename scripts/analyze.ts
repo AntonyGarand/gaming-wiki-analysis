@@ -9,7 +9,7 @@
  */
 import * as fs from "fs";
 import * as path from "path";
-import { loadCorpus, successorsFor, analyzeFunctionalGraph, DEAD, TERM, plainLinkCount } from "./lib/walk.js";
+import { loadCorpus, successorsFor, analyzeFunctionalGraph, DEAD, TERM, eligibleLinkCount } from "./lib/walk.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
@@ -35,8 +35,36 @@ async function main() {
   const summary: Array<Record<string, unknown>> = [];
 
   for (const rankKey of RANKS) {
-    const { succ, term } = successorsFor(corpus, rankKey);
+    const { succ, term } = successorsFor(corpus, rankKey); // random rank: seed 0's table
     const { attractor, dist, loops: attractors, inDeg } = analyzeFunctionalGraph(succ);
+
+    // the random rank is stochastic: run several seeds and report the spread.
+    // seed 0 above stays the canonical table used for stats and output files.
+    let randomSeeds: { seeds: number; convergePct: { mean: number; sd: number }; topAttractorPct: { mean: number; sd: number } } | null = null;
+    if (rankKey === "random") {
+      const conv: number[] = [], top: number[] = [];
+      for (let seed = 0; seed < 5; seed++) {
+        const { succ: s2 } = successorsFor(corpus, rankKey, seed);
+        const { attractor: at2 } = analyzeFunctionalGraph(s2);
+        let cyc = 0;
+        const basin = new Map<number, number>();
+        for (let i = 0; i < N; i++) {
+          const a = at2[i];
+          if (a === DEAD) continue;
+          if (a >= 0) { cyc++; basin.set(a, (basin.get(a) ?? 0) + 1); }
+        }
+        conv.push((100 * cyc) / N);
+        top.push((100 * Math.max(0, ...basin.values())) / N);
+      }
+      const mean = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
+      const sd = (xs: number[]) => Math.sqrt(mean(xs.map((x) => (x - mean(xs)) ** 2)));
+      randomSeeds = {
+        seeds: 5,
+        convergePct: { mean: +mean(conv).toFixed(2), sd: +sd(conv).toFixed(2) },
+        topAttractorPct: { mean: +mean(top).toFixed(2), sd: +sd(top).toFixed(2) },
+      };
+      console.log(`  random over ${randomSeeds.seeds} seeds: converge ${randomSeeds.convergePct.mean}±${randomSeeds.convergePct.sd}, top attractor ${randomSeeds.topAttractorPct.mean}±${randomSeeds.topAttractorPct.sd}`);
+    }
 
     const basinCount = new Map<number, number>();
     let noLinks = 0, tooFew = 0, unresolvable = 0, deadBasin = 0;
@@ -58,7 +86,7 @@ async function main() {
       while (cur >= 0 && !seen.has(cur) && succ[cur] !== -1) { seen.add(cur); cur = succ[cur]; }
       // cur is now the terminal node (succ[cur] === -1 or a cycle back)
       const reason = term[cur] === TERM.NO_LINKS ? "no eligible links"
-        : term[cur] === TERM.TOO_FEW ? `only ${plainLinkCount(corpus, cur)} eligible links`
+        : term[cur] === TERM.TOO_FEW ? `only ${eligibleLinkCount(corpus, cur)} eligible links`
         : term[cur] === TERM.UNRESOLVED ? "redlink target"
         : "chain breaks";
       const entry = deadTerminal.get(cur) ?? { count: 0, reason };
@@ -88,19 +116,21 @@ async function main() {
       max: dists[dists.length - 1] ?? null,
     };
 
-    const topInDegree = Array.from(inDeg.keys()).sort((a, b) => inDeg[b] - inDeg[a]).slice(0, 30)
-      .map((i) => ({ title: titles[i], inDegree: inDeg[i] }));
+    // how many pages' chosen (first/Nth/last/random) link points at each node —
+    // for the strict-first rank this is "most linked-at by first links"
+    const topFirstLinkTargets = Array.from(inDeg.keys()).sort((a, b) => inDeg[b] - inDeg[a]).slice(0, 30)
+      .map((i) => ({ title: titles[i], firstLinks: inDeg[i] }));
 
-    const between = new Float64Array(N);
+    // chain traffic: how many chains pass through each node (successor path
+    // walk from every start, counted once per chain)
+    const traffic = new Int32Array(N);
     for (let u = 0; u < N; u++) {
-      if (succ[u] === -1) continue;
-      const path: number[] = []; const seen = new Set<number>();
       let cur = u;
-      while (cur !== -1 && !seen.has(cur) && path.length < 500) { seen.add(cur); path.push(cur); cur = succ[cur]; }
-      for (let k = 1; k < path.length; k++) between[path[k]] += path.length - k - 1;
+      const seen = new Set<number>();
+      while (cur !== -1 && !seen.has(cur)) { seen.add(cur); traffic[cur]++; cur = succ[cur]; }
     }
-    const topBetweenness = Array.from(between.keys()).sort((a, b) => between[b] - between[a]).slice(0, 30)
-      .map((i) => ({ title: titles[i], betweenness: Math.round(between[i]) }));
+    const topThroughTraffic = Array.from(traffic.keys()).sort((a, b) => traffic[b] - traffic[a]).slice(0, 30)
+      .map((i) => ({ title: titles[i], chains: traffic[i] }));
 
     const cycles = ranked.map(([a, b]) => ({
       cycle: attractors[a].map((n) => titles[n]),
@@ -120,7 +150,7 @@ async function main() {
       topAttractors: cycles.slice(0, 20),
       deadEndTerminals: topDeadTerminals,
       roadsToTopAttractor: [],
-      topInDegree, topBetweenness,
+      topFirstLinkTargets, topThroughTraffic,
     };
     fs.writeFileSync(path.join(OUT_DIR, `stats-r${key}.json`), JSON.stringify(stats, null, 1));
     fs.writeFileSync(path.join(OUT_DIR, `distances-r${key}.csv`),

@@ -597,14 +597,14 @@ async function loadStats() {
 
   charts.deg.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 48 },
     xAxis: { type: "value", ...axisCommon },
-    yAxis: { type: "category", data: st.topInDegree.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
-    series: [{ type: "bar", data: st.topInDegree.slice(0, 10).map((r) => r.inDegree).reverse(),
+    yAxis: { type: "category", data: st.topFirstLinkTargets.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
+    series: [{ type: "bar", data: st.topFirstLinkTargets.slice(0, 10).map((r) => r.firstLinks).reverse(),
       itemStyle: { color: (p) => hueAt(0.9 - 0.8 * (p.dataIndex / 10)), borderRadius: 0 }, animationDelay: (i) => i * 40 }] }, true);
 
   charts.bet.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 48 },
     xAxis: { type: "value", ...axisCommon },
-    yAxis: { type: "category", data: st.topBetweenness.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
-    series: [{ type: "bar", data: st.topBetweenness.slice(0, 10).map((r) => r.betweenness).reverse(),
+    yAxis: { type: "category", data: st.topThroughTraffic.slice(0, 10).map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: "#5f574a", fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
+    series: [{ type: "bar", data: st.topThroughTraffic.slice(0, 10).map((r) => r.chains).reverse(),
       itemStyle: { color: (p) => hueAt(0.35 + 0.5 * (p.dataIndex / 10)), borderRadius: 0 }, animationDelay: (i) => i * 40 }] }, true);
 
   document.getElementById("roads").innerHTML = st.roadsToTopAttractor.length

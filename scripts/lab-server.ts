@@ -10,7 +10,7 @@ import { createClient } from "@libsql/client";
 import * as fs from "fs";
 import * as http from "http";
 import * as path from "path";
-import { loadCorpus, successorsFor, analyzeFunctionalGraph, predecessors, walkFrom, rngFor, DEAD, TERM, plainLinkCount } from "./lib/walk.js";
+import { loadCorpus, successorsFor, analyzeFunctionalGraph, predecessors, walkFrom, rngFor, DEAD, TERM, eligibleLinkCount } from "./lib/walk.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const PORT = Number(process.env.PORT ?? 8787);
@@ -367,7 +367,7 @@ const server = http.createServer(async (req, res) => {
       const hops = chain.length - 1;
       const reason = walk.fate === "dead"
         ? term[walk.endIdx] === TERM.NO_LINKS ? "no eligible links"
-          : term[walk.endIdx] === TERM.TOO_FEW ? `page has only ${plainLinkCount(corpus, walk.endIdx)} eligible links`
+          : term[walk.endIdx] === TERM.TOO_FEW ? `page has only ${eligibleLinkCount(corpus, walk.endIdx)} eligible links`
           : term[walk.endIdx] === TERM.UNRESOLVED ? "redlink (unresolvable target)"
           : "chain breaks"
         : "";
@@ -502,7 +502,7 @@ const server = http.createServer(async (req, res) => {
         if (!st) { res.writeHead(404); res.end("no stats — run analyze first"); return; }
         const j = JSON.parse(st);
         if (what === "indegree") {
-          csv = "title,inDegree\n" + j.topInDegree.map((r: { title: string; inDegree: number }) => `${JSON.stringify(r.title)},${r.inDegree}`).join("\n");
+          csv = "title,firstLinks\n" + j.topFirstLinkTargets.map((r: { title: string; firstLinks: number }) => `${JSON.stringify(r.title)},${r.firstLinks}`).join("\n");
         } else if (what === "attractors") {
           csv = "cycle,basin,pct\n" + j.topAttractors.map((a: { cycle: string[]; basin: number; pct: number }) => `${JSON.stringify(a.cycle.join(" -> "))},${a.basin},${a.pct}`).join("\n");
         } else { res.writeHead(400); res.end("what must be distances|indegree|attractors"); return; }
