@@ -289,8 +289,15 @@
     // upscale the bitmap, which reads as the whole field going soft
     const pickDpr = () => Math.max(1, Math.min(window.devicePixelRatio || 1, 2, Math.sqrt(8.3e6 / Math.max(1, W * H))));
     let g = null, L = null, colorOf = null;
+    const colorOfFor = (gr) => (i) => {
+      const a = gr.attractor[i];
+      return a < 0 ? WALK_COLORS.dead : a < WALK_COLORS.loops.length ? WALK_COLORS.loops[a] : WALK_COLORS.other;
+    };
+    // morphing a rank switch re-renders the whole field every frame; past this
+    // node count a snapshot crossfade stands in instead (rs3-class wikis)
+    const MORPH_MAX_N = opts.morphMaxNodes ?? 40000;
     const view = { k: 1, tx: 0, ty: 0 };
-    let cacheView = null, anim = null, lastView = null;
+    let cacheView = null, anim = null, lastView = null, morph = null; // rank-switch morph state (stepMorph)
     let baseStale = false, lastInteract = 0;   // interaction in progress: redraw from the cached bitmap
     const SETTLE_MS = 140;
     // The base layer (every edge, dot and label) is too expensive to re-render
@@ -323,21 +330,58 @@
       cacheW = base.width + 2 * cacheOX; cacheH = base.height + 2 * cacheOY;
       cacheC.width = cacheW; cacheC.height = cacheH;
       cacheView = null;
+      morph = null; // a resize invalidates the morph's from/to coordinates — snap to the relayout
       if (g) { L = layoutWalkGraph(g, W, H, opts.layout); buildGrid(); respawnAll(); }
       view.k = 1; view.tx = 0; view.ty = 0; anim = null;
       baseDirty = true;
       if (!running) kickOnce();
     }
-    function setGraph(graph) {
+    function setGraph(graph, animOpts) {
+      const prevG = g, prevColor = colorOf;
+      const sameUniverse = !!prevG && prevG !== graph && (
+        prevG.titles === graph.titles ||                            // static hosts share one titles array per wiki
+        (!!(animOpts && animOpts.animate) && prevG.N === graph.N)   // live hosts vouch the wiki didn't change
+      );
+      const canAnimate = sameUniverse && !opts.reduced && W > 1 && H > 1;
+      if (canAnimate && graph.N > MORPH_MAX_N) crossfadeOldBase(); // too big to morph — blend a snapshot instead
       g = graph;
-      colorOf = (i) => {
-        const a = g.attractor[i];
-        return a < 0 ? WALK_COLORS.dead : a < WALK_COLORS.loops.length ? WALK_COLORS.loops[a] : WALK_COLORS.other;
-      };
+      colorOf = colorOfFor(graph);
+      hover = -1; hoverChain = null;
+      if (canAnimate && graph.N <= MORPH_MAX_N) {
+        // morph: same titles per wiki, so every node glides to its new layout
+        // position while the old ink dissolves and the new ink condenses
+        const Ln = layoutWalkGraph(g, W, H, opts.layout);
+        morph = {
+          x0: L.x, y0: L.y,                               // frozen once L is swapped below (retargets pick up mid-flight positions)
+          x1: Float32Array.from(Ln.x), y1: Float32Array.from(Ln.y),
+          succ0: prevG.succ, colorOf0: prevColor || colorOf, g0: prevG,
+          centers0: morph ? null : L.centers,             // retargeting mid-morph: the old labels have already dissolved
+          t0: performance.now(), dur: opts.morphMs ?? 850, frames: 0, ms: 0,
+          keep: [], out: [], inn: [],
+          px: graph.N > 20000 ? Math.min(dpr, 0.75) : Math.min(dpr, 1), // raster scale for the flight
+        };
+        // the morph rasterises at reduced device pixels — a field in flight hides
+        // the softness, and the landing render restores full sharpness
+        { const bw = Math.max(1, Math.round(W * morph.px)); if (base.width !== bw) base.width = bw;
+          const bh = Math.max(1, Math.round(H * morph.px)); if (base.height !== bh) base.height = bh; }
+        for (let i = 0; i < graph.N; i++) {
+          if (morph.succ0[i] === g.succ[i] && morph.colorOf0(i) === colorOf(i)) morph.keep.push(i);
+          else { morph.out.push(i); morph.inn.push(i); }  // changed edge or colour: old fades out, new fades in
+        }
+        L = Ln;
+        if (view.k !== 1 || view.tx !== 0 || view.ty !== 0)
+          anim = { from: { ...view }, to: { k: 1, tx: 0, ty: 0 }, t0: morph.t0, dur: morph.dur }; // ride the view home with the morph
+        cacheView = null; baseDirty = false; baseStale = false; // the morph owns the base layer until it lands
+        if (!running) kickOnce();
+        return;
+      }
+      morph = null;
+      { const bw = Math.round(W * dpr); if (base.width !== bw) base.width = bw;   // a cancelled morph may have shrunk it
+        const bh = Math.round(H * dpr); if (base.height !== bh) base.height = bh; }
       view.k = 1; view.tx = 0; view.ty = 0; anim = null;
       L = layoutWalkGraph(g, W, H, opts.layout);
       buildGrid(); respawnAll();
-      baseDirty = true; hover = -1; hoverChain = null;
+      baseDirty = true;
       if (!running) kickOnce();
     }
     function buildGrid() {
@@ -459,29 +503,9 @@
       // drop the world transform before drawing them, or the pan applies
       // twice and the zoom squares, drifting labels off their nodes
       cctx.setTransform(dpr, 0, 0, dpr, cacheOX, cacheOY);
-      cctx.globalAlpha = 1; cctx.textAlign = "center"; cctx.textBaseline = "middle";
       const placed = [];
-      const fits = (r) => !(r.x < 0 || r.x + r.w > CW || r.y < 0 || r.y + r.h > CH) && !placed.some((p) => r.x < p.x + p.w && r.x + r.w > p.x && r.y < p.y + p.h && r.y + r.h > p.y);
-      let shown = 0;
-      cctx.font = "600 10.5px 'Space Mono', monospace";
-      for (let ci = 0; ci < L.centers.length && shown < opts.maxLabels; ci++) {
-        const c = L.centers[ci];
-        const rs = c.r * k;
-        if (ci >= opts.labels && rs < 16) continue;
-        if (c.loop < 0 && (ci > 6 || rs < 22)) continue;
-        const [sx, sy] = toScreen(c.x, c.y);
-        if (sx < -rs || sx > CW + rs || sy < -rs || sy > CH + rs) continue;
-        const label = c.loop >= 0 ? g.loops[c.loop].nodes.map((n) => g.titles[n]).join(" → ") : g.titles[c.root] + " ✝";
-        const text = label.length > 44 ? label.slice(0, 43) + "…" : label;
-        const tw = cctx.measureText(text).width;
-        let ly = null;
-        for (const cand of [sy - rs - 9, sy + rs + 9, sy]) { const r = { x: sx - tw / 2 - 3, y: cand - 8, w: tw + 6, h: 16 }; if (fits(r)) { placed.push(r); ly = cand; break; } }
-        if (ly === null) continue;
-        cctx.lineWidth = 4; cctx.strokeStyle = "rgba(248,244,234,0.9)"; cctx.strokeText(text, sx, ly);
-        cctx.fillStyle = c.loop >= 0 ? (c.loop < WALK_COLORS.loops.length ? WALK_COLORS.loops[c.loop] : WALK_COLORS.other) : WALK_COLORS.dead;
-        cctx.fillText(text, sx, ly);
-        shown++;
-      }
+      paintCenterLabels(cctx, g, L.centers, CW, CH, 1, placed);
+      const fits = labelFits(CW, CH, placed);
       if (k >= 3) {
         // article names: the most linked-to articles on screen, up to a budget that grows with zoom
         const budget = Math.min(160, Math.round(10 * k));
@@ -534,10 +558,147 @@
         && (H - view.ty) / view.k <= (cacheH / dpr - oy - cacheView.ty) / kc - py;
     }
 
+    /* ---- rank morph --------------------------------------------------
+     * While a morph runs it owns the base layer: each frame interpolates every
+     * node between its old and new layout position, then draws three ink
+     * passes straight to the canvas — edges+dots that survive the rank change
+     * at full strength, the old topology fading out, the new one fading in.
+     * No padded cache and no per-article labels: those come back with the full
+     * render when the morph lands. Territory labels dissolve early and the new
+     * set arrives at the end, so the map is never mislabelled mid-flight. */
+    function stepMorph(now) {
+      if (!morph) return false;
+      const t = Math.min(1, (now - morph.t0) / morph.dur);
+      const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; // ease in-out cubic
+      const x = L.x, y = L.y, x0 = morph.x0, y0 = morph.y0, x1 = morph.x1, y1 = morph.y1;
+      for (let i = 0; i < g.N; i++) { x[i] = x0[i] + (x1[i] - x0[i]) * e; y[i] = y0[i] + (y1[i] - y0[i]) * e; }
+      const tDraw = performance.now();
+      drawMorphInk(e, t);
+      morph.frames++; morph.ms += performance.now() - tDraw;
+      if (t >= 1) {
+        x.set(x1); y.set(y1);
+        const nodes = g.N, frames = morph.frames, ms = morph.ms;
+        morph = null;
+        buildGrid();
+        { const bw = Math.round(W * dpr); if (base.width !== bw) base.width = bw; // full sharpness for the landing render
+          const bh = Math.round(H * dpr); if (base.height !== bh) base.height = bh; }
+        cacheView = null; baseStale = false; baseDirty = true; // the full render brings labels back
+        console.info("walkfield morph: " + nodes.toLocaleString() + " nodes, " + (ms / Math.max(1, frames)).toFixed(1) + " ms/frame over " + frames + " frames");
+      }
+      return true;
+    }
+    function drawMorphInk(e, t) {
+      const x = L.x, y = L.y, k = view.k, px = morph.px;
+      bctx.setTransform(px, 0, 0, px, 0, 0);
+      bctx.clearRect(0, 0, W, H);
+      bctx.translate(view.tx, view.ty); bctx.scale(k, k);
+      const m = 8 / k;
+      const vx0 = -view.tx / k - m, vy0 = -view.ty / k - m, vx1 = (W - view.tx) / k + m, vy1 = (H - view.ty) / k + m;
+      const vis = (i) => k <= 1.5 || (x[i] >= vx0 && x[i] <= vx1 && y[i] >= vy0 && y[i] <= vy1);
+      const edgeA = Math.min(0.35, opts.edgeAlpha * (1 + Math.log2(Math.max(1, k)) * 0.45));
+      bctx.lineWidth = (k > 4 ? 1.1 : k > 1.5 ? 0.85 : 0.7) / k;
+      const edges = (list, S, col, alpha) => {
+        if (alpha <= 0.004) return;
+        const buckets = new Map();
+        for (let n = 0; n < list.length; n++) {
+          const i = list[n], s = S[i]; if (s < 0 || s === i) continue;
+          if (k > 1.5 && !vis(i) && !vis(s)) continue;
+          const c = col(i); let p = buckets.get(c); if (!p) { p = new Path2D(); buckets.set(c, p); }
+          p.moveTo(x[i], y[i]); p.lineTo(x[s], y[s]);
+        }
+        bctx.globalAlpha = alpha;
+        for (const entry of buckets) { bctx.strokeStyle = entry[0]; bctx.stroke(entry[1]); }
+      };
+      const dots = (list, col, alpha) => {
+        if (alpha <= 0.004) return;
+        const sz = (k > 4 ? 2.6 : k > 1.5 ? 1.8 : 1.3) / k;
+        const buckets = new Map();
+        for (let n = 0; n < list.length; n++) {
+          const i = list[n];
+          if (k > 1.5 && !vis(i)) continue;
+          const c = col(i); let p = buckets.get(c); if (!p) { p = new Path2D(); buckets.set(c, p); }
+          p.rect(x[i] - sz / 2, y[i] - sz / 2, sz, sz);
+        }
+        bctx.globalAlpha = alpha;
+        for (const entry of buckets) { bctx.fillStyle = entry[0]; bctx.fill(entry[1]); }
+      };
+      edges(morph.keep, g.succ, colorOf, edgeA);
+      edges(morph.out, morph.succ0, morph.colorOf0, edgeA * (1 - e));
+      edges(morph.inn, g.succ, colorOf, edgeA * e);
+      dots(morph.keep, colorOf, 0.55);
+      dots(morph.out, morph.colorOf0, 0.55 * (1 - e));
+      dots(morph.inn, colorOf, 0.55 * e);
+      const rings = (gr, alpha) => {
+        if (alpha <= 0.004) return;
+        bctx.globalAlpha = alpha; bctx.lineWidth = Math.max(0.6, 1 / k);
+        for (const l of gr.loops.slice(0, 60)) {
+          bctx.strokeStyle = l.id < WALK_COLORS.loops.length ? WALK_COLORS.loops[l.id] : WALK_COLORS.other;
+          for (const nd of l.nodes) { if (!vis(nd)) continue; bctx.beginPath(); bctx.arc(x[nd], y[nd], Math.max(1.6, 2.6 / k), 0, TAU); bctx.stroke(); }
+        }
+      };
+      rings(morph.g0, 0.9 * (1 - e));
+      rings(g, 0.9 * e);
+      bctx.globalAlpha = 1;
+      // territory labels: the old set dissolves in the first stretch, the new one arrives at the end
+      bctx.setTransform(px, 0, 0, px, 0, 0);
+      const a0 = morph.centers0 ? Math.max(0, 1 - t / 0.3) : 0;
+      if (a0 > 0.01) paintCenterLabels(bctx, morph.g0, morph.centers0, W, H, a0, []);
+      const a1 = Math.min(1, Math.max(0, (t - 0.7) / 0.3));
+      if (a1 > 0.01) paintCenterLabels(bctx, g, L.centers, W, H, a1, []);
+    }
+    /* snapshot crossfade for wikis too big to morph: the old frame becomes a
+     * canvas laid over the new render, and a CSS opacity transition blends it
+     * away — zero per-frame JS */
+    const fadeEls = new Set();
+    function crossfadeOldBase() {
+      const dur = opts.xfadeMs ?? 260;
+      const snap = document.createElement("canvas");
+      snap.width = base.width; snap.height = base.height;
+      snap.getContext("2d").drawImage(base, 0, 0);
+      snap.style.cssText = "position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;opacity:1;transition:opacity " + dur + "ms ease;";
+      container.insertBefore(snap, live);
+      fadeEls.add(snap);
+      const kill = () => { snap.remove(); fadeEls.delete(snap); };
+      snap.addEventListener("transitionend", kill, { once: true });
+      setTimeout(kill, dur + 500);
+      requestAnimationFrame(() => requestAnimationFrame(() => { snap.style.opacity = "0"; }));
+    }
+    /* territory labels — shared by the cached base render and the morph */
+    function labelFits(boundW, boundH, placed) {
+      return (r) => !(r.x < 0 || r.x + r.w > boundW || r.y < 0 || r.y + r.h > boundH) && !placed.some((p) => r.x < p.x + p.w && r.x + r.w > p.x && r.y < p.y + p.h && r.y + r.h > p.y);
+    }
+    function paintCenterLabels(ctx, gr, centers, boundW, boundH, alpha, placed) {
+      const fits = labelFits(boundW, boundH, placed);
+      ctx.globalAlpha = alpha; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.font = "600 10.5px 'Space Mono', monospace";
+      let shown = 0;
+      for (let ci = 0; ci < centers.length && shown < opts.maxLabels; ci++) {
+        const c = centers[ci];
+        const rs = c.r * view.k;
+        if (ci >= opts.labels && rs < 16) continue;
+        if (c.loop < 0 && (ci > 6 || rs < 22)) continue;
+        const [sx, sy] = toScreen(c.x, c.y);
+        if (sx < -rs || sx > boundW + rs || sy < -rs || sy > boundH + rs) continue;
+        const label = c.loop >= 0 ? gr.loops[c.loop].nodes.map((n) => gr.titles[n]).join(" → ") : gr.titles[c.root] + " ✝";
+        const text = label.length > 44 ? label.slice(0, 43) + "…" : label;
+        const tw = ctx.measureText(text).width;
+        let ly = null;
+        for (const cand of [sy - rs - 9, sy + rs + 9, sy]) { const r = { x: sx - tw / 2 - 3, y: cand - 8, w: tw + 6, h: 16 }; if (fits(r)) { placed.push(r); ly = cand; break; } }
+        if (ly === null) continue;
+        ctx.lineWidth = 4; ctx.strokeStyle = "rgba(248,244,234,0.9)"; ctx.strokeText(text, sx, ly);
+        ctx.fillStyle = c.loop >= 0 ? (c.loop < WALK_COLORS.loops.length ? WALK_COLORS.loops[c.loop] : WALK_COLORS.other) : WALK_COLORS.dead;
+        ctx.fillText(text, sx, ly);
+        shown++;
+      }
+      ctx.globalAlpha = 1;
+    }
+
     function frame(now) {
       const animating = stepAnim(now);
+      const morphing = stepMorph(now); // draws the base layer itself while a rank morph runs
       const interacting = baseStale && now - lastInteract < SETTLE_MS;
-      if (animating) drawBaseFromCache();
+      if (morphing) { /* the morph owns the base layer this frame */ }
+      else if (animating) drawBaseFromCache();
       else if (interacting) {
         // mid pan/zoom: replay the cache while it still covers the viewport;
         // once the drag starts eating into its runway, re-render at the current
@@ -551,7 +712,7 @@
       lctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       // trails are screen-space residue: they only make sense while the view holds still.
       // any pan/zoom since the last frame wipes them instead of fading them in place.
-      const moved = !lastView || lastView.k !== view.k || lastView.tx !== view.tx || lastView.ty !== view.ty;
+      const moved = morphing || !lastView || lastView.k !== view.k || lastView.tx !== view.tx || lastView.ty !== view.ty;
       lastView = { k: view.k, tx: view.tx, ty: view.ty };
       if (running && !animating && !moved) {
         lctx.globalCompositeOperation = "destination-out";
@@ -621,14 +782,14 @@
         }
       }
       lctx.globalAlpha = 1;
-      if (animating || baseStale) kickOnce();
+      if (animating || baseStale || morphing) kickOnce();
     }
     let raf = 0;
     function tick(now) {
       raf = 0;
       if (!visible || document.hidden) return;
       frame(now);
-      if (running && !raf) raf = requestAnimationFrame(tick);
+      if ((running || morph) && !raf) raf = requestAnimationFrame(tick);
     }
     function kick() { if (!raf && visible && !document.hidden) raf = requestAnimationFrame(tick); }
     function kickOnce() { if (!raf && visible && !document.hidden) raf = requestAnimationFrame(tick); }
@@ -637,7 +798,7 @@
     const pointers = new Map();
     let drag = null, downAt = null, pinch = null, lastTap = 0, tapFresh = false;
     function updateHover() {
-      if (!g) return;
+      if (!g || morph) return; // nearest-node lookup is stale until the morph rebuilds the grid
       const [wx, wy] = toWorld(mouse.x, mouse.y);
       const hit = nearest(wx, wy, 9 / view.k);
       if (hit !== hover) {
@@ -732,7 +893,7 @@
       view: () => ({ ...view }),
       layout: () => L,
       graph: () => g,
-      destroy() { ro.disconnect(); running = false; base.remove(); live.remove(); },
+      destroy() { ro.disconnect(); running = false; morph = null; fadeEls.forEach((f) => f.remove()); fadeEls.clear(); base.remove(); live.remove(); },
     };
   }
 

@@ -44,7 +44,9 @@ computes everything else client-side: loops, basins, the drainage-map layout, ch
 The wiki drainage map (`scripts/walkfield.html`) ships in the same build at `dist/mesh/` — the
 article's drainage map as its own full page. It is static too: it reads the same successor tables
 and builds the graph client-side, so it renders identically on GitHub Pages. Served by the lab
-server at `/mesh` it uses the live output via `/api/walktable` instead.
+server at `/mesh` it uses the live output via `/api/walktable` instead. Switching link rank
+morphs the field — articles glide into their new basins while the first-link ink re-forms
+(wikis too large to animate per frame crossfade instead; `prefers-reduced-motion` skips it).
 
 If your `output/` folders still hold the old `chains-r*.json` tables, run
 `npm run convert:legacy -- --src=<dir>` once to produce the successor tables.

@@ -377,7 +377,9 @@ async function loadRanks() {
 }
 
 /* load the current wiki+rank into the field */
+let loadedWiki = null; // rank switches morph the field; wiki switches cut to the new node universe
 async function loadField() {
+  const forWiki = state.wiki; // what this load targets (races: last setGraph wins, as before)
   syncUrl();
   legendEl.innerHTML = idleLegend = "loading the successor table…";
   let g;
@@ -390,7 +392,9 @@ async function loadField() {
   showError("");
   legendEl.innerHTML = idleLegend = `laying out ${g.N.toLocaleString()} articles…`;
   await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
-  field.setGraph(g);
+  const animate = loadedWiki === forWiki;
+  loadedWiki = forWiki;
+  field.setGraph(g, { animate });
   idleLegend =
     `<b>${g.N.toLocaleString()}</b> articles · <b>${g.loops.length.toLocaleString()}</b> loops<br>` +
     g.loops.slice(0, 6).map((l) => `<span><span class="sw" style="background:${loopColor(l.id)}"></span>${esc(loopName(l.nodes.map((k) => g.titles[k])))} · ${(100 * l.basin / g.N).toFixed(1)}%</span>`).join("<br>") +

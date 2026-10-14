@@ -680,6 +680,7 @@ document.getElementById("meshLink").onclick = (e) => {
  * ==================================================================== */
 let graphLoaded = false;
 let constField = null;
+let fieldWiki = null; // wiki currently in the field — rank switches morph, wiki switches cut
 let wikiOrigins = null; // id -> origin, for opening articles
 const ARTICLE_PATH = { tarkov: "/wiki/", terraria: "/wiki/", subnautica: "/wiki/", factorio: "/" }; // default /w/
 const loopColor = (id) => WALK_COLORS.loops[id] ?? WALK_COLORS.other;
@@ -719,7 +720,8 @@ async function loadGraph() {
         },
       });
     }
-    constField.setGraph(g);
+    constField.setGraph(g, { animate: fieldWiki === state.wiki });
+    fieldWiki = state.wiki;
     legendEl.innerHTML =
       `${g.N.toLocaleString()} articles · ${g.loops.length.toLocaleString()} loops · ` +
       g.loops.slice(0, 4).map((l) => `<span><span class="sw" style="background:${loopColor(l.id)}"></span>${esc(loopName(l.nodes.map((k) => g.titles[k])))} · ${(100 * l.basin / g.N).toFixed(1)}%</span>`).join(" ") +

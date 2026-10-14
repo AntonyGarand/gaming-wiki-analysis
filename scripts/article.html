@@ -973,6 +973,8 @@ function resizeAll() { Object.values(charts).forEach((c) => { try { c.resize(); 
 window.addEventListener("resize", resizeAll);
 
 let cur = { stats: null, summary: null, graph: null, all: [] };
+let focusWiki = null;       // last wiki loaded into the fields
+let rankSwitchAnim = false; // set by loadFocus: same wiki + new rank → hero and map morph
 
 /* ---- 01 the field: stacked bars ---- */
 function renderField() {
@@ -1314,7 +1316,7 @@ function ensureMap() {
     el("mapWrap").dataset.wheel = "always";
     mountFieldUI(el("mapWrap"), () => mapField, "the drainage map");
   }
-  if (cur.graph) mapField.setGraph(cur.graph);
+  if (cur.graph) mapField.setGraph(cur.graph, { animate: rankSwitchAnim });
   const g = cur.graph; if (!g) return;
   const n = el("note-map");
   n.dataset.idle = `<span class="legend">` + g.loops.slice(0, 6).map((l) => `<span><span class="sw" style="background:${loopColor(l.id)}"></span>${esc(loopName(l.nodes.map((k) => g.titles[k])))} · ${(100 * l.basin / g.N).toFixed(1)}%</span>`).join("") + `<span><span class="sw" style="background:${C.dead}"></span>dead ends</span></span>`;
@@ -1331,7 +1333,7 @@ function renderHero() {
     const g = cur.graph;
     h.textContent = wk.fate === "cycle" ? `${g.titles[i]} → ${wk.hops} clicks → ${loopName(wk.chain.slice(-wk.cycleSize).map((k) => g.titles[k]))}` : `${g.titles[i]} → dies after ${wk.hops} clicks at ${g.titles[wk.terminal]}`;
   } });
-  if (cur.graph) heroField.setGraph(cur.graph);
+  if (cur.graph) heroField.setGraph(cur.graph, { animate: rankSwitchAnim });
 }
 function updateReadout() {
   const S = cur.stats; if (!S) return;
@@ -1428,6 +1430,8 @@ function buildGear() {
 async function loadFocus() {
   const w = wikiById(state.wiki); if (!w) return;
   if (!w.ranks.includes(state.rank)) state.rank = w.ranks[0];
+  rankSwitchAnim = focusWiki === state.wiki && !!cur.graph;
+  focusWiki = state.wiki;
   buildGear(); updateChip();
   try {
     const [summary, stats, all, graph] = await Promise.all([loadSummary(state.wiki), loadStats(state.wiki, state.rank), loadAllStats(state.rank), loadGraph(state.wiki, state.rank)]);
