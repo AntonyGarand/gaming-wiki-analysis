@@ -260,7 +260,7 @@
     let W = 0, H = 0, dpr = Math.min(2, window.devicePixelRatio || 1);
     let g = null, L = null, colorOf = null;
     const view = { k: 1, tx: 0, ty: 0 };
-    let cacheView = null, anim = null;
+    let cacheView = null, anim = null, lastView = null;
     let walkers = [], hover = -1, hoverChain = null, visible = true, running = !opts.reduced;
     let lastT = 0, baseDirty = true, grid = null, gridCell = 18;
     const mouse = { x: -1e9, y: -1e9 };
@@ -453,7 +453,11 @@
       if (animating) drawBaseFromCache(); else if (baseDirty) drawBase();
       const dt = Math.min(0.05, (now - lastT) / 1000 || 0.016); lastT = now;
       lctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      if (running && !animating) {
+      // trails are screen-space residue: they only make sense while the view holds still.
+      // any pan/zoom since the last frame wipes them instead of fading them in place.
+      const moved = !lastView || lastView.k !== view.k || lastView.tx !== view.tx || lastView.ty !== view.ty;
+      lastView = { k: view.k, tx: view.tx, ty: view.ty };
+      if (running && !animating && !moved) {
         lctx.globalCompositeOperation = "destination-out";
         lctx.fillStyle = "rgba(0,0,0,0.16)"; lctx.fillRect(0, 0, W, H);
       } else lctx.clearRect(0, 0, W, H);
