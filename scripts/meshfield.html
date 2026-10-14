@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesh Field — the first-link network, grown live</title>
+<meta name="description" content="A full-page living mesh of gaming wiki articles — random starts, real first links, loops closing themselves as the walks arrive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="/meshfield.js"></script>
+<style>
+  /* same instantiation tokens as the lab dashboard (warm paper editorial) */
+  :root {
+    --ground-0: #f8f4ea;
+    --ground-1: #f1ebdd;
+    --ink: #201b14;
+    --ink-2: #5f574a;
+    --ink-3: #93897a;
+    --hairline: #ddd3c0;
+    --cy: #bc4b27;
+    --vi: #6d3b7e;
+    --ease-expo: cubic-bezier(0.83, 0, 0.17, 1);
+    --font-display: "Fraunces", Georgia, serif;
+    --font-body: "Space Grotesk", sans-serif;
+    --font-mono: "Space Mono", monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--ground-0); color: var(--ink);
+    font-family: var(--font-body); font-weight: 300;
+    overflow: hidden; overscroll-behavior: none;
+  }
+  ::selection { background: var(--vi); color: #fff; }
+
+  /* the field IS the page */
+  .stage { position: fixed; inset: 0; overflow: hidden; touch-action: none; }
+  .stage:fullscreen { background: var(--ground-0); }
+  .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+
+  /* top chrome — floats over the field, never pushes it around */
+  .bar {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+    display: flex; flex-wrap: wrap; align-items: flex-start; gap: 14px 28px;
+    padding: 18px 22px 34px; pointer-events: none;
+    background: linear-gradient(to bottom, color-mix(in oklab, var(--ground-0) 72%, transparent), transparent);
+  }
+  .brand { max-width: 460px; }
+  .brand .kicker {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.32em;
+    color: var(--ink-2); text-transform: uppercase; margin-bottom: 10px;
+  }
+  .brand .kicker .dot { color: var(--cy); }
+  .brand h1 {
+    font-family: var(--font-display); font-size: clamp(34px, 4.4vw, 62px);
+    line-height: 0.95; letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 144, "wght" 620;
+  }
+  .brand h1 .it {
+    font-style: italic; font-variation-settings: "opsz" 144, "wght" 420; color: var(--cy);
+  }
+  .brand .sub { margin-top: 10px; font-size: 13px; line-height: 1.55; color: var(--ink-2); max-width: 42ch; text-wrap: pretty; }
+  .brand .sub b { color: var(--ink); font-weight: 500; }
+
+  .controls { margin-left: auto; display: flex; flex-direction: column; gap: 9px; align-items: flex-end; pointer-events: auto; }
+  .ctl-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+  .ctl { display: flex; flex-direction: column; gap: 4px; }
+  .ctl .k { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.3em; color: var(--ink-3); text-transform: uppercase; text-align: right; }
+  .chipgroup {
+    display: flex; border: 1px solid var(--hairline);
+    background: color-mix(in oklab, var(--ground-0) 72%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .chipgroup button {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em;
+    padding: 8px 13px; background: transparent; color: var(--ink-2);
+    border: 0; cursor: pointer; text-transform: uppercase; white-space: nowrap;
+    transition: color 0.25s var(--ease-expo), background 0.25s var(--ease-expo);
+  }
+  .chipgroup button:hover { color: var(--ink); }
+  .chipgroup button.on { background: var(--ink); color: var(--ground-0); font-weight: 700; }
+  .chipgroup button:disabled { opacity: 0.35; cursor: not-allowed; }
+  .ctl-note { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-3); text-align: right; max-width: 52ch; }
+
+  .pagelinks { display: flex; gap: 18px; align-items: center; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .pagelinks a { color: var(--ink-3); text-decoration: none; transition: color 0.3s var(--ease-expo); }
+  .pagelinks a:hover { color: var(--cy); text-decoration: underline; text-underline-offset: 3px; }
+  .pagelinks button {
+    font-family: var(--font-mono); font-size: 13px; width: 32px; height: 32px; line-height: 1;
+    cursor: pointer; color: var(--ink-2); background: color-mix(in oklab, var(--ground-0) 72%, transparent);
+    border: 1px solid var(--hairline); backdrop-filter: blur(8px);
+    transition: color 0.25s var(--ease-expo), border-color 0.25s var(--ease-expo);
+  }
+  .pagelinks button:hover { color: var(--cy); border-color: var(--cy); }
+
+  /* bottom chrome */
+  .legend {
+    position: absolute; left: 22px; bottom: 18px; z-index: 10;
+    display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: center;
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em;
+    color: var(--ink-2); text-transform: uppercase; pointer-events: none;
+    max-width: min(66vw, 940px); line-height: 1.9;
+  }
+  .legend .sw { display: inline-block; width: 14px; height: 1px; vertical-align: middle; margin-right: 8px; }
+  .hints {
+    position: absolute; right: 22px; bottom: 18px; z-index: 10;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
+    color: var(--ink-3); text-transform: uppercase; text-align: right;
+    pointer-events: none; line-height: 1.9; max-width: 34vw;
+  }
+  #status {
+    position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 30;
+    font-family: var(--font-mono); font-size: 11px; color: #a03d2e;
+    background: color-mix(in oklab, var(--ground-0) 88%, transparent);
+    border: 1px solid #e3b8ac; padding: 8px 14px; display: none; max-width: 80vw;
+  }
+
+  @media (max-width: 1080px) {
+    .bar { gap: 10px 18px; }
+    .controls { margin-left: 0; align-items: flex-start; }
+    .ctl-row { justify-content: flex-start; }
+    .ctl .k { text-align: left; }
+    .ctl-note { text-align: left; }
+    .legend { max-width: calc(100vw - 44px); }
+    .hints { display: none; }
+  }
+  @media (max-width: 640px) {
+    .brand .sub, .ctl-note { display: none; }
+    .bar { padding-bottom: 26px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .chipgroup button, .pagelinks a, .pagelinks button { transition-duration: 0.01ms; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stage" id="stage">
+  <canvas id="meshCanvas"></canvas>
+
+  <header class="bar">
+    <div class="brand">
+      <div class="kicker">FIRST-LINK NETWORK ANALYSIS <span class="dot">●</span> GROWN LIVE</div>
+      <h1>Mesh<span class="it">Field</span></h1>
+      <p class="sub">
+        The whole page is the field. Random articles are walked <b>first link by first link</b>,
+        materialising as they arrive; revisits close loops, runners trace them forever.
+      </p>
+    </div>
+    <div class="controls">
+      <div class="ctl-row">
+        <div class="ctl"><div class="k">wiki</div><div class="chipgroup" id="wikiSwitch"></div></div>
+        <div class="ctl"><div class="k">rank</div><div class="chipgroup" id="ranks"></div></div>
+        <div class="ctl"><div class="k">articles</div><div class="chipgroup" id="sizes"></div></div>
+      </div>
+      <div class="ctl-note">parenthesised, italicised, disambiguation and date links never count, at any rank</div>
+      <div class="pagelinks">
+        <a href="/">article</a>
+        <a href="/lab">lab</a>
+        <button id="fsBtn" title="fullscreen" aria-label="toggle fullscreen">⤢</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="legend" id="legend">waking the field…</div>
+  <div class="hints">hover to read · click a node to fire its first link<br>scroll to zoom · drag to pan</div>
+  <div id="status"></div>
+</div>
+
+<script>
+/* meshfield.js deps (globals at call time): hueAt(t), api(path), reduced.
+ * hue preference is shared with the lab dashboard via localStorage. */
+let HUE_SHIFT = Number(localStorage.getItem("lab_hue") ?? 0);
+function hueAt(t) {
+  const L = 0.60 + (0.46 - 0.60) * t;
+  const C = 0.155 + (0.125 - 0.155) * t;
+  const H = (40 + HUE_SHIFT) - 78 * t; // rust → red → plum, the warm side of the wheel
+  return `oklch(${(L * 100).toFixed(1)}% ${C.toFixed(3)} ${((H % 360) + 360) % 360})`;
+}
+const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+async function api(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error((await res.text()) || res.statusText);
+  return res.json();
+}
+function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+const WIKIS = __WIKI_OPTIONS__;
+const SIZES = [80, 150, 250, 400, 600];
+const RANK_LABELS = { strict1: "1st", last: "last", random: "random" };
+const rankLabel = (r) => RANK_LABELS[r] ?? (r + (r === "1" ? "st" : r === "2" ? "nd" : r === "3" ? "rd" : "th")) + " link";
+
+/* state comes from the URL (?wiki=&rank=&n=) so any view is shareable */
+const params = new URLSearchParams(location.search);
+function nearestSize(n) {
+  if (!Number.isFinite(n)) return 250;
+  let best = SIZES[0];
+  for (const s of SIZES) if (Math.abs(s - n) < Math.abs(best - n)) best = s;
+  return best;
+}
+const state = {
+  wiki: params.get("wiki") || WIKIS[0]?.id || "osrs",
+  rank: params.get("rank") || "strict1",
+  n: nearestSize(parseInt(params.get("n") ?? "", 10)),
+};
+function syncUrl() {
+  history.replaceState(null, "", "/mesh?" + new URLSearchParams({ wiki: state.wiki, rank: state.rank, n: String(state.n) }));
+}
+function showError(msg) {
+  const el = document.getElementById("status");
+  el.textContent = msg; el.style.display = msg ? "block" : "none";
+}
+
+/* the field — explore mode: pan, zoom, hover, click-to-trace */
+const stage = document.getElementById("stage");
+const mesh = createMeshField(document.getElementById("meshCanvas"), stage, { explore: true });
+
+/* wiki switch (populated now, availability flags patched in during boot) */
+const wikiSwitch = document.getElementById("wikiSwitch");
+wikiSwitch.innerHTML = WIKIS.map((w) =>
+  `<button data-wiki="${w.id}" title="${esc(w.description ?? "")}">${w.id}</button>`).join("");
+const wikiBtns = [...wikiSwitch.querySelectorAll("button")];
+const markWiki = () => wikiBtns.forEach((b) => b.classList.toggle("on", b.dataset.wiki === state.wiki));
+wikiBtns.forEach((b) => b.onclick = async () => {
+  if (b.disabled || b.dataset.wiki === state.wiki) return;
+  state.wiki = b.dataset.wiki;
+  markWiki();
+  if (await loadSummary()) regrow();
+});
+markWiki();
+
+/* rank switch — rebuilt per wiki from /api/summary */
+async function loadSummary() {
+  const ranksEl = document.getElementById("ranks");
+  try {
+    const s = await api(`/api/summary?wiki=${state.wiki}`);
+    showError("");
+    const ranks = s.ranks ?? [];
+    if (!ranks.some((r) => r.rank === state.rank) && ranks.length) state.rank = ranks[0].rank;
+    ranksEl.innerHTML = "";
+    for (const r of ranks) {
+      const b = document.createElement("button");
+      b.textContent = rankLabel(r.rank);
+      if (r.rank === state.rank) b.classList.add("on");
+      b.onclick = () => {
+        state.rank = r.rank;
+        ranksEl.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+        regrow();
+      };
+      ranksEl.appendChild(b);
+    }
+    return true;
+  } catch (e) {
+    ranksEl.innerHTML = "";
+    showError(`No analysis data for ${state.wiki} yet (${esc(e.message)}). Run the fetch + analyze pipeline, or pick another wiki.`);
+    return false;
+  }
+}
+
+/* article-count control */
+const sizesEl = document.getElementById("sizes");
+sizesEl.innerHTML = SIZES.map((n) => `<button data-n="${n}">${n}</button>`).join("");
+const sizeBtns = [...sizesEl.querySelectorAll("button")];
+const markSize = () => sizeBtns.forEach((b) => b.classList.toggle("on", Number(b.dataset.n) === state.n));
+sizeBtns.forEach((b) => b.onclick = () => { state.n = Number(b.dataset.n); markSize(); regrow(); });
+markSize();
+
+function regrow() { syncUrl(); mesh.update(state.wiki, state.rank, state.n); }
+
+/* legend — live readout of what the mesh has found so far */
+const legendEl = document.getElementById("legend");
+const LOOP_COLS = [hueAt(0), hueAt(0.55), hueAt(1), hueAt(0.8)];
+setInterval(() => {
+  const s = mesh.stats();
+  const loops = mesh.loops();
+  const head = s.growing ? `growing — ${s.nodes}/${s.target} articles…` : `${s.nodes} articles`;
+  legendEl.innerHTML = head + " · " +
+    loops.slice(0, 4).map((l, i) => `<span><span class="sw" style="background:${LOOP_COLS[i] ?? "#93897a"}"></span>${esc(l.cycle.join(" → "))} · ${l.pct}%</span>`).join(" ") +
+    (loops.length ? `<span><span class="sw" style="background:#93897a"></span>dead ends</span>` : "");
+}, 700);
+
+/* fullscreen — the field, edge to edge, browser chrome and all */
+document.getElementById("fsBtn").onclick = () => {
+  if (document.fullscreenElement) document.exitFullscreen();
+  else stage.requestFullscreen?.();
+};
+
+/* boot: disable wikis without data, fall back if the requested one is missing */
+(async () => {
+  try {
+    const list = await api("/api/wikis");
+    const avail = new Set(list.filter((w) => w.available).map((w) => w.id));
+    wikiBtns.forEach((b) => { if (!avail.has(b.dataset.wiki)) { b.disabled = true; b.title = "not fetched yet"; } });
+    if (!avail.has(state.wiki) && avail.size) { state.wiki = [...avail][0]; markWiki(); }
+  } catch { /* availability flags are a nicety, not a requirement */ }
+  if (await loadSummary()) regrow();
+})();
+</script>
+</body>
+</html>

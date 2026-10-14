@@ -32,7 +32,7 @@ npm run build:static
 npm run serve:static        # → http://localhost:8080
 
 # the lab dashboard + article over the live analysis output
-npm run lab                 # → http://localhost:8787  (/ = article, /lab = dashboard)
+npm run lab                 # → http://localhost:8787  (/ = article, /lab = dashboard, /mesh = full-page mesh field)
 ```
 
 The article (`scripts/article.html`) is fully static. It reads, per wiki, `titles.json`, one

@@ -16,6 +16,7 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 const PORT = Number(process.env.PORT ?? 8787);
 const ARTICLE = path.join(ROOT, "scripts", "article.html");
 const DASHBOARD = path.join(ROOT, "scripts", "lab-dashboard.html");
+const MESHPAGE = path.join(ROOT, "scripts", "meshfield.html");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
 
 // small LRU cache for the expensive viz endpoints (/api/graph, /api/mesh) —
@@ -303,6 +304,15 @@ const server = http.createServer(async (req, res) => {
       res.end(raw);
       return;
     }
+    if (url.pathname === "/mesh" || url.pathname === "/mesh/" || url.pathname === "/meshfield") {
+      // the constellation as its own page — the field fills the whole viewport
+      const raw = readSafe(MESHPAGE) ?? "";
+      const wikiJson = JSON.stringify(wikis.map((w) => ({ id: w.id, name: w.name, description: w.description })));
+      const html = raw.replace("__WIKI_OPTIONS__", wikiJson);
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end(html ?? "meshfield html missing");
+      return;
+    }
     if (url.pathname === "/api/wikis") {
       json(res, 200, wikis.map((w) => ({
         id: w.id, name: w.name, origin: w.origin,
@@ -531,6 +541,7 @@ server.listen(PORT, () => {
   console.log(`Link Lab → http://localhost:${PORT}`);
   console.log(`  article view  → http://localhost:${PORT}/       (scrollytelling · split / full-width)`);
   console.log(`  lab dashboard → http://localhost:${PORT}/lab`);
+  console.log(`  mesh field    → http://localhost:${PORT}/mesh    (the constellation, full-page)`);
   console.log(`  wikis configured: ${wikis.length}, with data: ${available.length} (${available.map((w) => w.id).join(", ") || "none"})`);
 });
 

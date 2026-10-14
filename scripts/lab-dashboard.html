@@ -366,7 +366,7 @@
 </div>
 
 <section class="graphscene" id="graphScene" style="display:none">
-  <div class="scene-label"><span>The constellation — loops of the first-link network</span><span class="idx">05</span></div>
+  <div class="scene-label"><span>The constellation — loops of the first-link network · <a id="meshLink" href="/mesh" style="color:var(--cy);text-decoration:underline;text-underline-offset:3px;">open full-page ↗</a></span><span class="idx">05</span></div>
   <div class="graphwrap" id="graphWrap">
     <canvas id="meshCanvas" style="width:100%;height:min(78vh,820px);display:block;"></canvas>
     <div class="ginfo" id="ginfo">hover a node to read its article · scroll to zoom · drag to pan</div>
@@ -694,6 +694,13 @@ document.querySelectorAll("#detailCtl button").forEach((b) => b.onclick = () => 
   graphLoaded = false;
   if (state.tab === "graph") loadGraph();
 });
+
+// open the mesh field as its own page, carrying the current view over
+document.getElementById("meshLink").onclick = (e) => {
+  e.preventDefault();
+  const N = [80, 150, 250, 400, 600][(state.detail ?? 2) - 1] ?? 150;
+  location.href = `/mesh?wiki=${state.wiki}&rank=${state.rank}&n=${N}`;
+};
 
 /* ==================================================================== *
  * constellation — deterministic orbital layout + comet pulse on hover
