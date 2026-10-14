@@ -187,6 +187,11 @@ async function main() {
       ...(randomSeeds ? { randomSeeds } : {}),
     };
     fs.writeFileSync(path.join(OUT_DIR, `stats-r${key}.json`), JSON.stringify(stats, null, 1));
+    // compact successor table: the front end walks chains itself from this
+    // (succ[i] = node index of the chosen link or -1; term codes in lib/walk.ts)
+    fs.writeFileSync(path.join(OUT_DIR, `succ-r${key}.json`), JSON.stringify({
+      rank: rankKey, succ: Array.from(succ), term: Array.from(term),
+    }));
     fs.writeFileSync(path.join(OUT_DIR, `distances-r${key}.csv`),
       "page_id,title,attractor,distance,fate\n" + Array.from({ length: Math.min(N, 50000) }, (_, i) => {
         const fate = attractor[i] === DEAD ? "dead-end" : attractor[i] === -1 ? "unvisited" : "cycle";
@@ -207,6 +212,8 @@ async function main() {
     console.log(`  rank=${rankKey}: ${stats.converge.pct}% converge, top attractor ${cycles[0]?.pct ?? 0}%`);
   }
 
+  // node titles in ids order — the index space shared by every succ-r*.json
+  fs.writeFileSync(path.join(OUT_DIR, "titles.json"), JSON.stringify(titles));
   fs.writeFileSync(path.join(OUT_DIR, "summary.json"),
     JSON.stringify({ wiki: wiki.id, generatedAt: new Date().toISOString(), ranks: summary }, null, 1));
   console.log(`[${wiki.id}] done in ${Math.round((Date.now() - t0) / 1000)}s`);
