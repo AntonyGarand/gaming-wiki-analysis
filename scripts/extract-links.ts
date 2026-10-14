@@ -28,7 +28,14 @@ const LINKS = createClient({ url: `file:${path.join(OUT_DIR, "links.sqlite")}` }
 
 // --- wikitext parsing (same logic as the OSRS analysis, namespace-agnostic) ---
 const INTERWIKI = new Set(["w","wikipedia","wp","wiktionary","wikt","m","mw","meta",
-  "commons","s","b","q","nov","osw","rsw","zh","de","fr","es","pt","nl","lv","fi","pl","tr"]);
+  "commons","s","b","q","nov","osw","rsw"]);
+// language interwiki prefixes: [[cs:Zbraně]], [[ru:Оружие]], [[pt-br:Armas]] …
+// these are translations, not walk targets (README: interwiki links excluded)
+const LANG_PREFIX_RE = /^[a-z]{2,3}(?:-[a-z]{2,4})?$/;
+function isInterwikiPrefix(prefix: string): boolean {
+  const p = prefix.toLowerCase().trim();
+  return INTERWIKI.has(p) || LANG_PREFIX_RE.test(p);
+}
 
 let SKIP_NS: Set<string>;
 {
@@ -52,10 +59,15 @@ function stripTemplates(text: string): string {
 }
 
 // --- link-rendering templates: {{plink|Item}} and friends render as real
-// links on the page, so their first positional parameter counts as one ---
+// links on the page, so their first positional parameter counts as one.
+// The Weird Gloop set is the default (those wikis share it); wikis.json can
+// add per-wiki templates (e.g. Minecraft's BlockLink/ItemLink family).
 const LINK_TEMPLATES = new Set([
   "plink", "plinkt", "plinkp", "ilink", "scp", "gep", "reicon", "costline", "icon",
   "blocklink", "itemlink",
+  ...(Array.isArray((wiki as any).linkTemplates)
+    ? (wiki as any).linkTemplates.map((s: string) => String(s).toLowerCase())
+    : []),
 ]);
 function rewriteLinkTemplates(text: string): string {
   let prev: string;
@@ -158,7 +170,7 @@ async function parseLinks(wikitext: string, fallback = false): Promise<ParsedLin
     const target = normKey(s.raw);
     if (!target) continue;
     const m = target.match(/^:?\s*([^:]+):/);
-    if (m && SKIP_NS.has(m[1].toLowerCase().trim())) continue;
+    if (m && (SKIP_NS.has(m[1].toLowerCase().trim()) || isInterwikiPrefix(m[1]))) continue;
     masked += text.slice(last, s.start) + `\u0000${candidates.length}\u0000`;
     last = s.end;
     candidates.push({ target, start: s.start, end: s.end });
@@ -294,7 +306,13 @@ let totalPages = 0, totalLinks = 0, skipped = 0, reExtracted = 0, newPages = 0;
       }
 
       let links = await parseLinks(String(r.text ?? ""));
-      if (links.length === 0) links = await parseLinks(String(r.text ?? ""), true); // greedy rescue for table-built pages
+      // greedy rescue for table/template-built pages: if the strict parse
+      // yields no link the walk could actually take (non-parenthesised,
+      // non-italicised, resolvable), keep everything that renders — the
+      // page's real links live in tables (e.g. Tarkov's category listings)
+      if (!links.some((l) => !l.paren && !l.italic && resolve(l.target) !== null)) {
+        links = await parseLinks(String(r.text ?? ""), true);
+      }
       for (const l of links) {
         totalLinks++;
         linkBatch.push({

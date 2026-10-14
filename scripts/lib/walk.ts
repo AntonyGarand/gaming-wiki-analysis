@@ -59,12 +59,30 @@ const YEAR_RE = /^(1[0-9]{3}|20[0-9]{2})$/; // bare years are update timelines
 
 async function buildCorpus(wikiId: string): Promise<Corpus> {
   const wikiDir = path.join(ROOT, "output", wikiId);
+  const wikiCfg = WIKIS.find((w) => w.id === wikiId) ?? {};
+  // optional per-wiki title exclusion (e.g. Factorio's /fr /zh translation
+  // subpages, Vampire Survivors' Updates/ posts): excluded pages drop out of
+  // the corpus entirely — not counted in N, not valid targets.
+  // accepts "/pattern/flags" (JS literal style) or a bare pattern
+  const excludeSrc = (wikiCfg as any).excludeTitle;
+  const exclude = (() => {
+    if (typeof excludeSrc !== "string" || !excludeSrc) return null;
+    const lit = excludeSrc.match(/^\/(.*)\/([a-z]*)$/s);
+    try { return lit ? new RegExp(lit[1], lit[2]) : new RegExp(excludeSrc); } catch { return null; }
+  })();
   const db = createClient({ url: `file:${path.join(wikiDir, "links.sqlite")}` });
   try {
     const pagesRes = await db.execute("SELECT id, title FROM page ORDER BY id");
-    const ids = pagesRes.rows.map((r) => Number(r.id));
-    const titles = pagesRes.rows.map((r) => String(r.title));
-    const idToIdx = new Map<number, number>(ids.map((id, i) => [id, i]));
+    const ids: number[] = [];
+    const titles: string[] = [];
+    const idToIdx = new Map<number, number>();
+    for (const r of pagesRes.rows) {
+      const title = String(r.title);
+      if (exclude?.test(title)) continue;
+      idToIdx.set(Number(r.id), ids.length);
+      ids.push(Number(r.id));
+      titles.push(title);
+    }
     const N = ids.length;
 
     const linksByPage = new Map<number, CorpusLink[]>();
@@ -130,11 +148,15 @@ export function rngFor(pageId: number, seed = 0): number {
 /**
  * Build the successor table for one rank.
  *
- * Every rank is strict: links inside parentheses or italics never count, and
- * links landing on skipped pages (disambiguation, dates) never count.
+ * Every rank is strict: links inside parentheses or italics never count,
+ * links landing on skipped pages (disambiguation, dates) never count, and
+ * self-links are removed before ranking (MediaWiki renders them as bold
+ * text, not links). A link whose target does not resolve is a red link:
+ * there is nothing to click, so the walk takes the next eligible link
+ * instead of dying.
  *
  * term[i]: 0 = walk continues, 1 = no eligible links, 2 = fewer than N
- * eligible links, 3 = the chosen link does not resolve.
+ * eligible links, 3 = every candidate was unresolvable (all red links).
  */
 export function successorsFor(corpus: Corpus, rank: string, seed = 0): { succ: Int32Array; term: Uint8Array } {
   const N = corpus.ids.length;
@@ -144,8 +166,13 @@ export function successorsFor(corpus: Corpus, rank: string, seed = 0): { succ: I
   for (let i = 0; i < N; i++) {
     const links = corpus.linksByPage.get(corpus.ids[i]);
     if (!links || links.length === 0) { term[i] = TERM.NO_LINKS; continue; }
-    const eligible = links.filter((l) => !l.paren && !l.italic && !(l.target >= 0 && corpus.skipTargets.has(l.target)));
-    if (eligible.length === 0) { term[i] = TERM.NO_LINKS; continue; }
+    // candidates: strict filters; self-links are not links (bold text)
+    const candidates = links.filter((l) => !l.paren && !l.italic && l.target !== i
+      && !(l.target >= 0 && corpus.skipTargets.has(l.target)));
+    if (candidates.length === 0) { term[i] = TERM.NO_LINKS; continue; }
+    // red links are skipped, not terminal: only resolvable links are eligible
+    const eligible = candidates.filter((l) => l.target >= 0);
+    if (eligible.length === 0) { term[i] = TERM.UNRESOLVED; continue; }
     let chosen = -1;
     if (rank === "last") {
       chosen = eligible[eligible.length - 1].target;
@@ -162,9 +189,11 @@ export function successorsFor(corpus: Corpus, rank: string, seed = 0): { succ: I
   return { succ, term };
 }
 
-/** plain (non-parenthesised, non-italicised) link count, used in reason strings */
-export function plainLinkCount(corpus: Corpus, i: number): number {
-  return (corpus.linksByPage.get(corpus.ids[i]) ?? []).filter((l) => !l.paren && !l.italic).length;
+/** eligible-link count (resolvable, non-parenthesised, non-italic, not skipped, not self) */
+export function eligibleLinkCount(corpus: Corpus, i: number): number {
+  return (corpus.linksByPage.get(corpus.ids[i]) ?? []).filter((l) =>
+    !l.paren && !l.italic && l.target >= 0 && l.target !== i
+    && !corpus.skipTargets.has(l.target)).length;
 }
 
 // ---------------------------------------------------------------------------
