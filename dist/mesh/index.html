@@ -198,7 +198,10 @@ const loopName = (nodes) => { const s = nodes.join(" → "); return s.length > 4
  *         tables under data/{wiki}/, and the graph is built client-side
  *         exactly like the article's hero and drainage map.
  * ==================================================================== */
-let LIVE = false;
+// stamped by the lab server: it swaps the marker on the next line for
+// LIVE = true as it serves this page; static builds keep it inert and
+// never probe /api
+let LIVE = false; /*__LAB__*/
 let DATA = "data/"; // "../data/" when the page is dist/mesh/index.html
 const fileCache = new Map(); // resolved url -> Promise<parsed json>
 function fetchJson(url) {
@@ -411,9 +414,11 @@ async function loadField() {
   legendEl.innerHTML = idleLegend;
 }
 
-/* boot: prefer the live lab server, fall back to the static data files */
+/* boot: lab-served pages arrive pre-stamped LIVE; static builds skip the
+   /api probe entirely — github pages never sees a request for it */
 (async () => {
   try {
+    if (!LIVE) throw new Error("static build"); // no lab server to ask
     const list = await liveFetch("/api/wikis"); // lab server present → live mode
     LIVE = true;
     const avail = new Set();

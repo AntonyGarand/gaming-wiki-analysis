@@ -314,7 +314,7 @@ const server = http.createServer(async (req, res) => {
       // the drainage map as its own page — the field fills the whole viewport
       const raw = readSafe(FIELDPAGE) ?? "";
       const wikiJson = JSON.stringify(wikis.map((w) => ({ id: w.id, name: w.name, description: w.description })));
-      const html = raw.replace("__WIKI_OPTIONS__", wikiJson);
+      const html = raw.replace("__WIKI_OPTIONS__", wikiJson).replace("/*__LAB__*/", "LIVE = true;");
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       res.end(html ?? "field html missing");
       return;
