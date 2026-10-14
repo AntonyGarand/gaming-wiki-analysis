@@ -15,7 +15,7 @@
 import { createClient, type Client } from "@libsql/client";
 import * as fs from "fs";
 import * as path from "path";
-import { politeFetch, makeUA } from "./lib/http.js";
+import { politeFetch, makeUA, withBusyRetry } from "./lib/http.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
@@ -84,10 +84,10 @@ async function fetchWiki(wiki: typeof wikis[0]): Promise<void> {
   log(`${newPages.length} new pages to insert`);
   for (let i = 0; i < newPages.length; i += 250) {
     const chunk = newPages.slice(i, i + 250);
-    await db.batch(chunk.map((p) => ({
+    await withBusyRetry(() => db.batch(chunk.map((p) => ({
       sql: "INSERT OR IGNORE INTO page (id, title, namespace) VALUES (?, ?, 0)",
       args: [p.pageid, p.title],
-    })) as never);
+    })) as never));
   }
 
   // 4. fetch content for pages with NULL text
@@ -110,7 +110,7 @@ async function fetchWiki(wiki: typeof wikis[0]): Promise<void> {
         updates.push({ sql: "UPDATE page SET text = ?, revision_id = ? WHERE id = ?", args: [content, revid, page.pageid] });
       } else failed++;
     }
-    for (let u = 0; u < updates.length; u += 50) await db.batch(updates.slice(u, u + 50) as never);
+    for (let u = 0; u < updates.length; u += 50) await withBusyRetry(() => db.batch(updates.slice(u, u + 50) as never));
     fetched += chunk.length;
     if (fetched % 1000 < 50) log(`  ${fetched} / ${missingIds.length} fetched (failed: ${failed})`);
   }
@@ -158,7 +158,7 @@ async function fetchWiki(wiki: typeof wikis[0]): Promise<void> {
         updates.push({ sql: "UPDATE page SET aliases = ? WHERE id = ?", args: [JSON.stringify(merged), pageId] });
       }
     }
-    for (let u = 0; u < updates.length; u += 50) await db.batch(updates.slice(u, u + 50) as never);
+    for (let u = 0; u < updates.length; u += 50) await withBusyRetry(() => db.batch(updates.slice(u, u + 50) as never));
     if ((i / 50) % 20 === 19) log(`  ${i + chunk.length} / ${needAliases.length} checked (${aliasCount} with aliases)`);
   }
   log(`aliases: ${aliasCount} pages gained aliases`);
