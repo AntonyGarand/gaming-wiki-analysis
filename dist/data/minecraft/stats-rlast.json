@@ -3,11 +3,11 @@
  "rank": "last",
  "nodes": 14078,
  "converge": {
-  "articles": 7990,
-  "pct": 56.76,
-  "deadEnd": 6088,
-  "deadEndPct": 43.24,
-  "noLinks": 4873,
+  "articles": 7992,
+  "pct": 56.77,
+  "deadEnd": 6086,
+  "deadEndPct": 43.23,
+  "noLinks": 4871,
   "tooFewLinks": 0,
   "unresolvable": 231
  },
@@ -20,7 +20,7 @@
  "histogram": {
   "0": 323,
   "1": 796,
-  "2": 804,
+  "2": 805,
   "3": 788,
   "4": 644,
   "5": 502,
@@ -35,7 +35,7 @@
   "14": 166,
   "15": 228,
   "16": 283,
-  "17": 260,
+  "17": 261,
   "18": 171,
   "19": 141,
   "20": 98,
@@ -50,29 +50,29 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5104,
+   "0": 5102,
    "1": 1380,
    "2": 967,
-   "3": 720,
+   "3": 721,
    "4": 497,
    "5": 447,
    "6": 337,
    "7": 292,
    "8": 308,
    "9": 270,
-   "10": 3756
+   "10": 3757
   },
   "atLeast": {
-   "1": 63.7,
-   "2": 53.9,
+   "1": 63.8,
+   "2": 54,
    "3": 47.1,
    "5": 38.4
   }
  },
  "concentration": {
-  "top1Pct": 26.57,
-  "top3Pct": 36.17,
-  "top10Pct": 46.73,
+  "top1Pct": 26.58,
+  "top3Pct": 36.18,
+  "top10Pct": 46.75,
   "cycleCount": 152,
   "entropyBits": 3.59
  },
@@ -84,7 +84,7 @@
    "List of Minecraft.net articles"
   ],
   "size": 2,
-  "basin": 3740
+  "basin": 3742
  },
  "topAttractors": [
   {
@@ -92,8 +92,8 @@
     "Minecraft.net",
     "List of Minecraft.net articles"
    ],
-   "basin": 3740,
-   "pct": 26.57
+   "basin": 3742,
+   "pct": 26.58
   },
   {
    "cycle": [
@@ -477,39 +477,39 @@
  "topThroughTraffic": [
   {
    "title": "Minecraft.net",
-   "chains": 3740
+   "chains": 3742
   },
   {
    "title": "List of Minecraft.net articles",
-   "chains": 3740
+   "chains": 3742
   },
   {
    "title": "Skin",
-   "chains": 2079
+   "chains": 2080
   },
   {
    "title": "Player",
-   "chains": 2059
+   "chains": 2060
   },
   {
    "title": "Renewable resource",
-   "chains": 1813
+   "chains": 1814
   },
   {
    "title": "Bartering",
-   "chains": 1812
+   "chains": 1813
   },
   {
    "title": "Piglin",
-   "chains": 1560
+   "chains": 1561
   },
   {
    "title": "Zombified Piglin",
-   "chains": 1531
+   "chains": 1532
   },
   {
    "title": "Bedrock Edition level format/Entity format",
-   "chains": 1473
+   "chains": 1474
   },
   {
    "title": "Magma Cube",

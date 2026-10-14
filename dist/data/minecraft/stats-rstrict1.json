@@ -3,11 +3,11 @@
  "rank": "strict1",
  "nodes": 14078,
  "converge": {
-  "articles": 8819,
-  "pct": 62.64,
-  "deadEnd": 5259,
-  "deadEndPct": 37.36,
-  "noLinks": 4873,
+  "articles": 8821,
+  "pct": 62.66,
+  "deadEnd": 5257,
+  "deadEndPct": 37.34,
+  "noLinks": 4871,
   "tooFewLinks": 0,
   "unresolvable": 231
  },
@@ -20,7 +20,7 @@
  "histogram": {
   "0": 177,
   "1": 1252,
-  "2": 1485,
+  "2": 1487,
   "3": 1541,
   "4": 1424,
   "5": 972,
@@ -36,29 +36,29 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5104,
+   "0": 5102,
    "1": 1380,
    "2": 967,
-   "3": 720,
+   "3": 721,
    "4": 497,
    "5": 447,
    "6": 337,
    "7": 292,
    "8": 308,
    "9": 270,
-   "10": 3756
+   "10": 3757
   },
   "atLeast": {
-   "1": 63.7,
-   "2": 53.9,
+   "1": 63.8,
+   "2": 54,
    "3": 47.1,
    "5": 38.4
   }
  },
  "concentration": {
   "top1Pct": 35.84,
-  "top3Pct": 50.55,
-  "top10Pct": 55.89,
+  "top3Pct": 50.57,
+  "top10Pct": 55.9,
   "cycleCount": 86,
   "entropyBits": 2.65
  },
@@ -88,8 +88,8 @@
     "Xbox (division)",
     "Microsoft"
    ],
-   "basin": 1186,
-   "pct": 8.42
+   "basin": 1188,
+   "pct": 8.44
   },
   {
    "cycle": [
@@ -474,19 +474,19 @@
   },
   {
    "title": "Mojang Studios",
-   "chains": 1186
+   "chains": 1188
   },
   {
    "title": "Microsoft",
-   "chains": 1186
+   "chains": 1188
   },
   {
    "title": "Xbox Game Studios",
-   "chains": 1186
+   "chains": 1188
   },
   {
    "title": "Xbox (division)",
-   "chains": 1186
+   "chains": 1188
   },
   {
    "title": "Bats and Pots",

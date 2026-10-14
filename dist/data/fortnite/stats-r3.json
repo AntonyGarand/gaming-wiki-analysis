@@ -3,40 +3,40 @@
  "rank": "3",
  "nodes": 35312,
  "converge": {
-  "articles": 15614,
-  "pct": 44.22,
-  "deadEnd": 19698,
-  "deadEndPct": 55.78,
-  "noLinks": 2240,
-  "tooFewLinks": 8662,
-  "unresolvable": 17
+  "articles": 15689,
+  "pct": 44.43,
+  "deadEnd": 19623,
+  "deadEndPct": 55.57,
+  "noLinks": 2163,
+  "tooFewLinks": 8689,
+  "unresolvable": 9
  },
  "hopStats": {
-  "mean": 3.59,
+  "mean": 3.61,
   "median": 2,
   "p90": 12,
   "max": 32
  },
  "histogram": {
-  "0": 2149,
-  "1": 5199,
-  "2": 2467,
-  "3": 1593,
+  "0": 2161,
+  "1": 5216,
+  "2": 2477,
+  "3": 1599,
   "4": 1039,
-  "5": 730,
-  "6": 207,
+  "5": 732,
+  "6": 211,
   "7": 187,
   "8": 147,
-  "9": 127,
+  "9": 128,
   "10": 52,
   "11": 130,
   "12": 370,
-  "13": 366,
-  "14": 115,
-  "15": 114,
-  "16": 76,
-  "17": 72,
-  "18": 12,
+  "13": 370,
+  "14": 116,
+  "15": 118,
+  "16": 77,
+  "17": 73,
+  "18": 14,
   "19": 16,
   "20": 29,
   "21": 37,
@@ -47,48 +47,48 @@
   "26": 47,
   "27": 42,
   "28": 23,
-  "29": 20,
+  "29": 29,
   "30": 9,
-  "31": 6,
+  "31": 7,
   "32": 1
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2257,
-   "1": 1264,
-   "2": 7398,
-   "3": 9015,
-   "4": 4347,
-   "5": 2402,
-   "6": 1375,
-   "7": 876,
-   "8": 630,
-   "9": 510,
-   "10": 5238
+   "0": 2172,
+   "1": 1279,
+   "2": 7410,
+   "3": 9022,
+   "4": 4355,
+   "5": 2411,
+   "6": 1380,
+   "7": 882,
+   "8": 637,
+   "9": 512,
+   "10": 5252
   },
   "atLeast": {
-   "1": 93.6,
-   "2": 90,
-   "3": 69.1,
-   "5": 31.2
+   "1": 93.8,
+   "2": 90.2,
+   "3": 69.2,
+   "5": 31.4
   }
  },
  "concentration": {
-  "top1Pct": 15.82,
-  "top3Pct": 26.36,
-  "top10Pct": 29.01,
-  "cycleCount": 1072,
-  "entropyBits": 5.47
+  "top1Pct": 15.84,
+  "top3Pct": 26.46,
+  "top10Pct": 29.11,
+  "cycleCount": 1078,
+  "entropyBits": 5.48
  },
- "components": 1073,
- "cycleCount": 1072,
+ "components": 1079,
+ "cycleCount": 1078,
  "largestCycle": {
   "members": [
    "Battle Pass",
    "V-Bucks"
   ],
   "size": 2,
-  "basin": 5588
+  "basin": 5595
  },
  "topAttractors": [
   {
@@ -96,16 +96,16 @@
     "Battle Pass",
     "V-Bucks"
    ],
-   "basin": 5588,
-   "pct": 15.82
+   "basin": 5595,
+   "pct": 15.84
   },
   {
    "cycle": [
     "Solo",
     "Rebooting"
    ],
-   "basin": 2755,
-   "pct": 7.8
+   "basin": 2784,
+   "pct": 7.88
   },
   {
    "cycle": [
@@ -152,7 +152,7 @@
     "Inferno Skeleton Balvin Bundle",
     "Inferno Skeleton Balvin"
    ],
-   "basin": 105,
+   "basin": 106,
    "pct": 0.3
   },
   {
@@ -267,7 +267,7 @@
   },
   {
    "title": "Venture XP",
-   "chains": 218,
+   "chains": 219,
    "pct": 0.62,
    "reason": "only 1 eligible links"
   },
@@ -279,8 +279,8 @@
   },
   {
    "title": "Danger Dux Bundle",
-   "chains": 165,
-   "pct": 0.47,
+   "chains": 169,
+   "pct": 0.48,
    "reason": "only 2 eligible links"
   },
   {
@@ -407,16 +407,16 @@
    "firstLinks": 96
   },
   {
+   "title": "Canny Valley",
+   "firstLinks": 79
+  },
+  {
    "title": "Unnamed Locations",
    "firstLinks": 79
   },
   {
    "title": "Golden Coast",
    "firstLinks": 79
-  },
-  {
-   "title": "Canny Valley",
-   "firstLinks": 78
   },
   {
    "title": "Back Blings",
@@ -470,67 +470,67 @@
  "topThroughTraffic": [
   {
    "title": "V-Bucks",
-   "chains": 5588
+   "chains": 5595
   },
   {
    "title": "Battle Pass",
-   "chains": 5588
+   "chains": 5595
   },
   {
    "title": "Solo",
-   "chains": 2755
+   "chains": 2784
   },
   {
    "title": "Rebooting",
-   "chains": 2755
+   "chains": 2784
   },
   {
    "title": "Fortnite: Battle Royale",
-   "chains": 2740
+   "chains": 2769
   },
   {
    "title": "Traps (Battle Royale)",
-   "chains": 2008
+   "chains": 2035
   },
   {
    "title": "Materials (Save the World)",
-   "chains": 1998
+   "chains": 2025
   },
   {
    "title": "Crafting (Save the World)",
-   "chains": 1995
+   "chains": 2022
   },
   {
    "title": "Copper Ore",
-   "chains": 1948
+   "chains": 1972
   },
   {
    "title": "Stonewood",
-   "chains": 1947
+   "chains": 1971
   },
   {
    "title": "Plankerton",
-   "chains": 1883
+   "chains": 1907
   },
   {
    "title": "Storm Chest",
-   "chains": 1710
+   "chains": 1733
   },
   {
    "title": "Husk Monsters",
-   "chains": 1709
+   "chains": 1732
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 1702
+   "chains": 1725
   },
   {
    "title": "Fortnite Crew",
-   "chains": 1403
+   "chains": 1404
   },
   {
    "title": "Music Pass",
-   "chains": 1169
+   "chains": 1170
   },
   {
    "title": "Fortnite",
@@ -542,19 +542,19 @@
   },
   {
    "title": "Building",
-   "chains": 637
-  },
-  {
-   "title": "XP",
-   "chains": 634
+   "chains": 659
   },
   {
    "title": "Constructors",
-   "chains": 618
+   "chains": 640
+  },
+  {
+   "title": "XP",
+   "chains": 635
   },
   {
    "title": "Heroes",
-   "chains": 605
+   "chains": 623
   },
   {
    "title": "Outfits",
@@ -562,27 +562,27 @@
   },
   {
    "title": "Superchargers",
-   "chains": 509
+   "chains": 520
   },
   {
    "title": "Update v40.20",
-   "chains": 504
+   "chains": 515
   },
   {
    "title": "Fortnite: Ballistic",
-   "chains": 496
+   "chains": 507
   },
   {
    "title": "Full List of Items",
-   "chains": 466
+   "chains": 477
   },
   {
    "title": "Spy Games",
-   "chains": 436
+   "chains": 446
   },
   {
    "title": "Shotguns",
-   "chains": 411
+   "chains": 421
   },
   {
    "title": "Soaring 50s",

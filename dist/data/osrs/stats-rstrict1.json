@@ -3,11 +3,11 @@
  "rank": "strict1",
  "nodes": 36164,
  "converge": {
-  "articles": 35271,
-  "pct": 97.53,
-  "deadEnd": 893,
-  "deadEndPct": 2.47,
-  "noLinks": 439,
+  "articles": 35275,
+  "pct": 97.54,
+  "deadEnd": 889,
+  "deadEndPct": 2.46,
+  "noLinks": 435,
   "tooFewLinks": 0,
   "unresolvable": 1
  },
@@ -19,18 +19,18 @@
  },
  "histogram": {
   "0": 340,
-  "1": 1515,
+  "1": 1516,
   "2": 2806,
-  "3": 3883,
+  "3": 3884,
   "4": 4259,
   "5": 4723,
-  "6": 4093,
+  "6": 4094,
   "7": 2923,
   "8": 1615,
   "9": 1411,
   "10": 1904,
   "11": 2197,
-  "12": 1021,
+  "12": 1022,
   "13": 1493,
   "14": 713,
   "15": 268,
@@ -40,7 +40,7 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 440,
+   "0": 436,
    "1": 1317,
    "2": 2978,
    "3": 4691,
@@ -50,19 +50,19 @@
    "7": 2267,
    "8": 1834,
    "9": 1584,
-   "10": 11467
+   "10": 11471
   },
   "atLeast": {
    "1": 98.8,
-   "2": 95.1,
+   "2": 95.2,
    "3": 86.9,
-   "5": 64.2
+   "5": 64.3
   }
  },
  "concentration": {
   "top1Pct": 33.88,
-  "top3Pct": 83.23,
-  "top10Pct": 94.26,
+  "top3Pct": 83.24,
+  "top10Pct": 94.27,
   "cycleCount": 167,
   "entropyBits": 2.48
  },
@@ -75,7 +75,7 @@
    "Bestiary"
   ],
   "size": 3,
-  "basin": 12251
+  "basin": 12253
  },
  "topAttractors": [
   {
@@ -84,7 +84,7 @@
     "Combat",
     "Bestiary"
    ],
-   "basin": 12251,
+   "basin": 12253,
    "pct": 33.88
   },
   {
@@ -93,7 +93,7 @@
     "Guthix",
     "Gods"
    ],
-   "basin": 11992,
+   "basin": 11993,
    "pct": 33.16
   },
   {
@@ -125,7 +125,7 @@
     "Jagex",
     "Andrew Gower"
    ],
-   "basin": 689,
+   "basin": 690,
    "pct": 1.91
   },
   {
@@ -460,51 +460,51 @@
  "topThroughTraffic": [
   {
    "title": "Combat",
-   "chains": 12251
+   "chains": 12253
   },
   {
    "title": "Bestiary",
-   "chains": 12251
+   "chains": 12253
   },
   {
    "title": "Monster",
-   "chains": 12251
+   "chains": 12253
   },
   {
    "title": "Gielinor",
-   "chains": 11992
+   "chains": 11993
   },
   {
    "title": "Guthix",
-   "chains": 11992
+   "chains": 11993
   },
   {
    "title": "Gods",
-   "chains": 11992
+   "chains": 11993
   },
   {
    "title": "Boss",
-   "chains": 9923
+   "chains": 9925
   },
   {
    "title": "Strongest monster",
-   "chains": 9632
+   "chains": 9634
   },
   {
    "title": "Abyssal demon",
-   "chains": 9631
+   "chains": 9633
   },
   {
    "title": "List of races",
-   "chains": 9616
+   "chains": 9618
   },
   {
    "title": "Human",
-   "chains": 9373
+   "chains": 9375
   },
   {
    "title": "Player character",
-   "chains": 8862
+   "chains": 8863
   },
   {
    "title": "Coins",
@@ -528,7 +528,7 @@
   },
   {
    "title": "Skills",
-   "chains": 5069
+   "chains": 5070
   },
   {
    "title": "Kingdom",
@@ -544,7 +544,7 @@
   },
   {
    "title": "Experience",
-   "chains": 2119
+   "chains": 2120
   },
   {
    "title": "Attack",
@@ -552,7 +552,7 @@
   },
   {
    "title": "Minigames",
-   "chains": 2037
+   "chains": 2038
   },
   {
    "title": "Icon",

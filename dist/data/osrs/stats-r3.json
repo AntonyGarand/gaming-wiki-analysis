@@ -3,11 +3,11 @@
  "rank": "3",
  "nodes": 36164,
  "converge": {
-  "articles": 27038,
-  "pct": 74.76,
-  "deadEnd": 9126,
-  "deadEndPct": 25.24,
-  "noLinks": 439,
+  "articles": 27042,
+  "pct": 74.78,
+  "deadEnd": 9122,
+  "deadEndPct": 25.22,
+  "noLinks": 435,
   "tooFewLinks": 4295,
   "unresolvable": 1
  },
@@ -25,11 +25,11 @@
   "4": 2275,
   "5": 1814,
   "6": 1591,
-  "7": 1832,
+  "7": 1833,
   "8": 1510,
-  "9": 2064,
-  "10": 1962,
-  "11": 1062,
+  "9": 2065,
+  "10": 1963,
+  "11": 1063,
   "12": 1697,
   "13": 616,
   "14": 509,
@@ -51,7 +51,7 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 440,
+   "0": 436,
    "1": 1317,
    "2": 2978,
    "3": 4691,
@@ -61,19 +61,19 @@
    "7": 2267,
    "8": 1834,
    "9": 1584,
-   "10": 11467
+   "10": 11471
   },
   "atLeast": {
    "1": 98.8,
-   "2": 95.1,
+   "2": 95.2,
    "3": 86.9,
-   "5": 64.2
+   "5": 64.3
   }
  },
  "concentration": {
-  "top1Pct": 22.46,
-  "top3Pct": 46.58,
-  "top10Pct": 60.55,
+  "top1Pct": 22.47,
+  "top3Pct": 46.59,
+  "top10Pct": 60.56,
   "cycleCount": 565,
   "entropyBits": 4.16
  },
@@ -85,7 +85,7 @@
    "Book of Knowledge"
   ],
   "size": 2,
-  "basin": 8122
+  "basin": 8125
  },
  "topAttractors": [
   {
@@ -93,8 +93,8 @@
     "Experience",
     "Book of Knowledge"
    ],
-   "basin": 8122,
-   "pct": 22.46
+   "basin": 8125,
+   "pct": 22.47
   },
   {
    "cycle": [
@@ -113,8 +113,8 @@
     "Western Ocean",
     "Kebos Lowlands"
    ],
-   "basin": 1864,
-   "pct": 5.15
+   "basin": 1865,
+   "pct": 5.16
   },
   {
    "cycle": [
@@ -388,7 +388,7 @@
   },
   {
    "title": "Boat",
-   "firstLinks": 158
+   "firstLinks": 159
   },
   {
    "title": "Examine",
@@ -482,15 +482,15 @@
  "topThroughTraffic": [
   {
    "title": "Experience",
-   "chains": 8122
+   "chains": 8125
   },
   {
    "title": "Book of Knowledge",
-   "chains": 8122
+   "chains": 8125
   },
   {
    "title": "Skills",
-   "chains": 7244
+   "chains": 7247
   },
   {
    "title": "Making History",
@@ -530,7 +530,7 @@
   },
   {
    "title": "Free-to-play",
-   "chains": 4341
+   "chains": 4343
   },
   {
    "title": "Locations",
@@ -586,15 +586,15 @@
   },
   {
    "title": "Varlamore",
-   "chains": 1864
+   "chains": 1865
   },
   {
    "title": "Kebos Lowlands",
-   "chains": 1864
+   "chains": 1865
   },
   {
    "title": "Western Ocean",
-   "chains": 1864
+   "chains": 1865
   },
   {
    "title": "Melee",

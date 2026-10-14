@@ -3,107 +3,107 @@
  "rank": "random",
  "nodes": 24073,
  "converge": {
-  "articles": 22299,
-  "pct": 92.63,
-  "deadEnd": 1774,
-  "deadEndPct": 7.37,
-  "noLinks": 1031,
+  "articles": 22722,
+  "pct": 94.39,
+  "deadEnd": 1351,
+  "deadEndPct": 5.61,
+  "noLinks": 827,
   "tooFewLinks": 0,
-  "unresolvable": 16
+  "unresolvable": 15
  },
  "hopStats": {
-  "mean": 14,
+  "mean": 13.98,
   "median": 12,
   "p90": 32,
   "max": 47
  },
  "histogram": {
-  "0": 722,
-  "1": 1714,
-  "2": 1087,
-  "3": 1840,
-  "4": 731,
-  "5": 571,
-  "6": 526,
-  "7": 759,
-  "8": 861,
-  "9": 811,
-  "10": 699,
-  "11": 594,
-  "12": 524,
-  "13": 646,
-  "14": 532,
-  "15": 769,
-  "16": 568,
-  "17": 594,
-  "18": 805,
+  "0": 728,
+  "1": 1822,
+  "2": 1130,
+  "3": 1866,
+  "4": 749,
+  "5": 579,
+  "6": 529,
+  "7": 770,
+  "8": 868,
+  "9": 815,
+  "10": 705,
+  "11": 611,
+  "12": 545,
+  "13": 656,
+  "14": 537,
+  "15": 771,
+  "16": 572,
+  "17": 597,
+  "18": 808,
   "19": 490,
-  "20": 450,
-  "21": 522,
-  "22": 410,
-  "23": 399,
-  "24": 468,
-  "25": 381,
-  "26": 308,
-  "27": 284,
-  "28": 293,
-  "29": 209,
-  "30": 182,
-  "31": 145,
+  "20": 453,
+  "21": 531,
+  "22": 411,
+  "23": 400,
+  "24": 470,
+  "25": 383,
+  "26": 310,
+  "27": 286,
+  "28": 295,
+  "29": 211,
+  "30": 184,
+  "31": 146,
   "32": 771,
-  "33": 125,
-  "34": 167,
-  "35": 272,
-  "36": 237,
-  "37": 187,
-  "38": 173,
-  "39": 179,
-  "40": 108,
-  "41": 79,
-  "42": 31,
-  "43": 16,
-  "44": 8,
+  "33": 127,
+  "34": 168,
+  "35": 273,
+  "36": 238,
+  "37": 199,
+  "38": 194,
+  "39": 206,
+  "40": 116,
+  "41": 83,
+  "42": 39,
+  "43": 19,
+  "44": 9,
   "45": 24,
   "46": 23,
   "47": 5
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1047,
-   "1": 1601,
-   "2": 3561,
-   "3": 2434,
-   "4": 2196,
-   "5": 1591,
-   "6": 1320,
-   "7": 1098,
-   "8": 956,
-   "9": 787,
-   "10": 7482
+   "0": 842,
+   "1": 1655,
+   "2": 3614,
+   "3": 2482,
+   "4": 2205,
+   "5": 1596,
+   "6": 1321,
+   "7": 1101,
+   "8": 958,
+   "9": 791,
+   "10": 7508
   },
   "atLeast": {
-   "1": 95.7,
-   "2": 89,
-   "3": 74.2,
-   "5": 55
+   "1": 96.5,
+   "2": 89.6,
+   "3": 74.6,
+   "5": 55.1
   }
  },
  "concentration": {
-  "top1Pct": 24.77,
-  "top3Pct": 59.2,
-  "top10Pct": 73.93,
-  "cycleCount": 345,
-  "entropyBits": 4.08
+  "top1Pct": 24.92,
+  "top3Pct": 59.8,
+  "top10Pct": 74.81,
+  "cycleCount": 348,
+  "entropyBits": 4.12
  },
- "components": 346,
- "cycleCount": 345,
+ "components": 349,
+ "cycleCount": 348,
  "largestCycle": {
   "members": [
    "Downtown San Fierro",
    "Zombotech Corporation"
   ],
   "size": 2,
-  "basin": 5963
+  "basin": 5998
  },
  "topAttractors": [
   {
@@ -111,24 +111,24 @@
     "Downtown San Fierro",
     "Zombotech Corporation"
    ],
-   "basin": 5963,
-   "pct": 24.77
+   "basin": 5998,
+   "pct": 24.92
   },
   {
    "cycle": [
     "Grand Theft Auto Double Pack",
     "Grand Theft Auto Double Pack: Liberty City Stories & Vice City Stories"
    ],
-   "basin": 5567,
-   "pct": 23.13
+   "basin": 5668,
+   "pct": 23.55
   },
   {
    "cycle": [
     "Franklin Clinton",
     "Payphone Hit: The Trolls"
    ],
-   "basin": 2721,
-   "pct": 11.3
+   "basin": 2730,
+   "pct": 11.34
   },
   {
    "cycle": [
@@ -137,32 +137,32 @@
     "Special Agent Car",
     "Residential District"
    ],
-   "basin": 1090,
-   "pct": 4.53
+   "basin": 1130,
+   "pct": 4.69
   },
   {
    "cycle": [
     "Trevor Philips",
     "Clothing in GTA V/Suburban"
    ],
-   "basin": 763,
-   "pct": 3.17
+   "basin": 767,
+   "pct": 3.19
   },
   {
    "cycle": [
     "Minor Turbulence",
     "Alamo Sea"
    ],
-   "basin": 753,
-   "pct": 3.13
+   "basin": 758,
+   "pct": 3.15
   },
   {
    "cycle": [
     "Hamlet",
     "Unnamed GTA VI Hamlet apartment complex"
    ],
-   "basin": 261,
-   "pct": 1.08
+   "basin": 264,
+   "pct": 1.1
   },
   {
    "cycle": [
@@ -177,8 +177,8 @@
     "Yutes Must Die!",
     "Trey Welsh"
    ],
-   "basin": 216,
-   "pct": 0.9
+   "basin": 231,
+   "pct": 0.96
   },
   {
    "cycle": [
@@ -199,8 +199,8 @@
     "Liberty City Swingers",
     "Ernesto Asaltacunas"
    ],
-   "basin": 197,
-   "pct": 0.82
+   "basin": 203,
+   "pct": 0.84
   },
   {
    "cycle": [
@@ -215,7 +215,7 @@
     "Vice Shores Park",
     "Vice Shores"
    ],
-   "basin": 187,
+   "basin": 188,
    "pct": 0.78
   },
   {
@@ -223,8 +223,16 @@
     "Steinway",
     "35-13 Yorktown Avenue"
    ],
-   "basin": 177,
+   "basin": 178,
    "pct": 0.74
+  },
+  {
+   "cycle": [
+    "Rank",
+    "Supply"
+   ],
+   "basin": 141,
+   "pct": 0.59
   },
   {
    "cycle": [
@@ -256,7 +264,7 @@
     "Greene Avenue",
     "Beaumont Avenue"
    ],
-   "basin": 88,
+   "basin": 89,
    "pct": 0.37
   },
   {
@@ -266,20 +274,12 @@
    ],
    "basin": 88,
    "pct": 0.37
-  },
-  {
-   "cycle": [
-    "Burger Shot (HD Universe)",
-    "Burgershot.net"
-   ],
-   "basin": 85,
-   "pct": 0.35
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Nintendo Switch",
-   "chains": 177,
+   "chains": 178,
    "pct": 0.74,
    "reason": "no eligible links"
   },
@@ -290,39 +290,15 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Supply",
-   "chains": 62,
-   "pct": 0.26,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Carcols.dat/GTASA",
    "chains": 58,
    "pct": 0.24,
    "reason": "no eligible links"
   },
   {
-   "title": "Peep That Shit",
-   "chains": 53,
-   "pct": 0.22,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Game Boy Color",
-   "chains": 36,
-   "pct": 0.15,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Street Rage",
    "chains": 28,
    "pct": 0.12,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "GTA VI Website",
-   "chains": 26,
-   "pct": 0.11,
    "reason": "no eligible links"
   },
   {
@@ -344,27 +320,51 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Richman Hotel LTS",
-   "chains": 14,
-   "pct": 0.06,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Grand Theft Auto: San Andreas/Trailers",
    "chains": 10,
    "pct": 0.04,
    "reason": "no eligible links"
   },
   {
-   "title": "Nik Taylor",
-   "chains": 9,
-   "pct": 0.04,
+   "title": "Kent Paul's 80's Nostalgia Zone!",
+   "chains": 8,
+   "pct": 0.03,
    "reason": "no eligible links"
   },
   {
    "title": "Lifeinvader/Bawsaq",
    "chains": 8,
    "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lifeinvader/Alcoholla",
+   "chains": 7,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lifeinvader/Premium Deluxe Motorsport",
+   "chains": 7,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Physics Engine",
+   "chains": 6,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lifeinvader/Pedal and Metal",
+   "chains": 6,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lifeinvader/Starstalk",
+   "chains": 5,
+   "pct": 0.02,
    "reason": "no eligible links"
   }
  ],
@@ -380,7 +380,7 @@
   },
   {
    "title": "Los Santos (HD Universe)",
-   "firstLinks": 224
+   "firstLinks": 226
   },
   {
    "title": "Algonquin",
@@ -408,7 +408,7 @@
   },
   {
    "title": "Grand Theft Auto VI/Leaks",
-   "firstLinks": 123
+   "firstLinks": 124
   },
   {
    "title": "Los Santos (3D Universe)",
@@ -436,18 +436,22 @@
   },
   {
    "title": "Protagonists in GTA (1997 game)",
-   "firstLinks": 73
-  },
-  {
-   "title": "Grand Theft Auto VI/Trailers",
-   "firstLinks": 73
+   "firstLinks": 74
   },
   {
    "title": "Trevor Philips",
-   "firstLinks": 72
+   "firstLinks": 74
+  },
+  {
+   "title": "Grand Theft Auto VI/Trailers",
+   "firstLinks": 74
   },
   {
    "title": "Protagonist",
+   "firstLinks": 70
+  },
+  {
+   "title": "Rank",
    "firstLinks": 70
   },
   {
@@ -459,8 +463,12 @@
    "firstLinks": 65
   },
   {
+   "title": "United States of America",
+   "firstLinks": 63
+  },
+  {
    "title": "United Kingdom",
-   "firstLinks": 62
+   "firstLinks": 63
   },
   {
    "title": "The Lost MC",
@@ -481,146 +489,138 @@
   {
    "title": "Tommy Vercetti",
    "firstLinks": 52
-  },
-  {
-   "title": "Websites in GTA IV",
-   "firstLinks": 51
-  },
-  {
-   "title": "Las Venturas (3D Universe)",
-   "firstLinks": 50
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Downtown San Fierro",
-   "chains": 5963
+   "chains": 5998
   },
   {
    "title": "Zombotech Corporation",
-   "chains": 5963
+   "chains": 5998
   },
   {
    "title": "Grand Theft Auto Double Pack",
-   "chains": 5567
+   "chains": 5668
   },
   {
    "title": "Grand Theft Auto Double Pack: Liberty City Stories & Vice City Stories",
-   "chains": 5567
+   "chains": 5668
   },
   {
    "title": "Grand Theft Auto Double Pack website",
-   "chains": 5565
+   "chains": 5666
   },
   {
    "title": "ViceCity.com",
-   "chains": 5564
+   "chains": 5665
   },
   {
    "title": "Pierre La Ponce",
-   "chains": 5554
+   "chains": 5655
   },
   {
    "title": "Mall Shootout",
-   "chains": 5552
+   "chains": 5653
   },
   {
    "title": "Tommy Vercetti",
-   "chains": 5548
+   "chains": 5649
   },
   {
    "title": "Burglar",
-   "chains": 5538
+   "chains": 5572
   },
   {
    "title": "Richman (3D Universe)",
-   "chains": 5531
+   "chains": 5565
   },
   {
    "title": "Banshee (3D Universe)",
-   "chains": 5508
+   "chains": 5542
   },
   {
    "title": "Robbery accomplice",
-   "chains": 5502
+   "chains": 5536
   },
   {
    "title": "Catalina",
-   "chains": 5501
+   "chains": 5535
   },
   {
    "title": "Haitian Drugs Factory",
-   "chains": 5294
+   "chains": 5395
   },
   {
    "title": "Trojan Voodoo",
-   "chains": 5293
+   "chains": 5394
   },
   {
    "title": "Minigun",
-   "chains": 5292
+   "chains": 5393
   },
   {
    "title": "Little Haiti",
-   "chains": 5240
+   "chains": 5339
   },
   {
    "title": "Money",
-   "chains": 5187
+   "chains": 5220
   },
   {
    "title": "Little Havana",
-   "chains": 5091
+   "chains": 5188
   },
   {
    "title": "Franklin Clinton",
-   "chains": 2721
+   "chains": 2730
   },
   {
    "title": "Payphone Hit: The Trolls",
-   "chains": 2721
+   "chains": 2730
   },
   {
    "title": "Securicar (3D Universe)",
-   "chains": 2473
+   "chains": 2561
   },
   {
    "title": "Garages",
-   "chains": 2448
+   "chains": 2536
   },
   {
    "title": "D.I.V.O.R.C.E.",
-   "chains": 2391
+   "chains": 2478
   },
   {
    "title": "Trailer Park Mafia",
-   "chains": 2388
+   "chains": 2475
   },
   {
    "title": "Waking Up the Neighbors",
-   "chains": 2365
+   "chains": 2452
   },
   {
    "title": "Cholos",
-   "chains": 2364
+   "chains": 2451
   },
   {
    "title": "Admiral (3D Universe)",
-   "chains": 2357
+   "chains": 2444
   },
   {
    "title": "Perennial (3D Universe)",
-   "chains": 2354
+   "chains": 2441
   }
  ],
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 92.63,
+   "mean": 94.39,
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 24.87,
+   "mean": 25.01,
    "sd": 0.15
   }
  }

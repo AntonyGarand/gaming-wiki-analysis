@@ -3,74 +3,74 @@
  "rank": "random",
  "nodes": 35312,
  "converge": {
-  "articles": 32710,
-  "pct": 92.63,
-  "deadEnd": 2602,
-  "deadEndPct": 7.37,
-  "noLinks": 2240,
+  "articles": 33046,
+  "pct": 93.58,
+  "deadEnd": 2266,
+  "deadEndPct": 6.42,
+  "noLinks": 2163,
   "tooFewLinks": 0,
-  "unresolvable": 17
+  "unresolvable": 9
  },
  "hopStats": {
-  "mean": 2.74,
+  "mean": 2.77,
   "median": 2,
   "p90": 6,
   "max": 14
  },
  "histogram": {
-  "0": 497,
-  "1": 11588,
-  "2": 8357,
-  "3": 3508,
-  "4": 2703,
-  "5": 1841,
-  "6": 1891,
-  "7": 877,
-  "8": 546,
-  "9": 457,
-  "10": 201,
-  "11": 130,
-  "12": 77,
+  "0": 511,
+  "1": 11608,
+  "2": 8381,
+  "3": 3537,
+  "4": 2718,
+  "5": 1859,
+  "6": 2017,
+  "7": 903,
+  "8": 569,
+  "9": 473,
+  "10": 219,
+  "11": 136,
+  "12": 78,
   "13": 31,
   "14": 6
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2257,
-   "1": 1264,
-   "2": 7398,
-   "3": 9015,
-   "4": 4347,
-   "5": 2402,
-   "6": 1375,
-   "7": 876,
-   "8": 630,
-   "9": 510,
-   "10": 5238
+   "0": 2172,
+   "1": 1279,
+   "2": 7410,
+   "3": 9022,
+   "4": 4355,
+   "5": 2411,
+   "6": 1380,
+   "7": 882,
+   "8": 637,
+   "9": 512,
+   "10": 5252
   },
   "atLeast": {
-   "1": 93.6,
-   "2": 90,
-   "3": 69.1,
-   "5": 31.2
+   "1": 93.8,
+   "2": 90.2,
+   "3": 69.2,
+   "5": 31.4
   }
  },
  "concentration": {
-  "top1Pct": 45.22,
-  "top3Pct": 73.9,
-  "top10Pct": 88.87,
-  "cycleCount": 244,
-  "entropyBits": 2.51
+  "top1Pct": 45.32,
+  "top3Pct": 74.58,
+  "top10Pct": 89.75,
+  "cycleCount": 251,
+  "entropyBits": 2.52
  },
- "components": 245,
- "cycleCount": 244,
+ "components": 252,
+ "cycleCount": 251,
  "largestCycle": {
   "members": [
    "Fortnite",
    "Rocket Racing"
   ],
   "size": 2,
-  "basin": 15969
+  "basin": 16004
  },
  "topAttractors": [
   {
@@ -78,8 +78,8 @@
     "Fortnite",
     "Rocket Racing"
    ],
-   "basin": 15969,
-   "pct": 45.22
+   "basin": 16004,
+   "pct": 45.32
   },
   {
    "cycle": [
@@ -88,8 +88,8 @@
     "Battle Pass",
     "XP"
    ],
-   "basin": 6893,
-   "pct": 19.52
+   "basin": 6896,
+   "pct": 19.53
   },
   {
    "cycle": [
@@ -99,8 +99,8 @@
     "Smoke Grenade",
     "Utility Items"
    ],
-   "basin": 3235,
-   "pct": 9.16
+   "basin": 3437,
+   "pct": 9.73
   },
   {
    "cycle": [
@@ -108,16 +108,16 @@
     "Ventures",
     "Outlanders"
    ],
-   "basin": 2180,
-   "pct": 6.17
+   "basin": 2241,
+   "pct": 6.35
   },
   {
    "cycle": [
     "Founder's Pack",
     "Power B.A.S.E. Kyle"
    ],
-   "basin": 2134,
-   "pct": 6.04
+   "basin": 2142,
+   "pct": 6.07
   },
   {
    "cycle": [
@@ -209,6 +209,15 @@
   },
   {
    "cycle": [
+    "The Collider",
+    "The Fortress",
+    "Command Cavern"
+   ],
+   "basin": 31,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
     "Update v15.30",
     "End Game Device"
    ],
@@ -225,15 +234,6 @@
   },
   {
    "cycle": [
-    "The Collider",
-    "The Fortress",
-    "Command Cavern"
-   ],
-   "basin": 29,
-   "pct": 0.08
-  },
-  {
-   "cycle": [
     "Joel",
     "Karolina"
    ],
@@ -242,24 +242,6 @@
   }
  ],
  "deadEndTerminals": [
-  {
-   "title": "Devices (Creative)",
-   "chains": 177,
-   "pct": 0.5,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Update v4.3",
-   "chains": 17,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Prop Hunt",
-   "chains": 12,
-   "pct": 0.03,
-   "reason": "no eligible links"
-  },
   {
    "title": "Item Shop History/December 11th 2024",
    "chains": 8,
@@ -273,31 +255,7 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Firecracker Pistol Schematics",
-   "chains": 7,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Item Shop History/February 25th 2019",
-   "chains": 6,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Evacuate the Shelter",
-   "chains": 6,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Semi-Auto Handcannon Pistol Schematics",
-   "chains": 6,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Flowering Chaos Bundle",
    "chains": 6,
    "pct": 0.02,
    "reason": "no eligible links"
@@ -331,6 +289,48 @@
    "chains": 4,
    "pct": 0.01,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Party Trooper",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Survive the Storm",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/September 4th 2018",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/January 31st 2019",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/March 24th 2019",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/September 5th 2018",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/December 4th 2019",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -349,7 +349,7 @@
   },
   {
    "title": "Fortnite: Battle Royale",
-   "firstLinks": 802
+   "firstLinks": 803
   },
   {
    "title": "Back Blings",
@@ -365,7 +365,7 @@
   },
   {
    "title": "Fortnite: Save the World",
-   "firstLinks": 458
+   "firstLinks": 459
   },
   {
    "title": "Wraps",
@@ -417,7 +417,7 @@
   },
   {
    "title": "Athena",
-   "firstLinks": 125
+   "firstLinks": 126
   },
   {
    "title": "Landmarks",
@@ -436,6 +436,10 @@
    "firstLinks": 100
   },
   {
+   "title": "Outlanders",
+   "firstLinks": 91
+  },
+  {
    "title": "Contrails",
    "firstLinks": 91
   },
@@ -450,100 +454,96 @@
   {
    "title": "Main Quests",
    "firstLinks": 90
-  },
-  {
-   "title": "Unnamed Locations",
-   "firstLinks": 86
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Fortnite",
-   "chains": 15969
+   "chains": 16004
   },
   {
    "title": "Rocket Racing",
-   "chains": 15969
+   "chains": 16004
   },
   {
    "title": "Battle Pass",
-   "chains": 6893
+   "chains": 6896
   },
   {
    "title": "XP",
-   "chains": 6893
+   "chains": 6896
   },
   {
    "title": "Cosmetic Items",
-   "chains": 6893
+   "chains": 6896
   },
   {
    "title": "Gifting",
-   "chains": 6893
+   "chains": 6896
   },
   {
    "title": "Fortnite: Battle Royale",
-   "chains": 3235
+   "chains": 3437
   },
   {
    "title": "Smoke Grenade",
-   "chains": 3235
+   "chains": 3437
   },
   {
    "title": "Utility Items",
-   "chains": 3235
+   "chains": 3437
   },
   {
    "title": "Fortnite: Ballistic",
-   "chains": 3235
+   "chains": 3437
   },
   {
    "title": "Overdrive Grenade",
-   "chains": 3235
+   "chains": 3437
   },
   {
    "title": "Unreal Editor for Fortnite",
-   "chains": 2396
+   "chains": 2407
   },
   {
    "title": "Outlanders",
-   "chains": 2180
+   "chains": 2241
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 2180
+   "chains": 2241
   },
   {
    "title": "Ventures",
-   "chains": 2180
+   "chains": 2241
   },
   {
    "title": "Shotguns",
-   "chains": 2156
+   "chains": 2161
   },
   {
    "title": "Founder's Pack",
-   "chains": 2134
+   "chains": 2142
   },
   {
    "title": "Power B.A.S.E. Kyle",
-   "chains": 2134
+   "chains": 2142
   },
   {
    "title": "The Dub",
-   "chains": 2110
+   "chains": 2115
   },
   {
    "title": "Community Terminology",
-   "chains": 2109
+   "chains": 2114
   },
   {
    "title": "Outfits",
-   "chains": 2085
+   "chains": 2090
   },
   {
    "title": "V-Bucks",
-   "chains": 1716
+   "chains": 1718
   },
   {
    "title": "Limited Time Offers",
@@ -555,7 +555,7 @@
   },
   {
    "title": "Quests",
-   "chains": 1379
+   "chains": 1382
   },
   {
    "title": "Emotes",
@@ -567,11 +567,11 @@
   },
   {
    "title": "Adam's Song",
-   "chains": 821
+   "chains": 822
   },
   {
    "title": "Jam Tracks",
-   "chains": 813
+   "chains": 814
   },
   {
    "title": "Sentry Cameras",
@@ -581,11 +581,11 @@
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 92.63,
+   "mean": 93.58,
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 45.19,
+   "mean": 45.29,
    "sd": 0.02
   }
  }

@@ -3,11 +3,11 @@
  "rank": "5",
  "nodes": 36164,
  "converge": {
-  "articles": 17021,
-  "pct": 47.07,
-  "deadEnd": 19143,
-  "deadEndPct": 52.93,
-  "noLinks": 439,
+  "articles": 17025,
+  "pct": 47.08,
+  "deadEnd": 19139,
+  "deadEndPct": 52.92,
+  "noLinks": 435,
   "tooFewLinks": 12490,
   "unresolvable": 1
  },
@@ -19,12 +19,12 @@
  },
  "histogram": {
   "0": 758,
-  "1": 1166,
-  "2": 848,
+  "1": 1167,
+  "2": 849,
   "3": 712,
-  "4": 818,
+  "4": 819,
   "5": 1422,
-  "6": 1637,
+  "6": 1638,
   "7": 1751,
   "8": 1335,
   "9": 935,
@@ -49,7 +49,7 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 440,
+   "0": 436,
    "1": 1317,
    "2": 2978,
    "3": 4691,
@@ -59,19 +59,19 @@
    "7": 2267,
    "8": 1834,
    "9": 1584,
-   "10": 11467
+   "10": 11471
   },
   "atLeast": {
    "1": 98.8,
-   "2": 95.1,
+   "2": 95.2,
    "3": 86.9,
-   "5": 64.2
+   "5": 64.3
   }
  },
  "concentration": {
   "top1Pct": 12.21,
   "top3Pct": 27.81,
-  "top10Pct": 38.61,
+  "top10Pct": 38.62,
   "cycleCount": 351,
   "entropyBits": 4.14
  },
@@ -84,7 +84,7 @@
    "Nora T. Hagg"
   ],
   "size": 3,
-  "basin": 4414
+  "basin": 4415
  },
  "topAttractors": [
   {
@@ -93,7 +93,7 @@
     "Witch's house (location)",
     "Nora T. Hagg"
    ],
-   "basin": 4414,
+   "basin": 4415,
    "pct": 12.21
   },
   {
@@ -147,7 +147,7 @@
     "Dragon equipment",
     "Orikalkum"
    ],
-   "basin": 407,
+   "basin": 408,
    "pct": 1.13
   },
   {
@@ -184,7 +184,7 @@
     "Skiff",
     "Sloop"
    ],
-   "basin": 176,
+   "basin": 178,
    "pct": 0.49
   },
   {
@@ -295,7 +295,7 @@
   },
   {
    "title": "Elder Strom's Hunting Stall",
-   "chains": 83,
+   "chains": 84,
    "pct": 0.23,
    "reason": "only 3 eligible links"
   },
@@ -480,31 +480,31 @@
  "topThroughTraffic": [
   {
    "title": "Nora T. Hagg",
-   "chains": 4414
+   "chains": 4415
   },
   {
    "title": "Boy",
-   "chains": 4414
+   "chains": 4415
   },
   {
    "title": "Witch's house (location)",
-   "chains": 4414
+   "chains": 4415
   },
   {
    "title": "Witch's House",
-   "chains": 4407
+   "chains": 4408
   },
   {
    "title": "Items",
-   "chains": 4405
+   "chains": 4406
   },
   {
    "title": "Energy",
-   "chains": 4396
+   "chains": 4397
   },
   {
    "title": "Quests",
-   "chains": 4096
+   "chains": 4097
   },
   {
    "title": "Corporeal Beast",

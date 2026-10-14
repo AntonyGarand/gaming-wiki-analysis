@@ -3,11 +3,11 @@
  "rank": "2",
  "nodes": 14078,
  "converge": {
-  "articles": 7216,
-  "pct": 51.26,
-  "deadEnd": 6862,
-  "deadEndPct": 48.74,
-  "noLinks": 4873,
+  "articles": 7218,
+  "pct": 51.27,
+  "deadEnd": 6860,
+  "deadEndPct": 48.73,
+  "noLinks": 4871,
   "tooFewLinks": 1380,
   "unresolvable": 231
  },
@@ -19,9 +19,9 @@
  },
  "histogram": {
   "0": 207,
-  "1": 868,
+  "1": 869,
   "2": 1162,
-  "3": 1283,
+  "3": 1284,
   "4": 1167,
   "5": 819,
   "6": 696,
@@ -42,29 +42,29 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5104,
+   "0": 5102,
    "1": 1380,
    "2": 967,
-   "3": 720,
+   "3": 721,
    "4": 497,
    "5": 447,
    "6": 337,
    "7": 292,
    "8": 308,
    "9": 270,
-   "10": 3756
+   "10": 3757
   },
   "atLeast": {
-   "1": 63.7,
-   "2": 53.9,
+   "1": 63.8,
+   "2": 54,
    "3": 47.1,
    "5": 38.4
   }
  },
  "concentration": {
   "top1Pct": 26.77,
-  "top3Pct": 36.29,
-  "top10Pct": 43.92,
+  "top3Pct": 36.3,
+  "top10Pct": 43.93,
   "cycleCount": 98,
   "entropyBits": 3.1
  },
@@ -79,7 +79,7 @@
    "UUID"
   ],
   "size": 5,
-  "basin": 3768
+  "basin": 3769
  },
  "topAttractors": [
   {
@@ -90,7 +90,7 @@
     "NBT format",
     "UUID"
    ],
-   "basin": 3768,
+   "basin": 3769,
    "pct": 26.77
   },
   {
@@ -106,8 +106,8 @@
     "Mojang Studios",
     "Xbox (division)"
    ],
-   "basin": 662,
-   "pct": 4.7
+   "basin": 663,
+   "pct": 4.71
   },
   {
    "cycle": [
@@ -355,7 +355,7 @@
   },
   {
    "title": "Mob",
-   "firstLinks": 67
+   "firstLinks": 68
   },
   {
    "title": "Mojang Studios",
@@ -469,23 +469,23 @@
  "topThroughTraffic": [
   {
    "title": "Player",
-   "chains": 3768
+   "chains": 3769
   },
   {
    "title": "Mob AI",
-   "chains": 3768
+   "chains": 3769
   },
   {
    "title": "NBT format",
-   "chains": 3768
+   "chains": 3769
   },
   {
    "title": "Mob",
-   "chains": 3768
+   "chains": 3769
   },
   {
    "title": "UUID",
-   "chains": 3768
+   "chains": 3769
   },
   {
    "title": "Biome",
@@ -505,11 +505,11 @@
   },
   {
    "title": "Mojang Studios",
-   "chains": 662
+   "chains": 663
   },
   {
    "title": "Xbox (division)",
-   "chains": 662
+   "chains": 663
   },
   {
    "title": "Item",

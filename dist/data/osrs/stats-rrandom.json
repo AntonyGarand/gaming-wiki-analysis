@@ -3,11 +3,11 @@
  "rank": "random",
  "nodes": 36164,
  "converge": {
-  "articles": 35665,
-  "pct": 98.62,
-  "deadEnd": 499,
-  "deadEndPct": 1.38,
-  "noLinks": 439,
+  "articles": 35669,
+  "pct": 98.63,
+  "deadEnd": 495,
+  "deadEndPct": 1.37,
+  "noLinks": 435,
   "tooFewLinks": 0,
   "unresolvable": 1
  },
@@ -20,12 +20,12 @@
  "histogram": {
   "0": 994,
   "1": 2539,
-  "2": 2492,
+  "2": 2493,
   "3": 2260,
   "4": 1906,
   "5": 2160,
   "6": 1920,
-  "7": 1527,
+  "7": 1528,
   "8": 1669,
   "9": 1975,
   "10": 1895,
@@ -34,11 +34,11 @@
   "13": 1251,
   "14": 1308,
   "15": 1172,
-  "16": 1082,
+  "16": 1083,
   "17": 967,
   "18": 704,
   "19": 768,
-  "20": 638,
+  "20": 639,
   "21": 482,
   "22": 549,
   "23": 474,
@@ -65,7 +65,7 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 440,
+   "0": 436,
    "1": 1317,
    "2": 2978,
    "3": 4691,
@@ -75,19 +75,19 @@
    "7": 2267,
    "8": 1834,
    "9": 1584,
-   "10": 11467
+   "10": 11471
   },
   "atLeast": {
    "1": 98.8,
-   "2": 95.1,
+   "2": 95.2,
    "3": 86.9,
-   "5": 64.2
+   "5": 64.3
   }
  },
  "concentration": {
   "top1Pct": 51.71,
-  "top3Pct": 66.37,
-  "top10Pct": 83.2,
+  "top3Pct": 66.38,
+  "top10Pct": 83.22,
   "cycleCount": 453,
   "entropyBits": 3.45
  },
@@ -129,7 +129,7 @@
    "Hill Giant"
   ],
   "size": 32,
-  "basin": 18699
+  "basin": 18701
  },
  "topAttractors": [
   {
@@ -167,7 +167,7 @@
     "Brass key",
     "Hill Giant"
    ],
-   "basin": 18699,
+   "basin": 18701,
    "pct": 51.71
   },
   {
@@ -175,7 +175,7 @@
     "Smellytoes",
     "Creakyknees"
    ],
-   "basin": 2871,
+   "basin": 2872,
    "pct": 7.94
   },
   {
@@ -202,8 +202,8 @@
     "Jagex Moderator",
     "Rotten strawberry"
    ],
-   "basin": 1191,
-   "pct": 3.29
+   "basin": 1192,
+   "pct": 3.3
   },
   {
    "cycle": [
@@ -437,7 +437,7 @@
   },
   {
    "title": "Quests",
-   "firstLinks": 265
+   "firstLinks": 266
   },
   {
    "title": "Player-owned house",
@@ -555,133 +555,133 @@
  "topThroughTraffic": [
   {
    "title": "Members",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "General store",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Void knight top",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Free-to-play",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Pest Control",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Crandor",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Lesser demon",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Wilderness",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Brass key",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Mage Training Arena",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Telekinetic Grab",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Yew tree",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Shop",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "King Black Dragon Lair",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Hill Giant",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "World switching",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "World",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Perdu",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Game tick",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Field ration",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Nightmare Zone",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Melzar's notes",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Preserve",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Jennifer's General Supplies",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "(broken)",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "(l)",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Lesser demon (Melzar's Maze)",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Sailing",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Prying Times",
-   "chains": 18699
+   "chains": 18701
   },
   {
    "title": "Junior Jim",
-   "chains": 18699
+   "chains": 18701
   }
  ],
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 98.62,
+   "mean": 98.63,
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 52.56,
+   "mean": 52.57,
    "sd": 5.69
   }
  }

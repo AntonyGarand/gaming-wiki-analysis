@@ -3,49 +3,49 @@
  "rank": "5",
  "nodes": 24073,
  "converge": {
-  "articles": 7476,
-  "pct": 31.06,
-  "deadEnd": 16597,
-  "deadEndPct": 68.94,
-  "noLinks": 1031,
-  "tooFewLinks": 9792,
-  "unresolvable": 16
+  "articles": 7510,
+  "pct": 31.2,
+  "deadEnd": 16563,
+  "deadEndPct": 68.8,
+  "noLinks": 827,
+  "tooFewLinks": 9956,
+  "unresolvable": 15
  },
  "hopStats": {
-  "mean": 10.99,
+  "mean": 10.98,
   "median": 8,
   "p90": 26,
   "max": 40
  },
  "histogram": {
   "0": 332,
-  "1": 549,
-  "2": 559,
-  "3": 540,
-  "4": 535,
-  "5": 489,
-  "6": 337,
+  "1": 551,
+  "2": 561,
+  "3": 547,
+  "4": 540,
+  "5": 494,
+  "6": 338,
   "7": 290,
   "8": 248,
   "9": 263,
-  "10": 386,
-  "11": 296,
-  "12": 227,
+  "10": 388,
+  "11": 297,
+  "12": 228,
   "13": 141,
-  "14": 105,
-  "15": 132,
-  "16": 70,
+  "14": 106,
+  "15": 134,
+  "16": 71,
   "17": 66,
   "18": 98,
   "19": 100,
-  "20": 95,
+  "20": 96,
   "21": 81,
   "22": 68,
   "23": 250,
-  "24": 230,
+  "24": 231,
   "25": 158,
   "26": 84,
-  "27": 162,
+  "27": 163,
   "28": 123,
   "29": 107,
   "30": 88,
@@ -55,38 +55,38 @@
   "34": 32,
   "35": 28,
   "36": 16,
-  "37": 4,
+  "37": 5,
   "38": 6,
   "39": 3,
   "40": 2
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1047,
-   "1": 1601,
-   "2": 3561,
-   "3": 2434,
-   "4": 2196,
-   "5": 1591,
-   "6": 1320,
-   "7": 1098,
-   "8": 956,
-   "9": 787,
-   "10": 7482
+   "0": 842,
+   "1": 1655,
+   "2": 3614,
+   "3": 2482,
+   "4": 2205,
+   "5": 1596,
+   "6": 1321,
+   "7": 1101,
+   "8": 958,
+   "9": 791,
+   "10": 7508
   },
   "atLeast": {
-   "1": 95.7,
-   "2": 89,
-   "3": 74.2,
-   "5": 55
+   "1": 96.5,
+   "2": 89.6,
+   "3": 74.6,
+   "5": 55.1
   }
  },
  "concentration": {
-  "top1Pct": 8.96,
-  "top3Pct": 18.83,
-  "top10Pct": 24.48,
+  "top1Pct": 9,
+  "top3Pct": 18.89,
+  "top10Pct": 24.56,
   "cycleCount": 155,
-  "entropyBits": 4.05
+  "entropyBits": 4.06
  },
  "components": 156,
  "cycleCount": 155,
@@ -96,7 +96,7 @@
    "Los Santos Police Department (3D Universe)"
   ],
   "size": 2,
-  "basin": 2156
+  "basin": 2166
  },
  "topAttractors": [
   {
@@ -104,32 +104,32 @@
     "Eddie Pulaski",
     "Los Santos Police Department (3D Universe)"
    ],
-   "basin": 2156,
-   "pct": 8.96
+   "basin": 2166,
+   "pct": 9
   },
   {
    "cycle": [
     "Verona Beach",
     "Los Santos Conference Center"
    ],
-   "basin": 1505,
-   "pct": 6.25
+   "basin": 1508,
+   "pct": 6.26
   },
   {
    "cycle": [
     "Italy",
     "Slovenia"
    ],
-   "basin": 872,
-   "pct": 3.62
+   "basin": 873,
+   "pct": 3.63
   },
   {
    "cycle": [
     "Forelli Crime Family",
     "Sonny Forelli"
    ],
-   "basin": 331,
-   "pct": 1.37
+   "basin": 333,
+   "pct": 1.38
   },
   {
    "cycle": [
@@ -153,7 +153,7 @@
     "Hepburn Heights",
     "Saint Mark's"
    ],
-   "basin": 211,
+   "basin": 212,
    "pct": 0.88
   },
   {
@@ -169,7 +169,7 @@
     "Little Bighorn Avenue",
     "Integrity Way"
    ],
-   "basin": 105,
+   "basin": 106,
    "pct": 0.44
   },
   {
@@ -186,8 +186,8 @@
     "Tataviam Mountains",
     "Land Act Dam"
    ],
-   "basin": 99,
-   "pct": 0.41
+   "basin": 100,
+   "pct": 0.42
   },
   {
    "cycle": [
@@ -195,8 +195,8 @@
     "Bagger",
     "Hexer"
    ],
-   "basin": 87,
-   "pct": 0.36
+   "basin": 89,
+   "pct": 0.37
   },
   {
    "cycle": [
@@ -227,7 +227,7 @@
     "Boomshine",
     "Boomshine Blowout"
    ],
-   "basin": 67,
+   "basin": 68,
    "pct": 0.28
   },
   {
@@ -271,19 +271,19 @@
  "deadEndTerminals": [
   {
    "title": "LibertyCityStories.com",
-   "chains": 536,
+   "chains": 537,
    "pct": 2.23,
-   "reason": "no eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "PlayStation Portable",
-   "chains": 376,
-   "pct": 1.56,
+   "chains": 377,
+   "pct": 1.57,
    "reason": "only 3 eligible links"
   },
   {
    "title": "PlayStation 5",
-   "chains": 353,
+   "chains": 355,
    "pct": 1.47,
    "reason": "only 4 eligible links"
   },
@@ -331,7 +331,7 @@
   },
   {
    "title": "Ukita",
-   "chains": 98,
+   "chains": 99,
    "pct": 0.41,
    "reason": "only 4 eligible links"
   },
@@ -364,7 +364,7 @@
  "topFirstLinkTargets": [
   {
    "title": "Money",
-   "firstLinks": 136
+   "firstLinks": 137
   },
   {
    "title": "Los Santos (HD Universe)",
@@ -372,7 +372,7 @@
   },
   {
    "title": "Algonquin",
-   "firstLinks": 92
+   "firstLinks": 93
   },
   {
    "title": "Carl Johnson",
@@ -399,11 +399,11 @@
    "firstLinks": 47
   },
   {
-   "title": "Los Santos (3D Universe)",
-   "firstLinks": 44
+   "title": "Trevor Philips",
+   "firstLinks": 45
   },
   {
-   "title": "Trevor Philips",
+   "title": "Los Santos (3D Universe)",
    "firstLinks": 44
   },
   {
@@ -424,7 +424,7 @@
   },
   {
    "title": "Broker",
-   "firstLinks": 41
+   "firstLinks": 42
   },
   {
    "title": "Staunton Island",
@@ -486,123 +486,123 @@
  "topThroughTraffic": [
   {
    "title": "Eddie Pulaski",
-   "chains": 2156
+   "chains": 2166
   },
   {
    "title": "Los Santos Police Department (3D Universe)",
-   "chains": 2156
+   "chains": 2166
   },
   {
    "title": "Jimmy Hernandez",
-   "chains": 1980
+   "chains": 1989
   },
   {
    "title": "Community Resources Against Street Hoodlums",
-   "chains": 1965
+   "chains": 1974
   },
   {
    "title": "Carl Johnson",
-   "chains": 1958
+   "chains": 1967
   },
   {
    "title": "Yay Ka-Boom-Boom",
-   "chains": 1733
+   "chains": 1742
   },
   {
    "title": "Area 69 (3D Universe)",
-   "chains": 1727
+   "chains": 1736
   },
   {
    "title": "69",
-   "chains": 1700
+   "chains": 1709
   },
   {
    "title": "Universes",
-   "chains": 1694
+   "chains": 1703
   },
   {
    "title": "United States of America",
-   "chains": 1691
+   "chains": 1700
   },
   {
    "title": "Verona Beach",
-   "chains": 1505
+   "chains": 1508
   },
   {
    "title": "Los Santos Conference Center",
-   "chains": 1505
+   "chains": 1508
   },
   {
    "title": "Commerce",
-   "chains": 1499
+   "chains": 1501
   },
   {
    "title": "Idlewood",
-   "chains": 1464
+   "chains": 1466
   },
   {
    "title": "Learning to Fly",
-   "chains": 1461
+   "chains": 1463
   },
   {
    "title": "Shamal (3D Universe)",
-   "chains": 1441
+   "chains": 1443
   },
   {
    "title": "Los Santos International Airport (3D Universe)",
-   "chains": 1440
+   "chains": 1442
   },
   {
    "title": "Los Santos (3D Universe)",
-   "chains": 1406
+   "chains": 1408
   },
   {
    "title": "Money",
-   "chains": 1295
+   "chains": 1302
   },
   {
    "title": "3D Universe",
-   "chains": 1247
+   "chains": 1249
   },
   {
    "title": "Dan Houser",
-   "chains": 1153
+   "chains": 1155
   },
   {
    "title": "Rob Nelson",
-   "chains": 1148
+   "chains": 1150
   },
   {
    "title": "Aaron Garbut",
-   "chains": 1147
+   "chains": 1149
   },
   {
    "title": "Grand Theft Auto VI/Leaks",
-   "chains": 1145
+   "chains": 1147
   },
   {
    "title": "Hamlet",
-   "chains": 1032
+   "chains": 1034
   },
   {
    "title": "Sheriff SUV",
-   "chains": 1028
+   "chains": 1030
   },
   {
    "title": "Sheriff Cruiser",
-   "chains": 1024
+   "chains": 1026
   },
   {
    "title": "Deputy Kirkman",
-   "chains": 1019
+   "chains": 1021
   },
   {
    "title": "Los Santos County Sheriff",
-   "chains": 1018
+   "chains": 1020
   },
   {
    "title": "100% Completion in GTA San Andreas",
-   "chains": 960
+   "chains": 962
   }
  ]
 }

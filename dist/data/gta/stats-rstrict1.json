@@ -3,13 +3,13 @@
  "rank": "strict1",
  "nodes": 24073,
  "converge": {
-  "articles": 22303,
-  "pct": 92.65,
-  "deadEnd": 1770,
-  "deadEndPct": 7.35,
-  "noLinks": 1031,
+  "articles": 22620,
+  "pct": 93.96,
+  "deadEnd": 1453,
+  "deadEndPct": 6.04,
+  "noLinks": 827,
   "tooFewLinks": 0,
-  "unresolvable": 16
+  "unresolvable": 15
  },
  "hopStats": {
   "mean": 3.48,
@@ -18,17 +18,17 @@
   "max": 15
  },
  "histogram": {
-  "0": 786,
-  "1": 2263,
-  "2": 4745,
-  "3": 5563,
-  "4": 4118,
-  "5": 1915,
-  "6": 853,
-  "7": 579,
-  "8": 463,
-  "9": 489,
-  "10": 207,
+  "0": 788,
+  "1": 2344,
+  "2": 4824,
+  "3": 5601,
+  "4": 4146,
+  "5": 1931,
+  "6": 884,
+  "7": 595,
+  "8": 469,
+  "9": 504,
+  "10": 212,
   "11": 132,
   "12": 139,
   "13": 32,
@@ -37,41 +37,41 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1047,
-   "1": 1601,
-   "2": 3561,
-   "3": 2434,
-   "4": 2196,
-   "5": 1591,
-   "6": 1320,
-   "7": 1098,
-   "8": 956,
-   "9": 787,
-   "10": 7482
+   "0": 842,
+   "1": 1655,
+   "2": 3614,
+   "3": 2482,
+   "4": 2205,
+   "5": 1596,
+   "6": 1321,
+   "7": 1101,
+   "8": 958,
+   "9": 791,
+   "10": 7508
   },
   "atLeast": {
-   "1": 95.7,
-   "2": 89,
-   "3": 74.2,
-   "5": 55
+   "1": 96.5,
+   "2": 89.6,
+   "3": 74.6,
+   "5": 55.1
   }
  },
  "concentration": {
-  "top1Pct": 27.84,
-  "top3Pct": 56.76,
-  "top10Pct": 74.91,
-  "cycleCount": 390,
-  "entropyBits": 4.06
+  "top1Pct": 28.2,
+  "top3Pct": 57.53,
+  "top10Pct": 75.97,
+  "cycleCount": 391,
+  "entropyBits": 4.07
  },
- "components": 391,
- "cycleCount": 390,
+ "components": 392,
+ "cycleCount": 391,
  "largestCycle": {
   "members": [
    "Protagonist",
    "GTA Online Protagonist"
   ],
   "size": 2,
-  "basin": 6701
+  "basin": 6789
  },
  "topAttractors": [
   {
@@ -79,48 +79,48 @@
     "Protagonist",
     "GTA Online Protagonist"
    ],
-   "basin": 6701,
-   "pct": 27.84
+   "basin": 6789,
+   "pct": 28.2
   },
   {
    "cycle": [
     "United States of America",
     "Canada"
    ],
-   "basin": 4998,
-   "pct": 20.76
+   "basin": 5060,
+   "pct": 21.02
   },
   {
    "cycle": [
     "Los Santos County",
     "Blaine County"
    ],
-   "basin": 1965,
-   "pct": 8.16
-  },
-  {
-   "cycle": [
-    "PlayStation 2",
-    "PlayStation 3"
-   ],
-   "basin": 1351,
-   "pct": 5.61
+   "basin": 2001,
+   "pct": 8.31
   },
   {
    "cycle": [
     "United Kingdom",
     "Scotland"
    ],
-   "basin": 1328,
-   "pct": 5.52
+   "basin": 1374,
+   "pct": 5.71
+  },
+  {
+   "cycle": [
+    "PlayStation 2",
+    "PlayStation 3"
+   ],
+   "basin": 1370,
+   "pct": 5.69
   },
   {
    "cycle": [
     "Los Santos (3D Universe)",
     "Red County (3D Universe)"
    ],
-   "basin": 508,
-   "pct": 2.11
+   "basin": 510,
+   "pct": 2.12
   },
   {
    "cycle": [
@@ -135,7 +135,7 @@
     "Derek the Dodo",
     "Club Soda Kenny"
    ],
-   "basin": 298,
+   "basin": 299,
    "pct": 1.24
   },
   {
@@ -143,24 +143,32 @@
     "Japan",
     "CERO"
    ],
-   "basin": 297,
-   "pct": 1.23
+   "basin": 298,
+   "pct": 1.24
   },
   {
    "cycle": [
     "Little Havana",
     "Vice City Mainland"
    ],
-   "basin": 239,
-   "pct": 0.99
+   "basin": 241,
+   "pct": 1
   },
   {
    "cycle": [
     "Interstate 404",
     "Admiral Causeway"
    ],
-   "basin": 212,
-   "pct": 0.88
+   "basin": 214,
+   "pct": 0.89
+  },
+  {
+   "cycle": [
+    "Whetstone",
+    "Whetstone-Flint County Creek"
+   ],
+   "basin": 184,
+   "pct": 0.76
   },
   {
    "cycle": [
@@ -172,18 +180,10 @@
   },
   {
    "cycle": [
-    "Whetstone",
-    "Whetstone-Flint County Creek"
-   ],
-   "basin": 183,
-   "pct": 0.76
-  },
-  {
-   "cycle": [
     "Eyefind",
     "Mail.eyefind.info"
    ],
-   "basin": 168,
+   "basin": 169,
    "pct": 0.7
   },
   {
@@ -212,8 +212,8 @@
   },
   {
    "cycle": [
-    "GTA Online: Arena War",
-    "Arena War"
+    "Save Points in GTA San Andreas",
+    "The Johnson House"
    ],
    "basin": 88,
    "pct": 0.37
@@ -223,35 +223,23 @@
     "Aaron Garbut",
     "Rob Nelson"
    ],
-   "basin": 87,
-   "pct": 0.36
+   "basin": 88,
+   "pct": 0.37
   },
   {
    "cycle": [
-    "Save Points in GTA San Andreas",
-    "The Johnson House"
+    "GTA Online: Arena War",
+    "Arena War"
    ],
-   "basin": 86,
-   "pct": 0.36
+   "basin": 88,
+   "pct": 0.37
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Netflix",
-   "chains": 437,
-   "pct": 1.82,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Game Boy Color",
-   "chains": 38,
-   "pct": 0.16,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "GTA VI Website",
-   "chains": 31,
-   "pct": 0.13,
+   "chains": 441,
+   "pct": 1.83,
    "reason": "no eligible links"
   },
   {
@@ -273,37 +261,19 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Peep That Shit",
-   "chains": 12,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Rockstargames.com/GTA2",
-   "chains": 11,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "GTASanAndreas.com",
-   "chains": 9,
-   "pct": 0.04,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Paul Farley",
    "chains": 7,
    "pct": 0.03,
    "reason": "no eligible links"
   },
   {
-   "title": "David Jones",
-   "chains": 6,
-   "pct": 0.02,
+   "title": "Grand Theft Auto IV/Technical Issues",
+   "chains": 7,
+   "pct": 0.03,
    "reason": "no eligible links"
   },
   {
-   "title": "LibertyCityStories.com",
+   "title": "David Jones",
    "chains": 6,
    "pct": 0.02,
    "reason": "no eligible links"
@@ -325,6 +295,36 @@
    "chains": 5,
    "pct": 0.02,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Vice City Survivor",
+   "chains": 4,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "MC Hamper",
+   "chains": 4,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Steven Walsh",
+   "chains": 4,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Andrew Soosay",
+   "chains": 4,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Sweets Van",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -343,7 +343,7 @@
   },
   {
    "title": "Los Santos (HD Universe)",
-   "firstLinks": 198
+   "firstLinks": 200
   },
   {
    "title": "Liberty Tree (HD Universe)",
@@ -363,7 +363,11 @@
   },
   {
    "title": "Niko Bellic",
-   "firstLinks": 141
+   "firstLinks": 142
+  },
+  {
+   "title": "United States of America",
+   "firstLinks": 136
   },
   {
    "title": "Vapid",
@@ -379,19 +383,15 @@
   },
   {
    "title": "Franklin Clinton",
-   "firstLinks": 125
-  },
-  {
-   "title": "United States of America",
-   "firstLinks": 121
+   "firstLinks": 127
   },
   {
    "title": "Los Santos (3D Universe)",
-   "firstLinks": 120
+   "firstLinks": 121
   },
   {
    "title": "Tommy Vercetti",
-   "firstLinks": 111
+   "firstLinks": 112
   },
   {
    "title": "Toni Cipriani",
@@ -418,16 +418,16 @@
    "firstLinks": 99
   },
   {
+   "title": "United Kingdom",
+   "firstLinks": 93
+  },
+  {
    "title": "Hove Beach",
    "firstLinks": 93
   },
   {
-   "title": "United Kingdom",
-   "firstLinks": 92
-  },
-  {
    "title": "Protagonists in GTA (1997 game)",
-   "firstLinks": 87
+   "firstLinks": 89
   },
   {
    "title": "Lucky Wheel",
@@ -438,114 +438,114 @@
    "firstLinks": 84
   },
   {
+   "title": "GTA Online Protagonist",
+   "firstLinks": 83
+  },
+  {
    "title": "Alderney City",
    "firstLinks": 80
   },
   {
-   "title": "Trevor Philips",
-   "firstLinks": 79
-  },
-  {
    "title": "Grand Theft Auto VI/Trailers",
-   "firstLinks": 79
+   "firstLinks": 80
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Protagonist",
-   "chains": 6701
+   "chains": 6789
   },
   {
    "title": "GTA Online Protagonist",
-   "chains": 6701
+   "chains": 6789
   },
   {
    "title": "Canada",
-   "chains": 4998
+   "chains": 5060
   },
   {
    "title": "United States of America",
-   "chains": 4998
+   "chains": 5060
   },
   {
    "title": "Blaine County",
-   "chains": 1965
+   "chains": 2001
   },
   {
    "title": "Los Santos County",
-   "chains": 1965
+   "chains": 2001
   },
   {
    "title": "Missions",
-   "chains": 1548
+   "chains": 1569
   },
   {
    "title": "Los Santos (HD Universe)",
-   "chains": 1421
-  },
-  {
-   "title": "PlayStation 3",
-   "chains": 1351
-  },
-  {
-   "title": "PlayStation 2",
-   "chains": 1351
+   "chains": 1441
   },
   {
    "title": "United Kingdom",
-   "chains": 1328
+   "chains": 1374
   },
   {
    "title": "Scotland",
-   "chains": 1328
+   "chains": 1374
+  },
+  {
+   "title": "PlayStation 3",
+   "chains": 1370
+  },
+  {
+   "title": "PlayStation 2",
+   "chains": 1370
   },
   {
    "title": "Cutscenes",
-   "chains": 1313
+   "chains": 1334
   },
   {
    "title": "Switch Scenes",
-   "chains": 1295
+   "chains": 1316
   },
   {
    "title": "Top-Down Perspective",
-   "chains": 1290
+   "chains": 1311
   },
   {
    "title": "Universes",
-   "chains": 1269
+   "chains": 1290
   },
   {
    "title": "Characters",
-   "chains": 1150
+   "chains": 1155
   },
   {
    "title": "State of Liberty (HD Universe)",
-   "chains": 1116
+   "chains": 1124
   },
   {
    "title": "Pedestrians",
-   "chains": 1112
+   "chains": 1117
   },
   {
    "title": "Algonquin",
-   "chains": 1051
+   "chains": 1054
+  },
+  {
+   "title": "Europe",
+   "chains": 828
   },
   {
    "title": "Declasse",
    "chains": 796
   },
   {
-   "title": "Europe",
-   "chains": 791
-  },
-  {
    "title": "State of Alderney",
-   "chains": 730
+   "chains": 732
   },
   {
    "title": "3D Universe",
-   "chains": 698
+   "chains": 704
   },
   {
    "title": "Police Patrol",
@@ -557,19 +557,19 @@
   },
   {
    "title": "List of Street Names",
-   "chains": 583
+   "chains": 588
   },
   {
    "title": "Races in GTA Online",
-   "chains": 528
+   "chains": 531
   },
   {
    "title": "Broker",
-   "chains": 521
+   "chains": 524
   },
   {
    "title": "Los Santos (3D Universe)",
-   "chains": 508
+   "chains": 510
   }
  ]
 }

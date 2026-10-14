@@ -7,8 +7,8 @@
   "pct": 41.64,
   "deadEnd": 2625,
   "deadEndPct": 58.36,
-  "noLinks": 63,
-  "tooFewLinks": 1681,
+  "noLinks": 62,
+  "tooFewLinks": 1682,
   "unresolvable": 0
  },
  "hopStats": {
@@ -30,9 +30,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 63,
+   "0": 62,
    "1": 252,
-   "2": 1429,
+   "2": 1430,
    "3": 1047,
    "4": 491,
    "5": 317,

@@ -3,11 +3,11 @@
  "rank": "2",
  "nodes": 36164,
  "converge": {
-  "articles": 33684,
-  "pct": 93.14,
-  "deadEnd": 2480,
-  "deadEndPct": 6.86,
-  "noLinks": 439,
+  "articles": 33687,
+  "pct": 93.15,
+  "deadEnd": 2477,
+  "deadEndPct": 6.85,
+  "noLinks": 435,
   "tooFewLinks": 1317,
   "unresolvable": 1
  },
@@ -20,11 +20,11 @@
  "histogram": {
   "0": 911,
   "1": 3146,
-  "2": 5293,
-  "3": 5015,
+  "2": 5294,
+  "3": 5016,
   "4": 3915,
   "5": 3022,
-  "6": 2142,
+  "6": 2143,
   "7": 1567,
   "8": 1058,
   "9": 1219,
@@ -45,7 +45,7 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 440,
+   "0": 436,
    "1": 1317,
    "2": 2978,
    "3": 4691,
@@ -55,19 +55,19 @@
    "7": 2267,
    "8": 1834,
    "9": 1584,
-   "10": 11467
+   "10": 11471
   },
   "atLeast": {
    "1": 98.8,
-   "2": 95.1,
+   "2": 95.2,
    "3": 86.9,
-   "5": 64.2
+   "5": 64.3
   }
  },
  "concentration": {
   "top1Pct": 18.35,
   "top3Pct": 45.53,
-  "top10Pct": 71.65,
+  "top10Pct": 71.66,
   "cycleCount": 443,
   "entropyBits": 4.46
  },
@@ -79,7 +79,7 @@
    "Zaros"
   ],
   "size": 2,
-  "basin": 6636
+  "basin": 6637
  },
  "topAttractors": [
   {
@@ -87,7 +87,7 @@
     "Second Age",
     "Zaros"
    ],
-   "basin": 6636,
+   "basin": 6637,
    "pct": 18.35
   },
   {
@@ -235,7 +235,7 @@
     "Mooring point",
     "Gangplank (Sailing)"
    ],
-   "basin": 180,
+   "basin": 181,
    "pct": 0.5
   },
   {
@@ -244,7 +244,7 @@
     "Yama",
     "Yama's Domain"
    ],
-   "basin": 172,
+   "basin": 173,
    "pct": 0.48
   }
  ],
@@ -466,15 +466,15 @@
  "topThroughTraffic": [
   {
    "title": "Zaros",
-   "chains": 6636
+   "chains": 6637
   },
   {
    "title": "Second Age",
-   "chains": 6636
+   "chains": 6637
   },
   {
    "title": "Third Age",
-   "chains": 6267
+   "chains": 6268
   },
   {
    "title": "Zanaris",
@@ -486,15 +486,15 @@
   },
   {
    "title": "God Wars",
-   "chains": 4674
+   "chains": 4675
   },
   {
    "title": "Gods",
-   "chains": 4623
+   "chains": 4624
   },
   {
    "title": "Zamorak",
-   "chains": 4244
+   "chains": 4245
   },
   {
    "title": "Kinshra",

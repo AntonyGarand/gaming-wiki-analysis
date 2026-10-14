@@ -3,11 +3,11 @@
  "rank": "random",
  "nodes": 14078,
  "converge": {
-  "articles": 8762,
-  "pct": 62.24,
-  "deadEnd": 5316,
-  "deadEndPct": 37.76,
-  "noLinks": 4873,
+  "articles": 8764,
+  "pct": 62.25,
+  "deadEnd": 5314,
+  "deadEndPct": 37.75,
+  "noLinks": 4871,
   "tooFewLinks": 0,
   "unresolvable": 231
  },
@@ -32,7 +32,7 @@
   "11": 304,
   "12": 337,
   "13": 257,
-  "14": 216,
+  "14": 217,
   "15": 201,
   "16": 261,
   "17": 313,
@@ -61,7 +61,7 @@
   "40": 105,
   "41": 82,
   "42": 60,
-  "43": 55,
+  "43": 56,
   "44": 21,
   "45": 29,
   "46": 9,
@@ -70,29 +70,29 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5104,
+   "0": 5102,
    "1": 1380,
    "2": 967,
-   "3": 720,
+   "3": 721,
    "4": 497,
    "5": 447,
    "6": 337,
    "7": 292,
    "8": 308,
    "9": 270,
-   "10": 3756
+   "10": 3757
   },
   "atLeast": {
-   "1": 63.7,
-   "2": 53.9,
+   "1": 63.8,
+   "2": 54,
    "3": 47.1,
    "5": 38.4
   }
  },
  "concentration": {
-  "top1Pct": 22.24,
+  "top1Pct": 22.25,
   "top3Pct": 47.71,
-  "top10Pct": 59.52,
+  "top10Pct": 59.53,
   "cycleCount": 81,
   "entropyBits": 2.77
  },
@@ -104,7 +104,7 @@
    "Mojang.com"
   ],
   "size": 2,
-  "basin": 3131
+  "basin": 3132
  },
  "topAttractors": [
   {
@@ -112,8 +112,8 @@
     "Minecraft.net",
     "Mojang.com"
    ],
-   "basin": 3131,
-   "pct": 22.24
+   "basin": 3132,
+   "pct": 22.25
   },
   {
    "cycle": [
@@ -166,7 +166,7 @@
     "Coal",
     "Coal Ore"
    ],
-   "basin": 305,
+   "basin": 306,
    "pct": 2.17
   },
   {
@@ -502,27 +502,27 @@
  "topThroughTraffic": [
   {
    "title": "Minecraft.net",
-   "chains": 3131
+   "chains": 3132
   },
   {
    "title": "Mojang.com",
-   "chains": 3131
+   "chains": 3132
   },
   {
    "title": "Minecoin",
-   "chains": 3067
+   "chains": 3068
   },
   {
    "title": "Character Creator",
-   "chains": 2651
+   "chains": 2652
   },
   {
    "title": "Marketplace",
-   "chains": 2632
+   "chains": 2633
   },
   {
    "title": "Add-on",
-   "chains": 2578
+   "chains": 2579
   },
   {
    "title": "Smelting",
@@ -590,45 +590,45 @@
   },
   {
    "title": "Identifier",
-   "chains": 2290
+   "chains": 2291
   },
   {
    "title": "Attribute",
-   "chains": 2270
+   "chains": 2271
   },
   {
    "title": "Interaction range",
-   "chains": 2257
+   "chains": 2258
   },
   {
    "title": "Heads-up display",
-   "chains": 2256
+   "chains": 2257
   },
   {
    "title": "Damage",
-   "chains": 2233
+   "chains": 2234
   },
   {
    "title": "Fire Protection",
-   "chains": 1532
+   "chains": 1533
   },
   {
    "title": "Nautilus Armor",
-   "chains": 1528
+   "chains": 1529
   },
   {
    "title": "Nautilus",
-   "chains": 1527
+   "chains": 1528
   }
  ],
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 62.24,
+   "mean": 62.26,
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 21.53,
+   "mean": 21.54,
    "sd": 1.53
   }
  }

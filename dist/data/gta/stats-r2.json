@@ -3,38 +3,38 @@
  "rank": "2",
  "nodes": 24073,
  "converge": {
-  "articles": 15487,
-  "pct": 64.33,
-  "deadEnd": 8586,
-  "deadEndPct": 35.67,
-  "noLinks": 1031,
-  "tooFewLinks": 1601,
-  "unresolvable": 16
+  "articles": 16209,
+  "pct": 67.33,
+  "deadEnd": 7864,
+  "deadEndPct": 32.67,
+  "noLinks": 827,
+  "tooFewLinks": 1655,
+  "unresolvable": 15
  },
  "hopStats": {
-  "mean": 4.18,
+  "mean": 4.14,
   "median": 3,
   "p90": 9,
   "max": 23
  },
  "histogram": {
-  "0": 801,
-  "1": 3274,
-  "2": 2251,
-  "3": 2241,
-  "4": 1313,
-  "5": 1285,
-  "6": 1040,
-  "7": 691,
-  "8": 623,
-  "9": 517,
-  "10": 482,
-  "11": 271,
+  "0": 806,
+  "1": 3364,
+  "2": 2425,
+  "3": 2456,
+  "4": 1396,
+  "5": 1337,
+  "6": 1072,
+  "7": 722,
+  "8": 636,
+  "9": 530,
+  "10": 486,
+  "11": 277,
   "12": 149,
-  "13": 154,
+  "13": 156,
   "14": 126,
-  "15": 101,
-  "16": 53,
+  "15": 102,
+  "16": 54,
   "17": 52,
   "18": 22,
   "19": 23,
@@ -45,41 +45,41 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1047,
-   "1": 1601,
-   "2": 3561,
-   "3": 2434,
-   "4": 2196,
-   "5": 1591,
-   "6": 1320,
-   "7": 1098,
-   "8": 956,
-   "9": 787,
-   "10": 7482
+   "0": 842,
+   "1": 1655,
+   "2": 3614,
+   "3": 2482,
+   "4": 2205,
+   "5": 1596,
+   "6": 1321,
+   "7": 1101,
+   "8": 958,
+   "9": 791,
+   "10": 7508
   },
   "atLeast": {
-   "1": 95.7,
-   "2": 89,
-   "3": 74.2,
-   "5": 55
+   "1": 96.5,
+   "2": 89.6,
+   "3": 74.6,
+   "5": 55.1
   }
  },
  "concentration": {
-  "top1Pct": 8.96,
-  "top3Pct": 24.23,
-  "top10Pct": 40.77,
-  "cycleCount": 387,
-  "entropyBits": 5.4
+  "top1Pct": 9.05,
+  "top3Pct": 24.47,
+  "top10Pct": 42.51,
+  "cycleCount": 389,
+  "entropyBits": 5.43
  },
- "components": 388,
- "cycleCount": 387,
+ "components": 390,
+ "cycleCount": 389,
  "largestCycle": {
   "members": [
    "Tierra Robada",
    "Valle Ocultado"
   ],
   "size": 2,
-  "basin": 2158
+  "basin": 2179
  },
  "topAttractors": [
   {
@@ -87,8 +87,8 @@
     "Tierra Robada",
     "Valle Ocultado"
    ],
-   "basin": 2158,
-   "pct": 8.96
+   "basin": 2179,
+   "pct": 9.05
   },
   {
    "cycle": [
@@ -96,32 +96,32 @@
     "Algonquin",
     "Humboldt River"
    ],
-   "basin": 2157,
-   "pct": 8.96
+   "basin": 2178,
+   "pct": 9.05
   },
   {
    "cycle": [
     "Staunton Island",
     "Phil Cassidy's Fully Cocked Gun Shop"
    ],
-   "basin": 1519,
-   "pct": 6.31
+   "basin": 1534,
+   "pct": 6.37
   },
   {
    "cycle": [
     "Xbox One",
     "PlayStation 4"
    ],
-   "basin": 953,
-   "pct": 3.96
+   "basin": 958,
+   "pct": 3.98
   },
   {
    "cycle": [
     "Franklin Clinton",
     "Short Trips"
    ],
-   "basin": 838,
-   "pct": 3.48
+   "basin": 840,
+   "pct": 3.49
   },
   {
    "cycle": [
@@ -129,8 +129,8 @@
     "Grapeseed",
     "Sandy Shores"
    ],
-   "basin": 631,
-   "pct": 2.62
+   "basin": 645,
+   "pct": 2.68
   },
   {
    "cycle": [
@@ -138,16 +138,25 @@
     "State of Liberty (HD Universe)",
     "Upstate Liberty (HD Universe)"
    ],
-   "basin": 583,
-   "pct": 2.42
+   "basin": 585,
+   "pct": 2.43
+  },
+  {
+   "cycle": [
+    "Grand Theft Auto VI/Screenshots",
+    "GTA VI Website",
+    "Morgan"
+   ],
+   "basin": 572,
+   "pct": 2.38
   },
   {
    "cycle": [
     "Mike Dailly",
     "Race'n'Chase Game Engine"
    ],
-   "basin": 426,
-   "pct": 1.77
+   "basin": 428,
+   "pct": 1.78
   },
   {
    "cycle": [
@@ -163,8 +172,8 @@
     "Offices",
     "Dynasty 8 Executive"
    ],
-   "basin": 236,
-   "pct": 0.98
+   "basin": 238,
+   "pct": 0.99
   },
   {
    "cycle": [
@@ -188,8 +197,8 @@
     "Sweet Johnson",
     "Faizon Love"
    ],
-   "basin": 210,
-   "pct": 0.87
+   "basin": 211,
+   "pct": 0.88
   },
   {
    "cycle": [
@@ -204,8 +213,8 @@
     "Pacific Bluffs",
     "Banham Canyon"
    ],
-   "basin": 174,
-   "pct": 0.72
+   "basin": 177,
+   "pct": 0.74
   },
   {
    "cycle": [
@@ -220,8 +229,8 @@
     "Maverick (3D Universe)",
     "Police Maverick (3D Universe)"
    ],
-   "basin": 158,
-   "pct": 0.66
+   "basin": 162,
+   "pct": 0.67
   },
   {
    "cycle": [
@@ -233,40 +242,26 @@
   },
   {
    "cycle": [
-    "Carl Johnson",
-    "Young Maylay"
-   ],
-   "basin": 144,
-   "pct": 0.6
-  },
-  {
-   "cycle": [
     "Haitians",
     "Vice City Mainland",
     "Little Haiti"
    ],
-   "basin": 143,
-   "pct": 0.59
+   "basin": 145,
+   "pct": 0.6
   }
  ],
  "deadEndTerminals": [
   {
    "title": "PlayStation 2",
-   "chains": 3514,
-   "pct": 14.6,
+   "chains": 3523,
+   "pct": 14.63,
    "reason": "only 1 eligible links"
   },
   {
-   "title": "GTA VI Website",
-   "chains": 566,
-   "pct": 2.35,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Game Boy Color",
-   "chains": 299,
-   "pct": 1.24,
-   "reason": "no eligible links"
+   "chains": 300,
+   "pct": 1.25,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "José Pimsoll",
@@ -276,8 +271,8 @@
   },
   {
    "title": "Physics Engine",
-   "chains": 251,
-   "pct": 1.04,
+   "chains": 254,
+   "pct": 1.06,
    "reason": "no eligible links"
   },
   {
@@ -290,7 +285,7 @@
    "title": "Xbox Series X and Series S",
    "chains": 120,
    "pct": 0.5,
-   "reason": "no eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Vice City Survivor",
@@ -312,7 +307,7 @@
   },
   {
    "title": "Capcom",
-   "chains": 28,
+   "chains": 29,
    "pct": 0.12,
    "reason": "only 1 eligible links"
   },
@@ -337,6 +332,12 @@
   {
    "title": "Eoin Callan",
    "chains": 17,
+   "pct": 0.07,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Shitzu",
+   "chains": 16,
    "pct": 0.07,
    "reason": "only 1 eligible links"
   }
@@ -381,7 +382,7 @@
   },
   {
    "title": "Protagonists in GTA (1997 game)",
-   "firstLinks": 130
+   "firstLinks": 131
   },
   {
    "title": "Protagonist",
@@ -405,7 +406,7 @@
   },
   {
    "title": "Grand Theft Auto VI/Trailers",
-   "firstLinks": 106
+   "firstLinks": 107
   },
   {
    "title": "Franklin Clinton",
@@ -413,7 +414,7 @@
   },
   {
    "title": "Grand Theft Auto VI/Leaks",
-   "firstLinks": 100
+   "firstLinks": 101
   },
   {
    "title": "Carl Johnson",
@@ -436,28 +437,28 @@
    "firstLinks": 77
   },
   {
+   "title": "Blaine County",
+   "firstLinks": 76
+  },
+  {
    "title": "GTA Online: Arena War",
    "firstLinks": 76
   },
   {
-   "title": "Blaine County",
+   "title": "Trevor Philips",
    "firstLinks": 74
+  },
+  {
+   "title": "Money",
+   "firstLinks": 73
   },
   {
    "title": "Weazelnews.com",
    "firstLinks": 73
   },
   {
-   "title": "Trevor Philips",
-   "firstLinks": 73
-  },
-  {
    "title": "Eyefind",
    "firstLinks": 73
-  },
-  {
-   "title": "Money",
-   "firstLinks": 72
   },
   {
    "title": "PlayStation 4",
@@ -467,95 +468,95 @@
  "topThroughTraffic": [
   {
    "title": "PlayStation 2",
-   "chains": 3514
+   "chains": 3523
   },
   {
    "title": "Grand Theft Auto: Vice City",
-   "chains": 3340
+   "chains": 3346
   },
   {
    "title": "Tierra Robada",
-   "chains": 2158
+   "chains": 2179
   },
   {
    "title": "Valle Ocultado",
-   "chains": 2158
+   "chains": 2179
   },
   {
    "title": "Algonquin",
-   "chains": 2157
+   "chains": 2178
   },
   {
    "title": "Broker",
-   "chains": 2157
+   "chains": 2178
   },
   {
    "title": "Humboldt River",
-   "chains": 2157
+   "chains": 2178
   },
   {
    "title": "Bone County (3D Universe)",
-   "chains": 2108
+   "chains": 2129
   },
   {
    "title": "Red County (3D Universe)",
-   "chains": 2072
+   "chains": 2093
   },
   {
    "title": "Wade Johnson",
-   "chains": 1930
+   "chains": 1935
   },
   {
    "title": "Communication",
-   "chains": 1929
+   "chains": 1934
   },
   {
    "title": "Carjacking",
-   "chains": 1926
+   "chains": 1931
   },
   {
    "title": "Rockstar Games Social Club",
-   "chains": 1920
+   "chains": 1925
   },
   {
    "title": "Flint County (3D Universe)",
-   "chains": 1842
-  },
-  {
-   "title": "Niko Bellic",
-   "chains": 1836
+   "chains": 1861
   },
   {
    "title": "Los Santos (3D Universe)",
-   "chains": 1828
+   "chains": 1847
+  },
+  {
+   "title": "Niko Bellic",
+   "chains": 1840
   },
   {
    "title": "Mario D'Leon",
-   "chains": 1565
+   "chains": 1569
   },
   {
    "title": "Luis Fernando Lopez",
-   "chains": 1564
+   "chains": 1568
   },
   {
    "title": "Protagonist",
-   "chains": 1540
+   "chains": 1544
   },
   {
    "title": "Staunton Island",
-   "chains": 1519
+   "chains": 1534
   },
   {
    "title": "Phil Cassidy's Fully Cocked Gun Shop",
-   "chains": 1519
+   "chains": 1534
   },
   {
    "title": "Apple iOS",
-   "chains": 1403
+   "chains": 1404
   },
   {
    "title": "Los Santos (HD Universe)",
-   "chains": 1350
+   "chains": 1369
   },
   {
    "title": "Molotov Cocktails",
@@ -575,15 +576,15 @@
   },
   {
    "title": "Love Media Building",
-   "chains": 1311
+   "chains": 1324
   },
   {
    "title": "Love Media",
-   "chains": 1215
+   "chains": 1225
   },
   {
    "title": "Head Radio (3D Universe)",
-   "chains": 1211
+   "chains": 1221
   }
  ]
 }

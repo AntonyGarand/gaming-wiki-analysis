@@ -3,25 +3,25 @@
  "rank": "5",
  "nodes": 35312,
  "converge": {
-  "articles": 2111,
-  "pct": 5.98,
-  "deadEnd": 33201,
-  "deadEndPct": 94.02,
-  "noLinks": 2240,
-  "tooFewLinks": 22024,
-  "unresolvable": 17
+  "articles": 2118,
+  "pct": 6,
+  "deadEnd": 33194,
+  "deadEndPct": 94,
+  "noLinks": 2163,
+  "tooFewLinks": 22066,
+  "unresolvable": 9
  },
  "hopStats": {
-  "mean": 2.53,
+  "mean": 2.52,
   "median": 2,
   "p90": 5,
   "max": 10
  },
  "histogram": {
   "0": 260,
-  "1": 580,
-  "2": 423,
-  "3": 167,
+  "1": 582,
+  "2": 426,
+  "3": 169,
   "4": 342,
   "5": 164,
   "6": 93,
@@ -32,23 +32,23 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2257,
-   "1": 1264,
-   "2": 7398,
-   "3": 9015,
-   "4": 4347,
-   "5": 2402,
-   "6": 1375,
-   "7": 876,
-   "8": 630,
-   "9": 510,
-   "10": 5238
+   "0": 2172,
+   "1": 1279,
+   "2": 7410,
+   "3": 9022,
+   "4": 4355,
+   "5": 2411,
+   "6": 1380,
+   "7": 882,
+   "8": 637,
+   "9": 512,
+   "10": 5252
   },
   "atLeast": {
-   "1": 93.6,
-   "2": 90,
-   "3": 69.1,
-   "5": 31.2
+   "1": 93.8,
+   "2": 90.2,
+   "3": 69.2,
+   "5": 31.4
   }
  },
  "concentration": {
@@ -56,7 +56,7 @@
   "top3Pct": 3.21,
   "top10Pct": 4.61,
   "cycleCount": 128,
-  "entropyBits": 4.17
+  "entropyBits": 4.18
  },
  "components": 129,
  "cycleCount": 128,
@@ -114,7 +114,7 @@
     "Heavy Shotgun",
     "Backbreaker"
    ],
-   "basin": 91,
+   "basin": 92,
    "pct": 0.26
   },
   {
@@ -247,8 +247,8 @@
   },
   {
    "title": "King Me",
-   "chains": 296,
-   "pct": 0.84,
+   "chains": 299,
+   "pct": 0.85,
    "reason": "only 3 eligible links"
   },
   {
@@ -259,13 +259,13 @@
   },
   {
    "title": "Checkpoint Reload",
-   "chains": 174,
-   "pct": 0.49,
+   "chains": 175,
+   "pct": 0.5,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Storm Shield",
-   "chains": 161,
+   "chains": 162,
    "pct": 0.46,
    "reason": "only 4 eligible links"
   },
@@ -277,7 +277,7 @@
   },
   {
    "title": "Grenade",
-   "chains": 141,
+   "chains": 142,
    "pct": 0.4,
    "reason": "only 3 eligible links"
   },
@@ -307,8 +307,8 @@
   },
   {
    "title": "Pistols",
-   "chains": 107,
-   "pct": 0.3,
+   "chains": 108,
+   "pct": 0.31,
    "reason": "only 3 eligible links"
   },
   {
@@ -490,15 +490,15 @@
   },
   {
    "title": "King Me",
-   "chains": 296
+   "chains": 299
   },
   {
    "title": "Mythic Storm King",
-   "chains": 294
+   "chains": 297
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 289
+   "chains": 292
   },
   {
    "title": "High Stakes Challenges",
@@ -518,7 +518,7 @@
   },
   {
    "title": "Checkpoint Reload",
-   "chains": 174
+   "chains": 175
   },
   {
    "title": "Lobby Music",
@@ -538,7 +538,7 @@
   },
   {
    "title": "Storm Shield",
-   "chains": 161
+   "chains": 162
   },
   {
    "title": "Thunderbolt of Zeus",
@@ -554,7 +554,7 @@
   },
   {
    "title": "Homebase",
-   "chains": 145
+   "chains": 146
   },
   {
    "title": "Fortnite Crew",

@@ -3,71 +3,71 @@
  "rank": "2",
  "nodes": 35312,
  "converge": {
-  "articles": 31341,
-  "pct": 88.75,
-  "deadEnd": 3971,
-  "deadEndPct": 11.25,
-  "noLinks": 2240,
-  "tooFewLinks": 1264,
-  "unresolvable": 17
+  "articles": 31415,
+  "pct": 88.96,
+  "deadEnd": 3897,
+  "deadEndPct": 11.04,
+  "noLinks": 2163,
+  "tooFewLinks": 1279,
+  "unresolvable": 9
  },
  "hopStats": {
-  "mean": 4.58,
+  "mean": 4.57,
   "median": 5,
   "p90": 6,
   "max": 11
  },
  "histogram": {
-  "0": 82,
-  "1": 1287,
-  "2": 3498,
-  "3": 1609,
-  "4": 427,
-  "5": 18941,
-  "6": 4872,
-  "7": 396,
-  "8": 164,
+  "0": 90,
+  "1": 1293,
+  "2": 3512,
+  "3": 1620,
+  "4": 432,
+  "5": 18944,
+  "6": 4885,
+  "7": 409,
+  "8": 165,
   "9": 49,
   "10": 15,
   "11": 1
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2257,
-   "1": 1264,
-   "2": 7398,
-   "3": 9015,
-   "4": 4347,
-   "5": 2402,
-   "6": 1375,
-   "7": 876,
-   "8": 630,
-   "9": 510,
-   "10": 5238
+   "0": 2172,
+   "1": 1279,
+   "2": 7410,
+   "3": 9022,
+   "4": 4355,
+   "5": 2411,
+   "6": 1380,
+   "7": 882,
+   "8": 637,
+   "9": 512,
+   "10": 5252
   },
   "atLeast": {
-   "1": 93.6,
-   "2": 90,
-   "3": 69.1,
-   "5": 31.2
+   "1": 93.8,
+   "2": 90.2,
+   "3": 69.2,
+   "5": 31.4
   }
  },
  "concentration": {
-  "top1Pct": 81.42,
-  "top3Pct": 87.86,
-  "top10Pct": 88.43,
-  "cycleCount": 37,
-  "entropyBits": 0.57
+  "top1Pct": 81.5,
+  "top3Pct": 88.02,
+  "top10Pct": 88.6,
+  "cycleCount": 41,
+  "entropyBits": 0.58
  },
- "components": 38,
- "cycleCount": 37,
+ "components": 42,
+ "cycleCount": 41,
  "largestCycle": {
   "members": [
    "Victory Royale",
    "Lobby Music"
   ],
   "size": 2,
-  "basin": 28750
+  "basin": 28781
  },
  "topAttractors": [
   {
@@ -75,8 +75,8 @@
     "Victory Royale",
     "Lobby Music"
    ],
-   "basin": 28750,
-   "pct": 81.42
+   "basin": 28781,
+   "pct": 81.5
   },
   {
    "cycle": [
@@ -84,15 +84,15 @@
     "Heroes",
     "Soldiers"
    ],
-   "basin": 1481,
-   "pct": 4.19
+   "basin": 1506,
+   "pct": 4.26
   },
   {
    "cycle": [
     "Cosmetic Items",
     "Battle Pass"
    ],
-   "basin": 794,
+   "basin": 796,
    "pct": 2.25
   },
   {
@@ -104,8 +104,8 @@
     "Update v37.10",
     "Update v37.50"
    ],
-   "basin": 67,
-   "pct": 0.19
+   "basin": 70,
+   "pct": 0.2
   },
   {
    "cycle": [
@@ -242,8 +242,8 @@
  "deadEndTerminals": [
   {
    "title": "Update v42.30",
-   "chains": 77,
-   "pct": 0.22,
+   "chains": 85,
+   "pct": 0.24,
    "reason": "only 1 eligible links"
   },
   {
@@ -271,6 +271,12 @@
    "reason": "only 1 eligible links"
   },
   {
+   "title": "Content Update v6.30",
+   "chains": 16,
+   "pct": 0.05,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Venture XP",
    "chains": 15,
    "pct": 0.04,
@@ -278,9 +284,9 @@
   },
   {
    "title": "Creative Showcases",
-   "chains": 12,
-   "pct": 0.03,
-   "reason": "no eligible links"
+   "chains": 13,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Utility Items",
@@ -307,18 +313,6 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Content Update v6.30",
-   "chains": 8,
-   "pct": 0.02,
-   "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Update v6.21",
-   "chains": 8,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Update v4.0",
    "chains": 8,
    "pct": 0.02,
@@ -329,6 +323,12 @@
    "chains": 7,
    "pct": 0.02,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Striker",
+   "chains": 7,
+   "pct": 0.02,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -457,47 +457,47 @@
  "topThroughTraffic": [
   {
    "title": "Victory Royale",
-   "chains": 28750
+   "chains": 28781
   },
   {
    "title": "Lobby Music",
-   "chains": 28750
+   "chains": 28781
   },
   {
    "title": "Fortnite: Battle Royale",
-   "chains": 28470
+   "chains": 28501
   },
   {
    "title": "Rust Lord",
-   "chains": 24089
+   "chains": 24113
   },
   {
    "title": "Unreal Engine",
-   "chains": 24088
+   "chains": 24112
   },
   {
    "title": "Fortnite",
-   "chains": 24047
+   "chains": 24071
   },
   {
    "title": "Heroes",
-   "chains": 1481
+   "chains": 1506
   },
   {
    "title": "Soldiers",
-   "chains": 1481
+   "chains": 1506
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 1481
+   "chains": 1506
   },
   {
    "title": "Battle Pass",
-   "chains": 794
+   "chains": 796
   },
   {
    "title": "Cosmetic Items",
-   "chains": 794
+   "chains": 796
   },
   {
    "title": "Duos",
@@ -517,7 +517,7 @@
   },
   {
    "title": "Outfits",
-   "chains": 140
+   "chains": 142
   },
   {
    "title": "Fortnite Festival",
@@ -532,6 +532,10 @@
    "chains": 88
   },
   {
+   "title": "Update v42.30",
+   "chains": 85
+  },
+  {
    "title": "Gutbomb",
    "chains": 82
   },
@@ -544,11 +548,23 @@
    "chains": 80
   },
   {
-   "title": "Update v42.30",
-   "chains": 77
+   "title": "Update v42.20",
+   "chains": 80
+  },
+  {
+   "title": "Update v42.10",
+   "chains": 79
   },
   {
    "title": "Chest",
+   "chains": 78
+  },
+  {
+   "title": "Update v42.00",
+   "chains": 78
+  },
+  {
+   "title": "Update v41.30",
    "chains": 76
   },
   {
@@ -556,24 +572,8 @@
    "chains": 73
   },
   {
-   "title": "Update v42.20",
+   "title": "Update v41.20",
    "chains": 72
-  },
-  {
-   "title": "Update v42.10",
-   "chains": 71
-  },
-  {
-   "title": "Update v42.00",
-   "chains": 70
-  },
-  {
-   "title": "Update v41.30",
-   "chains": 68
-  },
-  {
-   "title": "Update v36.10",
-   "chains": 67
   }
  ]
 }

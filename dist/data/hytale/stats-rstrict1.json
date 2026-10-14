@@ -3,11 +3,11 @@
  "rank": "strict1",
  "nodes": 4498,
  "converge": {
-  "articles": 4262,
-  "pct": 94.75,
-  "deadEnd": 236,
-  "deadEndPct": 5.25,
-  "noLinks": 63,
+  "articles": 4263,
+  "pct": 94.78,
+  "deadEnd": 235,
+  "deadEndPct": 5.22,
+  "noLinks": 62,
   "tooFewLinks": 0,
   "unresolvable": 0
  },
@@ -21,7 +21,7 @@
   "0": 28,
   "1": 569,
   "2": 468,
-  "3": 322,
+  "3": 323,
   "4": 554,
   "5": 589,
   "6": 1221,
@@ -33,9 +33,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 63,
+   "0": 62,
    "1": 252,
-   "2": 1429,
+   "2": 1430,
    "3": 1047,
    "4": 491,
    "5": 317,
@@ -53,9 +53,9 @@
   }
  },
  "concentration": {
-  "top1Pct": 45.78,
-  "top3Pct": 74.99,
-  "top10Pct": 94.55,
+  "top1Pct": 45.8,
+  "top3Pct": 75.01,
+  "top10Pct": 94.58,
   "cycleCount": 14,
   "entropyBits": 2.17
  },
@@ -67,7 +67,7 @@
    "Gamemode"
   ],
   "size": 2,
-  "basin": 2059
+  "basin": 2060
  },
  "topAttractors": [
   {
@@ -75,8 +75,8 @@
     "Adventure Mode",
     "Gamemode"
    ],
-   "basin": 2059,
-   "pct": 45.78
+   "basin": 2060,
+   "pct": 45.8
   },
   {
    "cycle": [
@@ -209,12 +209,6 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Cat",
-   "chains": 1,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Wood Case",
    "chains": 1,
    "pct": 0.02,
@@ -270,6 +264,12 @@
   },
   {
    "title": "Launcher 2026.01.10",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Launcher 2026.01.11",
    "chains": 1,
    "pct": 0.02,
    "reason": "no eligible links"
@@ -401,19 +401,19 @@
  "topThroughTraffic": [
   {
    "title": "Adventure Mode",
-   "chains": 2059
+   "chains": 2060
   },
   {
    "title": "Gamemode",
-   "chains": 2059
+   "chains": 2060
   },
   {
    "title": "Alterverses",
-   "chains": 1866
+   "chains": 1867
   },
   {
    "title": "Orbis",
-   "chains": 1865
+   "chains": 1866
   },
   {
    "title": "Tool",

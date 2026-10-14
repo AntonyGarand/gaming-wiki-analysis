@@ -3,16 +3,16 @@
  "rank": "last",
  "nodes": 36164,
  "converge": {
-  "articles": 35676,
-  "pct": 98.65,
-  "deadEnd": 488,
-  "deadEndPct": 1.35,
-  "noLinks": 439,
+  "articles": 35682,
+  "pct": 98.67,
+  "deadEnd": 482,
+  "deadEndPct": 1.33,
+  "noLinks": 435,
   "tooFewLinks": 0,
   "unresolvable": 1
  },
  "hopStats": {
-  "mean": 10.77,
+  "mean": 10.78,
   "median": 8,
   "p90": 26,
   "max": 44
@@ -29,10 +29,10 @@
   "8": 1468,
   "9": 1175,
   "10": 1150,
-  "11": 1165,
-  "12": 1109,
-  "13": 964,
-  "14": 978,
+  "11": 1166,
+  "12": 1110,
+  "13": 965,
+  "14": 979,
   "15": 1105,
   "16": 973,
   "17": 788,
@@ -47,9 +47,9 @@
   "26": 1184,
   "27": 617,
   "28": 684,
-  "29": 358,
+  "29": 359,
   "30": 202,
-  "31": 132,
+  "31": 133,
   "32": 135,
   "33": 92,
   "34": 170,
@@ -66,7 +66,7 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 440,
+   "0": 436,
    "1": 1317,
    "2": 2978,
    "3": 4691,
@@ -76,21 +76,21 @@
    "7": 2267,
    "8": 1834,
    "9": 1584,
-   "10": 11467
+   "10": 11471
   },
   "atLeast": {
    "1": 98.8,
-   "2": 95.1,
+   "2": 95.2,
    "3": 86.9,
-   "5": 64.2
+   "5": 64.3
   }
  },
  "concentration": {
-  "top1Pct": 18.18,
-  "top3Pct": 47.64,
-  "top10Pct": 73.37,
+  "top1Pct": 18.19,
+  "top3Pct": 47.66,
+  "top10Pct": 73.39,
   "cycleCount": 785,
-  "entropyBits": 4.87
+  "entropyBits": 4.86
  },
  "components": 786,
  "cycleCount": 785,
@@ -100,7 +100,7 @@
    "Slayer/Level up table"
   ],
   "size": 2,
-  "basin": 6576
+  "basin": 6578
  },
  "topAttractors": [
   {
@@ -108,16 +108,16 @@
     "Thieving/Level up table",
     "Slayer/Level up table"
    ],
-   "basin": 6576,
-   "pct": 18.18
+   "basin": 6578,
+   "pct": 18.19
   },
   {
    "cycle": [
     "My Arm",
     "Mod Ash"
    ],
-   "basin": 6064,
-   "pct": 16.77
+   "basin": 6068,
+   "pct": 16.78
   },
   {
    "cycle": [
@@ -317,18 +317,6 @@
    "reason": "no eligible links"
   },
   {
-   "title": "List of sound IDs",
-   "chains": 2,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Port Wizard Paulie",
-   "chains": 2,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Welcome Screen/Message of the week/2026",
    "chains": 2,
    "pct": 0.01,
@@ -354,6 +342,18 @@
   },
   {
    "title": "Legs slot table",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "SARADOMIN TEAM CLOAK",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "SARADOMIN TEAM HOOD",
    "chains": 1,
    "pct": 0,
    "reason": "no eligible links"
@@ -485,103 +485,103 @@
  "topThroughTraffic": [
   {
    "title": "Slayer/Level up table",
-   "chains": 6576
+   "chains": 6578
   },
   {
    "title": "Thieving/Level up table",
-   "chains": 6576
+   "chains": 6578
   },
   {
    "title": "My Arm",
-   "chains": 6064
+   "chains": 6068
   },
   {
    "title": "Mod Ash",
-   "chains": 6064
+   "chains": 6068
   },
   {
    "title": "Zul-Areth",
-   "chains": 5079
+   "chains": 5081
   },
   {
    "title": "Mod Ghost",
-   "chains": 5078
+   "chains": 5080
   },
   {
    "title": "Great Kourend",
-   "chains": 5077
+   "chains": 5079
   },
   {
    "title": "Talkasti",
-   "chains": 4961
+   "chains": 4963
   },
   {
    "title": "Tempestus",
-   "chains": 4960
+   "chains": 4962
   },
   {
    "title": "Teoki",
-   "chains": 4958
+   "chains": 4960
   },
   {
    "title": "Minimus",
-   "chains": 4955
+   "chains": 4957
   },
   {
    "title": "Sunfire splinters",
-   "chains": 4953
+   "chains": 4955
   },
   {
    "title": "Fortis Colosseum",
-   "chains": 4949
+   "chains": 4951
   },
   {
    "title": "Scorpion (Varlamore)",
-   "chains": 4874
+   "chains": 4876
   },
   {
    "title": "Scorpion",
-   "chains": 4873
+   "chains": 4875
   },
   {
    "title": "Ardougne Zoo",
-   "chains": 4872
+   "chains": 4874
   },
   {
    "title": "The Shaikahan",
-   "chains": 4861
+   "chains": 4863
   },
   {
    "title": "Jungle Troubles",
-   "chains": 4809
+   "chains": 4811
   },
   {
    "title": "Karamja",
-   "chains": 4808
+   "chains": 4810
   },
   {
    "title": "Poison karambwan",
-   "chains": 4776
+   "chains": 4778
   },
   {
    "title": "Chasm of Tears",
-   "chains": 4774
+   "chains": 4776
   },
   {
    "title": "Lumbridge Swamp Caves",
-   "chains": 4770
+   "chains": 4772
   },
   {
    "title": "Fire of Eternal Light",
-   "chains": 4766
+   "chains": 4768
   },
   {
    "title": "Construction/Level up table",
-   "chains": 4760
+   "chains": 4762
   },
   {
    "title": "Construction",
-   "chains": 4759
+   "chains": 4761
   },
   {
    "title": "Theatre of Blood",

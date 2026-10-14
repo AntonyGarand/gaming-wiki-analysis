@@ -3,11 +3,11 @@
  "rank": "3",
  "nodes": 14078,
  "converge": {
-  "articles": 6180,
-  "pct": 43.9,
-  "deadEnd": 7898,
-  "deadEndPct": 56.1,
-  "noLinks": 4873,
+  "articles": 6182,
+  "pct": 43.91,
+  "deadEnd": 7896,
+  "deadEndPct": 56.09,
+  "noLinks": 4871,
   "tooFewLinks": 2347,
   "unresolvable": 231
  },
@@ -27,9 +27,9 @@
   "6": 491,
   "7": 576,
   "8": 692,
-  "9": 549,
+  "9": 550,
   "10": 464,
-  "11": 311,
+  "11": 312,
   "12": 190,
   "13": 166,
   "14": 104,
@@ -41,29 +41,29 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5104,
+   "0": 5102,
    "1": 1380,
    "2": 967,
-   "3": 720,
+   "3": 721,
    "4": 497,
    "5": 447,
    "6": 337,
    "7": 292,
    "8": 308,
    "9": 270,
-   "10": 3756
+   "10": 3757
   },
   "atLeast": {
-   "1": 63.7,
-   "2": 53.9,
+   "1": 63.8,
+   "2": 54,
    "3": 47.1,
    "5": 38.4
   }
  },
  "concentration": {
-  "top1Pct": 21.3,
-  "top3Pct": 32.9,
-  "top10Pct": 39.36,
+  "top1Pct": 21.31,
+  "top3Pct": 32.92,
+  "top10Pct": 39.37,
   "cycleCount": 72,
   "entropyBits": 2.86
  },
@@ -75,7 +75,7 @@
    "End portal"
   ],
   "size": 2,
-  "basin": 2998
+  "basin": 3000
  },
  "topAttractors": [
   {
@@ -83,8 +83,8 @@
     "Stronghold",
     "End portal"
    ],
-   "basin": 2998,
-   "pct": 21.3
+   "basin": 3000,
+   "pct": 21.31
   },
   {
    "cycle": [
@@ -461,19 +461,19 @@
  "topThroughTraffic": [
   {
    "title": "Stronghold",
-   "chains": 2998
+   "chains": 3000
   },
   {
    "title": "End portal",
-   "chains": 2998
+   "chains": 3000
   },
   {
    "title": "Ladder",
-   "chains": 2992
+   "chains": 2994
   },
   {
    "title": "Block",
-   "chains": 2990
+   "chains": 2992
   },
   {
    "title": "Difficulty",
@@ -489,23 +489,23 @@
   },
   {
    "title": "Crafting",
-   "chains": 1282
+   "chains": 1283
   },
   {
    "title": "Item repair",
-   "chains": 1169
+   "chains": 1170
   },
   {
    "title": "Tool",
-   "chains": 1167
+   "chains": 1168
   },
   {
    "title": "Drops",
-   "chains": 824
+   "chains": 825
   },
   {
    "title": "Mob",
-   "chains": 780
+   "chains": 781
   },
   {
    "title": "Overworld",

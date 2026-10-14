@@ -3,92 +3,94 @@
  "rank": "last",
  "nodes": 79761,
  "converge": {
-  "articles": 68790,
-  "pct": 86.25,
-  "deadEnd": 10971,
-  "deadEndPct": 13.75,
-  "noLinks": 1895,
+  "articles": 71609,
+  "pct": 89.78,
+  "deadEnd": 8152,
+  "deadEndPct": 10.22,
+  "noLinks": 1250,
   "tooFewLinks": 0,
-  "unresolvable": 3
+  "unresolvable": 4
  },
  "hopStats": {
-  "mean": 8.46,
+  "mean": 9.12,
   "median": 7,
-  "p90": 19,
-  "max": 39
+  "p90": 20,
+  "max": 41
  },
  "histogram": {
-  "0": 3177,
-  "1": 5936,
-  "2": 6100,
-  "3": 6001,
-  "4": 4205,
-  "5": 4483,
-  "6": 3716,
-  "7": 3804,
-  "8": 2977,
-  "9": 2580,
-  "10": 2969,
-  "11": 2811,
-  "12": 2761,
-  "13": 1976,
-  "14": 1822,
-  "15": 1540,
-  "16": 1265,
-  "17": 1739,
-  "18": 1386,
-  "19": 1546,
-  "20": 1151,
-  "21": 908,
-  "22": 1053,
-  "23": 568,
-  "24": 854,
-  "25": 419,
-  "26": 306,
-  "27": 216,
-  "28": 102,
-  "29": 66,
-  "30": 181,
-  "31": 79,
-  "32": 51,
-  "33": 30,
-  "34": 6,
-  "35": 2,
-  "36": 1,
-  "37": 1,
-  "38": 1,
-  "39": 1
+  "0": 3181,
+  "1": 5963,
+  "2": 6167,
+  "3": 6053,
+  "4": 4232,
+  "5": 4519,
+  "6": 3761,
+  "7": 3830,
+  "8": 3006,
+  "9": 2667,
+  "10": 3011,
+  "11": 2831,
+  "12": 2779,
+  "13": 2013,
+  "14": 1845,
+  "15": 1558,
+  "16": 1287,
+  "17": 1772,
+  "18": 1401,
+  "19": 1553,
+  "20": 1210,
+  "21": 953,
+  "22": 1136,
+  "23": 615,
+  "24": 902,
+  "25": 521,
+  "26": 377,
+  "27": 347,
+  "28": 400,
+  "29": 264,
+  "30": 399,
+  "31": 214,
+  "32": 109,
+  "33": 82,
+  "34": 62,
+  "35": 162,
+  "36": 101,
+  "37": 164,
+  "38": 85,
+  "39": 56,
+  "40": 18,
+  "41": 3
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1898,
-   "1": 6132,
-   "2": 10227,
-   "3": 10045,
-   "4": 9422,
-   "5": 7596,
-   "6": 5666,
-   "7": 4239,
-   "8": 3570,
-   "9": 2893,
-   "10": 18073
+   "0": 1254,
+   "1": 6157,
+   "2": 10279,
+   "3": 10155,
+   "4": 9509,
+   "5": 7658,
+   "6": 5718,
+   "7": 4270,
+   "8": 3594,
+   "9": 2911,
+   "10": 18256
   },
   "atLeast": {
-   "1": 97.6,
-   "2": 89.9,
-   "3": 77.1,
-   "5": 52.7
+   "1": 98.4,
+   "2": 90.7,
+   "3": 77.8,
+   "5": 53.2
   }
  },
  "concentration": {
-  "top1Pct": 26.66,
-  "top3Pct": 36.45,
-  "top10Pct": 57.48,
-  "cycleCount": 1549,
-  "entropyBits": 5.17
+  "top1Pct": 26.88,
+  "top3Pct": 39.41,
+  "top10Pct": 60.66,
+  "cycleCount": 1551,
+  "entropyBits": 5.13
  },
- "components": 1550,
- "cycleCount": 1549,
+ "components": 1552,
+ "cycleCount": 1551,
  "largestCycle": {
   "members": [
    "Grand Exchange",
@@ -109,7 +111,7 @@
    "Raffle barker"
   ],
   "size": 16,
-  "basin": 21265
+  "basin": 21439
  },
  "topAttractors": [
   {
@@ -131,32 +133,32 @@
     "Circus barker",
     "Raffle barker"
    ],
-   "basin": 21265,
-   "pct": 26.66
+   "basin": 21439,
+   "pct": 26.88
   },
   {
    "cycle": [
     "Necromancy cape",
     "Hooded necromancy cape"
    ],
-   "basin": 3959,
-   "pct": 4.96
+   "basin": 6119,
+   "pct": 7.67
   },
   {
    "cycle": [
     "Orlando Smith's hat",
     "Adam Antite"
    ],
-   "basin": 3847,
-   "pct": 4.82
+   "basin": 3879,
+   "pct": 4.86
   },
   {
    "cycle": [
     "Zamorak, Lord of Chaos",
     "Demon Slayer"
    ],
-   "basin": 3638,
-   "pct": 4.56
+   "basin": 3661,
+   "pct": 4.59
   },
   {
    "cycle": [
@@ -164,24 +166,24 @@
     "Pride event",
     "Mod North"
    ],
-   "basin": 3504,
-   "pct": 4.39
+   "basin": 3534,
+   "pct": 4.43
   },
   {
    "cycle": [
     "Priest in Peril",
     "Lycurgus"
    ],
-   "basin": 2451,
-   "pct": 3.07
+   "basin": 2456,
+   "pct": 3.08
   },
   {
    "cycle": [
     "Jagex Moderator",
     "Throne of Fame"
    ],
-   "basin": 2034,
-   "pct": 2.55
+   "basin": 2085,
+   "pct": 2.61
   },
   {
    "cycle": [
@@ -189,8 +191,8 @@
     "Omni-talisman",
     "Soul altar"
    ],
-   "basin": 1876,
-   "pct": 2.35
+   "basin": 1915,
+   "pct": 2.4
   },
   {
    "cycle": [
@@ -199,15 +201,15 @@
     "Escape",
     "Lectern (Anachronia)"
    ],
-   "basin": 1713,
-   "pct": 2.15
+   "basin": 1729,
+   "pct": 2.17
   },
   {
    "cycle": [
     "Treasure Hunter",
     "Wicked hood teleport token"
    ],
-   "basin": 1563,
+   "basin": 1567,
    "pct": 1.96
   },
   {
@@ -215,32 +217,32 @@
     "Cold Front",
     "Queen of Snow"
    ],
-   "basin": 1549,
-   "pct": 1.94
+   "basin": 1562,
+   "pct": 1.96
   },
   {
    "cycle": [
     "Combat pure",
     "Skill pure/10 HP"
    ],
-   "basin": 1462,
-   "pct": 1.83
+   "basin": 1468,
+   "pct": 1.84
   },
   {
    "cycle": [
     "Solomon's General Store",
     "July Sale"
    ],
-   "basin": 1200,
-   "pct": 1.5
+   "basin": 1202,
+   "pct": 1.51
   },
   {
    "cycle": [
     "Upcoming updates",
     "Updates"
    ],
-   "basin": 1037,
-   "pct": 1.3
+   "basin": 1046,
+   "pct": 1.31
   },
   {
    "cycle": [
@@ -248,7 +250,7 @@
     "God Wars Dungeon",
     "Pernix armour"
    ],
-   "basin": 998,
+   "basin": 1001,
    "pct": 1.25
   },
   {
@@ -256,8 +258,8 @@
     "Blooming Burrow",
     "Carrot sword in the stone"
    ],
-   "basin": 864,
-   "pct": 1.08
+   "basin": 869,
+   "pct": 1.09
   },
   {
    "cycle": [
@@ -274,37 +276,31 @@
     "Edvard",
     "Shell-Shocked"
    ],
-   "basin": 567,
-   "pct": 0.71
+   "basin": 573,
+   "pct": 0.72
   },
   {
    "cycle": [
     "List of quests and miniquests by timeline",
     "List of miniquests by timeline"
    ],
-   "basin": 472,
-   "pct": 0.59
+   "basin": 476,
+   "pct": 0.6
   },
   {
    "cycle": [
-    "Provoke",
-    "Natural Instinct"
+    "Neal",
+    "Mozzie"
    ],
-   "basin": 450,
-   "pct": 0.56
+   "basin": 457,
+   "pct": 0.57
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Construction/Level up table",
-   "chains": 5834,
-   "pct": 7.31,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Clan Admin Messages",
-   "chains": 2078,
-   "pct": 2.61,
+   "chains": 5891,
+   "pct": 7.39,
    "reason": "no eligible links"
   },
   {
@@ -320,27 +316,9 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Repressed",
-   "chains": 63,
-   "pct": 0.08,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Minimum XP for each total level",
    "chains": 45,
    "pct": 0.06,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Points of No Return",
-   "chains": 22,
-   "pct": 0.03,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Weave Come a Long Way",
-   "chains": 18,
-   "pct": 0.02,
    "reason": "no eligible links"
   },
   {
@@ -362,20 +340,8 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Pick All",
-   "chains": 6,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Bane crossbow (unstrung)",
    "chains": 5,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Fruit of the Loom",
-   "chains": 4,
    "pct": 0.01,
    "reason": "no eligible links"
   },
@@ -384,13 +350,49 @@
    "chains": 4,
    "pct": 0.01,
    "reason": "redlink target"
+  },
+  {
+   "title": "Post-quest rewards",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Tiny spiky iron salvage",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Huge spiky orikalkum salvage",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Alex Calvin",
+   "chains": 3,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Mod Lor",
+   "chains": 3,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Small bladed rune salvage",
+   "chains": 3,
+   "pct": 0,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
   {
    "title": "Player-owned house",
-   "firstLinks": 1097
+   "firstLinks": 1099
   },
   {
    "title": "Buffs and debuffs",
@@ -430,7 +432,7 @@
   },
   {
    "title": "Grand Exchange",
-   "firstLinks": 386
+   "firstLinks": 388
   },
   {
    "title": "Treasure Hunter",
@@ -446,7 +448,7 @@
   },
   {
    "title": "Daemonheim",
-   "firstLinks": 322
+   "firstLinks": 323
   },
   {
    "title": "Solomon's General Store",
@@ -474,11 +476,15 @@
   },
   {
    "title": "Wilderness",
-   "firstLinks": 214
+   "firstLinks": 216
   },
   {
    "title": "Free-to-play",
-   "firstLinks": 203
+   "firstLinks": 204
+  },
+  {
+   "title": "Golden scarab (Beneath Scabaras' Sands)",
+   "firstLinks": 202
   },
   {
    "title": "Evolution of Combat",
@@ -490,145 +496,141 @@
   },
   {
    "title": "Defence",
-   "firstLinks": 190
+   "firstLinks": 191
   },
   {
    "title": "Agility",
-   "firstLinks": 185
+   "firstLinks": 187
+  },
+  {
+   "title": "Ranged",
+   "firstLinks": 169
   },
   {
    "title": "Members",
    "firstLinks": 169
-  },
-  {
-   "title": "Ranged",
-   "firstLinks": 168
-  },
-  {
-   "title": "Necromancy",
-   "firstLinks": 168
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Abyssal whip",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Balthazar Beauregard's Big Top Bonanza",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Distractions and Diversions",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Circus barker",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Grand Exchange",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Grand Exchange/History",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Carnillean Rising",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Invaders Must Die II",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Divination",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Infernal orb",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "JMod clone",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Raffle barker",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Guthixian Cache",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "The Drop",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "RuneMetrics/Adventurer's Log",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Mod Chris L",
-   "chains": 21265
+   "chains": 21439
   },
   {
    "title": "Calculators",
-   "chains": 8554
+   "chains": 8606
+  },
+  {
+   "title": "Necromancy cape",
+   "chains": 6119
+  },
+  {
+   "title": "Hooded necromancy cape",
+   "chains": 6119
+  },
+  {
+   "title": "Necromancy training",
+   "chains": 6109
+  },
+  {
+   "title": "Combat",
+   "chains": 6108
+  },
+  {
+   "title": "The Arc",
+   "chains": 6083
   },
   {
    "title": "Construction/Level up table",
-   "chains": 5834
+   "chains": 5891
   },
   {
    "title": "Construction",
-   "chains": 5833
+   "chains": 5890
+  },
+  {
+   "title": "2016 Halloween event",
+   "chains": 5424
+  },
+  {
+   "title": "Dimension of Disaster",
+   "chains": 5377
+  },
+  {
+   "title": "Quests achievements",
+   "chains": 5148
+  },
+  {
+   "title": "Quest Cape (achievement)",
+   "chains": 5147
+  },
+  {
+   "title": "Completionist cape",
+   "chains": 5146
   },
   {
    "title": "In Aid of the Myreque",
-   "chains": 5059
-  },
-  {
-   "title": "While Guthix Sleeps",
-   "chains": 5038
-  },
-  {
-   "title": "Prayer",
-   "chains": 4793
-  },
-  {
-   "title": "Gravingas",
-   "chains": 4315
-  },
-  {
-   "title": "Manspeak amulet",
-   "chains": 4261
-  },
-  {
-   "title": "Ghostspeak amulet",
-   "chains": 4259
-  },
-  {
-   "title": "Shilo Village",
-   "chains": 4248
-  },
-  {
-   "title": "Erasmus (RuneScape 2 Beta)",
-   "chains": 4231
-  },
-  {
-   "title": "Legends' Guild",
-   "chains": 4214
-  },
-  {
-   "title": "Dragon sq shield",
-   "chains": 4186
-  },
-  {
-   "title": "Toy kite",
-   "chains": 4179
+   "chains": 5108
   }
  ]
 }

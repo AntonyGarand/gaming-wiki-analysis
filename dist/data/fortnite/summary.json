@@ -1,65 +1,65 @@
 {
  "wiki": "fortnite",
- "generatedAt": "2026-10-14T13:57:18.289Z",
+ "generatedAt": "2026-10-14T16:36:17.406Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 92.95,
-   "deadEndPct": 7.05,
-   "components": 8,
-   "cycleCount": 7,
-   "meanHops": 4.08,
+   "convergePct": 93.83,
+   "deadEndPct": 6.17,
+   "components": 17,
+   "cycleCount": 16,
+   "meanHops": 4.07,
    "medianHops": 4,
    "maxHops": 38,
    "topAttractor": [
     "Epic Games",
     "Tim Sweeney"
    ],
-   "topAttractorPct": 91.96,
-   "top3Pct": 92.91,
-   "eligiblePct": 93.6
+   "topAttractorPct": 92.16,
+   "top3Pct": 93.52,
+   "eligiblePct": 93.8
   },
   {
    "rank": "2",
-   "convergePct": 88.75,
-   "deadEndPct": 11.25,
-   "components": 38,
-   "cycleCount": 37,
-   "meanHops": 4.58,
+   "convergePct": 88.96,
+   "deadEndPct": 11.04,
+   "components": 42,
+   "cycleCount": 41,
+   "meanHops": 4.57,
    "medianHops": 5,
    "maxHops": 11,
    "topAttractor": [
     "Victory Royale",
     "Lobby Music"
    ],
-   "topAttractorPct": 81.42,
-   "top3Pct": 87.86,
-   "eligiblePct": 90
+   "topAttractorPct": 81.5,
+   "top3Pct": 88.02,
+   "eligiblePct": 90.2
   },
   {
    "rank": "3",
-   "convergePct": 44.22,
-   "deadEndPct": 55.78,
-   "components": 1073,
-   "cycleCount": 1072,
-   "meanHops": 3.59,
+   "convergePct": 44.43,
+   "deadEndPct": 55.57,
+   "components": 1079,
+   "cycleCount": 1078,
+   "meanHops": 3.61,
    "medianHops": 2,
    "maxHops": 32,
    "topAttractor": [
     "Battle Pass",
     "V-Bucks"
    ],
-   "topAttractorPct": 15.82,
-   "top3Pct": 26.36,
-   "eligiblePct": 69.1
+   "topAttractorPct": 15.84,
+   "top3Pct": 26.46,
+   "eligiblePct": 69.2
   },
   {
    "rank": "5",
-   "convergePct": 5.98,
-   "deadEndPct": 94.02,
+   "convergePct": 6,
+   "deadEndPct": 94,
    "components": 129,
    "cycleCount": 128,
-   "meanHops": 2.53,
+   "meanHops": 2.52,
    "medianHops": 2,
    "maxHops": 10,
    "topAttractor": [
@@ -68,14 +68,14 @@
    ],
    "topAttractorPct": 2.25,
    "top3Pct": 3.21,
-   "eligiblePct": 31.2
+   "eligiblePct": 31.4
   },
   {
    "rank": "last",
-   "convergePct": 92.72,
-   "deadEndPct": 7.28,
-   "components": 430,
-   "cycleCount": 429,
+   "convergePct": 93.65,
+   "deadEndPct": 6.35,
+   "components": 432,
+   "cycleCount": 431,
    "meanHops": 8.28,
    "medianHops": 3,
    "maxHops": 38,
@@ -97,25 +97,25 @@
     "Weapon Perks",
     "Lead Sled"
    ],
-   "topAttractorPct": 68.99,
-   "top3Pct": 79.33,
+   "topAttractorPct": 69.41,
+   "top3Pct": 79.76,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 92.63,
-   "deadEndPct": 7.37,
-   "components": 245,
-   "cycleCount": 244,
-   "meanHops": 2.74,
+   "convergePct": 93.58,
+   "deadEndPct": 6.42,
+   "components": 252,
+   "cycleCount": 251,
+   "meanHops": 2.77,
    "medianHops": 2,
    "maxHops": 14,
    "topAttractor": [
     "Fortnite",
     "Rocket Racing"
    ],
-   "topAttractorPct": 45.22,
-   "top3Pct": 73.9,
+   "topAttractorPct": 45.32,
+   "top3Pct": 74.58,
    "eligiblePct": 100
   }
  ]

@@ -3,11 +3,11 @@
  "rank": "last",
  "nodes": 4498,
  "converge": {
-  "articles": 4390,
-  "pct": 97.6,
-  "deadEnd": 108,
-  "deadEndPct": 2.4,
-  "noLinks": 63,
+  "articles": 4391,
+  "pct": 97.62,
+  "deadEnd": 107,
+  "deadEndPct": 2.38,
+  "noLinks": 62,
   "tooFewLinks": 0,
   "unresolvable": 0
  },
@@ -22,7 +22,7 @@
   "1": 182,
   "2": 1087,
   "3": 459,
-  "4": 372,
+  "4": 373,
   "5": 364,
   "6": 206,
   "7": 229,
@@ -39,9 +39,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 63,
+   "0": 62,
    "1": 252,
-   "2": 1429,
+   "2": 1430,
    "3": 1047,
    "4": 491,
    "5": 317,
@@ -60,8 +60,8 @@
  },
  "concentration": {
   "top1Pct": 41.15,
-  "top3Pct": 83.08,
-  "top10Pct": 91.15,
+  "top3Pct": 83.1,
+  "top10Pct": 91.17,
   "cycleCount": 73,
   "entropyBits": 2.35
  },
@@ -99,8 +99,8 @@
     "Egg",
     "Bird's Nest"
    ],
-   "basin": 149,
-   "pct": 3.31
+   "basin": 150,
+   "pct": 3.33
   },
   {
    "cycle": [
@@ -278,12 +278,6 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Cat",
-   "chains": 1,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Wood Case",
    "chains": 1,
    "pct": 0.02,
@@ -327,6 +321,12 @@
   },
   {
    "title": "Legacy Engine",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Playtesting",
    "chains": 1,
    "pct": 0.02,
    "reason": "no eligible links"
@@ -553,24 +553,24 @@
    "chains": 151
   },
   {
+   "title": "Egg",
+   "chains": 150
+  },
+  {
    "title": "Bench",
    "chains": 150
   },
   {
-   "title": "Egg",
-   "chains": 149
-  },
-  {
    "title": "Bird's Nest",
-   "chains": 149
+   "chains": 150
   },
   {
    "title": "Animal Husbandry",
-   "chains": 146
+   "chains": 147
   },
   {
    "title": "NPC",
-   "chains": 144
+   "chains": 145
   },
   {
    "title": "Furniture Workbench",

@@ -1,11 +1,11 @@
 {
  "wiki": "osrs",
- "generatedAt": "2026-10-14T13:20:15.640Z",
+ "generatedAt": "2026-10-14T16:38:08.077Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 97.53,
-   "deadEndPct": 2.47,
+   "convergePct": 97.54,
+   "deadEndPct": 2.46,
    "components": 168,
    "cycleCount": 167,
    "meanHops": 6.26,
@@ -17,13 +17,13 @@
     "Bestiary"
    ],
    "topAttractorPct": 33.88,
-   "top3Pct": 83.23,
+   "top3Pct": 83.24,
    "eligiblePct": 98.8
   },
   {
    "rank": "2",
-   "convergePct": 93.14,
-   "deadEndPct": 6.86,
+   "convergePct": 93.15,
+   "deadEndPct": 6.85,
    "components": 444,
    "cycleCount": 443,
    "meanHops": 5.4,
@@ -35,12 +35,12 @@
    ],
    "topAttractorPct": 18.35,
    "top3Pct": 45.53,
-   "eligiblePct": 95.1
+   "eligiblePct": 95.2
   },
   {
    "rank": "3",
-   "convergePct": 74.76,
-   "deadEndPct": 25.24,
+   "convergePct": 74.78,
+   "deadEndPct": 25.22,
    "components": 566,
    "cycleCount": 565,
    "meanHops": 6.91,
@@ -50,14 +50,14 @@
     "Experience",
     "Book of Knowledge"
    ],
-   "topAttractorPct": 22.46,
-   "top3Pct": 46.58,
+   "topAttractorPct": 22.47,
+   "top3Pct": 46.59,
    "eligiblePct": 86.9
   },
   {
    "rank": "5",
-   "convergePct": 47.07,
-   "deadEndPct": 52.93,
+   "convergePct": 47.08,
+   "deadEndPct": 52.92,
    "components": 352,
    "cycleCount": 351,
    "meanHops": 8.07,
@@ -70,29 +70,29 @@
    ],
    "topAttractorPct": 12.21,
    "top3Pct": 27.81,
-   "eligiblePct": 64.2
+   "eligiblePct": 64.3
   },
   {
    "rank": "last",
-   "convergePct": 98.65,
-   "deadEndPct": 1.35,
+   "convergePct": 98.67,
+   "deadEndPct": 1.33,
    "components": 786,
    "cycleCount": 785,
-   "meanHops": 10.77,
+   "meanHops": 10.78,
    "medianHops": 8,
    "maxHops": 44,
    "topAttractor": [
     "Thieving/Level up table",
     "Slayer/Level up table"
    ],
-   "topAttractorPct": 18.18,
-   "top3Pct": 47.64,
+   "topAttractorPct": 18.19,
+   "top3Pct": 47.66,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 98.62,
-   "deadEndPct": 1.38,
+   "convergePct": 98.63,
+   "deadEndPct": 1.37,
    "components": 454,
    "cycleCount": 453,
    "meanHops": 9.82,
@@ -133,7 +133,7 @@
     "Hill Giant"
    ],
    "topAttractorPct": 51.71,
-   "top3Pct": 66.37,
+   "top3Pct": 66.38,
    "eligiblePct": 100
   }
  ]

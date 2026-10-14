@@ -3,13 +3,13 @@
  "rank": "last",
  "nodes": 35312,
  "converge": {
-  "articles": 32740,
-  "pct": 92.72,
-  "deadEnd": 2572,
-  "deadEndPct": 7.28,
-  "noLinks": 2240,
+  "articles": 33071,
+  "pct": 93.65,
+  "deadEnd": 2241,
+  "deadEndPct": 6.35,
+  "noLinks": 2163,
   "tooFewLinks": 0,
-  "unresolvable": 17
+  "unresolvable": 9
  },
  "hopStats": {
   "mean": 8.28,
@@ -18,22 +18,22 @@
   "max": 38
  },
  "histogram": {
-  "0": 879,
-  "1": 2915,
-  "2": 8577,
-  "3": 5925,
-  "4": 2197,
-  "5": 1855,
-  "6": 840,
-  "7": 696,
-  "8": 681,
-  "9": 460,
-  "10": 370,
-  "11": 327,
-  "12": 179,
-  "13": 89,
-  "14": 86,
-  "15": 58,
+  "0": 883,
+  "1": 2932,
+  "2": 8589,
+  "3": 5963,
+  "4": 2241,
+  "5": 1867,
+  "6": 884,
+  "7": 715,
+  "8": 693,
+  "9": 511,
+  "10": 381,
+  "11": 345,
+  "12": 184,
+  "13": 90,
+  "14": 106,
+  "15": 61,
   "16": 25,
   "17": 81,
   "18": 293,
@@ -41,53 +41,53 @@
   "20": 53,
   "21": 8,
   "22": 428,
-  "23": 522,
-  "24": 136,
-  "25": 103,
+  "23": 524,
+  "24": 138,
+  "25": 104,
   "26": 147,
   "27": 162,
   "28": 279,
-  "29": 531,
-  "30": 2805,
-  "31": 779,
-  "32": 132,
-  "33": 38,
-  "34": 16,
-  "35": 2,
+  "29": 532,
+  "30": 2806,
+  "31": 783,
+  "32": 138,
+  "33": 39,
+  "34": 17,
+  "35": 3,
   "36": 25,
   "37": 6,
   "38": 1
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2257,
-   "1": 1264,
-   "2": 7398,
-   "3": 9015,
-   "4": 4347,
-   "5": 2402,
-   "6": 1375,
-   "7": 876,
-   "8": 630,
-   "9": 510,
-   "10": 5238
+   "0": 2172,
+   "1": 1279,
+   "2": 7410,
+   "3": 9022,
+   "4": 4355,
+   "5": 2411,
+   "6": 1380,
+   "7": 882,
+   "8": 637,
+   "9": 512,
+   "10": 5252
   },
   "atLeast": {
-   "1": 93.6,
-   "2": 90,
-   "3": 69.1,
-   "5": 31.2
+   "1": 93.8,
+   "2": 90.2,
+   "3": 69.2,
+   "5": 31.4
   }
  },
  "concentration": {
-  "top1Pct": 68.99,
-  "top3Pct": 79.33,
-  "top10Pct": 84.54,
-  "cycleCount": 429,
-  "entropyBits": 2.12
+  "top1Pct": 69.41,
+  "top3Pct": 79.76,
+  "top10Pct": 85.3,
+  "cycleCount": 431,
+  "entropyBits": 2.14
  },
- "components": 430,
- "cycleCount": 429,
+ "components": 432,
+ "cycleCount": 431,
  "largestCycle": {
   "members": [
    "Fortnite: Save the World",
@@ -108,7 +108,7 @@
    "Lead Sled"
   ],
   "size": 16,
-  "basin": 24360
+  "basin": 24510
  },
  "topAttractors": [
   {
@@ -130,16 +130,16 @@
     "Weapon Perks",
     "Lead Sled"
    ],
-   "basin": 24360,
-   "pct": 68.99
+   "basin": 24510,
+   "pct": 69.41
   },
   {
    "cycle": [
     "Quests",
     "High Stakes Challenges"
    ],
-   "basin": 2916,
-   "pct": 8.26
+   "basin": 2919,
+   "pct": 8.27
   },
   {
    "cycle": [
@@ -151,6 +151,14 @@
   },
   {
    "cycle": [
+    "Online Tests",
+    "Project Fortress"
+   ],
+   "basin": 425,
+   "pct": 1.2
+  },
+  {
+   "cycle": [
     "Update v15.30",
     "Player Checkpoint Pad"
    ],
@@ -159,19 +167,11 @@
   },
   {
    "cycle": [
-    "Online Tests",
-    "Project Fortress"
-   ],
-   "basin": 367,
-   "pct": 1.04
-  },
-  {
-   "cycle": [
     "Party Royale",
     "Papaya"
    ],
-   "basin": 284,
-   "pct": 0.8
+   "basin": 313,
+   "pct": 0.89
   },
   {
    "cycle": [
@@ -189,6 +189,15 @@
    ],
    "basin": 212,
    "pct": 0.6
+  },
+  {
+   "cycle": [
+    "Flare Gun",
+    "Firework Flare Gun",
+    "Locator Flare"
+   ],
+   "basin": 179,
+   "pct": 0.51
   },
   {
    "cycle": [
@@ -230,15 +239,6 @@
    ],
    "basin": 120,
    "pct": 0.34
-  },
-  {
-   "cycle": [
-    "Flare Gun",
-    "Firework Flare Gun",
-    "Locator Flare"
-   ],
-   "basin": 95,
-   "pct": 0.27
   },
   {
    "cycle": [
@@ -291,51 +291,9 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Devices (Creative)",
-   "chains": 62,
-   "pct": 0.18,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Cobalt Snowfoot Bundle",
-   "chains": 46,
-   "pct": 0.13,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Auto Sniper Schematics",
-   "chains": 29,
-   "pct": 0.08,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Evacuate the Shelter",
-   "chains": 22,
-   "pct": 0.06,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Update v6.21",
-   "chains": 17,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Item Shop History/March 29th 2025",
    "chains": 13,
    "pct": 0.04,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Flowering Chaos Bundle",
-   "chains": 12,
-   "pct": 0.03,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Wall Dynamo",
-   "chains": 10,
-   "pct": 0.03,
    "reason": "no eligible links"
   },
   {
@@ -351,32 +309,74 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Firecracker Pistol Schematics",
-   "chains": 6,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Semi-Auto Handcannon Pistol Schematics",
-   "chains": 6,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Double Helix Bundle",
-   "chains": 5,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Item Shop History/March 24th 2019",
    "chains": 5,
    "pct": 0.01,
    "reason": "no eligible links"
   },
   {
-   "title": "GeForce Fortnite Bundle 1",
-   "chains": 5,
+   "title": "Item Shop History/October 31st 2024",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/July 11th 2019",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Slurp Mushroom",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/January 23rd 2019",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/December 13th 2024",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Chapter 7: Season 3/Battle Pass",
+   "chains": 3,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Fortnite Wiki",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Survive the Storm",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/February 24th 2019",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/March 2nd 2019",
+   "chains": 2,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Item Shop History/October 26th 2017",
+   "chains": 2,
    "pct": 0.01,
    "reason": "no eligible links"
   }
@@ -417,11 +417,11 @@
   },
   {
    "title": "Fortnite: Save the World",
-   "firstLinks": 280
+   "firstLinks": 281
   },
   {
    "title": "Athena",
-   "firstLinks": 231
+   "firstLinks": 232
   },
   {
    "title": "Photonic Legacy Set",
@@ -507,123 +507,123 @@
  "topThroughTraffic": [
   {
    "title": "Heroes",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Fortnite: Battle Royale",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Weapon Perks",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Shifty Shafts",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Phase Shift",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Athena",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Team Perks",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Phase Scout Jess",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Ninjas",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Lead Sled",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "The Last Reality",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Jungle Biome",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Asteria",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Oninoshima",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Update v39.40",
-   "chains": 24360
+   "chains": 24510
   },
   {
    "title": "Fortnite",
-   "chains": 18783
+   "chains": 18825
   },
   {
    "title": "Settings",
-   "chains": 7604
+   "chains": 7625
   },
   {
    "title": "Update v34.40",
-   "chains": 7602
+   "chains": 7623
   },
   {
    "title": "Jam Tracks",
-   "chains": 7597
+   "chains": 7618
   },
   {
    "title": "Coachella '24 Jam Bundle",
-   "chains": 7269
+   "chains": 7290
   },
   {
    "title": "Song 2",
-   "chains": 7194
+   "chains": 7215
   },
   {
    "title": "Fortnite Festival",
-   "chains": 7193
+   "chains": 7214
   },
   {
    "title": "Update v42.20",
-   "chains": 6761
+   "chains": 6781
   },
   {
    "title": "Update v42.10",
-   "chains": 6727
+   "chains": 6747
   },
   {
    "title": "Update v42.00",
-   "chains": 6717
+   "chains": 6737
   },
   {
    "title": "Update v41.30",
-   "chains": 6701
+   "chains": 6721
   },
   {
    "title": "Update v41.20",
-   "chains": 6674
+   "chains": 6694
   },
   {
    "title": "Update v41.10",
-   "chains": 6662
+   "chains": 6682
   },
   {
    "title": "Update v41.00",
-   "chains": 6618
+   "chains": 6638
   }
  ]
 }

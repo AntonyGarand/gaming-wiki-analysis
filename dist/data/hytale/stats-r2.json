@@ -7,7 +7,7 @@
   "pct": 91.08,
   "deadEnd": 401,
   "deadEndPct": 8.92,
-  "noLinks": 63,
+  "noLinks": 62,
   "tooFewLinks": 252,
   "unresolvable": 0
  },
@@ -32,9 +32,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 63,
+   "0": 62,
    "1": 252,
-   "2": 1429,
+   "2": 1430,
    "3": 1047,
    "4": 491,
    "5": 317,
@@ -268,6 +268,12 @@
    "reason": "only 1 eligible links"
   },
   {
+   "title": "Kitten",
+   "chains": 2,
+   "pct": 0.04,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Concept Art",
    "chains": 2,
    "pct": 0.04,
@@ -317,12 +323,6 @@
   },
   {
    "title": "Dog",
-   "chains": 2,
-   "pct": 0.04,
-   "reason": "only 1 eligible links"
-  },
-  {
-   "title": "0.0.1-pre.1.1",
    "chains": 2,
    "pct": 0.04,
    "reason": "only 1 eligible links"

@@ -3,41 +3,41 @@
  "rank": "strict1",
  "nodes": 35312,
  "converge": {
-  "articles": 32821,
-  "pct": 92.95,
-  "deadEnd": 2491,
-  "deadEndPct": 7.05,
-  "noLinks": 2240,
+  "articles": 33135,
+  "pct": 93.83,
+  "deadEnd": 2177,
+  "deadEndPct": 6.17,
+  "noLinks": 2163,
   "tooFewLinks": 0,
-  "unresolvable": 17
+  "unresolvable": 9
  },
  "hopStats": {
-  "mean": 4.08,
+  "mean": 4.07,
   "median": 4,
   "p90": 5,
   "max": 38
  },
  "histogram": {
-  "0": 14,
-  "1": 189,
-  "2": 3720,
-  "3": 2236,
-  "4": 16918,
-  "5": 7539,
-  "6": 2066,
-  "7": 84,
-  "8": 5,
-  "9": 3,
+  "0": 36,
+  "1": 398,
+  "2": 3730,
+  "3": 2247,
+  "4": 16927,
+  "5": 7550,
+  "6": 2080,
+  "7": 92,
+  "8": 13,
+  "9": 5,
   "10": 1,
   "11": 1,
   "12": 1,
   "13": 1,
   "14": 1,
   "15": 1,
-  "16": 1,
-  "17": 4,
+  "16": 2,
+  "17": 5,
   "18": 3,
-  "19": 3,
+  "19": 4,
   "20": 2,
   "21": 1,
   "22": 2,
@@ -47,9 +47,9 @@
   "26": 2,
   "27": 3,
   "28": 3,
-  "29": 2,
+  "29": 6,
   "30": 1,
-  "31": 1,
+  "31": 4,
   "32": 2,
   "33": 1,
   "34": 2,
@@ -60,41 +60,41 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2257,
-   "1": 1264,
-   "2": 7398,
-   "3": 9015,
-   "4": 4347,
-   "5": 2402,
-   "6": 1375,
-   "7": 876,
-   "8": 630,
-   "9": 510,
-   "10": 5238
+   "0": 2172,
+   "1": 1279,
+   "2": 7410,
+   "3": 9022,
+   "4": 4355,
+   "5": 2411,
+   "6": 1380,
+   "7": 882,
+   "8": 637,
+   "9": 512,
+   "10": 5252
   },
   "atLeast": {
-   "1": 93.6,
-   "2": 90,
-   "3": 69.1,
-   "5": 31.2
+   "1": 93.8,
+   "2": 90.2,
+   "3": 69.2,
+   "5": 31.4
   }
  },
  "concentration": {
-  "top1Pct": 91.96,
-  "top3Pct": 92.91,
-  "top10Pct": 92.95,
-  "cycleCount": 7,
-  "entropyBits": 0.1
+  "top1Pct": 92.16,
+  "top3Pct": 93.52,
+  "top10Pct": 93.79,
+  "cycleCount": 16,
+  "entropyBits": 0.16
  },
- "components": 8,
- "cycleCount": 7,
+ "components": 17,
+ "cycleCount": 16,
  "largestCycle": {
   "members": [
    "Epic Games",
    "Tim Sweeney"
   ],
   "size": 2,
-  "basin": 32472
+  "basin": 32542
  },
  "topAttractors": [
   {
@@ -102,16 +102,24 @@
     "Epic Games",
     "Tim Sweeney"
    ],
-   "basin": 32472,
-   "pct": 91.96
+   "basin": 32542,
+   "pct": 92.16
   },
   {
    "cycle": [
     "Heroes",
     "Outlanders"
    ],
-   "basin": 264,
-   "pct": 0.75
+   "basin": 271,
+   "pct": 0.77
+  },
+  {
+   "cycle": [
+    "Devices (Creative)",
+    "HUD Controller"
+   ],
+   "basin": 210,
+   "pct": 0.59
   },
   {
    "cycle": [
@@ -128,6 +136,74 @@
    ],
    "basin": 6,
    "pct": 0.02
+  },
+  {
+   "cycle": [
+    "Firecracker Pistol Schematics",
+    "Firecracker",
+    "Freedom's Herald"
+   ],
+   "basin": 5,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Semi-Auto Handcannon Pistol Schematics",
+    "Shrike",
+    "Falcon (Save the World)"
+   ],
+   "basin": 4,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Single-Shot Rifle Schematics",
+    "Slug Gun"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Six Shooter Pistol Schematics",
+    "Revolver (Schematic)"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Energy Pistol Schematics",
+    "Space Pistol",
+    "Space Invader"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Laser Sniper Schematics",
+    "Laser Rifle"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Auto Sniper Schematics",
+    "Automatic Sniper"
+   ],
+   "basin": 3,
+   "pct": 0.01
+  },
+  {
+   "cycle": [
+    "Standard Scoped Sniper Schematics",
+    "Scoped Wasp",
+    "Scoped Dragonfly"
+   ],
+   "basin": 3,
+   "pct": 0.01
   },
   {
    "cycle": [
@@ -156,79 +232,13 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Devices (Creative)",
-   "chains": 210,
-   "pct": 0.59,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Firecracker Pistol Schematics",
-   "chains": 5,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Party Trooper",
    "chains": 5,
    "pct": 0.01,
    "reason": "no eligible links"
   },
   {
-   "title": "Semi-Auto Handcannon Pistol Schematics",
-   "chains": 4,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Six Shooter Pistol Schematics",
-   "chains": 3,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Energy Pistol Schematics",
-   "chains": 3,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Auto Sniper Schematics",
-   "chains": 3,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Standard Scoped Sniper Schematics",
-   "chains": 3,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Update v6.21",
-   "chains": 3,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Survive the Storm",
-   "chains": 2,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Auto Shotgun Schematics",
-   "chains": 2,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Semi-Auto Pistol Schematics",
-   "chains": 2,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Shield Mushroom/OG",
    "chains": 2,
    "pct": 0.01,
    "reason": "no eligible links"
@@ -244,6 +254,72 @@
    "chains": 1,
    "pct": 0,
    "reason": "redlink target"
+  },
+  {
+   "title": "Shadowier Stance",
+   "chains": 1,
+   "pct": 0,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Footloose",
+   "chains": 1,
+   "pct": 0,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Controls",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Hearty Blade",
+   "chains": 1,
+   "pct": 0,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Hearty Strikes (tactical bonus)",
+   "chains": 1,
+   "pct": 0,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Evelynn",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Ice Cream Cruiser",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Widow's Web",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Party Hips",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Slurp Mushroom",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Founder's Lawbringer",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -294,15 +370,15 @@
   },
   {
    "title": "Jam Tracks",
-   "firstLinks": 736
+   "firstLinks": 737
   },
   {
    "title": "Fortnite: Battle Royale",
-   "firstLinks": 673
+   "firstLinks": 676
   },
   {
    "title": "Fortnite: Save the World",
-   "firstLinks": 633
+   "firstLinks": 634
   },
   {
    "title": "Landmarks",
@@ -372,31 +448,31 @@
  "topThroughTraffic": [
   {
    "title": "Epic Games",
-   "chains": 32472
+   "chains": 32542
   },
   {
    "title": "Tim Sweeney",
-   "chains": 32472
+   "chains": 32542
   },
   {
    "title": "Fortnite",
-   "chains": 32446
+   "chains": 32516
   },
   {
    "title": "Cosmetic Items",
-   "chains": 14040
+   "chains": 14042
   },
   {
    "title": "Fortnite: Battle Royale",
-   "chains": 8000
+   "chains": 8033
   },
   {
    "title": "Community Terminology",
-   "chains": 4193
+   "chains": 4205
   },
   {
    "title": "Outfits",
-   "chains": 4192
+   "chains": 4204
   },
   {
    "title": "V-Bucks",
@@ -408,7 +484,7 @@
   },
   {
    "title": "Back Blings",
-   "chains": 2819
+   "chains": 2820
   },
   {
    "title": "Item Shop Bundles",
@@ -420,11 +496,11 @@
   },
   {
    "title": "Jam Tracks",
-   "chains": 1503
+   "chains": 1504
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 1422
+   "chains": 1445
   },
   {
    "title": "Sprays",
@@ -440,15 +516,15 @@
   },
   {
    "title": "XP",
-   "chains": 975
+   "chains": 977
   },
   {
    "title": "Quests",
-   "chains": 972
+   "chains": 974
   },
   {
    "title": "Weaponry (Battle Royale)",
-   "chains": 954
+   "chains": 955
   },
   {
    "title": "Decals",
@@ -464,7 +540,7 @@
   },
   {
    "title": "Named Locations",
-   "chains": 500
+   "chains": 501
   },
   {
    "title": "Wheels",
@@ -487,8 +563,8 @@
    "chains": 320
   },
   {
-   "title": "Contrails",
-   "chains": 268
+   "title": "Heroes",
+   "chains": 271
   }
  ]
 }

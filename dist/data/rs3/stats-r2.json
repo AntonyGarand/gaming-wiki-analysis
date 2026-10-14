@@ -3,13 +3,13 @@
  "rank": "2",
  "nodes": 79761,
  "converge": {
-  "articles": 68660,
-  "pct": 86.08,
-  "deadEnd": 11101,
-  "deadEndPct": 13.92,
-  "noLinks": 1895,
-  "tooFewLinks": 6132,
-  "unresolvable": 3
+  "articles": 69266,
+  "pct": 86.84,
+  "deadEnd": 10495,
+  "deadEndPct": 13.16,
+  "noLinks": 1250,
+  "tooFewLinks": 6157,
+  "unresolvable": 4
  },
  "hopStats": {
   "mean": 6.49,
@@ -19,57 +19,57 @@
  },
  "histogram": {
   "0": 1995,
-  "1": 6886,
-  "2": 8574,
-  "3": 7353,
-  "4": 6692,
-  "5": 5498,
-  "6": 5278,
-  "7": 4895,
-  "8": 3107,
-  "9": 2166,
-  "10": 2049,
-  "11": 2755,
-  "12": 2243,
-  "13": 1675,
-  "14": 889,
-  "15": 553,
-  "16": 943,
-  "17": 1001,
-  "18": 633,
-  "19": 796,
-  "20": 1148,
-  "21": 755,
-  "22": 417,
+  "1": 7029,
+  "2": 8611,
+  "3": 7404,
+  "4": 6738,
+  "5": 5540,
+  "6": 5371,
+  "7": 4954,
+  "8": 3126,
+  "9": 2183,
+  "10": 2055,
+  "11": 2765,
+  "12": 2262,
+  "13": 1687,
+  "14": 909,
+  "15": 557,
+  "16": 949,
+  "17": 1011,
+  "18": 637,
+  "19": 797,
+  "20": 1149,
+  "21": 758,
+  "22": 419,
   "23": 194,
   "24": 137,
-  "25": 28
+  "25": 29
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1898,
-   "1": 6132,
-   "2": 10227,
-   "3": 10045,
-   "4": 9422,
-   "5": 7596,
-   "6": 5666,
-   "7": 4239,
-   "8": 3570,
-   "9": 2893,
-   "10": 18073
+   "0": 1254,
+   "1": 6157,
+   "2": 10279,
+   "3": 10155,
+   "4": 9509,
+   "5": 7658,
+   "6": 5718,
+   "7": 4270,
+   "8": 3594,
+   "9": 2911,
+   "10": 18256
   },
   "atLeast": {
-   "1": 97.6,
-   "2": 89.9,
-   "3": 77.1,
-   "5": 52.7
+   "1": 98.4,
+   "2": 90.7,
+   "3": 77.8,
+   "5": 53.2
   }
  },
  "concentration": {
-  "top1Pct": 23.45,
-  "top3Pct": 50.39,
-  "top10Pct": 65.79,
+  "top1Pct": 23.66,
+  "top3Pct": 50.77,
+  "top10Pct": 66.31,
   "cycleCount": 973,
   "entropyBits": 4.46
  },
@@ -83,7 +83,7 @@
    "Jas"
   ],
   "size": 4,
-  "basin": 18705
+  "basin": 18873
  },
  "topAttractors": [
   {
@@ -93,16 +93,16 @@
     "Elder Gods",
     "Jas"
    ],
-   "basin": 18705,
-   "pct": 23.45
+   "basin": 18873,
+   "pct": 23.66
   },
   {
    "cycle": [
     "Paul Gower",
     "Ian Gower"
    ],
-   "basin": 16240,
-   "pct": 20.36
+   "basin": 16358,
+   "pct": 20.51
   },
   {
    "cycle": [
@@ -110,32 +110,32 @@
     "Hit chance",
     "Player versus monster"
    ],
-   "basin": 5248,
-   "pct": 6.58
+   "basin": 5264,
+   "pct": 6.6
   },
   {
    "cycle": [
     "Items",
     "Bank"
    ],
-   "basin": 3504,
-   "pct": 4.39
+   "basin": 3581,
+   "pct": 4.49
   },
   {
    "cycle": [
     "River Elid",
     "Elidinis"
    ],
-   "basin": 2877,
-   "pct": 3.61
+   "basin": 2885,
+   "pct": 3.62
   },
   {
    "cycle": [
     "Ores",
     "Rocks"
    ],
-   "basin": 1891,
-   "pct": 2.37
+   "basin": 1897,
+   "pct": 2.38
   },
   {
    "cycle": [
@@ -143,8 +143,8 @@
     "There's No Place Like Home...",
     "2026 Construction update"
    ],
-   "basin": 1104,
-   "pct": 1.38
+   "basin": 1105,
+   "pct": 1.39
   },
   {
    "cycle": [
@@ -162,16 +162,25 @@
     "Lunar Diplomacy",
     "Fremennik"
    ],
-   "basin": 943,
-   "pct": 1.18
+   "basin": 957,
+   "pct": 1.2
   },
   {
    "cycle": [
     "Farming",
     "Seeds"
    ],
-   "basin": 883,
+   "basin": 889,
    "pct": 1.11
+  },
+  {
+   "cycle": [
+    "Excavation hotspots",
+    "Mattocks",
+    "Artefacts"
+   ],
+   "basin": 780,
+   "pct": 0.98
   },
   {
    "cycle": [
@@ -187,17 +196,8 @@
     "Dwarf (race)",
     "Keldagrim"
    ],
-   "basin": 650,
-   "pct": 0.81
-  },
-  {
-   "cycle": [
-    "Excavation hotspots",
-    "Mattocks",
-    "Artefacts"
-   ],
-   "basin": 646,
-   "pct": 0.81
+   "basin": 651,
+   "pct": 0.82
   },
   {
    "cycle": [
@@ -212,7 +212,7 @@
     "Ranged",
     "Bows"
    ],
-   "basin": 582,
+   "basin": 584,
    "pct": 0.73
   },
   {
@@ -221,7 +221,7 @@
     "Summoning familiars",
     "Summoning pouches"
    ],
-   "basin": 582,
+   "basin": 584,
    "pct": 0.73
   },
   {
@@ -233,7 +233,7 @@
     "Kanatah",
     "Airut"
    ],
-   "basin": 472,
+   "basin": 473,
    "pct": 0.59
   },
   {
@@ -249,34 +249,34 @@
     "Agility",
     "Shortcuts"
    ],
-   "basin": 305,
+   "basin": 307,
    "pct": 0.38
   },
   {
    "cycle": [
-    "Man",
-    "Woman"
+    "Heart of Gielinor",
+    "Tales of the God Wars (miniquest)"
    ],
-   "basin": 290,
+   "basin": 291,
    "pct": 0.36
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Hail to the Duke, Baby",
-   "chains": 887,
-   "pct": 1.11,
+   "chains": 890,
+   "pct": 1.12,
    "reason": "only 1 eligible links"
   },
   {
    "title": "Video",
-   "chains": 796,
+   "chains": 797,
    "pct": 1,
    "reason": "only 1 eligible links"
   },
   {
    "title": "Exploration achievements",
-   "chains": 176,
+   "chains": 177,
    "pct": 0.22,
    "reason": "only 1 eligible links"
   },
@@ -311,20 +311,20 @@
    "reason": "only 1 eligible links"
   },
   {
+   "title": "Quality Assurance Team",
+   "chains": 27,
+   "pct": 0.03,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "James Hannigan",
    "chains": 27,
    "pct": 0.03,
    "reason": "no eligible links"
   },
   {
-   "title": "Quality Assurance Team",
-   "chains": 24,
-   "pct": 0.03,
-   "reason": "only 1 eligible links"
-  },
-  {
    "title": "Fishing shops",
-   "chains": 21,
+   "chains": 22,
    "pct": 0.03,
    "reason": "only 1 eligible links"
   },
@@ -381,7 +381,7 @@
   },
   {
    "title": "Dungeoneering",
-   "firstLinks": 387
+   "firstLinks": 388
   },
   {
    "title": "Furniture workbench",
@@ -437,7 +437,7 @@
   },
   {
    "title": "Varrock",
-   "firstLinks": 205
+   "firstLinks": 207
   },
   {
    "title": "Forge",
@@ -472,130 +472,130 @@
    "firstLinks": 185
   },
   {
-   "title": "Attack",
-   "firstLinks": 177
+   "title": "Artefacts",
+   "firstLinks": 183
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Gods",
-   "chains": 18705
+   "chains": 18873
   },
   {
    "title": "Gielinor",
-   "chains": 18705
+   "chains": 18873
   },
   {
    "title": "Elder Gods",
-   "chains": 18705
+   "chains": 18873
   },
   {
    "title": "Jas",
-   "chains": 18705
+   "chains": 18873
   },
   {
    "title": "Paul Gower",
-   "chains": 16240
+   "chains": 16358
   },
   {
    "title": "Ian Gower",
-   "chains": 16240
+   "chains": 16358
   },
   {
    "title": "Jagex",
-   "chains": 16195
+   "chains": 16313
   },
   {
    "title": "Membership subscription",
-   "chains": 15693
+   "chains": 15798
   },
   {
    "title": "Bond",
-   "chains": 15667
+   "chains": 15772
   },
   {
    "title": "RuneScape Mobile",
-   "chains": 11722
+   "chains": 11804
   },
   {
    "title": "Orb of oculus",
-   "chains": 11680
+   "chains": 11760
   },
   {
    "title": "Interface",
-   "chains": 11677
+   "chains": 11757
   },
   {
    "title": "Quests",
-   "chains": 11286
+   "chains": 11365
   },
   {
    "title": "Non-player character",
-   "chains": 6181
+   "chains": 6226
   },
   {
    "title": "Combat",
-   "chains": 5248
+   "chains": 5264
   },
   {
    "title": "Player versus monster",
-   "chains": 5248
+   "chains": 5264
   },
   {
    "title": "Hit chance",
-   "chains": 5248
+   "chains": 5264
   },
   {
    "title": "Shop",
-   "chains": 5166
+   "chains": 5198
   },
   {
    "title": "Coins",
-   "chains": 5154
+   "chains": 5186
   },
   {
    "title": "Charter ship",
-   "chains": 5038
+   "chains": 5063
   },
   {
    "title": "Port Sarim",
-   "chains": 5034
+   "chains": 5059
   },
   {
    "title": "Rimmington",
-   "chains": 4426
+   "chains": 4440
   },
   {
    "title": "Second Age",
-   "chains": 4098
+   "chains": 4117
   },
   {
    "title": "The Void",
-   "chains": 3804
+   "chains": 3832
   },
   {
    "title": "Experience",
-   "chains": 3802
+   "chains": 3831
   },
   {
    "title": "Zaros",
-   "chains": 3795
+   "chains": 3814
   },
   {
    "title": "Crafting Guild",
-   "chains": 3603
-  },
-  {
-   "title": "Crafting",
-   "chains": 3544
+   "chains": 3613
   },
   {
    "title": "Items",
-   "chains": 3504
+   "chains": 3581
   },
   {
    "title": "Bank",
-   "chains": 3504
+   "chains": 3581
+  },
+  {
+   "title": "Crafting",
+   "chains": 3553
   }
  ]
 }

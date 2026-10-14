@@ -1,13 +1,13 @@
 {
  "wiki": "gta",
- "generatedAt": "2026-10-14T13:50:22.608Z",
+ "generatedAt": "2026-10-14T16:29:43.521Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 92.65,
-   "deadEndPct": 7.35,
-   "components": 391,
-   "cycleCount": 390,
+   "convergePct": 93.96,
+   "deadEndPct": 6.04,
+   "components": 392,
+   "cycleCount": 391,
    "meanHops": 3.48,
    "medianHops": 3,
    "maxHops": 15,
@@ -15,34 +15,34 @@
     "Protagonist",
     "GTA Online Protagonist"
    ],
-   "topAttractorPct": 27.84,
-   "top3Pct": 56.76,
-   "eligiblePct": 95.7
+   "topAttractorPct": 28.2,
+   "top3Pct": 57.53,
+   "eligiblePct": 96.5
   },
   {
    "rank": "2",
-   "convergePct": 64.33,
-   "deadEndPct": 35.67,
-   "components": 388,
-   "cycleCount": 387,
-   "meanHops": 4.18,
+   "convergePct": 67.33,
+   "deadEndPct": 32.67,
+   "components": 390,
+   "cycleCount": 389,
+   "meanHops": 4.14,
    "medianHops": 3,
    "maxHops": 23,
    "topAttractor": [
     "Tierra Robada",
     "Valle Ocultado"
    ],
-   "topAttractorPct": 8.96,
-   "top3Pct": 24.23,
-   "eligiblePct": 89
+   "topAttractorPct": 9.05,
+   "top3Pct": 24.47,
+   "eligiblePct": 89.6
   },
   {
    "rank": "3",
-   "convergePct": 53.79,
-   "deadEndPct": 46.21,
+   "convergePct": 53.97,
+   "deadEndPct": 46.03,
    "components": 286,
    "cycleCount": 285,
-   "meanHops": 4.73,
+   "meanHops": 4.72,
    "medianHops": 4,
    "maxHops": 25,
    "topAttractor": [
@@ -50,59 +50,59 @@
     "Los Santos Forum",
     "8-Track"
    ],
-   "topAttractorPct": 6.45,
-   "top3Pct": 14.96,
-   "eligiblePct": 74.2
+   "topAttractorPct": 6.46,
+   "top3Pct": 15,
+   "eligiblePct": 74.6
   },
   {
    "rank": "5",
-   "convergePct": 31.06,
-   "deadEndPct": 68.94,
+   "convergePct": 31.2,
+   "deadEndPct": 68.8,
    "components": 156,
    "cycleCount": 155,
-   "meanHops": 10.99,
+   "meanHops": 10.98,
    "medianHops": 8,
    "maxHops": 40,
    "topAttractor": [
     "Eddie Pulaski",
     "Los Santos Police Department (3D Universe)"
    ],
-   "topAttractorPct": 8.96,
-   "top3Pct": 18.83,
-   "eligiblePct": 55
+   "topAttractorPct": 9,
+   "top3Pct": 18.89,
+   "eligiblePct": 55.1
   },
   {
    "rank": "last",
-   "convergePct": 86.71,
-   "deadEndPct": 13.29,
-   "components": 627,
-   "cycleCount": 626,
-   "meanHops": 5.18,
+   "convergePct": 92.86,
+   "deadEndPct": 7.14,
+   "components": 629,
+   "cycleCount": 628,
+   "meanHops": 5.36,
    "medianHops": 4,
    "maxHops": 25,
    "topAttractor": [
     "Dan Houser",
     "Bank Manager (GTA III)"
    ],
-   "topAttractorPct": 12.47,
-   "top3Pct": 29.52,
+   "topAttractorPct": 12.55,
+   "top3Pct": 29.92,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 92.63,
-   "deadEndPct": 7.37,
-   "components": 346,
-   "cycleCount": 345,
-   "meanHops": 14,
+   "convergePct": 94.39,
+   "deadEndPct": 5.61,
+   "components": 349,
+   "cycleCount": 348,
+   "meanHops": 13.98,
    "medianHops": 12,
    "maxHops": 47,
    "topAttractor": [
     "Downtown San Fierro",
     "Zombotech Corporation"
    ],
-   "topAttractorPct": 24.77,
-   "top3Pct": 59.2,
+   "topAttractorPct": 24.92,
+   "top3Pct": 59.8,
    "eligiblePct": 100
   }
  ]

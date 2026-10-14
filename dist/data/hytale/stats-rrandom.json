@@ -3,11 +3,11 @@
  "rank": "random",
  "nodes": 4498,
  "converge": {
-  "articles": 4387,
-  "pct": 97.53,
-  "deadEnd": 111,
-  "deadEndPct": 2.47,
-  "noLinks": 63,
+  "articles": 4388,
+  "pct": 97.55,
+  "deadEnd": 110,
+  "deadEndPct": 2.45,
+  "noLinks": 62,
   "tooFewLinks": 0,
   "unresolvable": 0
  },
@@ -20,7 +20,7 @@
  "histogram": {
   "0": 87,
   "1": 718,
-  "2": 1121,
+  "2": 1122,
   "3": 350,
   "4": 181,
   "5": 117,
@@ -38,9 +38,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 63,
+   "0": 62,
    "1": 252,
-   "2": 1429,
+   "2": 1430,
    "3": 1047,
    "4": 491,
    "5": 317,
@@ -60,7 +60,7 @@
  "concentration": {
   "top1Pct": 62.12,
   "top3Pct": 82.44,
-  "top10Pct": 95,
+  "top10Pct": 95.02,
   "cycleCount": 39,
   "entropyBits": 2.05
  },
@@ -138,8 +138,8 @@
     "Boss",
     "Dragon"
    ],
-   "basin": 85,
-   "pct": 1.89
+   "basin": 86,
+   "pct": 1.91
   },
   {
    "cycle": [
@@ -273,12 +273,6 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Cat",
-   "chains": 1,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Wood Case",
    "chains": 1,
    "pct": 0.02,
@@ -334,6 +328,12 @@
   },
   {
    "title": "Guild",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Launcher 2026.01.10",
    "chains": 1,
    "pct": 0.02,
    "reason": "no eligible links"
@@ -587,7 +587,7 @@
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 97.53,
+   "mean": 97.55,
    "sd": 0
   },
   "topAttractorPct": {

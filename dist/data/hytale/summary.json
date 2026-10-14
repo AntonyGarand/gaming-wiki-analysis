@@ -1,11 +1,11 @@
 {
  "wiki": "hytale",
- "generatedAt": "2026-10-14T13:59:37.644Z",
+ "generatedAt": "2026-10-14T16:15:52.058Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 94.75,
-   "deadEndPct": 5.25,
+   "convergePct": 94.78,
+   "deadEndPct": 5.22,
    "components": 15,
    "cycleCount": 14,
    "meanHops": 4.37,
@@ -15,8 +15,8 @@
     "Adventure Mode",
     "Gamemode"
    ],
-   "topAttractorPct": 45.78,
-   "top3Pct": 74.99,
+   "topAttractorPct": 45.8,
+   "top3Pct": 75.01,
    "eligiblePct": 98.6
   },
   {
@@ -76,8 +76,8 @@
   },
   {
    "rank": "last",
-   "convergePct": 97.6,
-   "deadEndPct": 2.4,
+   "convergePct": 97.62,
+   "deadEndPct": 2.38,
    "components": 74,
    "cycleCount": 73,
    "meanHops": 5.84,
@@ -89,13 +89,13 @@
     "Adventure Mode"
    ],
    "topAttractorPct": 41.15,
-   "top3Pct": 83.08,
+   "top3Pct": 83.1,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 97.53,
-   "deadEndPct": 2.47,
+   "convergePct": 97.55,
+   "deadEndPct": 2.45,
    "components": 40,
    "cycleCount": 39,
    "meanHops": 4.5,

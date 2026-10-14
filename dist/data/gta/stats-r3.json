@@ -3,36 +3,36 @@
  "rank": "3",
  "nodes": 24073,
  "converge": {
-  "articles": 12950,
-  "pct": 53.79,
-  "deadEnd": 11123,
-  "deadEndPct": 46.21,
-  "noLinks": 1031,
-  "tooFewLinks": 5162,
-  "unresolvable": 16
+  "articles": 12993,
+  "pct": 53.97,
+  "deadEnd": 11080,
+  "deadEndPct": 46.03,
+  "noLinks": 827,
+  "tooFewLinks": 5269,
+  "unresolvable": 15
  },
  "hopStats": {
-  "mean": 4.73,
+  "mean": 4.72,
   "median": 4,
   "p90": 10,
   "max": 25
  },
  "histogram": {
   "0": 629,
-  "1": 1998,
-  "2": 1830,
-  "3": 1370,
-  "4": 1555,
-  "5": 1154,
-  "6": 1100,
-  "7": 872,
-  "8": 617,
-  "9": 470,
-  "10": 247,
+  "1": 2006,
+  "2": 1839,
+  "3": 1375,
+  "4": 1558,
+  "5": 1159,
+  "6": 1104,
+  "7": 875,
+  "8": 619,
+  "9": 471,
+  "10": 248,
   "11": 290,
   "12": 230,
   "13": 166,
-  "14": 101,
+  "14": 103,
   "15": 64,
   "16": 59,
   "17": 76,
@@ -47,29 +47,29 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1047,
-   "1": 1601,
-   "2": 3561,
-   "3": 2434,
-   "4": 2196,
-   "5": 1591,
-   "6": 1320,
-   "7": 1098,
-   "8": 956,
-   "9": 787,
-   "10": 7482
+   "0": 842,
+   "1": 1655,
+   "2": 3614,
+   "3": 2482,
+   "4": 2205,
+   "5": 1596,
+   "6": 1321,
+   "7": 1101,
+   "8": 958,
+   "9": 791,
+   "10": 7508
   },
   "atLeast": {
-   "1": 95.7,
-   "2": 89,
-   "3": 74.2,
-   "5": 55
+   "1": 96.5,
+   "2": 89.6,
+   "3": 74.6,
+   "5": 55.1
   }
  },
  "concentration": {
-  "top1Pct": 6.45,
-  "top3Pct": 14.96,
-  "top10Pct": 29.36,
+  "top1Pct": 6.46,
+  "top3Pct": 15,
+  "top10Pct": 29.45,
   "cycleCount": 285,
   "entropyBits": 5.68
  },
@@ -82,7 +82,7 @@
    "8-Track"
   ],
   "size": 3,
-  "basin": 1553
+  "basin": 1556
  },
  "topAttractors": [
   {
@@ -91,8 +91,8 @@
     "Los Santos Forum",
     "8-Track"
    ],
-   "basin": 1553,
-   "pct": 6.45
+   "basin": 1556,
+   "pct": 6.46
   },
   {
    "cycle": [
@@ -100,24 +100,24 @@
     "Los Santos Police Department (3D Universe)",
     "Community Resources Against Street Hoodlums"
    ],
-   "basin": 1252,
-   "pct": 5.2
+   "basin": 1256,
+   "pct": 5.22
   },
   {
    "cycle": [
     "Interstate 97",
     "Interstate 397"
    ],
-   "basin": 796,
-   "pct": 3.31
+   "basin": 799,
+   "pct": 3.32
   },
   {
    "cycle": [
     "Finland",
     "Norway"
    ],
-   "basin": 790,
-   "pct": 3.28
+   "basin": 794,
+   "pct": 3.3
   },
   {
    "cycle": [
@@ -126,16 +126,16 @@
     "Rockford Hills",
     "Hawick"
    ],
-   "basin": 566,
-   "pct": 2.35
+   "basin": 567,
+   "pct": 2.36
   },
   {
    "cycle": [
     "Mikhail Faustin",
     "Dimitri Rascalov"
    ],
-   "basin": 512,
-   "pct": 2.13
+   "basin": 514,
+   "pct": 2.14
   },
   {
    "cycle": [
@@ -145,15 +145,15 @@
     "Uncle Fu",
     "Mandarin Mayhem"
    ],
-   "basin": 477,
-   "pct": 1.98
+   "basin": 479,
+   "pct": 1.99
   },
   {
    "cycle": [
     "Japan",
     "Grand Theft Auto Double Pack"
    ],
-   "basin": 426,
+   "basin": 427,
    "pct": 1.77
   },
   {
@@ -162,7 +162,7 @@
     "Sandy Shores",
     "Senora National Park"
    ],
-   "basin": 356,
+   "basin": 357,
    "pct": 1.48
   },
   {
@@ -200,7 +200,7 @@
     "Haitians",
     "Trojan Voodoo"
    ],
-   "basin": 238,
+   "basin": 239,
    "pct": 0.99
   },
   {
@@ -224,8 +224,8 @@
     "Mount Haan",
     "Mount Gordo"
    ],
-   "basin": 204,
-   "pct": 0.85
+   "basin": 206,
+   "pct": 0.86
   },
   {
    "cycle": [
@@ -243,8 +243,8 @@
     "La Puerta",
     "Los Santos International Airport (HD Universe)"
    ],
-   "basin": 178,
-   "pct": 0.74
+   "basin": 180,
+   "pct": 0.75
   },
   {
    "cycle": [
@@ -252,7 +252,7 @@
     "Palomino Creek",
     "Palomino Creek Safehouse"
    ],
-   "basin": 177,
+   "basin": 179,
    "pct": 0.74
   },
   {
@@ -267,8 +267,8 @@
  "deadEndTerminals": [
   {
    "title": "Percell Road",
-   "chains": 1870,
-   "pct": 7.77,
+   "chains": 1925,
+   "pct": 8,
    "reason": "only 2 eligible links"
   },
   {
@@ -285,8 +285,8 @@
   },
   {
    "title": "Rockstar New England",
-   "chains": 131,
-   "pct": 0.54,
+   "chains": 132,
+   "pct": 0.55,
    "reason": "only 1 eligible links"
   },
   {
@@ -315,7 +315,7 @@
   },
   {
    "title": "Nintendo Switch",
-   "chains": 76,
+   "chains": 77,
    "pct": 0.32,
    "reason": "no eligible links"
   },
@@ -323,7 +323,7 @@
    "title": "Xbox Series X and Series S",
    "chains": 74,
    "pct": 0.31,
-   "reason": "no eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Phil Collins",
@@ -344,10 +344,10 @@
    "reason": "only 2 eligible links"
   },
   {
-   "title": "GTA VI Website",
-   "chains": 52,
+   "title": "Girardi",
+   "chains": 53,
    "pct": 0.22,
-   "reason": "no eligible links"
+   "reason": "only 1 eligible links"
   },
   {
    "title": "Street Rage",
@@ -388,15 +388,15 @@
   },
   {
    "title": "Los Santos (3D Universe)",
-   "firstLinks": 106
+   "firstLinks": 107
   },
   {
    "title": "State of Alderney",
-   "firstLinks": 96
+   "firstLinks": 97
   },
   {
    "title": "Grand Theft Auto VI/Trailers",
-   "firstLinks": 88
+   "firstLinks": 89
   },
   {
    "title": "Money",
@@ -428,14 +428,14 @@
   },
   {
    "title": "Broker",
-   "firstLinks": 66
-  },
-  {
-   "title": "Rockstar Games Social Club",
-   "firstLinks": 64
+   "firstLinks": 67
   },
   {
    "title": "Trevor Philips",
+   "firstLinks": 65
+  },
+  {
+   "title": "Rockstar Games Social Club",
    "firstLinks": 64
   },
   {
@@ -471,134 +471,134 @@
    "firstLinks": 53
   },
   {
-   "title": "GTA Online: Smuggler's Run",
-   "firstLinks": 51
+   "title": "Lucia Caminos",
+   "firstLinks": 52
   },
   {
-   "title": "Lucia Caminos",
+   "title": "GTA Online: Smuggler's Run",
    "firstLinks": 51
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Percell Road",
-   "chains": 1870
+   "chains": 1925
   },
   {
    "title": "West River",
-   "chains": 1868
+   "chains": 1923
   },
   {
    "title": "Los Santos (3D Universe)",
-   "chains": 1553
+   "chains": 1556
   },
   {
    "title": "Los Santos Forum",
-   "chains": 1553
+   "chains": 1556
   },
   {
    "title": "8-Track",
-   "chains": 1553
+   "chains": 1556
   },
   {
    "title": "Carl Johnson",
-   "chains": 1323
+   "chains": 1325
   },
   {
    "title": "Frank Tenpenny",
-   "chains": 1252
+   "chains": 1256
   },
   {
    "title": "Community Resources Against Street Hoodlums",
-   "chains": 1252
+   "chains": 1256
   },
   {
    "title": "Los Santos Police Department (3D Universe)",
-   "chains": 1252
+   "chains": 1256
   },
   {
    "title": "Eddie Pulaski",
-   "chains": 1219
+   "chains": 1223
   },
   {
    "title": "Los Santos Riots",
-   "chains": 1212
+   "chains": 1216
   },
   {
    "title": "Los Santos (HD Universe)",
-   "chains": 1207
+   "chains": 1211
   },
   {
    "title": "Alderney City",
-   "chains": 1034
-  },
-  {
-   "title": "Sawed-Off Shotgun",
-   "chains": 962
-  },
-  {
-   "title": "Siege Mentality",
-   "chains": 960
-  },
-  {
-   "title": "Double Down",
-   "chains": 959
-  },
-  {
-   "title": "Franklin Clinton",
-   "chains": 956
+   "chains": 1078
   },
   {
    "title": "State of Alderney",
-   "chains": 952
+   "chains": 996
+  },
+  {
+   "title": "Sawed-Off Shotgun",
+   "chains": 964
+  },
+  {
+   "title": "Siege Mentality",
+   "chains": 962
+  },
+  {
+   "title": "Double Down",
+   "chains": 961
+  },
+  {
+   "title": "Franklin Clinton",
+   "chains": 958
   },
   {
    "title": "Interstate 97",
-   "chains": 796
+   "chains": 799
   },
   {
    "title": "Interstate 397",
-   "chains": 796
+   "chains": 799
   },
   {
    "title": "Finland",
-   "chains": 790
+   "chains": 794
   },
   {
    "title": "Norway",
-   "chains": 790
+   "chains": 794
   },
   {
    "title": "Russia",
-   "chains": 787
+   "chains": 791
   },
   {
    "title": "Algonquin",
-   "chains": 785
+   "chains": 788
   },
   {
    "title": "Vinewood Beach",
-   "chains": 770
+   "chains": 773
   },
   {
    "title": "Leonard County",
-   "chains": 769
+   "chains": 772
   },
   {
    "title": "Vice-Dale County",
-   "chains": 764
+   "chains": 767
   },
   {
    "title": "Communication",
-   "chains": 717
+   "chains": 719
   },
   {
    "title": "United States of America",
-   "chains": 685
+   "chains": 689
   },
   {
    "title": "Downtown Los Santos (HD Universe)",
-   "chains": 566
+   "chains": 567
   }
  ]
 }

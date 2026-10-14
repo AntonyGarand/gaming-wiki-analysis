@@ -3,12 +3,12 @@
  "rank": "5",
  "nodes": 14078,
  "converge": {
-  "articles": 4492,
-  "pct": 31.91,
-  "deadEnd": 9586,
-  "deadEndPct": 68.09,
-  "noLinks": 4873,
-  "tooFewLinks": 3564,
+  "articles": 4493,
+  "pct": 31.92,
+  "deadEnd": 9585,
+  "deadEndPct": 68.08,
+  "noLinks": 4871,
+  "tooFewLinks": 3565,
   "unresolvable": 231
  },
  "hopStats": {
@@ -26,7 +26,7 @@
   "5": 115,
   "6": 165,
   "7": 144,
-  "8": 217,
+  "8": 218,
   "9": 223,
   "10": 229,
   "11": 320,
@@ -55,28 +55,28 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5104,
+   "0": 5102,
    "1": 1380,
    "2": 967,
-   "3": 720,
+   "3": 721,
    "4": 497,
    "5": 447,
    "6": 337,
    "7": 292,
    "8": 308,
    "9": 270,
-   "10": 3756
+   "10": 3757
   },
   "atLeast": {
-   "1": 63.7,
-   "2": 53.9,
+   "1": 63.8,
+   "2": 54,
    "3": 47.1,
    "5": 38.4
   }
  },
  "concentration": {
   "top1Pct": 26.15,
-  "top3Pct": 29.24,
+  "top3Pct": 29.25,
   "top10Pct": 30.76,
   "cycleCount": 35,
   "entropyBits": 1.32
@@ -89,7 +89,7 @@
    "Inventory"
   ],
   "size": 2,
-  "basin": 3681
+  "basin": 3682
  },
  "topAttractors": [
   {
@@ -97,7 +97,7 @@
     "Item",
     "Inventory"
    ],
-   "basin": 3681,
+   "basin": 3682,
    "pct": 26.15
   },
   {
@@ -472,15 +472,15 @@
  "topThroughTraffic": [
   {
    "title": "Item",
-   "chains": 3681
+   "chains": 3682
   },
   {
    "title": "Inventory",
-   "chains": 3681
+   "chains": 3682
   },
   {
    "title": "Breaking",
-   "chains": 3567
+   "chains": 3568
   },
   {
    "title": "Obsidian",
@@ -508,15 +508,15 @@
   },
   {
    "title": "Golden Pickaxe",
-   "chains": 1413
+   "chains": 1414
   },
   {
    "title": "Wooden Pickaxe",
-   "chains": 1409
+   "chains": 1410
   },
   {
    "title": "Pickaxe",
-   "chains": 1408
+   "chains": 1409
   },
   {
    "title": "Enchantment",
@@ -536,15 +536,15 @@
   },
   {
    "title": "Dispenser",
-   "chains": 1222
+   "chains": 1223
   },
   {
    "title": "Firework Rocket",
-   "chains": 1211
+   "chains": 1212
   },
   {
    "title": "Elytra",
-   "chains": 1195
+   "chains": 1196
   },
   {
    "title": "Mechanics",

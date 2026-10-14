@@ -3,42 +3,42 @@
  "rank": "last",
  "nodes": 24073,
  "converge": {
-  "articles": 20873,
-  "pct": 86.71,
-  "deadEnd": 3200,
-  "deadEndPct": 13.29,
-  "noLinks": 1031,
+  "articles": 22354,
+  "pct": 92.86,
+  "deadEnd": 1719,
+  "deadEndPct": 7.14,
+  "noLinks": 827,
   "tooFewLinks": 0,
-  "unresolvable": 16
+  "unresolvable": 15
  },
  "hopStats": {
-  "mean": 5.18,
+  "mean": 5.36,
   "median": 4,
   "p90": 11,
   "max": 25
  },
  "histogram": {
-  "0": 1278,
-  "1": 2110,
-  "2": 2170,
-  "3": 3799,
-  "4": 1880,
-  "5": 1696,
-  "6": 1539,
-  "7": 1399,
-  "8": 1070,
-  "9": 764,
-  "10": 956,
-  "11": 613,
-  "12": 467,
-  "13": 303,
-  "14": 208,
-  "15": 175,
-  "16": 86,
-  "17": 75,
-  "18": 71,
+  "0": 1282,
+  "1": 2143,
+  "2": 2206,
+  "3": 3829,
+  "4": 1980,
+  "5": 1751,
+  "6": 1627,
+  "7": 1731,
+  "8": 1319,
+  "9": 961,
+  "10": 1068,
+  "11": 683,
+  "12": 553,
+  "13": 341,
+  "14": 237,
+  "15": 187,
+  "16": 93,
+  "17": 76,
+  "18": 72,
   "19": 64,
-  "20": 42,
+  "20": 43,
   "21": 37,
   "22": 40,
   "23": 28,
@@ -47,41 +47,41 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1047,
-   "1": 1601,
-   "2": 3561,
-   "3": 2434,
-   "4": 2196,
-   "5": 1591,
-   "6": 1320,
-   "7": 1098,
-   "8": 956,
-   "9": 787,
-   "10": 7482
+   "0": 842,
+   "1": 1655,
+   "2": 3614,
+   "3": 2482,
+   "4": 2205,
+   "5": 1596,
+   "6": 1321,
+   "7": 1101,
+   "8": 958,
+   "9": 791,
+   "10": 7508
   },
   "atLeast": {
-   "1": 95.7,
-   "2": 89,
-   "3": 74.2,
-   "5": 55
+   "1": 96.5,
+   "2": 89.6,
+   "3": 74.6,
+   "5": 55.1
   }
  },
  "concentration": {
-  "top1Pct": 12.47,
-  "top3Pct": 29.52,
-  "top10Pct": 53.51,
-  "cycleCount": 626,
-  "entropyBits": 5.83
+  "top1Pct": 12.55,
+  "top3Pct": 29.92,
+  "top10Pct": 57.3,
+  "cycleCount": 628,
+  "entropyBits": 5.82
  },
- "components": 627,
- "cycleCount": 626,
+ "components": 629,
+ "cycleCount": 628,
  "largestCycle": {
   "members": [
    "Dan Houser",
    "Bank Manager (GTA III)"
   ],
   "size": 2,
-  "basin": 3001
+  "basin": 3020
  },
  "topAttractors": [
   {
@@ -89,47 +89,55 @@
     "Dan Houser",
     "Bank Manager (GTA III)"
    ],
-   "basin": 3001,
-   "pct": 12.47
+   "basin": 3020,
+   "pct": 12.55
   },
   {
    "cycle": [
     "Rockstar Toronto",
     "Kevin Hoare"
    ],
-   "basin": 2295,
-   "pct": 9.53
+   "basin": 2369,
+   "pct": 9.84
   },
   {
    "cycle": [
     "QUB3D",
     "Quube"
    ],
-   "basin": 1811,
-   "pct": 7.52
+   "basin": 1813,
+   "pct": 7.53
+  },
+  {
+   "cycle": [
+    "Lucia Caminos",
+    "Gretchen"
+   ],
+   "basin": 1205,
+   "pct": 5.01
   },
   {
    "cycle": [
     "Tequesta",
     "Felicity"
    ],
-   "basin": 1178,
-   "pct": 4.89
+   "basin": 1180,
+   "pct": 4.9
   },
   {
    "cycle": [
     "Rockstar Games Social Club",
     "Sum Yung Gai"
    ],
-   "basin": 1000,
-   "pct": 4.15
+   "basin": 1011,
+   "pct": 4.2
   },
   {
    "cycle": [
     "Vanilla Unicorn",
     "Singleton's"
    ],
-   "basin": 921,
+   "basin": 923,
    "pct": 3.83
   },
   {
@@ -137,16 +145,16 @@
     "Slasher",
     "Beast vs. Slasher"
    ],
-   "basin": 812,
-   "pct": 3.37
+   "basin": 816,
+   "pct": 3.39
   },
   {
    "cycle": [
     "Media Player",
     "MOTOMAMI Los Santos"
    ],
-   "basin": 762,
-   "pct": 3.17
+   "basin": 765,
+   "pct": 3.18
   },
   {
    "cycle": [
@@ -161,24 +169,24 @@
     "Heavy Sniper",
     "Heavy Sniper Mk II"
    ],
-   "basin": 410,
-   "pct": 1.7
+   "basin": 419,
+   "pct": 1.74
   },
   {
    "cycle": [
     "Hostile Negotiation",
     "Chase Point"
    ],
-   "basin": 366,
-   "pct": 1.52
+   "basin": 369,
+   "pct": 1.53
   },
   {
    "cycle": [
     "Grand Senora Desert",
     "Snakes"
    ],
-   "basin": 219,
-   "pct": 0.91
+   "basin": 221,
+   "pct": 0.92
   },
   {
    "cycle": [
@@ -202,8 +210,8 @@
     "Third-Person View",
     "First-Person View"
    ],
-   "basin": 157,
-   "pct": 0.65
+   "basin": 158,
+   "pct": 0.66
   },
   {
    "cycle": [
@@ -212,6 +220,14 @@
    ],
    "basin": 157,
    "pct": 0.65
+  },
+  {
+   "cycle": [
+    "Vamos",
+    "Tulip"
+   ],
+   "basin": 150,
+   "pct": 0.62
   },
   {
    "cycle": [
@@ -228,47 +244,19 @@
    ],
    "basin": 146,
    "pct": 0.61
-  },
-  {
-   "cycle": [
-    "Citizens United Negating Technology",
-    "CitizensUnitedNegatingTechnology.org"
-   ],
-   "basin": 140,
-   "pct": 0.58
-  },
-  {
-   "cycle": [
-    "Archie Crisp (HD Universe)",
-    "Archie Crisp"
-   ],
-   "basin": 132,
-   "pct": 0.55
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "GTA VI Website",
-   "chains": 1132,
-   "pct": 4.7,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Grand Theft Auto V/Title Update Notes",
-   "chains": 276,
-   "pct": 1.15,
+   "title": "Grand Theft Auto V/GameInformer December 2012",
+   "chains": 370,
+   "pct": 1.54,
    "reason": "no eligible links"
   },
   {
    "title": "Beach Patrol Headquarters",
-   "chains": 126,
-   "pct": 0.52,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Grand Theft Auto V/GameInformer December 2012",
-   "chains": 91,
-   "pct": 0.38,
+   "chains": 128,
+   "pct": 0.53,
    "reason": "no eligible links"
   },
   {
@@ -290,15 +278,9 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Game Boy Color",
-   "chains": 48,
-   "pct": 0.2,
-   "reason": "no eligible links"
-  },
-  {
    "title": "The Hit List",
-   "chains": 30,
-   "pct": 0.12,
+   "chains": 31,
+   "pct": 0.13,
    "reason": "no eligible links"
   },
   {
@@ -308,20 +290,8 @@
    "reason": "no eligible links"
   },
   {
-   "title": "GTASanAndreas.com",
-   "chains": 24,
-   "pct": 0.1,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Nintendo Switch",
    "chains": 15,
-   "pct": 0.06,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Xbox Series X and Series S",
-   "chains": 14,
    "pct": 0.06,
    "reason": "no eligible links"
   },
@@ -335,6 +305,36 @@
    "title": "Lifeinvader/Facade",
    "chains": 12,
    "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Kent Paul's 80's Nostalgia Zone!",
+   "chains": 12,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lifeinvader/Starface Celebrity Facials",
+   "chains": 11,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "The Third Leg",
+   "chains": 10,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Steven Walsh",
+   "chains": 9,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Lifeinvader/Ego Chaser",
+   "chains": 8,
+   "pct": 0.03,
    "reason": "no eligible links"
   }
  ],
@@ -358,7 +358,7 @@
   },
   {
    "title": "Los Santos (HD Universe)",
-   "firstLinks": 180
+   "firstLinks": 181
   },
   {
    "title": "Rockstar Games Social Club",
@@ -397,12 +397,16 @@
    "firstLinks": 80
   },
   {
+   "title": "United States of America",
+   "firstLinks": 79
+  },
+  {
    "title": "Los Santos (3D Universe)",
    "firstLinks": 78
   },
   {
-   "title": "United States of America",
-   "firstLinks": 67
+   "title": "Rank",
+   "firstLinks": 78
   },
   {
    "title": "Wasted",
@@ -418,7 +422,7 @@
   },
   {
    "title": "United Kingdom",
-   "firstLinks": 56
+   "firstLinks": 57
   },
   {
    "title": "Eyefind",
@@ -426,14 +430,14 @@
   },
   {
    "title": "Grand Theft Auto VI/Trailers",
-   "firstLinks": 53
-  },
-  {
-   "title": "Portland",
-   "firstLinks": 49
+   "firstLinks": 55
   },
   {
    "title": "Trevor Philips",
+   "firstLinks": 51
+  },
+  {
+   "title": "Portland",
    "firstLinks": 49
   },
   {
@@ -455,132 +459,128 @@
   {
    "title": "Pause Menu",
    "firstLinks": 43
-  },
-  {
-   "title": "Cutscenes",
-   "firstLinks": 41
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Dan Houser",
-   "chains": 3001
+   "chains": 3020
   },
   {
    "title": "Bank Manager (GTA III)",
-   "chains": 3001
+   "chains": 3020
   },
   {
    "title": "Rockstar Toronto",
-   "chains": 2295
+   "chains": 2369
   },
   {
    "title": "Kevin Hoare",
-   "chains": 2295
+   "chains": 2369
   },
   {
    "title": "Rockstar Vancouver",
-   "chains": 2255
+   "chains": 2329
   },
   {
    "title": "Stock Footage",
-   "chains": 2222
+   "chains": 2296
   },
   {
    "title": "Universes",
-   "chains": 2137
+   "chains": 2209
   },
   {
    "title": "QUB3D",
-   "chains": 1811
+   "chains": 1813
   },
   {
    "title": "Quube",
-   "chains": 1811
+   "chains": 1813
   },
   {
    "title": "Random Pickable Objects",
-   "chains": 1808
+   "chains": 1810
   },
   {
    "title": "Pedestrians",
-   "chains": 1805
-  },
-  {
-   "title": "Franklin Clinton",
-   "chains": 1552
+   "chains": 1807
   },
   {
    "title": "3D Universe",
-   "chains": 1538
+   "chains": 1608
+  },
+  {
+   "title": "Franklin Clinton",
+   "chains": 1561
   },
   {
    "title": "PlayStation 3",
-   "chains": 1364
+   "chains": 1373
+  },
+  {
+   "title": "Gretchen",
+   "chains": 1205
+  },
+  {
+   "title": "Lucia Caminos",
+   "chains": 1205
   },
   {
    "title": "Felicity",
-   "chains": 1178
+   "chains": 1180
   },
   {
    "title": "Tequesta",
-   "chains": 1178
+   "chains": 1180
+  },
+  {
+   "title": "Unnamed GTA VI abandoned phosphate mine",
+   "chains": 1148
+  },
+  {
+   "title": "Mount Kalaga National Park",
+   "chains": 1147
   },
   {
    "title": "GTA VI Website",
-   "chains": 1132
+   "chains": 1143
   },
   {
    "title": "Grand Theft Auto VI/Screenshots",
-   "chains": 1101
+   "chains": 1110
   },
   {
    "title": "Grand Theft Auto VI/Trailers",
-   "chains": 1080
+   "chains": 1087
   },
   {
    "title": "Rockstar Games Social Club",
-   "chains": 1000
+   "chains": 1011
   },
   {
    "title": "Sum Yung Gai",
-   "chains": 1000
+   "chains": 1011
   },
   {
    "title": "Vanilla Unicorn",
-   "chains": 921
+   "chains": 923
   },
   {
    "title": "Singleton's",
-   "chains": 921
+   "chains": 923
   },
   {
    "title": "Slasher",
-   "chains": 812
+   "chains": 816
   },
   {
    "title": "Beast vs. Slasher",
-   "chains": 812
+   "chains": 816
   },
   {
    "title": "Los Santos (HD Universe)",
-   "chains": 807
-  },
-  {
-   "title": "Money",
-   "chains": 763
-  },
-  {
-   "title": "Media Player",
-   "chains": 762
-  },
-  {
-   "title": "MOTOMAMI Los Santos",
-   "chains": 762
-  },
-  {
-   "title": "Wasted",
-   "chains": 713
+   "chains": 811
   }
  ]
 }
