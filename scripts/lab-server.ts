@@ -304,7 +304,13 @@ const server = http.createServer(async (req, res) => {
       res.end(raw);
       return;
     }
-    if (url.pathname === "/mesh" || url.pathname === "/mesh/" || url.pathname === "/meshfield") {
+    if (url.pathname === "/mesh/" || url.pathname === "/meshfield.html") {
+      // the page's asset refs are relative, so keep the canonical slash-free /mesh
+      res.writeHead(308, { Location: "/mesh" });
+      res.end();
+      return;
+    }
+    if (url.pathname === "/mesh" || url.pathname === "/meshfield") {
       // the constellation as its own page — the field fills the whole viewport
       const raw = readSafe(MESHPAGE) ?? "";
       const wikiJson = JSON.stringify(wikis.map((w) => ({ id: w.id, name: w.name, description: w.description })));

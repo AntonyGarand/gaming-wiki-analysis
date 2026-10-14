@@ -8,7 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script src="/meshfield.js"></script>
+<!-- relative on purpose: resolves next to this page both on the lab server (/mesh)
+     and in the static build (dist/mesh/index.html), whatever the site root is -->
+<script src="meshfield.js"></script>
 <style>
   /* same instantiation tokens as the lab dashboard (warm paper editorial) */
   :root {
@@ -156,8 +158,8 @@
       </div>
       <div class="ctl-note">parenthesised, italicised, disambiguation and date links never count, at any rank</div>
       <div class="pagelinks">
-        <a href="/">article</a>
-        <a href="/lab">lab</a>
+        <a href="/" id="artLink">article</a>
+        <a href="/lab" id="labLink">lab</a>
         <button id="fsBtn" title="fullscreen" aria-label="toggle fullscreen">⤢</button>
       </div>
     </div>
@@ -179,19 +181,105 @@ function hueAt(t) {
   return `oklch(${(L * 100).toFixed(1)}% ${C.toFixed(3)} ${((H % 360) + 360) % 360})`;
 }
 const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-async function api(path) {
+function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+/* ==================================================================== *
+ * data layer — two backends, one api(path) for meshfield.js.
+ *
+ * live:   the lab server answers /api/wikis, /api/summary, /api/random,
+ *         /api/chain straight from the freshest analysis output.
+ * static: no server (github pages). the build ships the same successor
+ *         tables under data/{wiki}/, so random starts are drawn from
+ *         titles.json and chains are walked client-side — the exact
+ *         walkFrom() semantics from lib/walk.ts, cap and all.
+ * ==================================================================== */
+let STATIC = false;
+let staticWikis = null; // [{id, name, ranks}] from data/wikis.json
+let DATA = "data/"; // static data prefix — "../data/" when the page is dist/mesh/index.html
+const fileCache = new Map(); // resolved path -> Promise<parsed json>
+function fetchJson(url) {
+  return fetch(url).then((r) => {
+    if (!r.ok) throw new Error(`${r.status} ${url}`);
+    return r.json();
+  });
+}
+function jf(path) {
+  const url = DATA + path;
+  if (!fileCache.has(url)) {
+    fileCache.set(url, fetchJson(url).catch((e) => { fileCache.delete(url); throw e; }));
+  }
+  return fileCache.get(url);
+}
+async function liveFetch(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error((await res.text()) || res.statusText);
   return res.json();
 }
-function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
 
+const wikiData = new Map(); // wiki -> { titles: {idx:title}, byTitle: Map<title, idx> }
+const succData = new Map(); // "wiki|rank" -> Int32Array
+async function loadWikiData(wiki) {
+  if (!wikiData.has(wiki)) {
+    const titles = await jf(`${wiki}/titles.json`);
+    const byTitle = new Map();
+    for (const k in titles) byTitle.set(titles[k], Number(k));
+    wikiData.set(wiki, { titles, byTitle });
+  }
+  return wikiData.get(wiki);
+}
+async function loadSucc(wiki, rank) {
+  const key = `${wiki}|${rank}`;
+  if (!succData.has(key)) {
+    const j = await jf(`${wiki}/succ-r${rank}.json`);
+    succData.set(key, Int32Array.from(j.succ));
+  }
+  return succData.get(key);
+}
+function staticWalk(titles, succ, start) { // mirrors walkFrom(succ, start) in lib/walk.ts
+  const chain = [start];
+  const seen = new Set([start]);
+  let cur = start;
+  for (;;) {
+    if (chain.length >= 120) return { idx: chain, fate: "cycle", cycleSize: 1 };
+    const nx = succ[cur];
+    if (nx === -1) return { idx: chain, fate: "dead", cycleSize: 0 };
+    if (seen.has(nx)) {
+      const firstIdx = chain.indexOf(nx);
+      return { idx: chain, fate: "cycle", cycleSize: firstIdx >= 0 ? chain.length - firstIdx : 1 };
+    }
+    seen.add(nx);
+    chain.push(nx);
+    cur = nx;
+  }
+}
+async function api(path) {
+  if (!STATIC) return liveFetch(path);
+  const u = new URL(path, "http://mesh.local");
+  const q = u.searchParams;
+  if (u.pathname === "/api/random") {
+    const d = await loadWikiData(q.get("wiki"));
+    const keys = Object.keys(d.titles);
+    return { title: d.titles[keys[(Math.random() * keys.length) | 0]] ?? "" };
+  }
+  if (u.pathname === "/api/chain") {
+    const d = await loadWikiData(q.get("wiki"));
+    const succ = await loadSucc(q.get("wiki"), q.get("rank"));
+    const start = d.byTitle.get(q.get("title"));
+    if (start === undefined) throw new Error(`article not found: ${q.get("title")}`);
+    const w = staticWalk(d.titles, succ, start);
+    return { chain: w.idx.map((i) => d.titles[i]), hops: w.idx.length - 1, fate: w.fate, cycleSize: w.cycleSize };
+  }
+  throw new Error(`not available without the lab server: ${path}`);
+}
+
+/* ==================================================================== *
+ * page state — URL-driven (?wiki=&rank=&n=) so any view is shareable
+ * ==================================================================== */
 const WIKIS = __WIKI_OPTIONS__;
 const SIZES = [80, 150, 250, 400, 600];
 const RANK_LABELS = { strict1: "1st", last: "last", random: "random" };
 const rankLabel = (r) => RANK_LABELS[r] ?? (r + (r === "1" ? "st" : r === "2" ? "nd" : r === "3" ? "rd" : "th")) + " link";
 
-/* state comes from the URL (?wiki=&rank=&n=) so any view is shareable */
 const params = new URLSearchParams(location.search);
 function nearestSize(n) {
   if (!Number.isFinite(n)) return 250;
@@ -205,7 +293,8 @@ const state = {
   n: nearestSize(parseInt(params.get("n") ?? "", 10)),
 };
 function syncUrl() {
-  history.replaceState(null, "", "/mesh?" + new URLSearchParams({ wiki: state.wiki, rank: state.rank, n: String(state.n) }));
+  // query-only: keeps whatever path the site lives under (lab /mesh, pages /repo/mesh/)
+  history.replaceState(null, "", "?" + new URLSearchParams({ wiki: state.wiki, rank: state.rank, n: String(state.n) }));
 }
 function showError(msg) {
   const el = document.getElementById("status");
@@ -216,27 +305,39 @@ function showError(msg) {
 const stage = document.getElementById("stage");
 const mesh = createMeshField(document.getElementById("meshCanvas"), stage, { explore: true });
 
-/* wiki switch (populated now, availability flags patched in during boot) */
+/* wiki switch (populated now; availability/rebuild happens during boot) */
 const wikiSwitch = document.getElementById("wikiSwitch");
-wikiSwitch.innerHTML = WIKIS.map((w) =>
-  `<button data-wiki="${w.id}" title="${esc(w.description ?? "")}">${w.id}</button>`).join("");
-const wikiBtns = [...wikiSwitch.querySelectorAll("button")];
-const markWiki = () => wikiBtns.forEach((b) => b.classList.toggle("on", b.dataset.wiki === state.wiki));
-wikiBtns.forEach((b) => b.onclick = async () => {
-  if (b.disabled || b.dataset.wiki === state.wiki) return;
-  state.wiki = b.dataset.wiki;
+function buildWikiButtons(list) {
+  wikiSwitch.innerHTML = list.map((w) =>
+    `<button data-wiki="${w.id}" title="${esc(w.description ?? "")}">${w.id}</button>`).join("");
+  for (const b of wikiSwitch.querySelectorAll("button")) {
+    b.onclick = async () => {
+      if (b.disabled || b.dataset.wiki === state.wiki) return;
+      state.wiki = b.dataset.wiki;
+      markWiki();
+      if (await loadSummary()) regrow();
+    };
+  }
   markWiki();
-  if (await loadSummary()) regrow();
-});
-markWiki();
+}
+const wikiBtnsOf = () => [...wikiSwitch.querySelectorAll("button")];
+const markWiki = () => wikiBtnsOf().forEach((b) => b.classList.toggle("on", b.dataset.wiki === state.wiki));
+buildWikiButtons(WIKIS);
 
-/* rank switch — rebuilt per wiki from /api/summary */
+/* rank switch — rebuilt per wiki (live: /api/summary · static: data/wikis.json) */
 async function loadSummary() {
   const ranksEl = document.getElementById("ranks");
+  let ranks = null;
   try {
-    const s = await api(`/api/summary?wiki=${state.wiki}`);
+    if (STATIC) {
+      const w = staticWikis.find((x) => x.id === state.wiki);
+      ranks = (w?.ranks ?? []).map((r) => ({ rank: r }));
+      if (!ranks.length) throw new Error("no ranks in data/wikis.json");
+    } else {
+      const s = await liveFetch(`/api/summary?wiki=${state.wiki}`);
+      ranks = s.ranks ?? [];
+    }
     showError("");
-    const ranks = s.ranks ?? [];
     if (!ranks.some((r) => r.rank === state.rank) && ranks.length) state.rank = ranks[0].rank;
     ranksEl.innerHTML = "";
     for (const r of ranks) {
@@ -253,7 +354,7 @@ async function loadSummary() {
     return true;
   } catch (e) {
     ranksEl.innerHTML = "";
-    showError(`No analysis data for ${state.wiki} yet (${esc(e.message)}). Run the fetch + analyze pipeline, or pick another wiki.`);
+    showError(`No analysis data for ${state.wiki} (${esc(e.message)}). Run the fetch + analyze pipeline, or pick another wiki.`);
     return false;
   }
 }
@@ -286,14 +387,36 @@ document.getElementById("fsBtn").onclick = () => {
   else stage.requestFullscreen?.();
 };
 
-/* boot: disable wikis without data, fall back if the requested one is missing */
+/* boot: prefer the live lab server, fall back to the static data files */
 (async () => {
   try {
-    const list = await api("/api/wikis");
+    const list = await liveFetch("/api/wikis"); // lab server present → live mode
     const avail = new Set(list.filter((w) => w.available).map((w) => w.id));
-    wikiBtns.forEach((b) => { if (!avail.has(b.dataset.wiki)) { b.disabled = true; b.title = "not fetched yet"; } });
+    wikiBtnsOf().forEach((b) => { if (!avail.has(b.dataset.wiki)) { b.disabled = true; b.title = "not fetched yet"; } });
     if (!avail.has(state.wiki) && avail.size) { state.wiki = [...avail][0]; markWiki(); }
-  } catch { /* availability flags are a nicety, not a requirement */ }
+  } catch {
+    try {
+      // static build (github pages / serve-static). the page may sit at the
+      // site root or one level down (dist/mesh/), so probe both data prefixes
+      let manifest = null;
+      for (const prefix of ["data/", "../data/"]) {
+        try { manifest = await fetchJson(prefix + "wikis.json"); DATA = prefix; break; } catch { /* next */ }
+      }
+      if (!manifest) throw new Error("data/wikis.json not found");
+      STATIC = true;
+      staticWikis = manifest.wikis ?? [];
+      if (!staticWikis.length) throw new Error("empty data/wikis.json — run the static build");
+      buildWikiButtons(staticWikis);
+      if (!staticWikis.some((w) => w.id === state.wiki)) state.wiki = staticWikis[0].id;
+      markWiki();
+      // no lab dashboard without a server — the article is one level up
+      document.getElementById("artLink").href = "../";
+      document.getElementById("labLink").style.display = "none";
+    } catch (e) {
+      showError(`No data found (${esc(e.message)}). Serve this page with the lab server (npm run lab) or build the static site (npm run build:static).`);
+      return;
+    }
+  }
   if (await loadSummary()) regrow();
 })();
 </script>

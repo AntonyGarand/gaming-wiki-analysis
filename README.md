@@ -29,7 +29,7 @@ npx tsx scripts/pipeline.ts --all
 npm run build:static
 
 # preview it
-npm run serve:static        # → http://localhost:8080
+npm run serve:static        # → http://localhost:8080  (/ = article, /mesh/ = full-page mesh field)
 
 # the lab dashboard + article over the live analysis output
 npm run lab                 # → http://localhost:8787  (/ = article, /lab = dashboard, /mesh = full-page mesh field)
@@ -40,6 +40,11 @@ The article (`scripts/article.html`) is fully static. It reads, per wiki, `title
 computes everything else client-side: loops, basins, the drainage-map layout, chain walks, search.
 `scripts/walkfield.js` is the engine behind the hero and the map. The exact file contract is in
 [`docs/data-pipeline-brief.md`](docs/data-pipeline-brief.md).
+
+The mesh field page (`scripts/meshfield.html`) ships in the same build at `dist/mesh/` and is
+static too: it draws random starts from `titles.json` and walks chains client-side over the same
+successor tables, so it grows identically on GitHub Pages. Served by the lab server at `/mesh` it
+uses the live API instead.
 
 If your `output/` folders still hold the old `chains-r*.json` tables, run
 `npm run convert:legacy -- --src=<dir>` once to produce the successor tables.
@@ -76,6 +81,14 @@ Following the chain consists of:
 3. Skipping namespace pages (File:, Category:, …) and interwiki/language links (`fr:`, `pt-br:`, …)
 4. Stopping when a **loop** occurs, or a page with no clickable links
 
+Pages whose entire body is generated (transcluded guide tables, template-built
+listings) fall back to *everything that renders*. For those pages only, the
+pipeline also fetches the templates they invoke and inlines the self-contained
+**prose** ones — templates whose links are written out in their body, with no
+`{{{parameters}}}`, no navbox/infobox chrome — so a page whose lead paragraphs
+come from e.g. `{{Treasure Trails Guide Anagrams Intro}}` walks into the link a
+reader would actually click first.
+
 ## What you get
 
 For each wiki and each link rank (1st, 2nd, 3rd, 5th, last, random — all strict: parenthesised and italicised links never count):
@@ -94,7 +107,7 @@ For each wiki and each link rank (1st, 2nd, 3rd, 5th, last, random — all stric
 ```
 output/
 ├── <wiki>/
-│   ├── wiki.sqlite          # raw page dumps (text, aliases, revisions)
+│   ├── wiki.sqlite          # raw page dumps (text, aliases, revisions) + fetched templates
 │   ├── links.sqlite         # parsed link tables (ordered, with paren/italic flags)
 │   ├── titles.json          # node id → title (shared by every rank)
 │   ├── succ-r<rank>.json    # { succ[], term[] } successor table per rank
@@ -120,7 +133,8 @@ Optional fields on a wiki entry:
 - Default **1 request/second** rate limit (configurable via `RATE_LIMIT_MS`)
 - Identifies itself with a descriptive User-Agent
 - Pauses on 429/5xx responses with exponential backoff
-- Only fetches mainspace content pages (no images, no user pages)
+- Only fetches mainspace content pages (no images, no user pages), plus the
+  handful of template pages needed by fallback pages (batched, 50/request)
 - All data stored locally; nothing re-fetched unless missing
 
 ## Adding a new wiki

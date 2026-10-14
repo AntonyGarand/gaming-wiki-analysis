@@ -50,4 +50,14 @@ fs.writeFileSync(path.join(DIST, "data", "wikis.json"), JSON.stringify({ generat
 fs.copyFileSync(path.join(ROOT, "scripts", "article.html"), path.join(DIST, "index.html"));
 fs.copyFileSync(path.join(ROOT, "scripts", "walkfield.js"), path.join(DIST, "walkfield.js"));
 fs.writeFileSync(path.join(DIST, ".nojekyll"), "");
+
+// mesh field page — full-page live mesh. works with no server: random starts
+// come from titles.json and chains are walked client-side over succ-r*.json
+const meshDir = path.join(DIST, "mesh");
+fs.mkdirSync(meshDir, { recursive: true });
+const meshHtml = fs.readFileSync(path.join(ROOT, "scripts", "meshfield.html"), "utf8")
+  .replace("__WIKI_OPTIONS__", JSON.stringify(available.map((w) => ({ id: w.id, name: w.name, description: w.description }))));
+fs.writeFileSync(path.join(meshDir, "index.html"), meshHtml);
+fs.copyFileSync(path.join(ROOT, "scripts", "meshfield.js"), path.join(meshDir, "meshfield.js"));
+console.log(`mesh: dist/mesh/index.html (${available.length} wikis, chains walked client-side)`);
 console.log(`\nstatic build complete → ${DIST} (${available.length} wikis, ${(bytes / 1e6).toFixed(1)} MB of data)`);
