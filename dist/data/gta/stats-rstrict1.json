@@ -3,11 +3,11 @@
  "rank": "strict1",
  "nodes": 24073,
  "converge": {
-  "articles": 22302,
-  "pct": 92.64,
-  "deadEnd": 1771,
-  "deadEndPct": 7.36,
-  "noLinks": 1032,
+  "articles": 22303,
+  "pct": 92.65,
+  "deadEnd": 1770,
+  "deadEndPct": 7.35,
+  "noLinks": 1031,
   "tooFewLinks": 0,
   "unresolvable": 16
  },
@@ -22,7 +22,7 @@
   "1": 2263,
   "2": 4745,
   "3": 5563,
-  "4": 4117,
+  "4": 4118,
   "5": 1915,
   "6": 853,
   "7": 579,
@@ -37,7 +37,7 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1048,
+   "0": 1047,
    "1": 1601,
    "2": 3561,
    "3": 2434,
@@ -47,19 +47,19 @@
    "7": 1098,
    "8": 956,
    "9": 787,
-   "10": 7481
+   "10": 7482
   },
   "atLeast": {
-   "1": 95.6,
+   "1": 95.7,
    "2": 89,
    "3": 74.2,
    "5": 55
   }
  },
  "concentration": {
-  "top1Pct": 27.83,
+  "top1Pct": 27.84,
   "top3Pct": 56.76,
-  "top10Pct": 74.9,
+  "top10Pct": 74.91,
   "cycleCount": 390,
   "entropyBits": 4.06
  },
@@ -71,7 +71,7 @@
    "GTA Online Protagonist"
   ],
   "size": 2,
-  "basin": 6700
+  "basin": 6701
  },
  "topAttractors": [
   {
@@ -79,8 +79,8 @@
     "Protagonist",
     "GTA Online Protagonist"
    ],
-   "basin": 6700,
-   "pct": 27.83
+   "basin": 6701,
+   "pct": 27.84
   },
   {
    "cycle": [
@@ -453,11 +453,11 @@
  "topThroughTraffic": [
   {
    "title": "Protagonist",
-   "chains": 6700
+   "chains": 6701
   },
   {
    "title": "GTA Online Protagonist",
-   "chains": 6700
+   "chains": 6701
   },
   {
    "title": "Canada",
@@ -517,7 +517,7 @@
   },
   {
    "title": "Characters",
-   "chains": 1149
+   "chains": 1150
   },
   {
    "title": "State of Liberty (HD Universe)",
@@ -525,7 +525,7 @@
   },
   {
    "title": "Pedestrians",
-   "chains": 1111
+   "chains": 1112
   },
   {
    "title": "Algonquin",

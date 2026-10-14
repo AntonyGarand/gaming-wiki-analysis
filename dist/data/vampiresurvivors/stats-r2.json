@@ -3,16 +3,16 @@
  "rank": "2",
  "nodes": 2323,
  "converge": {
-  "articles": 1125,
-  "pct": 48.43,
-  "deadEnd": 1198,
-  "deadEndPct": 51.57,
+  "articles": 1124,
+  "pct": 48.39,
+  "deadEnd": 1199,
+  "deadEndPct": 51.61,
   "noLinks": 81,
   "tooFewLinks": 580,
   "unresolvable": 6
  },
  "hopStats": {
-  "mean": 3.09,
+  "mean": 3.08,
   "median": 3,
   "p90": 5,
   "max": 8
@@ -24,7 +24,7 @@
   "3": 217,
   "4": 92,
   "5": 254,
-  "6": 34,
+  "6": 33,
   "7": 30,
   "8": 1
  },
@@ -37,8 +37,8 @@
    "4": 150,
    "5": 171,
    "6": 138,
-   "7": 109,
-   "8": 90,
+   "7": 107,
+   "8": 92,
    "9": 87,
    "10": 301
   },
@@ -50,9 +50,9 @@
   }
  },
  "concentration": {
-  "top1Pct": 46.36,
-  "top3Pct": 48.17,
-  "top10Pct": 48.43,
+  "top1Pct": 46.32,
+  "top3Pct": 48.13,
+  "top10Pct": 48.39,
   "cycleCount": 6,
   "entropyBits": 0.31
  },
@@ -65,7 +65,7 @@
    "Level up"
   ],
   "size": 3,
-  "basin": 1077
+  "basin": 1076
  },
  "topAttractors": [
   {
@@ -74,8 +74,8 @@
     "Enemies",
     "Level up"
    ],
-   "basin": 1077,
-   "pct": 46.36
+   "basin": 1076,
+   "pct": 46.32
   },
   {
    "cycle": [
@@ -144,13 +144,13 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "World of Light and Dark",
-   "chains": 4,
-   "pct": 0.17,
+   "title": "Vampire Survivors 3",
+   "chains": 5,
+   "pct": 0.22,
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Vampire Survivors 3",
+   "title": "World of Light and Dark",
    "chains": 4,
    "pct": 0.17,
    "reason": "only 1 eligible links"
@@ -336,19 +336,19 @@
  "topThroughTraffic": [
   {
    "title": "Weapons",
-   "chains": 1077
+   "chains": 1076
   },
   {
    "title": "Enemies",
-   "chains": 1077
+   "chains": 1076
   },
   {
    "title": "Level up",
-   "chains": 1077
+   "chains": 1076
   },
   {
    "title": "Characters",
-   "chains": 510
+   "chains": 509
   },
   {
    "title": "A Garlic Paradise",
@@ -364,15 +364,15 @@
   },
   {
    "title": "PowerUps",
-   "chains": 225
+   "chains": 224
   },
   {
    "title": "Passive items",
-   "chains": 219
+   "chains": 218
   },
   {
    "title": "Evolution",
-   "chains": 184
+   "chains": 183
   },
   {
    "title": "Ode to Castlevania",

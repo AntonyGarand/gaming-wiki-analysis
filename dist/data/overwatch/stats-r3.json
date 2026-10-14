@@ -3,12 +3,12 @@
  "rank": "3",
  "nodes": 2808,
  "converge": {
-  "articles": 1447,
-  "pct": 51.53,
-  "deadEnd": 1361,
-  "deadEndPct": 48.47,
-  "noLinks": 418,
-  "tooFewLinks": 704,
+  "articles": 1448,
+  "pct": 51.57,
+  "deadEnd": 1360,
+  "deadEndPct": 48.43,
+  "noLinks": 415,
+  "tooFewLinks": 705,
   "unresolvable": 30
  },
  "hopStats": {
@@ -20,7 +20,7 @@
  "histogram": {
   "0": 62,
   "1": 217,
-  "2": 519,
+  "2": 520,
   "3": 267,
   "4": 169,
   "5": 62,
@@ -32,9 +32,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 448,
+   "0": 445,
    "1": 370,
-   "2": 334,
+   "2": 335,
    "3": 250,
    "4": 168,
    "5": 124,
@@ -42,19 +42,19 @@
    "7": 81,
    "8": 79,
    "9": 59,
-   "10": 752
+   "10": 754
   },
   "atLeast": {
-   "1": 84,
-   "2": 70.9,
+   "1": 84.2,
+   "2": 71,
    "3": 59,
-   "5": 44.1
+   "5": 44.2
   }
  },
  "concentration": {
   "top1Pct": 25.32,
-  "top3Pct": 43.48,
-  "top10Pct": 49.36,
+  "top3Pct": 43.52,
+  "top10Pct": 49.39,
   "cycleCount": 27,
   "entropyBits": 2.38
  },
@@ -93,12 +93,12 @@
   },
   {
    "cycle": [
+    "Competitive Play",
     "Arcade",
-    "Maps",
-    "Competitive Play"
+    "Maps"
    ],
-   "basin": 188,
-   "pct": 6.7
+   "basin": 189,
+   "pct": 6.73
   },
   {
    "cycle": [
@@ -242,6 +242,12 @@
  ],
  "deadEndTerminals": [
   {
+   "title": "Chengdu Hunters",
+   "chains": 18,
+   "pct": 0.64,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Durovidro",
    "chains": 13,
    "pct": 0.46,
@@ -252,18 +258,6 @@
    "chains": 11,
    "pct": 0.39,
    "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Chengdu Hunters",
-   "chains": 9,
-   "pct": 0.32,
-   "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Heroes skins",
-   "chains": 9,
-   "pct": 0.32,
-   "reason": "no eligible links"
   },
   {
    "title": "Oriole Delgado",
@@ -327,6 +321,12 @@
   },
   {
    "title": "Charlet Chung",
+   "chains": 3,
+   "pct": 0.11,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Paul Nakauchi",
    "chains": 3,
    "pct": 0.11,
    "reason": "only 1 eligible links"
@@ -486,15 +486,15 @@
   },
   {
    "title": "Maps",
-   "chains": 188
+   "chains": 189
   },
   {
    "title": "Competitive Play",
-   "chains": 188
+   "chains": 189
   },
   {
    "title": "Arcade",
-   "chains": 188
+   "chains": 189
   },
   {
    "title": "Overwatch (group)",

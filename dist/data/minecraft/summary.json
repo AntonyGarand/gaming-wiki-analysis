@@ -1,6 +1,6 @@
 {
  "wiki": "minecraft",
- "generatedAt": "2026-10-14T04:05:11.421Z",
+ "generatedAt": "2026-10-14T13:46:08.877Z",
  "ranks": [
   {
    "rank": "strict1",
@@ -21,11 +21,11 @@
   },
   {
    "rank": "2",
-   "convergePct": 51.27,
-   "deadEndPct": 48.73,
+   "convergePct": 51.26,
+   "deadEndPct": 48.74,
    "components": 99,
    "cycleCount": 98,
-   "meanHops": 3.99,
+   "meanHops": 3.98,
    "medianHops": 4,
    "maxHops": 20,
    "topAttractor": [
@@ -35,16 +35,16 @@
     "NBT format",
     "UUID"
    ],
-   "topAttractorPct": 26.79,
-   "top3Pct": 36.31,
-   "eligiblePct": 54
+   "topAttractorPct": 26.77,
+   "top3Pct": 36.29,
+   "eligiblePct": 53.9
   },
   {
    "rank": "3",
-   "convergePct": 43.91,
-   "deadEndPct": 56.09,
-   "components": 72,
-   "cycleCount": 71,
+   "convergePct": 43.9,
+   "deadEndPct": 56.1,
+   "components": 73,
+   "cycleCount": 72,
    "meanHops": 6.59,
    "medianHops": 7,
    "maxHops": 19,
@@ -52,34 +52,34 @@
     "Stronghold",
     "End portal"
    ],
-   "topAttractorPct": 21.32,
-   "top3Pct": 33,
+   "topAttractorPct": 21.3,
+   "top3Pct": 32.9,
    "eligiblePct": 47.1
   },
   {
    "rank": "5",
-   "convergePct": 31.94,
-   "deadEndPct": 68.06,
+   "convergePct": 31.91,
+   "deadEndPct": 68.09,
    "components": 36,
    "cycleCount": 35,
-   "meanHops": 12.72,
+   "meanHops": 12.74,
    "medianHops": 12,
    "maxHops": 33,
    "topAttractor": [
     "Item",
     "Inventory"
    ],
-   "topAttractorPct": 26.12,
-   "top3Pct": 29.28,
-   "eligiblePct": 38.5
+   "topAttractorPct": 26.15,
+   "top3Pct": 29.24,
+   "eligiblePct": 38.4
   },
   {
    "rank": "last",
-   "convergePct": 56.75,
-   "deadEndPct": 43.25,
+   "convergePct": 56.76,
+   "deadEndPct": 43.24,
    "components": 153,
    "cycleCount": 152,
-   "meanHops": 7.44,
+   "meanHops": 7.45,
    "medianHops": 6,
    "maxHops": 28,
    "topAttractor": [
@@ -87,34 +87,24 @@
     "List of Minecraft.net articles"
    ],
    "topAttractorPct": 26.57,
-   "top3Pct": 36.16,
+   "top3Pct": 36.17,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 62.23,
-   "deadEndPct": 37.77,
-   "components": 81,
-   "cycleCount": 80,
-   "meanHops": 8.7,
-   "medianHops": 7,
-   "maxHops": 26,
+   "convergePct": 62.24,
+   "deadEndPct": 37.76,
+   "components": 82,
+   "cycleCount": 81,
+   "meanHops": 11.65,
+   "medianHops": 9,
+   "maxHops": 48,
    "topAttractor": [
-    "Damage",
-    "Knockback (mechanic)",
-    "Axe",
-    "Stick",
-    "Fortune",
-    "Fishing",
-    "Particles",
-    "Rain",
-    "Biome",
-    "Nautilus",
-    "Nautilus Armor",
-    "Fire Protection"
+    "Minecraft.net",
+    "Mojang.com"
    ],
-   "topAttractorPct": 26.36,
-   "top3Pct": 42.58,
+   "topAttractorPct": 22.24,
+   "top3Pct": 47.71,
    "eligiblePct": 100
   }
  ]

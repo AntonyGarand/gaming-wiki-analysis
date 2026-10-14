@@ -1,14 +1,14 @@
 {
  "wiki": "rs3",
- "generatedAt": "2026-10-14T04:05:06.372Z",
+ "generatedAt": "2026-10-14T13:41:04.284Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 97.08,
-   "deadEndPct": 2.92,
-   "components": 249,
-   "cycleCount": 248,
-   "meanHops": 4.01,
+   "convergePct": 97.58,
+   "deadEndPct": 2.42,
+   "components": 248,
+   "cycleCount": 247,
+   "meanHops": 4,
    "medianHops": 3,
    "maxHops": 17,
    "topAttractor": [
@@ -16,17 +16,17 @@
     "Gods",
     "Elder artefacts"
    ],
-   "topAttractorPct": 18.12,
-   "top3Pct": 46.51,
-   "eligiblePct": 97.2
+   "topAttractorPct": 17.89,
+   "top3Pct": 46.6,
+   "eligiblePct": 97.6
   },
   {
    "rank": "2",
-   "convergePct": 85.32,
-   "deadEndPct": 14.68,
-   "components": 971,
-   "cycleCount": 970,
-   "meanHops": 6.5,
+   "convergePct": 86.08,
+   "deadEndPct": 13.92,
+   "components": 974,
+   "cycleCount": 973,
+   "meanHops": 6.49,
    "medianHops": 5,
    "maxHops": 25,
    "topAttractor": [
@@ -35,34 +35,34 @@
     "Elder Gods",
     "Jas"
    ],
-   "topAttractorPct": 23.38,
-   "top3Pct": 50.28,
-   "eligiblePct": 89.2
+   "topAttractorPct": 23.45,
+   "top3Pct": 50.39,
+   "eligiblePct": 89.9
   },
   {
    "rank": "3",
-   "convergePct": 65.81,
-   "deadEndPct": 34.19,
-   "components": 1087,
-   "cycleCount": 1086,
-   "meanHops": 8.87,
+   "convergePct": 66.34,
+   "deadEndPct": 33.66,
+   "components": 1091,
+   "cycleCount": 1090,
+   "meanHops": 8.83,
    "medianHops": 6,
    "maxHops": 38,
    "topAttractor": [
     "Guthix",
     "Gielinor"
    ],
-   "topAttractorPct": 30.18,
-   "top3Pct": 38.05,
-   "eligiblePct": 76.4
+   "topAttractorPct": 30.25,
+   "top3Pct": 38.17,
+   "eligiblePct": 77.1
   },
   {
    "rank": "5",
-   "convergePct": 24.92,
-   "deadEndPct": 75.08,
-   "components": 667,
-   "cycleCount": 666,
-   "meanHops": 5.89,
+   "convergePct": 25.25,
+   "deadEndPct": 74.75,
+   "components": 669,
+   "cycleCount": 668,
+   "meanHops": 5.85,
    "medianHops": 4,
    "maxHops": 27,
    "topAttractor": [
@@ -70,17 +70,17 @@
     "Ranged",
     "Combat triangle"
    ],
-   "topAttractorPct": 6.27,
-   "top3Pct": 10.89,
-   "eligiblePct": 52
+   "topAttractorPct": 6.29,
+   "top3Pct": 10.92,
+   "eligiblePct": 52.7
   },
   {
    "rank": "last",
-   "convergePct": 85.78,
-   "deadEndPct": 14.22,
-   "components": 1548,
-   "cycleCount": 1547,
-   "meanHops": 8.47,
+   "convergePct": 86.25,
+   "deadEndPct": 13.75,
+   "components": 1550,
+   "cycleCount": 1549,
+   "meanHops": 8.46,
    "medianHops": 7,
    "maxHops": 39,
    "topAttractor": [
@@ -101,25 +101,25 @@
     "Circus barker",
     "Raffle barker"
    ],
-   "topAttractorPct": 26.52,
-   "top3Pct": 37.95,
+   "topAttractorPct": 26.66,
+   "top3Pct": 36.45,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 96.25,
-   "deadEndPct": 3.75,
-   "components": 1137,
-   "cycleCount": 1136,
-   "meanHops": 11.02,
+   "convergePct": 97.09,
+   "deadEndPct": 2.91,
+   "components": 1142,
+   "cycleCount": 1141,
+   "meanHops": 11.13,
    "medianHops": 7,
    "maxHops": 56,
    "topAttractor": [
     "Daemonheim",
     "Hilda"
    ],
-   "topAttractorPct": 18.21,
-   "top3Pct": 38.74,
+   "topAttractorPct": 18.53,
+   "top3Pct": 40.18,
    "eligiblePct": 100
   }
  ]

@@ -3,13 +3,13 @@
  "rank": "2",
  "nodes": 36164,
  "converge": {
-  "articles": 33593,
-  "pct": 92.89,
-  "deadEnd": 2571,
-  "deadEndPct": 7.11,
-  "noLinks": 539,
-  "tooFewLinks": 1323,
-  "unresolvable": 2
+  "articles": 33684,
+  "pct": 93.14,
+  "deadEnd": 2480,
+  "deadEndPct": 6.86,
+  "noLinks": 439,
+  "tooFewLinks": 1317,
+  "unresolvable": 1
  },
  "hopStats": {
   "mean": 5.4,
@@ -18,23 +18,23 @@
   "max": 23
  },
  "histogram": {
-  "0": 909,
-  "1": 3123,
-  "2": 5295,
-  "3": 5011,
-  "4": 3894,
-  "5": 3015,
-  "6": 2134,
-  "7": 1566,
-  "8": 1059,
+  "0": 911,
+  "1": 3146,
+  "2": 5293,
+  "3": 5015,
+  "4": 3915,
+  "5": 3022,
+  "6": 2142,
+  "7": 1567,
+  "8": 1058,
   "9": 1219,
-  "10": 1342,
-  "11": 1358,
-  "12": 1221,
+  "10": 1339,
+  "11": 1379,
+  "12": 1234,
   "13": 861,
-  "14": 597,
-  "15": 408,
-  "16": 198,
+  "14": 596,
+  "15": 410,
+  "16": 194,
   "17": 116,
   "18": 61,
   "19": 165,
@@ -45,41 +45,41 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 541,
-   "1": 1323,
-   "2": 2986,
-   "3": 4695,
-   "4": 3503,
-   "5": 3373,
-   "6": 2722,
-   "7": 2275,
-   "8": 1843,
-   "9": 1604,
-   "10": 11299
+   "0": 440,
+   "1": 1317,
+   "2": 2978,
+   "3": 4691,
+   "4": 3504,
+   "5": 3365,
+   "6": 2717,
+   "7": 2267,
+   "8": 1834,
+   "9": 1584,
+   "10": 11467
   },
   "atLeast": {
-   "1": 98.5,
-   "2": 94.8,
-   "3": 86.6,
-   "5": 63.9
+   "1": 98.8,
+   "2": 95.1,
+   "3": 86.9,
+   "5": 64.2
   }
  },
  "concentration": {
-  "top1Pct": 18.26,
-  "top3Pct": 45.39,
-  "top10Pct": 71.46,
-  "cycleCount": 442,
+  "top1Pct": 18.35,
+  "top3Pct": 45.53,
+  "top10Pct": 71.65,
+  "cycleCount": 443,
   "entropyBits": 4.46
  },
- "components": 443,
- "cycleCount": 442,
+ "components": 444,
+ "cycleCount": 443,
  "largestCycle": {
   "members": [
    "Second Age",
    "Zaros"
   ],
   "size": 2,
-  "basin": 6605
+  "basin": 6636
  },
  "topAttractors": [
   {
@@ -87,24 +87,24 @@
     "Second Age",
     "Zaros"
    ],
-   "basin": 6605,
-   "pct": 18.26
+   "basin": 6636,
+   "pct": 18.35
   },
   {
    "cycle": [
     "Gielinor",
     "Zanaris"
    ],
-   "basin": 6213,
-   "pct": 17.18
+   "basin": 6220,
+   "pct": 17.2
   },
   {
    "cycle": [
     "Body type",
     "Makeover Mage"
    ],
-   "basin": 3598,
-   "pct": 9.95
+   "basin": 3608,
+   "pct": 9.98
   },
   {
    "cycle": [
@@ -113,16 +113,16 @@
     "Ironman Mode",
     "HiScores"
    ],
-   "basin": 3565,
-   "pct": 9.86
+   "basin": 3558,
+   "pct": 9.84
   },
   {
    "cycle": [
     "World map",
     "Icon"
    ],
-   "basin": 1670,
-   "pct": 4.62
+   "basin": 1681,
+   "pct": 4.65
   },
   {
    "cycle": [
@@ -137,15 +137,15 @@
     "Kandarin",
     "King Lathas"
    ],
-   "basin": 1020,
-   "pct": 2.82
+   "basin": 1015,
+   "pct": 2.81
   },
   {
    "cycle": [
     "Ranged weapons",
     "Bow"
    ],
-   "basin": 777,
+   "basin": 779,
    "pct": 2.15
   },
   {
@@ -154,8 +154,8 @@
     "Clue scroll",
     "Treasure Trails/Full guide/All"
    ],
-   "basin": 721,
-   "pct": 1.99
+   "basin": 743,
+   "pct": 2.05
   },
   {
    "cycle": [
@@ -170,23 +170,23 @@
     "Elf",
     "Seren"
    ],
-   "basin": 527,
-   "pct": 1.46
+   "basin": 526,
+   "pct": 1.45
   },
   {
    "cycle": [
     "Paul Gower",
     "Ian Gower"
    ],
-   "basin": 503,
-   "pct": 1.39
+   "basin": 512,
+   "pct": 1.42
   },
   {
    "cycle": [
     "Mining",
     "Gems"
    ],
-   "basin": 475,
+   "basin": 473,
    "pct": 1.31
   },
   {
@@ -202,8 +202,8 @@
     "Duke Horacio",
     "Lumbridge Castle"
    ],
-   "basin": 374,
-   "pct": 1.03
+   "basin": 369,
+   "pct": 1.02
   },
   {
    "cycle": [
@@ -240,18 +240,19 @@
   },
   {
    "cycle": [
-    "Lord Shiro Shayzien",
-    "Shayzien Army"
+    "Voice of Yama",
+    "Yama",
+    "Yama's Domain"
    ],
-   "basin": 165,
-   "pct": 0.46
+   "basin": 172,
+   "pct": 0.48
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Neck slot table",
-   "chains": 158,
-   "pct": 0.44,
+   "chains": 157,
+   "pct": 0.43,
    "reason": "no eligible links"
   },
   {
@@ -297,6 +298,12 @@
    "reason": "no eligible links"
   },
   {
+   "title": "Game updates",
+   "chains": 22,
+   "pct": 0.06,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Easter event",
    "chains": 18,
    "pct": 0.05,
@@ -331,12 +338,6 @@
    "chains": 11,
    "pct": 0.03,
    "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Ulina",
-   "chains": 8,
-   "pct": 0.02,
-   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -346,12 +347,12 @@
    "firstLinks": 517
   },
   {
-   "title": "Quests",
-   "firstLinks": 312
+   "title": "Treasure Trails",
+   "firstLinks": 314
   },
   {
-   "title": "Treasure Trails",
-   "firstLinks": 301
+   "title": "Quests",
+   "firstLinks": 312
   },
   {
    "title": "Clue scroll (easy)",
@@ -407,7 +408,7 @@
   },
   {
    "title": "Varrock",
-   "firstLinks": 141
+   "firstLinks": 136
   },
   {
    "title": "Gielinor",
@@ -454,98 +455,98 @@
    "firstLinks": 104
   },
   {
-   "title": "Clue scroll (master)",
+   "title": "Great Kourend",
    "firstLinks": 103
   },
   {
-   "title": "Leagues Reward Shop",
+   "title": "Clue scroll (master)",
    "firstLinks": 103
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Zaros",
-   "chains": 6605
+   "chains": 6636
   },
   {
    "title": "Second Age",
-   "chains": 6605
+   "chains": 6636
   },
   {
    "title": "Third Age",
-   "chains": 6238
+   "chains": 6267
   },
   {
    "title": "Zanaris",
-   "chains": 6213
+   "chains": 6220
   },
   {
    "title": "Gielinor",
-   "chains": 6213
+   "chains": 6220
   },
   {
    "title": "God Wars",
-   "chains": 4659
+   "chains": 4674
   },
   {
    "title": "Gods",
-   "chains": 4608
+   "chains": 4623
   },
   {
    "title": "Zamorak",
-   "chains": 4229
+   "chains": 4244
   },
   {
    "title": "Kinshra",
-   "chains": 3658
+   "chains": 3674
   },
   {
    "title": "Black Knights' Fortress (location)",
-   "chains": 3653
+   "chains": 3669
   },
   {
    "title": "Door",
-   "chains": 3632
+   "chains": 3648
   },
   {
    "title": "Minimap",
-   "chains": 3630
+   "chains": 3646
   },
   {
    "title": "Makeover Mage",
-   "chains": 3598
+   "chains": 3608
   },
   {
    "title": "Body type",
-   "chains": 3598
+   "chains": 3608
   },
   {
    "title": "Player character",
-   "chains": 3593
+   "chains": 3603
   },
   {
    "title": "Quests",
-   "chains": 3581
+   "chains": 3598
   },
   {
    "title": "Skills",
-   "chains": 3565
+   "chains": 3558
   },
   {
    "title": "Skill training guides",
-   "chains": 3565
+   "chains": 3558
   },
   {
    "title": "HiScores",
-   "chains": 3565
+   "chains": 3558
   },
   {
    "title": "Ironman Mode",
-   "chains": 3565
+   "chains": 3558
   },
   {
    "title": "Non-player character",
-   "chains": 3158
+   "chains": 3169
   },
   {
    "title": "Monster",
@@ -553,35 +554,35 @@
   },
   {
    "title": "Icon",
-   "chains": 1670
+   "chains": 1681
   },
   {
    "title": "World map",
-   "chains": 1670
+   "chains": 1681
   },
   {
    "title": "Saradomin",
-   "chains": 1637
+   "chains": 1636
   },
   {
    "title": "Entrana",
-   "chains": 1496
+   "chains": 1495
   },
   {
    "title": "Abyssal Space",
-   "chains": 1468
+   "chains": 1482
   },
   {
    "title": "Abyssal Area",
-   "chains": 1465
+   "chains": 1478
   },
   {
    "title": "Abyssal guardian",
-   "chains": 1462
+   "chains": 1475
   },
   {
    "title": "List of races",
-   "chains": 1461
+   "chains": 1474
   }
  ]
 }

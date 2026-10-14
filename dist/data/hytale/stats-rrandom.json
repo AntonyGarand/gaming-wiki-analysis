@@ -12,26 +12,26 @@
   "unresolvable": 0
  },
  "hopStats": {
-  "mean": 4.24,
+  "mean": 4.5,
   "median": 3,
-  "p90": 9,
+  "p90": 10,
   "max": 16
  },
  "histogram": {
-  "0": 91,
-  "1": 771,
-  "2": 1157,
-  "3": 369,
-  "4": 196,
-  "5": 179,
-  "6": 640,
-  "7": 241,
-  "8": 214,
-  "9": 131,
-  "10": 223,
-  "11": 71,
-  "12": 61,
-  "13": 27,
+  "0": 87,
+  "1": 718,
+  "2": 1121,
+  "3": 350,
+  "4": 181,
+  "5": 117,
+  "6": 649,
+  "7": 304,
+  "8": 224,
+  "9": 160,
+  "10": 252,
+  "11": 112,
+  "12": 66,
+  "13": 30,
   "14": 12,
   "15": 3,
   "16": 1
@@ -39,33 +39,33 @@
  "eligibleLinks": {
   "histogram": {
    "0": 63,
-   "1": 251,
-   "2": 1430,
-   "3": 1046,
+   "1": 252,
+   "2": 1429,
+   "3": 1047,
    "4": 491,
-   "5": 316,
-   "6": 229,
+   "5": 317,
+   "6": 228,
    "7": 130,
    "8": 102,
-   "9": 107,
-   "10": 333
+   "9": 108,
+   "10": 331
   },
   "atLeast": {
    "1": 98.6,
    "2": 93,
    "3": 61.2,
-   "5": 27.1
+   "5": 27
   }
  },
  "concentration": {
-  "top1Pct": 57.83,
-  "top3Pct": 78.26,
-  "top10Pct": 94.6,
-  "cycleCount": 40,
-  "entropyBits": 2.28
+  "top1Pct": 62.12,
+  "top3Pct": 82.44,
+  "top10Pct": 95,
+  "cycleCount": 39,
+  "entropyBits": 2.05
  },
- "components": 41,
- "cycleCount": 40,
+ "components": 40,
+ "cycleCount": 39,
  "largestCycle": {
   "members": [
    "Bench",
@@ -74,7 +74,7 @@
    "Furniture Workbench"
   ],
   "size": 4,
-  "basin": 2601
+  "basin": 2794
  },
  "topAttractors": [
   {
@@ -84,8 +84,8 @@
     "Candle",
     "Furniture Workbench"
    ],
-   "basin": 2601,
-   "pct": 57.83
+   "basin": 2794,
+   "pct": 62.12
   },
   {
    "cycle": [
@@ -96,8 +96,8 @@
     "Exploration Mode",
     "Gamemode"
    ],
-   "basin": 502,
-   "pct": 11.16
+   "basin": 497,
+   "pct": 11.05
   },
   {
    "cycle": [
@@ -115,16 +115,6 @@
    ],
    "basin": 190,
    "pct": 4.22
-  },
-  {
-   "cycle": [
-    "Tool",
-    "Tree",
-    "Wood",
-    "Hatchet"
-   ],
-   "basin": 187,
-   "pct": 4.16
   },
   {
    "cycle": [
@@ -148,8 +138,8 @@
     "Boss",
     "Dragon"
    ],
-   "basin": 86,
-   "pct": 1.91
+   "basin": 85,
+   "pct": 1.89
   },
   {
    "cycle": [
@@ -247,6 +237,14 @@
    ],
    "basin": 5,
    "pct": 0.11
+  },
+  {
+   "cycle": [
+    "Sapphire",
+    "Volcano"
+   ],
+   "basin": 4,
+   "pct": 0.09
   }
  ],
  "deadEndTerminals": [
@@ -353,7 +351,7 @@
   },
   {
    "title": "Exploration Mode",
-   "firstLinks": 402
+   "firstLinks": 401
   },
   {
    "title": "NPC",
@@ -448,12 +446,12 @@
    "firstLinks": 23
   },
   {
-   "title": "Tree",
+   "title": "Chest",
    "firstLinks": 23
   },
   {
-   "title": "Chest",
-   "firstLinks": 23
+   "title": "Tree",
+   "firstLinks": 22
   },
   {
    "title": "Memories",
@@ -467,23 +465,23 @@
  "topThroughTraffic": [
   {
    "title": "Inventory",
-   "chains": 2601
+   "chains": 2794
   },
   {
    "title": "Furniture Workbench",
-   "chains": 2601
+   "chains": 2794
   },
   {
    "title": "Candle",
-   "chains": 2601
+   "chains": 2794
   },
   {
    "title": "Bench",
-   "chains": 2601
+   "chains": 2794
   },
   {
    "title": "Furnace",
-   "chains": 1316
+   "chains": 1509
   },
   {
    "title": "Builder's Workbench",
@@ -491,7 +489,15 @@
   },
   {
    "title": "Salvager's Workbench",
-   "chains": 731
+   "chains": 809
+  },
+  {
+   "title": "Adamantite Ingot",
+   "chains": 670
+  },
+  {
+   "title": "Devastated Lands",
+   "chains": 669
   },
   {
    "title": "Crude Spear",
@@ -502,52 +508,44 @@
    "chains": 638
   },
   {
+   "title": "Whisperfrost Frontiers",
+   "chains": 621
+  },
+  {
+   "title": "Faction",
+   "chains": 589
+  },
+  {
    "title": "Creative Inventory",
    "chains": 566
   },
   {
-   "title": "Adamantite Ingot",
-   "chains": 555
-  },
-  {
-   "title": "Devastated Lands",
-   "chains": 554
-  },
-  {
-   "title": "Whisperfrost Frontiers",
-   "chains": 506
-  },
-  {
    "title": "Exploration Mode",
-   "chains": 502
+   "chains": 497
   },
   {
    "title": "Silent Henges",
-   "chains": 502
+   "chains": 497
   },
   {
    "title": "Lore",
-   "chains": 502
+   "chains": 497
   },
   {
    "title": "Gamemode",
-   "chains": 502
+   "chains": 497
   },
   {
    "title": "The Guttering Hollows",
-   "chains": 502
+   "chains": 497
   },
   {
    "title": "Enkindled Letter: Workshops of War",
-   "chains": 502
-  },
-  {
-   "title": "Faction",
-   "chains": 474
+   "chains": 497
   },
   {
    "title": "Hytale",
-   "chains": 460
+   "chains": 466
   },
   {
    "title": "Emerald Wilds",
@@ -593,7 +591,7 @@
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 57.83,
+   "mean": 62.12,
    "sd": 0
   }
  }

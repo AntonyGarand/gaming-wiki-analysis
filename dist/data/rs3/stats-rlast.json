@@ -3,56 +3,56 @@
  "rank": "last",
  "nodes": 79761,
  "converge": {
-  "articles": 68418,
-  "pct": 85.78,
-  "deadEnd": 11343,
-  "deadEndPct": 14.22,
-  "noLinks": 2214,
+  "articles": 68790,
+  "pct": 86.25,
+  "deadEnd": 10971,
+  "deadEndPct": 13.75,
+  "noLinks": 1895,
   "tooFewLinks": 0,
   "unresolvable": 3
  },
  "hopStats": {
-  "mean": 8.47,
+  "mean": 8.46,
   "median": 7,
   "p90": 19,
   "max": 39
  },
  "histogram": {
-  "0": 3172,
-  "1": 5913,
-  "2": 5963,
-  "3": 5947,
-  "4": 4423,
-  "5": 4574,
-  "6": 3765,
-  "7": 3877,
-  "8": 2796,
-  "9": 2197,
-  "10": 2833,
-  "11": 2556,
-  "12": 2681,
-  "13": 1954,
-  "14": 1868,
-  "15": 1644,
-  "16": 1387,
-  "17": 1881,
-  "18": 1484,
-  "19": 1346,
-  "20": 1233,
-  "21": 970,
-  "22": 1090,
-  "23": 586,
-  "24": 979,
-  "25": 478,
-  "26": 335,
-  "27": 230,
-  "28": 101,
-  "29": 64,
-  "30": 31,
-  "31": 18,
-  "32": 21,
-  "33": 12,
-  "34": 3,
+  "0": 3177,
+  "1": 5936,
+  "2": 6100,
+  "3": 6001,
+  "4": 4205,
+  "5": 4483,
+  "6": 3716,
+  "7": 3804,
+  "8": 2977,
+  "9": 2580,
+  "10": 2969,
+  "11": 2811,
+  "12": 2761,
+  "13": 1976,
+  "14": 1822,
+  "15": 1540,
+  "16": 1265,
+  "17": 1739,
+  "18": 1386,
+  "19": 1546,
+  "20": 1151,
+  "21": 908,
+  "22": 1053,
+  "23": 568,
+  "24": 854,
+  "25": 419,
+  "26": 306,
+  "27": 216,
+  "28": 102,
+  "29": 66,
+  "30": 181,
+  "31": 79,
+  "32": 51,
+  "33": 30,
+  "34": 6,
   "35": 2,
   "36": 1,
   "37": 1,
@@ -61,34 +61,34 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2217,
-   "1": 6358,
-   "2": 10238,
-   "3": 10053,
-   "4": 9430,
-   "5": 7603,
-   "6": 5676,
-   "7": 4245,
-   "8": 3578,
-   "9": 2896,
-   "10": 17467
+   "0": 1898,
+   "1": 6132,
+   "2": 10227,
+   "3": 10045,
+   "4": 9422,
+   "5": 7596,
+   "6": 5666,
+   "7": 4239,
+   "8": 3570,
+   "9": 2893,
+   "10": 18073
   },
   "atLeast": {
-   "1": 97.2,
-   "2": 89.2,
-   "3": 76.4,
-   "5": 52
+   "1": 97.6,
+   "2": 89.9,
+   "3": 77.1,
+   "5": 52.7
   }
  },
  "concentration": {
-  "top1Pct": 26.52,
-  "top3Pct": 37.95,
-  "top10Pct": 58.83,
-  "cycleCount": 1547,
-  "entropyBits": 5.1
+  "top1Pct": 26.66,
+  "top3Pct": 36.45,
+  "top10Pct": 57.48,
+  "cycleCount": 1549,
+  "entropyBits": 5.17
  },
- "components": 1548,
- "cycleCount": 1547,
+ "components": 1550,
+ "cycleCount": 1549,
  "largestCycle": {
   "members": [
    "Grand Exchange",
@@ -109,7 +109,7 @@
    "Raffle barker"
   ],
   "size": 16,
-  "basin": 21155
+  "basin": 21265
  },
  "topAttractors": [
   {
@@ -131,32 +131,32 @@
     "Circus barker",
     "Raffle barker"
    ],
-   "basin": 21155,
-   "pct": 26.52
-  },
-  {
-   "cycle": [
-    "Zamorak, Lord of Chaos",
-    "Demon Slayer"
-   ],
-   "basin": 5176,
-   "pct": 6.49
+   "basin": 21265,
+   "pct": 26.66
   },
   {
    "cycle": [
     "Necromancy cape",
     "Hooded necromancy cape"
    ],
-   "basin": 3937,
-   "pct": 4.94
+   "basin": 3959,
+   "pct": 4.96
   },
   {
    "cycle": [
     "Orlando Smith's hat",
     "Adam Antite"
    ],
-   "basin": 3828,
-   "pct": 4.8
+   "basin": 3847,
+   "pct": 4.82
+  },
+  {
+   "cycle": [
+    "Zamorak, Lord of Chaos",
+    "Demon Slayer"
+   ],
+   "basin": 3638,
+   "pct": 4.56
   },
   {
    "cycle": [
@@ -164,16 +164,24 @@
     "Pride event",
     "Mod North"
    ],
-   "basin": 3711,
-   "pct": 4.65
+   "basin": 3504,
+   "pct": 4.39
   },
   {
    "cycle": [
     "Priest in Peril",
     "Lycurgus"
    ],
-   "basin": 2431,
-   "pct": 3.05
+   "basin": 2451,
+   "pct": 3.07
+  },
+  {
+   "cycle": [
+    "Jagex Moderator",
+    "Throne of Fame"
+   ],
+   "basin": 2034,
+   "pct": 2.55
   },
   {
    "cycle": [
@@ -181,8 +189,8 @@
     "Omni-talisman",
     "Soul altar"
    ],
-   "basin": 1837,
-   "pct": 2.3
+   "basin": 1876,
+   "pct": 2.35
   },
   {
    "cycle": [
@@ -191,7 +199,7 @@
     "Escape",
     "Lectern (Anachronia)"
    ],
-   "basin": 1717,
+   "basin": 1713,
    "pct": 2.15
   },
   {
@@ -199,15 +207,15 @@
     "Treasure Hunter",
     "Wicked hood teleport token"
    ],
-   "basin": 1587,
-   "pct": 1.99
+   "basin": 1563,
+   "pct": 1.96
   },
   {
    "cycle": [
     "Cold Front",
     "Queen of Snow"
    ],
-   "basin": 1548,
+   "basin": 1549,
    "pct": 1.94
   },
   {
@@ -215,8 +223,8 @@
     "Combat pure",
     "Skill pure/10 HP"
    ],
-   "basin": 1470,
-   "pct": 1.84
+   "basin": 1462,
+   "pct": 1.83
   },
   {
    "cycle": [
@@ -231,8 +239,8 @@
     "Upcoming updates",
     "Updates"
    ],
-   "basin": 1015,
-   "pct": 1.27
+   "basin": 1037,
+   "pct": 1.3
   },
   {
    "cycle": [
@@ -240,32 +248,16 @@
     "God Wars Dungeon",
     "Pernix armour"
    ],
-   "basin": 1002,
-   "pct": 1.26
+   "basin": 998,
+   "pct": 1.25
   },
   {
    "cycle": [
     "Blooming Burrow",
     "Carrot sword in the stone"
    ],
-   "basin": 867,
-   "pct": 1.09
-  },
-  {
-   "cycle": [
-    "Large crate (timeworn components)",
-    "Small crate (timeworn components)"
-   ],
-   "basin": 722,
-   "pct": 0.91
-  },
-  {
-   "cycle": [
-    "Jagex Moderator",
-    "Throne of Fame"
-   ],
-   "basin": 630,
-   "pct": 0.79
+   "basin": 864,
+   "pct": 1.08
   },
   {
    "cycle": [
@@ -273,43 +265,46 @@
     "Gaalsien",
     "Enchanted bolts"
    ],
-   "basin": 630,
-   "pct": 0.79
+   "basin": 622,
+   "pct": 0.78
   },
   {
    "cycle": [
-    "Provoke",
-    "Natural Instinct"
+    "Tortle Combat (miniquest)",
+    "Edvard",
+    "Shell-Shocked"
    ],
-   "basin": 474,
-   "pct": 0.59
+   "basin": 567,
+   "pct": 0.71
   },
   {
    "cycle": [
     "List of quests and miniquests by timeline",
     "List of miniquests by timeline"
    ],
-   "basin": 469,
+   "basin": 472,
    "pct": 0.59
+  },
+  {
+   "cycle": [
+    "Provoke",
+    "Natural Instinct"
+   ],
+   "basin": 450,
+   "pct": 0.56
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Construction/Level up table",
-   "chains": 5869,
-   "pct": 7.36,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Support updates",
-   "chains": 1383,
-   "pct": 1.73,
+   "chains": 5834,
+   "pct": 7.31,
    "reason": "no eligible links"
   },
   {
    "title": "Clan Admin Messages",
-   "chains": 579,
-   "pct": 0.73,
+   "chains": 2078,
+   "pct": 2.61,
    "reason": "no eligible links"
   },
   {
@@ -320,13 +315,13 @@
   },
   {
    "title": "James Hannigan",
-   "chains": 339,
+   "chains": 340,
    "pct": 0.43,
    "reason": "no eligible links"
   },
   {
    "title": "Repressed",
-   "chains": 61,
+   "chains": 63,
    "pct": 0.08,
    "reason": "no eligible links"
   },
@@ -334,12 +329,6 @@
    "title": "Minimum XP for each total level",
    "chains": 45,
    "pct": 0.06,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Cub worldbearer",
-   "chains": 24,
-   "pct": 0.03,
    "reason": "no eligible links"
   },
   {
@@ -355,41 +344,53 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Mod Rook",
-   "chains": 16,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Mod Dagget",
    "chains": 13,
    "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "Treasure Hunter/Promotions",
-   "chains": 12,
-   "pct": 0.02,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Treasure Trails/Guide/Anagrams",
+   "title": "Necronium crossbow (unstrung)",
    "chains": 8,
    "pct": 0.01,
    "reason": "no eligible links"
   },
   {
-   "title": "Necronium crossbow (unstrung)",
-   "chains": 7,
+   "title": "Orikalkum crossbow (unstrung)",
+   "chains": 6,
    "pct": 0.01,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Pick All",
+   "chains": 6,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bane crossbow (unstrung)",
+   "chains": 5,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Fruit of the Loom",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Old School RuneScape-exclusive content",
+   "chains": 4,
+   "pct": 0.01,
+   "reason": "redlink target"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
   {
    "title": "Player-owned house",
-   "firstLinks": 1098
+   "firstLinks": 1097
   },
   {
    "title": "Buffs and debuffs",
@@ -400,16 +401,16 @@
    "firstLinks": 682
   },
   {
-   "title": "Smithing",
-   "firstLinks": 585
-  },
-  {
    "title": "Experience",
    "firstLinks": 570
   },
   {
    "title": "Jagex Store",
    "firstLinks": 550
+  },
+  {
+   "title": "Smithing",
+   "firstLinks": 475
   },
   {
    "title": "Jagex",
@@ -421,7 +422,7 @@
   },
   {
    "title": "Treasure Trails",
-   "firstLinks": 444
+   "firstLinks": 443
   },
   {
    "title": "Livestream",
@@ -429,15 +430,15 @@
   },
   {
    "title": "Grand Exchange",
-   "firstLinks": 387
+   "firstLinks": 386
   },
   {
    "title": "Treasure Hunter",
-   "firstLinks": 339
+   "firstLinks": 338
   },
   {
    "title": "Crafting",
-   "firstLinks": 330
+   "firstLinks": 328
   },
   {
    "title": "2026 Construction update",
@@ -445,15 +446,15 @@
   },
   {
    "title": "Daemonheim",
-   "firstLinks": 321
-  },
-  {
-   "title": "Life points",
-   "firstLinks": 262
+   "firstLinks": 322
   },
   {
    "title": "Solomon's General Store",
    "firstLinks": 260
+  },
+  {
+   "title": "Life points",
+   "firstLinks": 252
   },
   {
    "title": "Quests",
@@ -465,11 +466,11 @@
   },
   {
    "title": "Examine",
-   "firstLinks": 226
+   "firstLinks": 225
   },
   {
    "title": "Achievements",
-   "firstLinks": 223
+   "firstLinks": 222
   },
   {
    "title": "Wilderness",
@@ -511,123 +512,123 @@
  "topThroughTraffic": [
   {
    "title": "Abyssal whip",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Balthazar Beauregard's Big Top Bonanza",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Distractions and Diversions",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Circus barker",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Grand Exchange",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Grand Exchange/History",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Carnillean Rising",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Invaders Must Die II",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Divination",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Infernal orb",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "JMod clone",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Raffle barker",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Guthixian Cache",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "The Drop",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "RuneMetrics/Adventurer's Log",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Mod Chris L",
-   "chains": 21155
+   "chains": 21265
   },
   {
    "title": "Calculators",
-   "chains": 8339
+   "chains": 8554
   },
   {
    "title": "Construction/Level up table",
-   "chains": 5869
+   "chains": 5834
   },
   {
    "title": "Construction",
-   "chains": 5868
-  },
-  {
-   "title": "Demon Slayer",
-   "chains": 5176
-  },
-  {
-   "title": "Zamorak, Lord of Chaos",
-   "chains": 5176
-  },
-  {
-   "title": "The Barrows: Rise of the Six",
-   "chains": 5082
+   "chains": 5833
   },
   {
    "title": "In Aid of the Myreque",
-   "chains": 5066
+   "chains": 5059
   },
   {
    "title": "While Guthix Sleeps",
-   "chains": 5045
-  },
-  {
-   "title": "Classic Modes",
-   "chains": 5020
-  },
-  {
-   "title": "Items",
-   "chains": 4865
+   "chains": 5038
   },
   {
    "title": "Prayer",
-   "chains": 4070
+   "chains": 4793
   },
   {
-   "title": "Back to my Roots",
-   "chains": 4053
+   "title": "Gravingas",
+   "chains": 4315
   },
   {
-   "title": "Eagles' Peak (location)",
-   "chains": 4043
+   "title": "Manspeak amulet",
+   "chains": 4261
   },
   {
-   "title": "15 Year Anniversary Celebrations",
-   "chains": 4038
+   "title": "Ghostspeak amulet",
+   "chains": 4259
+  },
+  {
+   "title": "Shilo Village",
+   "chains": 4248
+  },
+  {
+   "title": "Erasmus (RuneScape 2 Beta)",
+   "chains": 4231
+  },
+  {
+   "title": "Legends' Guild",
+   "chains": 4214
+  },
+  {
+   "title": "Dragon sq shield",
+   "chains": 4186
+  },
+  {
+   "title": "Toy kite",
+   "chains": 4179
   }
  ]
 }

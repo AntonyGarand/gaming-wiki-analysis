@@ -3,13 +3,13 @@
  "rank": "3",
  "nodes": 14078,
  "converge": {
-  "articles": 6181,
-  "pct": 43.91,
-  "deadEnd": 7897,
-  "deadEndPct": 56.09,
-  "noLinks": 5088,
-  "tooFewLinks": 2346,
-  "unresolvable": 17
+  "articles": 6180,
+  "pct": 43.9,
+  "deadEnd": 7898,
+  "deadEndPct": 56.1,
+  "noLinks": 4873,
+  "tooFewLinks": 2347,
+  "unresolvable": 231
  },
  "hopStats": {
   "mean": 6.59,
@@ -18,18 +18,18 @@
   "max": 19
  },
  "histogram": {
-  "0": 148,
-  "1": 375,
-  "2": 476,
-  "3": 457,
-  "4": 528,
-  "5": 540,
-  "6": 490,
-  "7": 573,
-  "8": 691,
-  "9": 547,
-  "10": 465,
-  "11": 314,
+  "0": 150,
+  "1": 382,
+  "2": 479,
+  "3": 456,
+  "4": 521,
+  "5": 532,
+  "6": 491,
+  "7": 576,
+  "8": 692,
+  "9": 549,
+  "10": 464,
+  "11": 311,
   "12": 190,
   "13": 166,
   "14": 104,
@@ -41,41 +41,41 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5105,
-   "1": 1377,
-   "2": 969,
-   "3": 719,
-   "4": 493,
-   "5": 449,
-   "6": 340,
-   "7": 287,
-   "8": 305,
+   "0": 5104,
+   "1": 1380,
+   "2": 967,
+   "3": 720,
+   "4": 497,
+   "5": 447,
+   "6": 337,
+   "7": 292,
+   "8": 308,
    "9": 270,
-   "10": 3764
+   "10": 3756
   },
   "atLeast": {
    "1": 63.7,
-   "2": 54,
+   "2": 53.9,
    "3": 47.1,
-   "5": 38.5
+   "5": 38.4
   }
  },
  "concentration": {
-  "top1Pct": 21.32,
-  "top3Pct": 33,
-  "top10Pct": 39.47,
-  "cycleCount": 71,
-  "entropyBits": 2.84
+  "top1Pct": 21.3,
+  "top3Pct": 32.9,
+  "top10Pct": 39.36,
+  "cycleCount": 72,
+  "entropyBits": 2.86
  },
- "components": 72,
- "cycleCount": 71,
+ "components": 73,
+ "cycleCount": 72,
  "largestCycle": {
   "members": [
    "Stronghold",
    "End portal"
   ],
   "size": 2,
-  "basin": 3001
+  "basin": 2998
  },
  "topAttractors": [
   {
@@ -83,8 +83,8 @@
     "Stronghold",
     "End portal"
    ],
-   "basin": 3001,
-   "pct": 21.32
+   "basin": 2998,
+   "pct": 21.3
   },
   {
    "cycle": [
@@ -92,8 +92,8 @@
     "Controls",
     "Difficulty"
    ],
-   "basin": 1403,
-   "pct": 9.97
+   "basin": 1391,
+   "pct": 9.88
   },
   {
    "cycle": [
@@ -102,8 +102,8 @@
     "Toasts",
     "Tutorial hints"
    ],
-   "basin": 242,
-   "pct": 1.72
+   "basin": 243,
+   "pct": 1.73
   },
   {
    "cycle": [
@@ -143,7 +143,7 @@
     "Bee",
     "Bee Nest"
    ],
-   "basin": 109,
+   "basin": 108,
    "pct": 0.77
   },
   {
@@ -151,8 +151,8 @@
     "Moon",
     "Sun"
    ],
-   "basin": 72,
-   "pct": 0.51
+   "basin": 71,
+   "pct": 0.5
   },
   {
    "cycle": [
@@ -207,8 +207,8 @@
     "Golden Armor",
     "Chainmail Armor"
    ],
-   "basin": 28,
-   "pct": 0.2
+   "basin": 30,
+   "pct": 0.21
   },
   {
    "cycle": [
@@ -351,7 +351,7 @@
   },
   {
    "title": "Java Edition 24w14potato",
-   "firstLinks": 47
+   "firstLinks": 48
   },
   {
    "title": "Creative",
@@ -461,99 +461,99 @@
  "topThroughTraffic": [
   {
    "title": "Stronghold",
-   "chains": 3001
+   "chains": 2998
   },
   {
    "title": "End portal",
-   "chains": 3001
+   "chains": 2998
   },
   {
    "title": "Ladder",
-   "chains": 2995
+   "chains": 2992
   },
   {
    "title": "Block",
-   "chains": 2993
+   "chains": 2990
   },
   {
    "title": "Difficulty",
-   "chains": 1403
+   "chains": 1391
   },
   {
    "title": "Controls",
-   "chains": 1403
+   "chains": 1391
   },
   {
    "title": "Player",
-   "chains": 1403
+   "chains": 1391
   },
   {
    "title": "Crafting",
-   "chains": 1283
+   "chains": 1282
   },
   {
    "title": "Item repair",
-   "chains": 1170
+   "chains": 1169
   },
   {
    "title": "Tool",
-   "chains": 1168
+   "chains": 1167
   },
   {
    "title": "Drops",
-   "chains": 821
+   "chains": 824
   },
   {
    "title": "Mob",
-   "chains": 778
+   "chains": 780
   },
   {
    "title": "Overworld",
-   "chains": 710
+   "chains": 705
   },
   {
    "title": "Ore",
-   "chains": 456
+   "chains": 454
   },
   {
    "title": "Pickaxe",
-   "chains": 448
+   "chains": 446
   },
   {
    "title": "Item",
-   "chains": 398
-  },
-  {
-   "title": "Amplified",
-   "chains": 365
-  },
-  {
-   "title": "Terrain features",
-   "chains": 364
+   "chains": 399
   },
   {
    "title": "Wandering Trader",
+   "chains": 365
+  },
+  {
+   "title": "Amplified",
    "chains": 363
   },
   {
-   "title": "The Nether",
-   "chains": 344
+   "title": "Terrain features",
+   "chains": 362
   },
   {
    "title": "Emerald",
+   "chains": 344
+  },
+  {
+   "title": "The Nether",
    "chains": 342
   },
   {
    "title": "Trading",
-   "chains": 334
+   "chains": 336
   },
   {
    "title": "Blue Dye",
-   "chains": 305
+   "chains": 307
   },
   {
    "title": "Lapis Lazuli",
-   "chains": 304
+   "chains": 306
   },
   {
    "title": "Food",
@@ -561,19 +561,19 @@
   },
   {
    "title": "Survival",
-   "chains": 242
+   "chains": 243
   },
   {
    "title": "Advancement",
-   "chains": 242
+   "chains": 243
   },
   {
    "title": "Tutorial hints",
-   "chains": 242
+   "chains": 243
   },
   {
    "title": "Toasts",
-   "chains": 242
+   "chains": 243
   },
   {
    "title": "Piston",

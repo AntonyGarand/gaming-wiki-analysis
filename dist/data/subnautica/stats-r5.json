@@ -3,16 +3,16 @@
  "rank": "5",
  "nodes": 710,
  "converge": {
-  "articles": 258,
-  "pct": 36.34,
-  "deadEnd": 452,
-  "deadEndPct": 63.66,
+  "articles": 259,
+  "pct": 36.48,
+  "deadEnd": 451,
+  "deadEndPct": 63.52,
   "noLinks": 4,
-  "tooFewLinks": 194,
+  "tooFewLinks": 195,
   "unresolvable": 1
  },
  "hopStats": {
-  "mean": 3.87,
+  "mean": 3.89,
   "median": 4,
   "p90": 8,
   "max": 12
@@ -27,7 +27,7 @@
   "6": 15,
   "7": 19,
   "8": 10,
-  "9": 4,
+  "9": 5,
   "10": 3,
   "11": 6,
   "12": 3
@@ -36,27 +36,27 @@
   "histogram": {
    "0": 5,
    "1": 32,
-   "2": 34,
-   "3": 48,
-   "4": 80,
-   "5": 65,
-   "6": 52,
+   "2": 35,
+   "3": 47,
+   "4": 81,
+   "5": 64,
+   "6": 53,
    "7": 47,
    "8": 38,
    "9": 47,
-   "10": 262
+   "10": 261
   },
   "atLeast": {
    "1": 99.3,
    "2": 94.8,
-   "3": 90,
-   "5": 72
+   "3": 89.9,
+   "5": 71.8
   }
  },
  "concentration": {
-  "top1Pct": 19.58,
-  "top3Pct": 30.28,
-  "top10Pct": 36.34,
+  "top1Pct": 19.72,
+  "top3Pct": 30.42,
+  "top10Pct": 36.48,
   "cycleCount": 10,
   "entropyBits": 2.1
  },
@@ -68,7 +68,7 @@
    "Habitat Builder"
   ],
   "size": 2,
-  "basin": 139
+  "basin": 140
  },
  "topAttractors": [
   {
@@ -76,8 +76,8 @@
     "Cyclops",
     "Habitat Builder"
    ],
-   "basin": 139,
-   "pct": 19.58
+   "basin": 140,
+   "pct": 19.72
   },
   {
    "cycle": [
@@ -209,12 +209,6 @@
    "reason": "only 4 eligible links"
   },
   {
-   "title": "Achievements",
-   "chains": 3,
-   "pct": 0.42,
-   "reason": "only 2 eligible links"
-  },
-  {
    "title": "Acid Mushroom Spore",
    "chains": 3,
    "pct": 0.42,
@@ -242,6 +236,12 @@
    "title": "Orange Tablet",
    "chains": 3,
    "pct": 0.42,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Lava Lizard Egg",
+   "chains": 2,
+   "pct": 0.28,
    "reason": "only 3 eligible links"
   }
  ],
@@ -371,11 +371,11 @@
  "topThroughTraffic": [
   {
    "title": "Habitat Builder",
-   "chains": 139
+   "chains": 140
   },
   {
    "title": "Cyclops",
-   "chains": 139
+   "chains": 140
   },
   {
    "title": "Hull Integrity",
@@ -418,11 +418,11 @@
    "chains": 43
   },
   {
-   "title": "Biomes",
-   "chains": 40
+   "title": "Vehicle Upgrade Console",
+   "chains": 41
   },
   {
-   "title": "Vehicle Upgrade Console",
+   "title": "Biomes",
    "chains": 40
   },
   {
@@ -431,14 +431,14 @@
   },
   {
    "title": "Moonpool",
-   "chains": 37
-  },
-  {
-   "title": "Subnautica",
-   "chains": 34
+   "chains": 38
   },
   {
    "title": "Large Room",
+   "chains": 35
+  },
+  {
+   "title": "Subnautica",
    "chains": 34
   },
   {
@@ -454,11 +454,11 @@
    "chains": 30
   },
   {
-   "title": "Exterior Growbed",
-   "chains": 28
+   "title": "Alien Containment",
+   "chains": 29
   },
   {
-   "title": "Alien Containment",
+   "title": "Exterior Growbed",
    "chains": 28
   },
   {

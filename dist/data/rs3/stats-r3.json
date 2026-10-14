@@ -3,55 +3,55 @@
  "rank": "3",
  "nodes": 79761,
  "converge": {
-  "articles": 52492,
-  "pct": 65.81,
-  "deadEnd": 27269,
-  "deadEndPct": 34.19,
-  "noLinks": 2214,
-  "tooFewLinks": 16596,
+  "articles": 52917,
+  "pct": 66.34,
+  "deadEnd": 26844,
+  "deadEndPct": 33.66,
+  "noLinks": 1895,
+  "tooFewLinks": 16359,
   "unresolvable": 3
  },
  "hopStats": {
-  "mean": 8.87,
+  "mean": 8.83,
   "median": 6,
   "p90": 23,
   "max": 38
  },
  "histogram": {
-  "0": 2255,
-  "1": 4599,
-  "2": 4184,
-  "3": 4119,
-  "4": 4239,
-  "5": 5266,
-  "6": 4614,
-  "7": 2865,
-  "8": 2075,
-  "9": 1865,
-  "10": 1173,
-  "11": 896,
+  "0": 2265,
+  "1": 4826,
+  "2": 4254,
+  "3": 4125,
+  "4": 4251,
+  "5": 5273,
+  "6": 4632,
+  "7": 2878,
+  "8": 2084,
+  "9": 1868,
+  "10": 1177,
+  "11": 901,
   "12": 1250,
-  "13": 1282,
-  "14": 835,
-  "15": 535,
-  "16": 981,
-  "17": 606,
-  "18": 406,
-  "19": 423,
-  "20": 567,
+  "13": 1281,
+  "14": 840,
+  "15": 539,
+  "16": 987,
+  "17": 620,
+  "18": 414,
+  "19": 424,
+  "20": 568,
   "21": 637,
   "22": 856,
-  "23": 1246,
-  "24": 865,
-  "25": 506,
+  "23": 1247,
+  "24": 864,
+  "25": 505,
   "26": 952,
   "27": 427,
-  "28": 570,
-  "29": 156,
+  "28": 571,
+  "29": 158,
   "30": 235,
   "31": 191,
   "32": 706,
-  "33": 56,
+  "33": 57,
   "34": 26,
   "35": 11,
   "36": 11,
@@ -60,41 +60,41 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2217,
-   "1": 6358,
-   "2": 10238,
-   "3": 10053,
-   "4": 9430,
-   "5": 7603,
-   "6": 5676,
-   "7": 4245,
-   "8": 3578,
-   "9": 2896,
-   "10": 17467
+   "0": 1898,
+   "1": 6132,
+   "2": 10227,
+   "3": 10045,
+   "4": 9422,
+   "5": 7596,
+   "6": 5666,
+   "7": 4239,
+   "8": 3570,
+   "9": 2893,
+   "10": 18073
   },
   "atLeast": {
-   "1": 97.2,
-   "2": 89.2,
-   "3": 76.4,
-   "5": 52
+   "1": 97.6,
+   "2": 89.9,
+   "3": 77.1,
+   "5": 52.7
   }
  },
  "concentration": {
-  "top1Pct": 30.18,
-  "top3Pct": 38.05,
-  "top10Pct": 50.38,
-  "cycleCount": 1086,
-  "entropyBits": 4.28
+  "top1Pct": 30.25,
+  "top3Pct": 38.17,
+  "top10Pct": 50.53,
+  "cycleCount": 1090,
+  "entropyBits": 4.32
  },
- "components": 1087,
- "cycleCount": 1086,
+ "components": 1091,
+ "cycleCount": 1090,
  "largestCycle": {
   "members": [
    "Guthix",
    "Gielinor"
   ],
   "size": 2,
-  "basin": 24074
+  "basin": 24131
  },
  "topAttractors": [
   {
@@ -102,24 +102,24 @@
     "Guthix",
     "Gielinor"
    ],
-   "basin": 24074,
-   "pct": 30.18
+   "basin": 24131,
+   "pct": 30.25
   },
   {
    "cycle": [
     "King Roald",
     "Varrock Palace Secret Guard"
    ],
-   "basin": 4071,
-   "pct": 5.1
+   "basin": 4087,
+   "pct": 5.12
   },
   {
    "cycle": [
     "Death's mansion",
     "Gate (Harvest Hollow)"
    ],
-   "basin": 2208,
-   "pct": 2.77
+   "basin": 2226,
+   "pct": 2.79
   },
   {
    "cycle": [
@@ -129,23 +129,23 @@
     "Gem rock",
     "Sapphire rocks"
    ],
-   "basin": 2177,
-   "pct": 2.73
+   "basin": 2185,
+   "pct": 2.74
   },
   {
    "cycle": [
     "Penguin Hide and Seek",
     "Ardougne Zoo"
    ],
-   "basin": 1918,
-   "pct": 2.4
+   "basin": 1926,
+   "pct": 2.41
   },
   {
    "cycle": [
     "Life points",
     "Constitution"
    ],
-   "basin": 1402,
+   "basin": 1403,
    "pct": 1.76
   },
   {
@@ -155,15 +155,15 @@
     "Summoning",
     "Spirit Plane"
    ],
-   "basin": 1328,
-   "pct": 1.66
+   "basin": 1337,
+   "pct": 1.68
   },
   {
    "cycle": [
     "Seasinger Umi",
     "Navigator Jemi"
    ],
-   "basin": 1179,
+   "basin": 1180,
    "pct": 1.48
   },
   {
@@ -171,8 +171,8 @@
     "Al Kharid",
     "Menaphos"
    ],
-   "basin": 1008,
-   "pct": 1.26
+   "basin": 1009,
+   "pct": 1.27
   },
   {
    "cycle": [
@@ -188,20 +188,20 @@
   },
   {
    "cycle": [
-    "Temple Knights",
-    "Veilinius"
-   ],
-   "basin": 757,
-   "pct": 0.95
-  },
-  {
-   "cycle": [
     "Farming",
     "Weeds",
     "Supercompost"
    ],
-   "basin": 745,
-   "pct": 0.93
+   "basin": 760,
+   "pct": 0.95
+  },
+  {
+   "cycle": [
+    "Temple Knights",
+    "Veilinius"
+   ],
+   "basin": 758,
+   "pct": 0.95
   },
   {
    "cycle": [
@@ -234,8 +234,8 @@
     "The Dig Site",
     "Saranthium"
    ],
-   "basin": 345,
-   "pct": 0.43
+   "basin": 336,
+   "pct": 0.42
   },
   {
    "cycle": [
@@ -277,14 +277,14 @@
  "deadEndTerminals": [
   {
    "title": "Awesome-RuneFest 2011-Item-Headgear-Concept-Competition",
-   "chains": 2257,
-   "pct": 2.83,
+   "chains": 2289,
+   "pct": 2.87,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Constant Tedder",
-   "chains": 1627,
-   "pct": 2.04,
+   "chains": 1649,
+   "pct": 2.07,
    "reason": "only 2 eligible links"
   },
   {
@@ -294,16 +294,16 @@
    "reason": "only 2 eligible links"
   },
   {
+   "title": "Toy glider",
+   "chains": 182,
+   "pct": 0.23,
+   "reason": "no eligible links"
+  },
+  {
    "title": "Double Dragon Chests",
    "chains": 146,
    "pct": 0.18,
    "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Treasure Hunter/Promotions",
-   "chains": 93,
-   "pct": 0.12,
-   "reason": "no eligible links"
   },
   {
    "title": "Ringmaster",
@@ -337,7 +337,7 @@
   },
   {
    "title": "Mod Kathy",
-   "chains": 46,
+   "chains": 49,
    "pct": 0.06,
    "reason": "no eligible links"
   },
@@ -374,7 +374,7 @@
   },
   {
    "title": "Treasure Trails",
-   "firstLinks": 603
+   "firstLinks": 602
   },
   {
    "title": "Costume room",
@@ -402,7 +402,7 @@
   },
   {
    "title": "Furniture storage",
-   "firstLinks": 328
+   "firstLinks": 329
   },
   {
    "title": "Solomon's General Store",
@@ -414,7 +414,7 @@
   },
   {
    "title": "Dungeoneering",
-   "firstLinks": 295
+   "firstLinks": 296
   },
   {
    "title": "Daemonheim",
@@ -465,12 +465,16 @@
    "firstLinks": 182
   },
   {
+   "title": "Toy glider",
+   "firstLinks": 175
+  },
+  {
    "title": "Diango",
    "firstLinks": 172
   },
   {
    "title": "Necromancy",
-   "firstLinks": 167
+   "firstLinks": 168
   },
   {
    "title": "Free-to-play",
@@ -483,76 +487,72 @@
   {
    "title": "Life points",
    "firstLinks": 150
-  },
-  {
-   "title": "Mining",
-   "firstLinks": 150
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Guthix",
-   "chains": 24074
+   "chains": 24131
   },
   {
    "title": "Gielinor",
-   "chains": 24074
+   "chains": 24131
   },
   {
    "title": "Fifth Age",
-   "chains": 16716
+   "chains": 16767
   },
   {
    "title": "War of 164",
-   "chains": 13511
+   "chains": 13552
   },
   {
    "title": "Lord Sulla",
-   "chains": 13507
+   "chains": 13548
   },
   {
    "title": "Baraek",
-   "chains": 13503
+   "chains": 13544
   },
   {
    "title": "Benny",
-   "chains": 13500
+   "chains": 13541
   },
   {
    "title": "Varrock Square",
-   "chains": 13498
+   "chains": 13539
   },
   {
    "title": "Thessalia's Fine Clothes",
-   "chains": 13473
+   "chains": 13514
   },
   {
    "title": "2003 Halloween event",
-   "chains": 13457
+   "chains": 13498
   },
   {
    "title": "RuneScape 2",
-   "chains": 13456
+   "chains": 13497
   },
   {
    "title": "Free-to-play",
-   "chains": 13453
+   "chains": 13494
   },
   {
    "title": "Total level",
-   "chains": 10198
+   "chains": 10209
   },
   {
    "title": "Skills",
-   "chains": 10117
+   "chains": 10128
   },
   {
    "title": "Attack",
-   "chains": 9832
+   "chains": 9843
   },
   {
    "title": "Combat level",
-   "chains": 9339
+   "chains": 9347
   },
   {
    "title": "Examine",
@@ -572,43 +572,43 @@
   },
   {
    "title": "Grand Exchange",
-   "chains": 6039
+   "chains": 6042
   },
   {
    "title": "Runes",
-   "chains": 4588
+   "chains": 4591
   },
   {
    "title": "Varrock Palace Secret Guard",
-   "chains": 4071
+   "chains": 4087
   },
   {
    "title": "King Roald",
-   "chains": 4071
+   "chains": 4087
   },
   {
    "title": "Misthalin",
-   "chains": 3521
+   "chains": 3527
   },
   {
    "title": "Fremennik",
-   "chains": 2572
+   "chains": 2580
   },
   {
    "title": "Runecrafting",
-   "chains": 2467
+   "chains": 2469
   },
   {
    "title": "Awesome-RuneFest 2011-Item-Headgear-Concept-Competition",
-   "chains": 2257
+   "chains": 2289
   },
   {
    "title": "RuneFest 2011",
-   "chains": 2227
+   "chains": 2259
   },
   {
    "title": "Death's mansion",
-   "chains": 2208
+   "chains": 2226
   }
  ]
 }

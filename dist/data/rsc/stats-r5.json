@@ -3,25 +3,25 @@
  "rank": "5",
  "nodes": 4225,
  "converge": {
-  "articles": 654,
-  "pct": 15.48,
-  "deadEnd": 3571,
-  "deadEndPct": 84.52,
-  "noLinks": 453,
-  "tooFewLinks": 1121,
+  "articles": 770,
+  "pct": 18.22,
+  "deadEnd": 3455,
+  "deadEndPct": 81.78,
+  "noLinks": 338,
+  "tooFewLinks": 1122,
   "unresolvable": 2
  },
  "hopStats": {
-  "mean": 2.34,
+  "mean": 2.16,
   "median": 2,
   "p90": 5,
   "max": 10
  },
  "histogram": {
-  "0": 131,
-  "1": 154,
-  "2": 104,
-  "3": 83,
+  "0": 133,
+  "1": 250,
+  "2": 120,
+  "3": 85,
   "4": 86,
   "5": 47,
   "6": 20,
@@ -32,9 +32,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 455,
+   "0": 340,
    "1": 109,
-   "2": 257,
+   "2": 258,
    "3": 354,
    "4": 401,
    "5": 388,
@@ -42,24 +42,24 @@
    "7": 310,
    "8": 252,
    "9": 230,
-   "10": 1083
+   "10": 1197
   },
   "atLeast": {
-   "1": 89.2,
-   "2": 86.7,
-   "3": 80.6,
-   "5": 62.7
+   "1": 92,
+   "2": 89.4,
+   "3": 83.3,
+   "5": 65.4
   }
  },
  "concentration": {
   "top1Pct": 2.89,
-  "top3Pct": 5.61,
-  "top10Pct": 9.85,
-  "cycleCount": 58,
-  "entropyBits": 4.78
+  "top3Pct": 7.12,
+  "top10Pct": 12.21,
+  "cycleCount": 59,
+  "entropyBits": 4.68
  },
- "components": 59,
- "cycleCount": 58,
+ "components": 60,
+ "cycleCount": 59,
  "largestCycle": {
   "members": [
    "Bars",
@@ -78,6 +78,14 @@
    ],
    "basin": 122,
    "pct": 2.89
+  },
+  {
+   "cycle": [
+    "Bestiary (Library of Varrock)/Barbarian",
+    "Bestiary (Library of Varrock)/Bear"
+   ],
+   "basin": 112,
+   "pct": 2.65
   },
   {
    "cycle": [
@@ -114,20 +122,20 @@
   },
   {
    "cycle": [
+    "West Ardougne",
+    "Underground pass"
+   ],
+   "basin": 30,
+   "pct": 0.71
+  },
+  {
+   "cycle": [
     "RuneScape",
     "Crandor",
     "Oziach"
    ],
    "basin": 27,
    "pct": 0.64
-  },
-  {
-   "cycle": [
-    "West Ardougne",
-    "Underground pass"
-   ],
-   "basin": 26,
-   "pct": 0.62
   },
   {
    "cycle": [
@@ -227,22 +235,13 @@
    ],
    "basin": 7,
    "pct": 0.17
-  },
-  {
-   "cycle": [
-    "Blessed Golden Bowl with Pure Water",
-    "Yommi tree seed",
-    "Yommi Tree"
-   ],
-   "basin": 7,
-   "pct": 0.17
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Experience",
-   "chains": 441,
-   "pct": 10.44,
+   "chains": 443,
+   "pct": 10.49,
    "reason": "only 3 eligible links"
   },
   {
@@ -333,6 +332,10 @@
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
   {
+   "title": "Bestiary (Library of Varrock)/Barbarian",
+   "firstLinks": 95
+  },
+  {
    "title": "Experience",
    "firstLinks": 64
   },
@@ -405,6 +408,10 @@
    "firstLinks": 10
   },
   {
+   "title": "Bestiary (Library of Varrock)/Animated Axe",
+   "firstLinks": 10
+  },
+  {
    "title": "Strength",
    "firstLinks": 9
   },
@@ -443,20 +450,12 @@
   {
    "title": "Range",
    "firstLinks": 8
-  },
-  {
-   "title": "Dragon slayer",
-   "firstLinks": 7
-  },
-  {
-   "title": "Brimhaven",
-   "firstLinks": 7
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Experience",
-   "chains": 441
+   "chains": 443
   },
   {
    "title": "Hellhound",
@@ -508,11 +507,11 @@
   },
   {
    "title": "Strength",
-   "chains": 288
+   "chains": 290
   },
   {
    "title": "Melee",
-   "chains": 266
+   "chains": 268
   },
   {
    "title": "Warrior",
@@ -540,7 +539,7 @@
   },
   {
    "title": "Ranged",
-   "chains": 141
+   "chains": 142
   },
   {
    "title": "Draynor Village",
@@ -555,6 +554,14 @@
    "chains": 122
   },
   {
+   "title": "Bestiary (Library of Varrock)/Bear",
+   "chains": 112
+  },
+  {
+   "title": "Bestiary (Library of Varrock)/Barbarian",
+   "chains": 112
+  },
+  {
    "title": "Prayer",
    "chains": 107
   },
@@ -565,14 +572,6 @@
   {
    "title": "Dragon Bones",
    "chains": 104
-  },
-  {
-   "title": "Big Bones",
-   "chains": 98
-  },
-  {
-   "title": "Giant",
-   "chains": 97
   }
  ]
 }

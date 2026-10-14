@@ -3,36 +3,36 @@
  "rank": "strict1",
  "nodes": 36164,
  "converge": {
-  "articles": 34995,
-  "pct": 96.77,
-  "deadEnd": 1169,
-  "deadEndPct": 3.23,
-  "noLinks": 539,
+  "articles": 35271,
+  "pct": 97.53,
+  "deadEnd": 893,
+  "deadEndPct": 2.47,
+  "noLinks": 439,
   "tooFewLinks": 0,
-  "unresolvable": 2
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 6.09,
-  "median": 5,
-  "p90": 11,
+  "mean": 6.26,
+  "median": 6,
+  "p90": 12,
   "max": 18
  },
  "histogram": {
-  "0": 344,
-  "1": 1799,
-  "2": 2780,
-  "3": 3888,
-  "4": 4425,
-  "5": 4697,
-  "6": 4111,
-  "7": 2918,
-  "8": 1588,
-  "9": 1381,
-  "10": 1822,
-  "11": 2198,
-  "12": 997,
-  "13": 995,
-  "14": 677,
+  "0": 340,
+  "1": 1515,
+  "2": 2806,
+  "3": 3883,
+  "4": 4259,
+  "5": 4723,
+  "6": 4093,
+  "7": 2923,
+  "8": 1615,
+  "9": 1411,
+  "10": 1904,
+  "11": 2197,
+  "12": 1021,
+  "13": 1493,
+  "14": 713,
   "15": 268,
   "16": 86,
   "17": 19,
@@ -40,76 +40,76 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 541,
-   "1": 1323,
-   "2": 2986,
-   "3": 4695,
-   "4": 3503,
-   "5": 3373,
-   "6": 2722,
-   "7": 2275,
-   "8": 1843,
-   "9": 1604,
-   "10": 11299
+   "0": 440,
+   "1": 1317,
+   "2": 2978,
+   "3": 4691,
+   "4": 3504,
+   "5": 3365,
+   "6": 2717,
+   "7": 2267,
+   "8": 1834,
+   "9": 1584,
+   "10": 11467
   },
   "atLeast": {
-   "1": 98.5,
-   "2": 94.8,
-   "3": 86.6,
-   "5": 63.9
+   "1": 98.8,
+   "2": 95.1,
+   "3": 86.9,
+   "5": 64.2
   }
  },
  "concentration": {
-  "top1Pct": 33.6,
-  "top3Pct": 81.72,
-  "top10Pct": 93.13,
-  "cycleCount": 169,
-  "entropyBits": 2.55
+  "top1Pct": 33.88,
+  "top3Pct": 83.23,
+  "top10Pct": 94.26,
+  "cycleCount": 167,
+  "entropyBits": 2.48
  },
- "components": 170,
- "cycleCount": 169,
+ "components": 168,
+ "cycleCount": 167,
  "largestCycle": {
   "members": [
-   "Gielinor",
-   "Guthix",
-   "Gods"
+   "Monster",
+   "Combat",
+   "Bestiary"
   ],
   "size": 3,
-  "basin": 12150
+  "basin": 12251
  },
  "topAttractors": [
-  {
-   "cycle": [
-    "Gielinor",
-    "Guthix",
-    "Gods"
-   ],
-   "basin": 12150,
-   "pct": 33.6
-  },
   {
    "cycle": [
     "Monster",
     "Combat",
     "Bestiary"
    ],
-   "basin": 11562,
-   "pct": 31.97
+   "basin": 12251,
+   "pct": 33.88
+  },
+  {
+   "cycle": [
+    "Gielinor",
+    "Guthix",
+    "Gods"
+   ],
+   "basin": 11992,
+   "pct": 33.16
   },
   {
    "cycle": [
     "Currencies",
     "Coins"
    ],
-   "basin": 5840,
-   "pct": 16.15
+   "basin": 5858,
+   "pct": 16.2
   },
   {
    "cycle": [
     "Items",
     "Inventory"
    ],
-   "basin": 1522,
+   "basin": 1523,
    "pct": 4.21
   },
   {
@@ -125,8 +125,8 @@
     "Jagex",
     "Andrew Gower"
    ],
-   "basin": 660,
-   "pct": 1.83
+   "basin": 689,
+   "pct": 1.91
   },
   {
    "cycle": [
@@ -138,19 +138,19 @@
   },
   {
    "cycle": [
-    "Treasure Trails/Guide/Cryptic clues",
-    "Clue scroll (beginner) - Always walking around the castle grounds"
-   ],
-   "basin": 306,
-   "pct": 0.85
-  },
-  {
-   "cycle": [
     "Vampyre",
     "Vampyrium"
    ],
-   "basin": 274,
-   "pct": 0.76
+   "basin": 273,
+   "pct": 0.75
+  },
+  {
+   "cycle": [
+    "Treasure Trails/Guide/Emote clues/Items",
+    "Treasure Trails/Guide/Emote clues"
+   ],
+   "basin": 136,
+   "pct": 0.38
   },
   {
    "cycle": [
@@ -178,14 +178,6 @@
   },
   {
    "cycle": [
-    "Treasure Trails/Guide/Anagrams",
-    "Clue scroll (beginner) - AN EARL"
-   ],
-   "basin": 88,
-   "pct": 0.24
-  },
-  {
-   "cycle": [
     "Mos Le'Harmless",
     "Pirate (Mos Le'Harmless)"
    ],
@@ -199,14 +191,6 @@
    ],
    "basin": 50,
    "pct": 0.14
-  },
-  {
-   "cycle": [
-    "Treasure Trails/Guide/Maps",
-    "Clue scroll (beginner) - West of the Champions' Guild"
-   ],
-   "basin": 42,
-   "pct": 0.12
   },
   {
    "cycle": [
@@ -240,19 +224,29 @@
    ],
    "basin": 27,
    "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Grain",
+    "Wheat"
+   ],
+   "basin": 27,
+   "pct": 0.07
+  },
+  {
+   "cycle": [
+    "Boat paint",
+    "Trims"
+   ],
+   "basin": 25,
+   "pct": 0.07
   }
  ],
  "deadEndTerminals": [
   {
    "title": "Ring slot table",
-   "chains": 482,
-   "pct": 1.33,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Player spoof",
-   "chains": 43,
-   "pct": 0.12,
+   "chains": 352,
+   "pct": 0.97,
    "reason": "no eligible links"
   },
   {
@@ -287,8 +281,8 @@
   },
   {
    "title": "Legs slot table",
-   "chains": 6,
-   "pct": 0.02,
+   "chains": 4,
+   "pct": 0.01,
    "reason": "no eligible links"
   },
   {
@@ -316,12 +310,6 @@
    "reason": "no eligible links"
   },
   {
-   "title": "TzHaar Fight Cave/Rotations/1",
-   "chains": 2,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Deryk Paulson",
    "chains": 2,
    "pct": 0.01,
@@ -329,6 +317,18 @@
   },
   {
    "title": "Slang dictionary",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "SARADOMIN TEAM CLOAK",
+   "chains": 1,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "SARADOMIN TEAM HOOD",
    "chains": 1,
    "pct": 0,
    "reason": "no eligible links"
@@ -409,15 +409,15 @@
    "firstLinks": 127
   },
   {
+   "title": "Deadman Mode",
+   "firstLinks": 126
+  },
+  {
    "title": "Hotspot",
    "firstLinks": 125
   },
   {
    "title": "Grand Exchange Clerk",
-   "firstLinks": 125
-  },
-  {
-   "title": "Deadman Mode",
    "firstLinks": 125
   },
   {
@@ -449,134 +449,134 @@
    "firstLinks": 111
   },
   {
-   "title": "Items",
-   "firstLinks": 108
+   "title": "Unobtainable items",
+   "firstLinks": 109
   },
   {
-   "title": "Unobtainable items",
+   "title": "Items",
    "firstLinks": 108
   }
  ],
  "topThroughTraffic": [
   {
-   "title": "Gielinor",
-   "chains": 12150
-  },
-  {
-   "title": "Guthix",
-   "chains": 12150
-  },
-  {
-   "title": "Gods",
-   "chains": 12150
-  },
-  {
    "title": "Combat",
-   "chains": 11562
+   "chains": 12251
   },
   {
    "title": "Bestiary",
-   "chains": 11562
+   "chains": 12251
   },
   {
    "title": "Monster",
-   "chains": 11562
+   "chains": 12251
+  },
+  {
+   "title": "Gielinor",
+   "chains": 11992
+  },
+  {
+   "title": "Guthix",
+   "chains": 11992
+  },
+  {
+   "title": "Gods",
+   "chains": 11992
   },
   {
    "title": "Boss",
-   "chains": 9269
+   "chains": 9923
   },
   {
    "title": "Strongest monster",
-   "chains": 8978
+   "chains": 9632
   },
   {
    "title": "Abyssal demon",
-   "chains": 8977
+   "chains": 9631
   },
   {
    "title": "List of races",
-   "chains": 8962
+   "chains": 9616
   },
   {
    "title": "Human",
-   "chains": 8719
+   "chains": 9373
   },
   {
    "title": "Player character",
-   "chains": 8207
+   "chains": 8862
   },
   {
    "title": "Coins",
-   "chains": 5840
+   "chains": 5858
   },
   {
    "title": "Currencies",
-   "chains": 5840
+   "chains": 5858
   },
   {
    "title": "Shop",
-   "chains": 5734
+   "chains": 5752
   },
   {
    "title": "World",
-   "chains": 5635
+   "chains": 5653
   },
   {
    "title": "Members",
-   "chains": 5549
+   "chains": 5555
   },
   {
    "title": "Skills",
-   "chains": 4506
+   "chains": 5069
   },
   {
    "title": "Kingdom",
-   "chains": 3949
+   "chains": 3957
   },
   {
    "title": "World map",
-   "chains": 3154
+   "chains": 3152
   },
   {
    "title": "Locations",
-   "chains": 2885
-  },
-  {
-   "title": "Attack",
-   "chains": 2093
-  },
-  {
-   "title": "Icon",
-   "chains": 1999
-  },
-  {
-   "title": "Quests",
-   "chains": 1996
-  },
-  {
-   "title": "Melee",
-   "chains": 1807
-  },
-  {
-   "title": "Capital",
-   "chains": 1765
+   "chains": 2884
   },
   {
    "title": "Experience",
-   "chains": 1551
+   "chains": 2119
   },
   {
-   "title": "Items",
-   "chains": 1522
-  },
-  {
-   "title": "Inventory",
-   "chains": 1522
+   "title": "Attack",
+   "chains": 2087
   },
   {
    "title": "Minigames",
-   "chains": 1469
+   "chains": 2037
+  },
+  {
+   "title": "Icon",
+   "chains": 1998
+  },
+  {
+   "title": "Quests",
+   "chains": 1995
+  },
+  {
+   "title": "Melee",
+   "chains": 1801
+  },
+  {
+   "title": "Capital",
+   "chains": 1779
+  },
+  {
+   "title": "Items",
+   "chains": 1523
+  },
+  {
+   "title": "Inventory",
+   "chains": 1523
   }
  ]
 }

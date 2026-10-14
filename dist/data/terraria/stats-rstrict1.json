@@ -3,53 +3,53 @@
  "rank": "strict1",
  "nodes": 4337,
  "converge": {
-  "articles": 3805,
-  "pct": 87.73,
-  "deadEnd": 532,
-  "deadEndPct": 12.27,
-  "noLinks": 234,
+  "articles": 3804,
+  "pct": 87.71,
+  "deadEnd": 533,
+  "deadEndPct": 12.29,
+  "noLinks": 246,
   "tooFewLinks": 0,
-  "unresolvable": 22
+  "unresolvable": 23
  },
  "hopStats": {
-  "mean": 3.94,
+  "mean": 3.93,
   "median": 3,
   "p90": 7,
   "max": 14
  },
  "histogram": {
   "0": 22,
-  "1": 78,
+  "1": 77,
   "2": 836,
-  "3": 1287,
-  "4": 581,
-  "5": 242,
-  "6": 293,
-  "7": 110,
-  "8": 147,
+  "3": 1289,
+  "4": 589,
+  "5": 234,
+  "6": 299,
+  "7": 103,
+  "8": 148,
   "9": 89,
-  "10": 21,
-  "11": 67,
+  "10": 20,
+  "11": 66,
   "12": 28,
   "13": 3,
   "14": 1
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 256,
-   "1": 155,
-   "2": 272,
-   "3": 274,
+   "0": 269,
+   "1": 144,
+   "2": 268,
+   "3": 276,
    "4": 289,
-   "5": 261,
-   "6": 241,
+   "5": 262,
+   "6": 242,
    "7": 237,
-   "8": 217,
-   "9": 204,
-   "10": 1931
+   "8": 214,
+   "9": 209,
+   "10": 1927
   },
   "atLeast": {
-   "1": 94.1,
+   "1": 93.8,
    "2": 90.5,
    "3": 84.3,
    "5": 71.3
@@ -58,9 +58,9 @@
  "concentration": {
   "top1Pct": 85.47,
   "top3Pct": 86.53,
-  "top10Pct": 87.69,
+  "top10Pct": 87.66,
   "cycleCount": 11,
-  "entropyBits": 0.25
+  "entropyBits": 0.24
  },
  "components": 12,
  "cycleCount": 11,
@@ -110,8 +110,8 @@
     "Halloween",
     "Seasonal events"
    ],
-   "basin": 12,
-   "pct": 0.28
+   "basin": 11,
+   "pct": 0.25
   },
   {
    "cycle": [
@@ -170,21 +170,15 @@
    "reason": "no eligible links"
   },
   {
+   "title": "Construction Accessories",
+   "chains": 11,
+   "pct": 0.25,
+   "reason": "no eligible links"
+  },
+  {
    "title": "Crafted walls",
    "chains": 3,
    "pct": 0.07,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Bone Welder/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Blend-O-Matic/register",
-   "chains": 2,
-   "pct": 0.05,
    "reason": "no eligible links"
   },
   {
@@ -194,52 +188,10 @@
    "reason": "redlink target"
   },
   {
-   "title": "Recipes/Teapot/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Ancient Manipulator/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Furnace/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Titanium Pickaxe/lt",
    "chains": 2,
    "pct": 0.05,
    "reason": "redlink target"
-  },
-  {
-   "title": "Recipes/Decay Chamber/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Flesh Cloning Vat/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Loom/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Honey Dispenser/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
   },
   {
    "title": "Game platform",
@@ -248,9 +200,57 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Autohammer/register",
+   "title": "Console version/Nintendo Switch store pages",
    "chains": 2,
    "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Secret world seeds/row",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Recipes/Bone Welder/register",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Crates/lootnote",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Paintings/painting",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bait/bait power row",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Yellow Horseshoe Balloon/Crafting tree",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Furniture sets/row",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Toilets/resultcell",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "no eligible links"
   }
  ],
@@ -366,15 +366,15 @@
   },
   {
    "title": "Desktop version history",
-   "firstLinks": 18
-  },
-  {
-   "title": "Modifiers",
-   "firstLinks": 18
+   "firstLinks": 17
   },
   {
    "title": "Informational Accessories",
    "firstLinks": 17
+  },
+  {
+   "title": "Events",
+   "firstLinks": 16
   }
  ],
  "topThroughTraffic": [
@@ -388,43 +388,43 @@
   },
   {
    "title": "Pre-Hardmode",
-   "chains": 2131
+   "chains": 2137
   },
   {
    "title": "Hardmode",
-   "chains": 1484
+   "chains": 1490
   },
   {
    "title": "Furniture",
-   "chains": 894
+   "chains": 886
   },
   {
    "title": "Chests",
-   "chains": 616
+   "chains": 608
   },
   {
    "title": "Inventory",
-   "chains": 503
+   "chains": 495
   },
   {
    "title": "Biomes",
-   "chains": 454
+   "chains": 456
   },
   {
    "title": "Life Fruit",
-   "chains": 365
-  },
-  {
-   "title": "Health",
    "chains": 364
   },
   {
+   "title": "Health",
+   "chains": 363
+  },
+  {
    "title": "Damage",
-   "chains": 354
+   "chains": 353
   },
   {
    "title": "Enemies",
-   "chains": 315
+   "chains": 313
   },
   {
    "title": "Game mechanics",
@@ -444,7 +444,7 @@
   },
   {
    "title": "Weapons",
-   "chains": 186
+   "chains": 184
   },
   {
    "title": "Biome backgrounds",
@@ -467,16 +467,16 @@
    "chains": 117
   },
   {
-   "title": "1.2",
-   "chains": 98
+   "title": "Tools",
+   "chains": 100
   },
   {
-   "title": "Tools",
-   "chains": 96
+   "title": "1.2",
+   "chains": 97
   },
   {
    "title": "Re-Logic",
-   "chains": 90
+   "chains": 89
   },
   {
    "title": "Ammunition items",
@@ -491,12 +491,12 @@
    "chains": 79
   },
   {
-   "title": "NPCs",
-   "chains": 75
+   "title": "Crafting stations",
+   "chains": 76
   },
   {
-   "title": "Plants",
-   "chains": 65
+   "title": "NPCs",
+   "chains": 75
   }
  ]
 }

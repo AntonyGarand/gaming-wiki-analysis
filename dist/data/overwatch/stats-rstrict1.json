@@ -3,11 +3,11 @@
  "rank": "strict1",
  "nodes": 2808,
  "converge": {
-  "articles": 2345,
-  "pct": 83.51,
-  "deadEnd": 463,
-  "deadEndPct": 16.49,
-  "noLinks": 418,
+  "articles": 2348,
+  "pct": 83.62,
+  "deadEnd": 460,
+  "deadEndPct": 16.38,
+  "noLinks": 415,
   "tooFewLinks": 0,
   "unresolvable": 30
  },
@@ -21,8 +21,8 @@
   "0": 63,
   "1": 149,
   "2": 368,
-  "3": 561,
-  "4": 446,
+  "3": 562,
+  "4": 448,
   "5": 606,
   "6": 88,
   "7": 62,
@@ -30,9 +30,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 448,
+   "0": 445,
    "1": 370,
-   "2": 334,
+   "2": 335,
    "3": 250,
    "4": 168,
    "5": 124,
@@ -40,19 +40,19 @@
    "7": 81,
    "8": 79,
    "9": 59,
-   "10": 752
+   "10": 754
   },
   "atLeast": {
-   "1": 84,
-   "2": 70.9,
+   "1": 84.2,
+   "2": 71,
    "3": 59,
-   "5": 44.1
+   "5": 44.2
   }
  },
  "concentration": {
-  "top1Pct": 44.94,
-  "top3Pct": 74.68,
-  "top10Pct": 81.8,
+  "top1Pct": 44.98,
+  "top3Pct": 74.72,
+  "top10Pct": 81.91,
   "cycleCount": 31,
   "entropyBits": 1.92
  },
@@ -65,7 +65,7 @@
    "Playlist"
   ],
   "size": 3,
-  "basin": 1262
+  "basin": 1263
  },
  "topAttractors": [
   {
@@ -74,8 +74,8 @@
     "Competitive Play",
     "Playlist"
    ],
-   "basin": 1262,
-   "pct": 44.94
+   "basin": 1263,
+   "pct": 44.98
   },
   {
    "cycle": [
@@ -98,8 +98,8 @@
     "Battle Pass",
     "Cosmetics"
    ],
-   "basin": 167,
-   "pct": 5.95
+   "basin": 169,
+   "pct": 6.02
   },
   {
    "cycle": [
@@ -292,12 +292,6 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Overwatch Wiki",
-   "chains": 1,
-   "pct": 0.04,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Atlantic Seaboard A.I. Summit",
    "chains": 1,
    "pct": 0.04,
@@ -317,6 +311,12 @@
   },
   {
    "title": "Keith Miron",
+   "chains": 1,
+   "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Andrew Wang",
    "chains": 1,
    "pct": 0.04,
    "reason": "no eligible links"
@@ -448,23 +448,23 @@
  "topThroughTraffic": [
   {
    "title": "Game Modes",
-   "chains": 1262
+   "chains": 1263
   },
   {
    "title": "Playlist",
-   "chains": 1262
+   "chains": 1263
   },
   {
    "title": "Competitive Play",
-   "chains": 1262
+   "chains": 1263
   },
   {
    "title": "Heroes",
-   "chains": 695
+   "chains": 696
   },
   {
    "title": "Roles",
-   "chains": 602
+   "chains": 603
   },
   {
    "title": "Sub-Roles",
@@ -496,11 +496,11 @@
   },
   {
    "title": "Cosmetics",
-   "chains": 167
+   "chains": 169
   },
   {
    "title": "Battle Pass",
-   "chains": 167
+   "chains": 169
   },
   {
    "title": "Overwatch (group)",
@@ -512,14 +512,14 @@
   },
   {
    "title": "Skins",
-   "chains": 85
-  },
-  {
-   "title": "Escort",
-   "chains": 80
+   "chains": 87
   },
   {
    "title": "Limited-time event",
+   "chains": 82
+  },
+  {
+   "title": "Escort",
    "chains": 80
   },
   {

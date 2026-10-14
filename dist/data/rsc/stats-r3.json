@@ -3,39 +3,39 @@
  "rank": "3",
  "nodes": 4225,
  "converge": {
-  "articles": 2747,
-  "pct": 65.02,
-  "deadEnd": 1478,
-  "deadEndPct": 34.98,
-  "noLinks": 453,
-  "tooFewLinks": 366,
+  "articles": 2865,
+  "pct": 67.81,
+  "deadEnd": 1360,
+  "deadEndPct": 32.19,
+  "noLinks": 338,
+  "tooFewLinks": 367,
   "unresolvable": 2
  },
  "hopStats": {
-  "mean": 6.67,
+  "mean": 6.5,
   "median": 6,
   "p90": 13,
   "max": 21
  },
  "histogram": {
-  "0": 197,
-  "1": 282,
-  "2": 270,
-  "3": 231,
+  "0": 199,
+  "1": 382,
+  "2": 271,
+  "3": 232,
   "4": 205,
-  "5": 131,
+  "5": 132,
   "6": 107,
   "7": 151,
   "8": 176,
-  "9": 198,
+  "9": 199,
   "10": 193,
   "11": 130,
   "12": 113,
   "13": 99,
   "14": 33,
-  "15": 29,
-  "16": 59,
-  "17": 46,
+  "15": 39,
+  "16": 60,
+  "17": 47,
   "18": 49,
   "19": 30,
   "20": 15,
@@ -43,9 +43,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 455,
+   "0": 340,
    "1": 109,
-   "2": 257,
+   "2": 258,
    "3": 354,
    "4": 401,
    "5": 388,
@@ -53,31 +53,31 @@
    "7": 310,
    "8": 252,
    "9": 230,
-   "10": 1083
+   "10": 1197
   },
   "atLeast": {
-   "1": 89.2,
-   "2": 86.7,
-   "3": 80.6,
-   "5": 62.7
+   "1": 92,
+   "2": 89.4,
+   "3": 83.3,
+   "5": 65.4
   }
  },
  "concentration": {
-  "top1Pct": 23.17,
-  "top3Pct": 41.44,
-  "top10Pct": 55.27,
-  "cycleCount": 91,
-  "entropyBits": 3.6
+  "top1Pct": 23.46,
+  "top3Pct": 41.75,
+  "top10Pct": 57.4,
+  "cycleCount": 92,
+  "entropyBits": 3.69
  },
- "components": 92,
- "cycleCount": 91,
+ "components": 93,
+ "cycleCount": 92,
  "largestCycle": {
   "members": [
    "Attack",
    "WeaponAim"
   ],
   "size": 2,
-  "basin": 979
+  "basin": 991
  },
  "topAttractors": [
   {
@@ -85,16 +85,16 @@
     "Attack",
     "WeaponAim"
    ],
-   "basin": 979,
-   "pct": 23.17
+   "basin": 991,
+   "pct": 23.46
   },
   {
    "cycle": [
     "Scorpion catcher",
     "Seer"
    ],
-   "basin": 586,
-   "pct": 13.87
+   "basin": 587,
+   "pct": 13.89
   },
   {
    "cycle": [
@@ -122,8 +122,8 @@
     "West Ardougne",
     "Plague City"
    ],
-   "basin": 131,
-   "pct": 3.1
+   "basin": 132,
+   "pct": 3.12
   },
   {
    "cycle": [
@@ -134,6 +134,14 @@
    ],
    "basin": 120,
    "pct": 2.84
+  },
+  {
+   "cycle": [
+    "Bestiary (Library of Varrock)/Animated Axe",
+    "Bestiary (Library of Varrock)/Bandit"
+   ],
+   "basin": 100,
+   "pct": 2.37
   },
   {
    "cycle": [
@@ -242,14 +250,6 @@
    ],
    "basin": 11,
    "pct": 0.26
-  },
-  {
-   "cycle": [
-    "Murder Mystery",
-    "Murder Scene Pot"
-   ],
-   "basin": 11,
-   "pct": 0.26
   }
  ],
  "deadEndTerminals": [
@@ -276,12 +276,6 @@
    "chains": 4,
    "pct": 0.09,
    "reason": "only 2 eligible links"
-  },
-  {
-   "title": "God letters:Issue 2 - The People Rejoice",
-   "chains": 3,
-   "pct": 0.07,
-   "reason": "no eligible links"
   },
   {
    "title": "Golrie",
@@ -314,12 +308,6 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Prayer To Guthix",
-   "chains": 3,
-   "pct": 0.07,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Cave entrance (Toban's island)",
    "chains": 3,
    "pct": 0.07,
@@ -342,10 +330,26 @@
    "chains": 2,
    "pct": 0.05,
    "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Trowel",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Power levelling",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
+  {
+   "title": "Bestiary (Library of Varrock)/Animated Axe",
+   "firstLinks": 97
+  },
   {
    "title": "Quests",
    "firstLinks": 71
@@ -461,44 +465,40 @@
   {
    "title": "Bank",
    "firstLinks": 14
-  },
-  {
-   "title": "Port Sarim",
-   "firstLinks": 14
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Attack",
-   "chains": 979
+   "chains": 991
   },
   {
    "title": "WeaponAim",
-   "chains": 979
+   "chains": 991
   },
   {
    "title": "Defense",
-   "chains": 915
+   "chains": 927
   },
   {
    "title": "Hits",
-   "chains": 887
+   "chains": 899
   },
   {
    "title": "Experience",
-   "chains": 688
+   "chains": 700
   },
   {
    "title": "Skills",
-   "chains": 642
+   "chains": 654
   },
   {
    "title": "Tutorial Island",
-   "chains": 612
+   "chains": 624
   },
   {
    "title": "Bank",
-   "chains": 606
+   "chains": 618
   },
   {
    "title": "Jagex",
@@ -510,14 +510,18 @@
   },
   {
    "title": "Scorpion catcher",
-   "chains": 586
+   "chains": 587
   },
   {
    "title": "Seer",
-   "chains": 586
+   "chains": 587
   },
   {
    "title": "Thormac the sorceror",
+   "chains": 580
+  },
+  {
+   "title": "Scorpion cage",
    "chains": 579
   },
   {
@@ -525,24 +529,20 @@
    "chains": 578
   },
   {
-   "title": "Scorpion cage",
+   "title": "Kharid Scorpion",
    "chains": 578
   },
   {
-   "title": "Kharid Scorpion",
+   "title": "Barbarian Outpost",
    "chains": 577
   },
   {
-   "title": "Barbarian Outpost",
-   "chains": 576
-  },
-  {
    "title": "Legend's Quest",
-   "chains": 570
+   "chains": 571
   },
   {
    "title": "Quests",
-   "chains": 498
+   "chains": 499
   },
   {
    "title": "Monster",
@@ -550,11 +550,11 @@
   },
   {
    "title": "Varrock southeast mine",
-   "chains": 287
+   "chains": 299
   },
   {
    "title": "Varrock",
-   "chains": 286
+   "chains": 298
   },
   {
    "title": "Items",

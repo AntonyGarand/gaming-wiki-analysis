@@ -3,70 +3,70 @@
  "rank": "5",
  "nodes": 35312,
  "converge": {
-  "articles": 2119,
-  "pct": 6,
-  "deadEnd": 33193,
-  "deadEndPct": 94,
-  "noLinks": 2241,
-  "tooFewLinks": 21928,
-  "unresolvable": 20
+  "articles": 2111,
+  "pct": 5.98,
+  "deadEnd": 33201,
+  "deadEndPct": 94.02,
+  "noLinks": 2240,
+  "tooFewLinks": 22024,
+  "unresolvable": 17
  },
  "hopStats": {
-  "mean": 2.55,
+  "mean": 2.53,
   "median": 2,
   "p90": 5,
   "max": 10
  },
  "histogram": {
-  "0": 258,
-  "1": 571,
-  "2": 426,
-  "3": 170,
-  "4": 348,
-  "5": 165,
-  "6": 98,
-  "7": 34,
+  "0": 260,
+  "1": 580,
+  "2": 423,
+  "3": 167,
+  "4": 342,
+  "5": 164,
+  "6": 93,
+  "7": 33,
   "8": 24,
   "9": 15,
   "10": 10
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2261,
-   "1": 1263,
-   "2": 7376,
-   "3": 8973,
-   "4": 4316,
-   "5": 2378,
-   "6": 1351,
-   "7": 842,
-   "8": 601,
-   "9": 503,
-   "10": 5448
+   "0": 2257,
+   "1": 1264,
+   "2": 7398,
+   "3": 9015,
+   "4": 4347,
+   "5": 2402,
+   "6": 1375,
+   "7": 876,
+   "8": 630,
+   "9": 510,
+   "10": 5238
   },
   "atLeast": {
    "1": 93.6,
    "2": 90,
    "3": 69.1,
-   "5": 31.5
+   "5": 31.2
   }
  },
  "concentration": {
   "top1Pct": 2.25,
-  "top3Pct": 3.2,
-  "top10Pct": 4.67,
-  "cycleCount": 127,
-  "entropyBits": 4.14
+  "top3Pct": 3.21,
+  "top10Pct": 4.61,
+  "cycleCount": 128,
+  "entropyBits": 4.17
  },
- "components": 128,
- "cycleCount": 127,
+ "components": 129,
+ "cycleCount": 128,
  "largestCycle": {
   "members": [
    "Back Blings",
    "Dead Pixels"
   ],
   "size": 2,
-  "basin": 796
+  "basin": 795
  },
  "topAttractors": [
   {
@@ -74,7 +74,7 @@
     "Back Blings",
     "Dead Pixels"
    ],
-   "basin": 796,
+   "basin": 795,
    "pct": 2.25
   },
   {
@@ -82,7 +82,7 @@
     "Lobby Music",
     "Jam Tracks"
    ],
-   "basin": 168,
+   "basin": 170,
    "pct": 0.48
   },
   {
@@ -90,8 +90,8 @@
     "Chug Splash",
     "Characters (Battle Royale)"
    ],
-   "basin": 165,
-   "pct": 0.47
+   "basin": 169,
+   "pct": 0.48
   },
   {
    "cycle": [
@@ -103,26 +103,26 @@
   },
   {
    "cycle": [
-    "Heavy Shotgun",
-    "Backbreaker"
-   ],
-   "basin": 115,
-   "pct": 0.33
-  },
-  {
-   "cycle": [
     "Update v18.40",
     "Paper Bomb Kunai"
    ],
-   "basin": 110,
+   "basin": 108,
    "pct": 0.31
+  },
+  {
+   "cycle": [
+    "Heavy Shotgun",
+    "Backbreaker"
+   ],
+   "basin": 91,
+   "pct": 0.26
   },
   {
    "cycle": [
     "Skully",
     "Skully Challenges"
    ],
-   "basin": 70,
+   "basin": 69,
    "pct": 0.2
   },
   {
@@ -130,8 +130,8 @@
     "Bandage Bazooka",
     "Chug Cannon"
    ],
-   "basin": 31,
-   "pct": 0.09
+   "basin": 30,
+   "pct": 0.08
   },
   {
    "cycle": [
@@ -217,8 +217,8 @@
   },
   {
    "cycle": [
-    "War Machine's Hover Jets",
-    "War Machine's Arsenal"
+    "Grappler",
+    "Icy Grappler"
    ],
    "basin": 10,
    "pct": 0.03
@@ -235,21 +235,21 @@
  "deadEndTerminals": [
   {
    "title": "Epic Games",
-   "chains": 754,
-   "pct": 2.14,
+   "chains": 568,
+   "pct": 1.61,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "King Me",
-   "chains": 328,
-   "pct": 0.93,
-   "reason": "only 3 eligible links"
+   "title": "Sprays",
+   "chains": 301,
+   "pct": 0.85,
+   "reason": "only 4 eligible links"
   },
   {
-   "title": "Sprays",
-   "chains": 316,
-   "pct": 0.89,
-   "reason": "only 4 eligible links"
+   "title": "King Me",
+   "chains": 296,
+   "pct": 0.84,
+   "reason": "only 3 eligible links"
   },
   {
    "title": "Update v5.30",
@@ -258,33 +258,33 @@
    "reason": "only 2 eligible links"
   },
   {
+   "title": "Checkpoint Reload",
+   "chains": 174,
+   "pct": 0.49,
+   "reason": "only 2 eligible links"
+  },
+  {
    "title": "Storm Shield",
-   "chains": 160,
-   "pct": 0.45,
+   "chains": 161,
+   "pct": 0.46,
    "reason": "only 4 eligible links"
   },
   {
-   "title": "Checkpoint Reload",
+   "title": "Thunderbolt of Zeus",
    "chains": 156,
    "pct": 0.44,
-   "reason": "only 2 eligible links"
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Grenade",
+   "chains": 141,
+   "pct": 0.4,
+   "reason": "only 3 eligible links"
   },
   {
    "title": "Faint",
    "chains": 136,
    "pct": 0.39,
-   "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Pistols",
-   "chains": 133,
-   "pct": 0.38,
-   "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Grenade",
-   "chains": 132,
-   "pct": 0.37,
    "reason": "only 3 eligible links"
   },
   {
@@ -306,41 +306,41 @@
    "reason": "only 2 eligible links"
   },
   {
+   "title": "Pistols",
+   "chains": 107,
+   "pct": 0.3,
+   "reason": "only 3 eligible links"
+  },
+  {
    "title": "Heroes",
-   "chains": 90,
-   "pct": 0.25,
+   "chains": 92,
+   "pct": 0.26,
    "reason": "only 4 eligible links"
   },
   {
    "title": "Guff Gringle",
-   "chains": 86,
-   "pct": 0.24,
+   "chains": 87,
+   "pct": 0.25,
    "reason": "only 3 eligible links"
-  },
-  {
-   "title": "Black Diamond",
-   "chains": 81,
-   "pct": 0.23,
-   "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
   {
    "title": "Outfits",
-   "firstLinks": 238
+   "firstLinks": 239
   },
   {
    "title": "Quests",
-   "firstLinks": 201
-  },
-  {
-   "title": "Fortnite: Battle Royale",
    "firstLinks": 191
   },
   {
+   "title": "Fortnite: Battle Royale",
+   "firstLinks": 141
+  },
+  {
    "title": "Back Blings",
-   "firstLinks": 124
+   "firstLinks": 122
   },
   {
    "title": "Fortnite Crew",
@@ -363,36 +363,28 @@
    "firstLinks": 86
   },
   {
-   "title": "Fortnite: Save the World",
-   "firstLinks": 82
-  },
-  {
    "title": "Athena",
    "firstLinks": 82
   },
   {
    "title": "Characters (Battle Royale)",
-   "firstLinks": 74
+   "firstLinks": 75
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "firstLinks": 53
   },
   {
    "title": "Decals",
    "firstLinks": 50
   },
   {
-   "title": "Battle Pass",
-   "firstLinks": 44
-  },
-  {
    "title": "Loading Screens",
    "firstLinks": 44
   },
   {
-   "title": "Hero Back Blings",
-   "firstLinks": 43
-  },
-  {
-   "title": "XP",
-   "firstLinks": 41
+   "title": "Battle Pass",
+   "firstLinks": 42
   },
   {
    "title": "Asteria",
@@ -401,6 +393,10 @@
   {
    "title": "Fight the Storm",
    "firstLinks": 40
+  },
+  {
+   "title": "XP",
+   "firstLinks": 39
   },
   {
    "title": "Update v33.10",
@@ -415,11 +411,7 @@
    "firstLinks": 36
   },
   {
-   "title": "Ventures",
-   "firstLinks": 34
-  },
-  {
-   "title": "Assault Weapons",
+   "title": "Hero Back Blings",
    "firstLinks": 34
   },
   {
@@ -433,6 +425,14 @@
   {
    "title": "Industry Baby",
    "firstLinks": 33
+  },
+  {
+   "title": "Heroes",
+   "firstLinks": 32
+  },
+  {
+   "title": "Ventures",
+   "firstLinks": 32
   },
   {
    "title": "Fade to Black",
@@ -450,63 +450,63 @@
  "topThroughTraffic": [
   {
    "title": "Back Blings",
-   "chains": 796
+   "chains": 795
   },
   {
    "title": "Dead Pixels",
-   "chains": 796
-  },
-  {
-   "title": "Epic Games",
-   "chains": 754
-  },
-  {
-   "title": "Skill Based Matchmaking",
-   "chains": 742
-  },
-  {
-   "title": "Trios",
-   "chains": 729
-  },
-  {
-   "title": "Fortnite: Battle Royale",
-   "chains": 728
+   "chains": 795
   },
   {
    "title": "Built-In Cosmetics",
-   "chains": 595
+   "chains": 596
+  },
+  {
+   "title": "Epic Games",
+   "chains": 568
+  },
+  {
+   "title": "Skill Based Matchmaking",
+   "chains": 556
+  },
+  {
+   "title": "Trios",
+   "chains": 543
+  },
+  {
+   "title": "Fortnite: Battle Royale",
+   "chains": 542
   },
   {
    "title": "Giddy-up",
-   "chains": 459
+   "chains": 460
   },
   {
    "title": "Outfits",
-   "chains": 458
-  },
-  {
-   "title": "King Me",
-   "chains": 328
-  },
-  {
-   "title": "Mythic Storm King",
-   "chains": 326
-  },
-  {
-   "title": "Fortnite: Save the World",
-   "chains": 321
+   "chains": 459
   },
   {
    "title": "Sprays",
-   "chains": 316
+   "chains": 301
+  },
+  {
+   "title": "King Me",
+   "chains": 296
+  },
+  {
+   "title": "Mythic Storm King",
+   "chains": 294
+  },
+  {
+   "title": "Fortnite: Save the World",
+   "chains": 289
   },
   {
    "title": "High Stakes Challenges",
-   "chains": 283
+   "chains": 268
   },
   {
    "title": "Quests",
-   "chains": 282
+   "chains": 267
   },
   {
    "title": "Update v5.30",
@@ -517,56 +517,56 @@
    "chains": 199
   },
   {
+   "title": "Checkpoint Reload",
+   "chains": 174
+  },
+  {
    "title": "Lobby Music",
-   "chains": 168
+   "chains": 170
   },
   {
    "title": "Jam Tracks",
-   "chains": 168
+   "chains": 170
   },
   {
    "title": "Chug Splash",
-   "chains": 165
+   "chains": 169
   },
   {
    "title": "Characters (Battle Royale)",
-   "chains": 165
+   "chains": 169
   },
   {
    "title": "Storm Shield",
-   "chains": 160
+   "chains": 161
   },
   {
-   "title": "Checkpoint Reload",
+   "title": "Thunderbolt of Zeus",
    "chains": 156
   },
   {
+   "title": "Update v29.00",
+   "chains": 155
+  },
+  {
+   "title": "Mount Olympus",
+   "chains": 147
+  },
+  {
    "title": "Homebase",
-   "chains": 144
+   "chains": 145
   },
   {
    "title": "Fortnite Crew",
    "chains": 143
   },
   {
-   "title": "Music Pass",
+   "title": "Helios",
    "chains": 143
   },
   {
-   "title": "Volcano",
-   "chains": 140
-  },
-  {
-   "title": "Faint",
-   "chains": 136
-  },
-  {
-   "title": "Update v40.20",
-   "chains": 134
-  },
-  {
-   "title": "Pistols",
-   "chains": 133
+   "title": "Music Pass",
+   "chains": 143
   }
  ]
 }

@@ -12,7 +12,7 @@
   "unresolvable": 1
  },
  "hopStats": {
-  "mean": 4.26,
+  "mean": 4.27,
   "median": 4,
   "p90": 8,
   "max": 12
@@ -23,10 +23,10 @@
   "2": 73,
   "3": 58,
   "4": 63,
-  "5": 64,
+  "5": 62,
   "6": 51,
   "7": 119,
-  "8": 37,
+  "8": 39,
   "9": 22,
   "10": 6,
   "11": 12,
@@ -55,7 +55,7 @@
  },
  "concentration": {
   "top1Pct": 12.23,
-  "top3Pct": 31.14,
+  "top3Pct": 30.97,
   "top10Pct": 49.02,
   "cycleCount": 31,
   "entropyBits": 3.65
@@ -84,8 +84,8 @@
     "Spoilage",
     "Nutrients"
    ],
-   "basin": 133,
-   "pct": 11.38
+   "basin": 131,
+   "pct": 11.21
   },
   {
    "cycle": [
@@ -103,8 +103,8 @@
     "Assembling machine 1",
     "Assembling machine 2"
    ],
-   "basin": 78,
-   "pct": 6.67
+   "basin": 80,
+   "pct": 6.84
   },
   {
    "cycle": [
@@ -345,6 +345,10 @@
    "firstLinks": 12
   },
   {
+   "title": "Belt transport system",
+   "firstLinks": 12
+  },
+  {
    "title": "Fulgora",
    "firstLinks": 12
   },
@@ -362,10 +366,6 @@
   },
   {
    "title": "Module",
-   "firstLinks": 10
-  },
-  {
-   "title": "Belt transport system",
    "firstLinks": 10
   },
   {
@@ -398,10 +398,6 @@
   },
   {
    "title": "Construction robot",
-   "firstLinks": 6
-  },
-  {
-   "title": "Map generator",
    "firstLinks": 6
   },
   {
@@ -451,6 +447,10 @@
   {
    "title": "Logistic network",
    "firstLinks": 4
+  },
+  {
+   "title": "Modular armor",
+   "firstLinks": 4
   }
  ],
  "topThroughTraffic": [
@@ -464,19 +464,19 @@
   },
   {
    "title": "Nutrients",
-   "chains": 133
+   "chains": 131
   },
   {
    "title": "Spoilage",
-   "chains": 133
+   "chains": 131
   },
   {
    "title": "Agricultural tower",
-   "chains": 126
+   "chains": 124
   },
   {
    "title": "Yumako tree",
-   "chains": 123
+   "chains": 121
   },
   {
    "title": "Steel plate productivity (research)",
@@ -492,7 +492,7 @@
   },
   {
    "title": "Pollution",
-   "chains": 102
+   "chains": 100
   },
   {
    "title": "Inserter",
@@ -512,34 +512,34 @@
   },
   {
    "title": "Assembling machine 1",
-   "chains": 78
+   "chains": 80
   },
   {
    "title": "Assembling machine 2",
-   "chains": 78
+   "chains": 80
   },
   {
    "title": "Assembling machine 3",
-   "chains": 78
+   "chains": 80
+  },
+  {
+   "title": "Science pack",
+   "chains": 61
   },
   {
    "title": "Lab",
    "chains": 61
   },
   {
+   "title": "Space Age",
+   "chains": 60
+  },
+  {
    "title": "Lab research speed (research)",
    "chains": 59
   },
   {
-   "title": "Science pack",
-   "chains": 59
-  },
-  {
    "title": "Research",
-   "chains": 58
-  },
-  {
-   "title": "Space Age",
    "chains": 58
   },
   {
@@ -551,12 +551,12 @@
    "chains": 47
   },
   {
-   "title": "Map generator",
-   "chains": 47
-  },
-  {
    "title": "Space platform",
    "chains": 46
+  },
+  {
+   "title": "Map generator",
+   "chains": 45
   },
   {
    "title": "Enemies",

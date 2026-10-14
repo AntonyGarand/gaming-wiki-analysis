@@ -3,42 +3,42 @@
  "rank": "2",
  "nodes": 79761,
  "converge": {
-  "articles": 68055,
-  "pct": 85.32,
-  "deadEnd": 11706,
-  "deadEndPct": 14.68,
-  "noLinks": 2214,
-  "tooFewLinks": 6358,
+  "articles": 68660,
+  "pct": 86.08,
+  "deadEnd": 11101,
+  "deadEndPct": 13.92,
+  "noLinks": 1895,
+  "tooFewLinks": 6132,
   "unresolvable": 3
  },
  "hopStats": {
-  "mean": 6.5,
+  "mean": 6.49,
   "median": 5,
   "p90": 14,
   "max": 25
  },
  "histogram": {
-  "0": 1989,
-  "1": 6847,
-  "2": 8563,
-  "3": 7331,
-  "4": 6615,
-  "5": 5305,
-  "6": 5248,
-  "7": 4720,
-  "8": 3104,
-  "9": 2164,
-  "10": 2048,
-  "11": 2742,
-  "12": 2239,
-  "13": 1668,
-  "14": 878,
-  "15": 551,
-  "16": 942,
-  "17": 995,
+  "0": 1995,
+  "1": 6886,
+  "2": 8574,
+  "3": 7353,
+  "4": 6692,
+  "5": 5498,
+  "6": 5278,
+  "7": 4895,
+  "8": 3107,
+  "9": 2166,
+  "10": 2049,
+  "11": 2755,
+  "12": 2243,
+  "13": 1675,
+  "14": 889,
+  "15": 553,
+  "16": 943,
+  "17": 1001,
   "18": 633,
-  "19": 797,
-  "20": 1145,
+  "19": 796,
+  "20": 1148,
   "21": 755,
   "22": 417,
   "23": 194,
@@ -47,34 +47,34 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2217,
-   "1": 6358,
-   "2": 10238,
-   "3": 10053,
-   "4": 9430,
-   "5": 7603,
-   "6": 5676,
-   "7": 4245,
-   "8": 3578,
-   "9": 2896,
-   "10": 17467
+   "0": 1898,
+   "1": 6132,
+   "2": 10227,
+   "3": 10045,
+   "4": 9422,
+   "5": 7596,
+   "6": 5666,
+   "7": 4239,
+   "8": 3570,
+   "9": 2893,
+   "10": 18073
   },
   "atLeast": {
-   "1": 97.2,
-   "2": 89.2,
-   "3": 76.4,
-   "5": 52
+   "1": 97.6,
+   "2": 89.9,
+   "3": 77.1,
+   "5": 52.7
   }
  },
  "concentration": {
-  "top1Pct": 23.38,
-  "top3Pct": 50.28,
-  "top10Pct": 65.48,
-  "cycleCount": 970,
-  "entropyBits": 4.44
+  "top1Pct": 23.45,
+  "top3Pct": 50.39,
+  "top10Pct": 65.79,
+  "cycleCount": 973,
+  "entropyBits": 4.46
  },
- "components": 971,
- "cycleCount": 970,
+ "components": 974,
+ "cycleCount": 973,
  "largestCycle": {
   "members": [
    "Gielinor",
@@ -83,7 +83,7 @@
    "Jas"
   ],
   "size": 4,
-  "basin": 18647
+  "basin": 18705
  },
  "topAttractors": [
   {
@@ -93,16 +93,16 @@
     "Elder Gods",
     "Jas"
    ],
-   "basin": 18647,
-   "pct": 23.38
+   "basin": 18705,
+   "pct": 23.45
   },
   {
    "cycle": [
     "Paul Gower",
     "Ian Gower"
    ],
-   "basin": 16221,
-   "pct": 20.34
+   "basin": 16240,
+   "pct": 20.36
   },
   {
    "cycle": [
@@ -110,32 +110,32 @@
     "Hit chance",
     "Player versus monster"
    ],
-   "basin": 5234,
-   "pct": 6.56
+   "basin": 5248,
+   "pct": 6.58
   },
   {
    "cycle": [
     "Items",
     "Bank"
    ],
-   "basin": 3474,
-   "pct": 4.36
+   "basin": 3504,
+   "pct": 4.39
   },
   {
    "cycle": [
     "River Elid",
     "Elidinis"
    ],
-   "basin": 2866,
-   "pct": 3.59
+   "basin": 2877,
+   "pct": 3.61
   },
   {
    "cycle": [
     "Ores",
     "Rocks"
    ],
-   "basin": 1779,
-   "pct": 2.23
+   "basin": 1891,
+   "pct": 2.37
   },
   {
    "cycle": [
@@ -143,7 +143,7 @@
     "There's No Place Like Home...",
     "2026 Construction update"
    ],
-   "basin": 1103,
+   "basin": 1104,
    "pct": 1.38
   },
   {
@@ -192,6 +192,15 @@
   },
   {
    "cycle": [
+    "Excavation hotspots",
+    "Mattocks",
+    "Artefacts"
+   ],
+   "basin": 646,
+   "pct": 0.81
+  },
+  {
+   "cycle": [
     "Havenhythe",
     "2026 Hunter update"
    ],
@@ -203,7 +212,7 @@
     "Ranged",
     "Bows"
    ],
-   "basin": 581,
+   "basin": 582,
    "pct": 0.73
   },
   {
@@ -212,8 +221,8 @@
     "Summoning familiars",
     "Summoning pouches"
    ],
-   "basin": 576,
-   "pct": 0.72
+   "basin": 582,
+   "pct": 0.73
   },
   {
    "cycle": [
@@ -229,19 +238,10 @@
   },
   {
    "cycle": [
-    "Excavation hotspots",
-    "Mattocks",
-    "Artefacts"
-   ],
-   "basin": 462,
-   "pct": 0.58
-  },
-  {
-   "cycle": [
     "The Arc",
     "The Skull"
    ],
-   "basin": 335,
+   "basin": 336,
    "pct": 0.42
   },
   {
@@ -282,8 +282,14 @@
   },
   {
    "title": "Capes",
-   "chains": 154,
-   "pct": 0.19,
+   "chains": 158,
+   "pct": 0.2,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Item shards",
+   "chains": 90,
+   "pct": 0.11,
    "reason": "only 1 eligible links"
   },
   {
@@ -293,22 +299,10 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Squeal of Fortune/Promotions",
-   "chains": 67,
-   "pct": 0.08,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Skills achievements",
    "chains": 57,
    "pct": 0.07,
    "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Treasure Hunter/Promotions",
-   "chains": 55,
-   "pct": 0.07,
-   "reason": "no eligible links"
   },
   {
    "title": "Treasure Hunter Key",
@@ -351,6 +345,12 @@
    "chains": 14,
    "pct": 0.02,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Game Jam (October 2018)",
+   "chains": 13,
+   "pct": 0.02,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -369,11 +369,11 @@
   },
   {
    "title": "Treasure Hunter",
-   "firstLinks": 445
+   "firstLinks": 446
   },
   {
    "title": "Player-owned house",
-   "firstLinks": 423
+   "firstLinks": 424
   },
   {
    "title": "Player character",
@@ -479,123 +479,123 @@
  "topThroughTraffic": [
   {
    "title": "Gods",
-   "chains": 18647
+   "chains": 18705
   },
   {
    "title": "Gielinor",
-   "chains": 18647
+   "chains": 18705
   },
   {
    "title": "Elder Gods",
-   "chains": 18647
+   "chains": 18705
   },
   {
    "title": "Jas",
-   "chains": 18647
+   "chains": 18705
   },
   {
    "title": "Paul Gower",
-   "chains": 16221
+   "chains": 16240
   },
   {
    "title": "Ian Gower",
-   "chains": 16221
+   "chains": 16240
   },
   {
    "title": "Jagex",
-   "chains": 16176
+   "chains": 16195
   },
   {
    "title": "Membership subscription",
-   "chains": 15677
+   "chains": 15693
   },
   {
    "title": "Bond",
-   "chains": 15651
+   "chains": 15667
   },
   {
    "title": "RuneScape Mobile",
-   "chains": 11711
+   "chains": 11722
   },
   {
    "title": "Orb of oculus",
-   "chains": 11654
+   "chains": 11680
   },
   {
    "title": "Interface",
-   "chains": 11651
+   "chains": 11677
   },
   {
    "title": "Quests",
-   "chains": 11261
+   "chains": 11286
   },
   {
    "title": "Non-player character",
-   "chains": 6170
+   "chains": 6181
   },
   {
    "title": "Combat",
-   "chains": 5234
+   "chains": 5248
   },
   {
    "title": "Player versus monster",
-   "chains": 5234
+   "chains": 5248
   },
   {
    "title": "Hit chance",
-   "chains": 5234
+   "chains": 5248
   },
   {
    "title": "Shop",
-   "chains": 5157
+   "chains": 5166
   },
   {
    "title": "Coins",
-   "chains": 5145
+   "chains": 5154
   },
   {
    "title": "Charter ship",
-   "chains": 5029
+   "chains": 5038
   },
   {
    "title": "Port Sarim",
-   "chains": 5025
+   "chains": 5034
   },
   {
    "title": "Rimmington",
-   "chains": 4417
+   "chains": 4426
   },
   {
    "title": "Second Age",
-   "chains": 4059
+   "chains": 4098
   },
   {
    "title": "The Void",
-   "chains": 3798
+   "chains": 3804
   },
   {
    "title": "Experience",
-   "chains": 3795
+   "chains": 3802
   },
   {
    "title": "Zaros",
-   "chains": 3787
+   "chains": 3795
   },
   {
    "title": "Crafting Guild",
-   "chains": 3597
+   "chains": 3603
   },
   {
    "title": "Crafting",
-   "chains": 3538
+   "chains": 3544
   },
   {
    "title": "Items",
-   "chains": 3474
+   "chains": 3504
   },
   {
    "title": "Bank",
-   "chains": 3474
+   "chains": 3504
   }
  ]
 }

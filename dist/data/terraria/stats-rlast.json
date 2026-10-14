@@ -3,47 +3,47 @@
  "rank": "last",
  "nodes": 4337,
  "converge": {
-  "articles": 3945,
-  "pct": 90.96,
-  "deadEnd": 392,
-  "deadEndPct": 9.04,
-  "noLinks": 234,
+  "articles": 4062,
+  "pct": 93.66,
+  "deadEnd": 275,
+  "deadEndPct": 6.34,
+  "noLinks": 246,
   "tooFewLinks": 0,
-  "unresolvable": 22
+  "unresolvable": 23
  },
  "hopStats": {
-  "mean": 7.99,
-  "median": 5,
-  "p90": 18,
+  "mean": 8.08,
+  "median": 6,
+  "p90": 19,
   "max": 33
  },
  "histogram": {
-  "0": 356,
-  "1": 342,
-  "2": 336,
-  "3": 362,
-  "4": 363,
-  "5": 227,
-  "6": 156,
-  "7": 153,
-  "8": 127,
-  "9": 112,
-  "10": 117,
-  "11": 135,
-  "12": 134,
-  "13": 119,
-  "14": 151,
-  "15": 96,
+  "0": 358,
+  "1": 351,
+  "2": 340,
+  "3": 363,
+  "4": 362,
+  "5": 237,
+  "6": 163,
+  "7": 171,
+  "8": 133,
+  "9": 125,
+  "10": 121,
+  "11": 138,
+  "12": 135,
+  "13": 120,
+  "14": 146,
+  "15": 101,
   "16": 130,
-  "17": 90,
-  "18": 56,
-  "19": 60,
-  "20": 40,
-  "21": 25,
-  "22": 58,
-  "23": 66,
-  "24": 41,
-  "25": 24,
+  "17": 92,
+  "18": 58,
+  "19": 65,
+  "20": 56,
+  "21": 30,
+  "22": 61,
+  "23": 69,
+  "24": 43,
+  "25": 25,
   "26": 15,
   "27": 16,
   "28": 7,
@@ -55,34 +55,34 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 256,
-   "1": 155,
-   "2": 272,
-   "3": 274,
+   "0": 269,
+   "1": 144,
+   "2": 268,
+   "3": 276,
    "4": 289,
-   "5": 261,
-   "6": 241,
+   "5": 262,
+   "6": 242,
    "7": 237,
-   "8": 217,
-   "9": 204,
-   "10": 1931
+   "8": 214,
+   "9": 209,
+   "10": 1927
   },
   "atLeast": {
-   "1": 94.1,
+   "1": 93.8,
    "2": 90.5,
    "3": 84.3,
    "5": 71.3
   }
  },
  "concentration": {
-  "top1Pct": 53.06,
-  "top3Pct": 62.26,
-  "top10Pct": 72.28,
-  "cycleCount": 175,
-  "entropyBits": 3.39
+  "top1Pct": 55.29,
+  "top3Pct": 64.72,
+  "top10Pct": 74.91,
+  "cycleCount": 176,
+  "entropyBits": 3.35
  },
- "components": 176,
- "cycleCount": 175,
+ "components": 177,
+ "cycleCount": 176,
  "largestCycle": {
   "members": [
    "Re-Logic",
@@ -90,7 +90,7 @@
    "Bestiary"
   ],
   "size": 3,
-  "basin": 2301
+  "basin": 2398
  },
  "topAttractors": [
   {
@@ -99,24 +99,24 @@
     "Steampunker",
     "Bestiary"
    ],
-   "basin": 2301,
-   "pct": 53.06
+   "basin": 2398,
+   "pct": 55.29
   },
   {
    "cycle": [
     "Planter Boxes",
     "Seaweed"
    ],
-   "basin": 258,
-   "pct": 5.95
+   "basin": 266,
+   "pct": 6.13
   },
   {
    "cycle": [
     "Joja Cola",
     "Stardrop"
    ],
-   "basin": 141,
-   "pct": 3.25
+   "basin": 143,
+   "pct": 3.3
   },
   {
    "cycle": [
@@ -142,8 +142,8 @@
     "Deactivated Probe",
     "Master Mode"
    ],
-   "basin": 73,
-   "pct": 1.68
+   "basin": 76,
+   "pct": 1.75
   },
   {
    "cycle": [
@@ -166,8 +166,8 @@
     "Hallowed Bar",
     "Pwnhammer"
    ],
-   "basin": 45,
-   "pct": 1.04
+   "basin": 46,
+   "pct": 1.06
   },
   {
    "cycle": [
@@ -175,8 +175,8 @@
     "Mannequin",
     "Armor"
    ],
-   "basin": 42,
-   "pct": 0.97
+   "basin": 45,
+   "pct": 1.04
   },
   {
    "cycle": [
@@ -201,14 +201,6 @@
    ],
    "basin": 29,
    "pct": 0.67
-  },
-  {
-   "cycle": [
-    "Goblin Army",
-    "Tattered Cloth"
-   ],
-   "basin": 25,
-   "pct": 0.58
   },
   {
    "cycle": [
@@ -247,8 +239,8 @@
     "Dungeon Bricks",
     "Dungeon Brick Walls"
    ],
-   "basin": 19,
-   "pct": 0.44
+   "basin": 20,
+   "pct": 0.46
   },
   {
    "cycle": [
@@ -257,98 +249,106 @@
    ],
    "basin": 18,
    "pct": 0.42
+  },
+  {
+   "cycle": [
+    "Shadow Scale",
+    "Tissue Sample"
+   ],
+   "basin": 15,
+   "pct": 0.35
   }
  ],
  "deadEndTerminals": [
   {
-   "title": "Recipes/Hardmode Anvil/register",
-   "chains": 46,
-   "pct": 1.06,
+   "title": "Game platform",
+   "chains": 3,
+   "pct": 0.07,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Campfire/register",
-   "chains": 14,
-   "pct": 0.32,
+   "title": "Glow Mask IDs",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Bait/static",
+   "chains": 2,
+   "pct": 0.05,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Crystal Ball/register",
-   "chains": 8,
-   "pct": 0.18,
+   "title": "1.3.0.8",
+   "chains": 2,
+   "pct": 0.05,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Sky Mill/register",
-   "chains": 6,
-   "pct": 0.14,
+   "title": "Secret world seeds/row",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Recipes/Bone Welder/register",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Loom/register",
-   "chains": 6,
-   "pct": 0.14,
+   "title": "Crates/lootnote",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Paintings/painting",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Solidifier/register",
-   "chains": 6,
-   "pct": 0.14,
+   "title": "Bait/bait power row",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Honey Dispenser/register",
-   "chains": 5,
-   "pct": 0.12,
+   "title": "Yellow Horseshoe Balloon/Crafting tree",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Sawmill/register",
-   "chains": 5,
-   "pct": 0.12,
+   "title": "Furniture sets/row",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Toilets/resultcell",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Meat Grinder/register",
-   "chains": 5,
-   "pct": 0.12,
+   "title": "List of weapons/row",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Crafted walls",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Water/register",
-   "chains": 5,
-   "pct": 0.12,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Blend-O-Matic/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Flesh Cloning Vat/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Autohammer/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Decay Chamber/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Ice Machine/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
+   "title": "Flying enemies/list",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
   }
  ],
  "roadsToTopAttractor": [],
@@ -359,7 +359,7 @@
   },
   {
    "title": "Shimmer",
-   "firstLinks": 35
+   "firstLinks": 36
   },
   {
    "title": "Background walls",
@@ -412,10 +412,6 @@
   {
    "title": "Multiplayer",
    "firstLinks": 23
-  },
-  {
-   "title": "Modifiers",
-   "firstLinks": 21
   },
   {
    "title": "Traveling Merchant",
@@ -472,128 +468,132 @@
   {
    "title": "Bestiary",
    "firstLinks": 16
+  },
+  {
+   "title": "Liquids",
+   "firstLinks": 16
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Steampunker",
-   "chains": 2301
+   "chains": 2398
   },
   {
    "title": "Re-Logic",
-   "chains": 2301
+   "chains": 2398
   },
   {
    "title": "Bestiary",
-   "chains": 2301
+   "chains": 2398
   },
   {
    "title": "Bosses",
-   "chains": 1204
+   "chains": 1223
   },
   {
    "title": "NPC drops",
-   "chains": 675
+   "chains": 687
   },
   {
    "title": "Items",
-   "chains": 674
+   "chains": 686
   },
   {
    "title": "Map viewers",
-   "chains": 626
+   "chains": 638
   },
   {
    "title": "Item IDs",
-   "chains": 615
-  },
-  {
-   "title": "Weapon Rack",
-   "chains": 569
+   "chains": 627
   },
   {
    "title": "Moon Lord",
-   "chains": 565
+   "chains": 596
+  },
+  {
+   "title": "Weapon Rack",
+   "chains": 580
   },
   {
    "title": "Item Flask",
-   "chains": 563
-  },
-  {
-   "title": "Treasure Bag",
-   "chains": 540
+   "chains": 574
   },
   {
    "title": "The Horseman's Blade",
-   "chains": 538
+   "chains": 569
   },
   {
    "title": "Swords",
-   "chains": 537
-  },
-  {
-   "title": "Multiplayer",
-   "chains": 534
+   "chains": 568
   },
   {
    "title": "Bats",
-   "chains": 522
+   "chains": 553
   },
   {
    "title": "Ambient entities",
-   "chains": 521
+   "chains": 552
+  },
+  {
+   "title": "Treasure Bag",
+   "chains": 551
+  },
+  {
+   "title": "Multiplayer",
+   "chains": 545
   },
   {
    "title": "Difficulty",
-   "chains": 456
+   "chains": 467
   },
   {
    "title": "Server",
    "chains": 384
   },
   {
+   "title": "The Hallow",
+   "chains": 383
+  },
+  {
    "title": "World size",
    "chains": 380
   },
   {
-   "title": "The Hallow",
-   "chains": 356
+   "title": "Evil biomes",
+   "chains": 370
+  },
+  {
+   "title": "Graveyard",
+   "chains": 368
   },
   {
    "title": "Mechanical bosses",
-   "chains": 350
+   "chains": 356
   },
   {
    "title": "Coins",
    "chains": 348
   },
   {
-   "title": "Evil biomes",
-   "chains": 343
-  },
-  {
-   "title": "Graveyard",
-   "chains": 341
-  },
-  {
    "title": "Uzi",
-   "chains": 308
+   "chains": 314
   },
   {
    "title": "Angry Trapper",
-   "chains": 307
+   "chains": 313
   },
   {
    "title": "Clinger",
-   "chains": 305
+   "chains": 311
   },
   {
    "title": "Candelabras",
-   "chains": 304
+   "chains": 310
   },
   {
-   "title": "Death",
-   "chains": 271
+   "title": "Golfer",
+   "chains": 278
   }
  ]
 }

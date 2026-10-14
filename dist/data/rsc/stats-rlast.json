@@ -3,25 +3,25 @@
  "rank": "last",
  "nodes": 4225,
  "converge": {
-  "articles": 3756,
-  "pct": 88.9,
-  "deadEnd": 469,
-  "deadEndPct": 11.1,
-  "noLinks": 453,
+  "articles": 3880,
+  "pct": 91.83,
+  "deadEnd": 345,
+  "deadEndPct": 8.17,
+  "noLinks": 338,
   "tooFewLinks": 0,
   "unresolvable": 2
  },
  "hopStats": {
-  "mean": 9.2,
+  "mean": 8.96,
   "median": 6,
   "p90": 23,
   "max": 40
  },
  "histogram": {
-  "0": 289,
-  "1": 327,
-  "2": 292,
-  "3": 302,
+  "0": 291,
+  "1": 433,
+  "2": 298,
+  "3": 306,
   "4": 313,
   "5": 229,
   "6": 198,
@@ -29,8 +29,8 @@
   "8": 133,
   "9": 104,
   "10": 99,
-  "11": 115,
-  "12": 139,
+  "11": 116,
+  "12": 142,
   "13": 188,
   "14": 125,
   "15": 83,
@@ -44,7 +44,7 @@
   "23": 43,
   "24": 36,
   "25": 25,
-  "26": 27,
+  "26": 28,
   "27": 51,
   "28": 22,
   "29": 26,
@@ -54,7 +54,7 @@
   "33": 12,
   "34": 9,
   "35": 8,
-  "36": 9,
+  "36": 10,
   "37": 42,
   "38": 10,
   "39": 4,
@@ -62,9 +62,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 455,
+   "0": 340,
    "1": 109,
-   "2": 257,
+   "2": 258,
    "3": 354,
    "4": 401,
    "5": 388,
@@ -72,24 +72,24 @@
    "7": 310,
    "8": 252,
    "9": 230,
-   "10": 1083
+   "10": 1197
   },
   "atLeast": {
-   "1": 89.2,
-   "2": 86.7,
-   "3": 80.6,
-   "5": 62.7
+   "1": 92,
+   "2": 89.4,
+   "3": 83.3,
+   "5": 65.4
   }
  },
  "concentration": {
-  "top1Pct": 29.87,
-  "top3Pct": 55.62,
-  "top10Pct": 67.72,
-  "cycleCount": 140,
-  "entropyBits": 4.01
+  "top1Pct": 30.01,
+  "top3Pct": 55.79,
+  "top10Pct": 69.54,
+  "cycleCount": 141,
+  "entropyBits": 4.08
  },
- "components": 141,
- "cycleCount": 140,
+ "components": 142,
+ "cycleCount": 141,
  "largestCycle": {
   "members": [
    "Melee training",
@@ -98,7 +98,7 @@
    "Defense"
   ],
   "size": 4,
-  "basin": 1262
+  "basin": 1268
  },
  "topAttractors": [
   {
@@ -108,8 +108,8 @@
     "King Black Dragon",
     "Defense"
    ],
-   "basin": 1262,
-   "pct": 29.87
+   "basin": 1268,
+   "pct": 30.01
   },
   {
    "cycle": [
@@ -117,8 +117,8 @@
     "Veteran",
     "Jagex"
    ],
-   "basin": 881,
-   "pct": 20.85
+   "basin": 882,
+   "pct": 20.88
   },
   {
    "cycle": [
@@ -127,6 +127,14 @@
    ],
    "basin": 207,
    "pct": 4.9
+  },
+  {
+   "cycle": [
+    "The Miners' Tale",
+    "Boots, Gloves, And Caskets"
+   ],
+   "basin": 117,
+   "pct": 2.77
   },
   {
    "cycle": [
@@ -257,14 +265,6 @@
    ],
    "basin": 25,
    "pct": 0.59
-  },
-  {
-   "cycle": [
-    "Zanaris",
-    "Fairy queen"
-   ],
-   "basin": 22,
-   "pct": 0.52
   }
  ],
  "deadEndTerminals": [
@@ -275,46 +275,10 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Saga of the Antihero",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "God letters:Issue 19 - Guthix Embraces Change",
-   "chains": 3,
-   "pct": 0.07,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "God letters:Issue 12 - Guthix Manifests",
-   "chains": 3,
-   "pct": 0.07,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "God letters:Issue 7 - Unisex?",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "The Legend of Arrav - Part 2",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
    "title": "World map history",
    "chains": 2,
    "pct": 0.05,
    "reason": "redlink target"
-  },
-  {
-   "title": "RuneScape Classic Wiki",
-   "chains": 1,
-   "pct": 0.02,
-   "reason": "no eligible links"
   },
   {
    "title": "2005",
@@ -357,10 +321,50 @@
    "chains": 1,
    "pct": 0.02,
    "reason": "no eligible links"
+  },
+  {
+   "title": "6 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "7 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "8 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "9 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "10 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "11 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
+  {
+   "title": "The Miners' Tale",
+   "firstLinks": 107
+  },
   {
    "title": "Experience",
    "firstLinks": 105
@@ -462,6 +466,10 @@
    "firstLinks": 15
   },
   {
+   "title": "Jagex",
+   "firstLinks": 15
+  },
+  {
    "title": "Prayer",
    "firstLinks": 14
   },
@@ -470,54 +478,46 @@
    "firstLinks": 14
   },
   {
-   "title": "Jagex",
-   "firstLinks": 14
-  },
-  {
    "title": "Trade",
    "firstLinks": 14
-  },
-  {
-   "title": "Fletching",
-   "firstLinks": 13
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Defense",
-   "chains": 1262
+   "chains": 1268
   },
   {
    "title": "King Black Dragon",
-   "chains": 1262
+   "chains": 1268
   },
   {
    "title": "Melee training",
-   "chains": 1262
+   "chains": 1268
   },
   {
    "title": "Bestiary",
-   "chains": 1262
+   "chains": 1268
   },
   {
    "title": "Hits",
-   "chains": 1176
+   "chains": 1182
   },
   {
    "title": "Experience",
-   "chains": 1125
+   "chains": 1131
   },
   {
    "title": "Jagex",
-   "chains": 881
+   "chains": 882
   },
   {
    "title": "RuneScape Classic",
-   "chains": 881
+   "chains": 882
   },
   {
    "title": "Veteran",
-   "chains": 881
+   "chains": 882
   },
   {
    "title": "Silverlight",
@@ -533,51 +533,51 @@
   },
   {
    "title": "The knight's sword",
-   "chains": 590
+   "chains": 592
   },
   {
    "title": "Asgarnian Ice Dungeon",
-   "chains": 588
+   "chains": 590
   },
   {
    "title": "Asgarnian southern peninsula",
-   "chains": 587
+   "chains": 589
   },
   {
    "title": "Fishing Trawler",
-   "chains": 579
+   "chains": 581
   },
   {
    "title": "Rope",
-   "chains": 563
+   "chains": 565
   },
   {
    "title": "Lady Keli",
-   "chains": 555
+   "chains": 557
   },
   {
    "title": "Beads of the dead",
-   "chains": 547
+   "chains": 549
   },
   {
    "title": "Yanni",
-   "chains": 542
+   "chains": 544
   },
   {
    "title": "Shilo village",
-   "chains": 541
+   "chains": 543
   },
   {
    "title": "Uncut sapphire",
-   "chains": 525
+   "chains": 527
   },
   {
    "title": "Telescope",
-   "chains": 524
+   "chains": 526
   },
   {
    "title": "Observatory quest",
-   "chains": 523
+   "chains": 525
   },
   {
    "title": "Oziach",
@@ -597,11 +597,11 @@
   },
   {
    "title": "Observatory dungeon",
-   "chains": 471
+   "chains": 473
   },
   {
    "title": "Cure poison Potion",
-   "chains": 467
+   "chains": 469
   }
  ]
 }

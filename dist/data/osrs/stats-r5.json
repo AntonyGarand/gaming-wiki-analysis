@@ -3,40 +3,40 @@
  "rank": "5",
  "nodes": 36164,
  "converge": {
-  "articles": 16974,
-  "pct": 46.94,
-  "deadEnd": 19190,
-  "deadEndPct": 53.06,
-  "noLinks": 539,
-  "tooFewLinks": 12507,
-  "unresolvable": 2
+  "articles": 17021,
+  "pct": 47.07,
+  "deadEnd": 19143,
+  "deadEndPct": 52.93,
+  "noLinks": 439,
+  "tooFewLinks": 12490,
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 8.09,
+  "mean": 8.07,
   "median": 7,
   "p90": 16,
   "max": 27
  },
  "histogram": {
-  "0": 754,
-  "1": 1151,
-  "2": 844,
-  "3": 695,
-  "4": 817,
-  "5": 1411,
-  "6": 1646,
-  "7": 1755,
-  "8": 1330,
-  "9": 934,
-  "10": 902,
-  "11": 683,
-  "12": 554,
-  "13": 643,
-  "14": 472,
-  "15": 457,
-  "16": 412,
-  "17": 452,
-  "18": 277,
+  "0": 758,
+  "1": 1166,
+  "2": 848,
+  "3": 712,
+  "4": 818,
+  "5": 1422,
+  "6": 1637,
+  "7": 1751,
+  "8": 1335,
+  "9": 935,
+  "10": 912,
+  "11": 681,
+  "12": 552,
+  "13": 638,
+  "14": 473,
+  "15": 454,
+  "16": 413,
+  "17": 444,
+  "18": 287,
   "19": 190,
   "20": 129,
   "21": 180,
@@ -49,34 +49,34 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 541,
-   "1": 1323,
-   "2": 2986,
-   "3": 4695,
-   "4": 3503,
-   "5": 3373,
-   "6": 2722,
-   "7": 2275,
-   "8": 1843,
-   "9": 1604,
-   "10": 11299
+   "0": 440,
+   "1": 1317,
+   "2": 2978,
+   "3": 4691,
+   "4": 3504,
+   "5": 3365,
+   "6": 2717,
+   "7": 2267,
+   "8": 1834,
+   "9": 1584,
+   "10": 11467
   },
   "atLeast": {
-   "1": 98.5,
-   "2": 94.8,
-   "3": 86.6,
-   "5": 63.9
+   "1": 98.8,
+   "2": 95.1,
+   "3": 86.9,
+   "5": 64.2
   }
  },
  "concentration": {
-  "top1Pct": 12.19,
-  "top3Pct": 27.83,
-  "top10Pct": 38.58,
-  "cycleCount": 349,
-  "entropyBits": 4.13
+  "top1Pct": 12.21,
+  "top3Pct": 27.81,
+  "top10Pct": 38.61,
+  "cycleCount": 351,
+  "entropyBits": 4.14
  },
- "components": 350,
- "cycleCount": 349,
+ "components": 352,
+ "cycleCount": 351,
  "largestCycle": {
   "members": [
    "Boy",
@@ -84,7 +84,7 @@
    "Nora T. Hagg"
   ],
   "size": 3,
-  "basin": 4410
+  "basin": 4414
  },
  "topAttractors": [
   {
@@ -93,8 +93,8 @@
     "Witch's house (location)",
     "Nora T. Hagg"
    ],
-   "basin": 4410,
-   "pct": 12.19
+   "basin": 4414,
+   "pct": 12.21
   },
   {
    "cycle": [
@@ -104,7 +104,7 @@
     "Elidinis' ward (f)",
     "Arcane spirit shield"
    ],
-   "basin": 2828,
+   "basin": 2829,
    "pct": 7.82
   },
   {
@@ -113,8 +113,8 @@
     "Bones",
     "Sacred Bone Burner"
    ],
-   "basin": 2826,
-   "pct": 7.81
+   "basin": 2814,
+   "pct": 7.78
   },
   {
    "cycle": [
@@ -123,15 +123,15 @@
     "Worn Equipment",
     "Crystal bow"
    ],
-   "basin": 1183,
-   "pct": 3.27
+   "basin": 1201,
+   "pct": 3.32
   },
   {
    "cycle": [
     "Ectofuntus",
     "Bucket of slime"
    ],
-   "basin": 1037,
+   "basin": 1038,
    "pct": 2.87
   },
   {
@@ -139,7 +139,7 @@
     "Port Khazard",
     "Fishing Trawler"
    ],
-   "basin": 642,
+   "basin": 644,
    "pct": 1.78
   },
   {
@@ -147,8 +147,8 @@
     "Dragon equipment",
     "Orikalkum"
    ],
-   "basin": 406,
-   "pct": 1.12
+   "basin": 407,
+   "pct": 1.13
   },
   {
    "cycle": [
@@ -174,8 +174,8 @@
     "Rometti",
     "Gnome Restaurant"
    ],
-   "basin": 198,
-   "pct": 0.55
+   "basin": 194,
+   "pct": 0.54
   },
   {
    "cycle": [
@@ -197,20 +197,20 @@
   },
   {
    "cycle": [
+    "Blue gold-trimmed wizard robes",
+    "Black gold-trimmed wizard robes"
+   ],
+   "basin": 140,
+   "pct": 0.39
+  },
+  {
+   "cycle": [
     "Miscellania",
     "Etceteria",
     "Queen Sigrid"
    ],
    "basin": 125,
    "pct": 0.35
-  },
-  {
-   "cycle": [
-    "Blue gold-trimmed wizard robes",
-    "Black gold-trimmed wizard robes"
-   ],
-   "basin": 115,
-   "pct": 0.32
   },
   {
    "cycle": [
@@ -225,8 +225,8 @@
     "Leech",
     "Laguna Aurorae"
    ],
-   "basin": 101,
-   "pct": 0.28
+   "basin": 99,
+   "pct": 0.27
   },
   {
    "cycle": [
@@ -242,8 +242,8 @@
     "Fairytale II - Cure a Queen",
     "Martin the Master Gardener"
    ],
-   "basin": 82,
-   "pct": 0.23
+   "basin": 81,
+   "pct": 0.22
   },
   {
    "cycle": [
@@ -265,13 +265,13 @@
  "deadEndTerminals": [
   {
    "title": "Icon",
-   "chains": 2247,
-   "pct": 6.21,
+   "chains": 2250,
+   "pct": 6.22,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Guide Prices",
-   "chains": 221,
+   "chains": 220,
    "pct": 0.61,
    "reason": "only 4 eligible links"
   },
@@ -301,8 +301,8 @@
   },
   {
    "title": "Wilderness Statistics",
-   "chains": 82,
-   "pct": 0.23,
+   "chains": 80,
+   "pct": 0.22,
    "reason": "only 1 eligible links"
   },
   {
@@ -348,10 +348,10 @@
    "reason": "only 4 eligible links"
   },
   {
-   "title": "Hunter creatures",
-   "chains": 37,
-   "pct": 0.1,
-   "reason": "only 1 eligible links"
+   "title": "Feet slot table",
+   "chains": 39,
+   "pct": 0.11,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -366,7 +366,7 @@
   },
   {
    "title": "Construction",
-   "firstLinks": 219
+   "firstLinks": 220
   },
   {
    "title": "Defence",
@@ -374,7 +374,7 @@
   },
   {
    "title": "Player-owned house",
-   "firstLinks": 169
+   "firstLinks": 168
   },
   {
    "title": "Smithing",
@@ -390,7 +390,7 @@
   },
   {
    "title": "Hitpoints",
-   "firstLinks": 127
+   "firstLinks": 129
   },
   {
    "title": "Crew Management",
@@ -398,27 +398,27 @@
   },
   {
    "title": "Crafting",
-   "firstLinks": 110
-  },
-  {
-   "title": "Prayer",
-   "firstLinks": 98
+   "firstLinks": 109
   },
   {
    "title": "Ranged",
    "firstLinks": 97
   },
   {
+   "title": "Prayer",
+   "firstLinks": 96
+  },
+  {
    "title": "Hammer",
    "firstLinks": 92
   },
   {
-   "title": "Attack",
+   "title": "Sailing",
    "firstLinks": 90
   },
   {
-   "title": "Sailing",
-   "firstLinks": 90
+   "title": "Attack",
+   "firstLinks": 89
   },
   {
    "title": "Thieving",
@@ -442,15 +442,19 @@
   },
   {
    "title": "Wilderness",
-   "firstLinks": 71
+   "firstLinks": 70
   },
   {
    "title": "Strength",
-   "firstLinks": 69
+   "firstLinks": 67
   },
   {
    "title": "Agility",
-   "firstLinks": 67
+   "firstLinks": 66
+  },
+  {
+   "title": "Varrock",
+   "firstLinks": 61
   },
   {
    "title": "Unrestricted world",
@@ -466,11 +470,7 @@
   },
   {
    "title": "Gielinor",
-   "firstLinks": 58
-  },
-  {
-   "title": "Varrock",
-   "firstLinks": 57
+   "firstLinks": 56
   },
   {
    "title": "Minigames",
@@ -480,123 +480,123 @@
  "topThroughTraffic": [
   {
    "title": "Nora T. Hagg",
-   "chains": 4410
+   "chains": 4414
   },
   {
    "title": "Boy",
-   "chains": 4410
+   "chains": 4414
   },
   {
    "title": "Witch's house (location)",
-   "chains": 4410
+   "chains": 4414
   },
   {
    "title": "Witch's House",
-   "chains": 4403
+   "chains": 4407
   },
   {
    "title": "Items",
-   "chains": 4401
+   "chains": 4405
   },
   {
    "title": "Energy",
-   "chains": 4392
+   "chains": 4396
   },
   {
    "title": "Quests",
-   "chains": 4091
+   "chains": 4096
   },
   {
    "title": "Corporeal Beast",
-   "chains": 2828
+   "chains": 2829
   },
   {
    "title": "Arcane spirit shield",
-   "chains": 2828
+   "chains": 2829
   },
   {
    "title": "Arcane sigil",
-   "chains": 2828
+   "chains": 2829
   },
   {
    "title": "Holy elixir",
-   "chains": 2828
+   "chains": 2829
   },
   {
    "title": "Elidinis' ward (f)",
-   "chains": 2828
+   "chains": 2829
   },
   {
    "title": "Bones",
-   "chains": 2826
+   "chains": 2814
   },
   {
    "title": "Remains",
-   "chains": 2826
+   "chains": 2814
   },
   {
    "title": "Sacred Bone Burner",
-   "chains": 2826
+   "chains": 2814
   },
   {
    "title": "Games necklace",
-   "chains": 2782
+   "chains": 2783
   },
   {
    "title": "Prayer",
-   "chains": 2754
+   "chains": 2742
   },
   {
    "title": "Corporeal Beast's Lair",
-   "chains": 2625
+   "chains": 2626
   },
   {
    "title": "Wilderness",
-   "chains": 2624
+   "chains": 2625
   },
   {
    "title": "Phials",
-   "chains": 2522
+   "chains": 2511
   },
   {
    "title": "Rimmington",
-   "chains": 2518
+   "chains": 2507
   },
   {
    "title": "Icon",
-   "chains": 2247
+   "chains": 2250
   },
   {
    "title": "Furnace",
-   "chains": 1831
-  },
-  {
-   "title": "Crafting",
-   "chains": 1776
+   "chains": 1835
   },
   {
    "title": "Random events",
-   "chains": 1773
+   "chains": 1774
+  },
+  {
+   "title": "Crafting",
+   "chains": 1770
   },
   {
    "title": "Experience",
-   "chains": 1589
+   "chains": 1590
   },
   {
    "title": "Dramen staff",
-   "chains": 1552
+   "chains": 1547
   },
   {
    "title": "Fairy ring",
-   "chains": 1545
+   "chains": 1540
   },
   {
    "title": "Co-ordinator",
-   "chains": 1406
+   "chains": 1403
   },
   {
    "title": "Fairy (race)",
-   "chains": 1405
+   "chains": 1402
   }
  ]
 }

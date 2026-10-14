@@ -3,31 +3,31 @@
  "rank": "2",
  "nodes": 4225,
  "converge": {
-  "articles": 3648,
-  "pct": 86.34,
-  "deadEnd": 577,
-  "deadEndPct": 13.66,
-  "noLinks": 453,
+  "articles": 3765,
+  "pct": 89.11,
+  "deadEnd": 460,
+  "deadEndPct": 10.89,
+  "noLinks": 338,
   "tooFewLinks": 109,
   "unresolvable": 2
  },
  "hopStats": {
-  "mean": 4.9,
-  "median": 4,
+  "mean": 4.82,
+  "median": 3,
   "p90": 11,
   "max": 19
  },
  "histogram": {
   "0": 145,
-  "1": 607,
-  "2": 623,
-  "3": 412,
-  "4": 255,
+  "1": 618,
+  "2": 723,
+  "3": 413,
+  "4": 256,
   "5": 209,
   "6": 318,
   "7": 278,
   "8": 170,
-  "9": 114,
+  "9": 118,
   "10": 106,
   "11": 97,
   "12": 70,
@@ -41,9 +41,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 455,
+   "0": 340,
    "1": 109,
-   "2": 257,
+   "2": 258,
    "3": 354,
    "4": 401,
    "5": 388,
@@ -51,21 +51,21 @@
    "7": 310,
    "8": 252,
    "9": 230,
-   "10": 1083
+   "10": 1197
   },
   "atLeast": {
-   "1": 89.2,
-   "2": 86.7,
-   "3": 80.6,
-   "5": 62.7
+   "1": 92,
+   "2": 89.4,
+   "3": 83.3,
+   "5": 65.4
   }
  },
  "concentration": {
-  "top1Pct": 26.3,
-  "top3Pct": 51.5,
-  "top10Pct": 70.96,
+  "top1Pct": 26.39,
+  "top3Pct": 54.22,
+  "top10Pct": 73.7,
   "cycleCount": 67,
-  "entropyBits": 3.73
+  "entropyBits": 3.71
  },
  "components": 68,
  "cycleCount": 67,
@@ -76,7 +76,7 @@
    "East Ardougne"
   ],
   "size": 3,
-  "basin": 1111
+  "basin": 1115
  },
  "topAttractors": [
   {
@@ -85,8 +85,8 @@
     "Ardougne",
     "East Ardougne"
    ],
-   "basin": 1111,
-   "pct": 26.3
+   "basin": 1115,
+   "pct": 26.39
   },
   {
    "cycle": [
@@ -106,8 +106,8 @@
     "Ian Gower",
     "Jagex"
    ],
-   "basin": 357,
-   "pct": 8.45
+   "basin": 468,
+   "pct": 11.08
   },
   {
    "cycle": [
@@ -115,8 +115,8 @@
     "Legend's Quest",
     "Legends' Guild"
    ],
-   "basin": 227,
-   "pct": 5.37
+   "basin": 228,
+   "pct": 5.4
   },
   {
    "cycle": [
@@ -213,8 +213,8 @@
     "Baxtorian Falls",
     "Waterfall quest"
    ],
-   "basin": 35,
-   "pct": 0.83
+   "basin": 36,
+   "pct": 0.85
   },
   {
    "cycle": [
@@ -281,18 +281,6 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "God letters:Issue 1 - Saradomin Speaks",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Boots, Gloves, And Caskets",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Post-closure years",
    "chains": 2,
    "pct": 0.05,
@@ -303,12 +291,6 @@
    "chains": 2,
    "pct": 0.05,
    "reason": "only 1 eligible links"
-  },
-  {
-   "title": "RuneScape Classic Wiki",
-   "chains": 1,
-   "pct": 0.02,
-   "reason": "no eligible links"
   },
   {
    "title": "Skull",
@@ -339,10 +321,32 @@
    "chains": 1,
    "pct": 0.02,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "F1",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Unknown",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "15 August",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
+  {
+   "title": "Bestiary (Library of Varrock)",
+   "firstLinks": 99
+  },
   {
    "title": "RuneScape Classic",
    "firstLinks": 71
@@ -360,11 +364,11 @@
    "firstLinks": 50
   },
   {
-   "title": "Cooking",
-   "firstLinks": 43
+   "title": "Quests",
+   "firstLinks": 44
   },
   {
-   "title": "Quests",
+   "title": "Cooking",
    "firstLinks": 43
   },
   {
@@ -405,6 +409,10 @@
   },
   {
    "title": "Lumbridge",
+   "firstLinks": 25
+  },
+  {
+   "title": "Jagex",
    "firstLinks": 25
   },
   {
@@ -454,36 +462,28 @@
   {
    "title": "Fishing",
    "firstLinks": 19
-  },
-  {
-   "title": "Mining",
-   "firstLinks": 19
-  },
-  {
-   "title": "Yanille",
-   "firstLinks": 19
   }
  ],
  "topThroughTraffic": [
   {
    "title": "East Ardougne",
-   "chains": 1111
+   "chains": 1115
   },
   {
    "title": "Ardougne",
-   "chains": 1111
+   "chains": 1115
   },
   {
    "title": "Kandarin",
-   "chains": 1111
+   "chains": 1115
   },
   {
    "title": "RuneScape",
-   "chains": 952
+   "chains": 956
   },
   {
    "title": "Monster",
-   "chains": 816
+   "chains": 820
   },
   {
    "title": "Plate Mail Bodies",
@@ -518,6 +518,34 @@
    "chains": 489
   },
   {
+   "title": "Jagex",
+   "chains": 468
+  },
+  {
+   "title": "RuneScape Classic",
+   "chains": 468
+  },
+  {
+   "title": "DeviousMUD",
+   "chains": 468
+  },
+  {
+   "title": "Andrew Gower",
+   "chains": 468
+  },
+  {
+   "title": "Ian Gower",
+   "chains": 468
+  },
+  {
+   "title": "Paul Gower",
+   "chains": 468
+  },
+  {
+   "title": "Castle GamesDomain",
+   "chains": 468
+  },
+  {
    "title": "Clay",
    "chains": 425
   },
@@ -530,34 +558,6 @@
    "chains": 420
   },
   {
-   "title": "Jagex",
-   "chains": 357
-  },
-  {
-   "title": "RuneScape Classic",
-   "chains": 357
-  },
-  {
-   "title": "DeviousMUD",
-   "chains": 357
-  },
-  {
-   "title": "Andrew Gower",
-   "chains": 357
-  },
-  {
-   "title": "Ian Gower",
-   "chains": 357
-  },
-  {
-   "title": "Paul Gower",
-   "chains": 357
-  },
-  {
-   "title": "Castle GamesDomain",
-   "chains": 357
-  },
-  {
    "title": "Combat",
    "chains": 331
   },
@@ -567,15 +567,15 @@
   },
   {
    "title": "Legends' Guild",
-   "chains": 227
+   "chains": 228
   },
   {
    "title": "Legend's Quest",
-   "chains": 227
+   "chains": 228
   },
   {
    "title": "Quest Points",
-   "chains": 227
+   "chains": 228
   },
   {
    "title": "Skills",

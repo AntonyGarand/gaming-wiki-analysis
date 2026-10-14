@@ -261,16 +261,16 @@
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Fists",
+   "title": "Status effects",
    "chains": 7,
    "pct": 0.55,
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Controls",
-   "chains": 6,
-   "pct": 0.47,
-   "reason": "only 1 eligible links"
+   "title": "Fists",
+   "chains": 7,
+   "pct": 0.55,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Gull",
@@ -292,12 +292,6 @@
   },
   {
    "title": "Sneaking (skill)",
-   "chains": 3,
-   "pct": 0.23,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Status effects",
    "chains": 3,
    "pct": 0.23,
    "reason": "only 2 eligible links"
@@ -325,6 +319,12 @@
    "chains": 2,
    "pct": 0.16,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Barrel",
+   "chains": 2,
+   "pct": 0.16,
+   "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],

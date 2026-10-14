@@ -1,11 +1,11 @@
 {
  "wiki": "gta",
- "generatedAt": "2026-10-14T04:05:17.605Z",
+ "generatedAt": "2026-10-14T13:50:22.608Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 92.64,
-   "deadEndPct": 7.36,
+   "convergePct": 92.65,
+   "deadEndPct": 7.35,
    "components": 391,
    "cycleCount": 390,
    "meanHops": 3.48,
@@ -15,9 +15,9 @@
     "Protagonist",
     "GTA Online Protagonist"
    ],
-   "topAttractorPct": 27.83,
+   "topAttractorPct": 27.84,
    "top3Pct": 56.76,
-   "eligiblePct": 95.6
+   "eligiblePct": 95.7
   },
   {
    "rank": "2",
@@ -73,8 +73,8 @@
   },
   {
    "rank": "last",
-   "convergePct": 86.7,
-   "deadEndPct": 13.3,
+   "convergePct": 86.71,
+   "deadEndPct": 13.29,
    "components": 627,
    "cycleCount": 626,
    "meanHops": 5.18,
@@ -102,7 +102,7 @@
     "Zombotech Corporation"
    ],
    "topAttractorPct": 24.77,
-   "top3Pct": 59.21,
+   "top3Pct": 59.2,
    "eligiblePct": 100
   }
  ]

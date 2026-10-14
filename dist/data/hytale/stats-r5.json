@@ -3,16 +3,16 @@
  "rank": "5",
  "nodes": 4498,
  "converge": {
-  "articles": 431,
-  "pct": 9.58,
-  "deadEnd": 4067,
-  "deadEndPct": 90.42,
+  "articles": 429,
+  "pct": 9.54,
+  "deadEnd": 4069,
+  "deadEndPct": 90.46,
   "noLinks": 63,
-  "tooFewLinks": 3218,
+  "tooFewLinks": 3219,
   "unresolvable": 0
  },
  "hopStats": {
-  "mean": 3.97,
+  "mean": 3.94,
   "median": 3,
   "p90": 10,
   "max": 13
@@ -27,8 +27,8 @@
   "6": 29,
   "7": 21,
   "8": 13,
-  "9": 16,
-  "10": 6,
+  "9": 15,
+  "10": 5,
   "11": 36,
   "12": 1,
   "13": 1
@@ -36,28 +36,28 @@
  "eligibleLinks": {
   "histogram": {
    "0": 63,
-   "1": 251,
-   "2": 1430,
-   "3": 1046,
+   "1": 252,
+   "2": 1429,
+   "3": 1047,
    "4": 491,
-   "5": 316,
-   "6": 229,
+   "5": 317,
+   "6": 228,
    "7": 130,
    "8": 102,
-   "9": 107,
-   "10": 333
+   "9": 108,
+   "10": 331
   },
   "atLeast": {
    "1": 98.6,
    "2": 93,
    "3": 61.2,
-   "5": 27.1
+   "5": 27
   }
  },
  "concentration": {
   "top1Pct": 3.4,
-  "top3Pct": 7.96,
-  "top10Pct": 9.4,
+  "top3Pct": 7.91,
+  "top10Pct": 9.36,
   "cycleCount": 14,
   "entropyBits": 2.39
  },
@@ -87,8 +87,8 @@
     "Small Treasure Pile",
     "Large Treasure Pile"
    ],
-   "basin": 127,
-   "pct": 2.82
+   "basin": 125,
+   "pct": 2.78
   },
   {
    "cycle": [
@@ -196,8 +196,8 @@
   },
   {
    "title": "Chest",
-   "chains": 108,
-   "pct": 2.4,
+   "chains": 107,
+   "pct": 2.38,
    "reason": "only 3 eligible links"
   },
   {
@@ -351,7 +351,7 @@
   },
   {
    "title": "NPC",
-   "firstLinks": 13
+   "firstLinks": 12
   },
   {
    "title": "Chef's Stove",
@@ -394,12 +394,12 @@
    "firstLinks": 6
   },
   {
-   "title": "Furnace",
+   "title": "Badlands",
    "firstLinks": 6
   },
   {
-   "title": "Badlands",
-   "firstLinks": 6
+   "title": "Void",
+   "firstLinks": 5
   }
  ],
  "topThroughTraffic": [
@@ -429,23 +429,23 @@
   },
   {
    "title": "Small Treasure Pile",
-   "chains": 127
-  },
-  {
-   "title": "Large Treasure Pile",
-   "chains": 127
-  },
-  {
-   "title": "Dungeon",
    "chains": 125
   },
   {
+   "title": "Large Treasure Pile",
+   "chains": 125
+  },
+  {
+   "title": "Dungeon",
+   "chains": 123
+  },
+  {
    "title": "Hytale",
-   "chains": 124
+   "chains": 122
   },
   {
    "title": "Chest",
-   "chains": 108
+   "chains": 107
   },
   {
    "title": "Kweebec",
@@ -457,23 +457,23 @@
   },
   {
    "title": "Hypixel Studios",
-   "chains": 77
-  },
-  {
-   "title": "Hypixel Inc.",
    "chains": 75
   },
   {
-   "title": "Developers",
+   "title": "Hypixel Inc.",
    "chains": 73
   },
   {
+   "title": "Developers",
+   "chains": 71
+  },
+  {
    "title": "Creative Mode",
-   "chains": 70
+   "chains": 68
   },
   {
    "title": "Exploration Mode",
-   "chains": 64
+   "chains": 62
   },
   {
    "title": "Builder's Workbench",
@@ -481,7 +481,7 @@
   },
   {
    "title": "NPC",
-   "chains": 56
+   "chains": 54
   },
   {
    "title": "Shadoweave Scraps",

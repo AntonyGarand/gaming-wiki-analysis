@@ -1,6 +1,6 @@
 {
  "wiki": "factorio",
- "generatedAt": "2026-10-14T04:05:46.667Z",
+ "generatedAt": "2026-10-14T14:03:23.728Z",
  "ranks": [
   {
    "rank": "strict1",
@@ -96,7 +96,7 @@
    "deadEndPct": 42.09,
    "components": 32,
    "cycleCount": 31,
-   "meanHops": 4.26,
+   "meanHops": 4.27,
    "medianHops": 4,
    "maxHops": 12,
    "topAttractor": [
@@ -104,7 +104,7 @@
     "Iron plate"
    ],
    "topAttractorPct": 12.23,
-   "top3Pct": 31.14,
+   "top3Pct": 30.97,
    "eligiblePct": 100
   }
  ]

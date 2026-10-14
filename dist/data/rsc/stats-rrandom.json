@@ -3,44 +3,44 @@
  "rank": "random",
  "nodes": 4225,
  "converge": {
-  "articles": 3759,
-  "pct": 88.97,
-  "deadEnd": 466,
-  "deadEndPct": 11.03,
-  "noLinks": 453,
+  "articles": 3879,
+  "pct": 91.81,
+  "deadEnd": 346,
+  "deadEndPct": 8.19,
+  "noLinks": 338,
   "tooFewLinks": 0,
   "unresolvable": 2
  },
  "hopStats": {
-  "mean": 6.75,
-  "median": 4,
-  "p90": 17,
+  "mean": 7.13,
+  "median": 5,
+  "p90": 19,
   "max": 33
  },
  "histogram": {
-  "0": 219,
-  "1": 432,
-  "2": 413,
-  "3": 450,
+  "0": 217,
+  "1": 430,
+  "2": 411,
+  "3": 449,
   "4": 374,
   "5": 366,
   "6": 228,
   "7": 199,
-  "8": 146,
-  "9": 69,
-  "10": 75,
-  "11": 88,
-  "12": 74,
+  "8": 150,
+  "9": 70,
+  "10": 78,
+  "11": 94,
+  "12": 75,
   "13": 53,
-  "14": 62,
+  "14": 63,
   "15": 41,
-  "16": 60,
-  "17": 75,
-  "18": 40,
-  "19": 30,
-  "20": 21,
-  "21": 28,
-  "22": 47,
+  "16": 61,
+  "17": 78,
+  "18": 44,
+  "19": 104,
+  "20": 42,
+  "21": 34,
+  "22": 49,
   "23": 21,
   "24": 16,
   "25": 28,
@@ -55,9 +55,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 455,
+   "0": 340,
    "1": 109,
-   "2": 257,
+   "2": 258,
    "3": 354,
    "4": 401,
    "5": 388,
@@ -65,28 +65,26 @@
    "7": 310,
    "8": 252,
    "9": 230,
-   "10": 1083
+   "10": 1197
   },
   "atLeast": {
-   "1": 89.2,
-   "2": 86.7,
-   "3": 80.6,
-   "5": 62.7
+   "1": 92,
+   "2": 89.4,
+   "3": 83.3,
+   "5": 65.4
   }
  },
  "concentration": {
-  "top1Pct": 50.93,
-  "top3Pct": 60.62,
-  "top10Pct": 75.81,
-  "cycleCount": 84,
-  "entropyBits": 3.05
+  "top1Pct": 53.92,
+  "top3Pct": 63.6,
+  "top10Pct": 78.82,
+  "cycleCount": 83,
+  "entropyBits": 2.97
  },
- "components": 85,
- "cycleCount": 84,
+ "components": 84,
+ "cycleCount": 83,
  "largestCycle": {
   "members": [
-   "Combat",
-   "Aggressiveness",
    "Combat level",
    "Ranged",
    "Poison (effect)",
@@ -111,16 +109,16 @@
    "Legend's Quest",
    "Tai Bwo Wannai",
    "Fishing spot",
-   "RuneScape Classic"
+   "RuneScape Classic",
+   "Combat",
+   "Aggressiveness"
   ],
   "size": 27,
-  "basin": 2152
+  "basin": 2278
  },
  "topAttractors": [
   {
    "cycle": [
-    "Combat",
-    "Aggressiveness",
     "Combat level",
     "Ranged",
     "Poison (effect)",
@@ -145,10 +143,12 @@
     "Legend's Quest",
     "Tai Bwo Wannai",
     "Fishing spot",
-    "RuneScape Classic"
+    "RuneScape Classic",
+    "Combat",
+    "Aggressiveness"
    ],
-   "basin": 2152,
-   "pct": 50.93
+   "basin": 2278,
+   "pct": 53.92
   },
   {
    "cycle": [
@@ -191,8 +191,8 @@
     "Bank trick",
     "Staff of Armadyl"
    ],
-   "basin": 84,
-   "pct": 1.99
+   "basin": 85,
+   "pct": 2.01
   },
   {
    "cycle": [
@@ -325,31 +325,7 @@
    "reason": "no eligible links"
   },
   {
-   "title": "God letters:Issue 12 - Guthix Manifests",
-   "chains": 3,
-   "pct": 0.07,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "God letters:Issue 1 - Saradomin Speaks",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "The Archer, The Mage, and The Knight",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "The Battle of Edgeville",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "The Legend of Arrav - Part 2",
+   "title": "God letters:Issue 21 - Saradomin Illuminates",
    "chains": 2,
    "pct": 0.05,
    "reason": "no eligible links"
@@ -359,12 +335,6 @@
    "chains": 2,
    "pct": 0.05,
    "reason": "redlink target"
-  },
-  {
-   "title": "RuneScape Classic Wiki",
-   "chains": 1,
-   "pct": 0.02,
-   "reason": "no eligible links"
   },
   {
    "title": "2005",
@@ -407,10 +377,44 @@
    "chains": 1,
    "pct": 0.02,
    "reason": "no eligible links"
+  },
+  {
+   "title": "6 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "7 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "8 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "9 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "10 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
+  {
+   "title": "Tales from the Tavern",
+   "firstLinks": 66
+  },
   {
    "title": "Quests",
    "firstLinks": 44
@@ -496,15 +500,15 @@
    "firstLinks": 17
   },
   {
+   "title": "Jagex",
+   "firstLinks": 17
+  },
+  {
    "title": "Defense",
    "firstLinks": 16
   },
   {
    "title": "Thieving",
-   "firstLinks": 16
-  },
-  {
-   "title": "Jagex",
    "firstLinks": 16
   },
   {
@@ -526,142 +530,138 @@
   {
    "title": "Examine",
    "firstLinks": 15
-  },
-  {
-   "title": "Legend's Quest",
-   "firstLinks": 15
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Combat",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Combat level",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Falador",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Bank",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Ranged",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Teleportation",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Examine",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Aggressiveness",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "RuneScape Classic",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Aggie",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Legend's Quest",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Thrander",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Items",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Tai Bwo Wannai",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Yellowdye",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Bluedye",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Options",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Rune Plate Mail top",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Fishing spot",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Glitch",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Plate Mail Tops",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Web",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Machette",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Lumbridge Lady",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Poison (effect)",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Strange looking wall",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Sound effects",
-   "chains": 2152
+   "chains": 2278
   },
   {
    "title": "Hits",
-   "chains": 835
+   "chains": 960
   },
   {
    "title": "Experience",
-   "chains": 680
+   "chains": 805
   },
   {
-   "title": "Unicorn",
-   "chains": 564
+   "title": "Flax",
+   "chains": 621
   }
  ],
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 88.97,
+   "mean": 91.81,
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 50.73,
+   "mean": 53.71,
    "sd": 0.17
   }
  }

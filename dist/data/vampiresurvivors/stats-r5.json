@@ -23,12 +23,12 @@
   "2": 63,
   "3": 76,
   "4": 101,
-  "5": 74,
+  "5": 73,
   "6": 36,
   "7": 29,
   "8": 47,
   "9": 102,
-  "10": 19,
+  "10": 20,
   "11": 10,
   "12": 6,
   "13": 14,
@@ -44,8 +44,8 @@
    "4": 150,
    "5": 171,
    "6": 138,
-   "7": 109,
-   "8": 90,
+   "7": 107,
+   "8": 92,
    "9": 87,
    "10": 301
   },
@@ -57,7 +57,7 @@
   }
  },
  "concentration": {
-  "top1Pct": 20.15,
+  "top1Pct": 20.19,
   "top3Pct": 31.68,
   "top10Pct": 32.07,
   "cycleCount": 6,
@@ -72,7 +72,7 @@
    "Luck"
   ],
   "size": 3,
-  "basin": 468
+  "basin": 469
  },
  "topAttractors": [
   {
@@ -81,8 +81,8 @@
     "Greatest Jubilee",
     "Luck"
    ],
-   "basin": 468,
-   "pct": 20.15
+   "basin": 469,
+   "pct": 20.19
   },
   {
    "cycle": [
@@ -90,8 +90,8 @@
     "Mazerella",
     "Spells"
    ],
-   "basin": 262,
-   "pct": 11.28
+   "basin": 261,
+   "pct": 11.24
   },
   {
    "cycle": [
@@ -152,6 +152,12 @@
    "reason": "only 3 eligible links"
   },
   {
+   "title": "Antonio Belpaese",
+   "chains": 8,
+   "pct": 0.34,
+   "reason": "only 2 eligible links"
+  },
+  {
    "title": "Flight",
    "chains": 8,
    "pct": 0.34,
@@ -161,12 +167,6 @@
    "title": "Tides of the Foscari (adventure)",
    "chains": 8,
    "pct": 0.34,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Antonio Belpaese",
-   "chains": 7,
-   "pct": 0.3,
    "reason": "only 2 eligible links"
   },
   {
@@ -344,59 +344,59 @@
  "topThroughTraffic": [
   {
    "title": "Luck",
-   "chains": 468
+   "chains": 469
   },
   {
    "title": "Light source",
-   "chains": 468
+   "chains": 469
   },
   {
    "title": "Greatest Jubilee",
-   "chains": 468
+   "chains": 469
   },
   {
    "title": "Survarot",
-   "chains": 383
+   "chains": 384
   },
   {
    "title": "Passive items",
-   "chains": 381
+   "chains": 382
   },
   {
    "title": "Boon Marrabbio",
-   "chains": 307
+   "chains": 308
   },
   {
    "title": "Mad Forest",
-   "chains": 306
+   "chains": 307
   },
   {
    "title": "Stages",
-   "chains": 303
+   "chains": 304
   },
   {
    "title": "Dairy Plant",
-   "chains": 262
+   "chains": 261
   },
   {
    "title": "Spells",
-   "chains": 262
+   "chains": 261
   },
   {
    "title": "Mazerella",
-   "chains": 262
+   "chains": 261
   },
   {
    "title": "Floor Chicken",
-   "chains": 202
+   "chains": 203
   },
   {
    "title": "Level up",
-   "chains": 201
+   "chains": 202
   },
   {
    "title": "Weapons",
-   "chains": 181
+   "chains": 182
   },
   {
    "title": "Infinite Corridor",
@@ -416,11 +416,11 @@
   },
   {
    "title": "Ars Gouda",
-   "chains": 78
+   "chains": 77
   },
   {
    "title": "Enemies",
-   "chains": 77
+   "chains": 76
   },
   {
    "title": "Reroll",
@@ -452,7 +452,7 @@
   },
   {
    "title": "Knockback",
-   "chains": 29
+   "chains": 28
   },
   {
    "title": "Treasure Chest",

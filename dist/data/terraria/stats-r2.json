@@ -3,16 +3,16 @@
  "rank": "2",
  "nodes": 4337,
  "converge": {
-  "articles": 3397,
-  "pct": 78.33,
-  "deadEnd": 940,
-  "deadEndPct": 21.67,
-  "noLinks": 234,
-  "tooFewLinks": 155,
-  "unresolvable": 22
+  "articles": 3457,
+  "pct": 79.71,
+  "deadEnd": 880,
+  "deadEndPct": 20.29,
+  "noLinks": 246,
+  "tooFewLinks": 144,
+  "unresolvable": 23
  },
  "hopStats": {
-  "mean": 3.65,
+  "mean": 3.67,
   "median": 3,
   "p90": 7,
   "max": 11
@@ -21,41 +21,41 @@
   "0": 56,
   "1": 536,
   "2": 569,
-  "3": 751,
-  "4": 452,
-  "5": 378,
-  "6": 204,
-  "7": 165,
-  "8": 202,
-  "9": 61,
+  "3": 755,
+  "4": 465,
+  "5": 404,
+  "6": 230,
+  "7": 166,
+  "8": 195,
+  "9": 58,
   "10": 17,
   "11": 6
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 256,
-   "1": 155,
-   "2": 272,
-   "3": 274,
+   "0": 269,
+   "1": 144,
+   "2": 268,
+   "3": 276,
    "4": 289,
-   "5": 261,
-   "6": 241,
+   "5": 262,
+   "6": 242,
    "7": 237,
-   "8": 217,
-   "9": 204,
-   "10": 1931
+   "8": 214,
+   "9": 209,
+   "10": 1927
   },
   "atLeast": {
-   "1": 94.1,
+   "1": 93.8,
    "2": 90.5,
    "3": 84.3,
    "5": 71.3
   }
  },
  "concentration": {
-  "top1Pct": 25.16,
-  "top3Pct": 62.12,
-  "top10Pct": 76.34,
+  "top1Pct": 25.18,
+  "top3Pct": 63.11,
+  "top10Pct": 77.73,
   "cycleCount": 26,
   "entropyBits": 2.5
  },
@@ -67,7 +67,7 @@
    "Furnace"
   ],
   "size": 2,
-  "basin": 1091
+  "basin": 1092
  },
  "topAttractors": [
   {
@@ -75,16 +75,8 @@
     "Ores",
     "Furnace"
    ],
-   "basin": 1091,
-   "pct": 25.16
-  },
-  {
-   "cycle": [
-    "Layers",
-    "Depth Meter"
-   ],
-   "basin": 813,
-   "pct": 18.75
+   "basin": 1092,
+   "pct": 25.18
   },
   {
    "cycle": [
@@ -93,16 +85,24 @@
     "NPCs",
     "Coins"
    ],
-   "basin": 790,
-   "pct": 18.22
+   "basin": 842,
+   "pct": 19.41
+  },
+  {
+   "cycle": [
+    "Layers",
+    "Depth Meter"
+   ],
+   "basin": 803,
+   "pct": 18.52
   },
   {
    "cycle": [
     "Blocks",
     "Pickaxes"
    ],
-   "basin": 415,
-   "pct": 9.57
+   "basin": 432,
+   "pct": 9.96
   },
   {
    "cycle": [
@@ -243,12 +243,6 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/By Hand/register",
-   "chains": 49,
-   "pct": 1.13,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Immunity accessories",
    "chains": 23,
    "pct": 0.53,
@@ -261,15 +255,9 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Movement Accessories",
-   "chains": 15,
-   "pct": 0.35,
-   "reason": "only 1 eligible links"
-  },
-  {
    "title": "Mobile version history",
-   "chains": 11,
-   "pct": 0.25,
+   "chains": 9,
+   "pct": 0.21,
    "reason": "only 1 eligible links"
   },
   {
@@ -277,6 +265,12 @@
    "chains": 4,
    "pct": 0.09,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Combat Accessories",
+   "chains": 3,
+   "pct": 0.07,
+   "reason": "no eligible links"
   },
   {
    "title": "Official Terraria Forums",
@@ -309,21 +303,27 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Console version/Nintendo Switch store pages",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Terraria Special Edition",
    "chains": 2,
    "pct": 0.05,
    "reason": "only 1 eligible links"
   },
   {
+   "title": "Construction Accessories",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "no eligible links"
+  },
+  {
    "title": "Martian Madness/lt",
    "chains": 2,
    "pct": 0.05,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "List of possible modifiers",
+   "chains": 1,
+   "pct": 0.02,
    "reason": "only 1 eligible links"
   }
  ],
@@ -386,11 +386,11 @@
    "firstLinks": 33
   },
   {
-   "title": "Pickaxes",
-   "firstLinks": 29
+   "title": "Moon Lord",
+   "firstLinks": 30
   },
   {
-   "title": "Moon Lord",
+   "title": "Pickaxes",
    "firstLinks": 29
   },
   {
@@ -453,59 +453,59 @@
  "topThroughTraffic": [
   {
    "title": "Ores",
-   "chains": 1091
+   "chains": 1092
   },
   {
    "title": "Furnace",
-   "chains": 1091
+   "chains": 1092
   },
   {
    "title": "Bosses",
-   "chains": 924
-  },
-  {
-   "title": "Depth Meter",
-   "chains": 813
-  },
-  {
-   "title": "Layers",
-   "chains": 813
+   "chains": 925
   },
   {
    "title": "NPCs",
-   "chains": 790
+   "chains": 842
   },
   {
    "title": "Coins",
-   "chains": 790
+   "chains": 842
   },
   {
    "title": "Enemies",
-   "chains": 790
+   "chains": 842
   },
   {
    "title": "Debuffs",
-   "chains": 790
+   "chains": 842
+  },
+  {
+   "title": "Depth Meter",
+   "chains": 803
+  },
+  {
+   "title": "Layers",
+   "chains": 803
   },
   {
    "title": "Pickaxes",
-   "chains": 415
+   "chains": 432
   },
   {
    "title": "Blocks",
-   "chains": 415
+   "chains": 432
   },
   {
    "title": "Game mechanics",
    "chains": 409
   },
   {
-   "title": "Day and night cycle",
+   "title": "Armor",
    "chains": 408
   },
   {
-   "title": "Armor",
-   "chains": 408
+   "title": "Day and night cycle",
+   "chains": 397
   },
   {
    "title": "Weapons",
@@ -513,7 +513,7 @@
   },
   {
    "title": "Plantera",
-   "chains": 357
+   "chains": 358
   },
   {
    "title": "Damage",
@@ -521,11 +521,11 @@
   },
   {
    "title": "Defense",
-   "chains": 215
+   "chains": 214
   },
   {
    "title": "Underground",
-   "chains": 213
+   "chains": 214
   },
   {
    "title": "Server",
@@ -549,27 +549,27 @@
   },
   {
    "title": "Cavern",
-   "chains": 168
+   "chains": 169
   },
   {
    "title": "Golem",
-   "chains": 165
+   "chains": 166
+  },
+  {
+   "title": "World",
+   "chains": 151
   },
   {
    "title": "Storage items",
    "chains": 151
   },
   {
-   "title": "House",
-   "chains": 148
-  },
-  {
    "title": "Trees",
    "chains": 143
   },
   {
-   "title": "Lava",
-   "chains": 137
+   "title": "Biomes",
+   "chains": 140
   }
  ]
 }

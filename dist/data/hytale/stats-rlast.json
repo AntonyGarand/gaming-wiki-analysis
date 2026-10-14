@@ -12,25 +12,25 @@
   "unresolvable": 0
  },
  "hopStats": {
-  "mean": 5.8,
+  "mean": 5.84,
   "median": 4,
   "p90": 12,
   "max": 17
  },
  "histogram": {
   "0": 149,
-  "1": 183,
-  "2": 1099,
-  "3": 464,
-  "4": 414,
+  "1": 182,
+  "2": 1087,
+  "3": 459,
+  "4": 372,
   "5": 364,
-  "6": 194,
-  "7": 174,
-  "8": 50,
-  "9": 48,
-  "10": 49,
-  "11": 23,
-  "12": 1115,
+  "6": 206,
+  "7": 229,
+  "8": 62,
+  "9": 37,
+  "10": 44,
+  "11": 21,
+  "12": 1114,
   "13": 35,
   "14": 14,
   "15": 9,
@@ -40,30 +40,30 @@
  "eligibleLinks": {
   "histogram": {
    "0": 63,
-   "1": 251,
-   "2": 1430,
-   "3": 1046,
+   "1": 252,
+   "2": 1429,
+   "3": 1047,
    "4": 491,
-   "5": 316,
-   "6": 229,
+   "5": 317,
+   "6": 228,
    "7": 130,
    "8": 102,
-   "9": 107,
-   "10": 333
+   "9": 108,
+   "10": 331
   },
   "atLeast": {
    "1": 98.6,
    "2": 93,
    "3": 61.2,
-   "5": 27.1
+   "5": 27
   }
  },
  "concentration": {
-  "top1Pct": 39.82,
-  "top3Pct": 82.61,
-  "top10Pct": 90.91,
+  "top1Pct": 41.15,
+  "top3Pct": 83.08,
+  "top10Pct": 91.15,
   "cycleCount": 73,
-  "entropyBits": 2.41
+  "entropyBits": 2.35
  },
  "components": 74,
  "cycleCount": 73,
@@ -74,7 +74,7 @@
    "Adventure Mode"
   ],
   "size": 3,
-  "basin": 1791
+  "basin": 1851
  },
  "topAttractors": [
   {
@@ -83,24 +83,16 @@
     "The Heart of Orbis",
     "Adventure Mode"
    ],
-   "basin": 1791,
-   "pct": 39.82
+   "basin": 1851,
+   "pct": 41.15
   },
   {
    "cycle": [
     "Marble",
     "Marble Brick"
    ],
-   "basin": 1736,
-   "pct": 38.59
-  },
-  {
-   "cycle": [
-    "Developer and Staff History",
-    "Hypixel Inc. Team"
-   ],
-   "basin": 189,
-   "pct": 4.2
+   "basin": 1737,
+   "pct": 38.62
   },
   {
    "cycle": [
@@ -109,6 +101,14 @@
    ],
    "basin": 149,
    "pct": 3.31
+  },
+  {
+   "cycle": [
+    "Developer and Staff History",
+    "Hypixel Inc. Team"
+   ],
+   "basin": 139,
+   "pct": 3.09
   },
   {
    "cycle": [
@@ -185,14 +185,6 @@
   },
   {
    "cycle": [
-    "Chair",
-    "Stool"
-   ],
-   "basin": 14,
-   "pct": 0.31
-  },
-  {
-   "cycle": [
     "Wraith",
     "Wraith's Lantern"
    ],
@@ -235,6 +227,14 @@
    "cycle": [
     "Hypixel Network",
     "Survival Games"
+   ],
+   "basin": 8,
+   "pct": 0.18
+  },
+  {
+   "cycle": [
+    "Forgotten Temple Gateway",
+    "Launch Platform"
    ],
    "basin": 8,
    "pct": 0.18
@@ -368,7 +368,7 @@
   },
   {
    "title": "Hytale",
-   "firstLinks": 46
+   "firstLinks": 44
   },
   {
    "title": "Crude Shears",
@@ -431,15 +431,15 @@
    "firstLinks": 19
   },
   {
-   "title": "Fishing Trap",
+   "title": "Scrap Drill",
    "firstLinks": 19
   },
   {
-   "title": "Update 6",
+   "title": "Fishing Trap",
    "firstLinks": 18
   },
   {
-   "title": "Scrap Drill",
+   "title": "Update 6",
    "firstLinks": 18
   },
   {
@@ -458,47 +458,47 @@
  "topThroughTraffic": [
   {
    "title": "Adventure Mode",
-   "chains": 1791
+   "chains": 1851
   },
   {
    "title": "Exploration Mode",
-   "chains": 1791
+   "chains": 1851
   },
   {
    "title": "The Heart of Orbis",
-   "chains": 1791
+   "chains": 1851
   },
   {
    "title": "Marble",
-   "chains": 1736
+   "chains": 1737
   },
   {
    "title": "Marble Brick",
-   "chains": 1736
+   "chains": 1737
   },
   {
    "title": "Furnace",
-   "chains": 1732
+   "chains": 1733
   },
   {
    "title": "Fuel",
-   "chains": 1308
+   "chains": 1277
   },
   {
    "title": "Campfire",
-   "chains": 1307
+   "chains": 1276
   },
   {
    "title": "Raw Fish",
-   "chains": 1260
+   "chains": 1229
   },
   {
    "title": "Bluegill",
-   "chains": 1257
+   "chains": 1226
   },
   {
    "title": "Fishing Trap",
-   "chains": 1256
+   "chains": 1225
   },
   {
    "title": "Fishing",
@@ -526,39 +526,27 @@
   },
   {
    "title": "Memories",
-   "chains": 585
+   "chains": 596
   },
   {
    "title": "Stick",
-   "chains": 298
+   "chains": 330
   },
   {
    "title": "Salvager's Workbench",
-   "chains": 278
-  },
-  {
-   "title": "Weapon",
-   "chains": 198
+   "chains": 310
   },
   {
    "title": "High-roll Chest",
-   "chains": 192
+   "chains": 203
   },
   {
-   "title": "Developer and Staff History",
-   "chains": 189
-  },
-  {
-   "title": "Hypixel Inc. Team",
-   "chains": 189
-  },
-  {
-   "title": "Hytale",
-   "chains": 187
+   "title": "Weapon",
+   "chains": 197
   },
   {
    "title": "Hatchet",
-   "chains": 159
+   "chains": 158
   },
   {
    "title": "Chest",
@@ -575,6 +563,18 @@
   {
    "title": "Bird's Nest",
    "chains": 149
+  },
+  {
+   "title": "Animal Husbandry",
+   "chains": 146
+  },
+  {
+   "title": "NPC",
+   "chains": 144
+  },
+  {
+   "title": "Furniture Workbench",
+   "chains": 140
   }
  ]
 }

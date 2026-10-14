@@ -3,11 +3,11 @@
  "rank": "random",
  "nodes": 24073,
  "converge": {
-  "articles": 22298,
+  "articles": 22299,
   "pct": 92.63,
-  "deadEnd": 1775,
+  "deadEnd": 1774,
   "deadEndPct": 7.37,
-  "noLinks": 1032,
+  "noLinks": 1031,
   "tooFewLinks": 0,
   "unresolvable": 16
  },
@@ -21,26 +21,26 @@
   "0": 722,
   "1": 1714,
   "2": 1087,
-  "3": 1839,
-  "4": 730,
+  "3": 1840,
+  "4": 731,
   "5": 571,
-  "6": 527,
-  "7": 760,
+  "6": 526,
+  "7": 759,
   "8": 861,
   "9": 811,
   "10": 699,
   "11": 594,
-  "12": 523,
+  "12": 524,
   "13": 646,
   "14": 532,
   "15": 769,
   "16": 568,
   "17": 594,
   "18": 805,
-  "19": 488,
+  "19": 490,
   "20": 450,
   "21": 522,
-  "22": 411,
+  "22": 410,
   "23": 399,
   "24": 468,
   "25": 381,
@@ -52,7 +52,7 @@
   "31": 145,
   "32": 771,
   "33": 125,
-  "34": 168,
+  "34": 167,
   "35": 272,
   "36": 237,
   "37": 187,
@@ -69,7 +69,7 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 1048,
+   "0": 1047,
    "1": 1601,
    "2": 3561,
    "3": 2434,
@@ -79,10 +79,10 @@
    "7": 1098,
    "8": 956,
    "9": 787,
-   "10": 7481
+   "10": 7482
   },
   "atLeast": {
-   "1": 95.6,
+   "1": 95.7,
    "2": 89,
    "3": 74.2,
    "5": 55
@@ -90,8 +90,8 @@
  },
  "concentration": {
   "top1Pct": 24.77,
-  "top3Pct": 59.21,
-  "top10Pct": 73.94,
+  "top3Pct": 59.2,
+  "top10Pct": 73.93,
   "cycleCount": 345,
   "entropyBits": 4.08
  },
@@ -103,7 +103,7 @@
    "Zombotech Corporation"
   ],
   "size": 2,
-  "basin": 5962
+  "basin": 5963
  },
  "topAttractors": [
   {
@@ -111,7 +111,7 @@
     "Downtown San Fierro",
     "Zombotech Corporation"
    ],
-   "basin": 5962,
+   "basin": 5963,
    "pct": 24.77
   },
   {
@@ -127,8 +127,8 @@
     "Franklin Clinton",
     "Payphone Hit: The Trolls"
    ],
-   "basin": 2724,
-   "pct": 11.32
+   "basin": 2721,
+   "pct": 11.3
   },
   {
    "cycle": [
@@ -215,8 +215,8 @@
     "Vice Shores Park",
     "Vice Shores"
    ],
-   "basin": 184,
-   "pct": 0.76
+   "basin": 187,
+   "pct": 0.78
   },
   {
    "cycle": [
@@ -279,8 +279,8 @@
  "deadEndTerminals": [
   {
    "title": "Nintendo Switch",
-   "chains": 176,
-   "pct": 0.73,
+   "chains": 177,
+   "pct": 0.74,
    "reason": "no eligible links"
   },
   {
@@ -435,12 +435,12 @@
    "firstLinks": 75
   },
   {
-   "title": "Grand Theft Auto VI/Trailers",
+   "title": "Protagonists in GTA (1997 game)",
    "firstLinks": 73
   },
   {
-   "title": "Protagonists in GTA (1997 game)",
-   "firstLinks": 72
+   "title": "Grand Theft Auto VI/Trailers",
+   "firstLinks": 73
   },
   {
    "title": "Trevor Philips",
@@ -494,11 +494,11 @@
  "topThroughTraffic": [
   {
    "title": "Downtown San Fierro",
-   "chains": 5962
+   "chains": 5963
   },
   {
    "title": "Zombotech Corporation",
-   "chains": 5962
+   "chains": 5963
   },
   {
    "title": "Grand Theft Auto Double Pack",
@@ -530,23 +530,23 @@
   },
   {
    "title": "Burglar",
-   "chains": 5537
+   "chains": 5538
   },
   {
    "title": "Richman (3D Universe)",
-   "chains": 5530
+   "chains": 5531
   },
   {
    "title": "Banshee (3D Universe)",
-   "chains": 5507
+   "chains": 5508
   },
   {
    "title": "Robbery accomplice",
-   "chains": 5501
+   "chains": 5502
   },
   {
    "title": "Catalina",
-   "chains": 5500
+   "chains": 5501
   },
   {
    "title": "Haitian Drugs Factory",
@@ -566,7 +566,7 @@
   },
   {
    "title": "Money",
-   "chains": 5186
+   "chains": 5187
   },
   {
    "title": "Little Havana",
@@ -574,11 +574,11 @@
   },
   {
    "title": "Franklin Clinton",
-   "chains": 2724
+   "chains": 2721
   },
   {
    "title": "Payphone Hit: The Trolls",
-   "chains": 2724
+   "chains": 2721
   },
   {
    "title": "Securicar (3D Universe)",
@@ -616,11 +616,11 @@
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 92.62,
+   "mean": 92.63,
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 24.86,
+   "mean": 24.87,
    "sd": 0.15
   }
  }

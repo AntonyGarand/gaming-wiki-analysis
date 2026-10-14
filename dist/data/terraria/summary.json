@@ -1,14 +1,14 @@
 {
  "wiki": "terraria",
- "generatedAt": "2026-10-14T04:07:33.879Z",
+ "generatedAt": "2026-10-14T14:02:25.319Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 87.73,
-   "deadEndPct": 12.27,
+   "convergePct": 87.71,
+   "deadEndPct": 12.29,
    "components": 12,
    "cycleCount": 11,
-   "meanHops": 3.94,
+   "meanHops": 3.93,
    "medianHops": 3,
    "maxHops": 14,
    "topAttractor": [
@@ -17,49 +17,49 @@
    ],
    "topAttractorPct": 85.47,
    "top3Pct": 86.53,
-   "eligiblePct": 94.1
+   "eligiblePct": 93.8
   },
   {
    "rank": "2",
-   "convergePct": 78.33,
-   "deadEndPct": 21.67,
+   "convergePct": 79.71,
+   "deadEndPct": 20.29,
    "components": 27,
    "cycleCount": 26,
-   "meanHops": 3.65,
+   "meanHops": 3.67,
    "medianHops": 3,
    "maxHops": 11,
    "topAttractor": [
     "Ores",
     "Furnace"
    ],
-   "topAttractorPct": 25.16,
-   "top3Pct": 62.12,
+   "topAttractorPct": 25.18,
+   "top3Pct": 63.11,
    "eligiblePct": 90.5
   },
   {
    "rank": "3",
-   "convergePct": 78.69,
-   "deadEndPct": 21.31,
+   "convergePct": 78.79,
+   "deadEndPct": 21.21,
    "components": 58,
    "cycleCount": 57,
-   "meanHops": 9.02,
+   "meanHops": 9.03,
    "medianHops": 8,
    "maxHops": 26,
    "topAttractor": [
     "The Underworld",
     "Lava"
    ],
-   "topAttractorPct": 55.85,
-   "top3Pct": 67.97,
+   "topAttractorPct": 55.91,
+   "top3Pct": 68.04,
    "eligiblePct": 84.3
   },
   {
    "rank": "5",
-   "convergePct": 16.69,
-   "deadEndPct": 83.31,
+   "convergePct": 16.81,
+   "deadEndPct": 83.19,
    "components": 46,
    "cycleCount": 45,
-   "meanHops": 2.07,
+   "meanHops": 2.08,
    "medianHops": 2,
    "maxHops": 9,
    "topAttractor": [
@@ -68,36 +68,36 @@
     "Consumables",
     "Bosses"
    ],
-   "topAttractorPct": 6.5,
+   "topAttractorPct": 6.46,
    "top3Pct": 11.07,
    "eligiblePct": 71.3
   },
   {
    "rank": "last",
-   "convergePct": 90.96,
-   "deadEndPct": 9.04,
-   "components": 176,
-   "cycleCount": 175,
-   "meanHops": 7.99,
-   "medianHops": 5,
+   "convergePct": 93.66,
+   "deadEndPct": 6.34,
+   "components": 177,
+   "cycleCount": 176,
+   "meanHops": 8.08,
+   "medianHops": 6,
    "maxHops": 33,
    "topAttractor": [
     "Re-Logic",
     "Steampunker",
     "Bestiary"
    ],
-   "topAttractorPct": 53.06,
-   "top3Pct": 62.26,
+   "topAttractorPct": 55.29,
+   "top3Pct": 64.72,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 90.59,
-   "deadEndPct": 9.41,
-   "components": 39,
-   "cycleCount": 38,
-   "meanHops": 11.58,
-   "medianHops": 9,
+   "convergePct": 91.28,
+   "deadEndPct": 8.72,
+   "components": 38,
+   "cycleCount": 37,
+   "meanHops": 11.9,
+   "medianHops": 10,
    "maxHops": 34,
    "topAttractor": [
     "Buffs",
@@ -124,8 +124,8 @@
     "Slime Gun",
     "Light sources"
    ],
-   "topAttractorPct": 78.72,
-   "top3Pct": 84.83,
+   "topAttractorPct": 79.8,
+   "top3Pct": 85.87,
    "eligiblePct": 100
   }
  ]

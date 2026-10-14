@@ -3,147 +3,155 @@
  "rank": "random",
  "nodes": 14078,
  "converge": {
-  "articles": 8761,
-  "pct": 62.23,
-  "deadEnd": 5317,
-  "deadEndPct": 37.77,
-  "noLinks": 5088,
+  "articles": 8762,
+  "pct": 62.24,
+  "deadEnd": 5316,
+  "deadEndPct": 37.76,
+  "noLinks": 4873,
   "tooFewLinks": 0,
-  "unresolvable": 17
+  "unresolvable": 231
  },
  "hopStats": {
-  "mean": 8.7,
-  "median": 7,
-  "p90": 18,
-  "max": 26
+  "mean": 11.65,
+  "median": 9,
+  "p90": 25,
+  "max": 48
  },
  "histogram": {
-  "0": 178,
-  "1": 487,
-  "2": 464,
-  "3": 1008,
-  "4": 633,
-  "5": 642,
-  "6": 587,
-  "7": 498,
-  "8": 451,
-  "9": 426,
-  "10": 377,
-  "11": 343,
-  "12": 357,
-  "13": 234,
-  "14": 289,
-  "15": 277,
-  "16": 275,
-  "17": 254,
-  "18": 267,
-  "19": 158,
-  "20": 157,
-  "21": 147,
-  "22": 131,
-  "23": 75,
-  "24": 30,
-  "25": 13,
-  "26": 3
+  "0": 184,
+  "1": 573,
+  "2": 557,
+  "3": 1041,
+  "4": 563,
+  "5": 451,
+  "6": 421,
+  "7": 333,
+  "8": 251,
+  "9": 224,
+  "10": 271,
+  "11": 304,
+  "12": 337,
+  "13": 257,
+  "14": 216,
+  "15": 201,
+  "16": 261,
+  "17": 313,
+  "18": 214,
+  "19": 170,
+  "20": 197,
+  "21": 158,
+  "22": 95,
+  "23": 110,
+  "24": 106,
+  "25": 95,
+  "26": 69,
+  "27": 71,
+  "28": 33,
+  "29": 39,
+  "30": 24,
+  "31": 31,
+  "32": 9,
+  "33": 13,
+  "34": 28,
+  "35": 38,
+  "36": 23,
+  "37": 22,
+  "38": 38,
+  "39": 57,
+  "40": 105,
+  "41": 82,
+  "42": 60,
+  "43": 55,
+  "44": 21,
+  "45": 29,
+  "46": 9,
+  "47": 2,
+  "48": 1
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5105,
-   "1": 1377,
-   "2": 969,
-   "3": 719,
-   "4": 493,
-   "5": 449,
-   "6": 340,
-   "7": 287,
-   "8": 305,
+   "0": 5104,
+   "1": 1380,
+   "2": 967,
+   "3": 720,
+   "4": 497,
+   "5": 447,
+   "6": 337,
+   "7": 292,
+   "8": 308,
    "9": 270,
-   "10": 3764
+   "10": 3756
   },
   "atLeast": {
    "1": 63.7,
-   "2": 54,
+   "2": 53.9,
    "3": 47.1,
-   "5": 38.5
+   "5": 38.4
   }
  },
  "concentration": {
-  "top1Pct": 26.36,
-  "top3Pct": 42.58,
-  "top10Pct": 59.27,
-  "cycleCount": 80,
-  "entropyBits": 2.86
+  "top1Pct": 22.24,
+  "top3Pct": 47.71,
+  "top10Pct": 59.52,
+  "cycleCount": 81,
+  "entropyBits": 2.77
  },
- "components": 81,
- "cycleCount": 80,
+ "components": 82,
+ "cycleCount": 81,
  "largestCycle": {
   "members": [
-   "Damage",
-   "Knockback (mechanic)",
-   "Axe",
-   "Stick",
-   "Fortune",
-   "Fishing",
-   "Particles",
-   "Rain",
-   "Biome",
-   "Nautilus",
-   "Nautilus Armor",
-   "Fire Protection"
+   "Minecraft.net",
+   "Mojang.com"
   ],
-  "size": 12,
-  "basin": 3711
+  "size": 2,
+  "basin": 3131
  },
  "topAttractors": [
   {
    "cycle": [
-    "Damage",
-    "Knockback (mechanic)",
-    "Axe",
-    "Stick",
-    "Fortune",
-    "Fishing",
-    "Particles",
-    "Rain",
-    "Biome",
-    "Nautilus",
-    "Nautilus Armor",
-    "Fire Protection"
+    "Minecraft.net",
+    "Mojang.com"
    ],
-   "basin": 3711,
-   "pct": 26.36
+   "basin": 3131,
+   "pct": 22.24
   },
   {
    "cycle": [
-    "Coal",
-    "Coal Ore"
+    "Player",
+    "Smelting",
+    "Smoker",
+    "Piston",
+    "Slime Block",
+    "Bee",
+    "Desert",
+    "Dripstone Caves",
+    "Zombie Nautilus",
+    "Breath of the Nautilus",
+    "Water Breathing",
+    "Effect",
+    "Death",
+    "Health",
+    "Camel",
+    "Experience"
    ],
-   "basin": 1314,
-   "pct": 9.33
+   "basin": 2560,
+   "pct": 18.18
+  },
+  {
+   "cycle": [
+    "Ocean Monument",
+    "Sponge"
+   ],
+   "basin": 1025,
+   "pct": 7.28
   },
   {
    "cycle": [
     "Block",
     "Light"
    ],
-   "basin": 970,
-   "pct": 6.89
-  },
-  {
-   "cycle": [
-    "Minecraft.net",
-    "Mojang.com"
-   ],
-   "basin": 893,
-   "pct": 6.34
-  },
-  {
-   "cycle": [
-    "Spider Jockey",
-    "Cave Spider"
-   ],
-   "basin": 691,
-   "pct": 4.91
+   "basin": 595,
+   "pct": 4.23
   },
   {
    "cycle": [
@@ -155,11 +163,11 @@
   },
   {
    "cycle": [
-    "Splash",
-    "Java Edition Alpha v1.0.13"
+    "Coal",
+    "Coal Ore"
    ],
-   "basin": 137,
-   "pct": 0.97
+   "basin": 305,
+   "pct": 2.17
   },
   {
    "cycle": [
@@ -171,19 +179,19 @@
   },
   {
    "cycle": [
-    "Pufferfish",
-    "Salmon"
+    "Splash",
+    "Java Edition Alpha v1.0.13"
    ],
-   "basin": 82,
-   "pct": 0.58
+   "basin": 131,
+   "pct": 0.93
   },
   {
    "cycle": [
-    "Sponge",
-    "Ocean Monument"
+    "Pufferfish",
+    "Salmon"
    ],
-   "basin": 55,
-   "pct": 0.39
+   "basin": 91,
+   "pct": 0.65
   },
   {
    "cycle": [
@@ -257,6 +265,14 @@
     "Village/Structure/Blueprints"
    ],
    "basin": 13,
+   "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Bundle",
+    "Shulker Box"
+   ],
+   "basin": 12,
    "pct": 0.09
   },
   {
@@ -391,11 +407,11 @@
    "firstLinks": 42
   },
   {
-   "title": "Mob",
+   "title": "Block",
    "firstLinks": 37
   },
   {
-   "title": "Block",
+   "title": "Mob",
    "firstLinks": 36
   },
   {
@@ -408,15 +424,11 @@
   },
   {
    "title": "Overworld",
-   "firstLinks": 33
+   "firstLinks": 34
   },
   {
    "title": "Snapshot",
    "firstLinks": 33
-  },
-  {
-   "title": "Villager",
-   "firstLinks": 32
   },
   {
    "title": "Marketplace",
@@ -428,6 +440,10 @@
   },
   {
    "title": "Java Edition Alpha",
+   "firstLinks": 31
+  },
+  {
+   "title": "Villager",
    "firstLinks": 31
   },
   {
@@ -447,6 +463,10 @@
    "firstLinks": 26
   },
   {
+   "title": "Chest",
+   "firstLinks": 26
+  },
+  {
    "title": "Minecraft.net",
    "firstLinks": 26
   },
@@ -463,16 +483,12 @@
    "firstLinks": 25
   },
   {
-   "title": "Creeper",
-   "firstLinks": 25
-  },
-  {
-   "title": "Chest",
-   "firstLinks": 25
-  },
-  {
    "title": "Inventory",
    "firstLinks": 25
+  },
+  {
+   "title": "Creeper",
+   "firstLinks": 24
   },
   {
    "title": "Entity",
@@ -485,124 +501,124 @@
  ],
  "topThroughTraffic": [
   {
-   "title": "Axe",
-   "chains": 3711
+   "title": "Minecraft.net",
+   "chains": 3131
   },
   {
-   "title": "Stick",
-   "chains": 3711
+   "title": "Mojang.com",
+   "chains": 3131
   },
   {
-   "title": "Fishing",
-   "chains": 3711
+   "title": "Minecoin",
+   "chains": 3067
   },
   {
-   "title": "Biome",
-   "chains": 3711
+   "title": "Character Creator",
+   "chains": 2651
   },
   {
-   "title": "Rain",
-   "chains": 3711
+   "title": "Marketplace",
+   "chains": 2632
   },
   {
-   "title": "Damage",
-   "chains": 3711
+   "title": "Add-on",
+   "chains": 2578
   },
   {
-   "title": "Fire Protection",
-   "chains": 3711
+   "title": "Smelting",
+   "chains": 2560
   },
   {
-   "title": "Fortune",
-   "chains": 3711
+   "title": "Health",
+   "chains": 2560
   },
   {
-   "title": "Particles",
-   "chains": 3711
-  },
-  {
-   "title": "Nautilus",
-   "chains": 3711
-  },
-  {
-   "title": "Knockback (mechanic)",
-   "chains": 3711
-  },
-  {
-   "title": "Nautilus Armor",
-   "chains": 3711
-  },
-  {
-   "title": "Breeding",
-   "chains": 1975
+   "title": "Desert",
+   "chains": 2560
   },
   {
    "title": "Player",
-   "chains": 1885
+   "chains": 2560
   },
   {
-   "title": "Coal Ore",
-   "chains": 1314
+   "title": "Experience",
+   "chains": 2560
   },
   {
-   "title": "Coal",
-   "chains": 1314
+   "title": "Effect",
+   "chains": 2560
   },
   {
-   "title": "Ore (feature)",
-   "chains": 1305
+   "title": "Death",
+   "chains": 2560
   },
   {
-   "title": "Andesite",
-   "chains": 1303
+   "title": "Piston",
+   "chains": 2560
   },
   {
-   "title": "Dirt",
-   "chains": 1299
+   "title": "Slime Block",
+   "chains": 2560
   },
   {
-   "title": "Superflat",
-   "chains": 1257
+   "title": "Water Breathing",
+   "chains": 2560
   },
   {
-   "title": "Dimension definition",
-   "chains": 1253
+   "title": "Smoker",
+   "chains": 2560
   },
   {
-   "title": "Single Biome",
-   "chains": 1250
+   "title": "Bee",
+   "chains": 2560
   },
   {
-   "title": "Lava",
-   "chains": 1108
+   "title": "Dripstone Caves",
+   "chains": 2560
   },
   {
-   "title": "Shattered Savanna Plateau",
-   "chains": 995
+   "title": "Camel",
+   "chains": 2560
   },
   {
-   "title": "Windswept Savanna",
-   "chains": 994
+   "title": "Breath of the Nautilus",
+   "chains": 2560
   },
   {
-   "title": "Coarse Dirt",
-   "chains": 993
+   "title": "Zombie Nautilus",
+   "chains": 2560
   },
   {
-   "title": "Wither",
-   "chains": 972
+   "title": "Identifier",
+   "chains": 2290
   },
   {
-   "title": "Block",
-   "chains": 970
+   "title": "Attribute",
+   "chains": 2270
   },
   {
-   "title": "Light",
-   "chains": 970
+   "title": "Interaction range",
+   "chains": 2257
   },
   {
-   "title": "Difficulty",
-   "chains": 897
+   "title": "Heads-up display",
+   "chains": 2256
+  },
+  {
+   "title": "Damage",
+   "chains": 2233
+  },
+  {
+   "title": "Fire Protection",
+   "chains": 1532
+  },
+  {
+   "title": "Nautilus Armor",
+   "chains": 1528
+  },
+  {
+   "title": "Nautilus",
+   "chains": 1527
   }
  ],
  "randomSeeds": {
@@ -612,8 +628,8 @@
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 29.81,
-   "sd": 2.88
+   "mean": 21.53,
+   "sd": 1.53
   }
  }
 }

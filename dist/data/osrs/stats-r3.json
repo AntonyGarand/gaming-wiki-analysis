@@ -3,44 +3,44 @@
  "rank": "3",
  "nodes": 36164,
  "converge": {
-  "articles": 26957,
-  "pct": 74.54,
-  "deadEnd": 9207,
-  "deadEndPct": 25.46,
-  "noLinks": 539,
-  "tooFewLinks": 4309,
-  "unresolvable": 2
+  "articles": 27038,
+  "pct": 74.76,
+  "deadEnd": 9126,
+  "deadEndPct": 25.24,
+  "noLinks": 439,
+  "tooFewLinks": 4295,
+  "unresolvable": 1
  },
  "hopStats": {
-  "mean": 6.9,
+  "mean": 6.91,
   "median": 6,
   "p90": 13,
   "max": 29
  },
  "histogram": {
-  "0": 1173,
-  "1": 2402,
-  "2": 2252,
-  "3": 2408,
-  "4": 2277,
-  "5": 1795,
-  "6": 1594,
-  "7": 1823,
-  "8": 1501,
-  "9": 2036,
-  "10": 1958,
+  "0": 1177,
+  "1": 2412,
+  "2": 2243,
+  "3": 2412,
+  "4": 2275,
+  "5": 1814,
+  "6": 1591,
+  "7": 1832,
+  "8": 1510,
+  "9": 2064,
+  "10": 1962,
   "11": 1062,
-  "12": 1691,
+  "12": 1697,
   "13": 616,
-  "14": 511,
-  "15": 331,
-  "16": 268,
-  "17": 265,
+  "14": 509,
+  "15": 329,
+  "16": 267,
+  "17": 274,
   "18": 266,
-  "19": 211,
-  "20": 95,
-  "21": 55,
-  "22": 82,
+  "19": 210,
+  "20": 94,
+  "21": 54,
+  "22": 83,
   "23": 76,
   "24": 70,
   "25": 53,
@@ -51,41 +51,41 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 541,
-   "1": 1323,
-   "2": 2986,
-   "3": 4695,
-   "4": 3503,
-   "5": 3373,
-   "6": 2722,
-   "7": 2275,
-   "8": 1843,
-   "9": 1604,
-   "10": 11299
+   "0": 440,
+   "1": 1317,
+   "2": 2978,
+   "3": 4691,
+   "4": 3504,
+   "5": 3365,
+   "6": 2717,
+   "7": 2267,
+   "8": 1834,
+   "9": 1584,
+   "10": 11467
   },
   "atLeast": {
-   "1": 98.5,
-   "2": 94.8,
-   "3": 86.6,
-   "5": 63.9
+   "1": 98.8,
+   "2": 95.1,
+   "3": 86.9,
+   "5": 64.2
   }
  },
  "concentration": {
-  "top1Pct": 22.3,
-  "top3Pct": 46.36,
-  "top10Pct": 60.35,
-  "cycleCount": 563,
+  "top1Pct": 22.46,
+  "top3Pct": 46.58,
+  "top10Pct": 60.55,
+  "cycleCount": 565,
   "entropyBits": 4.16
  },
- "components": 564,
- "cycleCount": 563,
+ "components": 566,
+ "cycleCount": 565,
  "largestCycle": {
   "members": [
    "Experience",
    "Book of Knowledge"
   ],
   "size": 2,
-  "basin": 8063
+  "basin": 8122
  },
  "topAttractors": [
   {
@@ -93,8 +93,8 @@
     "Experience",
     "Book of Knowledge"
    ],
-   "basin": 8063,
-   "pct": 22.3
+   "basin": 8122,
+   "pct": 22.46
   },
   {
    "cycle": [
@@ -104,8 +104,8 @@
     "Outpost",
     "Making History"
    ],
-   "basin": 6840,
-   "pct": 18.91
+   "basin": 6859,
+   "pct": 18.97
   },
   {
    "cycle": [
@@ -122,8 +122,8 @@
     "Melee",
     "Defence"
    ],
-   "basin": 1688,
-   "pct": 4.67
+   "basin": 1682,
+   "pct": 4.65
   },
   {
    "cycle": [
@@ -131,15 +131,15 @@
     "The Node",
     "Ironman helm"
    ],
-   "basin": 976,
-   "pct": 2.7
+   "basin": 972,
+   "pct": 2.69
   },
   {
    "cycle": [
     "Ranged",
     "Crossbow (weapon)"
    ],
-   "basin": 767,
+   "basin": 765,
    "pct": 2.12
   },
   {
@@ -147,7 +147,7 @@
     "The Fremennik Trials",
     "Peer the Seer"
    ],
-   "basin": 600,
+   "basin": 601,
    "pct": 1.66
   },
   {
@@ -155,8 +155,8 @@
     "Temporary skill boost",
     "Potions"
    ],
-   "basin": 385,
-   "pct": 1.06
+   "basin": 388,
+   "pct": 1.07
   },
   {
    "cycle": [
@@ -171,7 +171,7 @@
     "Vampyre",
     "Vampyre Houses"
    ],
-   "basin": 310,
+   "basin": 312,
    "pct": 0.86
   },
   {
@@ -192,7 +192,7 @@
     "Raw karambwan",
     "Fishing"
    ],
-   "basin": 265,
+   "basin": 264,
    "pct": 0.73
   },
   {
@@ -205,16 +205,6 @@
   },
   {
    "cycle": [
-    "Tree Gnome Village",
-    "Gnome",
-    "Tree Gnome Village (location)",
-    "Elkoy"
-   ],
-   "basin": 100,
-   "pct": 0.28
-  },
-  {
-   "cycle": [
     "Plague City",
     "Edmond",
     "Elena"
@@ -224,11 +214,21 @@
   },
   {
    "cycle": [
+    "Tree Gnome Village",
+    "Gnome",
+    "Tree Gnome Village (location)",
+    "Elkoy"
+   ],
+   "basin": 98,
+   "pct": 0.27
+  },
+  {
+   "cycle": [
     "Ali Morrisane",
     "Pollnivneach",
     "The Feud"
    ],
-   "basin": 87,
+   "basin": 86,
    "pct": 0.24
   },
   {
@@ -236,7 +236,7 @@
     "Regicide",
     "Tirannwn"
    ],
-   "basin": 84,
+   "basin": 82,
    "pct": 0.23
   },
   {
@@ -267,8 +267,8 @@
  "deadEndTerminals": [
   {
    "title": "Icon",
-   "chains": 2967,
-   "pct": 8.2,
+   "chains": 2971,
+   "pct": 8.22,
    "reason": "only 2 eligible links"
   },
   {
@@ -338,6 +338,12 @@
    "reason": "only 1 eligible links"
   },
   {
+   "title": "Puzzle box",
+   "chains": 22,
+   "pct": 0.06,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Stone table (While Guthix Sleeps)",
    "chains": 16,
    "pct": 0.04,
@@ -348,19 +354,13 @@
    "chains": 14,
    "pct": 0.04,
    "reason": "no eligible links"
-  },
-  {
-   "title": "Music Player",
-   "chains": 14,
-   "pct": 0.04,
-   "reason": "only 2 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
   {
    "title": "Treasure Trails",
-   "firstLinks": 977
+   "firstLinks": 984
   },
   {
    "title": "Player-owned house",
@@ -400,23 +400,23 @@
   },
   {
    "title": "Construction",
-   "firstLinks": 127
+   "firstLinks": 128
   },
   {
    "title": "Farming",
    "firstLinks": 116
   },
   {
-   "title": "Hitpoints",
-   "firstLinks": 115
-  },
-  {
    "title": "Thieving",
    "firstLinks": 114
   },
   {
-   "title": "Varrock",
+   "title": "Hitpoints",
    "firstLinks": 113
+  },
+  {
+   "title": "Varrock",
+   "firstLinks": 111
   },
   {
    "title": "Experience",
@@ -451,11 +451,11 @@
    "firstLinks": 88
   },
   {
-   "title": "Wilderness",
-   "firstLinks": 87
+   "title": "Strength",
+   "firstLinks": 86
   },
   {
-   "title": "Strength",
+   "title": "Wilderness",
    "firstLinks": 86
   },
   {
@@ -472,7 +472,7 @@
   },
   {
    "title": "Agility",
-   "firstLinks": 74
+   "firstLinks": 71
   },
   {
    "title": "Skills",
@@ -482,107 +482,107 @@
  "topThroughTraffic": [
   {
    "title": "Experience",
-   "chains": 8063
+   "chains": 8122
   },
   {
    "title": "Book of Knowledge",
-   "chains": 8063
+   "chains": 8122
   },
   {
    "title": "Skills",
-   "chains": 7182
+   "chains": 7244
   },
   {
    "title": "Making History",
-   "chains": 6840
+   "chains": 6859
   },
   {
    "title": "Kandarin",
-   "chains": 6840
+   "chains": 6859
   },
   {
    "title": "Ardougne Market",
-   "chains": 6840
+   "chains": 6859
   },
   {
    "title": "East Ardougne",
-   "chains": 6840
+   "chains": 6859
   },
   {
    "title": "Outpost",
-   "chains": 6840
+   "chains": 6859
   },
   {
    "title": "Karamja",
-   "chains": 6169
+   "chains": 6186
   },
   {
    "title": "Port Sarim",
-   "chains": 5974
+   "chains": 5993
   },
   {
    "title": "Zeah",
-   "chains": 5856
+   "chains": 5875
   },
   {
    "title": "Gielinor",
-   "chains": 5848
+   "chains": 5867
   },
   {
    "title": "Free-to-play",
-   "chains": 4279
+   "chains": 4341
   },
   {
    "title": "Locations",
-   "chains": 4041
+   "chains": 4043
   },
   {
    "title": "World map",
-   "chains": 4040
+   "chains": 4042
   },
   {
    "title": "Varrock",
-   "chains": 3763
+   "chains": 3786
   },
   {
    "title": "Stronghold of Security",
-   "chains": 3155
+   "chains": 3183
   },
   {
    "title": "Rat",
-   "chains": 3016
+   "chains": 3044
   },
   {
    "title": "Monster",
-   "chains": 2989
+   "chains": 3017
   },
   {
    "title": "Icon",
-   "chains": 2967
+   "chains": 2971
   },
   {
    "title": "Minigames",
-   "chains": 2941
+   "chains": 2945
   },
   {
    "title": "Non-player character",
-   "chains": 2718
+   "chains": 2735
   },
   {
    "title": "Coins",
-   "chains": 2091
+   "chains": 2100
   },
   {
    "title": "Miniquests",
-   "chains": 2031
+   "chains": 2042
   },
   {
    "title": "Quests",
-   "chains": 1929
+   "chains": 1936
   },
   {
    "title": "Player-owned house",
-   "chains": 1905
+   "chains": 1916
   },
   {
    "title": "Varlamore",
@@ -598,7 +598,7 @@
   },
   {
    "title": "Melee",
-   "chains": 1688
+   "chains": 1682
   }
  ]
 }

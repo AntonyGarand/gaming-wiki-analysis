@@ -1,31 +1,31 @@
 {
  "wiki": "osrs",
- "generatedAt": "2026-10-14T04:04:56.803Z",
+ "generatedAt": "2026-10-14T13:20:15.640Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 96.77,
-   "deadEndPct": 3.23,
-   "components": 170,
-   "cycleCount": 169,
-   "meanHops": 6.09,
-   "medianHops": 5,
+   "convergePct": 97.53,
+   "deadEndPct": 2.47,
+   "components": 168,
+   "cycleCount": 167,
+   "meanHops": 6.26,
+   "medianHops": 6,
    "maxHops": 18,
    "topAttractor": [
-    "Gielinor",
-    "Guthix",
-    "Gods"
+    "Monster",
+    "Combat",
+    "Bestiary"
    ],
-   "topAttractorPct": 33.6,
-   "top3Pct": 81.72,
-   "eligiblePct": 98.5
+   "topAttractorPct": 33.88,
+   "top3Pct": 83.23,
+   "eligiblePct": 98.8
   },
   {
    "rank": "2",
-   "convergePct": 92.89,
-   "deadEndPct": 7.11,
-   "components": 443,
-   "cycleCount": 442,
+   "convergePct": 93.14,
+   "deadEndPct": 6.86,
+   "components": 444,
+   "cycleCount": 443,
    "meanHops": 5.4,
    "medianHops": 4,
    "maxHops": 23,
@@ -33,34 +33,34 @@
     "Second Age",
     "Zaros"
    ],
-   "topAttractorPct": 18.26,
-   "top3Pct": 45.39,
-   "eligiblePct": 94.8
+   "topAttractorPct": 18.35,
+   "top3Pct": 45.53,
+   "eligiblePct": 95.1
   },
   {
    "rank": "3",
-   "convergePct": 74.54,
-   "deadEndPct": 25.46,
-   "components": 564,
-   "cycleCount": 563,
-   "meanHops": 6.9,
+   "convergePct": 74.76,
+   "deadEndPct": 25.24,
+   "components": 566,
+   "cycleCount": 565,
+   "meanHops": 6.91,
    "medianHops": 6,
    "maxHops": 29,
    "topAttractor": [
     "Experience",
     "Book of Knowledge"
    ],
-   "topAttractorPct": 22.3,
-   "top3Pct": 46.36,
-   "eligiblePct": 86.6
+   "topAttractorPct": 22.46,
+   "top3Pct": 46.58,
+   "eligiblePct": 86.9
   },
   {
    "rank": "5",
-   "convergePct": 46.94,
-   "deadEndPct": 53.06,
-   "components": 350,
-   "cycleCount": 349,
-   "meanHops": 8.09,
+   "convergePct": 47.07,
+   "deadEndPct": 52.93,
+   "components": 352,
+   "cycleCount": 351,
+   "meanHops": 8.07,
    "medianHops": 7,
    "maxHops": 27,
    "topAttractor": [
@@ -68,34 +68,34 @@
     "Witch's house (location)",
     "Nora T. Hagg"
    ],
-   "topAttractorPct": 12.19,
-   "top3Pct": 27.83,
-   "eligiblePct": 63.9
+   "topAttractorPct": 12.21,
+   "top3Pct": 27.81,
+   "eligiblePct": 64.2
   },
   {
    "rank": "last",
-   "convergePct": 98.32,
-   "deadEndPct": 1.68,
+   "convergePct": 98.65,
+   "deadEndPct": 1.35,
    "components": 786,
    "cycleCount": 785,
-   "meanHops": 13.02,
-   "medianHops": 12,
-   "maxHops": 47,
+   "meanHops": 10.77,
+   "medianHops": 8,
+   "maxHops": 44,
    "topAttractor": [
-    "Mod Ash",
-    "My Arm"
+    "Thieving/Level up table",
+    "Slayer/Level up table"
    ],
-   "topAttractorPct": 21.91,
-   "top3Pct": 53.25,
+   "topAttractorPct": 18.18,
+   "top3Pct": 47.64,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 98.21,
-   "deadEndPct": 1.79,
-   "components": 450,
-   "cycleCount": 449,
-   "meanHops": 9.93,
+   "convergePct": 98.62,
+   "deadEndPct": 1.38,
+   "components": 454,
+   "cycleCount": 453,
+   "meanHops": 9.82,
    "medianHops": 9,
    "maxHops": 43,
    "topAttractor": [
@@ -132,8 +132,8 @@
     "Brass key",
     "Hill Giant"
    ],
-   "topAttractorPct": 50.87,
-   "top3Pct": 67.12,
+   "topAttractorPct": 51.71,
+   "top3Pct": 66.37,
    "eligiblePct": 100
   }
  ]

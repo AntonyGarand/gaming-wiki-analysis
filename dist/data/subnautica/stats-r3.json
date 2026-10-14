@@ -8,7 +8,7 @@
   "deadEnd": 93,
   "deadEndPct": 13.1,
   "noLinks": 4,
-  "tooFewLinks": 66,
+  "tooFewLinks": 67,
   "unresolvable": 1
  },
  "hopStats": {
@@ -45,21 +45,21 @@
   "histogram": {
    "0": 5,
    "1": 32,
-   "2": 34,
-   "3": 48,
-   "4": 80,
-   "5": 65,
-   "6": 52,
+   "2": 35,
+   "3": 47,
+   "4": 81,
+   "5": 64,
+   "6": 53,
    "7": 47,
    "8": 38,
    "9": 47,
-   "10": 262
+   "10": 261
   },
   "atLeast": {
    "1": 99.3,
    "2": 94.8,
-   "3": 90,
-   "5": 72
+   "3": 89.9,
+   "5": 71.8
   }
  },
  "concentration": {
@@ -198,12 +198,6 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Achievements",
-   "chains": 3,
-   "pct": 0.42,
-   "reason": "only 2 eligible links"
-  },
-  {
    "title": "Console Commands",
    "chains": 3,
    "pct": 0.42,
@@ -213,6 +207,12 @@
    "title": "Warper Parts",
    "chains": 3,
    "pct": 0.42,
+   "reason": "only 2 eligible links"
+  },
+  {
+   "title": "Blue Tablet",
+   "chains": 2,
+   "pct": 0.28,
    "reason": "only 2 eligible links"
   },
   {

@@ -12,106 +12,114 @@
   "unresolvable": 1
  },
  "hopStats": {
-  "mean": 10.27,
-  "median": 9,
-  "p90": 24,
-  "max": 30
+  "mean": 21.39,
+  "median": 22,
+  "p90": 40,
+  "max": 46
  },
  "histogram": {
-  "0": 16,
-  "1": 65,
-  "2": 32,
-  "3": 43,
-  "4": 49,
-  "5": 33,
-  "6": 25,
-  "7": 31,
-  "8": 51,
-  "9": 26,
-  "10": 40,
-  "11": 37,
-  "12": 33,
-  "13": 23,
-  "14": 35,
-  "15": 24,
-  "16": 12,
+  "0": 14,
+  "1": 33,
+  "2": 4,
+  "3": 11,
+  "4": 21,
+  "5": 20,
+  "6": 17,
+  "7": 15,
+  "8": 12,
+  "9": 5,
+  "10": 7,
+  "11": 6,
+  "12": 14,
+  "13": 5,
+  "14": 23,
+  "15": 12,
+  "16": 7,
   "17": 5,
-  "18": 4,
-  "19": 6,
-  "20": 3,
-  "21": 12,
-  "22": 9,
-  "23": 10,
-  "24": 27,
-  "25": 24,
-  "26": 15,
-  "27": 5,
-  "28": 8,
-  "29": 1,
-  "30": 1
+  "18": 28,
+  "19": 21,
+  "20": 38,
+  "21": 28,
+  "22": 17,
+  "23": 18,
+  "24": 39,
+  "25": 22,
+  "26": 32,
+  "27": 28,
+  "28": 17,
+  "29": 17,
+  "30": 19,
+  "31": 17,
+  "32": 9,
+  "33": 3,
+  "34": 3,
+  "35": 6,
+  "36": 3,
+  "37": 11,
+  "38": 8,
+  "39": 9,
+  "40": 26,
+  "41": 24,
+  "42": 15,
+  "43": 5,
+  "44": 8,
+  "45": 2,
+  "46": 1
  },
  "eligibleLinks": {
   "histogram": {
    "0": 5,
    "1": 32,
-   "2": 34,
-   "3": 48,
-   "4": 80,
-   "5": 65,
-   "6": 52,
+   "2": 35,
+   "3": 47,
+   "4": 81,
+   "5": 64,
+   "6": 53,
    "7": 47,
    "8": 38,
    "9": 47,
-   "10": 262
+   "10": 261
   },
   "atLeast": {
    "1": 99.3,
    "2": 94.8,
-   "3": 90,
-   "5": 72
+   "3": 89.9,
+   "5": 71.8
   }
  },
  "concentration": {
-  "top1Pct": 66.2,
-  "top3Pct": 96.2,
+  "top1Pct": 91.27,
+  "top3Pct": 97.04,
   "top10Pct": 99.3,
-  "cycleCount": 8,
-  "entropyBits": 1.33
+  "cycleCount": 7,
+  "entropyBits": 0.55
  },
- "components": 9,
- "cycleCount": 8,
+ "components": 8,
+ "cycleCount": 7,
  "largestCycle": {
   "members": [
-   "Seabases",
-   "Hull Integrity"
+   "Console Commands",
+   "Achievements"
   ],
   "size": 2,
-  "basin": 470
+  "basin": 648
  },
  "topAttractors": [
-  {
-   "cycle": [
-    "Seabases",
-    "Hull Integrity"
-   ],
-   "basin": 470,
-   "pct": 66.2
-  },
   {
    "cycle": [
     "Console Commands",
     "Achievements"
    ],
-   "basin": 179,
-   "pct": 25.21
+   "basin": 648,
+   "pct": 91.27
   },
   {
    "cycle": [
     "Rabbit Ray Egg",
     "Rabbit Ray"
    ],
-   "basin": 34,
-   "pct": 4.79
+   "basin": 35,
+   "pct": 4.93
   },
   {
    "cycle": [
@@ -190,19 +198,19 @@
  "topFirstLinkTargets": [
   {
    "title": "Seabases",
-   "firstLinks": 27
+   "firstLinks": 26
+  },
+  {
+   "title": "Habitat Builder",
+   "firstLinks": 18
   },
   {
    "title": "Achievements",
-   "firstLinks": 22
+   "firstLinks": 18
   },
   {
    "title": "Cyclops",
    "firstLinks": 18
-  },
-  {
-   "title": "Habitat Builder",
-   "firstLinks": 17
   },
   {
    "title": "Food & Water",
@@ -222,7 +230,7 @@
   },
   {
    "title": "Prawn Suit",
-   "firstLinks": 12
+   "firstLinks": 11
   },
   {
    "title": "Alien Containment",
@@ -257,6 +265,10 @@
    "firstLinks": 7
   },
   {
+   "title": "Bioreactor",
+   "firstLinks": 7
+  },
+  {
    "title": "Inactive Lava Zone",
    "firstLinks": 7
   },
@@ -269,15 +281,7 @@
    "firstLinks": 6
   },
   {
-   "title": "Energy",
-   "firstLinks": 6
-  },
-  {
    "title": "Raw Materials",
-   "firstLinks": 6
-  },
-  {
-   "title": "Bioreactor",
    "firstLinks": 6
   },
   {
@@ -305,130 +309,134 @@
    "firstLinks": 5
   },
   {
+   "title": "Energy",
+   "firstLinks": 5
+  },
+  {
    "title": "Sea Dragon Leviathan",
    "firstLinks": 5
   }
  ],
  "topThroughTraffic": [
   {
-   "title": "Seabases",
-   "chains": 470
+   "title": "Achievements",
+   "chains": 648
   },
   {
-   "title": "Hull Integrity",
-   "chains": 470
+   "title": "Console Commands",
+   "chains": 648
+  },
+  {
+   "title": "Databank/Unobtainable",
+   "chains": 626
+  },
+  {
+   "title": "Databank",
+   "chains": 625
+  },
+  {
+   "title": "PDA",
+   "chains": 623
+  },
+  {
+   "title": "Ryley Robinson",
+   "chains": 613
+  },
+  {
+   "title": "Battery",
+   "chains": 569
+  },
+  {
+   "title": "Lead",
+   "chains": 567
+  },
+  {
+   "title": "Kelp Forest",
+   "chains": 562
+  },
+  {
+   "title": "Metal Salvage",
+   "chains": 554
+  },
+  {
+   "title": "Raw Materials",
+   "chains": 553
+  },
+  {
+   "title": "Seeds",
+   "chains": 540
+  },
+  {
+   "title": "Alien Containment",
+   "chains": 538
+  },
+  {
+   "title": "Sand Shark Egg",
+   "chains": 481
+  },
+  {
+   "title": "Grassy Plateaus",
+   "chains": 480
+  },
+  {
+   "title": "Floating Air Pump",
+   "chains": 469
+  },
+  {
+   "title": "Pipe",
+   "chains": 468
+  },
+  {
+   "title": "Oxygen",
+   "chains": 467
+  },
+  {
+   "title": "Seabases",
+   "chains": 463
   },
   {
    "title": "Thermoblade",
-   "chains": 361
+   "chains": 360
   },
   {
    "title": "Crabsquid",
-   "chains": 354
-  },
-  {
-   "title": "Flashlight",
    "chains": 353
   },
   {
    "title": "Deep Grand Reef",
-   "chains": 352
+   "chains": 351
   },
   {
    "title": "Inactive Lava Zone",
-   "chains": 350
+   "chains": 349
   },
   {
    "title": "Alien Thermal Plant",
-   "chains": 223
+   "chains": 209
   },
   {
    "title": "Alien Data Terminal",
-   "chains": 218
+   "chains": 204
   },
   {
    "title": "Ion Power Cell",
-   "chains": 213
+   "chains": 199
   },
   {
    "title": "Energy",
-   "chains": 211
+   "chains": 197
   },
   {
    "title": "Ion Cube",
-   "chains": 182
-  },
-  {
-   "title": "Achievements",
-   "chains": 179
-  },
-  {
-   "title": "Console Commands",
    "chains": 179
   },
   {
    "title": "Large Resource Deposits",
-   "chains": 171
+   "chains": 168
   },
   {
    "title": "Quartz",
-   "chains": 163
-  },
-  {
-   "title": "Databank/Unobtainable",
-   "chains": 141
-  },
-  {
-   "title": "Databank",
-   "chains": 140
-  },
-  {
-   "title": "PDA",
-   "chains": 138
-  },
-  {
-   "title": "Underwater Islands",
-   "chains": 131
-  },
-  {
-   "title": "Garryfish",
-   "chains": 130
-  },
-  {
-   "title": "Holefish",
-   "chains": 128
-  },
-  {
-   "title": "Ryley Robinson",
-   "chains": 128
-  },
-  {
-   "title": "Scanner",
-   "chains": 126
-  },
-  {
-   "title": "Blueprints",
-   "chains": 125
-  },
-  {
-   "title": "Power Cell Charger",
-   "chains": 115
-  },
-  {
-   "title": "Power Cell",
-   "chains": 114
-  },
-  {
-   "title": "Prawn Suit",
-   "chains": 113
-  },
-  {
-   "title": "Planet 4546B",
-   "chains": 102
-  },
-  {
-   "title": "Battery",
-   "chains": 85
+   "chains": 160
   }
  ],
  "randomSeeds": {
@@ -438,7 +446,7 @@
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 66.34,
+   "mean": 91.41,
    "sd": 0.28
   }
  }

@@ -1,6 +1,6 @@
 {
  "wiki": "vampiresurvivors",
- "generatedAt": "2026-10-14T04:05:36.661Z",
+ "generatedAt": "2026-10-14T13:58:21.395Z",
  "ranks": [
   {
    "rank": "strict1",
@@ -22,11 +22,11 @@
   },
   {
    "rank": "2",
-   "convergePct": 48.43,
-   "deadEndPct": 51.57,
+   "convergePct": 48.39,
+   "deadEndPct": 51.61,
    "components": 7,
    "cycleCount": 6,
-   "meanHops": 3.09,
+   "meanHops": 3.08,
    "medianHops": 3,
    "maxHops": 8,
    "topAttractor": [
@@ -34,17 +34,17 @@
     "Enemies",
     "Level up"
    ],
-   "topAttractorPct": 46.36,
-   "top3Pct": 48.17,
+   "topAttractorPct": 46.32,
+   "top3Pct": 48.13,
    "eligiblePct": 71.3
   },
   {
    "rank": "3",
-   "convergePct": 51.87,
-   "deadEndPct": 48.13,
+   "convergePct": 51.83,
+   "deadEndPct": 48.17,
    "components": 11,
    "cycleCount": 10,
-   "meanHops": 3.6,
+   "meanHops": 3.59,
    "medianHops": 3,
    "maxHops": 9,
    "topAttractor": [
@@ -53,8 +53,8 @@
     "PowerUps",
     "Gold Coin (currency)"
    ],
-   "topAttractorPct": 31.9,
-   "top3Pct": 51.18,
+   "topAttractorPct": 31.86,
+   "top3Pct": 51.14,
    "eligiblePct": 55.5
   },
   {
@@ -71,7 +71,7 @@
     "Greatest Jubilee",
     "Luck"
    ],
-   "topAttractorPct": 20.15,
+   "topAttractorPct": 20.19,
    "top3Pct": 31.68,
    "eligiblePct": 38.6
   },

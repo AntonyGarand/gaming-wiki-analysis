@@ -1,6 +1,6 @@
 {
  "wiki": "valheim",
- "generatedAt": "2026-10-14T04:05:34.840Z",
+ "generatedAt": "2026-10-14T13:57:34.648Z",
  "ranks": [
   {
    "rank": "strict1",
@@ -58,11 +58,11 @@
   },
   {
    "rank": "5",
-   "convergePct": 13.16,
-   "deadEndPct": 86.84,
+   "convergePct": 13.4,
+   "deadEndPct": 86.6,
    "components": 11,
    "cycleCount": 10,
-   "meanHops": 4.38,
+   "meanHops": 4.39,
    "medianHops": 3,
    "maxHops": 14,
    "topAttractor": [
@@ -70,7 +70,7 @@
     "Dragon Egg"
    ],
    "topAttractorPct": 5.84,
-   "top3Pct": 10.9,
+   "top3Pct": 11.14,
    "eligiblePct": 62.5
   },
   {
@@ -97,7 +97,7 @@
    "deadEndPct": 1.09,
    "components": 25,
    "cycleCount": 24,
-   "meanHops": 4.62,
+   "meanHops": 4.64,
    "medianHops": 4,
    "maxHops": 20,
    "topAttractor": [
@@ -105,7 +105,7 @@
     "Magic"
    ],
    "topAttractorPct": 30.69,
-   "top3Pct": 68.3,
+   "top3Pct": 68.93,
    "eligiblePct": 100
   }
  ]

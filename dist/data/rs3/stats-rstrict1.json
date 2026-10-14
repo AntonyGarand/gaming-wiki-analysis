@@ -3,32 +3,32 @@
  "rank": "strict1",
  "nodes": 79761,
  "converge": {
-  "articles": 77429,
-  "pct": 97.08,
-  "deadEnd": 2332,
-  "deadEndPct": 2.92,
-  "noLinks": 2214,
+  "articles": 77833,
+  "pct": 97.58,
+  "deadEnd": 1928,
+  "deadEndPct": 2.42,
+  "noLinks": 1895,
   "tooFewLinks": 0,
   "unresolvable": 3
  },
  "hopStats": {
-  "mean": 4.01,
+  "mean": 4,
   "median": 3,
   "p90": 8,
   "max": 17
  },
  "histogram": {
-  "0": 512,
-  "1": 6158,
-  "2": 19004,
-  "3": 16157,
-  "4": 12683,
-  "5": 6926,
-  "6": 3185,
-  "7": 2716,
-  "8": 3329,
-  "9": 2637,
-  "10": 2200,
+  "0": 510,
+  "1": 6090,
+  "2": 19016,
+  "3": 16416,
+  "4": 12910,
+  "5": 7017,
+  "6": 3260,
+  "7": 2715,
+  "8": 3256,
+  "9": 2522,
+  "10": 2199,
   "11": 1259,
   "12": 494,
   "13": 142,
@@ -39,34 +39,34 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2217,
-   "1": 6358,
-   "2": 10238,
-   "3": 10053,
-   "4": 9430,
-   "5": 7603,
-   "6": 5676,
-   "7": 4245,
-   "8": 3578,
-   "9": 2896,
-   "10": 17467
+   "0": 1898,
+   "1": 6132,
+   "2": 10227,
+   "3": 10045,
+   "4": 9422,
+   "5": 7596,
+   "6": 5666,
+   "7": 4239,
+   "8": 3570,
+   "9": 2893,
+   "10": 18073
   },
   "atLeast": {
-   "1": 97.2,
-   "2": 89.2,
-   "3": 76.4,
-   "5": 52
+   "1": 97.6,
+   "2": 89.9,
+   "3": 77.1,
+   "5": 52.7
   }
  },
  "concentration": {
-  "top1Pct": 18.12,
-  "top3Pct": 46.51,
-  "top10Pct": 91.21,
-  "cycleCount": 248,
-  "entropyBits": 3.54
+  "top1Pct": 17.89,
+  "top3Pct": 46.6,
+  "top10Pct": 91.81,
+  "cycleCount": 247,
+  "entropyBits": 3.53
  },
- "components": 249,
- "cycleCount": 248,
+ "components": 248,
+ "cycleCount": 247,
  "largestCycle": {
   "members": [
    "Elder Gods",
@@ -74,7 +74,7 @@
    "Elder artefacts"
   ],
   "size": 3,
-  "basin": 14450
+  "basin": 14270
  },
  "topAttractors": [
   {
@@ -83,8 +83,8 @@
     "Gods",
     "Elder artefacts"
    ],
-   "basin": 14450,
-   "pct": 18.12
+   "basin": 14270,
+   "pct": 17.89
   },
   {
    "cycle": [
@@ -92,8 +92,8 @@
     "Skill training guides",
     "Experience"
    ],
-   "basin": 11453,
-   "pct": 14.36
+   "basin": 11688,
+   "pct": 14.65
   },
   {
    "cycle": [
@@ -103,39 +103,39 @@
     "Beneath Cursed Tides",
     "Quests"
    ],
-   "basin": 11197,
-   "pct": 14.04
+   "basin": 11207,
+   "pct": 14.05
   },
   {
    "cycle": [
     "Items",
     "Backpack"
    ],
-   "basin": 9238,
-   "pct": 11.58
+   "basin": 9246,
+   "pct": 11.59
   },
   {
    "cycle": [
     "Members",
     "Membership subscription"
    ],
-   "basin": 7334,
-   "pct": 9.19
+   "basin": 7663,
+   "pct": 9.61
   },
   {
    "cycle": [
     "Jagex",
     "Andrew Gower"
    ],
-   "basin": 6129,
-   "pct": 7.68
+   "basin": 6199,
+   "pct": 7.77
   },
   {
    "cycle": [
     "Titles",
     "Customisations"
    ],
-   "basin": 4648,
+   "basin": 4650,
    "pct": 5.83
   },
   {
@@ -144,7 +144,7 @@
     "Coins",
     "Grand Exchange"
    ],
-   "basin": 4609,
+   "basin": 4610,
    "pct": 5.78
   },
   {
@@ -152,7 +152,7 @@
     "List of races",
     "Abyssal"
    ],
-   "basin": 2145,
+   "basin": 2147,
    "pct": 2.69
   },
   {
@@ -160,8 +160,8 @@
     "Treasure Hunter",
     "Treasure Hunter Key"
    ],
-   "basin": 1546,
-   "pct": 1.94
+   "basin": 1552,
+   "pct": 1.95
   },
   {
    "cycle": [
@@ -248,45 +248,9 @@
  ],
  "deadEndTerminals": [
   {
-   "title": "Treasure Trails/Guide/Anagrams",
-   "chains": 57,
-   "pct": 0.07,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Prayer powder",
-   "chains": 8,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Squeal of Fortune/Promotions",
-   "chains": 6,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Treasure Hunter/Promotions",
-   "chains": 6,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Macarthur Fortune Holding",
-   "chains": 5,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
    "title": "God Wars Dungeon 2",
    "chains": 4,
    "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Clan Citadel/Patterns",
-   "chains": 3,
-   "pct": 0,
    "reason": "no eligible links"
   },
   {
@@ -314,25 +278,61 @@
    "reason": "no eligible links"
   },
   {
-   "title": "RuneScape Wiki",
-   "chains": 2,
-   "pct": 0,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Tracey West",
    "chains": 2,
    "pct": 0,
    "reason": "no eligible links"
   },
   {
-   "title": "Bauble",
+   "title": "No Good to Me Alive",
    "chains": 2,
    "pct": 0,
    "reason": "no eligible links"
   },
   {
-   "title": "No Good to Me Alive",
+   "title": "At One With Nature",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Happy Hour",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "James Hannigan",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Alch-aholic",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Sing-Along-a-Seren Verse 1",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Medium bladed orikalkum salvage",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Large bladed orikalkum salvage",
+   "chains": 2,
+   "pct": 0,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Huge bladed orikalkum salvage",
    "chains": 2,
    "pct": 0,
    "reason": "no eligible links"
@@ -358,7 +358,7 @@
   },
   {
    "title": "Music",
-   "firstLinks": 1284
+   "firstLinks": 1285
   },
   {
    "title": "Player-owned port",
@@ -370,7 +370,7 @@
   },
   {
    "title": "Treasure Hunter",
-   "firstLinks": 862
+   "firstLinks": 863
   },
   {
    "title": "Dungeoneering",
@@ -378,7 +378,7 @@
   },
   {
    "title": "Titles",
-   "firstLinks": 664
+   "firstLinks": 666
   },
   {
    "title": "Livestream",
@@ -464,123 +464,123 @@
  "topThroughTraffic": [
   {
    "title": "Gods",
-   "chains": 14450
+   "chains": 14270
   },
   {
    "title": "Elder Gods",
-   "chains": 14450
+   "chains": 14270
   },
   {
    "title": "Elder artefacts",
-   "chains": 14450
+   "chains": 14270
   },
   {
    "title": "Gielinor",
-   "chains": 12475
+   "chains": 12293
   },
   {
    "title": "Skills",
-   "chains": 11453
+   "chains": 11688
   },
   {
    "title": "Experience",
-   "chains": 11453
+   "chains": 11688
   },
   {
    "title": "Skill training guides",
-   "chains": 11453
+   "chains": 11688
   },
   {
    "title": "Interface",
-   "chains": 11197
+   "chains": 11207
   },
   {
    "title": "Sunken Tutorial Island",
-   "chains": 11197
+   "chains": 11207
   },
   {
    "title": "Quests",
-   "chains": 11197
+   "chains": 11207
   },
   {
    "title": "Beneath Cursed Tides",
-   "chains": 11197
+   "chains": 11207
   },
   {
    "title": "Tutorial Island",
-   "chains": 11197
+   "chains": 11207
   },
   {
    "title": "Items",
-   "chains": 9238
+   "chains": 9246
   },
   {
    "title": "Backpack",
-   "chains": 9238
+   "chains": 9246
   },
   {
    "title": "World map",
-   "chains": 8396
+   "chains": 8205
   },
   {
    "title": "Locations",
-   "chains": 8381
+   "chains": 8190
   },
   {
    "title": "Members",
-   "chains": 7334
+   "chains": 7663
   },
   {
    "title": "Membership subscription",
-   "chains": 7334
+   "chains": 7663
   },
   {
    "title": "Minimap",
-   "chains": 7104
+   "chains": 7107
   },
   {
    "title": "Character",
-   "chains": 7035
+   "chains": 7038
   },
   {
    "title": "Kingdom",
-   "chains": 6926
+   "chains": 6734
   },
   {
    "title": "Jagex",
-   "chains": 6129
+   "chains": 6199
   },
   {
    "title": "Andrew Gower",
-   "chains": 6129
+   "chains": 6199
   },
   {
    "title": "Death (mechanic)",
-   "chains": 4986
+   "chains": 4988
   },
   {
    "title": "Life points",
-   "chains": 4968
+   "chains": 4970
   },
   {
    "title": "Titles",
-   "chains": 4648
+   "chains": 4650
   },
   {
    "title": "Customisations",
-   "chains": 4648
+   "chains": 4650
   },
   {
    "title": "Trading",
-   "chains": 4609
+   "chains": 4610
   },
   {
    "title": "Coins",
-   "chains": 4609
+   "chains": 4610
   },
   {
    "title": "Grand Exchange",
-   "chains": 4609
+   "chains": 4610
   }
  ]
 }

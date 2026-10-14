@@ -12,7 +12,7 @@
   "unresolvable": 0
  },
  "hopStats": {
-  "mean": 4.62,
+  "mean": 4.64,
   "median": 4,
   "p90": 8,
   "max": 20
@@ -20,12 +20,12 @@
  "histogram": {
   "0": 53,
   "1": 204,
-  "2": 161,
-  "3": 115,
-  "4": 124,
-  "5": 103,
-  "6": 187,
-  "7": 119,
+  "2": 160,
+  "3": 110,
+  "4": 122,
+  "5": 104,
+  "6": 192,
+  "7": 121,
   "8": 82,
   "9": 52,
   "10": 19,
@@ -63,10 +63,10 @@
  },
  "concentration": {
   "top1Pct": 30.69,
-  "top3Pct": 68.3,
+  "top3Pct": 68.93,
   "top10Pct": 95.09,
   "cycleCount": 24,
-  "entropyBits": 2.95
+  "entropyBits": 2.94
  },
  "components": 25,
  "cycleCount": 24,
@@ -92,8 +92,8 @@
     "Swamp",
     "Blob"
    ],
-   "basin": 324,
-   "pct": 25.23
+   "basin": 332,
+   "pct": 25.86
   },
   {
    "cycle": [
@@ -108,8 +108,8 @@
     "Flint Spear",
     "Forge of Potential"
    ],
-   "basin": 96,
-   "pct": 7.48
+   "basin": 88,
+   "pct": 6.85
   },
   {
    "cycle": [
@@ -453,11 +453,11 @@
   },
   {
    "title": "Swamp",
-   "chains": 324
+   "chains": 332
   },
   {
    "title": "Blob",
-   "chains": 324
+   "chains": 332
   },
   {
    "title": "Infested Mine",
@@ -473,11 +473,11 @@
   },
   {
    "title": "Leech",
-   "chains": 223
+   "chains": 231
   },
   {
    "title": "Damage",
-   "chains": 221
+   "chains": 229
   },
   {
    "title": "Charred Fortress",
@@ -513,11 +513,11 @@
   },
   {
    "title": "Flint Spear",
-   "chains": 96
+   "chains": 88
   },
   {
    "title": "Forge of Potential",
-   "chains": 96
+   "chains": 88
   },
   {
    "title": "Mountain",

@@ -3,13 +3,13 @@
  "rank": "2",
  "nodes": 35312,
  "converge": {
-  "articles": 31347,
-  "pct": 88.77,
-  "deadEnd": 3965,
-  "deadEndPct": 11.23,
-  "noLinks": 2241,
-  "tooFewLinks": 1263,
-  "unresolvable": 20
+  "articles": 31341,
+  "pct": 88.75,
+  "deadEnd": 3971,
+  "deadEndPct": 11.25,
+  "noLinks": 2240,
+  "tooFewLinks": 1264,
+  "unresolvable": 17
  },
  "hopStats": {
   "mean": 4.58,
@@ -19,43 +19,43 @@
  },
  "histogram": {
   "0": 82,
-  "1": 1286,
-  "2": 3500,
-  "3": 1613,
-  "4": 432,
-  "5": 18938,
-  "6": 4871,
-  "7": 397,
-  "8": 163,
+  "1": 1287,
+  "2": 3498,
+  "3": 1609,
+  "4": 427,
+  "5": 18941,
+  "6": 4872,
+  "7": 396,
+  "8": 164,
   "9": 49,
   "10": 15,
   "11": 1
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2261,
-   "1": 1263,
-   "2": 7376,
-   "3": 8973,
-   "4": 4316,
-   "5": 2378,
-   "6": 1351,
-   "7": 842,
-   "8": 601,
-   "9": 503,
-   "10": 5448
+   "0": 2257,
+   "1": 1264,
+   "2": 7398,
+   "3": 9015,
+   "4": 4347,
+   "5": 2402,
+   "6": 1375,
+   "7": 876,
+   "8": 630,
+   "9": 510,
+   "10": 5238
   },
   "atLeast": {
    "1": 93.6,
    "2": 90,
    "3": 69.1,
-   "5": 31.5
+   "5": 31.2
   }
  },
  "concentration": {
-  "top1Pct": 81.41,
-  "top3Pct": 87.88,
-  "top10Pct": 88.45,
+  "top1Pct": 81.42,
+  "top3Pct": 87.86,
+  "top10Pct": 88.43,
   "cycleCount": 37,
   "entropyBits": 0.57
  },
@@ -67,7 +67,7 @@
    "Lobby Music"
   ],
   "size": 2,
-  "basin": 28748
+  "basin": 28750
  },
  "topAttractors": [
   {
@@ -75,8 +75,8 @@
     "Victory Royale",
     "Lobby Music"
    ],
-   "basin": 28748,
-   "pct": 81.41
+   "basin": 28750,
+   "pct": 81.42
   },
   {
    "cycle": [
@@ -84,7 +84,7 @@
     "Heroes",
     "Soldiers"
    ],
-   "basin": 1479,
+   "basin": 1481,
    "pct": 4.19
   },
   {
@@ -92,8 +92,8 @@
     "Cosmetic Items",
     "Battle Pass"
    ],
-   "basin": 805,
-   "pct": 2.28
+   "basin": 794,
+   "pct": 2.25
   },
   {
    "cycle": [
@@ -154,7 +154,7 @@
     "Bandage Bazooka",
     "Chug Cannon"
    ],
-   "basin": 9,
+   "basin": 10,
    "pct": 0.03
   },
   {
@@ -296,18 +296,18 @@
   },
   {
    "title": "Flash",
+   "chains": 10,
+   "pct": 0.03,
+   "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Phase Scout",
    "chains": 9,
    "pct": 0.03,
    "reason": "only 1 eligible links"
   },
   {
    "title": "Content Update v6.30",
-   "chains": 8,
-   "pct": 0.02,
-   "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Phase Scout",
    "chains": 8,
    "pct": 0.02,
    "reason": "only 1 eligible links"
@@ -339,11 +339,11 @@
   },
   {
    "title": "Fortnite: Battle Royale",
-   "firstLinks": 2862
+   "firstLinks": 2860
   },
   {
    "title": "Fortnite: Save the World",
-   "firstLinks": 678
+   "firstLinks": 677
   },
   {
    "title": "Battle Pass",
@@ -450,54 +450,54 @@
    "firstLinks": 23
   },
   {
-   "title": "Loading Screens",
+   "title": "Heroes",
    "firstLinks": 22
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Victory Royale",
-   "chains": 28748
+   "chains": 28750
   },
   {
    "title": "Lobby Music",
-   "chains": 28748
+   "chains": 28750
   },
   {
    "title": "Fortnite: Battle Royale",
-   "chains": 28468
+   "chains": 28470
   },
   {
    "title": "Rust Lord",
-   "chains": 24088
+   "chains": 24089
   },
   {
    "title": "Unreal Engine",
-   "chains": 24087
+   "chains": 24088
   },
   {
    "title": "Fortnite",
-   "chains": 24046
+   "chains": 24047
   },
   {
    "title": "Heroes",
-   "chains": 1479
+   "chains": 1481
   },
   {
    "title": "Soldiers",
-   "chains": 1479
+   "chains": 1481
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 1479
+   "chains": 1481
   },
   {
    "title": "Battle Pass",
-   "chains": 805
+   "chains": 794
   },
   {
    "title": "Cosmetic Items",
-   "chains": 805
+   "chains": 794
   },
   {
    "title": "Duos",
@@ -509,7 +509,7 @@
   },
   {
    "title": "Athena",
-   "chains": 239
+   "chains": 240
   },
   {
    "title": "XP",
@@ -517,7 +517,7 @@
   },
   {
    "title": "Outfits",
-   "chains": 142
+   "chains": 140
   },
   {
    "title": "Fortnite Festival",
@@ -552,12 +552,12 @@
    "chains": 76
   },
   {
-   "title": "Update v42.20",
-   "chains": 72
+   "title": "Hero Back Blings",
+   "chains": 73
   },
   {
-   "title": "Hero Back Blings",
-   "chains": 71
+   "title": "Update v42.20",
+   "chains": 72
   },
   {
    "title": "Update v42.10",
@@ -572,7 +572,7 @@
    "chains": 68
   },
   {
-   "title": "Cosmetic Models",
+   "title": "Update v36.10",
    "chains": 67
   }
  ]

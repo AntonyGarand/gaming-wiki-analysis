@@ -1,6 +1,6 @@
 {
  "wiki": "subnautica",
- "generatedAt": "2026-10-14T04:05:42.323Z",
+ "generatedAt": "2026-10-14T13:59:51.892Z",
  "ranks": [
   {
    "rank": "strict1",
@@ -51,24 +51,24 @@
    ],
    "topAttractorPct": 52.25,
    "top3Pct": 77.46,
-   "eligiblePct": 90
+   "eligiblePct": 89.9
   },
   {
    "rank": "5",
-   "convergePct": 36.34,
-   "deadEndPct": 63.66,
+   "convergePct": 36.48,
+   "deadEndPct": 63.52,
    "components": 11,
    "cycleCount": 10,
-   "meanHops": 3.87,
+   "meanHops": 3.89,
    "medianHops": 4,
    "maxHops": 12,
    "topAttractor": [
     "Cyclops",
     "Habitat Builder"
    ],
-   "topAttractorPct": 19.58,
-   "top3Pct": 30.28,
-   "eligiblePct": 72
+   "topAttractorPct": 19.72,
+   "top3Pct": 30.42,
+   "eligiblePct": 71.8
   },
   {
    "rank": "last",
@@ -76,8 +76,8 @@
    "deadEndPct": 0.7,
    "components": 13,
    "cycleCount": 12,
-   "meanHops": 5.45,
-   "medianHops": 4,
+   "meanHops": 6.48,
+   "medianHops": 5,
    "maxHops": 19,
    "topAttractor": [
     "Cut Content",
@@ -94,25 +94,25 @@
     "Modification Station",
     "Fragments"
    ],
-   "topAttractorPct": 38.73,
-   "top3Pct": 90.85,
+   "topAttractorPct": 49.72,
+   "top3Pct": 88.31,
    "eligiblePct": 100
   },
   {
    "rank": "random",
    "convergePct": 99.3,
    "deadEndPct": 0.7,
-   "components": 9,
-   "cycleCount": 8,
-   "meanHops": 10.27,
-   "medianHops": 9,
-   "maxHops": 30,
+   "components": 8,
+   "cycleCount": 7,
+   "meanHops": 21.39,
+   "medianHops": 22,
+   "maxHops": 46,
    "topAttractor": [
-    "Seabases",
-    "Hull Integrity"
+    "Console Commands",
+    "Achievements"
    ],
-   "topAttractorPct": 66.2,
-   "top3Pct": 96.2,
+   "topAttractorPct": 91.27,
+   "top3Pct": 97.04,
    "eligiblePct": 100
   }
  ]

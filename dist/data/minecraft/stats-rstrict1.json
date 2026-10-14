@@ -3,13 +3,13 @@
  "rank": "strict1",
  "nodes": 14078,
  "converge": {
-  "articles": 8818,
+  "articles": 8819,
   "pct": 62.64,
-  "deadEnd": 5260,
+  "deadEnd": 5259,
   "deadEndPct": 37.36,
-  "noLinks": 5088,
+  "noLinks": 4873,
   "tooFewLinks": 0,
-  "unresolvable": 17
+  "unresolvable": 231
  },
  "hopStats": {
   "mean": 3.81,
@@ -20,12 +20,12 @@
  "histogram": {
   "0": 177,
   "1": 1252,
-  "2": 1484,
+  "2": 1485,
   "3": 1541,
-  "4": 1432,
-  "5": 966,
-  "6": 810,
-  "7": 459,
+  "4": 1424,
+  "5": 972,
+  "6": 811,
+  "7": 460,
   "8": 345,
   "9": 223,
   "10": 104,
@@ -36,29 +36,29 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 5105,
-   "1": 1377,
-   "2": 969,
-   "3": 719,
-   "4": 493,
-   "5": 449,
-   "6": 340,
-   "7": 287,
-   "8": 305,
+   "0": 5104,
+   "1": 1380,
+   "2": 967,
+   "3": 720,
+   "4": 497,
+   "5": 447,
+   "6": 337,
+   "7": 292,
+   "8": 308,
    "9": 270,
-   "10": 3764
+   "10": 3756
   },
   "atLeast": {
    "1": 63.7,
-   "2": 54,
+   "2": 53.9,
    "3": 47.1,
-   "5": 38.5
+   "5": 38.4
   }
  },
  "concentration": {
   "top1Pct": 35.84,
   "top3Pct": 50.55,
-  "top10Pct": 55.88,
+  "top10Pct": 55.89,
   "cycleCount": 86,
   "entropyBits": 2.65
  },
@@ -88,7 +88,7 @@
     "Xbox (division)",
     "Microsoft"
    ],
-   "basin": 1185,
+   "basin": 1186,
    "pct": 8.42
   },
   {
@@ -470,23 +470,23 @@
   },
   {
    "title": "Player",
-   "chains": 1337
+   "chains": 1338
   },
   {
    "title": "Mojang Studios",
-   "chains": 1185
+   "chains": 1186
   },
   {
    "title": "Microsoft",
-   "chains": 1185
+   "chains": 1186
   },
   {
    "title": "Xbox Game Studios",
-   "chains": 1185
+   "chains": 1186
   },
   {
    "title": "Xbox (division)",
-   "chains": 1185
+   "chains": 1186
   },
   {
    "title": "Bats and Pots",
@@ -554,7 +554,7 @@
   },
   {
    "title": "Marketplace",
-   "chains": 327
+   "chains": 328
   },
   {
    "title": "Dimension",

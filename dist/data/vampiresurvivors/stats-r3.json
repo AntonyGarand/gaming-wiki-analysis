@@ -3,16 +3,16 @@
  "rank": "3",
  "nodes": 2323,
  "converge": {
-  "articles": 1205,
-  "pct": 51.87,
-  "deadEnd": 1118,
-  "deadEndPct": 48.13,
+  "articles": 1204,
+  "pct": 51.83,
+  "deadEnd": 1119,
+  "deadEndPct": 48.17,
   "noLinks": 81,
   "tooFewLinks": 947,
   "unresolvable": 6
  },
  "hopStats": {
-  "mean": 3.6,
+  "mean": 3.59,
   "median": 3,
   "p90": 7,
   "max": 9
@@ -20,13 +20,13 @@
  "histogram": {
   "0": 22,
   "1": 177,
-  "2": 250,
+  "2": 251,
   "3": 155,
   "4": 243,
   "5": 73,
-  "6": 163,
+  "6": 162,
   "7": 98,
-  "8": 22,
+  "8": 21,
   "9": 2
  },
  "eligibleLinks": {
@@ -38,8 +38,8 @@
    "4": 150,
    "5": 171,
    "6": 138,
-   "7": 109,
-   "8": 90,
+   "7": 107,
+   "8": 92,
    "9": 87,
    "10": 301
   },
@@ -51,11 +51,11 @@
   }
  },
  "concentration": {
-  "top1Pct": 31.9,
-  "top3Pct": 51.18,
-  "top10Pct": 51.87,
+  "top1Pct": 31.86,
+  "top3Pct": 51.14,
+  "top10Pct": 51.83,
   "cycleCount": 10,
-  "entropyBits": 1.12
+  "entropyBits": 1.13
  },
  "components": 11,
  "cycleCount": 10,
@@ -67,7 +67,7 @@
    "Gold Coin (currency)"
   ],
   "size": 4,
-  "basin": 741
+  "basin": 740
  },
  "topAttractors": [
   {
@@ -77,8 +77,8 @@
     "PowerUps",
     "Gold Coin (currency)"
    ],
-   "basin": 741,
-   "pct": 31.9
+   "basin": 740,
+   "pct": 31.86
   },
   {
    "cycle": [
@@ -197,6 +197,12 @@
    "reason": "only 2 eligible links"
   },
   {
+   "title": "Vampire Survivors 3",
+   "chains": 4,
+   "pct": 0.17,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Last Breath",
    "chains": 4,
    "pct": 0.17,
@@ -234,12 +240,6 @@
   },
   {
    "title": "Legacy of the Moonspell (album)",
-   "chains": 3,
-   "pct": 0.13,
-   "reason": "only 1 eligible links"
-  },
-  {
-   "title": "Vampire Survivors 3",
    "chains": 3,
    "pct": 0.13,
    "reason": "only 1 eligible links"
@@ -340,11 +340,11 @@
    "firstLinks": 11
   },
   {
-   "title": "Gallo Tower",
-   "firstLinks": 11
+   "title": "Freeze",
+   "firstLinks": 10
   },
   {
-   "title": "Freeze",
+   "title": "Gallo Tower",
    "firstLinks": 10
   },
   {
@@ -371,23 +371,23 @@
  "topThroughTraffic": [
   {
    "title": "PowerUps",
-   "chains": 741
+   "chains": 740
   },
   {
    "title": "Magnet",
-   "chains": 741
+   "chains": 740
   },
   {
    "title": "Pickups",
-   "chains": 741
+   "chains": 740
   },
   {
    "title": "Gold Coin (currency)",
-   "chains": 741
+   "chains": 740
   },
   {
    "title": "Stages",
-   "chains": 600
+   "chains": 599
   },
   {
    "title": "Weapons",
@@ -399,31 +399,31 @@
   },
   {
    "title": "Relics",
-   "chains": 306
+   "chains": 305
   },
   {
    "title": "Yellow Sign",
-   "chains": 181
+   "chains": 180
   },
   {
    "title": "Boon Marrabbio",
-   "chains": 168
-  },
-  {
-   "title": "Boon Marrabbio (enemy)",
    "chains": 167
   },
   {
+   "title": "Boon Marrabbio (enemy)",
+   "chains": 166
+  },
+  {
    "title": "Mad Forest",
-   "chains": 165
+   "chains": 164
   },
   {
    "title": "Secrets",
-   "chains": 155
+   "chains": 154
   },
   {
    "title": "Spells",
-   "chains": 154
+   "chains": 153
   },
   {
    "title": "Ode to Castlevania (stage)",
@@ -439,7 +439,7 @@
   },
   {
    "title": "Forbidden Scrolls of Morbane",
-   "chains": 78
+   "chains": 77
   },
   {
    "title": "Characters",
@@ -462,12 +462,12 @@
    "chains": 30
   },
   {
-   "title": "Gallo Tower",
+   "title": "Glimmers",
    "chains": 26
   },
   {
-   "title": "Glimmers",
-   "chains": 26
+   "title": "Gallo Tower",
+   "chains": 25
   },
   {
    "title": "Moongolow",

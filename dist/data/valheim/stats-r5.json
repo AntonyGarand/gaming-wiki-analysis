@@ -3,16 +3,16 @@
  "rank": "5",
  "nodes": 1284,
  "converge": {
-  "articles": 169,
-  "pct": 13.16,
-  "deadEnd": 1115,
-  "deadEndPct": 86.84,
+  "articles": 172,
+  "pct": 13.4,
+  "deadEnd": 1112,
+  "deadEndPct": 86.6,
   "noLinks": 12,
   "tooFewLinks": 470,
   "unresolvable": 0
  },
  "hopStats": {
-  "mean": 4.38,
+  "mean": 4.39,
   "median": 3,
   "p90": 11,
   "max": 14
@@ -22,8 +22,8 @@
   "1": 25,
   "2": 26,
   "3": 29,
-  "4": 13,
-  "5": 9,
+  "4": 14,
+  "5": 11,
   "6": 6,
   "7": 1,
   "8": 1,
@@ -57,10 +57,10 @@
  },
  "concentration": {
   "top1Pct": 5.84,
-  "top3Pct": 10.9,
-  "top10Pct": 13.16,
+  "top3Pct": 11.14,
+  "top10Pct": 13.4,
   "cycleCount": 10,
-  "entropyBits": 2.31
+  "entropyBits": 2.3
  },
  "components": 11,
  "cycleCount": 10,
@@ -87,8 +87,8 @@
     "Swamp Runestone Tower",
     "Bonemass"
    ],
-   "basin": 36,
-   "pct": 2.8
+   "basin": 39,
+   "pct": 3.04
   },
   {
    "cycle": [
@@ -181,15 +181,15 @@
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Greydwarf",
-   "chains": 27,
-   "pct": 2.1,
-   "reason": "only 3 eligible links"
-  },
-  {
    "title": "Sealbreaker",
    "chains": 25,
    "pct": 1.95,
+   "reason": "only 3 eligible links"
+  },
+  {
+   "title": "Greydwarf",
+   "chains": 24,
+   "pct": 1.87,
    "reason": "only 3 eligible links"
   },
   {

@@ -3,116 +3,116 @@
  "rank": "random",
  "nodes": 79761,
  "converge": {
-  "articles": 76773,
-  "pct": 96.25,
-  "deadEnd": 2988,
-  "deadEndPct": 3.75,
-  "noLinks": 2214,
+  "articles": 77442,
+  "pct": 97.09,
+  "deadEnd": 2319,
+  "deadEndPct": 2.91,
+  "noLinks": 1895,
   "tooFewLinks": 0,
   "unresolvable": 3
  },
  "hopStats": {
-  "mean": 11.02,
+  "mean": 11.13,
   "median": 7,
   "p90": 28,
   "max": 56
  },
  "histogram": {
-  "0": 2361,
-  "1": 6479,
-  "2": 5754,
-  "3": 4806,
-  "4": 6717,
-  "5": 4680,
-  "6": 4207,
-  "7": 3642,
-  "8": 3467,
-  "9": 3057,
-  "10": 3125,
-  "11": 2744,
-  "12": 2297,
-  "13": 2641,
-  "14": 1554,
-  "15": 1599,
-  "16": 1144,
-  "17": 918,
-  "18": 1395,
-  "19": 1248,
-  "20": 1081,
-  "21": 922,
-  "22": 842,
-  "23": 685,
-  "24": 401,
-  "25": 491,
-  "26": 314,
-  "27": 298,
-  "28": 494,
-  "29": 484,
-  "30": 412,
-  "31": 364,
-  "32": 229,
-  "33": 191,
-  "34": 308,
-  "35": 211,
+  "0": 2371,
+  "1": 6541,
+  "2": 5797,
+  "3": 4860,
+  "4": 6782,
+  "5": 4639,
+  "6": 4169,
+  "7": 3577,
+  "8": 3388,
+  "9": 3315,
+  "10": 3181,
+  "11": 2889,
+  "12": 2220,
+  "13": 2529,
+  "14": 1446,
+  "15": 1518,
+  "16": 1220,
+  "17": 992,
+  "18": 1386,
+  "19": 1366,
+  "20": 1068,
+  "21": 920,
+  "22": 844,
+  "23": 697,
+  "24": 428,
+  "25": 522,
+  "26": 310,
+  "27": 317,
+  "28": 490,
+  "29": 491,
+  "30": 420,
+  "31": 387,
+  "32": 234,
+  "33": 192,
+  "34": 310,
+  "35": 210,
   "36": 430,
-  "37": 370,
-  "38": 215,
-  "39": 1947,
-  "40": 491,
-  "41": 633,
-  "42": 267,
-  "43": 243,
-  "44": 192,
-  "45": 86,
-  "46": 65,
-  "47": 162,
-  "48": 14,
-  "49": 57,
+  "37": 371,
+  "38": 213,
+  "39": 1838,
+  "40": 505,
+  "41": 672,
+  "42": 351,
+  "43": 262,
+  "44": 180,
+  "45": 161,
+  "46": 79,
+  "47": 176,
+  "48": 78,
+  "49": 60,
   "50": 3,
   "51": 6,
   "52": 3,
   "53": 10,
   "54": 15,
   "55": 1,
-  "56": 1
+  "56": 2
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2217,
-   "1": 6358,
-   "2": 10238,
-   "3": 10053,
-   "4": 9430,
-   "5": 7603,
-   "6": 5676,
-   "7": 4245,
-   "8": 3578,
-   "9": 2896,
-   "10": 17467
+   "0": 1898,
+   "1": 6132,
+   "2": 10227,
+   "3": 10045,
+   "4": 9422,
+   "5": 7596,
+   "6": 5666,
+   "7": 4239,
+   "8": 3570,
+   "9": 2893,
+   "10": 18073
   },
   "atLeast": {
-   "1": 97.2,
-   "2": 89.2,
-   "3": 76.4,
-   "5": 52
+   "1": 97.6,
+   "2": 89.9,
+   "3": 77.1,
+   "5": 52.7
   }
  },
  "concentration": {
-  "top1Pct": 18.21,
-  "top3Pct": 38.74,
-  "top10Pct": 64.39,
-  "cycleCount": 1136,
-  "entropyBits": 5.17
+  "top1Pct": 18.53,
+  "top3Pct": 40.18,
+  "top10Pct": 65.68,
+  "cycleCount": 1141,
+  "entropyBits": 5.15
  },
- "components": 1137,
- "cycleCount": 1136,
+ "components": 1142,
+ "cycleCount": 1141,
  "largestCycle": {
   "members": [
    "Daemonheim",
    "Hilda"
   ],
   "size": 2,
-  "basin": 14528
+  "basin": 14781
  },
  "topAttractors": [
   {
@@ -120,8 +120,8 @@
     "Daemonheim",
     "Hilda"
    ],
-   "basin": 14528,
-   "pct": 18.21
+   "basin": 14781,
+   "pct": 18.53
   },
   {
    "cycle": [
@@ -130,8 +130,8 @@
     "Laura",
     "Jack"
    ],
-   "basin": 8793,
-   "pct": 11.02
+   "basin": 10249,
+   "pct": 12.85
   },
   {
    "cycle": [
@@ -141,16 +141,16 @@
     "Hot kettle",
     "Full kettle"
    ],
-   "basin": 7577,
-   "pct": 9.5
+   "basin": 7018,
+   "pct": 8.8
   },
   {
    "cycle": [
     "Grand Exchange",
     "Falling rocks"
    ],
-   "basin": 5308,
-   "pct": 6.65
+   "basin": 5232,
+   "pct": 6.56
   },
   {
    "cycle": [
@@ -159,7 +159,7 @@
     "Solomon's General Store",
     "RuneCoins"
    ],
-   "basin": 3370,
+   "basin": 3371,
    "pct": 4.23
   },
   {
@@ -167,16 +167,16 @@
     "Earth spells",
     "Shadow spells"
    ],
-   "basin": 2827,
-   "pct": 3.54
+   "basin": 2801,
+   "pct": 3.51
   },
   {
    "cycle": [
     "Runecrafting",
     "Catalytic runes"
    ],
-   "basin": 2693,
-   "pct": 3.38
+   "basin": 2635,
+   "pct": 3.3
   },
   {
    "cycle": [
@@ -184,23 +184,23 @@
     "Incandescent energy",
     "Energy rift"
    ],
-   "basin": 2208,
-   "pct": 2.77
+   "basin": 2238,
+   "pct": 2.81
   },
   {
    "cycle": [
     "NPC Contact",
     "Bert"
    ],
-   "basin": 2033,
-   "pct": 2.55
+   "basin": 2039,
+   "pct": 2.56
   },
   {
    "cycle": [
     "Jagex",
     "Haveli Investments"
    ],
-   "basin": 2018,
+   "basin": 2020,
    "pct": 2.53
   },
   {
@@ -208,24 +208,16 @@
     "Oddments",
     "Oddments (Treasure Hunter promotion)"
    ],
-   "basin": 1697,
+   "basin": 1699,
    "pct": 2.13
-  },
-  {
-   "cycle": [
-    "Obi'Sooth",
-    "Ring of Solomon"
-   ],
-   "basin": 1562,
-   "pct": 1.96
   },
   {
    "cycle": [
     "Globetrotter outfit",
     "Globetrotter (achievement)"
    ],
-   "basin": 1487,
-   "pct": 1.86
+   "basin": 1473,
+   "pct": 1.85
   },
   {
    "cycle": [
@@ -233,7 +225,7 @@
     "Spa",
     "Warforge Dig Site"
    ],
-   "basin": 1369,
+   "basin": 1370,
    "pct": 1.72
   },
   {
@@ -251,8 +243,8 @@
     "Collections",
     "Museum - Saradominist II"
    ],
-   "basin": 975,
-   "pct": 1.22
+   "basin": 980,
+   "pct": 1.23
   },
   {
    "cycle": [
@@ -260,8 +252,8 @@
     "Tool belt",
     "Quest kit (basic)"
    ],
-   "basin": 953,
-   "pct": 1.19
+   "basin": 882,
+   "pct": 1.11
   },
   {
    "cycle": [
@@ -269,15 +261,15 @@
     "Golden mining suit",
     "Magic golem outfit"
    ],
-   "basin": 887,
-   "pct": 1.11
+   "basin": 834,
+   "pct": 1.05
   },
   {
    "cycle": [
     "De-lore-ing device",
     "Worthless old boots"
    ],
-   "basin": 654,
+   "basin": 658,
    "pct": 0.82
   },
   {
@@ -285,23 +277,19 @@
     "Bandos",
     "Goblin book"
    ],
-   "basin": 648,
+   "basin": 644,
    "pct": 0.81
+  },
+  {
+   "cycle": [
+    "Gertrude's Cat",
+    "Doogle leaves"
+   ],
+   "basin": 624,
+   "pct": 0.78
   }
  ],
  "deadEndTerminals": [
-  {
-   "title": "List of SoundCloud exclusive music",
-   "chains": 438,
-   "pct": 0.55,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Treasure Trails/Guide/Anagrams",
-   "chains": 52,
-   "pct": 0.07,
-   "reason": "no eligible links"
-  },
   {
    "title": "Mod Arantza",
    "chains": 43,
@@ -312,6 +300,36 @@
    "title": "Tiny bladed bronze salvage",
    "chains": 31,
    "pct": 0.04,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Clue scroll (hard)/Guide",
+   "chains": 26,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "'Consensus ad Idem' painting",
+   "chains": 24,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Zarosian stein",
+   "chains": 24,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Clue scroll (medium)/Guide",
+   "chains": 22,
+   "pct": 0.03,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bronze Dominion medal",
+   "chains": 20,
+   "pct": 0.03,
    "reason": "no eligible links"
   },
   {
@@ -327,7 +345,13 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Mod Cam",
+   "title": "Pontifex censer",
+   "chains": 17,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Treasure Hunter/Rewards/Limited/Archive 1",
    "chains": 15,
    "pct": 0.02,
    "reason": "no eligible links"
@@ -339,7 +363,7 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Treasure Hunter/Promotions",
+   "title": "Zarosian ewer",
    "chains": 14,
    "pct": 0.02,
    "reason": "no eligible links"
@@ -351,33 +375,9 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Bauble",
-   "chains": 8,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Huge spiky rune salvage",
-   "chains": 7,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "James Hannigan",
-   "chains": 7,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "That's Not a Knife...",
-   "chains": 6,
-   "pct": 0.01,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Necronium crossbow (unstrung)",
-   "chains": 6,
-   "pct": 0.01,
+   "title": "Tsutsaroth helm",
+   "chains": 13,
+   "pct": 0.02,
    "reason": "no eligible links"
   }
  ],
@@ -397,15 +397,15 @@
   },
   {
    "title": "Achievements",
-   "firstLinks": 818
+   "firstLinks": 815
   },
   {
    "title": "Smithing",
-   "firstLinks": 798
+   "firstLinks": 688
   },
   {
    "title": "Player-owned house",
-   "firstLinks": 649
+   "firstLinks": 648
   },
   {
    "title": "Dungeoneering",
@@ -437,11 +437,11 @@
   },
   {
    "title": "Daemonheim",
-   "firstLinks": 352
+   "firstLinks": 354
   },
   {
    "title": "Crafting",
-   "firstLinks": 340
+   "firstLinks": 339
   },
   {
    "title": "Patch Notes",
@@ -461,11 +461,11 @@
   },
   {
    "title": "Magic",
-   "firstLinks": 226
+   "firstLinks": 225
   },
   {
    "title": "Items",
-   "firstLinks": 222
+   "firstLinks": 221
   },
   {
    "title": "Quests",
@@ -492,149 +492,149 @@
    "firstLinks": 187
   },
   {
-   "title": "Augmentor",
-   "firstLinks": 182
-  },
-  {
    "title": "Appearance",
    "firstLinks": 181
   },
   {
+   "title": "Augmentor",
+   "firstLinks": 181
+  },
+  {
    "title": "Free-to-play",
-   "firstLinks": 174
+   "firstLinks": 173
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Hilda",
-   "chains": 14528
+   "chains": 14781
   },
   {
    "title": "Daemonheim",
-   "chains": 14528
+   "chains": 14781
   },
   {
    "title": "Carn",
-   "chains": 11727
+   "chains": 11943
   },
   {
    "title": "Taverley incident",
-   "chains": 11724
+   "chains": 11940
   },
   {
    "title": "Sir Owen",
-   "chains": 11723
+   "chains": 11939
   },
   {
    "title": "Sixth Age",
-   "chains": 11718
+   "chains": 11934
   },
   {
    "title": "Imcando dwarf",
-   "chains": 10427
+   "chains": 10621
   },
   {
    "title": "Saradomin",
-   "chains": 10425
+   "chains": 10619
   },
   {
    "title": "Wise Old Man",
-   "chains": 10224
-  },
-  {
-   "title": "Bank",
-   "chains": 9941
-  },
-  {
-   "title": "Lumbridge",
-   "chains": 9014
+   "chains": 10417
   },
   {
    "title": "Meeting History",
-   "chains": 8793
+   "chains": 10249
   },
   {
    "title": "Laura",
-   "chains": 8793
+   "chains": 10249
   },
   {
    "title": "Jack",
-   "chains": 8793
+   "chains": 10249
   },
   {
    "title": "Charcoal (Meeting History)",
-   "chains": 8793
+   "chains": 10249
   },
   {
    "title": "Gielinor",
-   "chains": 8701
+   "chains": 10158
+  },
+  {
+   "title": "Bank",
+   "chains": 10136
+  },
+  {
+   "title": "Lumbridge",
+   "chains": 9208
   },
   {
    "title": "Black Santa hat",
-   "chains": 8434
+   "chains": 8617
   },
   {
    "title": "Festive cracker",
-   "chains": 8433
+   "chains": 8616
   },
   {
    "title": "Santa hat",
-   "chains": 8417
+   "chains": 8600
   },
   {
    "title": "Nex",
-   "chains": 8340
+   "chains": 8523
   },
   {
    "title": "Ripper demon (species)",
-   "chains": 7686
+   "chains": 7891
   },
   {
    "title": "Assassination of Elspeth",
-   "chains": 7685
+   "chains": 7890
   },
   {
    "title": "Third Age",
-   "chains": 7683
-  },
-  {
-   "title": "Construction",
-   "chains": 7577
-  },
-  {
-   "title": "Pot of tea",
-   "chains": 7577
-  },
-  {
-   "title": "Hot kettle",
-   "chains": 7577
-  },
-  {
-   "title": "Full kettle",
-   "chains": 7577
-  },
-  {
-   "title": "Porcelain cup (gold)",
-   "chains": 7577
+   "chains": 7888
   },
   {
    "title": "Slayer Tower",
-   "chains": 7064
+   "chains": 7272
   },
   {
    "title": "Slayer",
-   "chains": 7042
+   "chains": 7249
+  },
+  {
+   "title": "Construction",
+   "chains": 7018
+  },
+  {
+   "title": "Pot of tea",
+   "chains": 7018
+  },
+  {
+   "title": "Hot kettle",
+   "chains": 7018
+  },
+  {
+   "title": "Full kettle",
+   "chains": 7018
+  },
+  {
+   "title": "Porcelain cup (gold)",
+   "chains": 7018
   }
  ],
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 96.25,
+   "mean": 97.09,
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 18.6,
-   "sd": 2.16
+   "mean": 19.25,
+   "sd": 2.8
   }
  }
 }

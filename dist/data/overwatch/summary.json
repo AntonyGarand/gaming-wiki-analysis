@@ -1,11 +1,11 @@
 {
  "wiki": "overwatch",
- "generatedAt": "2026-10-14T04:05:21.064Z",
+ "generatedAt": "2026-10-14T13:51:30.961Z",
  "ranks": [
   {
    "rank": "strict1",
-   "convergePct": 83.51,
-   "deadEndPct": 16.49,
+   "convergePct": 83.62,
+   "deadEndPct": 16.38,
    "components": 32,
    "cycleCount": 31,
    "meanHops": 3.57,
@@ -16,14 +16,14 @@
     "Competitive Play",
     "Playlist"
    ],
-   "topAttractorPct": 44.94,
-   "top3Pct": 74.68,
-   "eligiblePct": 84
+   "topAttractorPct": 44.98,
+   "top3Pct": 74.72,
+   "eligiblePct": 84.2
   },
   {
    "rank": "2",
-   "convergePct": 43.41,
-   "deadEndPct": 56.59,
+   "convergePct": 43.45,
+   "deadEndPct": 56.55,
    "components": 30,
    "cycleCount": 29,
    "meanHops": 5.37,
@@ -33,14 +33,14 @@
     "Unranked",
     "Game Modes"
    ],
-   "topAttractorPct": 33.73,
-   "top3Pct": 37.93,
-   "eligiblePct": 70.9
+   "topAttractorPct": 33.76,
+   "top3Pct": 37.96,
+   "eligiblePct": 71
   },
   {
    "rank": "3",
-   "convergePct": 51.53,
-   "deadEndPct": 48.47,
+   "convergePct": 51.57,
+   "deadEndPct": 48.43,
    "components": 28,
    "cycleCount": 27,
    "meanHops": 2.82,
@@ -54,7 +54,7 @@
     "Anran"
    ],
    "topAttractorPct": 25.32,
-   "top3Pct": 43.48,
+   "top3Pct": 43.52,
    "eligiblePct": 59
   },
   {
@@ -72,15 +72,15 @@
    ],
    "topAttractorPct": 2.67,
    "top3Pct": 4.91,
-   "eligiblePct": 44.1
+   "eligiblePct": 44.2
   },
   {
    "rank": "last",
-   "convergePct": 78.42,
-   "deadEndPct": 21.58,
+   "convergePct": 78.6,
+   "deadEndPct": 21.4,
    "components": 56,
    "cycleCount": 55,
-   "meanHops": 5.74,
+   "meanHops": 5.75,
    "medianHops": 5,
    "maxHops": 22,
    "topAttractor": [
@@ -88,14 +88,14 @@
     "Competitive Drives",
     "Competitive Points"
    ],
-   "topAttractorPct": 33.97,
-   "top3Pct": 50.89,
+   "topAttractorPct": 34.05,
+   "top3Pct": 51.07,
    "eligiblePct": 100
   },
   {
    "rank": "random",
-   "convergePct": 83.48,
-   "deadEndPct": 16.52,
+   "convergePct": 83.58,
+   "deadEndPct": 16.42,
    "components": 57,
    "cycleCount": 56,
    "meanHops": 3.6,
@@ -110,8 +110,8 @@
     "Genji",
     "Brigitte"
    ],
-   "topAttractorPct": 24.93,
-   "top3Pct": 46.47,
+   "topAttractorPct": 25,
+   "top3Pct": 46.55,
    "eligiblePct": 100
   }
  ]

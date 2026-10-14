@@ -8,7 +8,7 @@
   "deadEnd": 5772,
   "deadEndPct": 94.08,
   "noLinks": 14,
-  "tooFewLinks": 4288,
+  "tooFewLinks": 4287,
   "unresolvable": 1
  },
  "hopStats": {
@@ -28,7 +28,7 @@
   "histogram": {
    "0": 15,
    "1": 2874,
-   "2": 858,
+   "2": 857,
    "3": 286,
    "4": 270,
    "5": 182,
@@ -36,7 +36,7 @@
    "7": 143,
    "8": 136,
    "9": 138,
-   "10": 1101
+   "10": 1102
   },
   "atLeast": {
    "1": 99.8,
@@ -203,13 +203,13 @@
    "reason": "only 2 eligible links"
   },
   {
-   "title": "Barter trades",
-   "chains": 122,
-   "pct": 1.99,
+   "title": "Drawer",
+   "chains": 123,
+   "pct": 2,
    "reason": "only 1 eligible links"
   },
   {
-   "title": "Drawer",
+   "title": "Barter trades",
    "chains": 122,
    "pct": 1.99,
    "reason": "only 1 eligible links"
@@ -451,7 +451,7 @@
   },
   {
    "title": "Drawer",
-   "chains": 122
+   "chains": 123
   },
   {
    "title": "Barter trades",

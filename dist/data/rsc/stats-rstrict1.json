@@ -3,16 +3,16 @@
  "rank": "strict1",
  "nodes": 4225,
  "converge": {
-  "articles": 3764,
-  "pct": 89.09,
-  "deadEnd": 461,
-  "deadEndPct": 10.91,
-  "noLinks": 453,
+  "articles": 3881,
+  "pct": 91.86,
+  "deadEnd": 344,
+  "deadEndPct": 8.14,
+  "noLinks": 338,
   "tooFewLinks": 0,
   "unresolvable": 2
  },
  "hopStats": {
-  "mean": 5.4,
+  "mean": 5.45,
   "median": 5,
   "p90": 8,
   "max": 15
@@ -20,14 +20,14 @@
  "histogram": {
   "0": 28,
   "1": 192,
-  "2": 96,
+  "2": 97,
   "3": 183,
-  "4": 539,
-  "5": 902,
+  "4": 540,
+  "5": 906,
   "6": 719,
-  "7": 702,
-  "8": 247,
-  "9": 92,
+  "7": 800,
+  "8": 259,
+  "9": 93,
   "10": 39,
   "11": 10,
   "12": 5,
@@ -37,9 +37,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 455,
+   "0": 340,
    "1": 109,
-   "2": 257,
+   "2": 258,
    "3": 354,
    "4": 401,
    "5": 388,
@@ -47,21 +47,21 @@
    "7": 310,
    "8": 252,
    "9": 230,
-   "10": 1083
+   "10": 1197
   },
   "atLeast": {
-   "1": 89.2,
-   "2": 86.7,
-   "3": 80.6,
-   "5": 62.7
+   "1": 92,
+   "2": 89.4,
+   "3": 83.3,
+   "5": 65.4
   }
  },
  "concentration": {
-  "top1Pct": 62.72,
-  "top3Pct": 87.41,
-  "top10Pct": 88.9,
+  "top1Pct": 62.84,
+  "top3Pct": 90.18,
+  "top10Pct": 91.67,
   "cycleCount": 14,
-  "entropyBits": 1.18
+  "entropyBits": 1.21
  },
  "components": 15,
  "cycleCount": 14,
@@ -71,7 +71,7 @@
    "Jagex"
   ],
   "size": 2,
-  "basin": 2650
+  "basin": 2655
  },
  "topAttractors": [
   {
@@ -79,24 +79,24 @@
     "Andrew Gower",
     "Jagex"
    ],
-   "basin": 2650,
-   "pct": 62.72
+   "basin": 2655,
+   "pct": 62.84
   },
   {
    "cycle": [
     "Misthalin",
     "King"
    ],
-   "basin": 913,
-   "pct": 21.61
+   "basin": 1024,
+   "pct": 24.24
   },
   {
    "cycle": [
     "Door",
     "Wall scenery"
    ],
-   "basin": 130,
-   "pct": 3.08
+   "basin": 131,
+   "pct": 3.1
   },
   {
    "cycle": [
@@ -195,19 +195,7 @@
    "reason": "no eligible links"
   },
   {
-   "title": "The Miners' Tale",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
    "title": "RuneFest 2026",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "The Legend of Arrav - Part 2",
    "chains": 2,
    "pct": 0.05,
    "reason": "no eligible links"
@@ -217,12 +205,6 @@
    "chains": 2,
    "pct": 0.05,
    "reason": "redlink target"
-  },
-  {
-   "title": "RuneScape Classic Wiki",
-   "chains": 1,
-   "pct": 0.02,
-   "reason": "no eligible links"
   },
   {
    "title": "2005",
@@ -277,6 +259,24 @@
    "chains": 1,
    "pct": 0.02,
    "reason": "no eligible links"
+  },
+  {
+   "title": "8 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "9 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "10 January",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -300,6 +300,10 @@
   {
    "title": "Items",
    "firstLinks": 121
+  },
+  {
+   "title": "Library of Varrock",
+   "firstLinks": 101
   },
   {
    "title": "Quest items",
@@ -362,6 +366,10 @@
    "firstLinks": 24
   },
   {
+   "title": "Unobtainable items",
+   "firstLinks": 24
+  },
+  {
    "title": "Prayer",
    "firstLinks": 23
   },
@@ -371,7 +379,7 @@
   },
   {
    "title": "Skills",
-   "firstLinks": 22
+   "firstLinks": 23
   },
   {
    "title": "Cooking",
@@ -379,10 +387,6 @@
   },
   {
    "title": "Agility",
-   "firstLinks": 20
-  },
-  {
-   "title": "Unobtainable items",
    "firstLinks": 20
   },
   {
@@ -396,60 +400,56 @@
   {
    "title": "Shields",
    "firstLinks": 18
-  },
-  {
-   "title": "Varrock",
-   "firstLinks": 17
   }
  ],
  "topThroughTraffic": [
   {
    "title": "Jagex",
-   "chains": 2650
+   "chains": 2655
   },
   {
    "title": "Andrew Gower",
-   "chains": 2650
+   "chains": 2655
   },
   {
    "title": "RuneScape Classic",
-   "chains": 2576
+   "chains": 2581
   },
   {
    "title": "Character",
-   "chains": 2338
+   "chains": 2343
   },
   {
    "title": "Misthalin",
-   "chains": 913
+   "chains": 1024
   },
   {
    "title": "King",
-   "chains": 913
+   "chains": 1024
   },
   {
    "title": "Lumbridge",
-   "chains": 843
+   "chains": 954
+  },
+  {
+   "title": "Al Kharid",
+   "chains": 941
+  },
+  {
+   "title": "RuneScape",
+   "chains": 901
   },
   {
    "title": "Non-player character",
    "chains": 838
   },
   {
-   "title": "Al Kharid",
-   "chains": 830
-  },
-  {
    "title": "Skills",
-   "chains": 812
-  },
-  {
-   "title": "RuneScape",
-   "chains": 790
+   "chains": 813
   },
   {
    "title": "Items",
-   "chains": 421
+   "chains": 425
   },
   {
    "title": "Wilderness",
@@ -488,12 +488,16 @@
    "chains": 138
   },
   {
+   "title": "Gods",
+   "chains": 136
+  },
+  {
    "title": "Door",
-   "chains": 130
+   "chains": 131
   },
   {
    "title": "Wall scenery",
-   "chains": 130
+   "chains": 131
   },
   {
    "title": "Shop",
@@ -504,24 +508,20 @@
    "chains": 117
   },
   {
+   "title": "God letters",
+   "chains": 116
+  },
+  {
+   "title": "Library of Varrock",
+   "chains": 115
+  },
+  {
    "title": "Defense",
    "chains": 109
   },
   {
    "title": "Armour",
    "chains": 106
-  },
-  {
-   "title": "Quest items",
-   "chains": 105
-  },
-  {
-   "title": "Karamja",
-   "chains": 99
-  },
-  {
-   "title": "Melee",
-   "chains": 91
   }
  ]
 }

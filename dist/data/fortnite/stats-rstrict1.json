@@ -3,13 +3,13 @@
  "rank": "strict1",
  "nodes": 35312,
  "converge": {
-  "articles": 32817,
-  "pct": 92.93,
-  "deadEnd": 2495,
-  "deadEndPct": 7.07,
-  "noLinks": 2241,
+  "articles": 32821,
+  "pct": 92.95,
+  "deadEnd": 2491,
+  "deadEndPct": 7.05,
+  "noLinks": 2240,
   "tooFewLinks": 0,
-  "unresolvable": 20
+  "unresolvable": 17
  },
  "hopStats": {
   "mean": 4.08,
@@ -19,11 +19,11 @@
  },
  "histogram": {
   "0": 14,
-  "1": 180,
-  "2": 3723,
+  "1": 189,
+  "2": 3720,
   "3": 2236,
-  "4": 16921,
-  "5": 7538,
+  "4": 16918,
+  "5": 7539,
   "6": 2066,
   "7": 84,
   "8": 5,
@@ -60,31 +60,31 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2261,
-   "1": 1263,
-   "2": 7376,
-   "3": 8973,
-   "4": 4316,
-   "5": 2378,
-   "6": 1351,
-   "7": 842,
-   "8": 601,
-   "9": 503,
-   "10": 5448
+   "0": 2257,
+   "1": 1264,
+   "2": 7398,
+   "3": 9015,
+   "4": 4347,
+   "5": 2402,
+   "6": 1375,
+   "7": 876,
+   "8": 630,
+   "9": 510,
+   "10": 5238
   },
   "atLeast": {
    "1": 93.6,
    "2": 90,
    "3": 69.1,
-   "5": 31.5
+   "5": 31.2
   }
  },
  "concentration": {
   "top1Pct": 91.96,
-  "top3Pct": 92.89,
-  "top10Pct": 92.93,
+  "top3Pct": 92.91,
+  "top10Pct": 92.95,
   "cycleCount": 7,
-  "entropyBits": 0.09
+  "entropyBits": 0.1
  },
  "components": 8,
  "cycleCount": 7,
@@ -94,7 +94,7 @@
    "Tim Sweeney"
   ],
   "size": 2,
-  "basin": 32474
+  "basin": 32472
  },
  "topAttractors": [
   {
@@ -102,7 +102,7 @@
     "Epic Games",
     "Tim Sweeney"
    ],
-   "basin": 32474,
+   "basin": 32472,
    "pct": 91.96
   },
   {
@@ -110,8 +110,8 @@
     "Heroes",
     "Outlanders"
    ],
-   "basin": 258,
-   "pct": 0.73
+   "basin": 264,
+   "pct": 0.75
   },
   {
    "cycle": [
@@ -254,7 +254,7 @@
   },
   {
    "title": "Outfits",
-   "firstLinks": 3367
+   "firstLinks": 3368
   },
   {
    "title": "Back Blings",
@@ -282,7 +282,7 @@
   },
   {
    "title": "Quests",
-   "firstLinks": 930
+   "firstLinks": 929
   },
   {
    "title": "Decals",
@@ -372,15 +372,15 @@
  "topThroughTraffic": [
   {
    "title": "Epic Games",
-   "chains": 32474
+   "chains": 32472
   },
   {
    "title": "Tim Sweeney",
-   "chains": 32474
+   "chains": 32472
   },
   {
    "title": "Fortnite",
-   "chains": 32448
+   "chains": 32446
   },
   {
    "title": "Cosmetic Items",
@@ -388,15 +388,15 @@
   },
   {
    "title": "Fortnite: Battle Royale",
-   "chains": 7998
+   "chains": 8000
   },
   {
    "title": "Community Terminology",
-   "chains": 4192
+   "chains": 4193
   },
   {
    "title": "Outfits",
-   "chains": 4191
+   "chains": 4192
   },
   {
    "title": "V-Bucks",
@@ -424,7 +424,7 @@
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 1425
+   "chains": 1422
   },
   {
    "title": "Sprays",
@@ -440,11 +440,11 @@
   },
   {
    "title": "XP",
-   "chains": 976
+   "chains": 975
   },
   {
    "title": "Quests",
-   "chains": 973
+   "chains": 972
   },
   {
    "title": "Weaponry (Battle Royale)",

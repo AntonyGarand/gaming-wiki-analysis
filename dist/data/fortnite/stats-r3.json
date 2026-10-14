@@ -3,50 +3,50 @@
  "rank": "3",
  "nodes": 35312,
  "converge": {
-  "articles": 15646,
-  "pct": 44.31,
-  "deadEnd": 19666,
-  "deadEndPct": 55.69,
-  "noLinks": 2241,
-  "tooFewLinks": 8639,
-  "unresolvable": 20
+  "articles": 15614,
+  "pct": 44.22,
+  "deadEnd": 19698,
+  "deadEndPct": 55.78,
+  "noLinks": 2240,
+  "tooFewLinks": 8662,
+  "unresolvable": 17
  },
  "hopStats": {
-  "mean": 3.61,
+  "mean": 3.59,
   "median": 2,
   "p90": 12,
   "max": 32
  },
  "histogram": {
   "0": 2149,
-  "1": 5192,
-  "2": 2471,
+  "1": 5199,
+  "2": 2467,
   "3": 1593,
-  "4": 1044,
-  "5": 731,
-  "6": 205,
-  "7": 186,
-  "8": 144,
-  "9": 126,
-  "10": 47,
-  "11": 152,
-  "12": 371,
-  "13": 373,
-  "14": 114,
-  "15": 108,
-  "16": 74,
-  "17": 71,
+  "4": 1039,
+  "5": 730,
+  "6": 207,
+  "7": 187,
+  "8": 147,
+  "9": 127,
+  "10": 52,
+  "11": 130,
+  "12": 370,
+  "13": 366,
+  "14": 115,
+  "15": 114,
+  "16": 76,
+  "17": 72,
   "18": 12,
   "19": 16,
-  "20": 35,
-  "21": 49,
-  "22": 29,
+  "20": 29,
+  "21": 37,
+  "22": 23,
   "23": 61,
   "24": 58,
-  "25": 89,
-  "26": 46,
+  "25": 90,
+  "26": 47,
   "27": 42,
-  "28": 22,
+  "28": 23,
   "29": 20,
   "30": 9,
   "31": 6,
@@ -54,29 +54,29 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 2261,
-   "1": 1263,
-   "2": 7376,
-   "3": 8973,
-   "4": 4316,
-   "5": 2378,
-   "6": 1351,
-   "7": 842,
-   "8": 601,
-   "9": 503,
-   "10": 5448
+   "0": 2257,
+   "1": 1264,
+   "2": 7398,
+   "3": 9015,
+   "4": 4347,
+   "5": 2402,
+   "6": 1375,
+   "7": 876,
+   "8": 630,
+   "9": 510,
+   "10": 5238
   },
   "atLeast": {
    "1": 93.6,
    "2": 90,
    "3": 69.1,
-   "5": 31.5
+   "5": 31.2
   }
  },
  "concentration": {
-  "top1Pct": 15.79,
-  "top3Pct": 26.46,
-  "top10Pct": 29.11,
+  "top1Pct": 15.82,
+  "top3Pct": 26.36,
+  "top10Pct": 29.01,
   "cycleCount": 1072,
   "entropyBits": 5.47
  },
@@ -88,7 +88,7 @@
    "V-Bucks"
   ],
   "size": 2,
-  "basin": 5577
+  "basin": 5588
  },
  "topAttractors": [
   {
@@ -96,24 +96,24 @@
     "Battle Pass",
     "V-Bucks"
    ],
-   "basin": 5577,
-   "pct": 15.79
+   "basin": 5588,
+   "pct": 15.82
   },
   {
    "cycle": [
     "Solo",
     "Rebooting"
    ],
-   "basin": 2809,
-   "pct": 7.95
+   "basin": 2755,
+   "pct": 7.8
   },
   {
    "cycle": [
     "Fortnite",
     "Update v42.00"
    ],
-   "basin": 958,
-   "pct": 2.71
+   "basin": 965,
+   "pct": 2.73
   },
   {
    "cycle": [
@@ -144,7 +144,7 @@
     "Mythic Storm King",
     "Mythic Schematic Cache"
    ],
-   "basin": 116,
+   "basin": 117,
    "pct": 0.33
   },
   {
@@ -245,8 +245,8 @@
   },
   {
    "cycle": [
-    "Modular Monarch Pistol",
-    "Doctor Doom's Monarch Pistol"
+    "Doggo",
+    "Grumble Gang Bundle"
    ],
    "basin": 22,
    "pct": 0.06
@@ -255,20 +255,14 @@
  "deadEndTerminals": [
   {
    "title": "Soaring 50s",
-   "chains": 390,
-   "pct": 1.1,
+   "chains": 394,
+   "pct": 1.12,
    "reason": "only 2 eligible links"
   },
   {
    "title": "Limited Time Offers",
-   "chains": 238,
-   "pct": 0.67,
-   "reason": "only 2 eligible links"
-  },
-  {
-   "title": "Stellar Burst",
-   "chains": 225,
-   "pct": 0.64,
+   "chains": 231,
+   "pct": 0.65,
    "reason": "only 2 eligible links"
   },
   {
@@ -276,6 +270,12 @@
    "chains": 218,
    "pct": 0.62,
    "reason": "only 1 eligible links"
+  },
+  {
+   "title": "Rocket Racing",
+   "chains": 207,
+   "pct": 0.59,
+   "reason": "only 2 eligible links"
   },
   {
    "title": "Danger Dux Bundle",
@@ -291,8 +291,8 @@
   },
   {
    "title": "Settings",
-   "chains": 107,
-   "pct": 0.3,
+   "chains": 108,
+   "pct": 0.31,
    "reason": "only 1 eligible links"
   },
   {
@@ -360,7 +360,7 @@
   },
   {
    "title": "Outfits",
-   "firstLinks": 218
+   "firstLinks": 217
   },
   {
    "title": "Fortnite Crew",
@@ -368,27 +368,23 @@
   },
   {
    "title": "Fortnite: Battle Royale",
-   "firstLinks": 145
-  },
-  {
-   "title": "Fortnite: Save the World",
-   "firstLinks": 142
+   "firstLinks": 139
   },
   {
    "title": "Oninoshima",
    "firstLinks": 139
   },
   {
+   "title": "Fortnite: Save the World",
+   "firstLinks": 121
+  },
+  {
    "title": "Athena",
-   "firstLinks": 120
+   "firstLinks": 119
   },
   {
    "title": "Helios",
    "firstLinks": 113
-  },
-  {
-   "title": "Quests",
-   "firstLinks": 112
   },
   {
    "title": "Asteria",
@@ -396,6 +392,10 @@
   },
   {
    "title": "Twine Peaks",
+   "firstLinks": 107
+  },
+  {
+   "title": "Quests",
    "firstLinks": 107
   },
   {
@@ -463,70 +463,70 @@
    "firstLinks": 40
   },
   {
-   "title": "Characters (Battle Royale)",
-   "firstLinks": 37
+   "title": "Fortnite: Reload",
+   "firstLinks": 38
   }
  ],
  "topThroughTraffic": [
   {
    "title": "V-Bucks",
-   "chains": 5577
+   "chains": 5588
   },
   {
    "title": "Battle Pass",
-   "chains": 5577
+   "chains": 5588
   },
   {
    "title": "Solo",
-   "chains": 2809
+   "chains": 2755
   },
   {
    "title": "Rebooting",
-   "chains": 2809
+   "chains": 2755
   },
   {
    "title": "Fortnite: Battle Royale",
-   "chains": 2794
+   "chains": 2740
   },
   {
    "title": "Traps (Battle Royale)",
-   "chains": 2039
+   "chains": 2008
   },
   {
    "title": "Materials (Save the World)",
-   "chains": 2029
+   "chains": 1998
   },
   {
    "title": "Crafting (Save the World)",
-   "chains": 2026
+   "chains": 1995
   },
   {
    "title": "Copper Ore",
-   "chains": 1979
+   "chains": 1948
   },
   {
    "title": "Stonewood",
-   "chains": 1978
+   "chains": 1947
   },
   {
    "title": "Plankerton",
-   "chains": 1923
+   "chains": 1883
   },
   {
    "title": "Storm Chest",
-   "chains": 1750
+   "chains": 1710
   },
   {
    "title": "Husk Monsters",
-   "chains": 1749
+   "chains": 1709
   },
   {
    "title": "Fortnite: Save the World",
-   "chains": 1742
+   "chains": 1702
   },
   {
    "title": "Fortnite Crew",
-   "chains": 1398
+   "chains": 1403
   },
   {
    "title": "Music Pass",
@@ -534,15 +534,15 @@
   },
   {
    "title": "Fortnite",
-   "chains": 958
+   "chains": 965
   },
   {
    "title": "Update v42.00",
-   "chains": 958
+   "chains": 965
   },
   {
    "title": "Building",
-   "chains": 647
+   "chains": 637
   },
   {
    "title": "XP",
@@ -550,43 +550,43 @@
   },
   {
    "title": "Constructors",
-   "chains": 628
+   "chains": 618
   },
   {
    "title": "Heroes",
-   "chains": 617
+   "chains": 605
   },
   {
    "title": "Outfits",
-   "chains": 596
+   "chains": 595
   },
   {
    "title": "Superchargers",
-   "chains": 529
+   "chains": 509
   },
   {
    "title": "Update v40.20",
-   "chains": 524
+   "chains": 504
   },
   {
    "title": "Fortnite: Ballistic",
-   "chains": 516
+   "chains": 496
   },
   {
    "title": "Full List of Items",
-   "chains": 487
+   "chains": 466
   },
   {
    "title": "Spy Games",
-   "chains": 457
+   "chains": 436
   },
   {
    "title": "Shotguns",
-   "chains": 432
+   "chains": 411
   },
   {
    "title": "Soaring 50s",
-   "chains": 390
+   "chains": 394
   }
  ]
 }

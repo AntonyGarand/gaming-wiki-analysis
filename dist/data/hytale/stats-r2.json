@@ -3,12 +3,12 @@
  "rank": "2",
  "nodes": 4498,
  "converge": {
-  "articles": 4104,
-  "pct": 91.24,
-  "deadEnd": 394,
-  "deadEndPct": 8.76,
+  "articles": 4097,
+  "pct": 91.08,
+  "deadEnd": 401,
+  "deadEndPct": 8.92,
   "noLinks": 63,
-  "tooFewLinks": 251,
+  "tooFewLinks": 252,
   "unresolvable": 0
  },
  "hopStats": {
@@ -20,9 +20,9 @@
  "histogram": {
   "0": 46,
   "1": 87,
-  "2": 527,
-  "3": 1065,
-  "4": 1085,
+  "2": 526,
+  "3": 1061,
+  "4": 1083,
   "5": 705,
   "6": 150,
   "7": 232,
@@ -33,28 +33,28 @@
  "eligibleLinks": {
   "histogram": {
    "0": 63,
-   "1": 251,
-   "2": 1430,
-   "3": 1046,
+   "1": 252,
+   "2": 1429,
+   "3": 1047,
    "4": 491,
-   "5": 316,
-   "6": 229,
+   "5": 317,
+   "6": 228,
    "7": 130,
    "8": 102,
-   "9": 107,
-   "10": 333
+   "9": 108,
+   "10": 331
   },
   "atLeast": {
    "1": 98.6,
    "2": 93,
    "3": 61.2,
-   "5": 27.1
+   "5": 27
   }
  },
  "concentration": {
-  "top1Pct": 76.41,
-  "top3Pct": 87.88,
-  "top10Pct": 90.37,
+  "top1Pct": 76.26,
+  "top3Pct": 87.73,
+  "top10Pct": 90.22,
   "cycleCount": 21,
   "entropyBits": 1.01
  },
@@ -68,7 +68,7 @@
    "Hypixel Inc."
   ],
   "size": 4,
-  "basin": 3437
+  "basin": 3430
  },
  "topAttractors": [
   {
@@ -78,8 +78,8 @@
     "Hypixel Studios",
     "Hypixel Inc."
    ],
-   "basin": 3437,
-   "pct": 76.41
+   "basin": 3430,
+   "pct": 76.26
   },
   {
    "cycle": [
@@ -244,6 +244,12 @@
    "reason": "only 1 eligible links"
   },
   {
+   "title": "Plant",
+   "chains": 7,
+   "pct": 0.16,
+   "reason": "only 1 eligible links"
+  },
+  {
    "title": "Asset Editor",
    "chains": 5,
    "pct": 0.11,
@@ -320,12 +326,6 @@
    "chains": 2,
    "pct": 0.04,
    "reason": "only 1 eligible links"
-  },
-  {
-   "title": "0.0.2-pre.1.1",
-   "chains": 2,
-   "pct": 0.04,
-   "reason": "only 1 eligible links"
   }
  ],
  "roadsToTopAttractor": [],
@@ -344,7 +344,7 @@
   },
   {
    "title": "Hytale",
-   "firstLinks": 204
+   "firstLinks": 203
   },
   {
    "title": "Tree",
@@ -454,23 +454,23 @@
  "topThroughTraffic": [
   {
    "title": "Hypixel Network",
-   "chains": 3437
+   "chains": 3430
   },
   {
    "title": "Simon Collins-Laflamme",
-   "chains": 3437
+   "chains": 3430
   },
   {
    "title": "Hypixel Studios",
-   "chains": 3437
+   "chains": 3430
   },
   {
    "title": "Hypixel Inc.",
-   "chains": 3437
+   "chains": 3430
   },
   {
    "title": "Hytale",
-   "chains": 3415
+   "chains": 3408
   },
   {
    "title": "Exploration Mode",

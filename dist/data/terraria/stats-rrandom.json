@@ -3,87 +3,87 @@
  "rank": "random",
  "nodes": 4337,
  "converge": {
-  "articles": 3929,
-  "pct": 90.59,
-  "deadEnd": 408,
-  "deadEndPct": 9.41,
-  "noLinks": 234,
+  "articles": 3959,
+  "pct": 91.28,
+  "deadEnd": 378,
+  "deadEndPct": 8.72,
+  "noLinks": 246,
   "tooFewLinks": 0,
-  "unresolvable": 22
+  "unresolvable": 23
  },
  "hopStats": {
-  "mean": 11.58,
-  "median": 9,
-  "p90": 25,
+  "mean": 11.9,
+  "median": 10,
+  "p90": 26,
   "max": 34
  },
  "histogram": {
-  "0": 103,
-  "1": 374,
-  "2": 275,
-  "3": 283,
-  "4": 219,
-  "5": 152,
-  "6": 114,
-  "7": 154,
-  "8": 170,
-  "9": 144,
-  "10": 161,
-  "11": 141,
-  "12": 77,
+  "0": 101,
+  "1": 369,
+  "2": 278,
+  "3": 288,
+  "4": 228,
+  "5": 136,
+  "6": 98,
+  "7": 144,
+  "8": 169,
+  "9": 141,
+  "10": 160,
+  "11": 140,
+  "12": 76,
   "13": 43,
-  "14": 131,
-  "15": 131,
-  "16": 85,
-  "17": 76,
-  "18": 46,
+  "14": 130,
+  "15": 130,
+  "16": 88,
+  "17": 78,
+  "18": 44,
   "19": 31,
   "20": 34,
-  "21": 196,
-  "22": 191,
-  "23": 94,
+  "21": 197,
+  "22": 194,
+  "23": 98,
   "24": 77,
-  "25": 56,
-  "26": 28,
-  "27": 61,
-  "28": 85,
-  "29": 63,
-  "30": 42,
-  "31": 48,
-  "32": 30,
+  "25": 57,
+  "26": 41,
+  "27": 81,
+  "28": 100,
+  "29": 66,
+  "30": 43,
+  "31": 53,
+  "32": 32,
   "33": 12,
   "34": 2
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 256,
-   "1": 155,
-   "2": 272,
-   "3": 274,
+   "0": 269,
+   "1": 144,
+   "2": 268,
+   "3": 276,
    "4": 289,
-   "5": 261,
-   "6": 241,
+   "5": 262,
+   "6": 242,
    "7": 237,
-   "8": 217,
-   "9": 204,
-   "10": 1931
+   "8": 214,
+   "9": 209,
+   "10": 1927
   },
   "atLeast": {
-   "1": 94.1,
+   "1": 93.8,
    "2": 90.5,
    "3": 84.3,
    "5": 71.3
   }
  },
  "concentration": {
-  "top1Pct": 78.72,
-  "top3Pct": 84.83,
-  "top10Pct": 88.36,
-  "cycleCount": 38,
-  "entropyBits": 1.03
+  "top1Pct": 79.8,
+  "top3Pct": 85.87,
+  "top10Pct": 89.14,
+  "cycleCount": 37,
+  "entropyBits": 0.99
  },
- "components": 39,
- "cycleCount": 38,
+ "components": 38,
+ "cycleCount": 37,
  "largestCycle": {
   "members": [
    "Buffs",
@@ -111,7 +111,7 @@
    "Light sources"
   ],
   "size": 23,
-  "basin": 3414
+  "basin": 3461
  },
  "topAttractors": [
   {
@@ -140,8 +140,8 @@
     "Slime Gun",
     "Light sources"
    ],
-   "basin": 3414,
-   "pct": 78.72
+   "basin": 3461,
+   "pct": 79.8
   },
   {
    "cycle": [
@@ -153,8 +153,8 @@
     "Use time",
     "Melee weapons"
    ],
-   "basin": 174,
-   "pct": 4.01
+   "basin": 172,
+   "pct": 3.97
   },
   {
    "cycle": [
@@ -182,14 +182,6 @@
   },
   {
    "cycle": [
-    "Informational Accessories",
-    "GPS"
-   ],
-   "basin": 25,
-   "pct": 0.58
-  },
-  {
-   "cycle": [
     "Paints",
     "Paintbrush"
    ],
@@ -208,6 +200,14 @@
    "cycle": [
     "Pickaxe power",
     "Dungeon Bricks"
+   ],
+   "basin": 14,
+   "pct": 0.32
+  },
+  {
+   "cycle": [
+    "Informational Accessories",
+    "GPS"
    ],
    "basin": 14,
    "pct": 0.32
@@ -271,19 +271,11 @@
   },
   {
    "cycle": [
-    "Loom",
-    "Living Loom"
-   ],
-   "basin": 5,
-   "pct": 0.12
-  },
-  {
-   "cycle": [
     "Ice Machine",
     "Frozen furniture"
    ],
-   "basin": 4,
-   "pct": 0.09
+   "basin": 5,
+   "pct": 0.12
   },
   {
    "cycle": [
@@ -300,13 +292,21 @@
    ],
    "basin": 4,
    "pct": 0.09
+  },
+  {
+   "cycle": [
+    "Martian Conduit Wall",
+    "Luminite Brick Wall"
+   ],
+   "basin": 4,
+   "pct": 0.09
   }
  ],
  "deadEndTerminals": [
   {
    "title": "1.3.0.8",
-   "chains": 95,
-   "pct": 2.19,
+   "chains": 93,
+   "pct": 2.14,
    "reason": "no eligible links"
   },
   {
@@ -316,73 +316,13 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Recipes/Hardmode Anvil/register",
-   "chains": 5,
-   "pct": 0.12,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Bone Welder/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Blend-O-Matic/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Decay Chamber/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Keg/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Dye Vat/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Imbuing Station/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Water/register",
-   "chains": 4,
-   "pct": 0.09,
-   "reason": "no eligible links"
-  },
-  {
    "title": "Server/yue",
    "chains": 3,
    "pct": 0.07,
    "reason": "redlink target"
   },
   {
-   "title": "Recipes/Teapot/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Ancient Manipulator/register",
-   "chains": 2,
-   "pct": 0.05,
-   "reason": "no eligible links"
-  },
-  {
-   "title": "Recipes/Furnace/register",
+   "title": "Construction Accessories",
    "chains": 2,
    "pct": 0.05,
    "reason": "no eligible links"
@@ -392,13 +332,73 @@
    "chains": 2,
    "pct": 0.05,
    "reason": "no eligible links"
+  },
+  {
+   "title": "Secret world seeds/row",
+   "chains": 2,
+   "pct": 0.05,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Recipes/Bone Welder/register",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Crates/lootnote",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Paintings/painting",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Bait/bait power row",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Yellow Horseshoe Balloon/Crafting tree",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "Furniture sets/row",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Toilets/resultcell",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
+  },
+  {
+   "title": "List of weapons/row",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Crafted walls",
+   "chains": 1,
+   "pct": 0.02,
+   "reason": "no eligible links"
   }
  ],
  "roadsToTopAttractor": [],
  "topFirstLinkTargets": [
   {
    "title": "Hardmode",
-   "firstLinks": 161
+   "firstLinks": 162
   },
   {
    "title": "Pre-Hardmode",
@@ -406,7 +406,7 @@
   },
   {
    "title": "Background walls",
-   "firstLinks": 74
+   "firstLinks": 72
   },
   {
    "title": "Blocks",
@@ -442,7 +442,7 @@
   },
   {
    "title": "Accessories",
-   "firstLinks": 27
+   "firstLinks": 26
   },
   {
    "title": "Plantera",
@@ -470,18 +470,14 @@
   },
   {
    "title": "Shimmer",
-   "firstLinks": 22
+   "firstLinks": 23
   },
   {
    "title": "Water",
-   "firstLinks": 21
+   "firstLinks": 22
   },
   {
    "title": "Fishing",
-   "firstLinks": 20
-  },
-  {
-   "title": "Modifiers",
    "firstLinks": 20
   },
   {
@@ -513,6 +509,10 @@
    "firstLinks": 18
   },
   {
+   "title": "Wings",
+   "firstLinks": 18
+  },
+  {
    "title": "The Crimson",
    "firstLinks": 18
   }
@@ -520,133 +520,133 @@
  "topThroughTraffic": [
   {
    "title": "Light sources",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Classic Mode",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Pressure Plates",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Dyes",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Mechanisms",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Wire",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "World",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Teleporter",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Multiplayer",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Graveyard",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Snow biome",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Cavern",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Jack 'O Lantern Mask",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Buffs",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Debuffs",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Slime Gun",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Ice Blocks",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Inventory",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Goblin Tinkerer",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Pets",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Torches",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Shimmer",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "What a horrible night to have a curse",
-   "chains": 3414
+   "chains": 3461
   },
   {
    "title": "Minecart Track",
-   "chains": 1906
+   "chains": 1949
   },
   {
    "title": "Minecarts",
-   "chains": 1895
+   "chains": 1939
   },
   {
    "title": "Living Wood Chest",
-   "chains": 1885
+   "chains": 1929
   },
   {
    "title": "Biomes",
-   "chains": 1884
+   "chains": 1928
   },
   {
    "title": "Plants",
-   "chains": 1629
+   "chains": 1697
   },
   {
    "title": "Grasses",
-   "chains": 1510
+   "chains": 1577
   },
   {
    "title": "Blocks",
-   "chains": 1479
+   "chains": 1546
   }
  ],
  "randomSeeds": {
   "seeds": 5,
   "convergePct": {
-   "mean": 90.59,
+   "mean": 91.28,
    "sd": 0
   },
   "topAttractorPct": {
-   "mean": 78.6,
+   "mean": 79.68,
    "sd": 0.22
   }
  }

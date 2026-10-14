@@ -40,7 +40,7 @@
   "histogram": {
    "0": 15,
    "1": 2874,
-   "2": 858,
+   "2": 857,
    "3": 286,
    "4": 270,
    "5": 182,
@@ -48,7 +48,7 @@
    "7": 143,
    "8": 136,
    "9": 138,
-   "10": 1101
+   "10": 1102
   },
   "atLeast": {
    "1": 99.8,
@@ -333,7 +333,7 @@
  "topFirstLinkTargets": [
   {
    "title": "Weapon mods",
-   "firstLinks": 2020
+   "firstLinks": 2019
   },
   {
    "title": "Arena BattlePass",
@@ -483,7 +483,7 @@
   },
   {
    "title": "Weapon mods",
-   "chains": 2058
+   "chains": 2057
   },
   {
    "title": "Arena",

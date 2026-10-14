@@ -3,16 +3,16 @@
  "rank": "last",
  "nodes": 2808,
  "converge": {
-  "articles": 2202,
-  "pct": 78.42,
-  "deadEnd": 606,
-  "deadEndPct": 21.58,
-  "noLinks": 418,
+  "articles": 2207,
+  "pct": 78.6,
+  "deadEnd": 601,
+  "deadEndPct": 21.4,
+  "noLinks": 415,
   "tooFewLinks": 0,
   "unresolvable": 30
  },
  "hopStats": {
-  "mean": 5.74,
+  "mean": 5.75,
   "median": 5,
   "p90": 12,
   "max": 22
@@ -22,15 +22,15 @@
   "1": 274,
   "2": 240,
   "3": 231,
-  "4": 182,
+  "4": 183,
   "5": 115,
   "6": 189,
   "7": 187,
-  "8": 118,
+  "8": 119,
   "9": 124,
   "10": 73,
-  "11": 104,
-  "12": 56,
+  "11": 105,
+  "12": 58,
   "13": 50,
   "14": 51,
   "15": 50,
@@ -44,9 +44,9 @@
  },
  "eligibleLinks": {
   "histogram": {
-   "0": 448,
+   "0": 445,
    "1": 370,
-   "2": 334,
+   "2": 335,
    "3": 250,
    "4": 168,
    "5": 124,
@@ -54,19 +54,19 @@
    "7": 81,
    "8": 79,
    "9": 59,
-   "10": 752
+   "10": 754
   },
   "atLeast": {
-   "1": 84,
-   "2": 70.9,
+   "1": 84.2,
+   "2": 71,
    "3": 59,
-   "5": 44.1
+   "5": 44.2
   }
  },
  "concentration": {
-  "top1Pct": 33.97,
-  "top3Pct": 50.89,
-  "top10Pct": 67.17,
+  "top1Pct": 34.05,
+  "top3Pct": 51.07,
+  "top10Pct": 67.34,
   "cycleCount": 55,
   "entropyBits": 3.33
  },
@@ -79,7 +79,7 @@
    "Competitive Points"
   ],
   "size": 3,
-  "basin": 954
+  "basin": 956
  },
  "topAttractors": [
   {
@@ -88,16 +88,16 @@
     "Competitive Drives",
     "Competitive Points"
    ],
-   "basin": 954,
-   "pct": 33.97
+   "basin": 956,
+   "pct": 34.05
   },
   {
    "cycle": [
     "David Kang",
     "Pachimari"
    ],
-   "basin": 298,
-   "pct": 10.61
+   "basin": 301,
+   "pct": 10.72
   },
   {
    "cycle": [
@@ -311,12 +311,6 @@
    "reason": "no eligible links"
   },
   {
-   "title": "Ramattra/Cosmetics",
-   "chains": 3,
-   "pct": 0.11,
-   "reason": "no eligible links"
-  },
-  {
    "title": "November 14, 2023 Patch",
    "chains": 2,
    "pct": 0.07,
@@ -336,6 +330,12 @@
   },
   {
    "title": "Team EnVyUs",
+   "chains": 2,
+   "pct": 0.07,
+   "reason": "redlink target"
+  },
+  {
+   "title": "Team Liquid",
    "chains": 2,
    "pct": 0.07,
    "reason": "redlink target"
@@ -467,19 +467,19 @@
  "topThroughTraffic": [
   {
    "title": "Competitive Points",
-   "chains": 954
+   "chains": 956
   },
   {
    "title": "Season",
-   "chains": 954
+   "chains": 956
   },
   {
    "title": "Competitive Drives",
-   "chains": 954
+   "chains": 956
   },
   {
    "title": "Overwatch 2",
-   "chains": 759
+   "chains": 760
   },
   {
    "title": "Reaper",
@@ -499,15 +499,15 @@
   },
   {
    "title": "Pachimari",
-   "chains": 298
+   "chains": 301
   },
   {
    "title": "David Kang",
-   "chains": 298
+   "chains": 301
   },
   {
    "title": "Symmetra",
-   "chains": 295
+   "chains": 298
   },
   {
    "title": "Jeff Kaplan",
@@ -515,7 +515,7 @@
   },
   {
    "title": "Illari",
-   "chains": 254
+   "chains": 257
   },
   {
    "title": "Aaron Keller",
@@ -527,15 +527,15 @@
   },
   {
    "title": "Status effect",
-   "chains": 210
+   "chains": 213
   },
   {
    "title": "Movement speed",
-   "chains": 208
+   "chains": 211
   },
   {
    "title": "Heroes",
-   "chains": 207
+   "chains": 210
   },
   {
    "title": "Chris Metzen",
@@ -547,11 +547,11 @@
   },
   {
    "title": "Miranda Moyer",
-   "chains": 150
+   "chains": 153
   },
   {
    "title": "Venture",
-   "chains": 149
+   "chains": 152
   },
   {
    "title": "Marc Guerra",
@@ -579,11 +579,11 @@
   },
   {
    "title": "Competitive Play",
-   "chains": 120
+   "chains": 121
   },
   {
    "title": "Escort",
-   "chains": 115
+   "chains": 116
   }
  ]
 }

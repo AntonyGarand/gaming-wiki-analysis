@@ -1,6 +1,6 @@
 {
  "wiki": "hytale",
- "generatedAt": "2026-10-14T04:05:40.578Z",
+ "generatedAt": "2026-10-14T13:59:37.644Z",
  "ranks": [
   {
    "rank": "strict1",
@@ -21,8 +21,8 @@
   },
   {
    "rank": "2",
-   "convergePct": 91.24,
-   "deadEndPct": 8.76,
+   "convergePct": 91.08,
+   "deadEndPct": 8.92,
    "components": 22,
    "cycleCount": 21,
    "meanHops": 4.03,
@@ -34,8 +34,8 @@
     "Hypixel Studios",
     "Hypixel Inc."
    ],
-   "topAttractorPct": 76.41,
-   "top3Pct": 87.88,
+   "topAttractorPct": 76.26,
+   "top3Pct": 87.73,
    "eligiblePct": 93
   },
   {
@@ -58,11 +58,11 @@
   },
   {
    "rank": "5",
-   "convergePct": 9.58,
-   "deadEndPct": 90.42,
+   "convergePct": 9.54,
+   "deadEndPct": 90.46,
    "components": 15,
    "cycleCount": 14,
-   "meanHops": 3.97,
+   "meanHops": 3.94,
    "medianHops": 3,
    "maxHops": 13,
    "topAttractor": [
@@ -71,8 +71,8 @@
     "Hidey Hole"
    ],
    "topAttractorPct": 3.4,
-   "top3Pct": 7.96,
-   "eligiblePct": 27.1
+   "top3Pct": 7.91,
+   "eligiblePct": 27
   },
   {
    "rank": "last",
@@ -80,7 +80,7 @@
    "deadEndPct": 2.4,
    "components": 74,
    "cycleCount": 73,
-   "meanHops": 5.8,
+   "meanHops": 5.84,
    "medianHops": 4,
    "maxHops": 17,
    "topAttractor": [
@@ -88,17 +88,17 @@
     "The Heart of Orbis",
     "Adventure Mode"
    ],
-   "topAttractorPct": 39.82,
-   "top3Pct": 82.61,
+   "topAttractorPct": 41.15,
+   "top3Pct": 83.08,
    "eligiblePct": 100
   },
   {
    "rank": "random",
    "convergePct": 97.53,
    "deadEndPct": 2.47,
-   "components": 41,
-   "cycleCount": 40,
-   "meanHops": 4.24,
+   "components": 40,
+   "cycleCount": 39,
+   "meanHops": 4.5,
    "medianHops": 3,
    "maxHops": 16,
    "topAttractor": [
@@ -107,8 +107,8 @@
     "Candle",
     "Furniture Workbench"
    ],
-   "topAttractorPct": 57.83,
-   "top3Pct": 78.26,
+   "topAttractorPct": 62.12,
+   "top3Pct": 82.44,
    "eligiblePct": 100
   }
  ]
