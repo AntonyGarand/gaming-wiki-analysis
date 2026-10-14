@@ -2,11 +2,14 @@
  * analyze.ts — Nth-link network analysis for one wiki.
  * Computes convergence, attractors, histograms, centrality, decay curves.
  *
+ * The walk itself (eligibility rules, successor tables, attractor detection)
+ * lives in lib/walk.ts — this file only turns a successor table into numbers.
+ *
  * Usage: npx tsx scripts/analyze.ts --wiki=minecraft --ranks=strict1,1,2,3,5,last,random
  */
-import { createClient } from "@libsql/client";
 import * as fs from "fs";
 import * as path from "path";
+import { loadCorpus, successorsFor, analyzeFunctionalGraph, DEAD, TERM, plainLinkCount } from "./lib/walk.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
@@ -18,153 +21,29 @@ if (!wiki) { console.error(`Unknown --wiki=${wikiArg}`); process.exit(1); }
 
 const OUT_DIR = path.join(ROOT, "output", wiki.id);
 fs.mkdirSync(OUT_DIR, { recursive: true });
-const db = createClient({ url: `file:${path.join(OUT_DIR, "links.sqlite")}` });
-
-// disambiguation pages ("X may refer to:") are not valid walk targets — the
-// game's rules skip them, so links pointing at one are ineligible
-const disambig = new Set<number>();
-{
-  const wikiDb = createClient({ url: `file:${path.join(OUT_DIR, "wiki.sqlite")}` });
-  const r = await wikiDb.execute(
-    "SELECT id FROM page WHERE namespace = 0 AND ((instr(lower(substr(text,1,400)), 'may refer to:') > 0 OR instr(lower(substr(text,1,400)), '{{disambig') > 0) OR title LIKE '% (disambiguation)')"
-  );
-  for (const row of r.rows) disambig.add(Number(row.id));
-  wikiDb.close();
-}
-console.log(`[${wiki.id}] disambiguation pages: ${disambig.size}`);
-
-// date pages ("28 April", "April 28", "17 March 2019") are update-history
-// indexes, not explanations — the walk skips links that land on them
-const MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December";
-const DATE_RE1 = new RegExp(`^(0?[1-9]|[12]\\d|3[01]) (${MONTHS})( \\d{4})?$`, "i");
-const DATE_RE2 = new RegExp(`^(${MONTHS}) (0?[1-9]|[12]\\d|3[01])(,? \\d{4})?$`, "i");
-const YEAR_RE = /^(1[0-9]{3}|20[0-9]{2})$/; // bare years are update timelines, not articles
-const dateIds = new Set<number>();
-{
-  const r = await db.execute("SELECT id, title FROM page");
-  for (const row of r.rows) {
-    const t = String(row.title);
-    if (DATE_RE1.test(t) || DATE_RE2.test(t) || YEAR_RE.test(t)) dateIds.add(Number(row.id));
-  }
-}
-console.log(`[${wiki.id}] date pages: ${dateIds.size}`);
-const skipTarget = new Set<number>([...disambig, ...dateIds]);
 
 const FAMOUS: Record<string, string[]> = {};
 // wiki-specific famous articles can be added here
 
 async function main() {
   const t0 = Date.now();
-  const pagesRes = await db.execute("SELECT id, title FROM page ORDER BY id");
-  const ids = pagesRes.rows.map((r) => Number(r.id));
-  const titles = new Map<number, string>(pagesRes.rows.map((r) => [Number(r.id), String(r.title)]));
+  const corpus = await loadCorpus(wiki.id);
+  const { ids, titles, linksByPage, skipTargets } = corpus;
   const N = ids.length;
-  const idToIdx = new Map<number, number>(ids.map((id, i) => [id, i]));
-  console.log(`[${wiki.id}] corpus: ${N} pages`);
-
-  const linksByPage = new Map<number, Array<{ rank: number; target: number | null; paren: boolean; italic: boolean }>>();
-  {
-    let lastRow = -1;
-    for (;;) {
-      const res = await db.execute({
-        sql: "SELECT page_id, rank, target_id, paren, italic FROM link WHERE page_id > ? ORDER BY page_id, rank LIMIT 5000",
-        args: [lastRow],
-      });
-      if (res.rows.length === 0) break;
-      for (const r of res.rows) {
-        const pid = Number(r.page_id);
-        lastRow = pid;
-        let arr = linksByPage.get(pid);
-        if (!arr) { arr = []; linksByPage.set(pid, arr); }
-        arr.push({ rank: Number(r.rank), target: r.target_id === null ? null : Number(r.target_id),
-          paren: Number(r.paren) === 1, italic: Number(r.italic) === 1 });
-      }
-      if (res.rows.length < 5000) break;
-    }
-  }
-  console.log(`[${wiki.id}] links loaded`);
-
-  function rngFor(pageId: number): number {
-    let x = (pageId ^ 0x9e3779b9) >>> 0;
-    x ^= x << 13; x >>>= 0; x ^= x >> 17; x ^= x << 5; x >>>= 0;
-    return x / 4294967296;
-  }
-
-  function successorsFor(rankKey: string): { succ: Int32Array; term: Uint8Array } {
-    const succ = new Int32Array(N).fill(-1);
-    const term = new Uint8Array(N);
-    // every rank is strict: links in parentheses/italics never count, at any N
-    const nRank = rankKey === "strict1" ? 1 : (/^\d+$/.test(rankKey) ? Number(rankKey) : null);
-    for (let i = 0; i < N; i++) {
-      const links = linksByPage.get(ids[i]);
-      if (!links || links.length === 0) { term[i] = 1; continue; }
-      const eligible = links.filter((l) => !l.paren && !l.italic && !(l.target !== null && skipTarget.has(l.target)));
-      if (eligible.length === 0) { term[i] = 1; continue; }
-      let chosen: number | null = null;
-      if (rankKey === "last") {
-        chosen = eligible[eligible.length - 1].target;
-      } else if (rankKey === "random") {
-        chosen = eligible[Math.floor(rngFor(ids[i]) * eligible.length)].target;
-      } else if (nRank !== null) {
-        const at = eligible[nRank - 1];
-        if (!at) { term[i] = 2; continue; }
-        chosen = at.target;
-      } else { term[i] = 1; continue; }
-      if (chosen === null) { term[i] = 3; continue; }
-      const idx = idToIdx.get(chosen);
-      if (idx === undefined) { term[i] = 3; continue; }
-      succ[i] = idx;
-    }
-    return { succ, term };
-  }
+  console.log(`[${wiki.id}] corpus: ${N} pages (${skipTargets.size} skipped targets)`);
 
   const summary: Array<Record<string, unknown>> = [];
 
   for (const rankKey of RANKS) {
-    const { succ, term } = successorsFor(rankKey);
-    const attractor = new Int32Array(N).fill(-1);
-    const dist = new Int32Array(N).fill(-1);
-    const attractors: Array<{ nodes: number[] }> = [];
-    const DEAD = -2;
-    const mark = new Int32Array(N).fill(-1);
-    let walkId = 0;
-    for (let s = 0; s < N; s++) {
-      if (mark[s] !== -1) continue;
-      walkId++;
-      const path: number[] = [], posInPath = new Map<number, number>();
-      let cur = s;
-      for (;;) {
-        if (mark[cur] === walkId) {
-          const at = posInPath.get(cur)!;
-          const a = attractors.push({ nodes: path.slice(at) }) - 1;
-          for (const n of attractors[a].nodes) { attractor[n] = a; dist[n] = 0; }
-          for (let p = at - 1; p >= 0; p--) { attractor[path[p]] = a; dist[path[p]] = at - p; }
-          break;
-        }
-        if (mark[cur] !== -1) {
-          const t2 = attractor[cur], base = t2 === DEAD ? 0 : dist[cur];
-          for (let p = path.length - 1; p >= 0; p--) { attractor[path[p]] = t2; dist[path[p]] = base + (path.length - p); }
-          break;
-        }
-        mark[cur] = walkId; posInPath.set(cur, path.length); path.push(cur);
-        const nx = succ[cur];
-        if (nx === -1) { for (let p = 0; p < path.length; p++) { attractor[path[p]] = DEAD; dist[path[p]] = path.length - 1 - p; } break; }
-        if (nx === cur) {
-          const a = attractors.push({ nodes: [cur] }) - 1;
-          attractor[cur] = a; dist[cur] = 0;
-          for (let p = path.length - 2; p >= 0; p--) { attractor[path[p]] = a; dist[path[p]] = path.length - 1 - p; }
-          break;
-        }
-        cur = nx;
-      }
-    }
+    const { succ, term } = successorsFor(corpus, rankKey);
+    const { attractor, dist, loops: attractors, inDeg } = analyzeFunctionalGraph(succ);
 
     const basinCount = new Map<number, number>();
     let noLinks = 0, tooFew = 0, unresolvable = 0, deadBasin = 0;
     for (let i = 0; i < N; i++) {
-      if (term[i] === 1) noLinks++;
-      else if (term[i] === 2) tooFew++;
-      else if (term[i] === 3) unresolvable++;
+      if (term[i] === TERM.NO_LINKS) noLinks++;
+      else if (term[i] === TERM.TOO_FEW) tooFew++;
+      else if (term[i] === TERM.UNRESOLVED) unresolvable++;
       const a = attractor[i];
       if (a === DEAD) deadBasin++;
       else if (a !== -1) basinCount.set(a, (basinCount.get(a) ?? 0) + 1);
@@ -178,9 +57,9 @@ async function main() {
       let cur = i; const seen = new Set();
       while (cur >= 0 && !seen.has(cur) && succ[cur] !== -1) { seen.add(cur); cur = succ[cur]; }
       // cur is now the terminal node (succ[cur] === -1 or a cycle back)
-      const reason = term[cur] === 1 ? "no eligible links"
-        : term[cur] === 2 ? `only ${linksByPage.get(ids[cur])?.filter((l) => !l.paren && !l.italic).length ?? 0} eligible links`
-        : term[cur] === 3 ? "redlink target"
+      const reason = term[cur] === TERM.NO_LINKS ? "no eligible links"
+        : term[cur] === TERM.TOO_FEW ? `only ${plainLinkCount(corpus, cur)} eligible links`
+        : term[cur] === TERM.UNRESOLVED ? "redlink target"
         : "chain breaks";
       const entry = deadTerminal.get(cur) ?? { count: 0, reason };
       entry.count++;
@@ -189,7 +68,7 @@ async function main() {
     const topDeadTerminals = [...deadTerminal.entries()]
       .sort((a, b) => b[1].count - a[1].count).slice(0, 15)
       .map(([nodeIdx, info]) => ({
-        title: titles.get(ids[nodeIdx])!,
+        title: titles[nodeIdx],
         chains: info.count,
         pct: +(100 * info.count / N).toFixed(2),
         reason: info.reason,
@@ -209,10 +88,8 @@ async function main() {
       max: dists[dists.length - 1] ?? null,
     };
 
-    const inDeg = new Int32Array(N);
-    for (let i = 0; i < N; i++) if (succ[i] >= 0) inDeg[succ[i]]++;
     const topInDegree = Array.from(inDeg.keys()).sort((a, b) => inDeg[b] - inDeg[a]).slice(0, 30)
-      .map((i) => ({ title: titles.get(ids[i])!, inDegree: inDeg[i] }));
+      .map((i) => ({ title: titles[i], inDegree: inDeg[i] }));
 
     const between = new Float64Array(N);
     for (let u = 0; u < N; u++) {
@@ -223,10 +100,10 @@ async function main() {
       for (let k = 1; k < path.length; k++) between[path[k]] += path.length - k - 1;
     }
     const topBetweenness = Array.from(between.keys()).sort((a, b) => between[b] - between[a]).slice(0, 30)
-      .map((i) => ({ title: titles.get(ids[i])!, betweenness: Math.round(between[i]) }));
+      .map((i) => ({ title: titles[i], betweenness: Math.round(between[i]) }));
 
     const cycles = ranked.map(([a, b]) => ({
-      cycle: attractors[a].nodes.map((n) => titles.get(ids[n])!),
+      cycle: attractors[a].map((n) => titles[n]),
       basin: b, pct: +(100 * b / N).toFixed(2),
     }));
 
@@ -250,8 +127,8 @@ async function main() {
       "page_id,title,attractor,distance,fate\n" + Array.from({ length: Math.min(N, 50000) }, (_, i) => {
         const fate = attractor[i] === DEAD ? "dead-end" : attractor[i] === -1 ? "unvisited" : "cycle";
         const attr = attractor[i] >= 0 && attractors[attractor[i]]
-          ? `"${attractors[attractor[i]].nodes.map((n) => titles.get(ids[n])).join("|")}"` : "";
-        return `${ids[i]},"${(titles.get(ids[i]) ?? "").replace(/"/g, '""')}","${attr}",${dist[i]},${fate}`;
+          ? `"${attractors[attractor[i]].map((n) => titles[n]).join("|")}"` : "";
+        return `${ids[i]},"${(titles[i] ?? "").replace(/"/g, '""')}","${attr}",${dist[i]},${fate}`;
       }).join("\n"));
 
     summary.push({

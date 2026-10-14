@@ -10,6 +10,7 @@ import { createClient } from "@libsql/client";
 import * as fs from "fs";
 import * as http from "http";
 import * as path from "path";
+import { loadCorpus, successorsFor, analyzeFunctionalGraph, predecessors, walkFrom, rngFor, DEAD, TERM, plainLinkCount } from "./lib/walk.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const PORT = Number(process.env.PORT ?? 8787);
@@ -36,58 +37,8 @@ function cachePut(res: http.ServerResponse, key: string, body: unknown) {
   res.end(s);
 }
 
-// disambiguation pages ("X may refer to:") are not valid walk targets —
-// cached per wiki, read from the raw dump's wikitext
-const disambigCache = new Map<string, Set<number>>();
-async function disambigSetFor(wikiId: string): Promise<Set<number>> {
-  const hit = disambigCache.get(wikiId);
-  if (hit) return hit;
-  const s = new Set<number>();
-  const wikiDbPath = path.join(ROOT, "output", wikiId, "wiki.sqlite");
-  if (fs.existsSync(wikiDbPath)) {
-    const wdb = createClient({ url: `file:${wikiDbPath}` });
-    try {
-      const r = await wdb.execute(
-        "SELECT id FROM page WHERE namespace = 0 AND ((instr(lower(substr(text,1,400)), 'may refer to:') > 0 OR instr(lower(substr(text,1,400)), '{{disambig') > 0) OR title LIKE '% (disambiguation)')"
-      );
-      for (const row of r.rows) s.add(Number(row.id));
-    } finally { wdb.close(); }
-  }
-  disambigCache.set(wikiId, s);
-  return s;
-}
-
-// date pages ("28 April", "April 28", "17 March 2019") are update-history
-// indexes — cached per wiki, detected by title shape
-const dateCache = new Map<string, Set<number>>();
-const MONTHS_RE = "January|February|March|April|May|June|July|August|September|October|November|December";
-const DATE_TITLE_RE = new RegExp(
-  `^((0?[1-9]|[12]\\d|3[01]) (${MONTHS_RE})|(${MONTHS_RE}) (0?[1-9]|[12]\\d|3[01]))(,? \\d{4})?$`, "i"
-);
-async function dateSetFor(wikiId: string): Promise<Set<number>> {
-  const hit = dateCache.get(wikiId);
-  if (hit) return hit;
-  const s = new Set<number>();
-  const linksPath2 = path.join(ROOT, "output", wikiId, "links.sqlite");
-  if (fs.existsSync(linksPath2)) {
-    const ldb = createClient({ url: `file:${linksPath2}` });
-    try {
-      const r = await ldb.execute("SELECT id, title FROM page");
-      for (const row of r.rows) {
-        const t = String(row.title);
-        if (DATE_TITLE_RE.test(t) || /^(1[0-9]{3}|20[0-9]{2})$/.test(t)) s.add(Number(row.id)); // bare years too
-      }
-    } finally { ldb.close(); }
-  }
-  dateCache.set(wikiId, s);
-  return s;
-}
-async function skippedTargetsFor(wikiId: string): Promise<Set<number>> {
-  const [a, b] = await Promise.all([disambigSetFor(wikiId), dateSetFor(wikiId)]);
-  const s = new Set<number>(a);
-  for (const x of b) s.add(x);
-  return s;
-}
+// disambiguation/date skip sets, successor tables and attractor detection
+// all live in lib/walk.ts — this file only serves them
 
 function readSafe(p: string): string | null {
   try { return fs.readFileSync(p, "utf8"); } catch { return null; }
@@ -102,114 +53,29 @@ function json(res: http.ServerResponse, code: number, body: unknown) {
 // tree layout with collision resolution (adapted from the OSRS project)
 // ---------------------------------------------------------------------------
 async function computeGraph(wikiId: string, rank: string, detail: number) {
-  const wikiDir = path.join(ROOT, "output", wikiId);
-  const db = createClient({ url: `file:${path.join(wikiDir, "links.sqlite")}` });
+  const corpus = await loadCorpus(wikiId);
+  const N = corpus.ids.length;
+  const title = (i: number) => corpus.titles[i];
 
-  // load all pages
-  const pagesRes = await db.execute("SELECT id, title FROM page ORDER BY id");
-  const ids = pagesRes.rows.map((r) => Number(r.id));
-  const titles = new Map<number, string>(pagesRes.rows.map((r) => [Number(r.id), String(r.title)]));
-  const idToIdx = new Map<number, number>(ids.map((id, i) => [id, i]));
-  const N = ids.length;
-  const title = (i: number) => titles.get(ids[i]) ?? "?";
+  // successor table + attractor analysis for the requested rank
+  const { succ } = successorsFor(corpus, rank);
+  const { attractor, loops: attractors, inDeg } = analyzeFunctionalGraph(succ);
 
-  // load links and build successor map for the requested rank
-  const linksByPage = new Map<number, Array<{ rank: number; target: number | null; paren: boolean; italic: boolean }>>();
-  {
-    let lastRow = -1;
-    for (;;) {
-      const res = await db.execute({
-        sql: "SELECT page_id, rank, target_id, paren, italic FROM link WHERE page_id > ? ORDER BY page_id, rank LIMIT 5000",
-        args: [lastRow],
-      });
-      if (res.rows.length === 0) break;
-      for (const r of res.rows) {
-        const pid = Number(r.page_id);
-        lastRow = pid;
-        let arr = linksByPage.get(pid);
-        if (!arr) { arr = []; linksByPage.set(pid, arr); }
-        arr.push({ rank: Number(r.rank), target: r.target_id === null ? null : Number(r.target_id),
-          paren: Number(r.paren) === 1, italic: Number(r.italic) === 1 });
-      }
-      if (res.rows.length < 5000) break;
-    }
-  }
-  function rngFor(pageId: number): number {
-    let x = (pageId ^ 0x9e3779b9) >>> 0;
-    x ^= x << 13; x >>>= 0; x ^= x >> 17; x ^= x << 5; x >>>= 0;
-    return x / 4294967296;
-  }
-  const succ = new Int32Array(N).fill(-1);
-  {
-    const skipped = await skippedTargetsFor(wikiId);
-    const nRank = rank === "strict1" ? 1 : (/^\d+$/.test(rank) ? Number(rank) : null);
-    for (let i = 0; i < N; i++) {
-      const links = linksByPage.get(ids[i]);
-      if (!links || links.length === 0) continue;
-      const eligible = links.filter((l) => !l.paren && !l.italic && !(l.target !== null && skipped.has(l.target))); // every rank is strict, disambiguation pages never count
-      if (eligible.length === 0) continue;
-      let chosen: number | null = null;
-      if (rank === "last") chosen = eligible[eligible.length - 1].target;
-      else if (rank === "random") chosen = eligible[Math.floor(rngFor(ids[i]) * eligible.length)].target;
-      else if (nRank !== null) { const at = eligible[nRank - 1]; chosen = at ? at.target : null; }
-      if (chosen === null) continue;
-      const idx = idToIdx.get(chosen);
-      if (idx !== undefined) succ[i] = idx;
-    }
-  }
-
-  // attractor analysis
-  const attractor = new Int32Array(N).fill(-1);
-  const attractors: Array<{ nodes: number[] }> = [];
-  const DEAD = -2;
-  const mark = new Int32Array(N).fill(-1);
-  let walkId = 0;
-  for (let s = 0; s < N; s++) {
-    if (mark[s] !== -1) continue;
-    walkId++;
-    const walkPath: number[] = [], posInPath = new Map<number, number>();
-    let cur = s;
-    for (;;) {
-      if (mark[cur] === walkId) {
-        const at = posInPath.get(cur)!;
-        const a = attractors.push({ nodes: walkPath.slice(at) }) - 1;
-        for (const n of attractors[a].nodes) attractor[n] = a;
-        for (let p = at - 1; p >= 0; p--) attractor[walkPath[p]] = a;
-        break;
-      }
-      if (mark[cur] !== -1) {
-        const t = attractor[cur];
-        for (let p = walkPath.length - 1; p >= 0; p--) attractor[walkPath[p]] = t;
-        break;
-      }
-      mark[cur] = walkId; posInPath.set(cur, walkPath.length); walkPath.push(cur);
-      const nx = succ[cur];
-      if (nx === -1) { for (const p of walkPath) attractor[p] = DEAD; break; }
-      if (nx === cur) { const a = attractors.push({ nodes: [cur] }) - 1; attractor[cur] = a; for (let p = walkPath.length - 2; p >= 0; p--) attractor[walkPath[p]] = a; break; }
-      cur = nx;
-    }
-  }
   const basin = new Map<number, number>();
   for (let i = 0; i < N; i++) { const a = attractor[i]; if (a >= 0) basin.set(a, (basin.get(a) ?? 0) + 1); }
   const ranked = [...basin.entries()].sort((x, y) => y[1] - x[1]);
   const nLoops = Math.min(4, ranked.length);
   const clusterAttractors = ranked.slice(0, nLoops);
 
-  // in-degree + predecessors
-  const inDeg = new Int32Array(N);
-  const preds = new Map<number, number[]>();
-  for (let i = 0; i < N; i++) if (succ[i] >= 0) {
-    inDeg[succ[i]]++;
-    if (!preds.has(succ[i])) preds.set(succ[i], []);
-    preds.get(succ[i])!.push(i);
-  }
+  // predecessors
+  const preds = predecessors(succ);
 
   // node selection BFS
   const include = new Set<number>();
   const groupOf = new Map<number, number>();
-  clusterAttractors.forEach(([a], li) => { for (const n of attractors[a].nodes) { include.add(n); groupOf.set(n, li); } });
+  clusterAttractors.forEach(([a], li) => { for (const n of attractors[a]) { include.add(n); groupOf.set(n, li); } });
   const cycSet = new Set<number>();
-  clusterAttractors.forEach(([a]) => { for (const n of attractors[a].nodes) cycSet.add(n); });
+  clusterAttractors.forEach(([a]) => { for (const n of attractors[a]) cycSet.add(n); });
 
   const depthMax = [2, 3, 5, 8, 12][detail - 1];
   const budgets = [
@@ -222,7 +88,7 @@ async function computeGraph(wikiId: string, rank: string, detail: number) {
   const perLoopCap = [40, 80, 150, 500, 2000][detail - 1];
 
   clusterAttractors.forEach(([a], li) => {
-    let frontier = [...attractors[a].nodes];
+    let frontier = [...attractors[a]];
     let clusterCount = frontier.length;
     for (let depth = 1; depth <= depthMax; depth++) {
       const cap = Math.min(budgets[depth] ?? 0, perLoopCap - clusterCount);
@@ -389,7 +255,7 @@ async function computeGraph(wikiId: string, rank: string, detail: number) {
   }
   for (const e of gEdges) gNodes[e.source].target = gNodes[e.target].title;
   const loops = clusterAttractors.map(([a, b]) => ({
-    cycle: attractors[a].nodes.map((n) => title(n)),
+    cycle: attractors[a].map((n) => title(n)),
     basin: b, pct: +(100 * b / N).toFixed(1), minor: false,
   }));
   return { nodes: gNodes, edges: gEdges, loops, mainspace: N };
@@ -492,65 +358,35 @@ const server = http.createServer(async (req, res) => {
         args: [title],
       });
       if (pageRes.rows.length === 0) { res.writeHead(404); res.end(`article not found: ${title}`); return; }
-      const startId = Number(pageRes.rows[0].id);
-      // load links for this page + successors iteratively
-      const titleCache = new Map<number, string>([[startId, String(pageRes.rows[0].title)]]);
-      const chain: string[] = [String(pageRes.rows[0].title)];
-      const seen = new Set<number>([startId]);
-      let cur = startId, hops = 0, fate = "", reason = "", cycleSize = 0;
-      const skipped = await skippedTargetsFor(wiki);
-      const nRank = /^\d+$/.test(rank) ? Number(rank) : null;
-      while (chain.length < 120) {
-        const links = await db.execute({
-          sql: "SELECT rank, target_id, paren, italic FROM link WHERE page_id = ? ORDER BY rank",
-          args: [cur],
-        });
-        const eligible = links.rows.filter((r) => Number(r.paren) === 0 && Number(r.italic) === 0 && !(r.target_id !== null && skipped.has(Number(r.target_id)))); // every rank is strict, disambiguation pages never count
-        let targetId: number | null = null;
-        const nRank = rank === "strict1" ? 1 : (/^\d+$/.test(rank) ? Number(rank) : null);
-        if (nRank !== null) {
-          const at = eligible[nRank - 1];
-          if (!at) { fate = "dead"; reason = `page has only ${eligible.length} eligible links`; break; }
-          targetId = at.target_id === null ? null : Number(at.target_id);
-        } else if (rank === "last") {
-          const last = eligible[eligible.length - 1];
-          targetId = last ? (last.target_id === null ? null : Number(last.target_id)) : null;
-        } else {
-          // random
-          if (eligible.length === 0) { fate = "dead"; reason = "no eligible links"; break; }
-          const pick = eligible[Math.floor(Math.random() * eligible.length)];
-          targetId = pick.target_id === null ? null : Number(pick.target_id);
-        }
-        if (targetId === null) { fate = "dead"; reason = "redlink (unresolvable target)"; break; }
-        if (seen.has(targetId)) {
-          fate = "cycle";
-          const firstIdx = chain.findIndex((t) => titleCache.get(targetId!) === t || t === (titleCache.get(targetId) ?? ""));
-          cycleSize = firstIdx >= 0 ? chain.length - firstIdx : 1;
-          break;
-        }
-        seen.add(targetId);
-        const targetRes = await db.execute({
-          sql: "SELECT title FROM page WHERE id = ?",
-          args: [targetId],
-        });
-        const tTitle = targetRes.rows.length ? String(targetRes.rows[0].title) : `#${targetId}`;
-        titleCache.set(targetId, tTitle);
-        chain.push(tTitle);
-        hops = chain.length - 1;
-        cur = targetId;
-      }
-      if (!fate) { fate = "cycle"; cycleSize = 1; }
-      json(res, 200, { title, rank, chain, hops, fate, reason, cycleSize });
+      const corpus = await loadCorpus(wiki);
+      const startIdx = corpus.idToIdx.get(Number(pageRes.rows[0].id));
+      if (startIdx === undefined) { res.writeHead(404); res.end(`article not in corpus: ${title}`); return; }
+      const { succ, term } = successorsFor(corpus, rank);
+      const walk = walkFrom(succ, startIdx);
+      const chain = walk.chain.map((i) => corpus.titles[i]);
+      const hops = chain.length - 1;
+      const reason = walk.fate === "dead"
+        ? term[walk.endIdx] === TERM.NO_LINKS ? "no eligible links"
+          : term[walk.endIdx] === TERM.TOO_FEW ? `page has only ${plainLinkCount(corpus, walk.endIdx)} eligible links`
+          : term[walk.endIdx] === TERM.UNRESOLVED ? "redlink (unresolvable target)"
+          : "chain breaks"
+        : "";
+      json(res, 200, { title, rank, chain, hops, fate: walk.fate, reason, cycleSize: walk.cycleSize });
       return;
     }
     if (url.pathname === "/api/search") {
       const query = (q.get("q") ?? "").replace(/[%_]/g, "");
       const db = createClient({ url: `file:${path.join(wikiDir, "links.sqlite")}` });
+      const corpus = await loadCorpus(wiki);
       const r = await db.execute({
-        sql: "SELECT title FROM page WHERE title LIKE ? ORDER BY LENGTH(title) LIMIT 12",
+        sql: "SELECT id, title FROM page WHERE title LIKE ? ORDER BY LENGTH(title) LIMIT 60",
         args: [`%${query}%`],
       });
-      json(res, 200, { titles: r.rows.map((row) => String(row.title)) });
+      const titles = r.rows
+        .map((row) => String(row.title))
+        .filter((t, i) => corpus.idToIdx.has(Number(r.rows[i].id)))
+        .slice(0, 12);
+      json(res, 200, { titles });
       return;
     }
     if (url.pathname === "/api/graph") {
@@ -574,97 +410,21 @@ const server = http.createServer(async (req, res) => {
       if (sendCache(res, mck)) return;
       const linksPath = path.join(wikiDir, "links.sqlite");
       if (!fs.existsSync(linksPath)) { res.writeHead(404); res.end("not extracted yet"); return; }
-      const db = createClient({ url: `file:${linksPath}` });
-      const pagesRes = await db.execute("SELECT id, title FROM page ORDER BY id");
-      const ids = pagesRes.rows.map((r) => Number(r.id));
-      const titles = new Map<number, string>(pagesRes.rows.map((r) => [Number(r.id), String(r.title)]));
-      const idToIdx = new Map<number, number>(ids.map((id, i) => [id, i]));
+      const corpus = await loadCorpus(wiki);
+      const ids = corpus.ids;
       const N = ids.length;
-      const linksByPage = new Map<number, Array<{ rank: number; target: number | null; paren: boolean; italic: boolean }>>();
-      {
-        let lastRow = -1;
-        for (;;) {
-          const r2 = await db.execute({
-            sql: "SELECT page_id, rank, target_id, paren, italic FROM link WHERE page_id > ? ORDER BY page_id, rank LIMIT 5000",
-            args: [lastRow],
-          });
-          if (r2.rows.length === 0) break;
-          for (const r of r2.rows) {
-            const pid = Number(r.page_id); lastRow = pid;
-            let arr = linksByPage.get(pid);
-            if (!arr) { arr = []; linksByPage.set(pid, arr); }
-            arr.push({ rank: Number(r.rank), target: r.target_id === null ? null : Number(r.target_id),
-              paren: Number(r.paren) === 1, italic: Number(r.italic) === 1 });
-          }
-          if (r2.rows.length < 5000) break;
-        }
-      }
-      function rngFor(pageId: number): number {
-        let x = (pageId ^ 0x9e3779b9) >>> 0;
-        x ^= x << 13; x >>>= 0; x ^= x >> 17; x ^= x << 5; x >>>= 0;
-        return x / 4294967296;
-      }
-      // strict successor map (parenthesised/italicised/disambiguation links never count)
-      const skipped = await skippedTargetsFor(wiki);
-      const succ = new Int32Array(N).fill(-1);
-      const nRank = rank === "strict1" ? 1 : (/^\d+$/.test(rank) ? Number(rank) : null);
-      for (let i = 0; i < N; i++) {
-        const links = linksByPage.get(ids[i]);
-        if (!links || links.length === 0) continue;
-        const eligible = links.filter((l) => !l.paren && !l.italic && !(l.target !== null && skipped.has(l.target)));
-        if (eligible.length === 0) continue;
-        let chosen: number | null = null;
-        if (rank === "last") chosen = eligible[eligible.length - 1].target;
-        else if (rank === "random") chosen = eligible[Math.floor(rngFor(ids[i]) * eligible.length)].target;
-        else if (nRank !== null) { const at = eligible[nRank - 1]; chosen = at ? at.target : null; }
-        if (chosen === null) continue;
-        const idx = idToIdx.get(chosen);
-        if (idx !== undefined) succ[i] = idx;
-      }
-      // attractor detection
-      const attractor = new Int32Array(N).fill(-1);
-      const attractors: Array<{ nodes: number[] }> = [];
-      const mark = new Int32Array(N).fill(-1);
-      let walkId = 0;
-      for (let s = 0; s < N; s++) {
-        if (mark[s] !== -1) continue;
-        walkId++;
-        const walkPath: number[] = [], posInPath = new Map<number, number>();
-        let cur = s;
-        for (;;) {
-          if (mark[cur] === walkId) {
-            const at = posInPath.get(cur)!;
-            const a = attractors.push({ nodes: walkPath.slice(at) }) - 1;
-            for (const n of attractors[a].nodes) attractor[n] = a;
-            for (let p = at - 1; p >= 0; p--) attractor[walkPath[p]] = a;
-            break;
-          }
-          if (mark[cur] !== -1) {
-            const t = attractor[cur];
-            for (let p = walkPath.length - 1; p >= 0; p--) attractor[walkPath[p]] = t;
-            break;
-          }
-          mark[cur] = walkId; posInPath.set(cur, walkPath.length); walkPath.push(cur);
-          const nx = succ[cur];
-          if (nx === -1) { for (const p of walkPath) attractor[p] = -2; break; }
-          if (nx === cur) { const a = attractors.push({ nodes: [cur] }) - 1; attractor[cur] = a; for (let p = walkPath.length - 2; p >= 0; p--) attractor[walkPath[p]] = a; break; }
-          cur = nx;
-        }
-      }
+      const linksByPage = corpus.linksByPage;
+      // strict successor map + attractor detection (parenthesised/italicised/disambiguation links never count)
+      const { succ } = successorsFor(corpus, rank);
+      const { attractor, loops: attractors, inDeg } = analyzeFunctionalGraph(succ);
       const basin = new Map<number, number>();
       for (let i = 0; i < N; i++) { const a = attractor[i]; if (a >= 0) basin.set(a, (basin.get(a) ?? 0) + 1); }
       const ranked = [...basin.entries()].sort((x, y) => y[1] - x[1]);
-      const inDeg = new Int32Array(N);
-      const preds = new Map<number, number[]>();
-      for (let i = 0; i < N; i++) if (succ[i] >= 0) {
-        inDeg[succ[i]]++;
-        if (!preds.has(succ[i])) preds.set(succ[i], []);
-        preds.get(succ[i])!.push(i);
-      }
+      const preds = predecessors(succ);
       // selection: loop members, then tributaries by in-degree, then random fill
       const include = new Set<number>();
       const isCycle = new Uint8Array(N);
-      ranked.slice(0, 4).forEach(([a]) => attractors[a].nodes.forEach((n) => { include.add(n); isCycle[n] = 1; }));
+      ranked.slice(0, 4).forEach(([a]) => attractors[a].forEach((n) => { include.add(n); isCycle[n] = 1; }));
       let frontier = [...include];
       const budgets = [1e9, Math.round(target * 0.18), Math.round(target * 0.10), Math.round(target * 0.06)];
       for (let depth = 0; depth < 3 && include.size < target * 0.65; depth++) {
@@ -678,9 +438,7 @@ const server = http.createServer(async (req, res) => {
       const linksInto = (v: number) => {
         const links = linksByPage.get(ids[v]) ?? [];
         for (const l of links) {
-          if (l.target === null) continue;
-          const t = idToIdx.get(l.target);
-          if (t !== undefined && include.has(t)) return true;
+          if (l.target >= 0 && include.has(l.target)) return true;
         }
         return false;
       };
@@ -693,7 +451,7 @@ const server = http.createServer(async (req, res) => {
       // edges: every link between selected nodes, successor flagged, capped per source
       const idxs = [...include];
       const local = new Map(idxs.map((v, i) => [v, i]));
-      const outNodes = idxs.map((v) => ({ t: titles.get(ids[v]) ?? "?", c: isCycle[v] === 1 }));
+      const outNodes = idxs.map((v) => ({ t: corpus.titles[v], c: isCycle[v] === 1 }));
       const rawEdges: Array<[number, number, number]> = [];
       const seen = new Set<string>();
       for (const v of idxs) {
@@ -701,9 +459,8 @@ const server = http.createServer(async (req, res) => {
         const s = local.get(v)!;
         let count = 0;
         for (const l of links) {
-          if (l.target === null) continue;
-          const tl = idToIdx.get(l.target);
-          if (tl === undefined) continue;
+          const tl = l.target;
+          if (tl < 0) continue;
           const li = local.get(tl);
           if (li === undefined || li === s) continue;
           const key = s + ":" + li;
@@ -725,7 +482,7 @@ const server = http.createServer(async (req, res) => {
       const meshEdges = rawEdges.filter(([s, t]) => remap.has(s) && remap.has(t))
         .map(([s, t, m]) => [remap.get(s)!, remap.get(t)!, m]);
       const loopsPayload = ranked.slice(0, 4).map(([a, b]) => ({
-        cycle: attractors[a].nodes.map((n) => titles.get(ids[n]) ?? "?"),
+        cycle: attractors[a].map((n) => corpus.titles[n]),
         pct: +(100 * b / N).toFixed(1),
       }));
       cachePut(res, mck, { nodes: meshNodes, edges: meshEdges, loops: loopsPayload });
@@ -758,9 +515,9 @@ const server = http.createServer(async (req, res) => {
       return;
     }
     if (url.pathname === "/api/random") {
-      const db = createClient({ url: `file:${path.join(wikiDir, "links.sqlite")}` });
-      const r = await db.execute("SELECT title FROM page ORDER BY RANDOM() LIMIT 1");
-      json(res, 200, { title: r.rows.length ? String(r.rows[0].title) : "" });
+      const corpus = await loadCorpus(wiki);
+      const idx = Math.floor(Math.random() * corpus.ids.length);
+      json(res, 200, { title: corpus.titles[idx] ?? "" });
       return;
     }
     res.writeHead(404); res.end("not found");
