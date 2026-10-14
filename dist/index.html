@@ -39,6 +39,8 @@
   .dek i { font-family: var(--font-display); font-style: italic; }
   .mast-readout { margin-top: 4vh; display: flex; flex-wrap: wrap; gap: 6px 26px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
   .mast-readout b { color: var(--rust); font-weight: 700; }
+  .slopline { padding: 9px 5vw; background: var(--rust); color: var(--paper, #f8f4ea); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; line-height: 1.6; text-align: center; }
+  .slopline b { font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; }
   .mast-field { position: relative; min-height: 60vh; }
   .mast-field .hint { position: absolute; left: 14px; bottom: 12px; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); pointer-events: none; }
   .field { position: absolute; inset: 0; }
@@ -211,6 +213,7 @@
 </head>
 <body data-mode="split">
 <div id="progress"></div>
+<div class="slopline" role="note">⚠ <b>Slopline</b> · all of the data, prose and visuals on this page are currently vibe-coded with an AI assistant and have <u>not</u> gone through a thorough human review. Enjoy, but verify before quoting anything.</div>
 
 <!-- ============================ MASTHEAD ============================ -->
 <header class="masthead">
@@ -740,7 +743,8 @@
       red links and namespaces skipped · the walk stops at a loop or a dead page<br>
       run it on your own wiki, any mediawiki with a public api.php:
       <a href="https://github.com/AntonyGarand/gaming-wiki-analysis" target="_blank" rel="noopener">github.com/AntonyGarand/gaming-wiki-analysis</a><br>
-      found a weirder whirlpool than block ⇄ slab? tell us
+      found a weirder whirlpool than block ⇄ slab? tell us<br>
+      slopline: data, prose and visuals are vibe-coded with an ai assistant and not yet thoroughly human-reviewed
     </div>
   </div>
 </footer>

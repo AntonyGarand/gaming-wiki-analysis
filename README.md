@@ -1,8 +1,14 @@
 # gaming-wiki-analysis
 
+**Live article:** https://antonygarand.github.io/gaming-wiki-analysis/
+
+> **Slopline.** Everything in this repository — the scraper, the analysis, the numbers, the prose and the
+> visuals — is currently vibe-coded with an AI assistant and has **not** gone through a thorough human
+> review. Treat every figure and every claim as unverified until this notice is removed.
+>
 > **Status:** article, charts and build are a working draft. Prose is written for OSRS; every number in it is
 > bound to the data files at render time, so regenerating the data never leaves a stale figure behind.
-> Pushes to the `draft` branch auto-deploy the static site via GitHub Actions.
+> GitHub Pages serves `dist/` from `main`.
 
 First-link network analysis for gaming wikis — the ["Getting to Philosophy"](https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy) experiment applied to game knowledge bases.
 
