@@ -290,6 +290,15 @@
     let cacheView = null, anim = null, lastView = null;
     let baseStale = false, lastInteract = 0;   // interaction in progress: redraw from the cached bitmap
     const SETTLE_MS = 140;
+    // The base layer (every edge, dot and label) is too expensive to re-render
+    // per frame, so pans/zooms replay a cached bitmap. The cache is CACHE_PAD
+    // larger than the canvas on every side, which keeps short drags crisp — and
+    // once a drag eats into that runway (RUNWAY_USED of it), the frame loop
+    // re-renders at the current view, but never more often than REBASE_MS, so a
+    // long pan costs a few heavier frames per second instead of one per frame.
+    const CACHE_PAD = 0.35, REBASE_MS = 180, RUNWAY_USED = 0.25;
+    let cacheOX = 0, cacheOY = 0, cacheW = 0, cacheH = 0; // device px: cache size + viewport offset inside it
+    let lastBaseDraw = 0;
     let walkers = [], hover = -1, hoverChain = null, visible = true, running = !opts.reduced;
     let lastT = 0, baseDirty = true, grid = null, gridCell = 18;
     const mouse = { x: -1e9, y: -1e9 };
@@ -299,7 +308,11 @@
       const r = container.getBoundingClientRect();
       W = Math.max(1, r.width); H = Math.max(1, r.height);
       dpr = pickDpr();
-      for (const c of [base, live, cacheC]) { c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); }
+      for (const c of [base, live]) { c.width = Math.round(W * dpr); c.height = Math.round(H * dpr); }
+      cacheOX = Math.round(W * dpr * CACHE_PAD); cacheOY = Math.round(H * dpr * CACHE_PAD);
+      cacheW = base.width + 2 * cacheOX; cacheH = base.height + 2 * cacheOY;
+      cacheC.width = cacheW; cacheC.height = cacheH;
+      cacheView = null;
       if (g) { L = layoutWalkGraph(g, W, H, opts.layout); buildGrid(); respawnAll(); }
       view.k = 1; view.tx = 0; view.ty = 0; anim = null;
       baseDirty = true;
@@ -389,14 +402,21 @@
 
     function drawBase() {
       baseDirty = false;
-      bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      bctx.clearRect(0, 0, W, H);
-      if (!g) return;
-      bctx.translate(view.tx, view.ty); bctx.scale(view.k, view.k);
+      lastBaseDraw = performance.now();
+      // render into the padded cache bitmap, then blit the viewport slice to
+      // the screen — the padding is what lets short pans replay cached ink
+      // instead of running off its edge
+      cctx.setTransform(1, 0, 0, 1, 0, 0);
+      cctx.clearRect(0, 0, cacheW, cacheH);
+      if (!g) { bctx.setTransform(1, 0, 0, 1, 0, 0); bctx.clearRect(0, 0, base.width, base.height); return; }
+      cctx.setTransform(dpr, 0, 0, dpr, cacheOX, cacheOY);
+      cctx.translate(view.tx, view.ty); cctx.scale(view.k, view.k);
       const { x, y } = L;
       const k = view.k;
-      // visible world rect (with margin) — skip everything else when zoomed in
-      const mx = (W / k) * 0.6, my = (H / k) * 0.6; // over-draw 60% around the viewport so cached pans don't show gaps
+      // visible world rect (with margin) — skip everything else when zoomed in.
+      // the margin matches CACHE_PAD: exactly the area the cache can still show
+      // after a pan, so no point rasterising (or culling) beyond it
+      const mx = (W / k) * CACHE_PAD, my = (H / k) * CACHE_PAD;
       const vx0 = -view.tx / k - mx, vy0 = -view.ty / k - my, vx1 = (W - view.tx) / k + mx, vy1 = (H - view.ty) / k + my;
       const vis = (i) => x[i] >= vx0 && x[i] <= vx1 && y[i] >= vy0 && y[i] <= vy1;
       const buckets = new Map();
@@ -406,44 +426,46 @@
         const c = colorOf(i); let p = buckets.get(c); if (!p) { p = new Path2D(); buckets.set(c, p); }
         p.moveTo(x[i], y[i]); p.lineTo(x[s], y[s]);
       }
-      bctx.lineWidth = (k > 4 ? 1.1 : k > 1.5 ? 0.85 : 0.7) / k;
-      bctx.globalAlpha = Math.min(0.35, opts.edgeAlpha * (1 + Math.log2(Math.max(1, k)) * 0.45));
-      for (const [c, p] of buckets) { bctx.strokeStyle = c; bctx.stroke(p); }
-      bctx.globalAlpha = 0.55;
+      cctx.lineWidth = (k > 4 ? 1.1 : k > 1.5 ? 0.85 : 0.7) / k;
+      cctx.globalAlpha = Math.min(0.35, opts.edgeAlpha * (1 + Math.log2(Math.max(1, k)) * 0.45));
+      for (const [c, p] of buckets) { cctx.strokeStyle = c; cctx.stroke(p); }
+      cctx.globalAlpha = 0.55;
       const sz = (k > 4 ? 2.6 : k > 1.5 ? 1.8 : 1.3) / k;
       const dots = new Map();
       for (let i = 0; i < g.N; i++) { if (k > 1.5 && !vis(i)) continue; const c = colorOf(i); let p = dots.get(c); if (!p) { p = new Path2D(); dots.set(c, p); } p.rect(x[i] - sz / 2, y[i] - sz / 2, sz, sz); }
-      for (const [c, p] of dots) { bctx.fillStyle = c; bctx.fill(p); }
-      bctx.globalAlpha = 0.9; bctx.lineWidth = Math.max(0.6, 1 / k);
+      for (const [c, p] of dots) { cctx.fillStyle = c; cctx.fill(p); }
+      cctx.globalAlpha = 0.9; cctx.lineWidth = Math.max(0.6, 1 / k);
       for (const l of g.loops.slice(0, 60)) {
-        bctx.strokeStyle = l.id < WALK_COLORS.loops.length ? WALK_COLORS.loops[l.id] : WALK_COLORS.other;
-        for (const n of l.nodes) { if (!vis(n)) continue; bctx.beginPath(); bctx.arc(x[n], y[n], Math.max(1.6, 2.6 / k), 0, TAU); bctx.stroke(); }
+        cctx.strokeStyle = l.id < WALK_COLORS.loops.length ? WALK_COLORS.loops[l.id] : WALK_COLORS.other;
+        for (const n of l.nodes) { if (!vis(n)) continue; cctx.beginPath(); cctx.arc(x[n], y[n], Math.max(1.6, 2.6 / k), 0, TAU); cctx.stroke(); }
       }
 
       // labels — territories first (bigger ones always, smaller ones as they grow on screen),
-      // then individual articles once zoomed in far enough
-      bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      bctx.globalAlpha = 1; bctx.textAlign = "center"; bctx.textBaseline = "middle";
+      // then individual articles once zoomed in far enough. bounds are the
+      // padded cache, so labels a pan away are already in place when they
+      // slide into view
+      const CW = cacheW / dpr, CH = cacheH / dpr;
+      cctx.globalAlpha = 1; cctx.textAlign = "center"; cctx.textBaseline = "middle";
       const placed = [];
-      const fits = (r) => !(r.x < 0 || r.x + r.w > W || r.y < 0 || r.y + r.h > H) && !placed.some((p) => r.x < p.x + p.w && r.x + r.w > p.x && r.y < p.y + p.h && r.y + r.h > p.y);
+      const fits = (r) => !(r.x < 0 || r.x + r.w > CW || r.y < 0 || r.y + r.h > CH) && !placed.some((p) => r.x < p.x + p.w && r.x + r.w > p.x && r.y < p.y + p.h && r.y + r.h > p.y);
       let shown = 0;
-      bctx.font = "600 10.5px 'Space Mono', monospace";
+      cctx.font = "600 10.5px 'Space Mono', monospace";
       for (let ci = 0; ci < L.centers.length && shown < opts.maxLabels; ci++) {
         const c = L.centers[ci];
         const rs = c.r * k;
         if (ci >= opts.labels && rs < 16) continue;
         if (c.loop < 0 && (ci > 6 || rs < 22)) continue;
         const [sx, sy] = toScreen(c.x, c.y);
-        if (sx < -rs || sx > W + rs || sy < -rs || sy > H + rs) continue;
+        if (sx < -rs || sx > CW + rs || sy < -rs || sy > CH + rs) continue;
         const label = c.loop >= 0 ? g.loops[c.loop].nodes.map((n) => g.titles[n]).join(" → ") : g.titles[c.root] + " ✝";
         const text = label.length > 44 ? label.slice(0, 43) + "…" : label;
-        const tw = bctx.measureText(text).width;
+        const tw = cctx.measureText(text).width;
         let ly = null;
         for (const cand of [sy - rs - 9, sy + rs + 9, sy]) { const r = { x: sx - tw / 2 - 3, y: cand - 8, w: tw + 6, h: 16 }; if (fits(r)) { placed.push(r); ly = cand; break; } }
         if (ly === null) continue;
-        bctx.lineWidth = 4; bctx.strokeStyle = "rgba(248,244,234,0.9)"; bctx.strokeText(text, sx, ly);
-        bctx.fillStyle = c.loop >= 0 ? (c.loop < WALK_COLORS.loops.length ? WALK_COLORS.loops[c.loop] : WALK_COLORS.other) : WALK_COLORS.dead;
-        bctx.fillText(text, sx, ly);
+        cctx.lineWidth = 4; cctx.strokeStyle = "rgba(248,244,234,0.9)"; cctx.strokeText(text, sx, ly);
+        cctx.fillStyle = c.loop >= 0 ? (c.loop < WALK_COLORS.loops.length ? WALK_COLORS.loops[c.loop] : WALK_COLORS.other) : WALK_COLORS.dead;
+        cctx.fillText(text, sx, ly);
         shown++;
       }
       if (k >= 3) {
@@ -453,22 +475,25 @@
         const cand = [];
         for (let i = 0; i < g.N; i++) if (vis(i) && (g.inDeg[i] >= minIn || (g.depth[i] === 0 && g.attractor[i] >= 0))) cand.push(i);
         cand.sort((a, b) => g.inDeg[b] - g.inDeg[a]);
-        bctx.font = "9.5px 'Space Mono', monospace"; bctx.textBaseline = "bottom"; bctx.textAlign = "left";
+        cctx.font = "9.5px 'Space Mono', monospace"; cctx.textBaseline = "bottom"; cctx.textAlign = "left";
         let n = 0;
         for (const i of cand) {
           if (n >= budget) break;
           const [sx, sy] = toScreen(x[i], y[i]);
           const t = g.titles[i]; const text = t.length > 30 ? t.slice(0, 29) + "…" : t;
-          const tw = bctx.measureText(text).width;
+          const tw = cctx.measureText(text).width;
           const r = { x: sx + 4, y: sy - 14, w: tw + 4, h: 13 };
           if (!fits(r)) continue;
           placed.push(r); n++;
-          bctx.lineWidth = 3; bctx.strokeStyle = "rgba(248,244,234,0.85)"; bctx.strokeText(text, sx + 5, sy - 3);
-          bctx.fillStyle = g.depth[i] === 0 && g.attractor[i] >= 0 ? colorOf(i) : "#5f574a"; bctx.fillText(text, sx + 5, sy - 3);
+          cctx.lineWidth = 3; cctx.strokeStyle = "rgba(248,244,234,0.85)"; cctx.strokeText(text, sx + 5, sy - 3);
+          cctx.fillStyle = g.depth[i] === 0 && g.attractor[i] >= 0 ? colorOf(i) : "#5f574a"; cctx.fillText(text, sx + 5, sy - 3);
         }
       }
-      // keep a copy for cheap redraws while a zoom animates
-      cctx.setTransform(1, 0, 0, 1, 0, 0); cctx.clearRect(0, 0, cacheC.width, cacheC.height); cctx.drawImage(base, 0, 0);
+      // blit the viewport slice of the cache on screen; keep the padded bitmap
+      // for cheap replays while a pan/zoom is under way
+      bctx.setTransform(1, 0, 0, 1, 0, 0);
+      bctx.clearRect(0, 0, base.width, base.height);
+      bctx.drawImage(cacheC, cacheOX, cacheOY, base.width, base.height, 0, 0, base.width, base.height);
       cacheView = { ...view };
     }
     function drawBaseFromCache() {
@@ -476,14 +501,37 @@
       const s = view.k / cacheView.k;
       bctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       bctx.clearRect(0, 0, W, H);
-      bctx.translate(view.tx - cacheView.tx * s, view.ty - cacheView.ty * s); bctx.scale(s / dpr, s / dpr);
+      // the cache's viewport slice sits cacheOX/cacheOY into its padded bitmap
+      const ox = cacheOX / dpr, oy = cacheOY / dpr;
+      bctx.translate(view.tx - (cacheView.tx + ox) * s, view.ty - (cacheView.ty + oy) * s); bctx.scale(s / dpr, s / dpr);
       bctx.drawImage(cacheC, 0, 0);
+    }
+    // does the padded cache still cover the viewport? returns false once a
+    // pan/zoom has eaten RUNWAY_USED of the over-drawn margin, so the
+    // re-render lands while most of the runway is still held in reserve
+    function cacheCoversView() {
+      if (!cacheView) return false;
+      const kc = cacheView.k, keep = 1 - RUNWAY_USED;
+      const ox = cacheOX / dpr, oy = cacheOY / dpr;         // CSS-px margin baked into the cache
+      const px = (ox * keep) / kc, py = (oy * keep) / kc;    // held in reserve, in world units
+      return (-view.tx) / view.k >= (-ox - cacheView.tx) / kc + px
+        && (W - view.tx) / view.k <= (cacheW / dpr - ox - cacheView.tx) / kc - px
+        && (-view.ty) / view.k >= (-oy - cacheView.ty) / kc + py
+        && (H - view.ty) / view.k <= (cacheH / dpr - oy - cacheView.ty) / kc - py;
     }
 
     function frame(now) {
       const animating = stepAnim(now);
       const interacting = baseStale && now - lastInteract < SETTLE_MS;
-      if (animating || interacting) drawBaseFromCache();
+      if (animating) drawBaseFromCache();
+      else if (interacting) {
+        // mid pan/zoom: replay the cache while it still covers the viewport;
+        // once the drag starts eating into its runway, re-render at the current
+        // view — throttled to REBASE_MS, so a long drag costs a few heavier
+        // frames per second instead of one per frame
+        if (now - lastBaseDraw >= REBASE_MS && !cacheCoversView()) { drawBase(); baseStale = false; }
+        else drawBaseFromCache();
+      }
       else if (baseDirty || baseStale) { drawBase(); baseStale = false; }
       const dt = Math.min(0.05, (now - lastT) / 1000 || 0.016); lastT = now;
       lctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -657,7 +705,7 @@
       pause() { running = false; },
       setTouchAction(v) { container.style.touchAction = v; },
       resume() { running = !opts.reduced; kick(); },
-      focus(i) { hover = i; hoverChain = i >= 0 ? g.walk(i) : null; kickOnce(); },
+      focus(i) { hover = i; hoverChain = i >= 0 ? g.walk(i) : null; if (opts.onHover) opts.onHover(hover, hoverChain); kickOnce(); },
       zoomBy(f) { zoomAt(f, W / 2, H / 2); },
       zoomToNode(i, k) {
         if (!g || i < 0) return;
