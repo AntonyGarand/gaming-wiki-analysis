@@ -52,6 +52,11 @@
   .field-ui button { font-family: var(--font-mono); font-size: 13px; width: 34px; height: 34px; line-height: 1; cursor: pointer; color: var(--ink-2);
     background: color-mix(in oklab, var(--ground-0) 88%, transparent); border: 1px solid var(--hairline); backdrop-filter: blur(6px); }
   .field-ui button:hover { color: var(--rust); border-color: var(--rust); }
+  .field-find { position: absolute; right: 12px; top: 12px; z-index: 6; display: none; }
+  .field-find.open { display: flex; }
+  .field-find input { font-family: var(--font-mono); font-size: 12px; width: min(300px, calc(100% - 92px)); color: var(--ink);
+    background: color-mix(in oklab, var(--ground-0) 92%, transparent); border: 1px solid var(--hairline); padding: 7px 9px; border-radius: 0; backdrop-filter: blur(6px); }
+  .field-find input:focus { outline: none; border-color: var(--rust); }
   .field-bar { position: absolute; left: 14px; right: 14px; top: 14px; z-index: 5; display: none; gap: 8px; align-items: center; flex-wrap: wrap;
     font-family: var(--font-mono); font-size: 11px; color: var(--ink-2); }
   .field-bar select, .field-bar input { font-family: var(--font-mono); font-size: 12px; background: color-mix(in oklab, var(--ground-0) 92%, transparent); color: var(--ink); border: 1px solid var(--hairline); padding: 7px 9px; border-radius: 0; }
@@ -66,6 +71,7 @@
   .field-wrap:fullscreen .field-legend { display: block; }
   .field-wrap:fullscreen .hint { left: auto; right: 190px; bottom: 20px; }
   .field-wrap:fullscreen .field-ui { bottom: 14px; }
+  .field-wrap:fullscreen .field-find { display: none !important; }
 
   /* control bar */
   .controlbar { position: sticky; top: 0; z-index: 120; min-height: var(--bar-h); display: flex; align-items: center; gap: 14px; padding: 8px var(--gutter);
@@ -715,8 +721,9 @@
         <p>
           The moving sparks are walkers. Each starts on a random article and follows first links until it
           lands in a loop, then another takes its place. Watch where they pile up. Hover a dot to trace its
-          walk, click to open the real article, and press ⛶ to go fullscreen, where you can pan, zoom and
-          search. There are articles out at ring fifteen. Go find them.
+          walk, click to open the real article. Hunting one page in particular? Press <span class="lo">/</span>
+          or the 🔍 button, type its name, and the map flies straight to it and traces its walk. Press ⛶ to
+          go fullscreen and pan and zoom freely. There are articles out at ring fifteen. Go find them.
         </p>
       </div>
       <div class="figslot" data-fig="fig-map">
@@ -1194,9 +1201,23 @@ function renderGrave() {
 /* ---- 09 the drainage map (explore) + hero ---- */
 let heroField = null, mapField = null;
 const coarse = window.matchMedia("(pointer: coarse)").matches;
-const HINT_IDLE = coarse ? "tap a dot to trace its walk · tap it again to open the article · ⛶ fullscreen to pan and zoom" : "hover a dot to trace its walk · click to open the article · drag to pan · ⌘/ctrl + scroll to zoom · ⛶ fullscreen";
+const HINT_IDLE = coarse ? "tap a dot to trace its walk · tap it again to open the article · 🔍 find an article · ⛶ fullscreen to pan and zoom" : "hover a dot to trace its walk · click to open the article · drag to pan · ⌘/ctrl + scroll to zoom · 🔍 search · ⛶ fullscreen";
 const walkerBudget = (n) => narrow.matches ? Math.round(n / 3) : n;
 /* zoom toolbar + fullscreen controls shared by the hero and the map */
+/* best match for a find box: exact, then prefix, then substring — shortest title wins */
+function findTitleIdx(g, q) {
+  const ql = q.toLowerCase();
+  const exact = g.titles.findIndex((t) => t.toLowerCase() === ql);
+  if (exact >= 0) return exact;
+  let best = -1, bestScore = Infinity;
+  for (let j = 0; j < g.titles.length; j++) {
+    const tl = g.titles[j].toLowerCase();
+    if (!tl.includes(ql)) continue;
+    const score = (tl.startsWith(ql) ? 0 : 1e9) + tl.length;
+    if (score < bestScore) { bestScore = score; best = j; }
+  }
+  return best;
+}
 function mountFieldUI(wrap, getField, title) {
   const ui = document.createElement("div"); ui.className = "field-ui";
   const btn = (label, aria, fn) => { const b = document.createElement("button"); b.type = "button"; b.textContent = label; b.setAttribute("aria-label", aria); b.title = aria; b.onclick = fn; ui.appendChild(b); return b; };
@@ -1204,6 +1225,20 @@ function mountFieldUI(wrap, getField, title) {
   btn("+", "zoom in", () => getField()?.zoomBy(1.6));
   btn("⌂", "reset view", () => getField()?.resetView());
   const fs = btn("⛶", "fullscreen", () => { if (document.fullscreenElement === wrap) document.exitFullscreen(); else wrap.requestFullscreen?.({ navigationUI: "hide" }).catch(() => {}); });
+
+  /* compact find box — search and fly without going fullscreen */
+  const find = document.createElement("div"); find.className = "field-find"; find.role = "search";
+  const dl = document.createElement("datalist"); dl.id = "ffdl-" + (mountFieldUI.n = (mountFieldUI.n ?? 0) + 1);
+  const fi = document.createElement("input"); fi.type = "text"; fi.setAttribute("autocomplete", "off"); fi.setAttribute("list", dl.id);
+  fi.setAttribute("aria-label", "find an article"); fi.placeholder = "find an article and fly to it ↵";
+  find.append(fi, dl);
+  const openFind = (on) => {
+    if (on && document.fullscreenElement === wrap) { const b = bar.querySelector(".fb-find"); b.focus(); b.select(); return; }
+    find.classList.toggle("open", on);
+    if (on) { fi.focus(); fi.select(); } else fi.blur();
+  };
+  btn("🔍", "find an article and fly to it", () => openFind(!find.classList.contains("open")));
+
   const bar = document.createElement("div"); bar.className = "field-bar";
   bar.innerHTML = `<span class="fb-title">${esc(title)}</span>
     <label>wiki <select class="fb-wiki"></select></label>
@@ -1213,20 +1248,37 @@ function mountFieldUI(wrap, getField, title) {
   bar.querySelector(".fb-exit").onclick = () => document.exitFullscreen();
   bar.querySelector(".fb-wiki").onchange = async (e) => { state.wiki = e.target.value; localStorage.setItem("article_wiki", state.wiki); await loadFocus(); };
   bar.querySelector(".fb-rank").onchange = async (e) => { state.rank = e.target.value; localStorage.setItem("article_rank", state.rank); await loadFocus(); };
-  bar.querySelector(".fb-find").addEventListener("keydown", (e) => {
-    if (e.key !== "Enter") return;
-    const f = getField(), g = f?.graph(); if (!g) return;
-    const q = e.target.value.trim().toLowerCase(); if (!q) return;
-    let i = g.titles.findIndex((t) => t.toLowerCase() === q);
-    if (i < 0) i = g.titles.findIndex((t) => t.toLowerCase().startsWith(q));
-    if (i < 0) i = g.titles.findIndex((t) => t.toLowerCase().includes(q));
-    if (i < 0) { e.target.style.borderColor = "#a03d2e"; return; }
-    e.target.style.borderColor = ""; e.target.value = g.titles[i];
-    f.zoomToNode(i, 7); f.focus(i);
-  });
+
+  /* fly-to behaviour shared by the compact box and the fullscreen bar input */
+  const wireFind = (input) => {
+    let timer;
+    input.addEventListener("input", () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        const g = getField()?.graph(); if (!g) return;
+        const q = input.value.trim().toLowerCase(); if (q.length < 2) { dl.innerHTML = ""; return; }
+        const hits = [];
+        for (let j = 0; j < g.titles.length && hits.length < 12; j++) if (g.titles[j].toLowerCase().includes(q)) hits.push(g.titles[j]);
+        hits.sort((a, b) => ((b.toLowerCase().startsWith(q) ? 0 : 1) - (a.toLowerCase().startsWith(q) ? 0 : 1)) || a.length - b.length);
+        dl.innerHTML = hits.map((t) => `<option value="${esc(t)}">`).join("");
+      }, 120);
+    });
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { if (input === fi) openFind(false); else input.blur(); return; }
+      if (e.key !== "Enter") return;
+      const f = getField(), g = f?.graph(); if (!g) return;
+      const q = input.value.trim().toLowerCase(); if (!q) return;
+      const i = findTitleIdx(g, q);
+      if (i < 0) { input.style.borderColor = "#a03d2e"; return; }
+      input.style.borderColor = ""; input.value = g.titles[i];
+      f.zoomToNode(i, 7); f.focus(i);
+    });
+  };
+  wireFind(fi); wireFind(bar.querySelector(".fb-find"));
+
   const legend = document.createElement("div"); legend.className = "field-legend";
-  wrap.appendChild(bar); wrap.appendChild(legend); wrap.appendChild(ui);
-  wrap._fieldBar = bar; wrap._fieldLegend = legend;
+  wrap.appendChild(bar); wrap.appendChild(legend); wrap.appendChild(ui); wrap.appendChild(find);
+  wrap._fieldBar = bar; wrap._fieldLegend = legend; wrap._openFind = openFind;
   document.addEventListener("fullscreenchange", () => {
     const on = document.fullscreenElement === wrap;
     fs.textContent = on ? "⤢" : "⛶"; fs.title = on ? "exit fullscreen" : "fullscreen";
@@ -1392,6 +1444,19 @@ el("gearBtn").onclick = () => setGear(!el("gearPanel").classList.contains("open"
 el("heroChartsBtn").onclick = () => { document.querySelector(".controlbar").scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" }); setTimeout(() => setGear(true), reduced ? 0 : 450); };
 document.addEventListener("pointerdown", (e) => { if (el("gearPanel").classList.contains("open") && !e.target.closest("#gearPanel, #gearBtn, #heroChartsBtn")) setGear(false); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") setGear(false); });
+/* press / anywhere to search the big map — jumps straight to the find box */
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey) return;
+  const t = e.target;
+  if (t instanceof HTMLElement && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable)) return;
+  e.preventDefault();
+  const fsEl = document.fullscreenElement;
+  if (fsEl?._openFind) { fsEl._openFind(true); return; }
+  ensureMap();
+  const wrap = el("mapWrap");
+  wrap.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+  setTimeout(() => wrap._openFind?.(true), reduced ? 0 : 350);
+});
 el("gearWiki").onchange = async () => { state.wiki = el("gearWiki").value; localStorage.setItem("article_wiki", state.wiki); await loadFocus(); };
 el("gearRank").onchange = async () => { state.rank = el("gearRank").value; localStorage.setItem("article_rank", state.rank); await loadFocus(); };
 el("rerollBtn").onclick = rollChain;

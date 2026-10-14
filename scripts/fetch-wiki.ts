@@ -15,6 +15,7 @@
 import { createClient, type Client } from "@libsql/client";
 import * as fs from "fs";
 import * as path from "path";
+import { politeFetch, makeUA } from "./lib/http.js";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const wikis = JSON.parse(fs.readFileSync(path.join(ROOT, "wikis.json"), "utf8")).wikis;
@@ -27,37 +28,12 @@ if (targets.length === 0) {
   process.exit(1);
 }
 
-const RATE_LIMIT_MS = Number(process.env.RATE_LIMIT_MS ?? 1000);
-let lastRequestAt = 0;
-
-async function politeFetch(origin: string, ua: string, params: Record<string, string>): Promise<any> {
-  for (let attempt = 1; ; attempt++) {
-    const wait = RATE_LIMIT_MS - (Date.now() - lastRequestAt);
-    if (wait > 0) await new Promise((r) => setTimeout(r, wait));
-    lastRequestAt = Date.now();
-
-    const url = new URL(`${origin}/api.php`);
-    for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
-    const res = await fetch(url, { headers: { "User-Agent": ua } });
-
-    if (res.status === 429 || res.status >= 500) {
-      if (attempt >= 5) throw new Error(`API ${res.status} after ${attempt} attempts`);
-      const backoff = 2000 * attempt;
-      console.log(`  ${res.status}, backing off ${backoff}ms...`);
-      await new Promise((r) => setTimeout(r, backoff));
-      continue;
-    }
-    if (!res.ok) throw new Error(`API ${res.status}`);
-    return res.json();
-  }
-}
-
 async function fetchWiki(wiki: typeof wikis[0]): Promise<void> {
   const t0 = Date.now();
   const outDir = path.join(ROOT, "output", wiki.id);
   fs.mkdirSync(outDir, { recursive: true });
   const dbPath = path.join(outDir, "wiki.sqlite");
-  const ua = `gaming-wikipedia-parsing/1.0 (first-link network analysis; ${wiki.id}; discord: anyny0)`;
+  const ua = makeUA(wiki.id);
   const db = createClient({ url: `file:${dbPath}` });
   const log = (msg: string) => console.log(`[${wiki.id}] ${msg}`);
 
