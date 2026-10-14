@@ -425,10 +425,11 @@ async function loadField() {
     if (!avail.has(state.wiki) && avail.size) { state.wiki = [...avail][0]; markWiki(); }
   } catch {
     try {
-      // static build (github pages / serve-static). the page may sit at the
-      // site root or one level down (dist/mesh/), so probe both data prefixes
+      // static build (github pages / serve-static). this page always ships
+      // one level down (dist/mesh/), so probe ../data/ first; data/ stays as
+      // the fallback for a root-served copy (a miss is caught and retried)
       let manifest = null;
-      for (const prefix of ["data/", "../data/"]) {
+      for (const prefix of ["../data/", "data/"]) {
         try { manifest = await fetchJson(prefix + "wikis.json"); DATA = prefix; break; } catch { /* next */ }
       }
       if (!manifest) throw new Error("data/wikis.json not found");
