@@ -102,7 +102,31 @@
         if (chain.length > 400) return { chain, fate: "dead", cycleSize: 0, hops: chain.length - 1, reason: "walk too long", terminal: cur };
       }
     }
-    return { N, titles, succ: S, term: T, attractor, depth, terminal, loops, inDeg, dead, walk };
+    // upstream(i): how many articles' walks pass through i (i included). Loop nodes see their whole basin;
+    // everything else is a reverse flood from i over the first-link edges. Built lazily, memoised.
+    let rStart = null, rList = null;
+    const upMemo = new Map();
+    function buildReverse() {
+      rStart = new Int32Array(N + 1);
+      for (let i = 0; i < N; i++) if (S[i] >= 0) rStart[S[i] + 1]++;
+      for (let i = 0; i < N; i++) rStart[i + 1] += rStart[i];
+      rList = new Int32Array(rStart[N]);
+      const fill = rStart.slice(0, N);
+      for (let i = 0; i < N; i++) if (S[i] >= 0) rList[fill[S[i]]++] = i;
+    }
+    function upstream(i) {
+      if (attractor[i] >= 0 && depth[i] === 0) return loops[attractor[i]].basin;
+      if (upMemo.has(i)) return upMemo.get(i);
+      if (!rStart) buildReverse();
+      const seen = new Uint8Array(N); const stack = [i]; seen[i] = 1; let count = 0;
+      while (stack.length) {
+        const n = stack.pop(); count++;
+        for (let k = rStart[n]; k < rStart[n + 1]; k++) { const p = rList[k]; if (!seen[p]) { seen[p] = 1; stack.push(p); } }
+      }
+      upMemo.set(i, count);
+      return count;
+    }
+    return { N, titles, succ: S, term: T, attractor, depth, terminal, loops, inDeg, dead, walk, upstream };
   }
 
   /* ------------------------------------------------------------------ *
@@ -252,10 +276,11 @@
       walkers: 320, speed: 90, explore: true, labels: 6, maxLabels: 28, edgeAlpha: 0.09,
       wheel: "always",            // "always" | "modifier" (ctrl/⌘ + wheel, so the page can still scroll)
       reduced: false, onHover: null, onClick: null, urlFor: null, onView: null,
+      touchAction: "none",        // "pan-y" lets a touch page scroll over the field; pinch/drag then only work fullscreen
     }, opts || {});
     const base = document.createElement("canvas"), live = document.createElement("canvas"), cacheC = document.createElement("canvas");
     for (const c of [base, live]) { c.style.cssText = "position:absolute;inset:0;width:100%;height:100%;display:block;"; container.appendChild(c); }
-    container.style.touchAction = "none";
+    container.style.touchAction = opts.touchAction;
     const bctx = base.getContext("2d"), lctx = live.getContext("2d"), cctx = cacheC.getContext("2d");
     let W = 0, H = 0, dpr = 1;
     // pixel budget: retina sharpness on a panel, fewer pixels to push on a fullscreen canvas
@@ -548,7 +573,7 @@
 
     // ---- interaction: hover, click, drag-pan, wheel-zoom, pinch, double-click ----
     const pointers = new Map();
-    let drag = null, downAt = null, pinch = null, lastTap = 0;
+    let drag = null, downAt = null, pinch = null, lastTap = 0, tapFresh = false;
     function updateHover() {
       if (!g) return;
       const [wx, wy] = toWorld(mouse.x, mouse.y);
@@ -571,7 +596,7 @@
       downAt = { x: e.clientX, y: e.clientY };
       const r = container.getBoundingClientRect();
       mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
-      if (e.pointerType === "touch") updateHover();
+      if (e.pointerType === "touch") { const before = hover; updateHover(); tapFresh = hover >= 0 && hover !== before; } else tapFresh = false;
       if (opts.explore && hover < 0) { drag = { x: mouse.x, y: mouse.y, tx: view.tx, ty: view.ty }; container.style.cursor = "grabbing"; anim = null; }
     });
     container.addEventListener("pointermove", (e) => {
@@ -602,7 +627,7 @@
       const now = performance.now();
       if (now - lastTap < 320 && hover < 0) { lastTap = 0; zoomAt(1.9, mouse.x, mouse.y); return; } // double-tap/double-click: zoom in
       lastTap = now;
-      if (hover >= 0 && !wasDrag) {
+      if (hover >= 0 && !wasDrag && !tapFresh) { // on touch, the first tap traces the walk and the second opens it
         if (opts.onClick) opts.onClick(hover, hoverChain);
         else if (opts.urlFor) window.open(opts.urlFor(g.titles[hover]), "_blank", "noopener");
       }
@@ -630,6 +655,7 @@
     return {
       setGraph,
       pause() { running = false; },
+      setTouchAction(v) { container.style.touchAction = v; },
       resume() { running = !opts.reduced; kick(); },
       focus(i) { hover = i; hoverChain = i >= 0 ? g.walk(i) : null; kickOnce(); },
       zoomBy(f) { zoomAt(f, W / 2, H / 2); },

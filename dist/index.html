@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Where Does Everything Lead? — the first-link network of fifteen gaming wikis</title>
-<meta name="description" content="Follow the first link of every article on fifteen gaming wikis and see where the wiki stops explaining and starts believing.">
+<title>Where Does Everything Lead? — following the first link through fifteen gaming wikis</title>
+<meta name="description" content="Follow the first link of every article on fifteen gaming wikis and see where they all end up.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script src="walkfield.js"></script>
 <style>
@@ -16,45 +16,49 @@
     --ink: #201b14; --ink-2: #5f574a; --ink-3: #93897a; --hairline: #ddd3c0;
     --rust: #bc4b27; --plum: #6d3b7e; --ochre: #b8862b; --teal: #2f6f73; --dead: #9a9183;
     --ease: cubic-bezier(0.83, 0, 0.17, 1);
-    --font-display: "Fraunces", Georgia, serif; --font-body: "Space Grotesk", sans-serif; --font-mono: "Space Mono", monospace;
-    --bar-h: 54px;
+    --font-display: "Fraunces", Georgia, serif; --font-body: "Space Grotesk", system-ui, sans-serif; --font-mono: "Space Mono", monospace;
+    --bar-h: 56px; --gutter: 5vw;
   }
   * { box-sizing: border-box; margin: 0; }
-  html { scroll-behavior: smooth; }
-  body { background: var(--ground-0); color: var(--ink); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { background: var(--ground-0); color: var(--ink); font-family: var(--font-body); font-weight: 400; overflow-x: hidden; }
   ::selection { background: var(--plum); color: #fff; }
   p { text-wrap: pretty; }
   a { color: var(--rust); }
+  button { font: inherit; }
+  .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
 
-  #progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; z-index: 300; background: linear-gradient(90deg, var(--rust), var(--plum)); }
+  #progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; z-index: 300; background: var(--rust); }
 
   /* masthead */
-  .masthead { position: relative; min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); overflow: hidden; }
-  .mast-copy { padding: 7vh 5vw 6vh; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
-  .mast-kicker { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 4vh; }
-  .mast-title { font-family: var(--font-display); font-variation-settings: "opsz" 144, "wght" 620; font-size: clamp(54px, 9.5vw, 150px); line-height: 0.92; letter-spacing: -0.035em; }
+  .slopline { padding: 10px var(--gutter); background: var(--rust); color: #f8f4ea; font-family: var(--font-mono); font-size: 11px; line-height: 1.6; text-align: center; }
+  .slopline b { font-weight: 700; }
+  .masthead { position: relative; min-height: 92vh; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); overflow: hidden; }
+  .mast-copy { padding: 7vh var(--gutter) 6vh; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
+  .mast-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 3vh; }
+  .mast-title { font-family: var(--font-display); font-variation-settings: "opsz" 144, "wght" 560; font-size: clamp(46px, 8vw, 124px); line-height: 0.95; letter-spacing: -0.03em; }
   .mast-title em { font-style: italic; color: var(--rust); font-variation-settings: "opsz" 144, "wght" 420; }
-  .dek { font-size: clamp(16px, 1.45vw, 21px); line-height: 1.55; color: var(--ink-2); max-width: 46ch; margin-top: 4vh; }
+  .dek { font-size: clamp(16px, 1.35vw, 20px); line-height: 1.6; color: var(--ink-2); max-width: 48ch; margin-top: 3.5vh; }
   .dek b { color: var(--ink); font-weight: 600; }
   .dek i { font-family: var(--font-display); font-style: italic; }
-  .mast-readout { margin-top: 4vh; display: flex; flex-wrap: wrap; gap: 6px 26px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+  .mast-readout { margin-top: 3.5vh; display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; color: var(--ink-3); }
   .mast-readout b { color: var(--rust); font-weight: 700; }
-  .slopline { padding: 9px 5vw; background: var(--rust); color: var(--paper, #f8f4ea); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; line-height: 1.6; text-align: center; }
-  .slopline b { font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; }
+  .mast-cta { margin-top: 3.5vh; display: flex; flex-wrap: wrap; gap: 10px; }
   .mast-field { position: relative; min-height: 60vh; }
-  .mast-field .hint { position: absolute; left: 14px; bottom: 12px; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); pointer-events: none; }
+  .mast-field .hint { position: absolute; left: 14px; bottom: 12px; right: 150px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-3); pointer-events: none; line-height: 1.5; }
   .field { position: absolute; inset: 0; }
   .field canvas { position: absolute; inset: 0; }
   .field-ui { position: absolute; right: 12px; bottom: 12px; z-index: 5; display: flex; gap: 4px; }
-  .field-ui button { font-family: var(--font-mono); font-size: 12px; width: 30px; height: 30px; line-height: 1; cursor: pointer; color: var(--ink-2);
+  .field-ui button { font-family: var(--font-mono); font-size: 13px; width: 34px; height: 34px; line-height: 1; cursor: pointer; color: var(--ink-2);
     background: color-mix(in oklab, var(--ground-0) 88%, transparent); border: 1px solid var(--hairline); backdrop-filter: blur(6px); }
   .field-ui button:hover { color: var(--rust); border-color: var(--rust); }
-  .field-bar { position: absolute; left: 14px; top: 14px; z-index: 5; display: none; gap: 8px; align-items: center; flex-wrap: wrap;
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
-  .field-bar select, .field-bar input { font-family: var(--font-mono); font-size: 11px; background: color-mix(in oklab, var(--ground-0) 92%, transparent); color: var(--ink); border: 1px solid var(--hairline); padding: 6px 8px; border-radius: 0; }
-  .field-bar input { width: 240px; }
+  .field-bar { position: absolute; left: 14px; right: 14px; top: 14px; z-index: 5; display: none; gap: 8px; align-items: center; flex-wrap: wrap;
+    font-family: var(--font-mono); font-size: 11px; color: var(--ink-2); }
+  .field-bar select, .field-bar input { font-family: var(--font-mono); font-size: 12px; background: color-mix(in oklab, var(--ground-0) 92%, transparent); color: var(--ink); border: 1px solid var(--hairline); padding: 7px 9px; border-radius: 0; }
+  .field-bar input { width: 240px; max-width: 100%; }
   .field-bar input:focus, .field-bar select:focus { outline: none; border-color: var(--rust); }
-  .field-bar .fb-title { font-family: var(--font-display); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 20px; color: var(--ink); margin-right: 8px; }
+  .field-bar .fb-title { font-family: var(--font-display); font-style: italic; font-size: 20px; color: var(--ink); margin-right: 8px; }
+  .field-bar .fb-exit { margin-left: auto; font-family: var(--font-mono); font-size: 11px; background: var(--ink); color: var(--ground-0); border: 1px solid var(--ink); padding: 7px 10px; cursor: pointer; }
   .field-legend { position: absolute; left: 14px; bottom: 14px; z-index: 5; display: none; font-family: var(--font-mono); font-size: 10px; line-height: 1.9; color: var(--ink-2); max-width: 46vw; }
   .field-legend b { color: var(--ink); font-weight: 400; }
   .field-wrap:fullscreen { background: var(--ground-0); }
@@ -64,60 +68,65 @@
   .field-wrap:fullscreen .field-ui { bottom: 14px; }
 
   /* control bar */
-  .controlbar { position: sticky; top: 0; z-index: 120; height: var(--bar-h); display: flex; align-items: center; gap: 18px; padding: 0 5vw;
-    background: color-mix(in oklab, var(--ground-0) 86%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
-  .mode-toggle { display: flex; border: 1px solid var(--hairline); }
-  .mode-toggle button { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 8px 12px; border: 0; background: transparent; color: var(--ink-2); cursor: pointer; }
+  .controlbar { position: sticky; top: 0; z-index: 120; min-height: var(--bar-h); display: flex; align-items: center; gap: 14px; padding: 8px var(--gutter);
+    background: color-mix(in oklab, var(--ground-0) 88%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+  .chartsbtn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 600; font-size: 14px; padding: 9px 14px; cursor: pointer;
+    background: var(--rust); color: #fff; border: 1px solid var(--rust); border-radius: 999px; box-shadow: 0 2px 10px rgba(188,75,39,0.25); white-space: nowrap; max-width: 100%; min-width: 0; }
+  .chartsbtn b { font-weight: 500; opacity: 0.92; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .chartsbtn .caret { font-size: 10px; transition: transform 0.2s; }
+  .chartsbtn:hover, .chartsbtn[aria-expanded="true"] { background: #a33f1f; }
+  .chartsbtn[aria-expanded="true"] .caret { transform: rotate(180deg); }
+  .chartsbtn.big { font-size: 15px; padding: 11px 18px; }
+  .ghostbtn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 14px; padding: 9px 14px; cursor: pointer; background: transparent; color: var(--ink); border: 1px solid var(--ink); border-radius: 999px; text-decoration: none; }
+  .ghostbtn:hover { color: var(--rust); border-color: var(--rust); }
+  .mode-toggle { display: flex; border: 1px solid var(--hairline); border-radius: 999px; overflow: hidden; }
+  .mode-toggle button { font-family: var(--font-body); font-size: 12px; font-weight: 500; padding: 7px 12px; border: 0; background: transparent; color: var(--ink-2); cursor: pointer; white-space: nowrap; }
   .mode-toggle button.on { background: var(--ink); color: var(--ground-0); }
-  .datachip { margin-left: auto; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .datachip b { color: var(--ink); font-weight: 400; }
-  .gearbtn { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; background: transparent; border: 1px solid var(--hairline); color: var(--ink-2); padding: 8px 12px; cursor: pointer; }
-  .gearbtn:hover, .gearbtn[aria-expanded="true"] { color: var(--rust); border-color: var(--rust); }
-  .gear { position: absolute; right: 5vw; top: calc(var(--bar-h) + 8px); width: 280px; display: none; padding: 16px 18px; background: color-mix(in oklab, var(--ground-1) 97%, transparent); border: 1px solid var(--hairline); box-shadow: 0 8px 30px rgba(32,27,20,0.1); font-family: var(--font-mono); z-index: 121; }
+  .datachip { margin-left: auto; font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .gear { position: absolute; left: var(--gutter); top: calc(100% + 8px); width: min(320px, 90vw); display: none; padding: 16px 18px; background: var(--ground-1); border: 1px solid var(--hairline); box-shadow: 0 8px 30px rgba(32,27,20,0.12); z-index: 121; }
   .gear.open { display: block; }
-  .gear label { display: block; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 12px; }
-  .gear select { width: 100%; margin-top: 6px; font-family: var(--font-mono); font-size: 11px; background: var(--ground-0); color: var(--ink); border: 1px solid var(--hairline); padding: 8px 10px; border-radius: 0; }
-  .gear small { display: block; font-size: 9.5px; line-height: 1.7; letter-spacing: 0.05em; color: var(--ink-3); }
-  #status { display: none; margin: 0 5vw; padding: 8px 12px; font-family: var(--font-mono); font-size: 11px; color: #a03d2e; border: 1px solid #e3b8ac; }
+  .gear label { display: block; font-size: 12px; font-weight: 500; color: var(--ink-2); margin-bottom: 12px; }
+  .gear select { width: 100%; margin-top: 6px; font-family: var(--font-body); font-size: 14px; background: var(--ground-0); color: var(--ink); border: 1px solid var(--hairline); padding: 9px 10px; border-radius: 0; }
+  .gear small { display: block; font-size: 12px; line-height: 1.5; color: var(--ink-3); }
+  #status { display: none; margin: 0 var(--gutter); padding: 8px 12px; font-family: var(--font-mono); font-size: 11px; color: #a03d2e; border: 1px solid #e3b8ac; }
 
   /* article layout */
-  #articleWrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 3vw; padding: 0 5vw; max-width: 1600px; margin: 0 auto; }
+  #articleWrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 3vw; padding: 0 var(--gutter); max-width: 1600px; margin: 0 auto; }
   .prose { padding: 6vh 0 12vh; max-width: 62ch; }
-  .sect { margin-top: 14vh; }
+  .sect { margin-top: 12vh; }
   .sect:first-child { margin-top: 4vh; }
-  .sect-label { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-3); border-top: 1px solid var(--hairline); padding-top: 10px; margin-bottom: 2.2vh; }
-  h2 { font-family: var(--font-display); font-variation-settings: "opsz" 96, "wght" 520; font-size: clamp(30px, 3.4vw, 50px); line-height: 1.02; letter-spacing: -0.02em; margin-bottom: 3vh; }
+  .sect-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); border-top: 1px solid var(--hairline); padding-top: 10px; margin-bottom: 2vh; }
+  h2 { font-family: var(--font-display); font-variation-settings: "opsz" 96, "wght" 500; font-size: clamp(28px, 3vw, 44px); line-height: 1.08; letter-spacing: -0.015em; margin-bottom: 3vh; }
   h2 em { font-style: italic; color: var(--rust); font-variation-settings: "opsz" 96, "wght" 400; }
-  .step { min-height: 62vh; padding-bottom: 10vh; opacity: 0.42; transition: opacity 0.5s var(--ease); }
+  .step { min-height: 62vh; padding-bottom: 10vh; opacity: 0.55; transition: opacity 0.5s var(--ease); }
   .step.on { opacity: 1; }
-  .step p { font-size: clamp(16px, 1.25vw, 19px); line-height: 1.68; margin-bottom: 2.4vh; }
-  .step p.lede::first-letter { font-family: var(--font-display); font-size: 3.1em; float: left; line-height: 0.82; padding: 6px 8px 0 0; color: var(--plum); }
+  .step p { font-size: clamp(16px, 1.2vw, 18px); line-height: 1.7; margin-bottom: 2.2vh; }
   .num { font-family: var(--font-mono); font-size: 0.9em; color: var(--rust); font-weight: 700; }
   .lo { font-family: var(--font-mono); font-size: 0.85em; color: var(--ink); background: var(--ground-1); padding: 1px 5px; border: 1px solid var(--hairline); white-space: nowrap; }
   a.lo { text-decoration: none; }
   a.lo:hover { border-color: var(--rust); color: var(--rust); }
   .live-missing { color: #a03d2e; font-family: var(--font-mono); font-size: 0.8em; background: #f7e3dd; padding: 0 4px; }
-  .fnote { margin: 1vh 0 3vh; padding: 14px 18px; border: 1px solid var(--hairline); border-left: 3px solid var(--plum); background: var(--ground-1); font-size: clamp(14px, 1.05vw, 16px); line-height: 1.6; color: var(--ink-2); }
-  .fnote b { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--plum); font-weight: 700; margin-right: 6px; }
+  .fnote { margin: 1vh 0 3vh; padding: 14px 18px; border-left: 3px solid var(--plum); background: var(--ground-1); font-size: clamp(14px, 1.05vw, 16px); line-height: 1.6; color: var(--ink-2); }
+  .fnote b { color: var(--plum); font-weight: 600; margin-right: 4px; }
   .questlog { margin: 0 0 2vh; padding: 14px 18px 12px; border: 1px solid var(--hairline); background: var(--ground-1); }
-  .ql-k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; }
-  .questlog ol { columns: 2; column-gap: 24px; padding-left: 22px; margin: 0; font-family: var(--font-mono); font-size: 11.5px; line-height: 1.9; color: var(--ink-2); }
+  .ql-k { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; }
+  .questlog ol { columns: 2; column-gap: 24px; padding-left: 22px; margin: 0; font-size: 14px; line-height: 1.9; color: var(--ink-2); }
   .questlog a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--hairline); }
   .questlog a:hover { color: var(--rust); border-color: var(--rust); }
   .souvenirs { list-style: none; padding: 0; margin: 0 0 4vh; }
-  .souvenirs li { position: relative; padding: 10px 0 10px 30px; border-top: 1px solid var(--hairline); font-size: clamp(15px, 1.15vw, 18px); line-height: 1.55; }
-  .souvenirs li::before { content: "◆"; position: absolute; left: 4px; top: 11px; color: var(--rust); font-size: 11px; }
+  .souvenirs li { position: relative; padding: 10px 0 10px 26px; border-top: 1px solid var(--hairline); font-size: clamp(15px, 1.1vw, 17px); line-height: 1.55; }
+  .souvenirs li::before { content: "◆"; position: absolute; left: 2px; top: 12px; color: var(--rust); font-size: 10px; }
   .souvenirs li:last-child { border-bottom: 1px solid var(--hairline); }
   .souvenirs b { font-weight: 600; color: var(--ink); }
-  .pull { font-family: var(--font-display); font-style: italic; font-variation-settings: "opsz" 120, "wght" 400; font-size: clamp(22px, 2.3vw, 34px); line-height: 1.25; color: var(--ink-2); border-left: 3px solid var(--rust); padding-left: 22px; margin: 6vh 0; }
-  .pull small { display: block; font-family: var(--font-mono); font-style: normal; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin-top: 12px; }
+  .pull { font-family: var(--font-display); font-style: italic; font-variation-settings: "opsz" 120, "wght" 400; font-size: clamp(21px, 2vw, 30px); line-height: 1.3; color: var(--ink-2); border-left: 3px solid var(--rust); padding-left: 20px; margin: 5vh 0; }
+  .pull small { display: block; font-family: var(--font-mono); font-style: normal; font-size: 11px; color: var(--ink-3); margin-top: 12px; }
 
   /* sticky panel */
   .panel { position: sticky; top: var(--bar-h); height: calc(100vh - var(--bar-h)); padding: 2.5vh 0 2.5vh; display: flex; flex-direction: column; }
-  .panel-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1.5vh; }
+  .panel-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); margin-bottom: 1.5vh; }
   .panel-head b { color: var(--rust); }
   #panelDots { display: flex; gap: 5px; }
-  #panelDots button { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--ink-3); background: transparent; padding: 0; cursor: pointer; }
+  #panelDots button { width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--ink-3); background: transparent; padding: 0; cursor: pointer; }
   #panelDots button.on { background: var(--rust); border-color: var(--rust); }
   .panel-stack { position: relative; flex: 1; min-height: 0; }
   .panel-stack > .embed { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.45s var(--ease), transform 0.6s var(--ease); transform: translateY(10px); }
@@ -128,45 +137,65 @@
   .figslot { display: none; }
   body[data-mode="wide"] .figslot { display: block; margin: 2vh 0 6vh; }
   body[data-mode="wide"] .figslot .embed { height: min(68vh, 640px); }
+  .figslot #fig-chain, .figslot #fig-play { height: auto; max-height: 85vh; }
   body[data-mode="wide"] #articleWrap { grid-template-columns: minmax(0, 1fr); }
   body[data-mode="wide"] .panel { display: none; }
   body[data-mode="wide"] .prose { max-width: 72ch; margin: 0 auto; }
   body[data-mode="wide"] .step { min-height: 0; padding-bottom: 2vh; opacity: 1; }
-  .cap { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--hairline); font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2); }
-  .cap-k { color: var(--rust); font-weight: 700; }
-  .cap-btn { margin-left: auto; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; background: transparent; border: 1px solid var(--hairline); color: var(--ink-2); padding: 4px 9px; cursor: pointer; }
+  .cap { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--hairline); font-family: var(--font-mono); font-size: 11px; color: var(--ink-2); line-height: 1.4; }
+  .cap-k { color: var(--rust); font-weight: 700; flex: none; }
+  .cap-btn { margin-left: auto; flex: none; font-family: var(--font-mono); font-size: 11px; background: transparent; border: 1px solid var(--hairline); color: var(--ink-2); padding: 5px 10px; cursor: pointer; }
   .cap-btn:hover { color: var(--rust); border-color: var(--rust); }
   .chart { flex: 1; min-height: 0; position: relative; }
-  .cap-note { padding: 8px 14px; border-top: 1px solid var(--hairline); font-family: var(--font-mono); font-size: 10px; line-height: 1.7; letter-spacing: 0.04em; color: var(--ink-3); }
+  .cap-note { padding: 8px 14px; border-top: 1px solid var(--hairline); font-family: var(--font-mono); font-size: 10.5px; line-height: 1.7; color: var(--ink-3); }
   .cap-note b { color: var(--ink-2); font-weight: 400; }
   .legend { display: inline-flex; gap: 4px 14px; flex-wrap: wrap; }
   .sw { display: inline-block; width: 9px; height: 9px; margin-right: 5px; vertical-align: -1px; }
 
   /* chain pills */
-  .chainfill { padding: 16px 14px; overflow: auto; font-family: var(--font-mono); font-size: 11px; line-height: 2.3; }
+  .chainfill { padding: 16px 14px; overflow: auto; font-family: var(--font-mono); font-size: 11px; line-height: 1.6; }
   .pill { display: inline-block; border: 1px solid var(--hairline); background: var(--ground-0); padding: 1px 8px; margin: 2px 0; color: var(--ink); white-space: nowrap; }
   .pill.start { border-color: var(--ink); font-weight: 700; }
   .pill.cyc { border-color: var(--rust); color: var(--rust); }
   .pill.dead { border-color: var(--dead); color: var(--dead); text-decoration: line-through; }
   .arrow { color: var(--ink-3); margin: 0 5px; }
-  .fate { display: block; margin-top: 10px; color: var(--ink-2); letter-spacing: 0.08em; text-transform: uppercase; font-size: 10px; }
+  .fate { display: block; margin-top: 10px; color: var(--ink-2); font-size: 11px; line-height: 1.6; }
   .fate .cyc { color: var(--rust); } .fate .dead { color: var(--dead); }
+  /* one walk, vertically */
+  .walk { list-style: none; margin: 0; padding: 0; line-height: 1.5; }
+  .wrow { display: grid; grid-template-columns: 38px minmax(0, 1fr); }
+  .wk { font-size: 10px; color: var(--ink-3); text-align: right; padding: 3px 12px 0 0; }
+  .wrow.cyc .wk { color: var(--rust); } .wrow.dead .wk { color: var(--dead); }
+  .wmain { position: relative; border-left: 1px solid var(--hairline); padding: 0 0 13px 16px; min-width: 0; }
+  .wrow.cyc .wmain { border-left-color: var(--rust); } .wrow.dead .wmain { border-left-color: var(--dead); }
+  .wrow:last-child .wmain { padding-bottom: 4px; }
+  .wmain::before { content: ""; position: absolute; left: -4px; top: 8px; width: 7px; height: 7px; border-radius: 50%; background: var(--ground-1); border: 1px solid var(--ink-3); }
+  .wrow.start .wmain::before { background: var(--ink); border-color: var(--ink); }
+  .wrow.cyc .wmain::before { background: var(--rust); border-color: var(--rust); }
+  .wrow.dead .wmain::before { background: var(--dead); border-color: var(--dead); }
+  .wend .wmain::before { display: none; }
+  .wend .fate { margin-top: 0; }
+  .wjoin { font-size: 10px; color: var(--ink-3); margin: -4px 0 4px; }
+  .walk .pill { text-decoration: none; max-width: 100%; overflow: hidden; text-overflow: ellipsis; vertical-align: top; }
+  .wmeta { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 10px; color: var(--ink-3); line-height: 1.4; }
+  .wbar { flex: none; height: 6px; background: var(--ink-3); opacity: 0.55; }
+  .wrow.cyc .wbar { background: var(--rust); opacity: 0.8; } .wrow.dead .wbar { background: var(--dead); }
 
   /* waffle */
   .waffle-wrap { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(150px, 0.7fr); gap: 16px; padding: 16px 14px; height: 100%; min-height: 0; align-items: center; }
   .waffle { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; aspect-ratio: 1; align-self: center; width: 100%; max-height: 100%; }
   .waffle i { display: block; background: var(--hairline); transition: background-color 0.6s var(--ease), transform 0.4s var(--ease); }
   .waffle i.hot { transform: scale(0.82); }
-  .wlegend { font-family: var(--font-mono); font-size: 10px; line-height: 1.5; overflow: auto; min-height: 0; }
+  .wlegend { font-family: var(--font-mono); font-size: 10.5px; line-height: 1.5; overflow: auto; min-height: 0; }
   .wlegend div { display: flex; align-items: baseline; gap: 8px; padding: 3px 0; border-bottom: 1px dashed var(--hairline); color: var(--ink-2); }
   .wlegend .sw { flex: none; }
   .wlegend .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink); }
   .wlegend .pc { color: var(--ink-3); }
 
   /* census table */
-  .ptable-wrap { overflow: auto; padding: 4px 0; }
+  .ptable-wrap { overflow: auto; padding: 4px 0; -webkit-overflow-scrolling: touch; }
   .ptable { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 10.5px; }
-  .ptable th { text-align: left; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); padding: 6px 12px; border-bottom: 1px solid var(--hairline); font-size: 9.5px; }
+  .ptable th { text-align: left; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); padding: 6px 12px; border-bottom: 1px solid var(--hairline); font-size: 10px; }
   .ptable td { padding: 6px 10px; border-bottom: 1px dashed var(--hairline); color: var(--ink-2); vertical-align: middle; white-space: nowrap; }
   .ptable tr.hi td { color: var(--ink); background: color-mix(in oklab, var(--rust) 7%, transparent); }
   .ptable td.ph { color: var(--ink); max-width: 230px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -176,34 +205,68 @@
 
   /* play */
   .rankrow { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-  .rpill { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; background: transparent; border: 1px solid var(--hairline); color: var(--ink-2); padding: 4px 9px; cursor: pointer; }
+  .rpill { font-family: var(--font-mono); font-size: 11px; background: transparent; border: 1px solid var(--hairline); color: var(--ink-2); padding: 5px 10px; cursor: pointer; }
   .rpill.on { background: var(--ink); color: var(--ground-0); border-color: var(--ink); }
-  .playrow { display: flex; gap: 8px; margin-bottom: 8px; }
-  .playrow input { flex: 1; font-family: var(--font-mono); font-size: 12px; padding: 8px 10px; background: var(--ground-0); border: 1px solid var(--hairline); color: var(--ink); border-radius: 0; }
+  .playrow { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .playrow input { flex: 1 1 200px; font-family: var(--font-mono); font-size: 14px; padding: 9px 10px; background: var(--ground-0); border: 1px solid var(--hairline); color: var(--ink); border-radius: 0; min-width: 0; }
   .playrow input:focus { outline: none; border-color: var(--rust); }
-  .btn { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 8px 12px; cursor: pointer; background: var(--ink); color: var(--ground-0); border: 1px solid var(--ink); }
-  .btn.ghost { background: transparent; color: var(--ink-2); border-color: var(--hairline); }
+  .btn { font-family: var(--font-body); font-weight: 600; font-size: 13px; padding: 9px 14px; cursor: pointer; background: var(--rust); color: #fff; border: 1px solid var(--rust); }
+  .btn.ghost { background: transparent; color: var(--ink-2); border-color: var(--hairline); font-weight: 500; }
 
   /* footer */
-  footer { border-top: 1px solid var(--hairline); padding: 7vh 5vw 9vh; }
-  .foot-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 6vh; max-width: 1400px; margin: 0 auto; }
-  .foot-word { font-family: var(--font-display); font-style: italic; font-variation-settings: "opsz" 144, "wght" 480; font-size: clamp(30px, 6vw, 92px); line-height: 1.05; color: var(--ink-2); opacity: 0.75; }
+  footer { border-top: 1px solid var(--hairline); padding: 7vh var(--gutter) 9vh; }
+  .foot-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 4vh 6vw; max-width: 1400px; margin: 0 auto; }
+  .foot-word { font-family: var(--font-display); font-style: italic; font-variation-settings: "opsz" 144, "wght" 450; font-size: clamp(26px, 3.4vw, 52px); line-height: 1.1; color: var(--ink-2); }
   .foot-word em { color: var(--rust); }
-  .foot-meta { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-3); line-height: 2.2; text-transform: uppercase; }
-  .foot-meta a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--hairline); }
-  .foot-meta code { text-transform: none; letter-spacing: 0; color: var(--ink-2); }
+  .foot-meta { font-size: 14px; color: var(--ink-2); line-height: 1.8; }
+  .foot-meta p { margin-bottom: 10px; }
+  .foot-meta a { color: var(--rust); }
 
   @media (max-width: 1100px) {
-    .masthead { grid-template-columns: 1fr; }
-    .mast-field { min-height: 48vh; }
+    .masthead { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+    .mast-copy { padding-top: 6vh; padding-bottom: 4vh; }
+    .mast-field { min-height: 46vh; }
     #articleWrap { display: block; }
     .panel { display: none; }
     .figslot { display: block; margin: 2vh 0 6vh; }
     .figslot .embed { height: min(64vh, 560px); }
     .step { min-height: 0; padding-bottom: 2vh; opacity: 1; }
     .prose { margin-inline: auto; }
+    .mode-toggle { display: none; }
     .foot-grid { grid-template-columns: 1fr; }
     .waffle-wrap { grid-template-columns: 1fr; }
+    .field-legend { max-width: calc(100% - 28px); }
+  }
+  @media (max-width: 640px) {
+    :root { --gutter: 18px; --bar-h: 52px; }
+    .slopline { font-size: 10.5px; }
+    .mast-title { font-size: clamp(44px, 14vw, 64px); }
+    .dek { font-size: 16px; }
+    .mast-field { min-height: 52vh; }
+    .mast-field .hint { left: 10px; right: 10px; bottom: 58px; padding: 6px 8px; background: color-mix(in oklab, var(--ground-0) 85%, transparent); backdrop-filter: blur(4px); color: var(--ink-2); }
+    .chartsbtn { font-size: 13px; padding: 8px 12px; }
+    .mast-cta .chartsbtn, .mast-cta .ghostbtn { width: 100%; justify-content: center; }
+    .datachip { display: none; }
+    .gear { left: 0; right: 0; width: auto; border-left: 0; border-right: 0; }
+    .prose { padding-top: 4vh; }
+    .sect { margin-top: 8vh; }
+    h2 { font-size: 27px; }
+    .step p { font-size: 16px; line-height: 1.65; }
+    .questlog ol { columns: 1; }
+    .fnote { padding: 12px 14px; font-size: 14px; }
+    .figslot .embed { height: min(72vh, 520px); }
+    .waffle-wrap { grid-template-rows: auto minmax(0, 1fr); padding: 12px; gap: 10px; align-items: start; }
+    .waffle { width: min(100%, 44vh); margin: 0 auto; }
+    .wlegend { max-height: 100%; }
+    .cap { flex-wrap: wrap; font-size: 10.5px; }
+    .cap-btn { margin-left: auto; }
+    .field-ui button { width: 40px; height: 40px; font-size: 15px; }
+    .field-bar input { width: 100%; }
+    .pull { font-size: 20px; padding-left: 14px; }
+    footer { padding: 5vh var(--gutter) 7vh; }
+  }
+  @media (pointer: coarse) {
+    .field-ui button { width: 40px; height: 40px; font-size: 15px; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -213,41 +276,45 @@
 </head>
 <body data-mode="split">
 <div id="progress"></div>
-<div class="slopline" role="note">⚠ <b>Slopline</b> · all of the data, prose and visuals on this page are currently vibe-coded with an AI assistant and have <u>not</u> gone through a thorough human review. Enjoy, but verify before quoting anything.</div>
+<div class="slopline" role="note"><b>Heads up:</b> the data, text and charts on this page were put together with an AI assistant and have <u>not</u> been carefully checked by a human yet. Enjoy, but double-check before quoting anything.</div>
 
 <!-- ============================ MASTHEAD ============================ -->
 <header class="masthead">
   <div class="mast-copy">
-    <div class="mast-kicker">A first-link expedition through <span data-live="total.wikis"></span> gaming wikis · October 2026</div>
+    <div class="mast-kicker">Following the first link through <span data-live="total.wikis"></span> gaming wikis · October 2026</div>
     <h1 class="mast-title">Where does<br><em>everything</em><br>lead?</h1>
     <p class="dek">
-      Open any article. Click the first link in its text. Click the first link on <i>that</i> page, and keep
-      going. On Wikipedia this walk drags <b>97% of the encyclopedia into one loop</b>, the loop through
-      <i>Philosophy</i>. We played the same game on <b><span data-live="total.wikis"></span> gaming wikis</b>,
+      Open any wiki article. Click the first link in its text. Do the same on the next page, and keep going.
+      On Wikipedia, <b>97% of articles end up in the same loop</b>, the one that passes through <i>Philosophy</i>.
+      We tried the same thing on <b><span data-live="total.wikis"></span> gaming wikis</b>,
       <span class="num" data-live="total.articles|int"></span> articles in all, and drew what we found:
-      every article a speck, every first link a thread, every loop the whirlpool it drains into. Our guide
-      for the trip is the <b>Old School RuneScape Wiki</b>. Hover the field to follow a walk.
+      every article is a dot, every first link a thread, and every loop a whirlpool the dots drain into.
+      Our main example is the <b>Old School RuneScape Wiki</b>.
     </p>
     <div class="mast-readout" id="mastReadout"><span>loading…</span></div>
+    <div class="mast-cta">
+      <button class="chartsbtn big" id="heroChartsBtn" type="button">📊 Charts: <b id="heroChartsWiki">loading…</b> <span class="caret">▼</span></button>
+      <a class="ghostbtn" href="#s-experiment">Read the story ↓</a>
+    </div>
   </div>
   <div class="mast-field field-wrap" id="heroWrap">
     <div class="field" id="heroField"></div>
-    <div class="hint" id="heroHint">hover to trace a walk · click to read it · drag to pan · ⌘/ctrl + scroll or pinch to zoom · ⛶ fullscreen</div>
+    <div class="hint" id="heroHint">hover a dot to trace its walk · click to open the article · drag to pan · ⌘/ctrl + scroll to zoom · ⛶ fullscreen</div>
   </div>
 </header>
 
 <!-- ========================= CONTROL BAR ========================= -->
 <nav class="controlbar" aria-label="Article controls">
+  <button class="chartsbtn" id="gearBtn" type="button" aria-expanded="false" aria-controls="gearPanel">📊 Charts: <b id="chipWiki">…</b> <span class="caret">▼</span></button>
   <div class="mode-toggle" role="group" aria-label="Reading mode">
-    <button id="btnSplit" class="on" type="button" aria-pressed="true">◧ article + data</button>
-    <button id="btnWide" type="button" aria-pressed="false">▬ full width</button>
+    <button id="btnSplit" class="on" type="button" aria-pressed="true">Text + charts</button>
+    <button id="btnWide" type="button" aria-pressed="false">Full width</button>
   </div>
-  <span class="datachip" id="datachip">—</span>
-  <button class="gearbtn" id="gearBtn" type="button" aria-expanded="false" aria-controls="gearPanel">⚙ charts</button>
+  <span class="datachip" id="datachip">the text always talks about Old School RuneScape at the first link</span>
   <div class="gear" id="gearPanel" role="dialog" aria-label="Chart settings">
-    <label>wiki in the charts <select id="gearWiki"></select></label>
-    <label>link rank <select id="gearRank"></select></label>
-    <small>every chart, the map and the walkers follow this. the prose and its numbers stay on OSRS at the first link.</small>
+    <label>Show charts for this wiki <select id="gearWiki"></select></label>
+    <label>Which link to follow <select id="gearRank"></select></label>
+    <small>Every chart, the map and the walkers follow this. The text and its numbers stay on Old School RuneScape at the first link.</small>
   </div>
 </nav>
 <div id="status" role="alert"></div>
@@ -257,70 +324,69 @@
   <main class="prose">
 
     <div class="questlog" aria-label="Table of contents">
-      <div class="ql-k">Itinerary</div>
+      <div class="ql-k">Contents</div>
       <ol>
-        <li><a href="#s-experiment">The briefing</a></li>
-        <li><a href="#s-rules">The rulebook</a></li>
-        <li><a href="#s-convergence">How far is the drop</a></li>
-        <li><a href="#s-attractors">The three temples</a></li>
-        <li><a href="#s-census">The neighbouring kingdoms</a></li>
-        <li><a href="#s-decay">Taking the second door</a></li>
-        <li><a href="#s-hubs">Crossroads and bridges</a></li>
-        <li><a href="#s-grave">The graveyard</a></li>
+        <li><a href="#s-experiment">The idea</a></li>
+        <li><a href="#s-rules">The rules</a></li>
+        <li><a href="#s-convergence">How many clicks?</a></li>
+        <li><a href="#s-attractors">Where most articles end up</a></li>
+        <li><a href="#s-census">Every wiki's answer</a></li>
+        <li><a href="#s-decay">Taking the second link</a></li>
+        <li><a href="#s-hubs">The pages everyone passes through</a></li>
+        <li><a href="#s-grave">The dead ends</a></li>
         <li><a href="#s-map">The map</a></li>
-        <li><a href="#s-play">Your turn</a></li>
+        <li><a href="#s-play">Try it yourself</a></li>
       </ol>
     </div>
 
     <!-- ───────────────────────── 01 ───────────────────────── -->
     <section class="sect" id="s-experiment">
-      <div class="sect-label"><span>Stage 01 · The briefing</span><span>01</span></div>
-      <h2>Pack light. <em>Click the first link.</em></h2>
+      <div class="sect-label">Part 1 · The idea</div>
+      <h2>Click the first link. <em>Then keep going.</em></h2>
 
-      <div class="step" data-fig="fig-field" data-label="the field — what happens to every wiki's articles">
+      <div class="step" data-fig="fig-field" data-label="where every wiki's articles end up">
         <p class="lede">
-          Start at Falador, the white city. Its first link is Capital, because Falador is one. Capital's
-          first link is Kingdom. Kingdom's is Gielinor, the world the game runs on. Gielinor's is Guthix,
-          the god who shaped it. Guthix's is Gods, and Gods points back at Gielinor. Five clicks from a
-          castle to a circle, and from there you can click forever. The circle doesn't care.
+          Start at Falador, the white city. The first link on its page is Capital, because that's what
+          Falador is. Capital's first link is Kingdom. Kingdom's is Gielinor, the world the game takes place
+          in. Gielinor's is Guthix, the god who made it. Guthix's is Gods, and Gods links straight back to
+          Gielinor. Five clicks from a castle to a loop, and once you're in the loop you can keep clicking
+          forever.
         </p>
         <p>
-          That is the whole game. <a href="https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy" target="_blank" rel="noopener">Wikipedia
-          readers found it years ago</a> and called it <i>Getting to Philosophy</i>, because on Wikipedia nearly
-          every walk ends in the same loop, the one that passes through Philosophy. It stuck because it feels
-          like it ought to mean something: follow enough "X is a…" sentences and you find out what an
-          encyclopedia thinks everything is made of.
+          That's the whole game. <a href="https://en.wikipedia.org/wiki/Wikipedia:Getting_to_Philosophy" target="_blank" rel="noopener">Wikipedia
+          readers found it years ago</a> and called it <i>Getting to Philosophy</i>, because on Wikipedia
+          nearly every walk ends in the same loop, the one that passes through Philosophy. It caught on
+          because it feels like it means something: follow enough "X is a…" sentences and you find out what
+          the encyclopedia thinks everything boils down to.
         </p>
         <p>
-          So we asked the obvious question. What is a <i>game</i> wiki made of? We fetched
-          <span data-live="total.wikis"></span> of them, <span class="num" data-live="total.articles|int"></span>
-          articles in all, and sent a walker down every first link of every page. This article follows the
-          expedition through one wiki in particular, the <b>Old School RuneScape Wiki</b>, with the other
-          <span data-live="total.others"></span> along as a control group. Every number in the text is read
-          from the data, so if it looks suspicious, it is at least honestly suspicious.
+          So we tried it on game wikis. We downloaded <span data-live="total.wikis"></span> of them,
+          <span class="num" data-live="total.articles|int"></span> articles in total, and followed the
+          first link of every single page. This article mostly follows one wiki, the <b>Old School RuneScape
+          Wiki</b>, and uses the other <span data-live="total.others"></span> for comparison. Every number
+          in the text is read straight from the data, so if one looks odd, at least it's honestly odd.
         </p>
         <p>
-          The first thing the walkers reported back is on the right. Each bar is one wiki, split three ways:
-          the dark segment is the share of articles that drain into that wiki's single biggest loop, the
-          lighter one is everything that finds some other loop, and the grey tail is the graveyard, walks
-          that ran out of links before they found any loop at all. On our wiki
-          <span class="num" data-live="o.convergePct|pct"></span> of
-          <span data-live="o.nodes|int"></span> articles find a loop, which puts it
+          The first result is in the chart. Each bar is one wiki, split into three parts. The dark part is
+          the share of articles that end up in that wiki's single biggest loop. The lighter part is articles
+          that end in some other loop. The grey part is articles whose walk hit a dead end before finding
+          any loop at all. On our wiki, <span class="num" data-live="o.convergePct|pct"></span> of
+          <span data-live="o.nodes|int"></span> articles find a loop, which ranks it
           <span data-live="o.convergeRank|ordinal"></span> of <span data-live="total.wikis"></span>.
-          The champion is <span data-live="most.converge.name"></span> at
-          <span data-live="most.converge.pct|pct"></span>. The straggler is
+          The best is <span data-live="most.converge.name"></span> at
+          <span data-live="most.converge.pct|pct"></span>. The worst is
           <span data-live="least.converge.name"></span>, where
-          <span data-live="least.converge.deadPct|pct"></span> of walks simply die.
+          <span data-live="least.converge.deadPct|pct"></span> of walks simply stop.
         </p>
         <div class="fnote">
-          <b>Field note.</b> A game wiki is a better subject for this than Wikipedia, not a worse one.
-          Wikipedia has one sprawling topic, everything. A game wiki has one small world, written by
-          fans who all played the same game, so when their first links agree, they agree about something.
+          <b>Why game wikis?</b> Wikipedia covers everything, so its big loop is bound to be abstract. A
+          game wiki covers one small world, written by people who all played the same game. When their
+          first links agree, they agree about something specific.
         </div>
       </div>
       <div class="figslot" data-fig="fig-field">
         <figure class="embed" id="fig-field" aria-label="Where every wiki's articles end up">
-          <div class="cap"><span class="cap-k">01</span><span>the field — where every article ends up · <span data-live="rankLabel"></span></span></div>
+          <div class="cap"><span class="cap-k">01</span><span>where every article ends up · <span data-live="rankLabel"></span></span></div>
           <div class="chart" id="ch-field"></div>
           <div class="cap-note" id="note-field">—</div>
         </figure>
@@ -329,29 +395,29 @@
 
     <!-- ───────────────────────── 02 ───────────────────────── -->
     <section class="sect" id="s-rules">
-      <div class="sect-label"><span>Stage 02 · The rulebook</span><span>02</span></div>
-      <h2>What counts as <em>a first link</em></h2>
+      <div class="sect-label">Part 2 · The rules</div>
+      <h2>What counts as <em>the first link?</em></h2>
 
-      <div class="step" data-fig="fig-chain" data-label="one walk — a random article's fate">
+      <div class="step" data-fig="fig-chain" data-label="one walk, on a random article">
         <p>
-          A wiki page offers a hundred ways to cheat at this game, so the walker carries a short rulebook.
-          Infoboxes and navigation boxes are stuffed with links, but nobody reads them as sentences, so
-          they don't count. Neither does anything inside parentheses, which is nearly always a
-          disambiguator like <span class="lo">Dragon (race)</span>, or anything in italics, which is
-          usually a title or a foreign word. Links to disambiguation pages are skipped, and so are links to
-          date pages, which on a game wiki are update logs wearing an article costume. Red links, images,
-          files, categories: skipped, skipped, skipped.
+          A wiki page has plenty of links that would spoil the game, so we follow a few rules. Links in
+          infoboxes and navigation boxes don't count, because nobody reads those as sentences. Anything in
+          parentheses is skipped, since it's nearly always a note like <span class="lo">Dragon (race)</span>.
+          Anything in italics is skipped too, since it's usually a title or a foreign word. We also skip
+          links to disambiguation pages and to date pages, which on a game wiki are really just update logs.
+          Red links, images, files and categories are all skipped.
         </p>
         <p>
-          The walker takes the first link that passes every test. If nothing on the page passes, the walk
-          ends there and the article goes in the graveyard. What survives is the part of the wiki that
-          explains itself in sentences, the read-this-first chain a real reader would actually fall down.
+          The walker takes the first link that passes every rule. If nothing on the page passes, the walk
+          ends there and the article goes in the dead-end pile. What's left is the part of the wiki that
+          explains things in sentences, the chain a real reader would actually follow.
         </p>
         <p>
-          The panel is running one such walk right now, on a random article. Every pill is a click; the
-          highlighted pills at the end are the loop. Reroll it a few times and a pattern appears fast: the
-          walks are shorter than you'd expect. The median article on this wiki is inside its loop after
-          <span class="num" data-live="o.medianHops"></span> clicks, and the longest walk in the entire wiki
+          The panel is running one of these walks on a random article. Each row is one click, and the
+          red rows at the bottom are the loop. The bar beside each page shows how many other articles'
+          walks pass through it, so you can watch a lonely walk merge into busier and busier traffic until
+          it hits the loop. Reroll it a few times and you'll notice the walks are shorter than you'd expect. The typical article on this wiki reaches its loop after
+          <span class="num" data-live="o.medianHops"></span> clicks, and the longest walk on the whole wiki
           takes <span data-live="o.maxHops"></span>.
         </p>
       </div>
@@ -365,40 +431,39 @@
 
     <!-- ───────────────────────── 03 ───────────────────────── -->
     <section class="sect" id="s-convergence">
-      <div class="sect-label"><span>Stage 03 · Convergence</span><span>03</span></div>
-      <h2>How far <em>is the drop?</em></h2>
+      <div class="sect-label">Part 3 · How many clicks?</div>
+      <h2>How many clicks <em>does it take?</em></h2>
 
-      <div class="step" data-fig="fig-fate" data-state="bars" data-label="hops to a loop — the distribution">
+      <div class="step" data-fig="fig-fate" data-state="bars" data-label="clicks to reach a loop">
         <p>
-          Count the clicks each article needs before it lands in its loop and you get a hump, not a bell:
-          a sharp rise, a peak, and a long thin tail of articles hiking through lore. Mean
-          <span data-live="o.meanHops"></span>, median <span data-live="o.medianHops"></span>, and nine
-          articles in ten are home within <span data-live="o.p90"></span> clicks.
+          Count how many clicks each article needs to reach its loop and you get a lopsided hump: a quick
+          rise, a peak, and a long thin tail of articles wandering through the lore. The average is
+          <span data-live="o.meanHops"></span>, the median is <span data-live="o.medianHops"></span>, and
+          nine articles out of ten are home within <span data-live="o.p90"></span> clicks.
         </p>
         <p>
-          The short walks are not an accident. Editors keep opening sentences short on purpose; a reference
-          work that defined everything in terms of something more obscure would be unusable, and everyone
-          who writes one knows it. The tail is where that discipline slips, and the tail is where the
-          interesting articles live.
+          Short walks are no accident. Editors keep opening sentences simple on purpose. A reference that
+          explained everything using something more obscure would be useless, and everyone who writes one
+          knows it. The tail is where that discipline slips, and that's where the interesting articles are.
         </p>
       </div>
-      <div class="step" data-fig="fig-fate" data-state="cumu" data-label="the funnel — every wiki's cumulative curve">
+      <div class="step" data-fig="fig-fate" data-state="cumu" data-label="every wiki's running total">
         <p>
-          Turn the histogram into a running total and lay the neighbours on top. The faint curves are the
-          other <span data-live="total.others"></span> wikis; the dark one is ours, and it is one of the slow
-          ones. <span data-live="shallowest.name"></span> gets its median article home in
-          <span data-live="shallowest.hops"></span> clicks. The deepest of the lot is
+          Turn the histogram into a running total and lay all the wikis on top of each other. The faint lines
+          are the other <span data-live="total.others"></span> wikis. The dark one is ours, and it's one of
+          the slower ones. <span data-live="shallowest.name"></span> gets its typical article home in
+          <span data-live="shallowest.hops"></span> clicks. The slowest is
           <span data-live="deepest.name"></span> at <span data-live="deepest.hops"></span>.
         </p>
         <p>
-          A long walk means a wiki that defines its subjects in terms of deeper subjects, which is to say a
-          wiki whose readers read the lore. All of it. A short one means a wiki that mostly says "this is
-          an item" and moves on.
+          A long walk means a wiki that explains its subjects using deeper subjects, which is to say a wiki
+          whose readers actually read the lore. A short one means a wiki that mostly says "this is an item"
+          and moves on.
         </p>
       </div>
       <div class="figslot" data-fig="fig-fate">
         <figure class="embed" id="fig-fate" aria-label="Clicks to reach a loop">
-          <div class="cap"><span class="cap-k">03</span><span>clicks to a loop · <span data-live="focus.name"></span> · <span data-live="rankLabel"></span></span></div>
+          <div class="cap"><span class="cap-k">03</span><span>clicks to reach a loop · <span data-live="focus.name"></span> · <span data-live="rankLabel"></span></span></div>
           <div class="chart" id="ch-fate"></div>
           <div class="cap-note" id="note-fate">—</div>
         </figure>
@@ -407,52 +472,51 @@
 
     <!-- ───────────────────────── 04 ───────────────────────── -->
     <section class="sect" id="s-attractors">
-      <div class="sect-label"><span>Stage 04 · The attractors</span><span>04</span></div>
-      <h2>Two religions <em>and a treasury</em></h2>
+      <div class="sect-label">Part 4 · The big loops</div>
+      <h2>Where most articles <em>end up</em></h2>
 
-      <div class="step" data-fig="fig-waffle" data-state="three" data-label="the pantheon — every square is 1% of the wiki">
+      <div class="step" data-fig="fig-waffle" data-state="three" data-label="the three biggest loops · one square = 1% of the wiki">
         <p>
-          Time for some vocabulary. A loop that walks drain into is an <b>attractor</b>, and the articles
-          that drain into it are its <b>basin</b>. The waffle on the right is the whole wiki, one square per
-          percent, coloured by basin.
+          Two quick terms. A loop that walks end up in is an <b>attractor</b>, and the articles that end
+          there are its <b>basin</b>. The grid on the right is the whole wiki, one square per percent,
+          coloured by basin.
         </p>
         <p>
-          The biggest basin belongs to <span class="lo" data-live="o.loop1.name"></span>, which claims
+          The biggest basin belongs to <span class="lo" data-live="o.loop1.name"></span>, which takes
           <span class="num" data-live="o.loop1.pct|pct"></span> of all articles: the world, the god who
-          made it, and gods in general. A proper philosophy. But it barely wins.
+          made it, and gods in general. Pretty philosophical. But it only just wins.
           <span class="lo" data-live="o.loop2.name"></span> holds
           <span class="num" data-live="o.loop2.pct|pct"></span>, only
-          <span data-live="o.gap12|pts"></span> behind. This encyclopedia has two religions, theology and
-          the monster manual, and they are the same size.
+          <span data-live="o.gap12|pts"></span> behind. This wiki can't quite decide whether it's about
+          gods or monsters, and the two sides are nearly the same size.
         </p>
         <p>
-          Third is the treasury, <span class="lo" data-live="o.loop3.name"></span> at
-          <span data-live="o.loop3.pct|pct"></span>. For a lot of players the Grand Exchange is the
-          endgame and everything else is a delivery mechanism for it, and the first links quietly agree.
-          Between the three, <span class="num" data-live="o.top3Pct|pct"></span> of the wiki has a god to
-          fall into.
+          Third is the economy: <span class="lo" data-live="o.loop3.name"></span> at
+          <span data-live="o.loop3.pct|pct"></span>. For a lot of players the Grand Exchange is the real
+          endgame and everything else is a way to get there, and the first links quietly agree. Between the
+          three, <span class="num" data-live="o.top3Pct|pct"></span> of the wiki ends in one of these loops.
         </p>
       </div>
-      <div class="step" data-fig="fig-waffle" data-state="nine" data-label="the long tail — the cults">
+      <div class="step" data-fig="fig-waffle" data-state="nine" data-label="the smaller loops">
         <p>
-          Below the big three the map gets strange, and this is the fun part of the trip.
+          Below the big three it gets strange, and this is the fun part.
           <span class="lo" data-live="o.loop4.name"></span>. <span class="lo" data-live="o.loop5.name"></span>.
-          <span class="lo" data-live="o.loop7.name"></span>. Each of these holds a few hundred faithful
-          articles, little whirlpools the main current never notices. There are
-          <span class="num" data-live="o.cycleCount|int"></span> loops in all, and most are two pages
-          pointing at each other in a corner of the wiki nobody else visits.
+          <span class="lo" data-live="o.loop7.name"></span>. Each of these holds a few hundred articles,
+          small loops the main current never touches. There are
+          <span class="num" data-live="o.cycleCount|int"></span> loops in all, and most are just two pages
+          pointing at each other in a corner of the wiki nobody visits.
         </p>
       </div>
-      <div class="step" data-fig="fig-waffle" data-state="all" data-label="everything — and the graveyard">
+      <div class="step" data-fig="fig-waffle" data-state="all" data-label="every loop, plus the dead ends">
         <p>
-          Colour every loop and the picture is a pantheon with a ragged edge: a handful of great basins, a
-          scatter of cults, and the grey squares, <span data-live="o.deadPct|pct"></span> of the wiki,
-          whose walks die before they find anything to believe in. We'll visit them later. Bring a shovel.
+          Colour every loop and you get a handful of big basins, a scatter of small ones, and the grey
+          squares: <span data-live="o.deadPct|pct"></span> of the wiki, whose walks hit a dead end before
+          reaching any loop. We'll come back to those.
         </p>
       </div>
       <div class="figslot" data-fig="fig-waffle">
         <figure class="embed" id="fig-waffle" aria-label="Attractor basins as a waffle chart">
-          <div class="cap"><span class="cap-k">04</span><span>the pantheon · <span data-live="focus.name"></span> · one square = 1% of articles</span></div>
+          <div class="cap"><span class="cap-k">04</span><span>the big loops · <span data-live="focus.name"></span> · one square = 1% of articles</span></div>
           <div class="chart waffle-wrap"><div class="waffle" id="waffle"></div><div class="wlegend" id="wlegend"></div></div>
           <div class="cap-note" id="note-waffle">—</div>
         </figure>
@@ -461,40 +525,39 @@
 
     <!-- ───────────────────────── 05 ───────────────────────── -->
     <section class="sect" id="s-census">
-      <div class="sect-label"><span>Stage 05 · The census</span><span>05</span></div>
-      <h2>What the <em>neighbours</em> worship</h2>
+      <div class="sect-label">Part 5 · The other wikis</div>
+      <h2>Every wiki has <em>its own answer</em></h2>
 
-      <div class="step" data-fig="fig-census" data-label="the census — every wiki's godhead">
+      <div class="step" data-fig="fig-census" data-label="every wiki's biggest loop">
         <p>
-          The other <span data-live="total.others"></span> wikis each have a philosophy too, and no two
-          are alike. Line them up by devoutness, the share of a wiki that drains into its
-          single biggest loop, and the spread is enormous. The most devout is
-          <span data-live="most.devout.name"></span>, where
+          The other <span data-live="total.others"></span> wikis each have a biggest loop too, and no two
+          are alike. Sort them by how much of the wiki ends in that one loop and the spread is huge. The
+          most single-minded is <span data-live="most.devout.name"></span>, where
           <span class="num" data-live="most.devout.pct|pct"></span> of articles end in
-          <span class="lo" data-live="most.devout.loop"></span>: a company and then a man. The least is
+          <span class="lo" data-live="most.devout.loop"></span>: a company, and then a man. The least is
           <span data-live="least.devout.name"></span>, whose biggest loop holds only
           <span data-live="least.devout.pct|pct"></span> of its pages.
         </p>
         <p>
-          Read each loop as the wiki's answer to "what is this game, really?" Terraria says
+          Read each loop as the wiki's answer to "what is this game about, really?" Terraria says
           <span class="lo" data-live="w.terraria.loop"></span>. Minecraft says
-          <span class="lo" data-live="w.minecraft.loop"></span>, which is correct. Tarkov says
+          <span class="lo" data-live="w.minecraft.loop"></span>, which is fair. Tarkov says
           <span class="lo" data-live="w.tarkov.loop"></span>, which is bleak. GTA says
           <span class="lo" data-live="w.gta.loop"></span>. Fortnite says
           <span class="lo" data-live="w.fortnite.loop"></span>, and means it.
         </p>
         <p>
-          The RuneScape wikis make a family portrait. Old School believes in
-          <span class="lo" data-live="w.osrs.loop"></span>. RuneScape 3, the grown-up sibling, in
+          The RuneScape wikis make a nice family portrait. Old School ends up at
+          <span class="lo" data-live="w.osrs.loop"></span>. RuneScape 3, the grown-up sibling, at
           <span class="lo" data-live="w.rs3.loop"></span>. And RuneScape Classic, frozen the day the game
-          shut down, in <span class="lo" data-live="w.rsc.loop"></span>: the man who wrote it and the
-          company he founded. Nobody chose any of these. They are what happens when thousands of editors
+          shut down, at <span class="lo" data-live="w.rsc.loop"></span>: the man who wrote it and the
+          company he founded. Nobody chose any of these. They're what you get when thousands of editors
           each write one sentence that starts with "X is a…".
         </p>
       </div>
       <div class="figslot" data-fig="fig-census">
-        <figure class="embed" id="fig-census" aria-label="Every wiki's philosophy">
-          <div class="cap"><span class="cap-k">05</span><span>the census · every wiki's godhead · <span data-live="rankLabel"></span></span></div>
+        <figure class="embed" id="fig-census" aria-label="Every wiki's biggest loop">
+          <div class="cap"><span class="cap-k">05</span><span>every wiki's biggest loop · <span data-live="rankLabel"></span></span></div>
           <div class="chart ptable-wrap" id="ch-census"></div>
           <div class="cap-note" id="note-census">—</div>
         </figure>
@@ -503,55 +566,55 @@
 
     <!-- ───────────────────────── 06 ───────────────────────── -->
     <section class="sect" id="s-decay">
-      <div class="sect-label"><span>Stage 06 · Below the first link</span><span>06</span></div>
-      <h2>Taking the <em>second door</em></h2>
+      <div class="sect-label">Part 6 · Beyond the first link</div>
+      <h2>What if you take <em>the second link?</em></h2>
 
-      <div class="step" data-fig="fig-decay" data-state="top" data-label="deeper links — the top loop and the loop count">
+      <div class="step" data-fig="fig-decay" data-state="top" data-label="deeper links: the biggest loop and the loop count">
         <p>
-          Everything so far followed the first link, the sentence editors fight over most. There is no law
-          saying the game stops there. So we sent the walkers back out with new orders: take the second
-          link instead. Then the third, the fifth, the last link on the page, and a random one.
+          Everything so far followed the first link. There's no rule saying we have to stop there, so we
+          ran the whole thing again taking the second link instead. Then the third, the fifth, the last
+          link on the page, and a random one.
         </p>
         <p>
-          The naive guess is decay, deeper links and less agreement. What happens is stranger. Each rank
-          has its own god. The second link's biggest loop is <span class="lo" data-live="o.r2.loop"></span>
-          (<span data-live="o.r2.topPct|pct"></span>). The third's is
-          <span class="lo" data-live="o.r3.loop"></span> (<span data-live="o.r3.topPct|pct"></span>). The
-          fifth's is <span class="lo" data-live="o.r5.loop"></span>. And the
-          pantheon shatters: <span data-live="o.cycleCount|int"></span> loops at the first link,
+          You might expect things to just get blurrier the deeper you go. What actually happens is
+          stranger: each rank has its own favourite loop. The second link's biggest loop is
+          <span class="lo" data-live="o.r2.loop"></span> (<span data-live="o.r2.topPct|pct"></span>). The
+          third's is <span class="lo" data-live="o.r3.loop"></span>
+          (<span data-live="o.r3.topPct|pct"></span>). The fifth's is
+          <span class="lo" data-live="o.r5.loop"></span>. And the number of loops explodes:
+          <span data-live="o.cycleCount|int"></span> at the first link,
           <span data-live="o.r3.cycleCount|int"></span> at the third.
         </p>
       </div>
-      <div class="step" data-fig="fig-decay" data-state="conv" data-label="deeper links — why convergence falls">
+      <div class="step" data-fig="fig-decay" data-state="conv" data-label="deeper links: why fewer articles reach a loop">
         <p>
-          Convergence does fall, from <span data-live="o.convergePct|pct"></span> at the first link to
-          <span data-live="o.r5.convergePct|pct"></span> at the fifth, but for a boring reason: only
-          <span class="num" data-live="o.r5.eligiblePct|pct"></span> of articles even have five links that
-          pass the rulebook. The dotted line is that share, and convergence tracks it closely. Wherever the
-          walk is possible at all, it still mostly finds a loop. It just takes longer: a median of
-          <span data-live="o.medianHops"></span> clicks at the first link,
+          Fewer articles reach a loop as you go deeper, from <span data-live="o.convergePct|pct"></span> at
+          the first link to <span data-live="o.r5.convergePct|pct"></span> at the fifth, but for a boring
+          reason: only <span class="num" data-live="o.r5.eligiblePct|pct"></span> of articles even have five
+          links that pass the rules. The dotted line is that share, and the loop rate follows it closely.
+          Wherever the walk is possible at all, it still usually finds a loop. It just takes longer: a
+          typical <span data-live="o.medianHops"></span> clicks at the first link,
           <span data-live="o.r5.medianHops"></span> at the fifth.
         </p>
       </div>
-      <div class="step" data-fig="fig-decay" data-state="tail" data-label="last links and random links — convergence is cheap">
+      <div class="step" data-fig="fig-decay" data-state="tail" data-label="last links and random links">
         <p>
-          The two detached points on the right are the control group, and they're the real lesson of this
-          stage. Follow the <i>last</i> link on every page and
+          The two separate points on the right are the control group, and they're the real lesson here.
+          Follow the <i>last</i> link on every page and
           <span data-live="o.rlast.convergePct|pct"></span> of articles still end in a loop. Follow a random
-          one and <span data-live="o.rrandom.convergePct|pct"></span> do. That is mathematics talking, not
-          editors: any walk through a finite graph that doesn't hit a dead end has to loop eventually.
-          Looping is cheap.
+          one and <span data-live="o.rrandom.convergePct|pct"></span> do. That's just maths: any walk
+          through a finite set of pages that doesn't hit a dead end has to loop eventually. Looping is easy.
         </p>
         <p>
           What the first link has that no other link has is <i>agreement</i>. The random walk's biggest loop
           is <span class="lo" data-live="o.rrandom.loop"></span>, and the last link's is
-          <span class="lo" data-live="o.rlast.loop"></span>, neither of which anyone would call a philosophy.
-          Editors agree sharply about what deserves the first mention, and about nothing after it.
+          <span class="lo" data-live="o.rlast.loop"></span>. Neither says much about the game. Editors agree
+          sharply about what deserves the first mention, and about nothing after it.
         </p>
       </div>
       <div class="figslot" data-fig="fig-decay">
         <figure class="embed" id="fig-decay" aria-label="How the picture changes at deeper link ranks">
-          <div class="cap"><span class="cap-k">06</span><span>below the first link · <span data-live="focus.name"></span> · all ranks</span></div>
+          <div class="cap"><span class="cap-k">06</span><span>beyond the first link · <span data-live="focus.name"></span> · all ranks</span></div>
           <div class="chart" id="ch-decay"></div>
           <div class="cap-note" id="note-decay">—</div>
         </figure>
@@ -560,37 +623,37 @@
 
     <!-- ───────────────────────── 07 ───────────────────────── -->
     <section class="sect" id="s-hubs">
-      <div class="sect-label"><span>Stage 07 · Hubs &amp; bridges</span><span>07</span></div>
-      <h2>Crossroads <em>and toll bridges</em></h2>
+      <div class="sect-label">Part 7 · Busy pages</div>
+      <h2>The pages <em>everyone passes through</em></h2>
 
-      <div class="step" data-fig="fig-hubs-deg" data-label="hubs — the pages most often chosen as a first link">
+      <div class="step" data-fig="fig-hubs-deg" data-label="the pages most often picked as a first link">
         <p>
           Every map has a few places everyone passes through. On a wiki there are two kinds, and they barely
-          overlap. The loud kind is the crossroads: the pages the most other articles pick as their very
-          first link. On this wiki the busiest is <span class="lo" data-live="o.hub1.title"></span>, chosen
-          first by <span class="num" data-live="o.hub1.count|int"></span> articles, then
+          overlap. The obvious kind is the busy page: the one that the most other articles pick as their
+          first link. Here the busiest is <span class="lo" data-live="o.hub1.title"></span>, picked first
+          by <span class="num" data-live="o.hub1.count|int"></span> articles, then
           <span class="lo" data-live="o.hub2.title"></span> and <span class="lo" data-live="o.hub3.title"></span>.
         </p>
         <p>
-          No gods, no dragons. The most-chosen pages are plumbing: the shared vocabulary every article
-          leans on without thinking about it. Which is exactly why they aren't attractors. A crossroads is a
-          place you pass through, not a place you stay.
+          No gods, no dragons. The most-picked pages are basic vocabulary, the shared words every article
+          leans on without thinking about it. That's exactly why they aren't attractors. They're places you
+          pass through, not places you stay.
         </p>
       </div>
-      <div class="step" data-fig="fig-hubs-bet" data-label="bridges — the pages the most walks pass through">
+      <div class="step" data-fig="fig-hubs-bet" data-label="the pages the most walks pass through">
         <p>
-          The quiet kind is the toll bridge: a page in the <i>middle</i> of other articles' walks, where
-          removing it would snap thousands of explanatory paths at once. Here the lore shows up. The most
-          travelled bridge is <span class="lo" data-live="o.bridge1.title"></span>, then
+          The quieter kind is the bridge: a page in the <i>middle</i> of other articles' walks, where
+          removing it would break thousands of chains at once. This is where the lore shows up. The
+          most-crossed bridge is <span class="lo" data-live="o.bridge1.title"></span>, then
           <span class="lo" data-live="o.bridge2.title"></span> and
           <span class="lo" data-live="o.bridge3.title"></span>. Nearly every monster and every NPC is
-          defined by comparison with you, so nearly every walk has to settle what <i>you</i> are before it
-          can go anywhere. That is a surprising amount of philosophy per drop table.
+          described by comparing it to you, so nearly every walk has to settle what <i>you</i> are before
+          it can go anywhere.
         </p>
       </div>
       <div class="figslot" data-fig="fig-hubs-deg">
-        <figure class="embed" id="fig-hubs-deg" aria-label="Pages most often chosen as a first link">
-          <div class="cap"><span class="cap-k">07·a</span><span>crossroads · chosen as first link by the most articles · <span data-live="focus.name"></span></span></div>
+        <figure class="embed" id="fig-hubs-deg" aria-label="Pages most often picked as a first link">
+          <div class="cap"><span class="cap-k">07·a</span><span>busy pages · picked as first link by the most articles · <span data-live="focus.name"></span></span></div>
           <div class="chart" id="ch-deg"></div>
         </figure>
       </div>
@@ -604,32 +667,32 @@
 
     <!-- ───────────────────────── 08 ───────────────────────── -->
     <section class="sect" id="s-grave">
-      <div class="sect-label"><span>Stage 08 · The graveyard</span><span>08</span></div>
-      <h2>Where the walks <em>go to die</em></h2>
+      <div class="sect-label">Part 8 · Dead ends</div>
+      <h2>Where the walks <em>stop short</em></h2>
 
-      <div class="step" data-fig="fig-grave" data-label="the graveyard — where dead walks end">
+      <div class="step" data-fig="fig-grave" data-label="where the dead-end walks stop">
         <p>
-          We promised a shovel. <span data-live="o.deadCount|int"></span> articles on this wiki never find a
-          loop, and most of them die on the same few pages. The biggest open grave is
-          <span class="lo" data-live="o.grave1.title"></span>, which swallows
-          <span class="num" data-live="o.grave1.chains|int"></span> walks. The cause of death, every time:
+          Back to the grey squares. <span data-live="o.deadCount|int"></span> articles on this wiki never
+          reach a loop, and most of them stop on the same few pages. The biggest dead end is
+          <span class="lo" data-live="o.grave1.title"></span>, which stops
+          <span class="num" data-live="o.grave1.chains|int"></span> walks. The reason, every time:
           <span data-live="o.grave1.reason"></span>.
         </p>
         <p>
-          Picture the page: a table of every item that fits one equipment slot, with its stats. Enormously
-          useful, and not one sentence in it. The walker arrives, finds nothing it's allowed to click, and
-          stops. Every wiki has a few of these, and they mark the exact spot where the editors ran out of
-          patience for explaining and started listing instead.
+          Picture the page: a table of every item that fits one equipment slot, with its stats. Very
+          useful, and not a single sentence in it. The walker arrives, finds nothing it's allowed to click,
+          and stops. Every wiki has a few pages like this. They mark the exact spot where the editors
+          stopped explaining and started listing.
         </p>
         <div class="fnote">
-          <b>Field note.</b> The graveyard is also where the parser's own mistakes would show up. A page
-          that dies with a reason like "no eligible links" when it plainly has prose is a bug report. We
-          read the top of this list for every wiki, and so should you if you run this on your own.
+          <b>Note.</b> The dead ends are also where our own parsing mistakes would show up. A page that
+          stops with "no eligible links" when it clearly has prose is a bug report. We checked the top of
+          this list for every wiki, and you should too if you run this yourself.
         </div>
       </div>
       <div class="figslot" data-fig="fig-grave">
-        <figure class="embed" id="fig-grave" aria-label="Pages where the most walks die">
-          <div class="cap"><span class="cap-k">08</span><span>the graveyard · dead walks by terminal page · <span data-live="focus.name"></span></span></div>
+        <figure class="embed" id="fig-grave" aria-label="Pages where the most walks stop">
+          <div class="cap"><span class="cap-k">08</span><span>dead ends · where the stopped walks end · <span data-live="focus.name"></span></span></div>
           <div class="chart" id="ch-grave"></div>
           <div class="cap-note" id="note-grave">—</div>
         </figure>
@@ -638,27 +701,27 @@
 
     <!-- ───────────────────────── 09 ───────────────────────── -->
     <section class="sect" id="s-map">
-      <div class="sect-label"><span>Stage 09 · The map</span><span>09</span></div>
-      <h2>The whole wiki, <em>as drainage</em></h2>
+      <div class="sect-label">Part 9 · The map</div>
+      <h2>The whole wiki <em>on one map</em></h2>
 
-      <div class="step" data-fig="fig-map" data-label="the drainage map — every article, every first link">
+      <div class="step" data-fig="fig-map" data-label="the map: every article, every first link">
         <p>
-          Here is the territory we've been describing, all <span data-live="focus.nodes|int"></span>
-          articles at once. Think of it as a watershed. Each loop is a basin, sized by how many articles
-          drain into it, and every article sits in its basin at exactly the distance it takes to get there:
-          one ring per click. The threads are first links. The dust at the rim is the orphans, tiny loops
-          and lonely dead ends with no basin to join.
+          Here is everything we've been describing, all <span data-live="focus.nodes|int"></span> articles
+          at once. Think of it as a watershed. Each loop is a basin, sized by how many articles flow into
+          it, and every article sits at exactly the distance it takes to get there: one ring per click. The
+          threads are first links. The dust around the edge is the leftovers, tiny loops and lonely dead
+          ends with no basin to join.
         </p>
         <p>
           The moving sparks are walkers. Each starts on a random article and follows first links until it
-          falls in, and then another takes its place. Watch where they pile up. Hover any speck to trace its
-          walk, scroll to zoom, click to open the real article, and press ⛶ to take the whole thing
-          fullscreen. There are articles out at ring fifteen. Go find them.
+          lands in a loop, then another takes its place. Watch where they pile up. Hover a dot to trace its
+          walk, click to open the real article, and press ⛶ to go fullscreen, where you can pan, zoom and
+          search. There are articles out at ring fifteen. Go find them.
         </p>
       </div>
       <div class="figslot" data-fig="fig-map">
-        <figure class="embed" id="fig-map" aria-label="Drainage map of the first-link network">
-          <div class="cap"><span class="cap-k">09</span><span>the drainage map · <span data-live="focus.name"></span> · <span data-live="rankLabel"></span></span><button class="cap-btn" id="mapReset" type="button">⌂ reset view</button></div>
+        <figure class="embed" id="fig-map" aria-label="Map of the first-link network">
+          <div class="cap"><span class="cap-k">09</span><span>the map · <span data-live="focus.name"></span> · <span data-live="rankLabel"></span></span><button class="cap-btn" id="mapReset" type="button">⌂ reset view</button></div>
           <div class="chart field-wrap" id="mapWrap"><div class="field" id="mapField"></div></div>
           <div class="cap-note" id="note-map">—</div>
         </figure>
@@ -667,41 +730,40 @@
 
     <!-- ───────────────────────── 10 ───────────────────────── -->
     <section class="sect" id="s-play">
-      <div class="sect-label"><span>Stage 10 · Your turn</span><span>10</span></div>
-      <h2>Feed it <em>an article</em></h2>
+      <div class="sect-label">Part 10 · Your turn</div>
+      <h2>Try it <em>yourself</em></h2>
 
-      <div class="step" data-fig="fig-play" data-label="your turn — follow any chain">
+      <div class="step" data-fig="fig-play" data-label="follow any article's chain">
         <p>
-          The expedition is over; the game is yours. Type anything and watch it walk: a boss, a quest, an
-          item, a city. Bet on which whirlpool it falls into before the pills stop. You will get scarily
-          good at this within about six tries. Then switch the rank and follow the same article's fifth
-          link instead. It usually ends somewhere completely different, and occasionally somewhere better.
+          Now it's your turn. Type any article and watch it walk: a boss, a quest, an item, a city. Guess
+          which loop it will land in before the pills stop. You'll get surprisingly good at this after a
+          few tries. Then switch the rank and follow the same article's fifth link instead. It usually ends
+          somewhere completely different.
         </p>
         <p>
-          Use the ⚙ button in the bar at the top to point every chart, the map and the walkers at a
-          different wiki. The prose stays loyal to Old School RuneScape, but the pictures will follow you
-          anywhere.
+          The <b>Charts</b> button at the top of the page points every chart, the map and the walkers at a
+          different wiki. The text stays on Old School RuneScape, but the pictures will follow you anywhere.
         </p>
         <div class="fnote">
-          <b>Honesty box.</b> Everything here is one snapshot of wikis that change daily. The rulebook is a
+          <b>Caveats.</b> Everything here is one snapshot of wikis that change daily. The rules above are a
           house style, not a law of nature; change "skip italics" to "keep italics" and some basins will
-          shift. The parser trips over the occasional exotic template, and when it does, that one page's walk
-          is wrong. The random rank is a single seeded draw per article, so read its numbers as about right
-          rather than exact.
+          shift. The parser trips over the occasional odd template, and when it does, that one page's walk
+          is wrong. The random rank is a single seeded draw per article, so read its numbers as roughly
+          right rather than exact.
         </div>
       </div>
       <div class="figslot" data-fig="fig-play">
         <figure class="embed" id="fig-play" aria-label="Follow any article's chain">
-          <div class="cap"><span class="cap-k">10</span><span>your turn · <span data-live="focus.name"></span> · pick a rank</span></div>
+          <div class="cap"><span class="cap-k">10</span><span>your turn · <span data-live="focus.name"></span> · pick a link rank</span></div>
           <div class="chart chainfill" id="ch-play">
             <div class="rankrow" id="playRanks"></div>
             <div class="playrow">
-              <input id="playInput" list="playTitles" placeholder="type an article — e.g. Zulrah / Prayer / Coins" autocomplete="off">
+              <input id="playInput" list="playTitles" placeholder="type an article, e.g. Zulrah / Prayer / Coins" autocomplete="off">
               <datalist id="playTitles"></datalist>
-              <button class="btn" id="playBtn" type="button">follow</button>
-              <button class="btn ghost" id="playRand" type="button">random</button>
+              <button class="btn" id="playBtn" type="button">Follow</button>
+              <button class="btn ghost" id="playRand" type="button">Random</button>
             </div>
-            <div id="playOut"><span class="fate" style="color:var(--ink-3)">pick something and press follow…</span></div>
+            <div id="playOut"><span class="fate" style="color:var(--ink-3)">pick something and press Follow…</span></div>
           </div>
         </figure>
       </div>
@@ -709,20 +771,20 @@
 
     <!-- ───────────────────────── epilogue ───────────────────────── -->
     <section class="sect" id="s-end">
-      <div class="sect-label"><span>Souvenirs</span><span>∞</span></div>
-      <h2>Things we <em>brought back</em></h2>
+      <div class="sect-label">In short</div>
+      <h2>Six things <em>we found</em></h2>
       <ul class="souvenirs">
         <li><b><span data-live="most.devout.name"></span></b> is the most single-minded wiki we found: <span data-live="most.devout.pct|pct"></span> of it ends at <span class="lo" data-live="most.devout.loop"></span>.</li>
-        <li><b>Minecraft</b> reduced itself to <span class="lo" data-live="w.minecraft.loop"></span>. You cannot argue with that.</li>
-        <li><b>RuneScape Classic</b> has no world left to believe in, so it believes in its maker: <span class="lo" data-live="w.rsc.loop"></span>.</li>
-        <li><b>Old School RuneScape</b> cannot decide whether it is about gods or monsters, and the margin is <span data-live="o.gap12|pts"></span>.</li>
-        <li>Following a <i>random</i> link finds a loop <span data-live="o.rrandom.convergePct|pct"></span> of the time. Looping is free; agreeing is the hard part.</li>
-        <li>The busiest page on the OSRS Wiki is <span class="lo" data-live="o.hub1.title"></span>, the first link of <span data-live="o.hub1.count|int"></span> articles, and nobody drains into it.</li>
+        <li><b>Minecraft</b> boils down to <span class="lo" data-live="w.minecraft.loop"></span>. Hard to argue with.</li>
+        <li><b>RuneScape Classic</b> has no world left to point at, so it points at its maker: <span class="lo" data-live="w.rsc.loop"></span>.</li>
+        <li><b>Old School RuneScape</b> can't decide whether it's about gods or monsters, and the margin is <span data-live="o.gap12|pts"></span>.</li>
+        <li>Following a <i>random</i> link still finds a loop <span data-live="o.rrandom.convergePct|pct"></span> of the time. Looping is easy; agreeing is the hard part.</li>
+        <li>The busiest page on the OSRS Wiki is <span class="lo" data-live="o.hub1.title"></span>, the first link of <span data-live="o.hub1.count|int"></span> articles, and nobody ends up there.</li>
       </ul>
       <div class="pull">
         A wiki explains things in terms of other things. Keep following, and you reach the pages it stopped
-        explaining and simply believes in.
-        <small>osrs in focus · <span data-live="total.wikis"></span> wikis compared · <span data-live="total.articles|int"></span> articles walked</small>
+        explaining and simply takes for granted.
+        <small>Old School RuneScape in focus · <span data-live="total.wikis"></span> wikis compared · <span data-live="total.articles|int"></span> articles walked</small>
       </div>
     </section>
   </main>
@@ -737,14 +799,15 @@
   <div class="foot-grid">
     <div class="foot-word">where does<br><em>everything</em> lead?</div>
     <div class="foot-meta">
-      one snapshot · <span data-live="total.wikis"></span> wikis · <span data-live="total.articles|int"></span> articles ·
-      scraped politely at one request per second, recomputed locally<br>
-      method: the first non-parenthesised, non-italicised prose link · disambiguation and date pages, infoboxes,
-      red links and namespaces skipped · the walk stops at a loop or a dead page<br>
-      run it on your own wiki, any mediawiki with a public api.php:
-      <a href="https://github.com/AntonyGarand/gaming-wiki-analysis" target="_blank" rel="noopener">github.com/AntonyGarand/gaming-wiki-analysis</a><br>
-      found a weirder whirlpool than block ⇄ slab? tell us<br>
-      slopline: data, prose and visuals are vibe-coded with an ai assistant and not yet thoroughly human-reviewed
+      <p>One snapshot of <span data-live="total.wikis"></span> wikis and <span data-live="total.articles|int"></span> articles,
+      fetched politely at one request per second and analysed locally.</p>
+      <p>The method: take the first link in the article text that isn't in parentheses or italics. Skip
+      disambiguation and date pages, infoboxes, red links and other namespaces. Stop at a loop or a page
+      with no usable links.</p>
+      <p>Want to run it on your own wiki? Any MediaWiki with a public api.php works:
+      <a href="https://github.com/AntonyGarand/gaming-wiki-analysis" target="_blank" rel="noopener">github.com/AntonyGarand/gaming-wiki-analysis</a>.
+      Found a weirder loop than block ⇄ slab? Tell us.</p>
+      <p>Heads up: the data, text and charts were put together with an AI assistant and haven't been carefully human-reviewed yet.</p>
     </div>
   </div>
 </footer>
@@ -928,23 +991,43 @@ function renderField() {
 }
 
 /* ---- 02 one walk ---- */
+/* one walk as a vertical timeline: each row is a click, the bar is how many articles' walks pass through that page */
 function chainHTML(g, wk, wikiId) {
   const n = wk.chain.length;
-  const html = wk.chain.map((i, k) => {
+  const logN = Math.log10(Math.max(10, g.N));
+  const fmt = (v) => v.toLocaleString();
+  const rows = wk.chain.map((i, k) => {
     const isCyc = wk.fate === "cycle" && k >= n - wk.cycleSize;
-    const cls = k === 0 ? " start" : isCyc ? " cyc" : (wk.fate === "dead" && k === n - 1 ? " dead" : "");
-    return `<a class="pill${cls}" href="${urlFor(wikiId, g.titles[i])}" target="_blank" rel="noopener" style="text-decoration:none">${esc(g.titles[i])}</a>` + (k < n - 1 ? `<span class="arrow">→</span>` : "");
+    const isDead = wk.fate === "dead" && k === n - 1;
+    const cls = (k === 0 ? " start" : "") + (isCyc ? " cyc" : "") + (isDead ? " dead" : "");
+    const through = g.upstream(i);
+    const pct = Math.max(2, 100 * Math.log10(Math.max(1, through)) / logN);
+    const stat = isCyc
+      ? `${fmt(through)} article${through === 1 ? "" : "s"} drain into this loop`
+      : through === 1 ? `only this article's walk comes through here` : `${fmt(through)} articles' walks pass through here`;
+    const others = g.inDeg[i] - (k > 0 ? 1 : 0);
+    const join = k === 0 ? "" : others > 0
+      ? `<div class="wjoin">+${fmt(others)} other article${others === 1 ? "" : "s"} link${others === 1 ? "s" : ""} straight here</div>`
+      : `<div class="wjoin">nothing else links straight here</div>`;
+    const key = k === 0 ? "start" : isCyc ? "loop" : String(k);
+    return `<li class="wrow${cls}">
+      <span class="wk">${key}</span>
+      <div class="wmain">${join}
+        <a class="pill${cls}" href="${urlFor(wikiId, g.titles[i])}" target="_blank" rel="noopener">${esc(g.titles[i])}</a>
+        <div class="wmeta"><i class="wbar" style="width:${(pct * 1.5).toFixed(0)}px"></i><span>${stat}</span></div>
+      </div></li>`;
   }).join("");
   const fate = wk.fate === "cycle"
-    ? `<span class="fate"><span class="cyc">↻</span> ${wk.hops === 0 ? `starts inside a loop of ${wk.cycleSize} · loops forever` : `loops forever · ${wk.hops} click${wk.hops === 1 ? "" : "s"} to enter a loop of ${wk.cycleSize}`}</span>`
-    : `<span class="fate"><span class="dead">✝</span> dies after ${wk.hops} click${wk.hops === 1 ? "" : "s"} · ${esc(wk.reason)}</span>`;
-  return html + fate;
+    ? `<li class="wrow wend cyc"><span class="wk">↻</span><div class="wmain"><div class="fate"><span class="cyc">back to ${esc(g.titles[wk.chain[n - wk.cycleSize]])}</span> · ${wk.hops === 0 ? `starts inside a loop of ${wk.cycleSize}` : `${wk.hops} click${wk.hops === 1 ? "" : "s"} to reach a loop of ${wk.cycleSize}`} · loops forever</div></div></li>`
+    : `<li class="wrow wend dead"><span class="wk">✝</span><div class="wmain"><div class="fate"><span class="dead">dead end</span> after ${wk.hops} click${wk.hops === 1 ? "" : "s"} · ${esc(wk.reason)}</div></div></li>`;
+  return `<ol class="walk">${rows}${fate}</ol>`;
 }
 function rollChain() {
   const g = cur.graph, box = el("ch-chain"); if (!g) return;
-  let i = (Math.random() * g.N) | 0, tries = 0;
-  while (g.succ[i] < 0 && tries++ < 10) i = (Math.random() * g.N) | 0;
-  box.innerHTML = chainHTML(g, g.walk(i), state.wiki);
+  // prefer a walk with a few clicks in it; a page that loops on itself makes a dull example
+  let i = (Math.random() * g.N) | 0, wk = g.walk(i), tries = 0;
+  while ((g.succ[i] < 0 || wk.hops < 3) && tries++ < 40) { i = (Math.random() * g.N) | 0; wk = g.walk(i); }
+  box.innerHTML = chainHTML(g, wk, state.wiki);
 }
 
 /* ---- 03 fate: histogram ⇄ cumulative with every wiki ---- */
@@ -1052,8 +1135,8 @@ function applyDecay(st) {
   const pt = (rows, k, offset) => rows.map((r, i) => (r ? { value: [cats[i + offset], r[k]] } : null)).filter(Boolean);
   const elig = ORDINAL_RANKS.map((r) => eligiblePct(r));
   c.setOption({ ...chartBase,
-    grid: { ...chartBase.grid, right: 44 },
-    legend: { top: 0, right: 0, itemWidth: 12, itemHeight: 8, textStyle: { color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace" } },
+    grid: { ...chartBase.grid, right: 44, top: narrow.matches ? 34 : 18 },
+    legend: { top: 0, itemWidth: 12, itemHeight: 8, textStyle: { color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace" }, ...(narrow.matches ? { type: "scroll", left: 0, right: 0 } : { right: 0 }) },
     tooltip: { ...chartBase.tooltip, trigger: "axis", formatter: (ps) => { const r = S.ranks.find((x) => rankLabel(x.rank) === ps[0]?.axisValue); if (!r) return ""; return `<b>${esc(rankLabel(r.rank))}</b><br>top loop <span style="color:${C.rust}">${esc(loopName(r.topAttractor))}</span> · ${r.topAttractorPct}%<br>${r.cycleCount.toLocaleString()} loops · ${r.convergePct}% converge · median ${r.medianHops} clicks`; } },
     xAxis: { type: "category", data: cats, ...axisCommon, splitLine: { show: false }, axisLabel: { color: C.ink3, fontSize: 8.5, interval: 0 } },
     yAxis: [
@@ -1083,10 +1166,10 @@ function renderHubs(which) {
   if (!list.length) return;
   const c = chartOf(which === "deg" ? "fig-hubs-deg" : "fig-hubs-bet", which === "deg" ? "ch-deg" : "ch-bet");
   const val = (r) => which === "deg" ? targetCount(r) : trafficCount(r);
-  c.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 52 },
+  c.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 52, left: 26 },
     tooltip: { ...chartBase.tooltip, trigger: "item", formatter: (p) => { const r = list[list.length - 1 - p.dataIndex]; return `<b>${esc(r.title)}</b><br>${which === "deg" ? `first link of ${val(r).toLocaleString()} articles` : `${val(r).toLocaleString()} walks pass through`}`; } },
     xAxis: { type: "value", ...axisCommon, axisLabel: { ...axisCommon.axisLabel, formatter: (v) => v >= 1000 ? (v / 1000).toFixed(v >= 10000 ? 0 : 1) + "k" : v } },
-    yAxis: { type: "category", data: list.map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: C.ink2, fontSize: 9, width: 150, overflow: "truncate" }, splitLine: { show: false } },
+    yAxis: { type: "category", data: list.map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: C.ink2, fontSize: 9, width: narrow.matches ? 100 : 150, overflow: "truncate" }, splitLine: { show: false } },
     series: [{ type: "bar", data: list.map(val).reverse(), itemStyle: { color: which === "deg" ? C.ochre : C.teal }, barWidth: "66%",
       label: { show: true, position: "right", color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => p.value.toLocaleString() }, animationDelay: (i) => i * 35 }],
   }, true);
@@ -1097,10 +1180,10 @@ function renderGrave() {
   const S = cur.stats; if (!S?.deadEndTerminals) return;
   const list = S.deadEndTerminals.slice(0, 10);
   const c = chartOf("fig-grave", "ch-grave");
-  c.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 52 },
+  c.setOption({ ...chartBase, grid: { ...chartBase.grid, right: 52, left: 26 },
     tooltip: { ...chartBase.tooltip, trigger: "item", formatter: (p) => { const r = list[list.length - 1 - p.dataIndex]; return `<b>${esc(r.title)}</b><br>${r.chains.toLocaleString()} walks die here (${r.pct}% of the wiki)<br>${esc(r.reason)}`; } },
     xAxis: { type: "value", ...axisCommon },
-    yAxis: { type: "category", data: list.map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: C.ink2, fontSize: 9, width: 170, overflow: "truncate" }, splitLine: { show: false } },
+    yAxis: { type: "category", data: list.map((r) => r.title).reverse(), ...axisCommon, axisLabel: { color: C.ink2, fontSize: 9, width: narrow.matches ? 100 : 170, overflow: "truncate" }, splitLine: { show: false } },
     series: [{ type: "bar", data: list.map((r) => r.chains).reverse(), itemStyle: { color: C.dead }, barWidth: "66%",
       label: { show: true, position: "right", color: C.ink3, fontSize: 9, fontFamily: "Space Mono, monospace", formatter: (p) => p.value.toLocaleString() }, animationDelay: (i) => i * 35 }],
   }, true);
@@ -1110,7 +1193,9 @@ function renderGrave() {
 
 /* ---- 09 the drainage map (explore) + hero ---- */
 let heroField = null, mapField = null;
-const HINT_IDLE = "hover to trace a walk · click to read it · drag to pan · ⌘/ctrl + scroll or pinch to zoom · ⛶ fullscreen";
+const coarse = window.matchMedia("(pointer: coarse)").matches;
+const HINT_IDLE = coarse ? "tap a dot to trace its walk · tap it again to open the article · ⛶ fullscreen to pan and zoom" : "hover a dot to trace its walk · click to open the article · drag to pan · ⌘/ctrl + scroll to zoom · ⛶ fullscreen";
+const walkerBudget = (n) => narrow.matches ? Math.round(n / 3) : n;
 /* zoom toolbar + fullscreen controls shared by the hero and the map */
 function mountFieldUI(wrap, getField, title) {
   const ui = document.createElement("div"); ui.className = "field-ui";
@@ -1145,6 +1230,7 @@ function mountFieldUI(wrap, getField, title) {
   document.addEventListener("fullscreenchange", () => {
     const on = document.fullscreenElement === wrap;
     fs.textContent = on ? "⤢" : "⛶"; fs.title = on ? "exit fullscreen" : "fullscreen";
+    getField()?.setTouchAction(on ? "none" : (coarse ? "pan-y" : "none"));
     getField()?.setWheel(on ? "always" : wrap.dataset.wheel ?? "always");
     if (on) syncFieldBars();
   });
@@ -1172,7 +1258,7 @@ function fieldHover(noteId) {
 }
 function ensureMap() {
   if (!mapField) {
-    mapField = createWalkField(el("mapField"), { explore: true, wheel: "always", walkers: reduced ? 0 : 220, speed: 70, labels: 8, edgeAlpha: 0.11, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: fieldHover("note-map") });
+    mapField = createWalkField(el("mapField"), { explore: true, wheel: "always", walkers: reduced ? 0 : walkerBudget(220), touchAction: coarse ? "pan-y" : "none", speed: 70, labels: 8, edgeAlpha: 0.11, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: fieldHover("note-map") });
     el("mapWrap").dataset.wheel = "always";
     mountFieldUI(el("mapWrap"), () => mapField, "the drainage map");
   }
@@ -1187,7 +1273,7 @@ function renderHero() {
     el("heroWrap").dataset.wheel = "modifier";
     mountFieldUI(el("heroWrap"), () => heroField, "where does everything lead?");
   }
-  if (!heroField) heroField = createWalkField(el("heroField"), { explore: true, wheel: "modifier", walkers: reduced ? 0 : 360, speed: 85, labels: 5, edgeAlpha: 0.08, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: (i, wk) => {
+  if (!heroField) heroField = createWalkField(el("heroField"), { explore: true, wheel: "modifier", walkers: reduced ? 0 : walkerBudget(360), touchAction: coarse ? "pan-y" : "none", speed: 85, labels: 5, edgeAlpha: 0.08, reduced, urlFor: (t) => urlFor(state.wiki, t), onHover: (i, wk) => {
     const h = el("heroHint");
     if (i < 0 || !cur.graph) { h.textContent = HINT_IDLE; return; }
     const g = cur.graph;
@@ -1281,7 +1367,7 @@ narrow.addEventListener("change", () => setMode(state.mode, false));
  * loading + settings
  * ==================================================================== */
 function showError(msg) { const s = el("status"); s.textContent = msg; s.style.display = msg ? "block" : "none"; }
-function updateChip() { el("datachip").innerHTML = `charts: <b>${esc(wikiById(state.wiki)?.name ?? state.wiki)}</b> · <b>${esc(rankLabel(state.rank))}</b> &nbsp;·&nbsp; prose: osrs · 1st link`; }
+function updateChip() { const t = `${esc(wikiById(state.wiki)?.name ?? state.wiki)} · ${esc(rankLabel(state.rank))}`; el("chipWiki").innerHTML = t; el("heroChartsWiki").innerHTML = t; }
 function buildGear() {
   el("gearWiki").innerHTML = WIKIS.map((w) => `<option value="${w.id}"${w.id === state.wiki ? " selected" : ""}>${esc(w.name)}</option>`).join("");
   const ranks = wikiById(state.wiki)?.ranks ?? [];
@@ -1301,7 +1387,11 @@ async function loadFocus() {
     buildPlayRanks(); el("playTitles").innerHTML = "";
   } catch (e) { showError(`data unavailable for ${state.wiki} @ ${rankLabel(state.rank)} — ${e.message}`); }
 }
-el("gearBtn").onclick = () => { const open = el("gearPanel").classList.toggle("open"); el("gearBtn").setAttribute("aria-expanded", String(open)); };
+function setGear(open) { el("gearPanel").classList.toggle("open", open); el("gearBtn").setAttribute("aria-expanded", String(open)); if (open) el("gearWiki").focus({ preventScroll: true }); }
+el("gearBtn").onclick = () => setGear(!el("gearPanel").classList.contains("open"));
+el("heroChartsBtn").onclick = () => { document.querySelector(".controlbar").scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" }); setTimeout(() => setGear(true), reduced ? 0 : 450); };
+document.addEventListener("pointerdown", (e) => { if (el("gearPanel").classList.contains("open") && !e.target.closest("#gearPanel, #gearBtn, #heroChartsBtn")) setGear(false); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") setGear(false); });
 el("gearWiki").onchange = async () => { state.wiki = el("gearWiki").value; localStorage.setItem("article_wiki", state.wiki); await loadFocus(); };
 el("gearRank").onchange = async () => { state.rank = el("gearRank").value; localStorage.setItem("article_rank", state.rank); await loadFocus(); };
 el("rerollBtn").onclick = rollChain;
@@ -1321,6 +1411,7 @@ el("playInput").addEventListener("input", (e) => {
 });
 
 (async () => {
+  el("heroHint").textContent = HINT_IDLE;
   document.querySelectorAll("figure.embed").forEach((f) => { figEls[f.id] = f; });
   document.querySelectorAll(".figslot").forEach((s) => { slots[s.dataset.fig] = s; });
   setMode(state.mode, false);
@@ -1333,6 +1424,8 @@ el("playInput").addEventListener("input", (e) => {
   } catch (e) { showError(`prose facts unavailable — ${e.message}`); }
   await loadFocus();
   activate(steps[0]);
+  // charts measure their labels with whatever font is loaded; redraw once the web fonts arrive so nothing is clipped
+  document.fonts?.ready?.then(() => { if (!cur.stats) return; for (const id of Object.keys(figInit)) renderers[id](); for (const [id, st] of Object.entries(figState)) applyState(id, st); resizeAll(); });
   // eligible-link shares for the prose (needs the OSRS succ tables; cheap, lazy)
   (async () => {
     for (const r of ["2", "3", "5"]) { try { const g = await loadGraph(PROSE_WIKI, r); eligibleCache.set(`${PROSE_WIKI}|${r}`, eligibleFromGraph(g, r)); } catch {} }
