@@ -2,7 +2,7 @@
   "wikis": [
     {"id": "osrs", "name": "Old School RuneScape Wiki", "origin": "https://oldschool.runescape.wiki", "description": "The original target"},
     {"id": "rs3", "name": "RuneScape Wiki", "origin": "https://runescape.wiki", "description": "RS3 — same engine, different decade"},
-    {"id": "rsc", "name": "RuneScape Classic Wiki", "origin": "https://classic.runescape.wiki", "description": "The deprecated original"},
+    {"id": "rsc", "name": "RuneScape Classic Wiki", "origin": "https://classic.runescape.wiki", "description": "The deprecated original", "excludeTitle": "^Manual:"},
     {"id": "minecraft", "name": "Minecraft Wiki", "origin": "https://minecraft.wiki", "description": "Best-selling game of all time", "linkTemplates": ["BlockLink", "ItemLink", "EntityLink", "EnvLink", "BiomeLink"]},
     {"id": "gta", "name": "GTA Wiki", "origin": "https://gta.wiki", "description": "Grand Theft Auto"},
     {"id": "overwatch", "name": "Overwatch Wiki", "origin": "https://overwatch.weirdgloop.org", "description": "Hero shooter"},
@@ -12,7 +12,7 @@
     {"id": "balatro", "name": "Balatro Wiki", "origin": "https://balatrowiki.org", "description": "Poker roguelite"},
     {"id": "hytale", "name": "Hytale Wiki", "origin": "https://hytalewiki.org", "description": "Blocky adventure"},
     {"id": "subnautica", "name": "Subnautica Wiki", "origin": "https://wiki.subnautica.com", "description": "Underwater survival"},
-    {"id": "terraria", "name": "Terraria Wiki", "origin": "https://terraria.wiki.gg", "description": "2D sandbox", "linkTemplates": ["item", "npc"]},
+    {"id": "terraria", "name": "Terraria Wiki", "origin": "https://terraria.wiki.gg", "description": "2D sandbox", "linkTemplates": ["item", "npc"], "excludeTitle": "/\\/(zh|zh-tw|fr|de|ru|ja|ko|es|pt|pt-br|pt-pt|it|nl|pl|uk|cs|sv|tr|hu|ms|vi|da|fi|no|el|ro|id|th|ar|he|nl-in)$/"},
     {"id": "factorio", "name": "Factorio Wiki", "origin": "https://wiki.factorio.com", "description": "Factory-building", "excludeTitle": "/\\/(zh|zh-tw|fr|de|ru|ja|ko|es|pt|pt-br|pt-pt|it|nl|pl|uk|cs|sv|tr|hu|ms|vi|da|fi|no|el|ro|id|th|ar|he)$/"},
     {"id": "tarkov", "name": "Escape from Tarkov Wiki", "origin": "https://escapefromtarkov.fandom.com", "description": "Hardcore FPS"}
   ]
